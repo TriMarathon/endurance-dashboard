@@ -196,3 +196,153 @@ footer {
     font-size: 14px;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Upcoming Races
+   ------------------------------------------------------------------------- */
+
+.races-wrap {
+  padding: 18px;
+  cursor: default;
+}
+
+.races-container {
+  min-height: 40px;
+}
+
+.races-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.races-table thead th {
+  text-align: left;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.races-table tbody td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--grid);
+  color: var(--text);
+}
+
+.races-col-date {
+  white-space: nowrap;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.races-col-name {
+  font-weight: 500;
+}
+
+.races-col-location,
+.races-col-type {
+  color: var(--muted);
+}
+
+.races-col-when {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.races-error,
+.races-empty {
+  padding: 16px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.races-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.race-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto auto auto;
+  gap: 2px 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.race-card-date {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.race-card-when {
+  font-size: 11px;
+  color: var(--muted);
+  justify-self: end;
+}
+
+.race-card-name {
+  font-weight: 500;
+  font-size: 13px;
+  grid-column: 1 / -1;
+}
+
+.race-card-sub {
+  font-size: 12px;
+  color: var(--muted);
+  grid-column: 1 / -1;
+}
+
+.status-badge {
+  grid-column: 1 / -1;
+  align-self: start;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--panel-border);
+  border-radius: 4px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+.race-link {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--muted);
+}
+
+.race-link:hover {
+  border-bottom-color: var(--text);
+}
+
+.ext-icon {
+  margin-left: 2px;
+  opacity: 0.5;
+  font-size: 10px;
+}
+
+@media (min-width: 640px) {
+  .races-cards {
+    display: none;
+  }
+  .races-table {
+    display: table;
+  }
+}
+
+@media (max-width: 639px) {
+  .races-table {
+    display: none;
+  }
+}

@@ -1,4 +1,5 @@
 const DATA_URL = 'data/training_load.json';
+const RACES_URL = 'data/races.json';
 const CHART_ID = 'training-load';
 const STATUS_ID = 'status';
 const UPDATED_ID = 'updated';
@@ -339,6 +340,155 @@ function setUpdatedTimestamp(generatedAt) {
   el.textContent = datePart ? `Updated ${fmtMediumDate(datePart)}` : '';
 }
 
+function fmtStatus(status) {
+  if (status == null) return null;
+  const s = String(status).trim();
+  if (s === '') return null;
+  const map = {
+    registered: 'Registered',
+    planning: 'Planning',
+    not_registered: 'Not registered',
+  };
+  return map[s] || s;
+}
+
+function safeLink(url, label) {
+  if (!url) return label;
+  return `<a href="${String(url)}" target="_blank" rel="noopener noreferrer" class="race-link">${label} <span class="ext-icon" aria-hidden="true">↗</span></a>`;
+}
+
+function renderRaces(json) {
+  const container = document.getElementById('races-container');
+  if (!container) return;
+
+  const rows = Array.isArray(json && json.data) ? json.data : [];
+
+  if (rows.length === 0) {
+    container.innerHTML = '<p class="races-empty">No upcoming races.</p>';
+    return;
+  }
+
+  const isDesktop = window.matchMedia('(min-width: 640px)').matches;
+
+  if (isDesktop) {
+    renderRacesTable(container, rows);
+  } else {
+    renderRacesCards(container, rows);
+  }
+}
+
+function renderRacesTable(container, rows) {
+  let html = '<table class="races-table"><thead><tr>';
+  const headers = ['Date', 'Race', 'Location', 'Type', 'Status', 'When'];
+  html += headers.map((h) => `<th>${h}</th>`).join('');
+  html += '</tr></thead><tbody>';
+  for (const r of rows) {
+    const dateStr = r && r.date != null ? fmtMediumDate(String(r.date)) : '—';
+    const name = r && r.name != null ? String(r.name) : '—';
+    const nameHtml = safeLink(r && r.url, name);
+    const location = r && r.location != null ? String(r.location) : null;
+    const raceType = r && r.race_type != null ? String(r.race_type) : null;
+    const status = fmtStatus(r && r.registration_status);
+    const when = r && r.when != null ? String(r.when) : null;
+    html += '<tr>';
+    html += `<td class="races-col-date">${dateStr}</td>`;
+    html += `<td class="races-col-name">${nameHtml}</td>`;
+    html += `<td class="races-col-location">${location || '—'}</td>`;
+    html += `<td class="races-col-type">${raceType || '—'}</td>`;
+    html += `<td class="races-col-status">${status ? `<span class="status-badge">${status}</span>` : '—'}</td>`;
+    html += `<td class="races-col-when">${when || '—'}</td>`;
+    html += '</tr>';
+  }
+  html += '</tbody></table>';
+  container.innerHTML = html;
+}
+
+function renderRacesCards(container, rows) {
+  let html = '<div class="races-cards">';
+  for (const r of rows) {
+    const dateStr = r && r.date != null ? fmtMediumDate(String(r.date)) : '';
+    const name = r && r.name != null ? String(r.name) : '';
+    const nameHtml = safeLink(r && r.url, name);
+    const location = r && r.location != null ? String(r.location) : null;
+    const raceType = r && r.race_type != null ? String(r.race_type) : null;
+    const status = fmtStatus(r && r.registration_status);
+    const when = r && r.when != null ? String(r.when) : null;
+    const subParts = [];
+    if (location) subParts.push(location);
+    if (raceType) subParts.push(raceType);
+    const subText = subParts.join(' · ');
+    html += '<div class="race-card">';
+    html += `<div class="race-card-date">${dateStr}</div>`;
+    html += `<div class="race-card-when">${when || ''}</div>`;
+    html += `<div class="race-card-name">${nameHtml}</div>`;
+    if (subText) html += `<div class="race-card-sub">${subText}</div>`;
+    if (status) html += `<span class="status-badge">${status}</span>`;
+    html += '</div>';
+  }
+  html += '</div>';
+  container.innerHTML = html;
+}
+
+async function loadRaces() {
+  const wrap = document.getElementById('races-wrap');
+  if (wrap) {
+    wrap.classList.add('is-loading');
+  }
+
+  let response;
+  try {
+    response = await fetch(RACES_URL, { cache: 'no-store' });
+  } catch (err) {
+    console.error('[dashboard] network error fetching races:', err);
+    const container = document.getElementById('races-container');
+    if (container) {
+      container.innerHTML = '<p class="races-error" role="status">Upcoming race data unavailable.</p>';
+    }
+    if (wrap) wrap.classList.remove('is-loading');
+    return;
+  }
+
+  if (!response.ok) {
+    console.error(
+      `[dashboard] HTTP ${response.status} ${response.statusText} for ${RACES_URL}`,
+    );
+    const container = document.getElementById('races-container');
+    if (container) {
+      container.innerHTML = '<p class="races-error" role="status">Upcoming race data unavailable.</p>';
+    }
+    if (wrap) wrap.classList.remove('is-loading');
+    return;
+  }
+
+  let json;
+  try {
+    json = await response.json();
+  } catch (err) {
+    console.error('[dashboard] failed to parse races.json:', err);
+    const container = document.getElementById('races-container');
+    if (container) {
+      container.innerHTML = '<p class="races-error" role="status">Upcoming race data unavailable.</p>';
+    }
+    if (wrap) wrap.classList.remove('is-loading');
+    return;
+  }
+
+  if (!json || !Array.isArray(json.data)) {
+    const container = document.getElementById('races-container');
+    if (container) {
+      container.innerHTML = '<p class="races-error" role="status">Upcoming race data unavailable.</p>';
+    }
+    if (wrap) wrap.classList.remove('is-loading');
+    return;
+  }
+
+  if (wrap) {
+    wrap.classList.remove('is-loading');
+  }
+
+  renderRaces(json);
+}
+
 async function loadTrainingLoad() {
   const wrap = document.getElementById('chart-wrap');
   if (wrap) {
@@ -406,4 +556,7 @@ async function loadTrainingLoad() {
   buildChart(json);
 }
 
-document.addEventListener('DOMContentLoaded', loadTrainingLoad);
+document.addEventListener('DOMContentLoaded', () => {
+  loadTrainingLoad();
+  loadRaces();
+});

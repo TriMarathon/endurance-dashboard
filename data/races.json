@@ -1,0 +1,177 @@
+{
+  "generated_at": "2026-09-09T21:06:37Z",
+  "reference_date": "2026-09-09",
+  "count": 17,
+  "data": [
+    {
+      "date": "2026-09-12",
+      "name": "IRONMAN 70.3 Wisconsin",
+      "location": "Madison, WI",
+      "race_type": "IRONMAN 70.3",
+      "registration_status": "registered",
+      "url": null,
+      "days_until": 3,
+      "when": "in 3 days"
+    },
+    {
+      "date": "2026-09-20",
+      "name": "Ready to Run 20 Miler",
+      "location": "Chicago, IL",
+      "race_type": "20 Mile",
+      "registration_status": "registered",
+      "url": null,
+      "days_until": 11,
+      "when": "in 11 days"
+    },
+    {
+      "date": "2026-10-11",
+      "name": "Chicago Marathon",
+      "location": "Chicago, IL",
+      "race_type": "Marathon",
+      "registration_status": "registered",
+      "url": null,
+      "days_until": 32,
+      "when": "in 32 days"
+    },
+    {
+      "date": "2026-10-24",
+      "name": "Lake Bluff PTO Pumpkin Chase 5K",
+      "location": "Lake Bluff, IL",
+      "race_type": "5K",
+      "registration_status": "registered",
+      "url": null,
+      "days_until": 45,
+      "when": "in 45 days"
+    },
+    {
+      "date": "2026-11-08",
+      "name": "Fast Track Cross Country Regionals 3 Mile",
+      "location": "Schaumburg, IL",
+      "race_type": "3 Mile",
+      "registration_status": "registered",
+      "url": null,
+      "days_until": 60,
+      "when": "in 60 days"
+    },
+    {
+      "date": "2026-11-26",
+      "name": "Grove Express 5K",
+      "location": "Downers Grove, IL",
+      "race_type": "5K",
+      "registration_status": "registered",
+      "url": null,
+      "days_until": 78,
+      "when": "in 78 days"
+    },
+    {
+      "date": "2027-03-14",
+      "name": "March Madness Half Marathon",
+      "location": "Cary, IL",
+      "race_type": "Half Marathon",
+      "registration_status": "",
+      "url": null,
+      "days_until": 186,
+      "when": "in 186 days"
+    },
+    {
+      "date": "2027-04-11",
+      "name": "Lakefront 10 Miler & 5K",
+      "location": "Chicago, IL",
+      "race_type": null,
+      "registration_status": "registered",
+      "url": null,
+      "days_until": 214,
+      "when": "in 214 days"
+    },
+    {
+      "date": "2027-04-19",
+      "name": "Boston Marathon",
+      "location": "Boston, MA",
+      "race_type": "Marathon",
+      "registration_status": "registered",
+      "url": null,
+      "days_until": 222,
+      "when": "in 222 days"
+    },
+    {
+      "date": "2027-06-13",
+      "name": "IRONMAN 70.3 Rockford",
+      "location": "Rockford, IL",
+      "race_type": "IRONMAN 70.3",
+      "registration_status": "registered",
+      "url": null,
+      "days_until": 277,
+      "when": "in 277 days"
+    },
+    {
+      "date": "2027-06-27",
+      "name": "Pleasant Prairie Triathlon",
+      "location": "Pleasant Prairie, WI",
+      "race_type": "Sprint Triathlon",
+      "registration_status": "registered",
+      "url": null,
+      "days_until": 291,
+      "when": "in 291 days"
+    },
+    {
+      "date": "2027-07-11",
+      "name": "Lake Zurich Triathlon",
+      "location": "Lake Zurich, IL",
+      "race_type": "Sprint Triathlon",
+      "registration_status": "registered",
+      "url": null,
+      "days_until": 305,
+      "when": "in 305 days"
+    },
+    {
+      "date": "2027-08-01",
+      "name": "Naperville Sprint Triathlon",
+      "location": "Naperville, IL",
+      "race_type": "Sprint Triathlon",
+      "registration_status": "registered",
+      "url": "https://napervilletri.events/",
+      "days_until": 326,
+      "when": "in 326 days"
+    },
+    {
+      "date": "2027-08-07",
+      "name": "USA Triathlon Sprint-Distance National Championships",
+      "location": "Des Moines, Iowa",
+      "race_type": "Sprint Triathlon",
+      "registration_status": "registered",
+      "url": "https://www.usatriathlon.org/get-racing/national-championships",
+      "days_until": 332,
+      "when": "in 332 days"
+    },
+    {
+      "date": "2027-08-22",
+      "name": "Supertri Chicago",
+      "location": "Chicago, IL",
+      "race_type": "Sprint Triathlon",
+      "registration_status": "registered",
+      "url": "https://supertri.com/chicago",
+      "days_until": 347,
+      "when": "in 347 days"
+    },
+    {
+      "date": "2027-09-08",
+      "name": "World Triathlon Championship Finals",
+      "location": "Hamburg, Germany",
+      "race_type": "Mixed Relay",
+      "registration_status": "registered",
+      "url": "https://triathlon.org/events/2027-wtcf-hamburg",
+      "days_until": 364,
+      "when": "in 364 days"
+    },
+    {
+      "date": "2027-09-12",
+      "name": "World Triathlon Championship Finals",
+      "location": "Hamburg, Germany",
+      "race_type": "Sprint Triathlon",
+      "registration_status": "registered",
+      "url": "https://triathlon.org/events/2027-wtcf-hamburg",
+      "days_until": 368,
+      "when": "in 368 days"
+    }
+  ]
+}
