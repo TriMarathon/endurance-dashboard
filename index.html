@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Endurance Dashboard</title>
+    <meta
+      name="description"
+      content="Endurance training-load dashboard showing 90-day TSS, CTL and ATL from Garmin training data."
+    />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Endurance Dashboard</h1>
+      <div class="header-meta">
+        <span class="subtitle">Training load · Last 90 days</span>
+        <span id="updated" class="updated" aria-live="polite"></span>
+      </div>
+    </header>
+
+    <main>
+      <h2 class="chart-title" id="chart-title">Training Load — Last 90 Days</h2>
+      <section
+        id="chart-wrap"
+        class="chart-wrap"
+        role="img"
+        aria-labelledby="chart-title"
+      >
+        <div class="chart-container">
+          <canvas id="training-load" width="1200" height="520"
+            >Training load chart: daily TSS bars with CTL and ATL trend lines.</canvas
+          >
+          <div id="status" class="status placeholder" role="status"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Static site &middot; data/training_load.json &middot; no tracking
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" defer></script>
+    <script src="js/dashboard.js" defer></script>
+  </body>
+</html>
