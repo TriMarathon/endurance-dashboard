@@ -5,13 +5,21 @@
   --grid: rgba(255, 255, 255, 0.05);
   --text: #e8e9ec;
   --muted: #9aa0a8;
-  --accent-line: #50c878;
-  --accent-line-dark: rgba(80, 200, 120, 0.85);
-  --accent-line-bg: rgba(80, 200, 120, 0.12);
+  --accent-line: #1565C0;
+  --accent-line-dark: rgba(21, 101, 192, 0.85);
+  --accent-line-bg: rgba(21, 101, 192, 0.12);
   --accent-bar: rgba(255, 255, 255, 0.12);
   --accent-bar-border: rgba(255, 255, 255, 0.25);
-  --atl: #ff6384;
-  --atl-bg: rgba(255, 99, 132, 0.14);
+  --atl: #D81B60;
+  --atl-bg: rgba(216, 27, 96, 0.14);
+  --sport-swim-bg: rgba(251, 140, 0, 0.88);
+  --sport-swim-bd: rgba(251, 140, 0, 1);
+  --sport-bike-bg: rgba(229, 57, 53, 0.88);
+  --sport-bike-bd: rgba(229, 57, 53, 1);
+  --sport-run-bg: rgba(30, 136, 229, 0.88);
+  --sport-run-bd: rgba(30, 136, 229, 1);
+  --sport-other-bg: rgba(168, 176, 188, 0.88);
+  --sport-other-bd: rgba(168, 176, 188, 1);
   --error: #ff6b6b;
 }
 

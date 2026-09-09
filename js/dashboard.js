@@ -29,6 +29,14 @@ const palette = {
   get barBorder() { return cssVar('--accent-bar-border'); },
   get atl() { return cssVar('--atl'); },
   get atlBg() { return cssVar('--atl-bg'); },
+  get swimBg() { return cssVar('--sport-swim-bg'); },
+  get swimBd() { return cssVar('--sport-swim-bd'); },
+  get bikeBg() { return cssVar('--sport-bike-bg'); },
+  get bikeBd() { return cssVar('--sport-bike-bd'); },
+  get runBg() { return cssVar('--sport-run-bg'); },
+  get runBd() { return cssVar('--sport-run-bd'); },
+  get otherBg() { return cssVar('--sport-other-bg'); },
+  get otherBd() { return cssVar('--sport-other-bd'); },
   get panelBorder() { return cssVar('--panel-border'); },
   get grid() { return cssVar('--grid'); },
 };
@@ -95,6 +103,10 @@ function buildChart(json) {
 
   const labels = rows.map((row) => (row && row.date != null ? String(row.date) : ''));
   const tss = rows.map((row) => numOrNU(row && row.tss));
+  const swim = rows.map((row) => numOrNU(row && row.swim_tss));
+  const bike = rows.map((row) => numOrNU(row && row.bike_tss));
+  const run = rows.map((row) => numOrNU(row && row.run_tss));
+  const other = rows.map((row) => numOrNU(row && row.other_tss));
   const ctl = rows.map((row) => numOrNU(row && row.ctl));
   const atl = rows.map((row) => numOrNU(row && row.atl));
 
@@ -114,13 +126,47 @@ function buildChart(json) {
       datasets: [
         {
           type: 'bar',
-          label: 'TSS',
-          data: tss,
+          label: 'Swim',
+          data: swim,
           yAxisID: 'yTss',
-          backgroundColor: palette.bar,
-          borderColor: palette.barBorder,
-          borderWidth: 1,
-          barPercentage: 0.75,
+          stack: 'tss',
+          backgroundColor: palette.swimBg,
+          borderColor: palette.swimBd,
+          borderWidth: 0,
+          barPercentage: 1,
+        },
+        {
+          type: 'bar',
+          label: 'Bike',
+          data: bike,
+          yAxisID: 'yTss',
+          stack: 'tss',
+          backgroundColor: palette.bikeBg,
+          borderColor: palette.bikeBd,
+          borderWidth: 0,
+          barPercentage: 1,
+        },
+        {
+          type: 'bar',
+          label: 'Run',
+          data: run,
+          yAxisID: 'yTss',
+          stack: 'tss',
+          backgroundColor: palette.runBg,
+          borderColor: palette.runBd,
+          borderWidth: 0,
+          barPercentage: 1,
+        },
+        {
+          type: 'bar',
+          label: 'Other',
+          data: other,
+          yAxisID: 'yTss',
+          stack: 'tss',
+          backgroundColor: palette.otherBg,
+          borderColor: palette.otherBd,
+          borderWidth: 0,
+          barPercentage: 1,
         },
         {
           type: 'line',
@@ -185,6 +231,13 @@ function buildChart(json) {
               }
               return `${ctx.dataset.label}: ${Number(value).toFixed(1)}`;
             },
+            afterTitle: (tooltipItems) => {
+              const item = tooltipItems && tooltipItems[0];
+              if (!item) return '';
+              const total = tss[item.dataIndex];
+              if (total === null || total === undefined) return '';
+              return `Total TSS: ${Number(total).toFixed(1)}`;
+            },
           },
         },
       },
@@ -225,7 +278,7 @@ function buildChart(json) {
             drawBorder: false,
           },
           title: {
-            display: true,
+            display: false,
             text: 'CTL / ATL',
             color: palette.muted,
             font: { size: 10 },
@@ -249,6 +302,31 @@ function buildChart(json) {
         },
       },
     },
+    plugins: [
+      // Draws a small horizontal "TSS" label above the left y-axis tick
+      // labels (above the top value), instead of a rotated axis title. The
+      // axis scales themselves (yCtl left, yTss right) are not moved.
+      {
+        id: 'tss-axis-label',
+        afterDraw: (chart) => {
+          const scale = chart.scales && chart.scales.yCtl;
+          if (!scale || !scale.ticks || scale.ticks.length === 0) return;
+          const ctx = chart.ctx;
+          // Place the label one font-height above the left-axis top
+          // (= chart-area upper boundary == scale.top), so it sits just
+          // above the highest tick label with a clear gap.
+          const fontSize = 10;
+          const y = scale.top - fontSize;
+          ctx.save();
+          ctx.fillStyle = palette.muted;
+          ctx.textAlign = 'left';
+          ctx.textBaseline = 'bottom';
+          ctx.font = '10px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+          ctx.fillText('TSS', scale.left + 2, y);
+          ctx.restore();
+        },
+      },
+    ],
   });
 }
 
