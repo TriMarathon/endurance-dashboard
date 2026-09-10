@@ -1,5 +1,9 @@
-const DATA_URL = 'data/training_load.json';
-const RACES_URL = 'data/races.json';
+const VERSION_URL = 'data/version.json';
+const BASE_DATA_URL = 'data/training_load.json';
+const BASE_RACES_URL = 'data/races.json';
+let dataVersion = '';
+let DATA_URL = BASE_DATA_URL;
+let RACES_URL = BASE_RACES_URL;
 const CHART_ID = 'training-load';
 const STATUS_ID = 'status';
 const UPDATED_ID = 'updated';
@@ -625,6 +629,24 @@ async function loadRaces() {
   renderRaces(json);
 }
 
+async function loadVersion() {
+  try {
+    const response = await fetch(VERSION_URL, { cache: 'no-store' });
+    if (!response.ok) {
+      return;
+    }
+    const json = await response.json();
+    if (json && typeof json.version === 'string' && json.version.length > 0) {
+      dataVersion = json.version;
+      const qs = '?v=' + encodeURIComponent(json.version);
+      DATA_URL = BASE_DATA_URL + qs;
+      RACES_URL = BASE_RACES_URL + qs;
+    }
+  } catch (err) {
+    console.error('[dashboard] failed to load version.json, using unversioned URLs:', err);
+  }
+}
+
 async function loadTrainingLoad() {
   const wrap = document.getElementById('chart-wrap');
   if (wrap) {
@@ -693,8 +715,10 @@ async function loadTrainingLoad() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  loadTrainingLoad();
-  loadRaces();
+  loadVersion().then(() => {
+    loadTrainingLoad();
+    loadRaces();
+  });
 });
 
 document.addEventListener('keydown', (e) => {
