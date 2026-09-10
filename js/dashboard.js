@@ -3,6 +3,10 @@ const RACES_URL = 'data/races.json';
 const CHART_ID = 'training-load';
 const STATUS_ID = 'status';
 const UPDATED_ID = 'updated';
+const RACES_STATE_ID = 'races-state';
+
+let selectedRace = null;
+let racesData = [];
 
 const MONTHS_SHORT = [
   'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
@@ -352,9 +356,13 @@ function fmtStatus(status) {
   return map[s] || s;
 }
 
-function safeLink(url, label) {
+function raceNameLink(label) {
+  return String(label);
+}
+
+function externalLink(url, label) {
   if (!url) return label;
-  return `<a href="${String(url)}" target="_blank" rel="noopener noreferrer" class="race-link">${label} <span class="ext-icon" aria-hidden="true">↗</span></a>`;
+  return `<a href="${String(url)}" target="_blank" rel="noopener noreferrer" class="race-event-btn">${label} <span class="ext-icon" aria-hidden="true">↗</span></a>`;
 }
 
 function renderRaces(json) {
@@ -362,11 +370,20 @@ function renderRaces(json) {
   if (!container) return;
 
   const rows = Array.isArray(json && json.data) ? json.data : [];
+  racesData = rows;
 
   if (rows.length === 0) {
     container.innerHTML = '<p class="races-empty">No upcoming races.</p>';
     return;
   }
+
+  if (selectedRace !== null) {
+    renderRaceDetail(container, racesData[selectedRace]);
+    return;
+  }
+
+  const state = document.getElementById(RACES_STATE_ID);
+  if (state) state.textContent = 'list';
 
   const isDesktop = window.matchMedia('(min-width: 640px)').matches;
 
@@ -382,17 +399,19 @@ function renderRacesTable(container, rows) {
   const headers = ['Date', 'Race', 'Location', 'Type', 'Status', 'When'];
   html += headers.map((h) => `<th>${h}</th>`).join('');
   html += '</tr></thead><tbody>';
-  for (const r of rows) {
+  for (let i = 0; i < rows.length; i++) {
+    const r = rows[i];
     const dateStr = r && r.date != null ? fmtMediumDate(String(r.date)) : '—';
     const name = r && r.name != null ? String(r.name) : '—';
-    const nameHtml = safeLink(r && r.url, name);
     const location = r && r.location != null ? String(r.location) : null;
     const raceType = r && r.race_type != null ? String(r.race_type) : null;
     const status = fmtStatus(r && r.registration_status);
     const when = r && r.when != null ? String(r.when) : null;
-    html += '<tr>';
+    const selected = selectedRace === i;
+    const rowClass = selected ? ' race-row-selected' : '';
+    html += `<tr class="race-row${rowClass}" data-race-index="${i}" tabindex="0" aria-label="View details for ${name}">`;
     html += `<td class="races-col-date">${dateStr}</td>`;
-    html += `<td class="races-col-name">${nameHtml}</td>`;
+    html += `<td class="races-col-name">${raceNameLink(name)}</td>`;
     html += `<td class="races-col-location">${location || '—'}</td>`;
     html += `<td class="races-col-type">${raceType || '—'}</td>`;
     html += `<td class="races-col-status">${status ? `<span class="status-badge">${status}</span>` : '—'}</td>`;
@@ -401,14 +420,28 @@ function renderRacesTable(container, rows) {
   }
   html += '</tbody></table>';
   container.innerHTML = html;
+
+  container.querySelectorAll('.race-row').forEach((rowEl) => {
+    rowEl.addEventListener('click', () => {
+      const idx = Number(rowEl.getAttribute('data-race-index'));
+      selectRace(idx);
+    });
+    rowEl.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const idx = Number(rowEl.getAttribute('data-race-index'));
+        selectRace(idx);
+      }
+    });
+  });
 }
 
 function renderRacesCards(container, rows) {
   let html = '<div class="races-cards">';
-  for (const r of rows) {
+  for (let i = 0; i < rows.length; i++) {
+    const r = rows[i];
     const dateStr = r && r.date != null ? fmtMediumDate(String(r.date)) : '';
     const name = r && r.name != null ? String(r.name) : '';
-    const nameHtml = safeLink(r && r.url, name);
     const location = r && r.location != null ? String(r.location) : null;
     const raceType = r && r.race_type != null ? String(r.race_type) : null;
     const status = fmtStatus(r && r.registration_status);
@@ -417,16 +450,119 @@ function renderRacesCards(container, rows) {
     if (location) subParts.push(location);
     if (raceType) subParts.push(raceType);
     const subText = subParts.join(' · ');
-    html += '<div class="race-card">';
+    html += `<div class="race-card" data-race-index="${i}" tabindex="0" aria-label="View details for ${name}">`;
     html += `<div class="race-card-date">${dateStr}</div>`;
     html += `<div class="race-card-when">${when || ''}</div>`;
-    html += `<div class="race-card-name">${nameHtml}</div>`;
+    html += `<div class="race-card-name">${raceNameLink(name)}</div>`;
     if (subText) html += `<div class="race-card-sub">${subText}</div>`;
     if (status) html += `<span class="status-badge">${status}</span>`;
     html += '</div>';
   }
   html += '</div>';
   container.innerHTML = html;
+
+  container.querySelectorAll('.race-card').forEach((cardEl) => {
+    cardEl.addEventListener('click', () => {
+      const idx = Number(cardEl.getAttribute('data-race-index'));
+      selectRace(idx);
+    });
+    cardEl.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const idx = Number(cardEl.getAttribute('data-race-index'));
+        selectRace(idx);
+      }
+    });
+  });
+}
+
+function selectRace(index) {
+  if (!racesData[index]) return;
+  selectedRace = index;
+  const container = document.getElementById('races-container');
+  if (container) {
+    renderRaceDetail(container, racesData[index]);
+  }
+  const state = document.getElementById(RACES_STATE_ID);
+  if (state) state.textContent = 'detail';
+}
+
+function clearSelectedRace() {
+  selectedRace = null;
+  const state = document.getElementById(RACES_STATE_ID);
+  if (state) state.textContent = 'list';
+  const container = document.getElementById('races-container');
+  if (!container) return;
+
+  if (racesData.length === 0) {
+    container.innerHTML = '<p class="races-empty">No upcoming races.</p>';
+    return;
+  }
+
+  const isDesktop = window.matchMedia('(min-width: 640px)').matches;
+  if (isDesktop) {
+    renderRacesTable(container, racesData);
+  } else {
+    renderRacesCards(container, racesData);
+  }
+}
+
+function renderRaceDetail(container, race) {
+  const dateStr = race && race.date != null
+    ? fmtFullDate(String(race.date))
+    : '';
+  const name = race && race.name != null ? String(race.name) : '';
+  const when = race && race.when != null ? String(race.when) : '';
+  const location = race && race.location != null
+    ? String(race.location) : null;
+  const raceType = race && race.race_type != null
+    ? String(race.race_type) : null;
+  const status = fmtStatus(race && race.registration_status);
+  const series = race && race.series != null
+    ? String(race.series) : null;
+  const priority = race && race.priority != null
+    ? String(race.priority) : null;
+  const notes = race && race.notes != null
+    ? String(race.notes) : null;
+  const url = race && race.url;
+
+  let html = '<div class="races-detail">';
+  html += `<button type="button" id="race-back" class="race-back" aria-label="Back to races list">`;
+  html += '<span class="race-back-icon" aria-hidden="true">←</span>';
+  html += ' Back to races';
+  html += '</button>';
+  html += `<h3 class="races-detail-name">${raceNameLink(name)}</h3>`;
+  if (dateStr) html += `<p class="races-detail-date">${dateStr}</p>`;
+  if (when) html += `<p class="races-detail-when">${when}</p>`;
+  if (location) html += `<div class="races-detail-row"><span class="races-detail-label">Location</span><span class="races-detail-value">${location}</span></div>`;
+  if (raceType) html += `<div class="races-detail-row"><span class="races-detail-label">Type</span><span class="races-detail-value">${raceType}</span></div>`;
+  if (status) html += `<div class="races-detail-row"><span class="races-detail-label">Status</span><span class="races-detail-value status-value">${status}</span></div>`;
+  if (series) html += `<div class="races-detail-row"><span class="races-detail-label">Series</span><span class="races-detail-value">${series}</span></div>`;
+  if (priority) html += `<div class="races-detail-row"><span class="races-detail-label">Priority</span><span class="races-detail-value priority-badge">${priority}</span></div>`;
+  if (notes) {
+    html += `<div class="races-detail-row"><span class="races-detail-label">Notes</span><div class="races-detail-notes" id="race-notes"></div></div>`;
+  }
+  if (url) {
+    html += `<div class="races-detail-actions">`;
+    html += externalLink(String(url), 'Event website');
+    html += `</div>`;
+  }
+  html += '</div>';
+  container.innerHTML = html;
+
+  // Notes must NEVER go through innerHTML — render via textContent for XSS safety.
+  if (notes) {
+    const notesEl = container.querySelector('#race-notes');
+    if (notesEl) {
+      notesEl.textContent = notes;
+    }
+  }
+
+  const backBtn = container.querySelector('#race-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', clearSelectedRace);
+  }
+  backBtn.focus();
 }
 
 async function loadRaces() {
@@ -559,4 +695,10 @@ async function loadTrainingLoad() {
 document.addEventListener('DOMContentLoaded', () => {
   loadTrainingLoad();
   loadRaces();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && selectedRace !== null) {
+    clearSelectedRace();
+  }
 });
