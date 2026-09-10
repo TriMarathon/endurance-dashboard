@@ -35,6 +35,36 @@
         </div>
       </section>
 
+      <h2 class="chart-title" id="weekly-tss-title">Weekly TSS — Last 52 Weeks</h2>
+      <section
+        id="weekly-tss-wrap"
+        class="chart-wrap"
+        role="img"
+        aria-labelledby="weekly-tss-title"
+      >
+        <div class="chart-container">
+          <canvas id="weekly-tss" width="1200" height="520"
+            >Stacked bar chart of weekly TSS by sport (Swim, Bike, Run, Other).</canvas
+          >
+          <div id="weekly-tss-status" class="status placeholder" role="status"></div>
+        </div>
+      </section>
+
+      <h2 class="chart-title" id="weekly-time-title">Weekly Training Time — Last 52 Weeks</h2>
+      <section
+        id="weekly-time-wrap"
+        class="chart-wrap"
+        role="img"
+        aria-labelledby="weekly-time-title"
+      >
+        <div class="chart-container">
+          <canvas id="weekly-time" width="1200" height="520"
+            >Stacked bar chart of weekly moving time by sport (Swim, Bike, Run, Other).</canvas
+          >
+          <div id="weekly-time-status" class="status placeholder" role="status"></div>
+        </div>
+      </section>
+
       <h2 class="chart-title" id="races-title">Upcoming Races</h2>
       <section
         id="races-wrap"
@@ -49,7 +79,7 @@
     </main>
 
     <footer>
-      Static site &middot; data/training_load.json &middot; data/races.json &middot; data/version.json &middot; no tracking
+      Static site &middot; data/training_load.json &middot; data/races.json &middot; data/weekly_training.json &middot; data/version.json &middot; no tracking
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" defer></script>

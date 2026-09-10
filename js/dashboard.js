@@ -1,13 +1,19 @@
 const VERSION_URL = 'data/version.json';
 const BASE_DATA_URL = 'data/training_load.json';
 const BASE_RACES_URL = 'data/races.json';
+const BASE_WEEKLY_URL = 'data/weekly_training.json';
 let dataVersion = '';
 let DATA_URL = BASE_DATA_URL;
 let RACES_URL = BASE_RACES_URL;
+let WEEKLY_URL = BASE_WEEKLY_URL;
 const CHART_ID = 'training-load';
 const STATUS_ID = 'status';
 const UPDATED_ID = 'updated';
 const RACES_STATE_ID = 'races-state';
+const WEEKLY_TSS_ID = 'weekly-tss';
+const WEEKLY_TSS_STATUS_ID = 'weekly-tss-status';
+const WEEKLY_TIME_ID = 'weekly-time';
+const WEEKLY_TIME_STATUS_ID = 'weekly-time-status';
 
 let selectedRace = null;
 let racesData = [];
@@ -261,8 +267,6 @@ function buildChart(json) {
             minRotation: 0,
             color: palette.muted,
             font: { size: 11 },
-            // Chart.js category-scale tick callbacks receive the numeric category
-            // index (0..N), not the label string, so resolve the real label first.
             callback: function (value) {
               return fmtAxis(this.getLabelForValue(value));
             },
@@ -312,18 +316,12 @@ function buildChart(json) {
       },
     },
     plugins: [
-      // Draws a small horizontal "TSS" label above the left y-axis tick
-      // labels (above the top value), instead of a rotated axis title. The
-      // axis scales themselves (yCtl left, yTss right) are not moved.
       {
         id: 'tss-axis-label',
         afterDraw: (chart) => {
           const scale = chart.scales && chart.scales.yCtl;
           if (!scale || !scale.ticks || scale.ticks.length === 0) return;
           const ctx = chart.ctx;
-          // Place the label one font-height above the left-axis top
-          // (= chart-area upper boundary == scale.top), so it sits just
-          // above the highest tick label with a clear gap.
           const fontSize = 10;
           const y = scale.top - fontSize;
           ctx.save();
@@ -336,6 +334,360 @@ function buildChart(json) {
         },
       },
     ],
+  });
+}
+
+function fmtWeekLabel(weekStart) {
+  const p = splitDate(weekStart);
+  if (!p) return weekStart;
+  return `${MONTHS_SHORT[p.m - 1]} ${p.d}, ${p.y}`;
+}
+
+function fmtHMSShort(sec) {
+  if (sec === null || sec === undefined || Number(sec) === 0) return '0:00';
+  const total = Number(sec);
+  const h = Math.floor(total / 3600);
+  const m = Math.floor((total % 3600) / 60);
+  return `${h}:${String(m).padStart(2, '0')}`;
+}
+
+function fmtWeeklyTooltipBody(rows, weekIndex) {
+  const row = rows[weekIndex];
+  if (!row) return [];
+  const no = (v) => Number(v || 0);
+  const totalTss = no(row.total_tss).toFixed(1);
+  const totalSecs = no(row.total_moving_seconds);
+  const totalH = Math.floor(totalSecs / 3600);
+  const totalM = Math.floor((totalSecs % 3600) / 60);
+  const t = (v) => no(v).toFixed(1);
+  const yd = (v) => no(v).toLocaleString('en-US');
+  const mi = (v) => no(v).toFixed(1);
+  const tm = (v) => fmtHMSShort(v);
+  return [
+    `Total TSS: ${totalTss}`,
+    `Total time: ${totalH}:${String(totalM).padStart(2, '0')}`,
+    '',
+    `Swim: ${t(row.swim_tss)} TSS \u00b7 ${tm(row.swim_moving_seconds)} \u00b7 ${yd(row.swim_distance_yards)} yd`,
+    `Bike: ${t(row.bike_tss)} TSS \u00b7 ${tm(row.bike_moving_seconds)} \u00b7 ${mi(row.bike_distance_miles)} mi`,
+    `Run: ${t(row.run_tss)} TSS \u00b7 ${tm(row.run_moving_seconds)} \u00b7 ${mi(row.run_distance_miles)} mi`,
+    `Other: ${t(row.other_tss)} TSS \u00b7 ${tm(row.other_moving_seconds)}`,
+  ];
+}
+
+function buildWeeklyTssChart(json) {
+  const canvas = document.getElementById(WEEKLY_TSS_ID);
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  const rows = Array.isArray(json.data) ? json.data : [];
+
+  const labels = rows.map((row) =>
+    row && row.week_start != null ? String(row.week_start) : '',
+  );
+  const total = rows.map((row) => numOrNU(row && row.total_tss));
+  const swim = rows.map((row) => numOrNU(row && row.swim_tss));
+  const bike = rows.map((row) => numOrNU(row && row.bike_tss));
+  const run = rows.map((row) => numOrNU(row && row.run_tss));
+  const other = rows.map((row) => numOrNU(row && row.other_tss));
+
+  return new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        {
+          type: 'bar',
+          yAxisID: 'yTss',
+          label: 'Swim',
+          data: swim,
+          stack: 'tss',
+          backgroundColor: palette.swimBg,
+          borderColor: palette.swimBd,
+          borderWidth: 0,
+          barPercentage: 0.85,
+        },
+        {
+          type: 'bar',
+          yAxisID: 'yTss',
+          label: 'Bike',
+          data: bike,
+          stack: 'tss',
+          backgroundColor: palette.bikeBg,
+          borderColor: palette.bikeBd,
+          borderWidth: 0,
+          barPercentage: 0.85,
+        },
+        {
+          type: 'bar',
+          yAxisID: 'yTss',
+          label: 'Run',
+          data: run,
+          stack: 'tss',
+          backgroundColor: palette.runBg,
+          borderColor: palette.runBd,
+          borderWidth: 0,
+          barPercentage: 0.85,
+        },
+        {
+          type: 'bar',
+          yAxisID: 'yTss',
+          label: 'Other',
+          data: other,
+          stack: 'tss',
+          backgroundColor: palette.otherBg,
+          borderColor: palette.otherBd,
+          borderWidth: 0,
+          barPercentage: 0.85,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: false,
+      interaction: {
+        mode: 'index',
+        intersect: false,
+      },
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: {
+            color: palette.text,
+            font: { size: 12 },
+            usePointStyle: true,
+            pointStyle: 'circle',
+            padding: 18,
+          },
+        },
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+          backgroundColor: 'rgba(18, 19, 22, 0.96)',
+          titleColor: '#ffffff',
+          bodyColor: '#e0e0e0',
+          titleFont: { size: 13, weight: 500 },
+          bodyFont: { size: 12 },
+          padding: 10,
+          borderColor: 'rgba(255, 255, 255, 0.08)',
+          callbacks: {
+            title: (tooltipItems) => {
+              const item = tooltipItems && tooltipItems[0];
+              if (!item) return '';
+              const label = labels[item.dataIndex];
+              return `Week of ${fmtWeekLabel(label)}`;
+            },
+            label: () => null,
+            afterTitle: (tooltipItems) => {
+              const item = tooltipItems && tooltipItems[0];
+              if (!item) return '';
+              return fmtWeeklyTooltipBody(rows, item.dataIndex);
+            },
+          },
+        },
+      },
+      scales: {
+        x: {
+          type: 'category',
+          border: { color: palette.panelBorder },
+          grid: {
+            color: palette.grid,
+            drawBorder: false,
+          },
+          ticks: {
+            maxTicksLimit: 12,
+            autoSkip: true,
+            maxRotation: 0,
+            minRotation: 0,
+            color: palette.muted,
+            font: { size: 11 },
+            callback: function (value) {
+              const label = this.getLabelForValue(value);
+              const p = splitDate(label);
+              if (!p) return label;
+              return `${MONTHS_SHORT[p.m - 1]} ${p.d}`;
+            },
+          },
+        },
+        yTss: {
+          type: 'linear',
+          position: 'left',
+          beginAtZero: true,
+          grid: {
+            color: palette.grid,
+            drawBorder: false,
+          },
+          ticks: {
+            maxTicksLimit: 6,
+            color: palette.muted,
+            font: { size: 11 },
+            callback: (value) => Number(value).toFixed(0),
+          },
+        },
+      },
+    },
+  });
+}
+
+function buildWeeklyTimeChart(json) {
+  const canvas = document.getElementById(WEEKLY_TIME_ID);
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  const rows = Array.isArray(json.data) ? json.data : [];
+
+  const labels = rows.map((row) =>
+    row && row.week_start != null ? String(row.week_start) : '',
+  );
+  const swim = rows.map((row) => numOrNU(row && row.swim_moving_seconds));
+  const bike = rows.map((row) => numOrNU(row && row.bike_moving_seconds));
+  const run = rows.map((row) => numOrNU(row && row.run_moving_seconds));
+  const other = rows.map((row) => numOrNU(row && row.other_moving_seconds));
+
+  function fmtSecondsToHMS(sec) {
+    if (sec === null || sec === undefined) return '—';
+    const total = Number(sec);
+    const h = Math.floor(total / 3600);
+    const m = Math.floor((total % 3600) / 60);
+    return `${h}h ${m}m`;
+  }
+
+  return new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        {
+          type: 'bar',
+          yAxisID: 'yTime',
+          label: 'Swim',
+          data: swim,
+          stack: 'time',
+          backgroundColor: palette.swimBg,
+          borderColor: palette.swimBd,
+          borderWidth: 0,
+          barPercentage: 0.85,
+        },
+        {
+          type: 'bar',
+          yAxisID: 'yTime',
+          label: 'Bike',
+          data: bike,
+          stack: 'time',
+          backgroundColor: palette.bikeBg,
+          borderColor: palette.bikeBd,
+          borderWidth: 0,
+          barPercentage: 0.85,
+        },
+        {
+          type: 'bar',
+          yAxisID: 'yTime',
+          label: 'Run',
+          data: run,
+          stack: 'time',
+          backgroundColor: palette.runBg,
+          borderColor: palette.runBd,
+          borderWidth: 0,
+          barPercentage: 0.85,
+        },
+        {
+          type: 'bar',
+          yAxisID: 'yTime',
+          label: 'Other',
+          data: other,
+          stack: 'time',
+          backgroundColor: palette.otherBg,
+          borderColor: palette.otherBd,
+          borderWidth: 0,
+          barPercentage: 0.85,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: false,
+      interaction: {
+        mode: 'index',
+        intersect: false,
+      },
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: {
+            color: palette.text,
+            font: { size: 12 },
+            usePointStyle: true,
+            pointStyle: 'circle',
+            padding: 18,
+          },
+        },
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+          backgroundColor: 'rgba(18, 19, 22, 0.96)',
+          titleColor: '#ffffff',
+          bodyColor: '#e0e0e0',
+          titleFont: { size: 13, weight: 500 },
+          bodyFont: { size: 12 },
+          padding: 10,
+          borderColor: 'rgba(255, 255, 255, 0.08)',
+          callbacks: {
+            title: (tooltipItems) => {
+              const item = tooltipItems && tooltipItems[0];
+              if (!item) return '';
+              const label = labels[item.dataIndex];
+              return `Week of ${fmtWeekLabel(label)}`;
+            },
+            label: () => null,
+            afterTitle: (tooltipItems) => {
+              const item = tooltipItems && tooltipItems[0];
+              if (!item) return '';
+              return fmtWeeklyTooltipBody(rows, item.dataIndex);
+            },
+          },
+        },
+      },
+      scales: {
+        x: {
+          type: 'category',
+          border: { color: palette.panelBorder },
+          grid: {
+            color: palette.grid,
+            drawBorder: false,
+          },
+          ticks: {
+            maxTicksLimit: 12,
+            autoSkip: true,
+            maxRotation: 0,
+            minRotation: 0,
+            color: palette.muted,
+            font: { size: 11 },
+            callback: function (value) {
+              const label = this.getLabelForValue(value);
+              const p = splitDate(label);
+              if (!p) return label;
+              return `${MONTHS_SHORT[p.m - 1]} ${p.d}`;
+            },
+          },
+        },
+        yTime: {
+          type: 'linear',
+          position: 'left',
+          beginAtZero: true,
+          grid: {
+            color: palette.grid,
+            drawBorder: false,
+          },
+          ticks: {
+            maxTicksLimit: 6,
+            color: palette.muted,
+            font: { size: 11 },
+            callback: (value) => fmtSecondsToHMS(value),
+          },
+        },
+      },
+    },
   });
 }
 
@@ -641,6 +993,7 @@ async function loadVersion() {
       const qs = '?v=' + encodeURIComponent(json.version);
       DATA_URL = BASE_DATA_URL + qs;
       RACES_URL = BASE_RACES_URL + qs;
+      WEEKLY_URL = BASE_WEEKLY_URL + qs;
     }
   } catch (err) {
     console.error('[dashboard] failed to load version.json, using unversioned URLs:', err);
@@ -714,10 +1067,81 @@ async function loadTrainingLoad() {
   buildChart(json);
 }
 
+async function loadWeekly() {
+  const tssWrap = document.getElementById('weekly-tss-wrap');
+  const timeWrap = document.getElementById('weekly-time-wrap');
+  if (tssWrap) {
+    tssWrap.classList.add('is-loading');
+  }
+  if (timeWrap) {
+    timeWrap.classList.add('is-loading');
+  }
+  const setStatus = (id, message, kind) => {
+    const box = document.getElementById(id);
+    if (!box) return;
+    box.textContent = message || '';
+    box.className = `status ${kind || 'placeholder'}`;
+    box.style.display = message ? 'flex' : 'none';
+  };
+
+  let response;
+  try {
+    response = await fetch(WEEKLY_URL, { cache: 'no-store' });
+  } catch (err) {
+    console.error('[dashboard] network error fetching weekly_training.json:', err);
+    setStatus(WEEKLY_TSS_STATUS_ID, 'Weekly data unavailable.', 'error');
+    if (tssWrap) tssWrap.classList.remove('is-loading');
+    if (timeWrap) timeWrap.classList.remove('is-loading');
+    return;
+  }
+
+  if (!response.ok) {
+    console.error(
+      `[dashboard] HTTP ${response.status} ${response.statusText} for ${WEEKLY_URL}`,
+    );
+    setStatus(WEEKLY_TSS_STATUS_ID, 'Weekly data unavailable.', 'error');
+    if (tssWrap) tssWrap.classList.remove('is-loading');
+    if (timeWrap) timeWrap.classList.remove('is-loading');
+    return;
+  }
+
+  let json;
+  try {
+    json = await response.json();
+  } catch (err) {
+    console.error('[dashboard] failed to parse weekly_training.json:', err);
+    setStatus(WEEKLY_TSS_STATUS_ID, 'Weekly data unavailable.', 'error');
+    if (tssWrap) tssWrap.classList.remove('is-loading');
+    if (timeWrap) timeWrap.classList.remove('is-loading');
+    return;
+  }
+
+  if (!json || !Array.isArray(json.data) || json.data.length === 0) {
+    console.error('[dashboard] weekly_training.json has no data rows', json);
+    setStatus(WEEKLY_TSS_STATUS_ID, 'Weekly data unavailable.', 'error');
+    if (tssWrap) tssWrap.classList.remove('is-loading');
+    if (timeWrap) timeWrap.classList.remove('is-loading');
+    return;
+  }
+
+  console.info('[dashboard] loaded', json.data.length, 'weekly rows');
+
+  if (tssWrap) {
+    tssWrap.classList.remove('is-loading');
+  }
+  if (timeWrap) {
+    timeWrap.classList.remove('is-loading');
+  }
+
+  buildWeeklyTssChart(json);
+  buildWeeklyTimeChart(json);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   loadVersion().then(() => {
     loadTrainingLoad();
     loadRaces();
+    loadWeekly();
   });
 });
 
