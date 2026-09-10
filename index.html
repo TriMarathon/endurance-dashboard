@@ -14,72 +14,120 @@
     <header>
       <h1>Endurance Dashboard</h1>
       <div class="header-meta">
-        <span class="subtitle">Training load · Last 90 days</span>
+        <span class="subtitle">Single-page endurance dashboard</span>
         <span id="updated" class="updated" aria-live="polite"></span>
       </div>
     </header>
 
     <main>
-      <h2 class="chart-title" id="chart-title">Training Load — Last 90 Days</h2>
+      <nav class="tab-nav" role="tablist" aria-label="Dashboard tabs">
+        <a href="#overview" data-tab="overview" class="tab-link active" role="tab" tabindex="0">Overview</a>
+        <a href="#training" data-tab="training" class="tab-link" role="tab" tabindex="0">Training</a>
+        <a href="#racing" data-tab="racing" class="tab-link" role="tab" tabindex="0">Racing</a>
+        <a href="#health" data-tab="health" class="tab-link" role="tab" tabindex="0">Health</a>
+      </nav>
+
       <section
-        id="chart-wrap"
-        class="chart-wrap"
-        role="img"
-        aria-labelledby="chart-title"
+        id="tab-overview"
+        class="tab-panel active"
+        role="tabpanel"
+        aria-label="Overview"
       >
-        <div class="chart-container">
-          <canvas id="training-load" width="1200" height="520"
-            >Stacked bar chart of daily SWEAT TSS (Swim, Bike, Run, Other) with CTL and ATL trend lines.</canvas
-          >
-          <div id="status" class="status placeholder" role="status"></div>
+        <div id="overview-cards" class="overview-cards">
+          <div class="status loading" id="overview-status" role="status">
+            <span class="loader"></span>Loading overview…
+          </div>
         </div>
       </section>
 
-      <h2 class="chart-title" id="weekly-tss-title">Weekly TSS — Last 52 Weeks</h2>
       <section
-        id="weekly-tss-wrap"
-        class="chart-wrap"
-        role="img"
-        aria-labelledby="weekly-tss-title"
+        id="tab-training"
+        class="tab-panel"
+        role="tabpanel"
+        aria-label="Training"
       >
-        <div class="chart-container">
-          <canvas id="weekly-tss" width="1200" height="520"
-            >Stacked bar chart of weekly TSS by sport (Swim, Bike, Run, Other).</canvas
-          >
-          <div id="weekly-tss-status" class="status placeholder" role="status"></div>
-        </div>
+        <h2 class="chart-title" id="chart-title">Training Load — Last 90 Days</h2>
+        <section
+          id="chart-wrap"
+          class="chart-wrap"
+          role="img"
+          aria-labelledby="chart-title"
+        >
+          <div class="chart-container">
+            <canvas id="training-load" width="1200" height="520"
+              >Stacked bar chart of daily SWEAT TSS (Swim, Bike, Run, Other) with CTL and ATL trend lines.</canvas
+            >
+            <div id="status" class="status placeholder" role="status"></div>
+          </div>
+        </section>
+
+        <h2 class="chart-title" id="weekly-tss-title">Weekly TSS — Last 52 Weeks</h2>
+        <section
+          id="weekly-tss-wrap"
+          class="chart-wrap"
+          aria-labelledby="weekly-tss-title"
+        >
+          <div class="chart-container">
+            <canvas id="weekly-tss" width="1200" height="520"
+              >Stacked bar chart of weekly TSS by sport (Swim, Bike, Run, Other).</canvas
+            >
+            <div id="weekly-tss-status" class="status placeholder" role="status"></div>
+          </div>
+        </section>
+
+        <h2 class="chart-title" id="weekly-time-title">Weekly Training Time — Last 52 Weeks</h2>
+        <section
+          id="weekly-time-wrap"
+          class="chart-wrap"
+          aria-labelledby="weekly-time-title"
+        >
+          <div class="chart-container">
+            <canvas id="weekly-time" width="1200" height="520"
+              >Stacked bar chart of weekly moving time by sport (Swim, Bike, Run, Other).</canvas
+            >
+            <div id="weekly-time-status" class="status placeholder" role="status"></div>
+          </div>
+        </section>
       </section>
 
-      <h2 class="chart-title" id="weekly-time-title">Weekly Training Time — Last 52 Weeks</h2>
       <section
-        id="weekly-time-wrap"
-        class="chart-wrap"
-        role="img"
-        aria-labelledby="weekly-time-title"
+        id="tab-racing"
+        class="tab-panel"
+        role="tabpanel"
+        aria-label="Racing"
       >
-        <div class="chart-container">
-          <canvas id="weekly-time" width="1200" height="520"
-            >Stacked bar chart of weekly moving time by sport (Swim, Bike, Run, Other).</canvas
-          >
-          <div id="weekly-time-status" class="status placeholder" role="status"></div>
-        </div>
+        <h2 class="chart-title" id="races-title">Upcoming Races</h2>
+        <section
+          id="races-wrap"
+          class="chart-wrap races-wrap"
+          aria-labelledby="races-title"
+        >
+          <div id="races-container" class="races-container">
+            <div class="status placeholder" role="status"></div>
+          </div>
+          <span id="races-state" class="races-state" aria-hidden="true">list</span>
+        </section>
       </section>
 
-      <h2 class="chart-title" id="races-title">Upcoming Races</h2>
       <section
-        id="races-wrap"
-        class="chart-wrap races-wrap"
-        aria-labelledby="races-title"
+        id="tab-health"
+        class="tab-panel"
+        role="tabpanel"
+        aria-label="Health"
       >
-        <div id="races-container" class="races-container">
-          <div class="status placeholder" role="status"></div>
+        <h2 class="chart-title" id="health-title">Health</h2>
+        <div class="chart-wrap">
+          <div class="health-placeholder">
+            <p class="health-placeholder-text">
+              Health tracking is not yet available.
+            </p>
+          </div>
         </div>
-        <span id="races-state" class="races-state" aria-hidden="true">list</span>
       </section>
     </main>
 
     <footer>
-      Static site &middot; data/training_load.json &middot; data/races.json &middot; data/weekly_training.json &middot; data/version.json &middot; no tracking
+      Static site &middot; data/training_load.json &middot; data/races.json &middot; data/weekly_training.json &middot; data/overview.json &middot; data/version.json &middot; no tracking
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" defer></script>

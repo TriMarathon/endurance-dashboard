@@ -2,10 +2,12 @@ const VERSION_URL = 'data/version.json';
 const BASE_DATA_URL = 'data/training_load.json';
 const BASE_RACES_URL = 'data/races.json';
 const BASE_WEEKLY_URL = 'data/weekly_training.json';
+const BASE_OVERVIEW_URL = 'data/overview.json';
 let dataVersion = '';
 let DATA_URL = BASE_DATA_URL;
 let RACES_URL = BASE_RACES_URL;
 let WEEKLY_URL = BASE_WEEKLY_URL;
+let OVERVIEW_URL = BASE_OVERVIEW_URL;
 const CHART_ID = 'training-load';
 const STATUS_ID = 'status';
 const UPDATED_ID = 'updated';
@@ -17,6 +19,12 @@ const WEEKLY_TIME_STATUS_ID = 'weekly-time-status';
 
 let selectedRace = null;
 let racesData = [];
+
+let trainingLoadChart = null;
+let weeklyTssChart = null;
+let weeklyTimeChart = null;
+
+const TAB_PANELS = ['overview', 'training', 'racing', 'health'];
 
 const MONTHS_SHORT = [
   'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
@@ -994,6 +1002,7 @@ async function loadVersion() {
       DATA_URL = BASE_DATA_URL + qs;
       RACES_URL = BASE_RACES_URL + qs;
       WEEKLY_URL = BASE_WEEKLY_URL + qs;
+      OVERVIEW_URL = BASE_OVERVIEW_URL + qs;
     }
   } catch (err) {
     console.error('[dashboard] failed to load version.json, using unversioned URLs:', err);
@@ -1064,7 +1073,7 @@ async function loadTrainingLoad() {
     wrap.classList.remove('is-loading');
   }
 
-  buildChart(json);
+  trainingLoadChart = buildChart(json);
 }
 
 async function loadWeekly() {
@@ -1133,12 +1142,224 @@ async function loadWeekly() {
     timeWrap.classList.remove('is-loading');
   }
 
-  buildWeeklyTssChart(json);
-  buildWeeklyTimeChart(json);
+  weeklyTssChart = buildWeeklyTssChart(json);
+  weeklyTimeChart = buildWeeklyTimeChart(json);
+}
+
+// ---------------------------------------------------------------------------
+// Overview (Phase 7) -- single-page snapshot from overview.json
+// ---------------------------------------------------------------------------
+
+function fmtDate(value) {
+  return value != null ? fmtMediumDate(String(value)) : '—';
+}
+
+function fmtNum1(value) {
+  return typeof value === 'number' && Number.isFinite(value)
+    ? value.toFixed(1) : '—';
+}
+
+function fmtTss(value) {
+  return fmtNum1(value);
+}
+
+function fmtTime(value) {
+  if (value == null) return '—';
+  return fmtHMSShort(value);
+}
+
+function fmtMaybe(value) {
+  if (value == null || value === '') return '—';
+  return String(value);
+}
+
+function fmtDistanceMiles(value) {
+  if (typeof value !== 'number' || !Number.isFinite(value)) return '—';
+  return value.toFixed(1) + ' mi';
+}
+
+function fmtDistanceYards(value) {
+  if (typeof value !== 'number' || !Number.isFinite(value)) return '—';
+  return Number(value).toLocaleString('en-US') + ' yd';
+}
+
+function fmtWeight(value) {
+  if (typeof value !== 'number' || !Number.isFinite(value)) return '—';
+  return value.toFixed(1) + ' lbs';
+}
+
+function fmtHrv(value) {
+  if (typeof value !== 'number' || !Number.isFinite(value)) return '—';
+  return value.toFixed(1) + ' ms';
+}
+
+function statHtml(label, value) {
+  return '<div class="overview-stat">'
+    + '<span class="overview-stat-label">' + label + '</span>'
+    + '<span class="overview-stat-value">' + value + '</span>'
+    + '</div>';
+}
+
+function overviewCard(title, rows) {
+  let html = '<div class="overview-card">'
+    + '<div class="overview-card-title">' + title + '</div>';
+  rows.forEach((r) => {
+    html += statHtml(r[0], r[1]);
+  });
+  html += '</div>';
+  return html;
+}
+
+function setOverviewStatus(message, kind) {
+  const container = document.getElementById('overview-cards');
+  if (!container) return;
+  const loading = kind === 'loading';
+  const cls = loading ? 'status loading' : 'status ' + (kind || 'error');
+  container.innerHTML = '<div class="' + cls + '" role="status">'
+    + (loading ? '<span class="loader"></span>' : '')
+    + (message || '')
+    + '</div>';
+}
+
+function renderOverview(doc) {
+  const container = document.getElementById('overview-cards');
+  if (!container) return;
+
+  const cl = doc.current_load || {};
+  const rt = doc.recent_training || {};
+  const hl = doc.health || {};
+  const nr = doc.next_race;
+
+  const cards = [
+    overviewCard('Current Load', [
+      ['As of', fmtDate(cl.date)],
+      ['CTL (chronic)', fmtTss(cl.ctl)],
+      ['ATL (acute)', fmtTss(cl.atl)],
+      ['TSB', fmtTss(cl.tsb)],
+      ['Load Ratio', fmtTss(cl.load_ratio)],
+      ['Ramp Rate', fmtTss(cl.ramp_rate)],
+    ]),
+    overviewCard('Recent Training (7 days)', [
+      ['Window', fmtDate(rt.start_date) + ' – ' + fmtDate(rt.end_date)],
+      ['Total TSS', fmtTss(rt.total_tss)],
+      ['Run', fmtDistanceMiles(rt.run_distance_miles) + ' · ' + fmtTime(rt.run_time_seconds)],
+      ['Bike', fmtDistanceMiles(rt.bike_distance_miles) + ' · ' + fmtTime(rt.bike_time_seconds)],
+      ['Swim', fmtDistanceYards(rt.swim_distance_yards) + ' · ' + fmtTime(rt.swim_time_seconds)],
+      ['Other', fmtTime(rt.other_time_seconds)],
+      ['Total Time', fmtTime(rt.total_time_seconds)],
+    ]),
+    overviewCard('Health Snapshot', [
+      ['As of', fmtDate(hl.date)],
+      ['Weight', fmtWeight(hl.weight_lbs)],
+      ['Sleep', fmtTime(hl.sleep_seconds)],
+      ['Sleep Score', fmtMaybe(hl.sleep_score)],
+      ['Resting HR', fmtMaybe(hl.resting_heart_rate)],
+      ['HRV', fmtHrv(hl.hrv)],
+    ]),
+  ];
+
+  let html = cards.join('');
+
+  if (nr) {
+    html += '<div class="overview-card"><div class="overview-card-title">Next Race</div>';
+    const rows = [
+      ['Date', fmtDate(nr.date)],
+      ['Name', fmtMaybe(nr.name)],
+      ['Location', fmtMaybe(nr.location)],
+      ['Type', fmtMaybe(nr.race_type)],
+      ['Status', fmtMaybe(nr.registration_status)],
+      ['When', fmtMaybe(nr.when)],
+    ];
+    if (nr.priority != null) rows.push(['Priority', fmtMaybe(nr.priority)]);
+    if (nr.series != null) rows.push(['Series', fmtMaybe(nr.series)]);
+    rows.forEach((r) => { html += statHtml(r[0], r[1]); });
+    if (nr.url) {
+      html += '<div class="overview-race-link">'
+        + externalLink(String(nr.url), 'Event website') + '</div>';
+    }
+    html += '</div>';
+  } else {
+    html += overviewCard('Next Race', [['Upcoming', 'No upcoming races.']]);
+  }
+
+  container.innerHTML = html;
+}
+
+async function loadOverview() {
+  const container = document.getElementById('overview-cards');
+  if (!container) return;
+
+  setOverviewStatus('Loading overview…', 'loading');
+
+  let response;
+  try {
+    response = await fetch(OVERVIEW_URL, { cache: 'no-store' });
+  } catch (err) {
+    console.error('[dashboard] network error fetching overview:', err);
+    setOverviewStatus('Overview data unavailable.', 'error');
+    return;
+  }
+
+  if (!response.ok) {
+    console.error(
+      '[dashboard] HTTP ' + response.status + ' ' + response.statusText
+      + ' for ' + OVERVIEW_URL,
+    );
+    setOverviewStatus('Overview data unavailable.', 'error');
+    return;
+  }
+
+  let doc;
+  try {
+    doc = await response.json();
+  } catch (err) {
+    console.error('[dashboard] failed to parse overview.json:', err);
+    setOverviewStatus('Overview data unavailable.', 'error');
+    return;
+  }
+
+  container.innerHTML = '';
+  renderOverview(doc);
+}
+
+// ---------------------------------------------------------------------------
+// Tab navigation (hash routing: #overview #training #racing #health)
+// ---------------------------------------------------------------------------
+
+function currentTab() {
+  const hash = (window.location.hash || '').replace(/^#/, '');
+  return TAB_PANELS.includes(hash) ? hash : 'overview';
+}
+
+function showTab(tabId) {
+  TAB_PANELS.forEach((id) => {
+    const panel = document.getElementById('tab-' + id);
+    const link = document.querySelector('.tab-link[data-tab="' + id + '"]');
+    if (!panel || !link) return;
+    const active = id === tabId;
+    panel.classList.toggle('active', active);
+    link.classList.toggle('active', active);
+  });
+  if (tabId === 'training') {
+    requestAnimationFrame(() => {
+      [trainingLoadChart, weeklyTssChart, weeklyTimeChart].forEach((c) => {
+        if (c) c.resize();
+      });
+    });
+  }
+}
+
+function initTabs() {
+  const tab = currentTab();
+  history.replaceState(null, '', '#' + tab);
+  showTab(tab);
+  window.addEventListener('hashchange', () => showTab(currentTab()));
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  initTabs();
   loadVersion().then(() => {
+    loadOverview();
     loadTrainingLoad();
     loadRaces();
     loadWeekly();

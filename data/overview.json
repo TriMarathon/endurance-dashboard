@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-09-10T19:51:35Z",
+  "reference_date": "2026-09-10",
+  "current_load": {
+    "date": "2026-09-10",
+    "ctl": 91.5,
+    "atl": 80.8,
+    "tsb": 2.5,
+    "load_ratio": 0.9,
+    "ramp_rate": -4.6
+  },
+  "recent_training": {
+    "start_date": "2026-09-04",
+    "end_date": "2026-09-10",
+    "total_tss": 471.4,
+    "run_distance_miles": 31.8,
+    "run_time_seconds": 15061,
+    "bike_distance_miles": 0.0,
+    "bike_time_seconds": 0,
+    "swim_distance_yards": 12600,
+    "swim_time_seconds": 14363,
+    "other_time_seconds": 2286,
+    "total_time_seconds": 31710
+  },
+  "health": {
+    "date": "2026-09-10",
+    "weight_lbs": 153.4,
+    "sleep_seconds": 27780,
+    "sleep_score": 82,
+    "resting_heart_rate": 44,
+    "hrv": 67.0
+  },
+  "next_race": {
+    "date": "2026-09-12",
+    "name": "IRONMAN 70.3 Wisconsin",
+    "location": "Madison, WI",
+    "race_type": "IRONMAN 70.3",
+    "registration_status": "registered",
+    "series": "IRONMAN",
+    "priority": null,
+    "url": "https://www.ironman.com/races/im703-wisconsin",
+    "days_until": 2,
+    "when": "in 2 days"
+  }
+}
