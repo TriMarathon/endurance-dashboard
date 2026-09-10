@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T12:05:57Z",
+  "generated_at": "2026-09-10T23:43:29Z",
   "reference_date": "2026-09-10",
   "count": 17,
   "data": [
@@ -24,7 +24,7 @@
       "registration_status": "registered",
       "series": null,
       "priority": null,
-      "notes": null,
+      "notes": "Pacer",
       "url": "https://www.cararuns.org/readytorun",
       "days_until": 10,
       "when": "in 10 days"
