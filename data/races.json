@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T00:38:31Z",
+  "generated_at": "2026-09-10T00:44:29Z",
   "reference_date": "2026-09-09",
   "count": 17,
   "data": [
@@ -142,7 +142,7 @@
       "series": null,
       "priority": null,
       "notes": null,
-      "url": null,
+      "url": "https://runsignup.com/Race/WI/PleasantPrairie/PleasantPrairieTriathlon",
       "days_until": 291,
       "when": "in 291 days"
     },
@@ -155,7 +155,7 @@
       "series": "",
       "priority": null,
       "notes": null,
-      "url": null,
+      "url": "https://lakezurichtriathlon.com/",
       "days_until": 305,
       "when": "in 305 days"
     },
