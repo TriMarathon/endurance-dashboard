@@ -1,34 +1,34 @@
 {
-  "generated_at": "2026-09-11T01:45:06Z",
-  "reference_date": "2026-09-10",
+  "generated_at": "2026-09-11T12:16:15Z",
+  "reference_date": "2026-09-11",
   "current_load": {
-    "date": "2026-09-10",
-    "ctl": 92.1,
-    "atl": 83.8,
-    "tsb": 2.5,
-    "load_ratio": 0.9,
-    "ramp_rate": -4.1
+    "date": "2026-09-11",
+    "ctl": 89.9,
+    "atl": 72.6,
+    "tsb": 8.3,
+    "load_ratio": 0.8,
+    "ramp_rate": -6.3
   },
   "recent_training": {
-    "start_date": "2026-09-04",
-    "end_date": "2026-09-10",
-    "total_tss": 493.6,
-    "run_distance_miles": 31.8,
-    "run_time_seconds": 15061,
+    "start_date": "2026-09-05",
+    "end_date": "2026-09-11",
+    "total_tss": 394.0,
+    "run_distance_miles": 25.2,
+    "run_time_seconds": 11805,
     "bike_distance_miles": 10.0,
     "bike_time_seconds": 1871,
-    "swim_distance_yards": 12600,
-    "swim_time_seconds": 14363,
+    "swim_distance_yards": 9600,
+    "swim_time_seconds": 10857,
     "other_time_seconds": 2286,
-    "total_time_seconds": 33581
+    "total_time_seconds": 26819
   },
   "health": {
-    "date": "2026-09-10",
-    "weight_lbs": 153.4,
-    "sleep_seconds": 27780,
-    "sleep_score": 82,
-    "resting_heart_rate": 44,
-    "hrv": 67.0
+    "date": "2026-09-11",
+    "weight_lbs": 152.9,
+    "sleep_seconds": 27660,
+    "sleep_score": 55,
+    "resting_heart_rate": 45,
+    "hrv": 64.0
   },
   "next_race": {
     "date": "2026-09-12",
@@ -39,7 +39,7 @@
     "series": "IRONMAN",
     "priority": null,
     "url": "https://www.ironman.com/races/im703-wisconsin",
-    "days_until": 2,
-    "when": "in 2 days"
+    "days_until": 1,
+    "when": "tomorrow"
   }
 }
