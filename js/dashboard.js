@@ -117,12 +117,45 @@ function numOrNU(value) {
   return typeof value === 'number' && Number.isFinite(value) ? value : null;
 }
 
+const DEFAULT_VISIBLE_DAYS = 90;
+const DEFAULT_VISIBLE_WEEKS = 52;
+
+function filterLastNDays(rows, n) {
+  if (!Array.isArray(rows) || rows.length === 0) return rows;
+  const last = rows[rows.length - 1];
+  if (!last || last.date == null) return rows;
+  const lastMs = Date.parse(String(last.date) + 'T00:00:00');
+  if (!Number.isFinite(lastMs)) return rows;
+  const cutoffMs = lastMs - (n - 1) * 86400000;
+  return rows.filter((r) => {
+    if (!r || r.date == null) return false;
+    const d = Date.parse(String(r.date) + 'T00:00:00');
+    return Number.isFinite(d) && d >= cutoffMs;
+  });
+}
+
+function filterLastNWeeks(rows, n) {
+  if (!Array.isArray(rows) || rows.length === 0) return rows;
+  const last = rows[rows.length - 1];
+  if (!last || last.week_start == null) return rows;
+  const lastMs = Date.parse(String(last.week_start) + 'T00:00:00');
+  if (!Number.isFinite(lastMs)) return rows;
+  const cutoffMs = lastMs - (n - 1) * 7 * 86400000;
+  return rows.filter((r) => {
+    if (!r || r.week_start == null) return false;
+    const d = Date.parse(String(r.week_start) + 'T00:00:00');
+    return Number.isFinite(d) && d >= cutoffMs;
+  });
+}
+
 function buildChart(json) {
   const canvas = document.getElementById(CHART_ID);
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
 
-  const rows = Array.isArray(json.data) ? json.data : [];
+  const rows = filterLastNDays(
+    Array.isArray(json.data) ? json.data : [], DEFAULT_VISIBLE_DAYS,
+  );
 
   const labels = rows.map((row) => (row && row.date != null ? String(row.date) : ''));
   const tss = rows.map((row) => numOrNU(row && row.tss));
@@ -387,7 +420,9 @@ function buildWeeklyTssChart(json) {
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
 
-  const rows = Array.isArray(json.data) ? json.data : [];
+  const rows = filterLastNWeeks(
+    Array.isArray(json.data) ? json.data : [], DEFAULT_VISIBLE_WEEKS,
+  );
 
   const labels = rows.map((row) =>
     row && row.week_start != null ? String(row.week_start) : '',
@@ -542,7 +577,9 @@ function buildWeeklyTimeChart(json) {
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
 
-  const rows = Array.isArray(json.data) ? json.data : [];
+  const rows = filterLastNWeeks(
+    Array.isArray(json.data) ? json.data : [], DEFAULT_VISIBLE_WEEKS,
+  );
 
   const labels = rows.map((row) =>
     row && row.week_start != null ? String(row.week_start) : '',
