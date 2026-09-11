@@ -24,6 +24,11 @@ let trainingLoadChart = null;
 let weeklyTssChart = null;
 let weeklyTimeChart = null;
 
+let fullTrainingLoad = null;
+let fullWeekly = null;
+let dailyRange = null;
+let weeklyRange = null;
+
 const TAB_PANELS = ['overview', 'training', 'racing', 'health'];
 
 const MONTHS_SHORT = [
@@ -120,42 +125,84 @@ function numOrNU(value) {
 const DEFAULT_VISIBLE_DAYS = 90;
 const DEFAULT_VISIBLE_WEEKS = 52;
 
-function filterLastNDays(rows, n) {
-  if (!Array.isArray(rows) || rows.length === 0) return rows;
-  const last = rows[rows.length - 1];
-  if (!last || last.date == null) return rows;
-  const lastMs = Date.parse(String(last.date) + 'T00:00:00');
-  if (!Number.isFinite(lastMs)) return rows;
-  const cutoffMs = lastMs - (n - 1) * 86400000;
+// --- date helpers: treat YYYY-MM-DD as calendar dates, no timezone shifts ---
+
+function dateToUtcMs(dateStr) {
+  const p = splitDate(dateStr);
+  if (!p) return NaN;
+  return Date.UTC(p.y, p.m - 1, p.d);
+}
+
+function msToIsoDate(ms) {
+  if (!Number.isFinite(ms)) return null;
+  const d = new Date(ms);
+  const y = d.getUTCFullYear();
+  const m = d.getUTCMonth() + 1;
+  const day = d.getUTCDate();
+  return `${y}-${String(m).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+}
+
+function clampDate(dateStr, minDate, maxDate) {
+  if (!dateStr) return dateStr;
+  if (minDate && dateStr < minDate) return minDate;
+  if (maxDate && dateStr > maxDate) return maxDate;
+  return dateStr;
+}
+
+function filterDailyRange(rows, start, end) {
+  if (!Array.isArray(rows) || rows.length === 0 || !start || !end) return rows;
   return rows.filter((r) => {
     if (!r || r.date == null) return false;
-    const d = Date.parse(String(r.date) + 'T00:00:00');
-    return Number.isFinite(d) && d >= cutoffMs;
+    const d = String(r.date);
+    return d >= start && d <= end;
   });
 }
 
-function filterLastNWeeks(rows, n) {
-  if (!Array.isArray(rows) || rows.length === 0) return rows;
-  const last = rows[rows.length - 1];
-  if (!last || last.week_start == null) return rows;
-  const lastMs = Date.parse(String(last.week_start) + 'T00:00:00');
-  if (!Number.isFinite(lastMs)) return rows;
-  const cutoffMs = lastMs - (n - 1) * 7 * 86400000;
+function filterWeeklyOverlap(rows, start, end) {
+  if (!Array.isArray(rows) || rows.length === 0 || !start || !end) return rows;
   return rows.filter((r) => {
-    if (!r || r.week_start == null) return false;
-    const d = Date.parse(String(r.week_start) + 'T00:00:00');
-    return Number.isFinite(d) && d >= cutoffMs;
+    if (!r || r.week_start == null || r.week_end == null) return false;
+    return String(r.week_end) >= start && String(r.week_start) <= end;
   });
 }
 
-function buildChart(json) {
+function dailyDefaultRange(rows) {
+  if (!Array.isArray(rows) || rows.length === 0) return null;
+  const first = rows[0];
+  const last = rows[rows.length - 1];
+  if (first == null || last == null
+      || first.date == null || last.date == null) return null;
+  const endStr = String(last.date);
+  const endMs = dateToUtcMs(endStr);
+  if (!Number.isFinite(endMs)) return null;
+  const startStr = msToIsoDate(endMs - (DEFAULT_VISIBLE_DAYS - 1) * 86400000);
+  const firstDate = String(first.date);
+  const startClamped = startStr < firstDate ? firstDate : startStr;
+  return { start: startClamped, end: endStr };
+}
+
+function weeklyDefaultRange(rows) {
+  if (!Array.isArray(rows) || rows.length === 0) return null;
+  const first = rows[0];
+  const last = rows[rows.length - 1];
+  if (first == null || last == null
+      || first.week_start == null || last.week_start == null
+      || last.week_end == null) return null;
+  const endStr = String(last.week_end);
+  const lastStartMs = dateToUtcMs(String(last.week_start));
+  if (!Number.isFinite(lastStartMs)) return null;
+  const startStr = msToIsoDate(lastStartMs - (DEFAULT_VISIBLE_WEEKS - 1) * 7 * 86400000);
+  const firstStart = String(first.week_start);
+  const startClamped = startStr < firstStart ? firstStart : startStr;
+  return { start: startClamped, end: endStr };
+}
+
+function buildChart(rows) {
   const canvas = document.getElementById(CHART_ID);
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
 
-  const rows = filterLastNDays(
-    Array.isArray(json.data) ? json.data : [], DEFAULT_VISIBLE_DAYS,
-  );
+  rows = Array.isArray(rows) ? rows : [];
 
   const labels = rows.map((row) => (row && row.date != null ? String(row.date) : ''));
   const tss = rows.map((row) => numOrNU(row && row.tss));
@@ -415,14 +462,12 @@ function fmtWeeklyTooltipBody(rows, weekIndex) {
   ];
 }
 
-function buildWeeklyTssChart(json) {
+function buildWeeklyTssChart(rows) {
   const canvas = document.getElementById(WEEKLY_TSS_ID);
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
 
-  const rows = filterLastNWeeks(
-    Array.isArray(json.data) ? json.data : [], DEFAULT_VISIBLE_WEEKS,
-  );
+  rows = Array.isArray(rows) ? rows : [];
 
   const labels = rows.map((row) =>
     row && row.week_start != null ? String(row.week_start) : '',
@@ -572,14 +617,12 @@ function buildWeeklyTssChart(json) {
   });
 }
 
-function buildWeeklyTimeChart(json) {
+function buildWeeklyTimeChart(rows) {
   const canvas = document.getElementById(WEEKLY_TIME_ID);
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
 
-  const rows = filterLastNWeeks(
-    Array.isArray(json.data) ? json.data : [], DEFAULT_VISIBLE_WEEKS,
-  );
+  rows = Array.isArray(rows) ? rows : [];
 
   const labels = rows.map((row) =>
     row && row.week_start != null ? String(row.week_start) : '',
@@ -1110,7 +1153,17 @@ async function loadTrainingLoad() {
     wrap.classList.remove('is-loading');
   }
 
-  trainingLoadChart = buildChart(json);
+  fullTrainingLoad = json;
+  const tdata = Array.isArray(json.data) ? json.data : [];
+  dailyRange = dailyDefaultRange(tdata);
+  if (!dailyRange) {
+    dailyRange = {
+      start: String(tdata[0].date),
+      end: String(tdata[tdata.length - 1].date),
+    };
+  }
+  initDailyControls();
+  renderTrainingLoad();
 }
 
 async function loadWeekly() {
@@ -1179,8 +1232,211 @@ async function loadWeekly() {
     timeWrap.classList.remove('is-loading');
   }
 
-  weeklyTssChart = buildWeeklyTssChart(json);
-  weeklyTimeChart = buildWeeklyTimeChart(json);
+  fullWeekly = json;
+  const wdata = Array.isArray(json.data) ? json.data : [];
+  weeklyRange = weeklyDefaultRange(wdata);
+  if (!weeklyRange) {
+    weeklyRange = {
+      start: String(wdata[0].week_start),
+      end: String(wdata[wdata.length - 1].week_end),
+    };
+  }
+  initWeeklyControls();
+  renderWeekly();
+}
+
+// ---------------------------------------------------------------------------
+// Phase 8B: flexible date-range controls on the Training tab
+// Full-history JSON is kept in memory; charts are re-rendered from
+// derived filtered arrays without re-fetching.
+// ---------------------------------------------------------------------------
+
+function renderTrainingLoad() {
+  if (!fullTrainingLoad) return;
+  const rows = filterDailyRange(
+    fullTrainingLoad.data,
+    dailyRange && dailyRange.start,
+    dailyRange && dailyRange.end,
+  );
+  if (trainingLoadChart) trainingLoadChart.destroy();
+  trainingLoadChart = buildChart(rows);
+}
+
+function renderWeekly() {
+  if (!fullWeekly) return;
+  const rows = filterWeeklyOverlap(
+    fullWeekly.data,
+    weeklyRange && weeklyRange.start,
+    weeklyRange && weeklyRange.end,
+  );
+  if (weeklyTssChart) weeklyTssChart.destroy();
+  if (weeklyTimeChart) weeklyTimeChart.destroy();
+  weeklyTssChart = buildWeeklyTssChart(rows);
+  weeklyTimeChart = buildWeeklyTimeChart(rows);
+}
+
+function showValidation(el, message) {
+  if (!el) return;
+  el.textContent = message || '';
+  el.classList.toggle('show', !!message);
+}
+
+function initDailyControls() {
+  const startEl = document.getElementById('daily-start');
+  const endEl = document.getElementById('daily-end');
+  const resetEl = document.getElementById('daily-reset');
+  const validateEl = document.getElementById('daily-validation');
+  if (!startEl || !endEl || !resetEl) return;
+
+  const rows = fullTrainingLoad && Array.isArray(fullTrainingLoad.data)
+    ? fullTrainingLoad.data : [];
+  if (rows.length === 0) {
+    startEl.disabled = true;
+    endEl.disabled = true;
+    resetEl.disabled = true;
+    return;
+  }
+
+  const minDate = String(rows[0].date);
+  const maxDate = String(rows[rows.length - 1].date);
+  startEl.min = minDate;
+  startEl.max = maxDate;
+  endEl.min = minDate;
+  endEl.max = maxDate;
+  startEl.disabled = false;
+  endEl.disabled = false;
+  resetEl.disabled = false;
+  startEl.value = dailyRange.start;
+  endEl.value = dailyRange.end;
+  showValidation(validateEl, '');
+
+  startEl.addEventListener('change', onDailyChange);
+  endEl.addEventListener('change', onDailyChange);
+  resetEl.addEventListener('click', onDailyReset);
+}
+
+function initWeeklyControls() {
+  const startEl = document.getElementById('weekly-start');
+  const endEl = document.getElementById('weekly-end');
+  const resetEl = document.getElementById('weekly-reset');
+  const validateEl = document.getElementById('weekly-validation');
+  if (!startEl || !endEl || !resetEl) return;
+
+  const rows = fullWeekly && Array.isArray(fullWeekly.data)
+    ? fullWeekly.data : [];
+  if (rows.length === 0) {
+    startEl.disabled = true;
+    endEl.disabled = true;
+    resetEl.disabled = true;
+    return;
+  }
+
+  const minDate = String(rows[0].week_start);
+  const maxDate = String(rows[rows.length - 1].week_end);
+  startEl.min = minDate;
+  startEl.max = maxDate;
+  endEl.min = minDate;
+  endEl.max = maxDate;
+  startEl.disabled = false;
+  endEl.disabled = false;
+  resetEl.disabled = false;
+  startEl.value = weeklyRange.start;
+  endEl.value = weeklyRange.end;
+  showValidation(validateEl, '');
+
+  startEl.addEventListener('change', onWeeklyChange);
+  endEl.addEventListener('change', onWeeklyChange);
+  resetEl.addEventListener('click', onWeeklyReset);
+}
+
+function onDailyChange() {
+  const startEl = document.getElementById('daily-start');
+  const endEl = document.getElementById('daily-end');
+  const validateEl = document.getElementById('daily-validation');
+  if (!startEl || !endEl || !validateEl) return;
+  if (startEl.disabled || endEl.disabled) return;
+
+  const startStr = startEl.value;
+  const endStr = endEl.value;
+  if (!startStr || !endStr) return;
+
+  const minDate = startEl.min;
+  const maxDate = startEl.max;
+  const clampedStart = clampDate(startStr, minDate, maxDate);
+  const clampedEnd = clampDate(endStr, minDate, maxDate);
+  if (clampedStart !== startStr) startEl.value = clampedStart;
+  if (clampedEnd !== endStr) endEl.value = clampedEnd;
+
+  if (clampedStart > clampedEnd) {
+    showValidation(validateEl, 'Start date must be on or before end date.');
+    if (dailyRange) {
+      startEl.value = dailyRange.start;
+      endEl.value = dailyRange.end;
+    }
+    return;
+  }
+  showValidation(validateEl, '');
+  dailyRange = { start: clampedStart, end: clampedEnd };
+  renderTrainingLoad();
+}
+
+function onDailyReset() {
+  const startEl = document.getElementById('daily-start');
+  const endEl = document.getElementById('daily-end');
+  const validateEl = document.getElementById('daily-validation');
+  const rows = fullTrainingLoad && Array.isArray(fullTrainingLoad.data)
+    ? fullTrainingLoad.data : [];
+  const def = dailyDefaultRange(rows);
+  if (def) dailyRange = def;
+  showValidation(validateEl, '');
+  if (startEl && dailyRange) startEl.value = dailyRange.start;
+  if (endEl && dailyRange) endEl.value = dailyRange.end;
+  renderTrainingLoad();
+}
+
+function onWeeklyChange() {
+  const startEl = document.getElementById('weekly-start');
+  const endEl = document.getElementById('weekly-end');
+  const validateEl = document.getElementById('weekly-validation');
+  if (!startEl || !endEl || !validateEl) return;
+  if (startEl.disabled || endEl.disabled) return;
+
+  const startStr = startEl.value;
+  const endStr = endEl.value;
+  if (!startStr || !endStr) return;
+
+  const minDate = startEl.min;
+  const maxDate = startEl.max;
+  const clampedStart = clampDate(startStr, minDate, maxDate);
+  const clampedEnd = clampDate(endStr, minDate, maxDate);
+  if (clampedStart !== startStr) startEl.value = clampedStart;
+  if (clampedEnd !== endStr) endEl.value = clampedEnd;
+
+  if (clampedStart > clampedEnd) {
+    showValidation(validateEl, 'Start date must be on or before end date.');
+    if (weeklyRange) {
+      startEl.value = weeklyRange.start;
+      endEl.value = weeklyRange.end;
+    }
+    return;
+  }
+  showValidation(validateEl, '');
+  weeklyRange = { start: clampedStart, end: clampedEnd };
+  renderWeekly();
+}
+
+function onWeeklyReset() {
+  const startEl = document.getElementById('weekly-start');
+  const endEl = document.getElementById('weekly-end');
+  const validateEl = document.getElementById('weekly-validation');
+  const rows = fullWeekly && Array.isArray(fullWeekly.data)
+    ? fullWeekly.data : [];
+  const def = weeklyDefaultRange(rows);
+  if (def) weeklyRange = def;
+  showValidation(validateEl, '');
+  if (startEl && weeklyRange) startEl.value = weeklyRange.start;
+  if (endEl && weeklyRange) endEl.value = weeklyRange.end;
+  renderWeekly();
 }
 
 // ---------------------------------------------------------------------------

@@ -47,6 +47,32 @@
         aria-label="Training"
       >
         <h2 class="chart-title" id="chart-title">Training Load — Last 90 Days</h2>
+        <div
+          class="date-range-controls"
+          role="group"
+          aria-label="Training load date range"
+        >
+          <div class="date-field">
+            <label for="daily-start">Start date</label>
+            <input type="date" id="daily-start" disabled />
+          </div>
+          <div class="date-field">
+            <label for="daily-end">End date</label>
+            <input type="date" id="daily-end" disabled />
+          </div>
+          <button
+            type="button"
+            id="daily-reset"
+            class="range-reset-btn"
+            disabled
+            >Reset</button
+          >
+          <span
+            id="daily-validation"
+            class="date-validation"
+            role="alert"
+          ></span>
+        </div>
         <section
           id="chart-wrap"
           class="chart-wrap"
@@ -62,6 +88,32 @@
         </section>
 
         <h2 class="chart-title" id="weekly-tss-title">Weekly TSS — Last 52 Weeks</h2>
+        <div
+          class="date-range-controls"
+          role="group"
+          aria-label="Weekly training date range"
+        >
+          <div class="date-field">
+            <label for="weekly-start">Start date</label>
+            <input type="date" id="weekly-start" disabled />
+          </div>
+          <div class="date-field">
+            <label for="weekly-end">End date</label>
+            <input type="date" id="weekly-end" disabled />
+          </div>
+          <button
+            type="button"
+            id="weekly-reset"
+            class="range-reset-btn"
+            disabled
+            >Reset</button
+          >
+          <span
+            id="weekly-validation"
+            class="date-validation"
+            role="alert"
+          ></span>
+        </div>
         <section
           id="weekly-tss-wrap"
           class="chart-wrap"
