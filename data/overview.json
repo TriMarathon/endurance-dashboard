@@ -1,45 +1,45 @@
 {
-  "generated_at": "2026-09-11T12:16:15Z",
-  "reference_date": "2026-09-11",
+  "generated_at": "2026-09-14T12:26:17Z",
+  "reference_date": "2026-09-14",
   "current_load": {
-    "date": "2026-09-11",
-    "ctl": 89.9,
-    "atl": 72.6,
-    "tsb": 8.3,
-    "load_ratio": 0.8,
-    "ramp_rate": -6.3
+    "date": "2026-09-14",
+    "ctl": 92.3,
+    "atl": 86.3,
+    "tsb": -1.4,
+    "load_ratio": 0.9,
+    "ramp_rate": -2.2
   },
   "recent_training": {
-    "start_date": "2026-09-05",
-    "end_date": "2026-09-11",
-    "total_tss": 394.0,
-    "run_distance_miles": 25.2,
-    "run_time_seconds": 11805,
-    "bike_distance_miles": 10.0,
-    "bike_time_seconds": 1871,
-    "swim_distance_yards": 9600,
-    "swim_time_seconds": 10857,
-    "other_time_seconds": 2286,
-    "total_time_seconds": 26819
+    "start_date": "2026-09-08",
+    "end_date": "2026-09-14",
+    "total_tss": 558.5,
+    "run_distance_miles": 19.9,
+    "run_time_seconds": 8188,
+    "bike_distance_miles": 66.7,
+    "bike_time_seconds": 11400,
+    "swim_distance_yards": 10425,
+    "swim_time_seconds": 12129,
+    "other_time_seconds": 2367,
+    "total_time_seconds": 34083
   },
   "health": {
-    "date": "2026-09-11",
-    "weight_lbs": 152.9,
-    "sleep_seconds": 27660,
-    "sleep_score": 55,
-    "resting_heart_rate": 45,
-    "hrv": 64.0
+    "date": "2026-09-14",
+    "weight_lbs": 157.5,
+    "sleep_seconds": 28860,
+    "sleep_score": 83,
+    "resting_heart_rate": 42,
+    "hrv": 78.0
   },
   "next_race": {
-    "date": "2026-09-12",
-    "name": "IRONMAN 70.3 Wisconsin",
-    "location": "Madison, WI",
-    "race_type": "IRONMAN 70.3",
+    "date": "2026-09-20",
+    "name": "Ready to Run 20 Miler",
+    "location": "Chicago, IL",
+    "race_type": "20 Mile",
     "registration_status": "registered",
-    "series": "IRONMAN",
+    "series": null,
     "priority": null,
-    "url": "https://www.ironman.com/races/im703-wisconsin",
-    "days_until": 1,
-    "when": "tomorrow"
+    "url": "https://www.cararuns.org/readytorun",
+    "days_until": 6,
+    "when": "in 6 days"
   }
 }
