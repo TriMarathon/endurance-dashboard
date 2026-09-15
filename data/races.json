@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T19:08:02Z",
+  "generated_at": "2026-09-15T19:11:07Z",
   "reference_date": "2026-09-15",
   "count": 17,
   "data": [
@@ -86,7 +86,7 @@
       "name": "Shamrock Shuffle",
       "location": "Chicago, IL",
       "race_type": "8K",
-      "registration_status": "-",
+      "registration_status": "",
       "series": "CARA",
       "priority": null,
       "notes": null,
