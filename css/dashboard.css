@@ -337,6 +337,73 @@ footer {
   }
 }
 
+.gear-wrap {
+  padding: 18px;
+}
+
+.gear-container {
+  min-height: 40px;
+}
+
+.gear-table-scroll {
+  overflow-x: auto;
+}
+
+.gear-table {
+  width: 100%;
+  min-width: 660px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.gear-table th {
+  padding: 0;
+  border-bottom: 1px solid var(--panel-border);
+  text-align: left;
+}
+
+.gear-sort {
+  width: 100%;
+  padding: 6px 10px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.gear-sort:hover,
+.gear-sort:focus-visible {
+  color: var(--text);
+}
+
+.gear-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--grid);
+  color: var(--text);
+}
+
+.gear-col-name {
+  font-weight: 500;
+}
+
+.gear-col-number {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.gear-empty {
+  padding: 16px;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
 /* ---------------------------------------------------------------------------
    Race Detail View (Phase 5)
    ------------------------------------------------------------------------- */
@@ -663,6 +730,7 @@ footer {
 @media (max-width: 480px) {
   .tab-nav {
     margin-top: 14px;
+    overflow-x: auto;
   }
 
   .tab-link {

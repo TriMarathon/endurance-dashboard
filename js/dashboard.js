@@ -4,12 +4,14 @@ const BASE_RACES_URL = 'data/races.json';
 const BASE_WEEKLY_URL = 'data/weekly_training.json';
 const BASE_OVERVIEW_URL = 'data/overview.json';
 const BASE_HEALTH_URL = 'data/health.json';
+const BASE_GEAR_URL = 'data/gear.json';
 let dataVersion = '';
 let DATA_URL = BASE_DATA_URL;
 let RACES_URL = BASE_RACES_URL;
 let WEEKLY_URL = BASE_WEEKLY_URL;
 let OVERVIEW_URL = BASE_OVERVIEW_URL;
 let HEALTH_URL = BASE_HEALTH_URL;
+let GEAR_URL = BASE_GEAR_URL;
 const CHART_ID = 'training-load';
 const STATUS_ID = 'status';
 const UPDATED_ID = 'updated';
@@ -33,8 +35,10 @@ let fullHealth = null;
 let dailyRange = null;
 let weeklyRange = null;
 let healthRange = null;
+let gearData = [];
+let gearSort = { key: 'default', direction: 'asc' };
 
-const TAB_PANELS = ['overview', 'training', 'racing', 'health'];
+const TAB_PANELS = ['overview', 'training', 'racing', 'health', 'gear'];
 
 const MONTHS_SHORT = [
   'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
@@ -805,6 +809,12 @@ function fmtStatus(status) {
   return map[s] || s;
 }
 
+function escapeHtml(value) {
+  const span = document.createElement('span');
+  span.textContent = String(value);
+  return span.innerHTML;
+}
+
 function raceNameLink(label) {
   return String(label);
 }
@@ -1089,6 +1099,7 @@ async function loadVersion() {
       WEEKLY_URL = BASE_WEEKLY_URL + qs;
       OVERVIEW_URL = BASE_OVERVIEW_URL + qs;
       HEALTH_URL = BASE_HEALTH_URL + qs;
+      GEAR_URL = BASE_GEAR_URL + qs;
     }
   } catch (err) {
     console.error('[dashboard] failed to load version.json, using unversioned URLs:', err);
@@ -1819,8 +1830,99 @@ async function loadHealth() {
   }
 }
 
+function gearStatusRank(value) {
+  const status = String(value || '').toLowerCase();
+  if (status === 'active') return 0;
+  if (status === 'retired') return 1;
+  return 2;
+}
+
+function sortedGearRows() {
+  const rows = gearData.slice();
+  const { key, direction } = gearSort;
+  const factor = direction === 'desc' ? -1 : 1;
+  return rows.sort((a, b) => {
+    if (key === 'default') {
+      return gearStatusRank(a.status) - gearStatusRank(b.status)
+        || String(a.type || '').localeCompare(String(b.type || ''))
+        || String(a.name || '').localeCompare(String(b.name || ''))
+        || String(a.id || '').localeCompare(String(b.id || ''));
+    }
+    const av = a[key];
+    const bv = b[key];
+    if (av == null && bv == null) return 0;
+    if (av == null) return 1;
+    if (bv == null) return -1;
+    if (typeof av === 'number' && typeof bv === 'number') return factor * (av - bv);
+    return factor * String(av).localeCompare(String(bv));
+  });
+}
+
+function renderGear() {
+  const container = document.getElementById('gear-container');
+  if (!container) return;
+  if (gearData.length === 0) {
+    container.innerHTML = '<p class="gear-empty">No gear found.</p>';
+    return;
+  }
+  const columns = [
+    ['name', 'Gear'],
+    ['type', 'Type'],
+    ['status', 'Status'],
+    ['activity_count', 'Activities'],
+    ['distance_miles', 'Distance'],
+    ['duration_hours', 'Time'],
+  ];
+  let html = '<div class="gear-table-scroll"><table class="gear-table"><thead><tr>';
+  columns.forEach(([key, label]) => {
+    const active = gearSort.key === key;
+    const ariaSort = active ? (gearSort.direction === 'asc' ? 'ascending' : 'descending') : 'none';
+    const marker = active ? (gearSort.direction === 'asc' ? ' ↑' : ' ↓') : '';
+    html += `<th aria-sort="${ariaSort}"><button type="button" class="gear-sort" data-gear-sort="${key}">${label}${marker}</button></th>`;
+  });
+  html += '</tr></thead><tbody>';
+  sortedGearRows().forEach((row) => {
+    const distance = typeof row.distance_miles === 'number' ? `${row.distance_miles.toFixed(1)} mi` : '—';
+    const duration = typeof row.duration_hours === 'number' ? `${row.duration_hours.toFixed(1)} hr` : '—';
+    html += '<tr>'
+      + `<td class="gear-col-name">${escapeHtml(row.name || '—')}</td>`
+      + `<td>${escapeHtml(row.type || '—')}</td>`
+      + `<td><span class="status-badge">${escapeHtml(row.status || '—')}</span></td>`
+      + `<td class="gear-col-number">${Number(row.activity_count || 0).toLocaleString('en-US')}</td>`
+      + `<td class="gear-col-number">${distance}</td>`
+      + `<td class="gear-col-number">${duration}</td>`
+      + '</tr>';
+  });
+  html += '</tbody></table></div>';
+  container.innerHTML = html;
+  container.querySelectorAll('[data-gear-sort]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const key = button.getAttribute('data-gear-sort');
+      gearSort = gearSort.key === key
+        ? { key, direction: gearSort.direction === 'asc' ? 'desc' : 'asc' }
+        : { key, direction: 'asc' };
+      renderGear();
+    });
+  });
+}
+
+async function loadGear() {
+  try {
+    const response = await fetch(GEAR_URL, { cache: 'no-store' });
+    if (!response.ok) throw new Error('HTTP ' + response.status);
+    const doc = await response.json();
+    if (!doc || !Array.isArray(doc.gear)) throw new Error('Invalid gear document');
+    gearData = doc.gear;
+    renderGear();
+  } catch (err) {
+    console.error('[dashboard] failed to load gear.json:', err);
+    const container = document.getElementById('gear-container');
+    if (container) container.innerHTML = '<div class="status error" role="status">Gear data unavailable.</div>';
+  }
+}
+
 // ---------------------------------------------------------------------------
-// Tab navigation (hash routing: #overview #training #racing #health)
+// Tab navigation (hash routing)
 // ---------------------------------------------------------------------------
 
 function currentTab() {
@@ -1864,6 +1966,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadRaces();
     loadWeekly();
     loadHealth();
+    loadGear();
   });
 });
 

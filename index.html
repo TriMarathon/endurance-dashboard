@@ -27,6 +27,7 @@
         <a href="#training" data-tab="training" class="tab-link" role="tab" tabindex="0">Training</a>
         <a href="#racing" data-tab="racing" class="tab-link" role="tab" tabindex="0">Racing</a>
         <a href="#health" data-tab="health" class="tab-link" role="tab" tabindex="0">Health</a>
+        <a href="#gear" data-tab="gear" class="tab-link" role="tab" tabindex="0">Gear</a>
       </nav>
 
       <section
@@ -40,6 +41,22 @@
             <span class="loader"></span>Loading overview…
           </div>
         </div>
+      </section>
+
+      <section
+        id="tab-gear"
+        class="tab-panel"
+        role="tabpanel"
+        aria-label="Gear"
+      >
+        <h2 class="chart-title" id="gear-title">Gear</h2>
+        <section class="chart-wrap gear-wrap" aria-labelledby="gear-title">
+          <div id="gear-container" class="gear-container">
+            <div class="status loading" role="status">
+              <span class="loader"></span>Loading gear…
+            </div>
+          </div>
+        </section>
       </section>
 
       <section
@@ -227,7 +244,7 @@
     </main>
 
     <footer>
-      Static site &middot; data/training_load.json &middot; data/races.json &middot; data/weekly_training.json &middot; data/overview.json &middot; data/health.json &middot; data/version.json &middot; no tracking
+      Static site &middot; data/training_load.json &middot; data/races.json &middot; data/weekly_training.json &middot; data/overview.json &middot; data/health.json &middot; data/gear.json &middot; data/version.json &middot; no tracking
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" defer></script>
