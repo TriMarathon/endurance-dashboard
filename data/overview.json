@@ -1,34 +1,34 @@
 {
-  "generated_at": "2026-09-15T00:44:02Z",
-  "reference_date": "2026-09-14",
+  "generated_at": "2026-09-15T14:42:17Z",
+  "reference_date": "2026-09-15",
   "current_load": {
-    "date": "2026-09-14",
-    "ctl": 92.3,
-    "atl": 86.3,
-    "tsb": -1.4,
-    "load_ratio": 0.9,
-    "ramp_rate": -2.2
+    "date": "2026-09-15",
+    "ctl": 90.3,
+    "atl": 76.4,
+    "tsb": 6.6,
+    "load_ratio": 0.8,
+    "ramp_rate": -3.6
   },
   "recent_training": {
-    "start_date": "2026-09-08",
-    "end_date": "2026-09-14",
-    "total_tss": 558.5,
-    "run_distance_miles": 19.9,
-    "run_time_seconds": 8188,
+    "start_date": "2026-09-09",
+    "end_date": "2026-09-15",
+    "total_tss": 499.0,
+    "run_distance_miles": 17.0,
+    "run_time_seconds": 6798,
     "bike_distance_miles": 66.7,
     "bike_time_seconds": 11400,
-    "swim_distance_yards": 10425,
-    "swim_time_seconds": 12129,
-    "other_time_seconds": 2367,
-    "total_time_seconds": 34083
+    "swim_distance_yards": 9925,
+    "swim_time_seconds": 11379,
+    "other_time_seconds": 81,
+    "total_time_seconds": 29659
   },
   "health": {
-    "date": "2026-09-14",
-    "weight_lbs": 157.5,
-    "sleep_seconds": 28860,
-    "sleep_score": 83,
-    "resting_heart_rate": 42,
-    "hrv": 78.0
+    "date": "2026-09-15",
+    "weight_lbs": 156.1,
+    "sleep_seconds": 27420,
+    "sleep_score": 86,
+    "resting_heart_rate": 44,
+    "hrv": 73.0
   },
   "next_race": {
     "date": "2026-09-20",
@@ -39,7 +39,7 @@
     "series": null,
     "priority": null,
     "url": "https://www.cararuns.org/readytorun",
-    "days_until": 6,
-    "when": "in 6 days"
+    "days_until": 5,
+    "when": "in 5 days"
   }
 }

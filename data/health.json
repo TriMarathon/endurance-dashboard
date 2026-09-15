@@ -1,15 +1,5847 @@
 {
-  "generated_at": "2026-09-15T00:44:02Z",
-  "start_date": "2022-10-11",
-  "end_date": "2026-09-14",
-  "days": 1354,
+  "generated_at": "2026-09-15T14:42:17Z",
+  "start_date": "2021-01-01",
+  "end_date": "2026-09-15",
+  "days": 2084,
   "data": [
+    {
+      "date": "2021-01-01",
+      "weight_lbs": 154.1,
+      "sleep_seconds": 24180,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-02",
+      "weight_lbs": 154.1,
+      "sleep_seconds": 29640,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-03",
+      "weight_lbs": 152.6,
+      "sleep_seconds": 26040,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-04",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 30000,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-05",
+      "weight_lbs": 152.8,
+      "sleep_seconds": 28020,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-06",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 26760,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-07",
+      "weight_lbs": 152.1,
+      "sleep_seconds": 26940,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-08",
+      "weight_lbs": 153.9,
+      "sleep_seconds": 27840,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-09",
+      "weight_lbs": 155.4,
+      "sleep_seconds": 28980,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-10",
+      "weight_lbs": 154.8,
+      "sleep_seconds": 25380,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-11",
+      "weight_lbs": 155.9,
+      "sleep_seconds": 27900,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-12",
+      "weight_lbs": 155.0,
+      "sleep_seconds": 25980,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-13",
+      "weight_lbs": 153.4,
+      "sleep_seconds": 25800,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-14",
+      "weight_lbs": 154.3,
+      "sleep_seconds": 26460,
+      "sleep_score": null,
+      "resting_heart_rate": 57,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-15",
+      "weight_lbs": 153.2,
+      "sleep_seconds": 23160,
+      "sleep_score": null,
+      "resting_heart_rate": 57,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-16",
+      "weight_lbs": 155.9,
+      "sleep_seconds": 24060,
+      "sleep_score": null,
+      "resting_heart_rate": 58,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-17",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 28320,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-18",
+      "weight_lbs": 153.4,
+      "sleep_seconds": 25620,
+      "sleep_score": null,
+      "resting_heart_rate": 59,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-19",
+      "weight_lbs": 153.9,
+      "sleep_seconds": 28440,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-20",
+      "weight_lbs": 153.7,
+      "sleep_seconds": 24660,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-21",
+      "weight_lbs": 155.2,
+      "sleep_seconds": 27060,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-22",
+      "weight_lbs": 154.5,
+      "sleep_seconds": 28320,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-23",
+      "weight_lbs": 153.9,
+      "sleep_seconds": 25560,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-24",
+      "weight_lbs": 155.0,
+      "sleep_seconds": 24840,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-25",
+      "weight_lbs": 155.6,
+      "sleep_seconds": 27420,
+      "sleep_score": null,
+      "resting_heart_rate": 57,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-26",
+      "weight_lbs": 155.2,
+      "sleep_seconds": 29040,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-27",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 28320,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-28",
+      "weight_lbs": 153.2,
+      "sleep_seconds": 26580,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-29",
+      "weight_lbs": 152.6,
+      "sleep_seconds": 29340,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-30",
+      "weight_lbs": 153.0,
+      "sleep_seconds": 28020,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-01-31",
+      "weight_lbs": 152.6,
+      "sleep_seconds": 25980,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-01",
+      "weight_lbs": 153.2,
+      "sleep_seconds": 23460,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-02",
+      "weight_lbs": 152.6,
+      "sleep_seconds": 28620,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-03",
+      "weight_lbs": 154.1,
+      "sleep_seconds": 27840,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-04",
+      "weight_lbs": 153.9,
+      "sleep_seconds": 23340,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-05",
+      "weight_lbs": 153.4,
+      "sleep_seconds": 27960,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-06",
+      "weight_lbs": 154.3,
+      "sleep_seconds": 27480,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-07",
+      "weight_lbs": 154.3,
+      "sleep_seconds": 26940,
+      "sleep_score": null,
+      "resting_heart_rate": 57,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-08",
+      "weight_lbs": 154.3,
+      "sleep_seconds": 26820,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-09",
+      "weight_lbs": 153.2,
+      "sleep_seconds": 29280,
+      "sleep_score": null,
+      "resting_heart_rate": 58,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-10",
+      "weight_lbs": 154.3,
+      "sleep_seconds": 27540,
+      "sleep_score": null,
+      "resting_heart_rate": 57,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-11",
+      "weight_lbs": 153.7,
+      "sleep_seconds": 29700,
+      "sleep_score": null,
+      "resting_heart_rate": 59,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-12",
+      "weight_lbs": 153.9,
+      "sleep_seconds": 25020,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-13",
+      "weight_lbs": 153.4,
+      "sleep_seconds": 27960,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-14",
+      "weight_lbs": 154.3,
+      "sleep_seconds": 27660,
+      "sleep_score": null,
+      "resting_heart_rate": 59,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-15",
+      "weight_lbs": 155.4,
+      "sleep_seconds": 25920,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-16",
+      "weight_lbs": 154.3,
+      "sleep_seconds": 27780,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-17",
+      "weight_lbs": 155.6,
+      "sleep_seconds": 28320,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-18",
+      "weight_lbs": 154.1,
+      "sleep_seconds": 28140,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-19",
+      "weight_lbs": 153.7,
+      "sleep_seconds": 30000,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-20",
+      "weight_lbs": 155.2,
+      "sleep_seconds": 28440,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-21",
+      "weight_lbs": 154.8,
+      "sleep_seconds": 28200,
+      "sleep_score": null,
+      "resting_heart_rate": 58,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-22",
+      "weight_lbs": 155.0,
+      "sleep_seconds": 28440,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-23",
+      "weight_lbs": 155.4,
+      "sleep_seconds": 27600,
+      "sleep_score": null,
+      "resting_heart_rate": 58,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-24",
+      "weight_lbs": 156.3,
+      "sleep_seconds": 24960,
+      "sleep_score": null,
+      "resting_heart_rate": 58,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-25",
+      "weight_lbs": 155.6,
+      "sleep_seconds": 27420,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-26",
+      "weight_lbs": 153.9,
+      "sleep_seconds": 28380,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-27",
+      "weight_lbs": 154.1,
+      "sleep_seconds": 26880,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-02-28",
+      "weight_lbs": 154.8,
+      "sleep_seconds": 27060,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-01",
+      "weight_lbs": 155.9,
+      "sleep_seconds": 26520,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-02",
+      "weight_lbs": 156.1,
+      "sleep_seconds": 28320,
+      "sleep_score": null,
+      "resting_heart_rate": 57,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-03",
+      "weight_lbs": 155.2,
+      "sleep_seconds": 27840,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-04",
+      "weight_lbs": 157.0,
+      "sleep_seconds": 28500,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-05",
+      "weight_lbs": 155.4,
+      "sleep_seconds": 26040,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-06",
+      "weight_lbs": 154.3,
+      "sleep_seconds": 27660,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-07",
+      "weight_lbs": null,
+      "sleep_seconds": 23400,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-08",
+      "weight_lbs": 156.1,
+      "sleep_seconds": 27000,
+      "sleep_score": null,
+      "resting_heart_rate": 57,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-09",
+      "weight_lbs": 155.2,
+      "sleep_seconds": 28620,
+      "sleep_score": null,
+      "resting_heart_rate": 58,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-10",
+      "weight_lbs": 155.4,
+      "sleep_seconds": 28620,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-11",
+      "weight_lbs": 155.4,
+      "sleep_seconds": 26820,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-12",
+      "weight_lbs": 154.3,
+      "sleep_seconds": 27300,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-13",
+      "weight_lbs": 153.9,
+      "sleep_seconds": 28680,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-14",
+      "weight_lbs": 154.1,
+      "sleep_seconds": 25500,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-15",
+      "weight_lbs": 154.8,
+      "sleep_seconds": 29100,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-16",
+      "weight_lbs": 155.0,
+      "sleep_seconds": 26460,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-17",
+      "weight_lbs": 155.9,
+      "sleep_seconds": 22080,
+      "sleep_score": null,
+      "resting_heart_rate": 59,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-18",
+      "weight_lbs": 154.8,
+      "sleep_seconds": 27540,
+      "sleep_score": null,
+      "resting_heart_rate": 57,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-19",
+      "weight_lbs": 155.0,
+      "sleep_seconds": 30180,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-20",
+      "weight_lbs": 156.5,
+      "sleep_seconds": 25020,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-21",
+      "weight_lbs": 156.1,
+      "sleep_seconds": 28440,
+      "sleep_score": null,
+      "resting_heart_rate": 60,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-22",
+      "weight_lbs": 154.1,
+      "sleep_seconds": 27000,
+      "sleep_score": null,
+      "resting_heart_rate": 57,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-23",
+      "weight_lbs": 154.1,
+      "sleep_seconds": 27240,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-24",
+      "weight_lbs": 153.4,
+      "sleep_seconds": 25500,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-25",
+      "weight_lbs": 152.8,
+      "sleep_seconds": 26280,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-26",
+      "weight_lbs": 152.1,
+      "sleep_seconds": 27540,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-27",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 26460,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-28",
+      "weight_lbs": 153.2,
+      "sleep_seconds": 27600,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-29",
+      "weight_lbs": 152.8,
+      "sleep_seconds": 27300,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-30",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 27900,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-03-31",
+      "weight_lbs": 152.6,
+      "sleep_seconds": 27420,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-01",
+      "weight_lbs": 153.2,
+      "sleep_seconds": 31140,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-02",
+      "weight_lbs": 153.2,
+      "sleep_seconds": 26940,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-03",
+      "weight_lbs": 152.8,
+      "sleep_seconds": 25440,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-04",
+      "weight_lbs": 153.4,
+      "sleep_seconds": 28560,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-05",
+      "weight_lbs": 155.0,
+      "sleep_seconds": 24300,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-06",
+      "weight_lbs": 154.5,
+      "sleep_seconds": 28860,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-07",
+      "weight_lbs": 153.9,
+      "sleep_seconds": 28260,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-08",
+      "weight_lbs": 154.8,
+      "sleep_seconds": 29460,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-09",
+      "weight_lbs": 155.0,
+      "sleep_seconds": 26580,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-10",
+      "weight_lbs": 155.0,
+      "sleep_seconds": 28140,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-11",
+      "weight_lbs": 154.8,
+      "sleep_seconds": 26880,
+      "sleep_score": null,
+      "resting_heart_rate": 59,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-12",
+      "weight_lbs": 156.1,
+      "sleep_seconds": 27960,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-13",
+      "weight_lbs": 155.6,
+      "sleep_seconds": 27600,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-14",
+      "weight_lbs": 155.4,
+      "sleep_seconds": 26580,
+      "sleep_score": null,
+      "resting_heart_rate": 57,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-15",
+      "weight_lbs": 154.8,
+      "sleep_seconds": 26040,
+      "sleep_score": null,
+      "resting_heart_rate": 57,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-16",
+      "weight_lbs": 155.2,
+      "sleep_seconds": 27300,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-17",
+      "weight_lbs": 153.7,
+      "sleep_seconds": 28740,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-18",
+      "weight_lbs": 153.9,
+      "sleep_seconds": 25680,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-19",
+      "weight_lbs": 155.9,
+      "sleep_seconds": 22200,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-20",
+      "weight_lbs": 154.1,
+      "sleep_seconds": 24540,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-21",
+      "weight_lbs": 153.7,
+      "sleep_seconds": 27840,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-22",
+      "weight_lbs": 155.4,
+      "sleep_seconds": 27180,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-23",
+      "weight_lbs": 155.4,
+      "sleep_seconds": 31020,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-24",
+      "weight_lbs": 154.5,
+      "sleep_seconds": 29580,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-25",
+      "weight_lbs": 153.2,
+      "sleep_seconds": 25980,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-26",
+      "weight_lbs": 154.1,
+      "sleep_seconds": 27420,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-27",
+      "weight_lbs": 154.1,
+      "sleep_seconds": 23640,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-28",
+      "weight_lbs": 153.9,
+      "sleep_seconds": 27960,
+      "sleep_score": null,
+      "resting_heart_rate": 59,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-29",
+      "weight_lbs": 153.7,
+      "sleep_seconds": 26520,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-04-30",
+      "weight_lbs": 154.5,
+      "sleep_seconds": 27960,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-01",
+      "weight_lbs": 153.7,
+      "sleep_seconds": 15180,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-02",
+      "weight_lbs": 153.4,
+      "sleep_seconds": 27060,
+      "sleep_score": null,
+      "resting_heart_rate": 57,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-03",
+      "weight_lbs": 155.0,
+      "sleep_seconds": 26460,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-04",
+      "weight_lbs": 155.4,
+      "sleep_seconds": 28680,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-05",
+      "weight_lbs": 156.3,
+      "sleep_seconds": 26520,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-06",
+      "weight_lbs": 155.4,
+      "sleep_seconds": 32400,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-07",
+      "weight_lbs": 155.0,
+      "sleep_seconds": 31080,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-08",
+      "weight_lbs": 153.4,
+      "sleep_seconds": 26220,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-09",
+      "weight_lbs": 153.4,
+      "sleep_seconds": 31500,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-10",
+      "weight_lbs": 153.7,
+      "sleep_seconds": 29280,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-11",
+      "weight_lbs": 153.9,
+      "sleep_seconds": 25500,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-12",
+      "weight_lbs": 155.9,
+      "sleep_seconds": 28320,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-13",
+      "weight_lbs": 155.9,
+      "sleep_seconds": 28620,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-14",
+      "weight_lbs": 154.3,
+      "sleep_seconds": 29340,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-15",
+      "weight_lbs": 155.0,
+      "sleep_seconds": 31620,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-16",
+      "weight_lbs": 154.5,
+      "sleep_seconds": 29700,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-17",
+      "weight_lbs": 154.8,
+      "sleep_seconds": 24720,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-18",
+      "weight_lbs": 155.0,
+      "sleep_seconds": 26400,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-19",
+      "weight_lbs": 155.6,
+      "sleep_seconds": 29280,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-20",
+      "weight_lbs": 153.0,
+      "sleep_seconds": 27780,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-21",
+      "weight_lbs": 152.6,
+      "sleep_seconds": 28500,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-22",
+      "weight_lbs": 153.9,
+      "sleep_seconds": 25860,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-23",
+      "weight_lbs": 153.2,
+      "sleep_seconds": 26400,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-24",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 27960,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-25",
+      "weight_lbs": 152.6,
+      "sleep_seconds": 28020,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-26",
+      "weight_lbs": 154.5,
+      "sleep_seconds": 29640,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-27",
+      "weight_lbs": 153.7,
+      "sleep_seconds": 28380,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-28",
+      "weight_lbs": 152.1,
+      "sleep_seconds": 28080,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-29",
+      "weight_lbs": 153.0,
+      "sleep_seconds": 29100,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-30",
+      "weight_lbs": 152.8,
+      "sleep_seconds": 33960,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-05-31",
+      "weight_lbs": 152.6,
+      "sleep_seconds": 26280,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-01",
+      "weight_lbs": 153.4,
+      "sleep_seconds": 27060,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-02",
+      "weight_lbs": 152.1,
+      "sleep_seconds": 28800,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-03",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 25800,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-04",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 29280,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-05",
+      "weight_lbs": 150.8,
+      "sleep_seconds": 29460,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-06",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 27720,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-07",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 28380,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-08",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 28020,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-09",
+      "weight_lbs": 150.8,
+      "sleep_seconds": 29700,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-10",
+      "weight_lbs": 150.8,
+      "sleep_seconds": 27720,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-11",
+      "weight_lbs": 150.1,
+      "sleep_seconds": 25440,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-12",
+      "weight_lbs": 150.1,
+      "sleep_seconds": 30660,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-13",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 24840,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-14",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 26460,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-15",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 32700,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-16",
+      "weight_lbs": 150.1,
+      "sleep_seconds": 29640,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-17",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 30300,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-18",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 33240,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-19",
+      "weight_lbs": 150.1,
+      "sleep_seconds": 27780,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-20",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 28920,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-21",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 27480,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-22",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 32400,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-23",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 30240,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-24",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 30720,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-25",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 32160,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-26",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 28680,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-27",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 31440,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-28",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 31320,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-29",
+      "weight_lbs": 152.6,
+      "sleep_seconds": 31020,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2021-06-30",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 31200,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-01",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 31800,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-02",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 33000,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-03",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 25800,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-04",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 26460,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-05",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 27180,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-06",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 32520,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-07",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 32820,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-08",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 29340,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-09",
+      "weight_lbs": 148.6,
+      "sleep_seconds": 31800,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-10",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 30720,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-11",
+      "weight_lbs": 150.8,
+      "sleep_seconds": 24480,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-12",
+      "weight_lbs": 147.5,
+      "sleep_seconds": 30720,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-13",
+      "weight_lbs": 147.9,
+      "sleep_seconds": 27480,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-14",
+      "weight_lbs": 147.9,
+      "sleep_seconds": 29220,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-15",
+      "weight_lbs": 147.0,
+      "sleep_seconds": 29940,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-16",
+      "weight_lbs": 147.5,
+      "sleep_seconds": 31020,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-17",
+      "weight_lbs": 146.8,
+      "sleep_seconds": 28380,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-18",
+      "weight_lbs": 146.6,
+      "sleep_seconds": 28260,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-19",
+      "weight_lbs": 146.4,
+      "sleep_seconds": 28260,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-20",
+      "weight_lbs": 147.9,
+      "sleep_seconds": 27540,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-21",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 30180,
+      "sleep_score": null,
+      "resting_heart_rate": 41,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-22",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 28440,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-23",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 29160,
+      "sleep_score": null,
+      "resting_heart_rate": 40,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-24",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 26160,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-25",
+      "weight_lbs": 147.0,
+      "sleep_seconds": 24120,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-26",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 29520,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-27",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 32580,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-28",
+      "weight_lbs": 148.6,
+      "sleep_seconds": 28080,
+      "sleep_score": null,
+      "resting_heart_rate": 41,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-29",
+      "weight_lbs": 148.6,
+      "sleep_seconds": 30300,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-30",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 28020,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-07-31",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 24720,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-01",
+      "weight_lbs": 147.5,
+      "sleep_seconds": 29760,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-02",
+      "weight_lbs": 147.7,
+      "sleep_seconds": 29400,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-03",
+      "weight_lbs": 147.5,
+      "sleep_seconds": 29340,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-04",
+      "weight_lbs": 146.8,
+      "sleep_seconds": 30000,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-05",
+      "weight_lbs": 146.6,
+      "sleep_seconds": 31140,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-06",
+      "weight_lbs": 147.0,
+      "sleep_seconds": 32820,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-07",
+      "weight_lbs": 145.9,
+      "sleep_seconds": 30180,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-08",
+      "weight_lbs": 146.6,
+      "sleep_seconds": 28860,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-09",
+      "weight_lbs": 147.9,
+      "sleep_seconds": 26820,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-10",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 29040,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-11",
+      "weight_lbs": 148.8,
+      "sleep_seconds": 27360,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-12",
+      "weight_lbs": 147.0,
+      "sleep_seconds": 32640,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-13",
+      "weight_lbs": 147.7,
+      "sleep_seconds": 27300,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-14",
+      "weight_lbs": 147.5,
+      "sleep_seconds": 30840,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-15",
+      "weight_lbs": 148.4,
+      "sleep_seconds": 26400,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-16",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 31260,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-17",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 29760,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-18",
+      "weight_lbs": 147.5,
+      "sleep_seconds": 33240,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-19",
+      "weight_lbs": 147.9,
+      "sleep_seconds": 29400,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-20",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 28920,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-21",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 30900,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-22",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 28200,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-23",
+      "weight_lbs": 147.9,
+      "sleep_seconds": 31200,
+      "sleep_score": null,
+      "resting_heart_rate": 41,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-24",
+      "weight_lbs": 148.6,
+      "sleep_seconds": 29760,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-25",
+      "weight_lbs": 147.5,
+      "sleep_seconds": 29640,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-26",
+      "weight_lbs": 147.5,
+      "sleep_seconds": 30540,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-27",
+      "weight_lbs": 146.6,
+      "sleep_seconds": 28560,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-28",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 27060,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-29",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 26580,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-30",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 27600,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-08-31",
+      "weight_lbs": 148.6,
+      "sleep_seconds": 28200,
+      "sleep_score": null,
+      "resting_heart_rate": 40,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-01",
+      "weight_lbs": 148.8,
+      "sleep_seconds": 27660,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-02",
+      "weight_lbs": 147.0,
+      "sleep_seconds": 27900,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-03",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 32040,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-04",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 26820,
+      "sleep_score": null,
+      "resting_heart_rate": 41,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-05",
+      "weight_lbs": 146.6,
+      "sleep_seconds": 31320,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-06",
+      "weight_lbs": 145.5,
+      "sleep_seconds": 30180,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-07",
+      "weight_lbs": 147.0,
+      "sleep_seconds": 29820,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-08",
+      "weight_lbs": 148.8,
+      "sleep_seconds": 27480,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-09",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 28440,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-10",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 29160,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-11",
+      "weight_lbs": 145.5,
+      "sleep_seconds": 28320,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-12",
+      "weight_lbs": 147.0,
+      "sleep_seconds": 24120,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-13",
+      "weight_lbs": 147.5,
+      "sleep_seconds": 31620,
+      "sleep_score": null,
+      "resting_heart_rate": 39,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-14",
+      "weight_lbs": 147.0,
+      "sleep_seconds": 28740,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-15",
+      "weight_lbs": 146.6,
+      "sleep_seconds": 29580,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-16",
+      "weight_lbs": 145.7,
+      "sleep_seconds": 28080,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-17",
+      "weight_lbs": 147.0,
+      "sleep_seconds": 31440,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-18",
+      "weight_lbs": 147.3,
+      "sleep_seconds": 26820,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-19",
+      "weight_lbs": 147.3,
+      "sleep_seconds": 27840,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-20",
+      "weight_lbs": 145.1,
+      "sleep_seconds": 29280,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-21",
+      "weight_lbs": 145.7,
+      "sleep_seconds": 29700,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-22",
+      "weight_lbs": 144.8,
+      "sleep_seconds": 30480,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-23",
+      "weight_lbs": 147.0,
+      "sleep_seconds": 30360,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-24",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 30120,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-25",
+      "weight_lbs": 144.2,
+      "sleep_seconds": 29580,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-26",
+      "weight_lbs": 144.6,
+      "sleep_seconds": 28500,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-27",
+      "weight_lbs": 144.2,
+      "sleep_seconds": 32100,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-28",
+      "weight_lbs": 145.9,
+      "sleep_seconds": 28260,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-29",
+      "weight_lbs": 144.8,
+      "sleep_seconds": 23340,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-09-30",
+      "weight_lbs": null,
+      "sleep_seconds": 26340,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-01",
+      "weight_lbs": null,
+      "sleep_seconds": 30540,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-02",
+      "weight_lbs": null,
+      "sleep_seconds": 28320,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-03",
+      "weight_lbs": null,
+      "sleep_seconds": 28740,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-04",
+      "weight_lbs": null,
+      "sleep_seconds": 30000,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-05",
+      "weight_lbs": null,
+      "sleep_seconds": 29520,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-06",
+      "weight_lbs": null,
+      "sleep_seconds": 7020,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-07",
+      "weight_lbs": 142.6,
+      "sleep_seconds": 31500,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-08",
+      "weight_lbs": 143.7,
+      "sleep_seconds": 32340,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-09",
+      "weight_lbs": 144.8,
+      "sleep_seconds": 26880,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-10",
+      "weight_lbs": null,
+      "sleep_seconds": 34320,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-11",
+      "weight_lbs": null,
+      "sleep_seconds": 29160,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-12",
+      "weight_lbs": null,
+      "sleep_seconds": 27480,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-13",
+      "weight_lbs": 145.3,
+      "sleep_seconds": 27660,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-14",
+      "weight_lbs": 144.6,
+      "sleep_seconds": 27900,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-15",
+      "weight_lbs": 147.0,
+      "sleep_seconds": 21840,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-16",
+      "weight_lbs": 146.6,
+      "sleep_seconds": 30720,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-17",
+      "weight_lbs": 145.5,
+      "sleep_seconds": 35760,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-18",
+      "weight_lbs": 146.4,
+      "sleep_seconds": 33240,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-19",
+      "weight_lbs": 146.4,
+      "sleep_seconds": 30360,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-20",
+      "weight_lbs": 147.5,
+      "sleep_seconds": 28260,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-21",
+      "weight_lbs": 148.6,
+      "sleep_seconds": 28800,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-22",
+      "weight_lbs": 148.4,
+      "sleep_seconds": 30180,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-23",
+      "weight_lbs": 147.3,
+      "sleep_seconds": 32940,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-24",
+      "weight_lbs": 148.8,
+      "sleep_seconds": 34320,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-25",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 31260,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-26",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 30720,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-27",
+      "weight_lbs": 148.6,
+      "sleep_seconds": 25680,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-28",
+      "weight_lbs": 148.8,
+      "sleep_seconds": 32760,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-29",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 36960,
+      "sleep_score": null,
+      "resting_heart_rate": 56,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-30",
+      "weight_lbs": 147.0,
+      "sleep_seconds": 36060,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2021-10-31",
+      "weight_lbs": 148.6,
+      "sleep_seconds": 33360,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-01",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 31440,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-02",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 29580,
+      "sleep_score": null,
+      "resting_heart_rate": 58,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-03",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 30180,
+      "sleep_score": null,
+      "resting_heart_rate": 61,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-04",
+      "weight_lbs": 147.3,
+      "sleep_seconds": 31260,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-05",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 32160,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-06",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 32580,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-07",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 28020,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-08",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 29100,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-09",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 29700,
+      "sleep_score": null,
+      "resting_heart_rate": 57,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-10",
+      "weight_lbs": 148.4,
+      "sleep_seconds": 35160,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-11",
+      "weight_lbs": 147.7,
+      "sleep_seconds": 32580,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-12",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 35700,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-13",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 25620,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-14",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 30900,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-15",
+      "weight_lbs": 152.6,
+      "sleep_seconds": 31080,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-16",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 24540,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-17",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 29100,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-18",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 34620,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-19",
+      "weight_lbs": 150.8,
+      "sleep_seconds": 31320,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-20",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 32700,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-21",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 30480,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-22",
+      "weight_lbs": 150.1,
+      "sleep_seconds": 31920,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-23",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 32700,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-24",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 30600,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-25",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 28560,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-26",
+      "weight_lbs": 153.9,
+      "sleep_seconds": 27300,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-27",
+      "weight_lbs": 152.1,
+      "sleep_seconds": 30300,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-28",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 30840,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-29",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 30360,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-11-30",
+      "weight_lbs": 152.8,
+      "sleep_seconds": 30480,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-01",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 30780,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-02",
+      "weight_lbs": 152.1,
+      "sleep_seconds": 32280,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-03",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 32160,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-04",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 33180,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-05",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 30360,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-06",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 29940,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-07",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 31740,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-08",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 30300,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-09",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 28380,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-10",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 29460,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-11",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 30300,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-12",
+      "weight_lbs": 152.6,
+      "sleep_seconds": 32340,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-13",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 31020,
+      "sleep_score": null,
+      "resting_heart_rate": 38,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-14",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 30960,
+      "sleep_score": null,
+      "resting_heart_rate": 41,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-15",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 32520,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-16",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 32580,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-17",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 31740,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-18",
+      "weight_lbs": 153.0,
+      "sleep_seconds": 29700,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-19",
+      "weight_lbs": 153.2,
+      "sleep_seconds": 32940,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-20",
+      "weight_lbs": 153.9,
+      "sleep_seconds": 30000,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-21",
+      "weight_lbs": 152.8,
+      "sleep_seconds": 30420,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-22",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 33840,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-23",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 31080,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-24",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 33540,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-25",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 34560,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-26",
+      "weight_lbs": 153.0,
+      "sleep_seconds": 24780,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-27",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 34920,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-28",
+      "weight_lbs": 152.6,
+      "sleep_seconds": 33960,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-29",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 27720,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-30",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 27540,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2021-12-31",
+      "weight_lbs": 150.8,
+      "sleep_seconds": 33180,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-01",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 27360,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-02",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 28860,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-03",
+      "weight_lbs": 152.8,
+      "sleep_seconds": 24660,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-04",
+      "weight_lbs": 150.8,
+      "sleep_seconds": 35820,
+      "sleep_score": null,
+      "resting_heart_rate": 39,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-05",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 11460,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-06",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 34500,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-07",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 30960,
+      "sleep_score": null,
+      "resting_heart_rate": 40,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-08",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 34140,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-09",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 29880,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-10",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 30660,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-11",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 30300,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-12",
+      "weight_lbs": 148.8,
+      "sleep_seconds": 29820,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-13",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 28140,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-14",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 29220,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-15",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 31260,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-16",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 31440,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-17",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 28980,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-18",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 28800,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-19",
+      "weight_lbs": 150.8,
+      "sleep_seconds": 29580,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-20",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 33840,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-21",
+      "weight_lbs": 153.0,
+      "sleep_seconds": 28740,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-22",
+      "weight_lbs": 152.8,
+      "sleep_seconds": 32700,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-23",
+      "weight_lbs": 153.7,
+      "sleep_seconds": 28200,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-24",
+      "weight_lbs": 152.6,
+      "sleep_seconds": 28260,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-25",
+      "weight_lbs": 154.1,
+      "sleep_seconds": 27720,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-26",
+      "weight_lbs": 152.8,
+      "sleep_seconds": 28500,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-27",
+      "weight_lbs": 153.0,
+      "sleep_seconds": 29820,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-28",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 28020,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-29",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 32760,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-30",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 32220,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-01-31",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 28560,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-01",
+      "weight_lbs": 153.2,
+      "sleep_seconds": 27780,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-02",
+      "weight_lbs": 152.8,
+      "sleep_seconds": 29340,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-03",
+      "weight_lbs": 152.8,
+      "sleep_seconds": 30720,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-04",
+      "weight_lbs": 152.8,
+      "sleep_seconds": 31620,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-05",
+      "weight_lbs": 152.1,
+      "sleep_seconds": 30660,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-06",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 31560,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-07",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 28860,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-08",
+      "weight_lbs": 153.4,
+      "sleep_seconds": 32040,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-09",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 31260,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-10",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 31860,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-11",
+      "weight_lbs": 150.8,
+      "sleep_seconds": 31440,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-12",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 26580,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-13",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 32280,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-14",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 31260,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-15",
+      "weight_lbs": 153.0,
+      "sleep_seconds": 31680,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-16",
+      "weight_lbs": 150.8,
+      "sleep_seconds": 30660,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-17",
+      "weight_lbs": 150.8,
+      "sleep_seconds": 27540,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-18",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 29280,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-19",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 30540,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-20",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 27900,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-21",
+      "weight_lbs": 150.8,
+      "sleep_seconds": 29520,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-22",
+      "weight_lbs": 153.0,
+      "sleep_seconds": 27000,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-23",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 27240,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-24",
+      "weight_lbs": null,
+      "sleep_seconds": 29880,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-25",
+      "weight_lbs": null,
+      "sleep_seconds": 28320,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-26",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 29460,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-27",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 30660,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-02-28",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 28080,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-01",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 29820,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-02",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 27900,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-03",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 28020,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-04",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 30060,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-05",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 30540,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-06",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 31200,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-07",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 30600,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-08",
+      "weight_lbs": 153.0,
+      "sleep_seconds": 31920,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-09",
+      "weight_lbs": 152.1,
+      "sleep_seconds": 32160,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-10",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 29100,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-11",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 30780,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-12",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 24180,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-13",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 32280,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-14",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 30240,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-15",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 31800,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-16",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 31500,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-17",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 31140,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-18",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 30660,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-19",
+      "weight_lbs": 153.2,
+      "sleep_seconds": 21300,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-20",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 32220,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-21",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 29940,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-22",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 29760,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-23",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 30960,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-24",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 29580,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-25",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 32040,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-26",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 28080,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-27",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 33180,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-28",
+      "weight_lbs": 148.4,
+      "sleep_seconds": 32040,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-29",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 28260,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-30",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 31140,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-03-31",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 31080,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-01",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 31080,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-02",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 34920,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-03",
+      "weight_lbs": 150.1,
+      "sleep_seconds": 29400,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-04",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 28740,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-05",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 28500,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-06",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 27840,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-07",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 31080,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-08",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 29940,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-09",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 28380,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-10",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 30480,
+      "sleep_score": null,
+      "resting_heart_rate": 40,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-11",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 31620,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-12",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 30420,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-13",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 31440,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-14",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 30660,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-15",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 32580,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-16",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 27540,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-17",
+      "weight_lbs": null,
+      "sleep_seconds": 31440,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-18",
+      "weight_lbs": null,
+      "sleep_seconds": 26160,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-19",
+      "weight_lbs": null,
+      "sleep_seconds": 30720,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-20",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 30240,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-21",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 31500,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-22",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 27960,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-23",
+      "weight_lbs": null,
+      "sleep_seconds": 13500,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-24",
+      "weight_lbs": null,
+      "sleep_seconds": 33180,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-25",
+      "weight_lbs": null,
+      "sleep_seconds": 25620,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-26",
+      "weight_lbs": null,
+      "sleep_seconds": 30000,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-27",
+      "weight_lbs": null,
+      "sleep_seconds": 29040,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-28",
+      "weight_lbs": null,
+      "sleep_seconds": 13680,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-29",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 32460,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-04-30",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 29340,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-01",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 30240,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-02",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 31860,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-03",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 32280,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-04",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 32280,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-05",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 32700,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-06",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 31620,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-07",
+      "weight_lbs": 153.2,
+      "sleep_seconds": 26520,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-08",
+      "weight_lbs": 153.0,
+      "sleep_seconds": 20280,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-09",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 24780,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-10",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 29400,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-11",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 30360,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-12",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 28860,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-13",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 30660,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-14",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 26880,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-15",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 28320,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-16",
+      "weight_lbs": 152.6,
+      "sleep_seconds": 28320,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-17",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 29340,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-18",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 32400,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-19",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 31800,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-20",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 32760,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-21",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 21240,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-22",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 21060,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-23",
+      "weight_lbs": 153.9,
+      "sleep_seconds": 27840,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-24",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 28620,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-25",
+      "weight_lbs": 150.8,
+      "sleep_seconds": 30300,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-26",
+      "weight_lbs": 150.1,
+      "sleep_seconds": 31080,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-27",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 31440,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-28",
+      "weight_lbs": 154.8,
+      "sleep_seconds": 25920,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-29",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 27480,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-30",
+      "weight_lbs": 152.6,
+      "sleep_seconds": 26160,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-05-31",
+      "weight_lbs": 152.8,
+      "sleep_seconds": 26700,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-01",
+      "weight_lbs": 153.0,
+      "sleep_seconds": 27960,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-02",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 29820,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-03",
+      "weight_lbs": 153.2,
+      "sleep_seconds": 30480,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-04",
+      "weight_lbs": 153.2,
+      "sleep_seconds": 28620,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-05",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 25740,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-06",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 29880,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-07",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 30480,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-08",
+      "weight_lbs": 152.6,
+      "sleep_seconds": 31560,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-09",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 28440,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-10",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 28980,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-11",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 26280,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-12",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 25440,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-13",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 26820,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-14",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 28440,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-15",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 24360,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-16",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 25560,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-17",
+      "weight_lbs": 150.8,
+      "sleep_seconds": 27540,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-18",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 27000,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-19",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 25440,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-20",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 25740,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-21",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 27240,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-22",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 27120,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-23",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 25320,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-24",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 26940,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-25",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 28500,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-26",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 28500,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-27",
+      "weight_lbs": null,
+      "sleep_seconds": 28140,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-28",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 29460,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-29",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 26580,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-06-30",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 28260,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-01",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 29820,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-02",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 29340,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-03",
+      "weight_lbs": 150.1,
+      "sleep_seconds": 28380,
+      "sleep_score": null,
+      "resting_heart_rate": 41,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-04",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 24660,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-05",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 27840,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-06",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 27180,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-07",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 26100,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-08",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 27480,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-09",
+      "weight_lbs": 150.1,
+      "sleep_seconds": 24120,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-10",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 29460,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-11",
+      "weight_lbs": null,
+      "sleep_seconds": 25680,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-12",
+      "weight_lbs": null,
+      "sleep_seconds": 26520,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-13",
+      "weight_lbs": null,
+      "sleep_seconds": 15360,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-14",
+      "weight_lbs": null,
+      "sleep_seconds": 27660,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-15",
+      "weight_lbs": null,
+      "sleep_seconds": 27120,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-16",
+      "weight_lbs": null,
+      "sleep_seconds": 27420,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-17",
+      "weight_lbs": null,
+      "sleep_seconds": 25980,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-18",
+      "weight_lbs": null,
+      "sleep_seconds": 26940,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-19",
+      "weight_lbs": null,
+      "sleep_seconds": 24360,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-20",
+      "weight_lbs": null,
+      "sleep_seconds": 26820,
+      "sleep_score": null,
+      "resting_heart_rate": 38,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-21",
+      "weight_lbs": null,
+      "sleep_seconds": 17700,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-22",
+      "weight_lbs": null,
+      "sleep_seconds": 28080,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-23",
+      "weight_lbs": null,
+      "sleep_seconds": 27600,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-24",
+      "weight_lbs": null,
+      "sleep_seconds": 25320,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-25",
+      "weight_lbs": null,
+      "sleep_seconds": 25320,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-26",
+      "weight_lbs": null,
+      "sleep_seconds": 25800,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-27",
+      "weight_lbs": null,
+      "sleep_seconds": 18900,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-28",
+      "weight_lbs": 147.7,
+      "sleep_seconds": 26760,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-29",
+      "weight_lbs": 147.3,
+      "sleep_seconds": 24000,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-30",
+      "weight_lbs": 147.7,
+      "sleep_seconds": 29520,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2022-07-31",
+      "weight_lbs": 147.3,
+      "sleep_seconds": 23580,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-01",
+      "weight_lbs": 146.6,
+      "sleep_seconds": 24900,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-02",
+      "weight_lbs": 147.7,
+      "sleep_seconds": 24960,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-03",
+      "weight_lbs": 148.6,
+      "sleep_seconds": 26940,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-04",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 26400,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-05",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 26280,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-06",
+      "weight_lbs": 147.5,
+      "sleep_seconds": 24420,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-07",
+      "weight_lbs": 147.3,
+      "sleep_seconds": 25140,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-08",
+      "weight_lbs": 147.5,
+      "sleep_seconds": 25680,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-09",
+      "weight_lbs": 147.5,
+      "sleep_seconds": 26640,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-10",
+      "weight_lbs": 148.6,
+      "sleep_seconds": 27600,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-11",
+      "weight_lbs": 148.8,
+      "sleep_seconds": 30840,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-12",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 30000,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-13",
+      "weight_lbs": 148.4,
+      "sleep_seconds": 23700,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-14",
+      "weight_lbs": 147.9,
+      "sleep_seconds": 24960,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-15",
+      "weight_lbs": 146.2,
+      "sleep_seconds": 27840,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-16",
+      "weight_lbs": 146.6,
+      "sleep_seconds": 29400,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-17",
+      "weight_lbs": 147.3,
+      "sleep_seconds": 29280,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-18",
+      "weight_lbs": 147.7,
+      "sleep_seconds": 28260,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-19",
+      "weight_lbs": 146.6,
+      "sleep_seconds": 29820,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-20",
+      "weight_lbs": 146.8,
+      "sleep_seconds": 27060,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-21",
+      "weight_lbs": 148.4,
+      "sleep_seconds": 27660,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-22",
+      "weight_lbs": 148.8,
+      "sleep_seconds": 29160,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-23",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 29640,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-24",
+      "weight_lbs": 150.1,
+      "sleep_seconds": 27600,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-25",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 31200,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-26",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 29940,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-27",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 25320,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-28",
+      "weight_lbs": 146.6,
+      "sleep_seconds": 25080,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-29",
+      "weight_lbs": 147.3,
+      "sleep_seconds": 30300,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-30",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 30840,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-08-31",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 27480,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-01",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 30360,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-02",
+      "weight_lbs": 148.6,
+      "sleep_seconds": 29280,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-03",
+      "weight_lbs": 147.3,
+      "sleep_seconds": 27000,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-04",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 26880,
+      "sleep_score": null,
+      "resting_heart_rate": 41,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-05",
+      "weight_lbs": 148.8,
+      "sleep_seconds": 28020,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-06",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 27180,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-07",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 27000,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-08",
+      "weight_lbs": 147.9,
+      "sleep_seconds": 28140,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-09",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 30900,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-10",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 27300,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-11",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 28200,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-12",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 29220,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-13",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 28800,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-14",
+      "weight_lbs": 148.8,
+      "sleep_seconds": 27780,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-15",
+      "weight_lbs": 148.8,
+      "sleep_seconds": 29700,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-16",
+      "weight_lbs": 148.4,
+      "sleep_seconds": 29040,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-17",
+      "weight_lbs": 146.4,
+      "sleep_seconds": 29100,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-18",
+      "weight_lbs": 148.6,
+      "sleep_seconds": 27240,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-19",
+      "weight_lbs": 147.0,
+      "sleep_seconds": 29880,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-20",
+      "weight_lbs": 147.5,
+      "sleep_seconds": 27180,
+      "sleep_score": null,
+      "resting_heart_rate": 43,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-21",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 25440,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-22",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 27120,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-23",
+      "weight_lbs": 150.1,
+      "sleep_seconds": 24720,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-24",
+      "weight_lbs": 148.4,
+      "sleep_seconds": 27960,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-25",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 28680,
+      "sleep_score": null,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-26",
+      "weight_lbs": 148.8,
+      "sleep_seconds": 28560,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-27",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 30180,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-28",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 26700,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-29",
+      "weight_lbs": null,
+      "sleep_seconds": 16680,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2022-09-30",
+      "weight_lbs": null,
+      "sleep_seconds": 34560,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-01",
+      "weight_lbs": null,
+      "sleep_seconds": 28200,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-02",
+      "weight_lbs": null,
+      "sleep_seconds": 28080,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-03",
+      "weight_lbs": null,
+      "sleep_seconds": 28800,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-04",
+      "weight_lbs": null,
+      "sleep_seconds": 27720,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-05",
+      "weight_lbs": null,
+      "sleep_seconds": 29040,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-06",
+      "weight_lbs": 146.6,
+      "sleep_seconds": 28740,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-07",
+      "weight_lbs": 147.0,
+      "sleep_seconds": 29100,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-08",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 25440,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-09",
+      "weight_lbs": 147.5,
+      "sleep_seconds": 28980,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-10",
+      "weight_lbs": 147.0,
+      "sleep_seconds": 32580,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
     {
       "date": "2022-10-11",
       "weight_lbs": 149.0,
       "sleep_seconds": 29340,
       "sleep_score": null,
       "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-12",
+      "weight_lbs": 148.6,
+      "sleep_seconds": 22860,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-13",
+      "weight_lbs": 148.6,
+      "sleep_seconds": 29700,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-14",
+      "weight_lbs": 147.3,
+      "sleep_seconds": 28320,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-15",
+      "weight_lbs": 147.9,
+      "sleep_seconds": 29040,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-16",
+      "weight_lbs": 148.6,
+      "sleep_seconds": 29340,
+      "sleep_score": null,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-17",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 30300,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-18",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 32880,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-19",
+      "weight_lbs": 147.7,
+      "sleep_seconds": 24600,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-20",
+      "weight_lbs": 148.6,
+      "sleep_seconds": 26760,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-21",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 30120,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-22",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 24480,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-23",
+      "weight_lbs": 150.1,
+      "sleep_seconds": 29760,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-24",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 30600,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-25",
+      "weight_lbs": null,
+      "sleep_seconds": 22440,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-26",
+      "weight_lbs": null,
+      "sleep_seconds": 26040,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-27",
+      "weight_lbs": null,
+      "sleep_seconds": 25200,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-28",
+      "weight_lbs": null,
+      "sleep_seconds": 28980,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-29",
+      "weight_lbs": 150.1,
+      "sleep_seconds": 27840,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-30",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 32160,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-10-31",
+      "weight_lbs": 152.1,
+      "sleep_seconds": 28800,
+      "sleep_score": null,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-01",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 29760,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-02",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 29160,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-03",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 30660,
+      "sleep_score": null,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-04",
+      "weight_lbs": null,
+      "sleep_seconds": 27060,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-05",
+      "weight_lbs": null,
+      "sleep_seconds": 27540,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-06",
+      "weight_lbs": null,
+      "sleep_seconds": 28620,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-07",
+      "weight_lbs": null,
+      "sleep_seconds": 33780,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-08",
+      "weight_lbs": null,
+      "sleep_seconds": 26460,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-09",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 27420,
+      "sleep_score": null,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-10",
+      "weight_lbs": 148.2,
+      "sleep_seconds": 29280,
+      "sleep_score": null,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-11",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 27420,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-12",
+      "weight_lbs": 148.8,
+      "sleep_seconds": 30480,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-13",
+      "weight_lbs": 150.6,
+      "sleep_seconds": 29820,
+      "sleep_score": null,
+      "resting_heart_rate": 57,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-14",
+      "weight_lbs": 150.8,
+      "sleep_seconds": 31980,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-15",
+      "weight_lbs": 153.0,
+      "sleep_seconds": 27480,
+      "sleep_score": null,
+      "resting_heart_rate": 55,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-16",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 31800,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-17",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 29700,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-18",
+      "weight_lbs": 150.1,
+      "sleep_seconds": 28980,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-19",
+      "weight_lbs": 149.9,
+      "sleep_seconds": 28500,
+      "sleep_score": null,
+      "resting_heart_rate": 54,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-20",
+      "weight_lbs": 147.9,
+      "sleep_seconds": 29340,
+      "sleep_score": null,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-21",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 28740,
+      "sleep_score": null,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-22",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 32100,
+      "sleep_score": null,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-23",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 30540,
+      "sleep_score": null,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-24",
+      "weight_lbs": 148.6,
+      "sleep_seconds": 29340,
+      "sleep_score": null,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-25",
+      "weight_lbs": 149.3,
+      "sleep_seconds": 29820,
+      "sleep_score": 70,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-26",
+      "weight_lbs": 149.5,
+      "sleep_seconds": 27000,
+      "sleep_score": 57,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-27",
+      "weight_lbs": 149.0,
+      "sleep_seconds": 27120,
+      "sleep_score": 88,
+      "resting_heart_rate": 52,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-28",
+      "weight_lbs": 149.7,
+      "sleep_seconds": 25680,
+      "sleep_score": 83,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-29",
+      "weight_lbs": 150.1,
+      "sleep_seconds": 27180,
+      "sleep_score": 85,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2022-11-30",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 29940,
+      "sleep_score": 87,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-01",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 30120,
+      "sleep_score": 94,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-02",
+      "weight_lbs": 152.8,
+      "sleep_seconds": 27060,
+      "sleep_score": 84,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-03",
+      "weight_lbs": 153.0,
+      "sleep_seconds": 26427,
+      "sleep_score": 78,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-04",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 28080,
+      "sleep_score": 83,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-05",
+      "weight_lbs": 150.8,
+      "sleep_seconds": 30300,
+      "sleep_score": 83,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-06",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 28260,
+      "sleep_score": 69,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-07",
+      "weight_lbs": 153.7,
+      "sleep_seconds": 24900,
+      "sleep_score": 71,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-08",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 27180,
+      "sleep_score": 79,
+      "resting_heart_rate": 53,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-09",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 30060,
+      "sleep_score": 75,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-10",
+      "weight_lbs": 150.4,
+      "sleep_seconds": 31380,
+      "sleep_score": 89,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-11",
+      "weight_lbs": 150.1,
+      "sleep_seconds": 30720,
+      "sleep_score": 89,
+      "resting_heart_rate": 44,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-12",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 28080,
+      "sleep_score": 82,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-13",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 30000,
+      "sleep_score": 84,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-14",
+      "weight_lbs": 151.9,
+      "sleep_seconds": 27420,
+      "sleep_score": 89,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-15",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 30780,
+      "sleep_score": 80,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-16",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 28380,
+      "sleep_score": 84,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-17",
+      "weight_lbs": 152.1,
+      "sleep_seconds": 32621,
+      "sleep_score": 81,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-18",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 24840,
+      "sleep_score": 65,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-19",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 31318,
+      "sleep_score": 90,
+      "resting_heart_rate": 47,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-20",
+      "weight_lbs": 152.3,
+      "sleep_seconds": 30180,
+      "sleep_score": 83,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-21",
+      "weight_lbs": 152.6,
+      "sleep_seconds": 30242,
+      "sleep_score": 75,
+      "resting_heart_rate": 46,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-22",
+      "weight_lbs": 154.1,
+      "sleep_seconds": 26880,
+      "sleep_score": 69,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-23",
+      "weight_lbs": 152.6,
+      "sleep_seconds": 31823,
+      "sleep_score": 92,
+      "resting_heart_rate": 45,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-24",
+      "weight_lbs": 154.8,
+      "sleep_seconds": 27660,
+      "sleep_score": 70,
+      "resting_heart_rate": 51,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-25",
+      "weight_lbs": 153.0,
+      "sleep_seconds": 33888,
+      "sleep_score": 88,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-26",
+      "weight_lbs": 151.2,
+      "sleep_seconds": 32039,
+      "sleep_score": 65,
+      "resting_heart_rate": 48,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-27",
+      "weight_lbs": 152.1,
+      "sleep_seconds": 30619,
+      "sleep_score": 66,
+      "resting_heart_rate": 49,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-28",
+      "weight_lbs": 151.5,
+      "sleep_seconds": 35447,
+      "sleep_score": 76,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-29",
+      "weight_lbs": 152.1,
+      "sleep_seconds": 30717,
+      "sleep_score": 79,
+      "resting_heart_rate": 50,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-30",
+      "weight_lbs": 151.7,
+      "sleep_seconds": 32336,
+      "sleep_score": 79,
+      "resting_heart_rate": 42,
+      "hrv": null
+    },
+    {
+      "date": "2022-12-31",
+      "weight_lbs": 151.0,
+      "sleep_seconds": 33480,
+      "sleep_score": 87,
+      "resting_heart_rate": 48,
       "hrv": null
     },
     {
@@ -10835,6 +16667,14 @@
       "sleep_score": 83,
       "resting_heart_rate": 42,
       "hrv": 78.0
+    },
+    {
+      "date": "2026-09-15",
+      "weight_lbs": 156.1,
+      "sleep_seconds": 27420,
+      "sleep_score": 86,
+      "resting_heart_rate": 44,
+      "hrv": 73.0
     }
   ]
 }
