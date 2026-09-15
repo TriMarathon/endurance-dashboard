@@ -1446,11 +1446,7 @@ function onWeeklyReset() {
 }
 
 function healthDefaultRange(rows) {
-  if (!Array.isArray(rows) || rows.length === 0) return null;
-  return {
-    start: String(rows[0].date),
-    end: String(rows[rows.length - 1].date),
-  };
+  return dailyDefaultRange(rows);
 }
 
 function initHealthControls() {
