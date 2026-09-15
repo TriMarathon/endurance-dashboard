@@ -170,6 +170,32 @@
         aria-label="Health"
       >
         <h2 class="chart-title" id="health-title">Current Health</h2>
+        <div
+          class="date-range-controls"
+          role="group"
+          aria-label="Health date range"
+        >
+          <div class="date-field">
+            <label for="health-start">Start date</label>
+            <input type="date" id="health-start" disabled />
+          </div>
+          <div class="date-field">
+            <label for="health-end">End date</label>
+            <input type="date" id="health-end" disabled />
+          </div>
+          <button
+            type="button"
+            id="health-reset"
+            class="range-reset-btn"
+            disabled
+            >Reset</button
+          >
+          <span
+            id="health-validation"
+            class="date-validation"
+            role="alert"
+          ></span>
+        </div>
         <div id="health-summary" class="health-summary">
           <div class="status loading" role="status">
             <span class="loader"></span>Loading health…

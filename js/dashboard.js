@@ -29,8 +29,10 @@ let healthCharts = [];
 
 let fullTrainingLoad = null;
 let fullWeekly = null;
+let fullHealth = null;
 let dailyRange = null;
 let weeklyRange = null;
+let healthRange = null;
 
 const TAB_PANELS = ['overview', 'training', 'racing', 'health'];
 
@@ -153,11 +155,11 @@ function clampDate(dateStr, minDate, maxDate) {
 }
 
 function filterDailyRange(rows, start, end) {
-  if (!Array.isArray(rows) || rows.length === 0 || !start || !end) return rows;
+  if (!Array.isArray(rows) || rows.length === 0 || (!start && !end)) return rows;
   return rows.filter((r) => {
     if (!r || r.date == null) return false;
     const d = String(r.date);
-    return d >= start && d <= end;
+    return (!start || d >= start) && (!end || d <= end);
   });
 }
 
@@ -1443,6 +1445,79 @@ function onWeeklyReset() {
   renderWeekly();
 }
 
+function healthDefaultRange(rows) {
+  if (!Array.isArray(rows) || rows.length === 0) return null;
+  return {
+    start: String(rows[0].date),
+    end: String(rows[rows.length - 1].date),
+  };
+}
+
+function initHealthControls() {
+  const startEl = document.getElementById('health-start');
+  const endEl = document.getElementById('health-end');
+  const resetEl = document.getElementById('health-reset');
+  const validateEl = document.getElementById('health-validation');
+  if (!startEl || !endEl || !resetEl) return;
+  const rows = fullHealth && Array.isArray(fullHealth.data) ? fullHealth.data : [];
+  if (rows.length === 0) {
+    startEl.disabled = true;
+    endEl.disabled = true;
+    resetEl.disabled = true;
+    return;
+  }
+  const minDate = String(rows[0].date);
+  const maxDate = String(rows[rows.length - 1].date);
+  startEl.min = minDate;
+  startEl.max = maxDate;
+  endEl.min = minDate;
+  endEl.max = maxDate;
+  startEl.disabled = false;
+  endEl.disabled = false;
+  resetEl.disabled = false;
+  startEl.value = healthRange.start;
+  endEl.value = healthRange.end;
+  showValidation(validateEl, '');
+  startEl.addEventListener('change', onHealthChange);
+  endEl.addEventListener('change', onHealthChange);
+  resetEl.addEventListener('click', onHealthReset);
+}
+
+function onHealthChange() {
+  const startEl = document.getElementById('health-start');
+  const endEl = document.getElementById('health-end');
+  const validateEl = document.getElementById('health-validation');
+  if (!startEl || !endEl || !validateEl) return;
+  if (startEl.disabled || endEl.disabled) return;
+  const startStr = clampDate(startEl.value, startEl.min, startEl.max);
+  const endStr = clampDate(endEl.value, endEl.min, endEl.max);
+  if (startStr !== startEl.value) startEl.value = startStr;
+  if (endStr !== endEl.value) endEl.value = endStr;
+  if (startStr && endStr && startStr > endStr) {
+    showValidation(validateEl, 'Start date must be on or before end date.');
+    if (healthRange) {
+      startEl.value = healthRange.start;
+      endEl.value = healthRange.end;
+    }
+    return;
+  }
+  showValidation(validateEl, '');
+  healthRange = { start: startStr, end: endStr };
+  renderHealth();
+}
+
+function onHealthReset() {
+  const startEl = document.getElementById('health-start');
+  const endEl = document.getElementById('health-end');
+  const validateEl = document.getElementById('health-validation');
+  const rows = fullHealth && Array.isArray(fullHealth.data) ? fullHealth.data : [];
+  healthRange = healthDefaultRange(rows);
+  showValidation(validateEl, '');
+  if (startEl && healthRange) startEl.value = healthRange.start;
+  if (endEl && healthRange) endEl.value = healthRange.end;
+  renderHealth();
+}
+
 // ---------------------------------------------------------------------------
 // Overview (Phase 7) -- single-page snapshot from overview.json
 // ---------------------------------------------------------------------------
@@ -1632,6 +1707,13 @@ function latestAverage(rows, key) {
   return null;
 }
 
+function latestHealthValues(rows) {
+  const latest = { date: rows.length ? rows[rows.length - 1].date : null };
+  ['weight_lbs', 'sleep_hours', 'sleep_score', 'resting_heart_rate_bpm', 'hrv_ms']
+    .forEach((key) => { latest[key] = latestAverage(rows, key); });
+  return latest;
+}
+
 function buildHealthChart(id, rows, config) {
   const canvas = document.getElementById(id);
   if (!canvas) return null;
@@ -1696,14 +1778,15 @@ function buildHealthChart(id, rows, config) {
   });
 }
 
-function renderHealth(doc) {
+function renderHealth() {
   const summary = document.getElementById('health-summary');
-  const rows = Array.isArray(doc && doc.data) ? doc.data : [];
-  const latest = doc && doc.latest ? doc.latest : {};
-  if (!summary || rows.length === 0) {
-    if (summary) summary.innerHTML = '<div class="status error" role="status">Health data unavailable.</div>';
-    return;
-  }
+  if (!summary || !fullHealth) return;
+  const rows = filterDailyRange(
+    fullHealth.data,
+    healthRange && healthRange.start,
+    healthRange && healthRange.end,
+  );
+  const latest = latestHealthValues(rows);
   summary.innerHTML = [
     healthStat('Latest date', fmtDate(latest.date)),
     healthStat('Weight', fmtWeight(latest.weight_lbs)),
@@ -1728,7 +1811,11 @@ async function loadHealth() {
     if (!response.ok) throw new Error('HTTP ' + response.status);
     const doc = await response.json();
     if (!doc || !Array.isArray(doc.data)) throw new Error('Invalid health document');
-    renderHealth(doc);
+    if (doc.data.length === 0) throw new Error('Health document has no data rows');
+    fullHealth = doc;
+    healthRange = healthDefaultRange(doc.data);
+    initHealthControls();
+    renderHealth();
   } catch (err) {
     console.error('[dashboard] failed to load health.json:', err);
     const summary = document.getElementById('health-summary');
