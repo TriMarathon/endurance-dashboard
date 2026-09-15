@@ -169,19 +169,39 @@
         role="tabpanel"
         aria-label="Health"
       >
-        <h2 class="chart-title" id="health-title">Health</h2>
-        <div class="chart-wrap">
-          <div class="health-placeholder">
-            <p class="health-placeholder-text">
-              Health tracking is not yet available.
-            </p>
+        <h2 class="chart-title" id="health-title">Current Health</h2>
+        <div id="health-summary" class="health-summary">
+          <div class="status loading" role="status">
+            <span class="loader"></span>Loading health…
           </div>
+        </div>
+        <div id="health-charts" class="health-charts" aria-live="polite">
+          <section class="health-chart-card" aria-labelledby="sleep-chart-title">
+            <h2 class="chart-title" id="sleep-chart-title">Sleep Duration</h2>
+            <div class="health-chart-container"><canvas id="health-sleep">Daily sleep duration and 7-day moving average.</canvas></div>
+          </section>
+          <section class="health-chart-card" aria-labelledby="weight-chart-title">
+            <h2 class="chart-title" id="weight-chart-title">Weight</h2>
+            <div class="health-chart-container"><canvas id="health-weight">Daily weight observations and 7-day moving average.</canvas></div>
+          </section>
+          <section class="health-chart-card" aria-labelledby="rhr-chart-title">
+            <h2 class="chart-title" id="rhr-chart-title">Resting Heart Rate</h2>
+            <div class="health-chart-container"><canvas id="health-rhr">Daily resting heart rate and 7-day moving average.</canvas></div>
+          </section>
+          <section class="health-chart-card" aria-labelledby="hrv-chart-title">
+            <h2 class="chart-title" id="hrv-chart-title">HRV</h2>
+            <div class="health-chart-container"><canvas id="health-hrv">Daily HRV and 7-day moving average.</canvas></div>
+          </section>
+          <section class="health-chart-card" aria-labelledby="sleep-score-chart-title">
+            <h2 class="chart-title" id="sleep-score-chart-title">Sleep Score</h2>
+            <div class="health-chart-container"><canvas id="health-sleep-score">Daily sleep score.</canvas></div>
+          </section>
         </div>
       </section>
     </main>
 
     <footer>
-      Static site &middot; data/training_load.json &middot; data/races.json &middot; data/weekly_training.json &middot; data/overview.json &middot; data/version.json &middot; no tracking
+      Static site &middot; data/training_load.json &middot; data/races.json &middot; data/weekly_training.json &middot; data/overview.json &middot; data/health.json &middot; data/version.json &middot; no tracking
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" defer></script>

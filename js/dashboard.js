@@ -3,11 +3,13 @@ const BASE_DATA_URL = 'data/training_load.json';
 const BASE_RACES_URL = 'data/races.json';
 const BASE_WEEKLY_URL = 'data/weekly_training.json';
 const BASE_OVERVIEW_URL = 'data/overview.json';
+const BASE_HEALTH_URL = 'data/health.json';
 let dataVersion = '';
 let DATA_URL = BASE_DATA_URL;
 let RACES_URL = BASE_RACES_URL;
 let WEEKLY_URL = BASE_WEEKLY_URL;
 let OVERVIEW_URL = BASE_OVERVIEW_URL;
+let HEALTH_URL = BASE_HEALTH_URL;
 const CHART_ID = 'training-load';
 const STATUS_ID = 'status';
 const UPDATED_ID = 'updated';
@@ -23,6 +25,7 @@ let racesData = [];
 let trainingLoadChart = null;
 let weeklyTssChart = null;
 let weeklyTimeChart = null;
+let healthCharts = [];
 
 let fullTrainingLoad = null;
 let fullWeekly = null;
@@ -1083,6 +1086,7 @@ async function loadVersion() {
       RACES_URL = BASE_RACES_URL + qs;
       WEEKLY_URL = BASE_WEEKLY_URL + qs;
       OVERVIEW_URL = BASE_OVERVIEW_URL + qs;
+      HEALTH_URL = BASE_HEALTH_URL + qs;
     }
   } catch (err) {
     console.error('[dashboard] failed to load version.json, using unversioned URLs:', err);
@@ -1615,6 +1619,123 @@ async function loadOverview() {
   renderOverview(doc);
 }
 
+function healthStat(label, value) {
+  return '<div class="health-stat"><span class="health-stat-label">' + label
+    + '</span><span class="health-stat-value">' + value + '</span></div>';
+}
+
+function latestAverage(rows, key) {
+  for (let i = rows.length - 1; i >= 0; i--) {
+    const value = numOrNU(rows[i] && rows[i][key]);
+    if (value !== null) return value;
+  }
+  return null;
+}
+
+function buildHealthChart(id, rows, config) {
+  const canvas = document.getElementById(id);
+  if (!canvas) return null;
+  const labels = rows.map((row) => String(row.date));
+  const raw = rows.map((row) => numOrNU(row && row[config.rawKey]));
+  const average = config.averageKey
+    ? rows.map((row) => numOrNU(row && row[config.averageKey])) : [];
+  const datasets = [{
+    type: config.bar ? 'bar' : 'line',
+    label: 'Daily',
+    data: raw,
+    backgroundColor: palette.bar,
+    borderColor: palette.barBorder,
+    borderWidth: config.bar ? 1 : 1.5,
+    pointRadius: config.bar ? 0 : 2,
+    spanGaps: false,
+  }];
+  if (config.averageKey) {
+    datasets.push({
+      type: 'line', label: '7-day average', data: average,
+      borderColor: palette.line, backgroundColor: palette.lineBg,
+      borderWidth: 2, pointRadius: 0, tension: 0.15, spanGaps: false,
+    });
+  }
+  const center = config.averageKey ? latestAverage(rows, config.averageKey) : null;
+  const scale = {
+    beginAtZero: false,
+    grid: { color: palette.grid },
+    ticks: { color: palette.muted, maxTicksLimit: 6 },
+  };
+  if (center !== null && config.radius) {
+    scale.min = Math.max(config.floor == null ? -Infinity : config.floor, center - config.radius);
+    scale.max = center + config.radius;
+  }
+  return new Chart(canvas.getContext('2d'), {
+    type: 'bar',
+    data: { labels, datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false, animation: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { labels: { color: palette.text, usePointStyle: true } },
+        tooltip: {
+          callbacks: {
+            title: (items) => items.length ? fmtFullDate(labels[items[0].dataIndex]) : '',
+            label: (ctx) => ctx.parsed.y == null ? null
+              : ctx.dataset.label + ': ' + Number(ctx.parsed.y).toFixed(config.decimals) + config.unit,
+          },
+        },
+      },
+      scales: {
+        x: {
+          grid: { color: palette.grid },
+          ticks: {
+            color: palette.muted, maxTicksLimit: 12, maxRotation: 0,
+            callback: function (value) { return fmtAxis(this.getLabelForValue(value)); },
+          },
+        },
+        y: scale,
+      },
+    },
+  });
+}
+
+function renderHealth(doc) {
+  const summary = document.getElementById('health-summary');
+  const rows = Array.isArray(doc && doc.data) ? doc.data : [];
+  const latest = doc && doc.latest ? doc.latest : {};
+  if (!summary || rows.length === 0) {
+    if (summary) summary.innerHTML = '<div class="status error" role="status">Health data unavailable.</div>';
+    return;
+  }
+  summary.innerHTML = [
+    healthStat('Latest date', fmtDate(latest.date)),
+    healthStat('Weight', fmtWeight(latest.weight_lbs)),
+    healthStat('Sleep', latest.sleep_hours == null ? '—' : fmtNum1(latest.sleep_hours) + ' h'),
+    healthStat('Sleep score', fmtMaybe(latest.sleep_score)),
+    healthStat('Resting HR', latest.resting_heart_rate_bpm == null ? '—' : fmtMaybe(latest.resting_heart_rate_bpm) + ' bpm'),
+    healthStat('HRV', fmtHrv(latest.hrv_ms)),
+  ].join('');
+  healthCharts.forEach((chart) => chart.destroy());
+  healthCharts = [
+    buildHealthChart('health-sleep', rows, { rawKey: 'sleep_hours', averageKey: 'sleep_hours_7d', bar: true, radius: 4, floor: 0, decimals: 1, unit: ' h' }),
+    buildHealthChart('health-weight', rows, { rawKey: 'weight_lbs', averageKey: 'weight_lbs_7d', bar: true, radius: 15, floor: 0, decimals: 1, unit: ' lb' }),
+    buildHealthChart('health-rhr', rows, { rawKey: 'resting_heart_rate_bpm', averageKey: 'resting_heart_rate_7d', bar: false, decimals: 1, unit: ' bpm' }),
+    buildHealthChart('health-hrv', rows, { rawKey: 'hrv_ms', averageKey: 'hrv_7d', bar: false, decimals: 1, unit: ' ms' }),
+    buildHealthChart('health-sleep-score', rows, { rawKey: 'sleep_score', bar: false, decimals: 0, unit: '' }),
+  ].filter(Boolean);
+}
+
+async function loadHealth() {
+  try {
+    const response = await fetch(HEALTH_URL, { cache: 'no-store' });
+    if (!response.ok) throw new Error('HTTP ' + response.status);
+    const doc = await response.json();
+    if (!doc || !Array.isArray(doc.data)) throw new Error('Invalid health document');
+    renderHealth(doc);
+  } catch (err) {
+    console.error('[dashboard] failed to load health.json:', err);
+    const summary = document.getElementById('health-summary');
+    if (summary) summary.innerHTML = '<div class="status error" role="status">Health data unavailable.</div>';
+  }
+}
+
 // ---------------------------------------------------------------------------
 // Tab navigation (hash routing: #overview #training #racing #health)
 // ---------------------------------------------------------------------------
@@ -1640,6 +1761,9 @@ function showTab(tabId) {
       });
     });
   }
+  if (tabId === 'health') {
+    requestAnimationFrame(() => healthCharts.forEach((chart) => chart.resize()));
+  }
 }
 
 function initTabs() {
@@ -1656,6 +1780,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadTrainingLoad();
     loadRaces();
     loadWeekly();
+    loadHealth();
   });
 });
 
