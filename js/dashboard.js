@@ -1871,7 +1871,6 @@ function renderGear() {
     ['status', 'Status'],
     ['activity_count', 'Activities'],
     ['distance_miles', 'Distance'],
-    ['duration_hours', 'Time'],
   ];
   let html = '<div class="gear-table-scroll"><table class="gear-table"><thead><tr>';
   columns.forEach(([key, label]) => {
@@ -1883,14 +1882,12 @@ function renderGear() {
   html += '</tr></thead><tbody>';
   sortedGearRows().forEach((row) => {
     const distance = typeof row.distance_miles === 'number' ? `${row.distance_miles.toFixed(1)} mi` : '—';
-    const duration = typeof row.duration_hours === 'number' ? `${row.duration_hours.toFixed(1)} hr` : '—';
     html += '<tr>'
       + `<td class="gear-col-name">${escapeHtml(row.name || '—')}</td>`
       + `<td>${escapeHtml(row.type || '—')}</td>`
       + `<td><span class="status-badge">${escapeHtml(row.status || '—')}</span></td>`
-      + `<td class="gear-col-number">${Number(row.activity_count || 0).toLocaleString('en-US')}</td>`
+      + `<td class="gear-col-number">${typeof row.activity_count === 'number' ? row.activity_count.toLocaleString('en-US') : '—'}</td>`
       + `<td class="gear-col-number">${distance}</td>`
-      + `<td class="gear-col-number">${duration}</td>`
       + '</tr>';
   });
   html += '</tbody></table></div>';
