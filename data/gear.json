@@ -1,86 +1,77 @@
 {
-  "generated_at": "2026-09-15T23:08:04Z",
+  "generated_at": "2026-09-15T23:57:33Z",
   "gear": [
     {
       "id": "15f7b270d3f44537b70921baf82dc3b8",
       "name": "Domane AL5",
       "type": "Bike",
       "status": "active",
-      "activity_count": 209,
-      "distance_miles": 4731.4,
-      "duration_hours": 249.9
+      "activity_count": 213,
+      "distance_miles": 4782.1
     },
     {
       "id": "78b5a3daf9fc4af5a00cfae0db452e0d",
       "name": "Cervelo P-Series",
       "type": "Bike",
       "status": "active",
-      "activity_count": 22,
-      "distance_miles": 354.3,
-      "duration_hours": 18.6
+      "activity_count": 36,
+      "distance_miles": 721.7
     },
     {
       "id": "31938112e28346059ff3f4b1e475eee1",
       "name": "ON - P-Series CN-HG601A (TL)",
       "type": "Other",
       "status": "active",
-      "activity_count": 18,
-      "distance_miles": 282.6,
-      "duration_hours": 15.1
+      "activity_count": 24,
+      "distance_miles": 458.0
     },
     {
       "id": "44bc00fbc73c4b34b3011593cccd9192",
       "name": "off - AL5-CN-HG601A (TJ)",
       "type": "Other",
       "status": "active",
-      "activity_count": 103,
-      "distance_miles": 2354.0,
-      "duration_hours": 127.1
+      "activity_count": 104,
+      "distance_miles": 2369.0
     },
     {
       "id": "7c4540589cc940bd9d3bc66c3ddf97be",
-      "name": "ON - P-Series CN-HG901 (XD)",
+      "name": "OFF - P-Series CN-HG901 (XD)",
       "type": "Other",
       "status": "active",
-      "activity_count": 0,
-      "distance_miles": null,
-      "duration_hours": null
+      "activity_count": 2,
+      "distance_miles": 24.1
     },
     {
       "id": "8636c59eb05f4364880ed2894bf65233",
       "name": "on - AL5 SRAM PC-RED22",
       "type": "Other",
       "status": "active",
-      "activity_count": 31,
-      "distance_miles": 767.8,
-      "duration_hours": 41.3
+      "activity_count": 32,
+      "distance_miles": 781.5
     },
     {
       "id": "6902c7b9cfdf43ee9478938237aa216e",
       "name": "Forza 3",
       "type": "Shoes",
       "status": "active",
-      "activity_count": 13,
-      "distance_miles": 88.2,
-      "duration_hours": 12.0
+      "activity_count": 14,
+      "distance_miles": 90.3
     },
     {
       "id": "06d2376bec8a475eb7a4e4489716abb0",
       "name": "Fizik Transiro Infinito R3",
       "type": "Shoes",
       "status": "active",
-      "activity_count": 22,
-      "distance_miles": 679.4,
-      "duration_hours": 36.6
+      "activity_count": 25,
+      "distance_miles": 722.7
     },
     {
       "id": "376eb1484abc43668b44b60e2758e2d5",
       "name": "Specialized Torch 1.0",
       "type": "Shoes",
       "status": "active",
-      "activity_count": 141,
-      "distance_miles": 2779.7,
-      "duration_hours": 147.0
+      "activity_count": 142,
+      "distance_miles": 2787.1
     },
     {
       "id": "46b822ba30a44ed288de39fdb96d0bf0",
@@ -88,8 +79,7 @@
       "type": "Shoes",
       "status": "active",
       "activity_count": 40,
-      "distance_miles": 231.1,
-      "duration_hours": 32.2
+      "distance_miles": 231.1
     },
     {
       "id": "5ef6093ecebb410fb3ae3ec9731b54dd",
@@ -97,8 +87,7 @@
       "type": "Shoes",
       "status": "active",
       "activity_count": 13,
-      "distance_miles": 28.5,
-      "duration_hours": 3.3
+      "distance_miles": 28.5
     },
     {
       "id": "8264884ced3641c7b83aa2ec5ee11b2b",
@@ -106,17 +95,15 @@
       "type": "Shoes",
       "status": "active",
       "activity_count": 7,
-      "distance_miles": 82.7,
-      "duration_hours": 9.5
+      "distance_miles": 82.7
     },
     {
       "id": "8844376bbbc54f95a4bd1af3853ca263",
       "name": "Nike Steakfly White",
       "type": "Shoes",
       "status": "active",
-      "activity_count": 5,
-      "distance_miles": 31.5,
-      "duration_hours": 3.9
+      "activity_count": 13,
+      "distance_miles": 59.7
     },
     {
       "id": "e0b1e50045e0497c85aca153b7abb24e",
@@ -124,8 +111,7 @@
       "type": "Shoes",
       "status": "active",
       "activity_count": 17,
-      "distance_miles": 77.2,
-      "duration_hours": 10.4
+      "distance_miles": 77.2
     },
     {
       "id": "b8b1373689084a70bd0c0c59add47960",
@@ -133,8 +119,7 @@
       "type": "Shoes",
       "status": "active",
       "activity_count": 1,
-      "distance_miles": 26.2,
-      "duration_hours": 3.0
+      "distance_miles": 26.2
     },
     {
       "id": "4bdb992252a94e64b4f07a9f654eed13",
@@ -142,8 +127,7 @@
       "type": "Shoes",
       "status": "active",
       "activity_count": 36,
-      "distance_miles": 240.8,
-      "duration_hours": 31.9
+      "distance_miles": 240.8
     },
     {
       "id": "1b4311125fe64951917400208311e665",
@@ -151,35 +135,31 @@
       "type": "Shoes",
       "status": "active",
       "activity_count": 5,
-      "distance_miles": 29.7,
-      "duration_hours": 3.1
+      "distance_miles": 29.7
     },
     {
       "id": "2244d42b2ff44d1596df3fc0da78f270",
       "name": "Spike",
       "type": "Shoes",
       "status": "active",
-      "activity_count": 20,
-      "distance_miles": 152.1,
-      "duration_hours": 20.9
+      "activity_count": 21,
+      "distance_miles": 155.3
     },
     {
       "id": "d287e0c445534cb99a2092deb0ba7687",
       "name": "Triathlon",
       "type": "Shoes",
       "status": "active",
-      "activity_count": 1,
-      "distance_miles": 26.4,
-      "duration_hours": 3.2
+      "activity_count": 5,
+      "distance_miles": 78.9
     },
     {
       "id": "1bdfefe78b1a47ee806f1f18c65e8618",
       "name": "P-Series-CN-HG901A (HS)",
       "type": "Other",
       "status": "retired",
-      "activity_count": 82,
-      "distance_miles": 1688.9,
-      "duration_hours": 86.8
+      "activity_count": 90,
+      "distance_miles": 1879.0
     },
     {
       "id": "3a99e2dc95784af79becb8bd9bf02690",
@@ -187,8 +167,7 @@
       "type": "Other",
       "status": "retired",
       "activity_count": 77,
-      "distance_miles": 440.2,
-      "duration_hours": 60.9
+      "distance_miles": 440.2
     },
     {
       "id": "461b76f6b9934d7ca740900f6d860ebe",
@@ -196,8 +175,7 @@
       "type": "Other",
       "status": "retired",
       "activity_count": 7,
-      "distance_miles": 61.1,
-      "duration_hours": 8.3
+      "distance_miles": 61.1
     },
     {
       "id": "78e8fc134f9e4d8f9c4c224d703f0fd4",
@@ -205,8 +183,7 @@
       "type": "Other",
       "status": "retired",
       "activity_count": 15,
-      "distance_miles": 47.5,
-      "duration_hours": 6.4
+      "distance_miles": 47.5
     },
     {
       "id": "0783f74d2783461e874c13ab3dc0b79f",
@@ -214,8 +191,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 67,
-      "distance_miles": 482.9,
-      "duration_hours": 62.9
+      "distance_miles": 482.9
     },
     {
       "id": "25ab1c4c0a7a4764a2248bfbd139b30c",
@@ -223,8 +199,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 58,
-      "distance_miles": 203.0,
-      "duration_hours": 34.2
+      "distance_miles": 203.0
     },
     {
       "id": "29e8fcbbfe824db9b56ba39ffe5ea8a4",
@@ -232,8 +207,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 27,
-      "distance_miles": 148.7,
-      "duration_hours": 23.6
+      "distance_miles": 148.7
     },
     {
       "id": "6050326de6cb4571ae2d041c02904737",
@@ -241,8 +215,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 39,
-      "distance_miles": 303.0,
-      "duration_hours": 41.4
+      "distance_miles": 303.0
     },
     {
       "id": "7fc6f359a75741e19e2604ff0b77845f",
@@ -250,8 +223,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 53,
-      "distance_miles": 350.7,
-      "duration_hours": 51.8
+      "distance_miles": 350.7
     },
     {
       "id": "8d7db77226c44e22ab8eb5b8c6820cd6",
@@ -259,8 +231,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 47,
-      "distance_miles": 334.6,
-      "duration_hours": 45.3
+      "distance_miles": 334.6
     },
     {
       "id": "8fe38f43127d4047b19a6741fda3b822",
@@ -268,8 +239,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 62,
-      "distance_miles": 445.6,
-      "duration_hours": 60.0
+      "distance_miles": 445.6
     },
     {
       "id": "a87c6e8b6f3f49049b45fd21190db14b",
@@ -277,8 +247,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 48,
-      "distance_miles": 288.8,
-      "duration_hours": 39.8
+      "distance_miles": 288.8
     },
     {
       "id": "e08c6be83cd0411fb365bc35d42d7d8a",
@@ -286,8 +255,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 66,
-      "distance_miles": 409.8,
-      "duration_hours": 60.6
+      "distance_miles": 409.8
     },
     {
       "id": "e154b0b35d8f4a19bfeb19d2a7dfdce1",
@@ -295,8 +263,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 50,
-      "distance_miles": 416.1,
-      "duration_hours": 53.6
+      "distance_miles": 416.1
     },
     {
       "id": "e5ed2c0433e64d3ab3e82afbb472be47",
@@ -304,8 +271,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 85,
-      "distance_miles": 412.5,
-      "duration_hours": 55.1
+      "distance_miles": 412.5
     },
     {
       "id": "f3f6411be3624d5881039e8c04c0cc9b",
@@ -313,8 +279,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 36,
-      "distance_miles": 273.4,
-      "duration_hours": 37.2
+      "distance_miles": 273.4
     },
     {
       "id": "fbd059ff950349969c3bc1b0bc732612",
@@ -322,8 +287,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 34,
-      "distance_miles": 214.5,
-      "duration_hours": 30.6
+      "distance_miles": 214.5
     },
     {
       "id": "0681662927304600b17e54f6e8cc5acc",
@@ -331,8 +295,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 45,
-      "distance_miles": 319.2,
-      "duration_hours": 45.2
+      "distance_miles": 319.2
     },
     {
       "id": "06e7ec9b64574f8bb96c574db4762cf5",
@@ -340,8 +303,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 28,
-      "distance_miles": 199.9,
-      "duration_hours": 26.9
+      "distance_miles": 199.9
     },
     {
       "id": "082e4e01f99e4ec3a0f2fa55f7693efc",
@@ -349,8 +311,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 47,
-      "distance_miles": 294.1,
-      "duration_hours": 40.1
+      "distance_miles": 294.1
     },
     {
       "id": "30b8c1cfcd124b529fa4e3f0d5ace16e",
@@ -358,8 +319,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 61,
-      "distance_miles": 447.8,
-      "duration_hours": 58.7
+      "distance_miles": 447.8
     },
     {
       "id": "349401ca530749af8e7c71f5ab9e0f48",
@@ -367,17 +327,15 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 64,
-      "distance_miles": 397.7,
-      "duration_hours": 51.4
+      "distance_miles": 397.7
     },
     {
       "id": "3816712052964ce9aa8d05c053ea40d9",
       "name": "Saucony Type A",
       "type": "Shoes",
       "status": "retired",
-      "activity_count": 19,
-      "distance_miles": 60.2,
-      "duration_hours": 6.8
+      "activity_count": 20,
+      "distance_miles": 62.4
     },
     {
       "id": "4736bb0529ab498dbec6810d1ef20ae4",
@@ -385,8 +343,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 58,
-      "distance_miles": 356.3,
-      "duration_hours": 49.0
+      "distance_miles": 356.3
     },
     {
       "id": "47395418eee8468d9fde75c9d5fe392b",
@@ -394,8 +351,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 81,
-      "distance_miles": 464.7,
-      "duration_hours": 63.8
+      "distance_miles": 464.7
     },
     {
       "id": "4f581f1da84e4260b8dbf792521d7df6",
@@ -403,8 +359,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 79,
-      "distance_miles": 446.5,
-      "duration_hours": 60.5
+      "distance_miles": 446.5
     },
     {
       "id": "5579b68ff30241aa9e1fb39918696a58",
@@ -412,8 +367,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 69,
-      "distance_miles": 389.8,
-      "duration_hours": 53.4
+      "distance_miles": 389.8
     },
     {
       "id": "6ce8d08f4ed14b88bc4861363f9d45a3",
@@ -421,8 +375,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 60,
-      "distance_miles": 318.9,
-      "duration_hours": 43.3
+      "distance_miles": 318.9
     },
     {
       "id": "709e37097b9e43709bf4f48d0f301f25",
@@ -430,8 +383,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 58,
-      "distance_miles": 299.7,
-      "duration_hours": 39.5
+      "distance_miles": 299.7
     },
     {
       "id": "7401082e12b14bdd90730e6f4bbd7d3e",
@@ -439,8 +391,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 49,
-      "distance_miles": 424.9,
-      "duration_hours": 54.8
+      "distance_miles": 424.9
     },
     {
       "id": "76bea6d8e2d34f049c284cf365c468a3",
@@ -448,8 +399,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 66,
-      "distance_miles": 502.0,
-      "duration_hours": 66.0
+      "distance_miles": 502.0
     },
     {
       "id": "89227946f1fa4c4788cfe90c66281c3a",
@@ -457,8 +407,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 38,
-      "distance_miles": 363.3,
-      "duration_hours": 47.2
+      "distance_miles": 363.3
     },
     {
       "id": "8b577674bcdc4307ba16f4fdc5ec512e",
@@ -466,8 +415,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 58,
-      "distance_miles": 416.1,
-      "duration_hours": 55.8
+      "distance_miles": 408.9
     },
     {
       "id": "a73064846fcf4d58860d3eddce1a0dcf",
@@ -475,8 +423,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 57,
-      "distance_miles": 365.7,
-      "duration_hours": 45.3
+      "distance_miles": 365.7
     },
     {
       "id": "adc2401264324b40a4767c87aa54cb25",
@@ -484,8 +431,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 60,
-      "distance_miles": 496.6,
-      "duration_hours": 63.2
+      "distance_miles": 496.6
     },
     {
       "id": "adff9b6150e94647a2ca190f90ca3e23",
@@ -493,8 +439,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 16,
-      "distance_miles": 114.6,
-      "duration_hours": 13.8
+      "distance_miles": 114.6
     },
     {
       "id": "b05e4bf0dd8b4afcad00378a34e5d35e",
@@ -502,8 +447,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 60,
-      "distance_miles": 576.1,
-      "duration_hours": 70.9
+      "distance_miles": 576.1
     },
     {
       "id": "bd6268c11851467b9f6fc0dabe0bf4c9",
@@ -511,8 +455,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 45,
-      "distance_miles": 349.5,
-      "duration_hours": 43.9
+      "distance_miles": 349.5
     },
     {
       "id": "bd94968ba567410e8f559c3ee57ddd64",
@@ -520,8 +463,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 49,
-      "distance_miles": 460.5,
-      "duration_hours": 60.0
+      "distance_miles": 460.5
     },
     {
       "id": "bf79b65dad294286885e1f214f7a9cb6",
@@ -529,8 +471,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 43,
-      "distance_miles": 328.3,
-      "duration_hours": 45.1
+      "distance_miles": 328.3
     },
     {
       "id": "caab1f0445de4c838c3f99ae66eb7841",
@@ -538,8 +479,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 52,
-      "distance_miles": 331.5,
-      "duration_hours": 45.0
+      "distance_miles": 331.5
     },
     {
       "id": "d81c8ae21fd54d9d83082199482eb7b1",
@@ -547,8 +487,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 53,
-      "distance_miles": 403.9,
-      "duration_hours": 52.6
+      "distance_miles": 403.9
     },
     {
       "id": "ded3486233fa4881b66aa9bb20268125",
@@ -556,8 +495,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 23,
-      "distance_miles": 156.7,
-      "duration_hours": 21.6
+      "distance_miles": 156.7
     },
     {
       "id": "e43edafb264e4041b79bf5905877e57b",
@@ -565,8 +503,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 37,
-      "distance_miles": 255.9,
-      "duration_hours": 33.0
+      "distance_miles": 255.9
     },
     {
       "id": "ee0bd4ccc42648b3b6754f3c9020a70d",
@@ -574,8 +511,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 39,
-      "distance_miles": 355.8,
-      "duration_hours": 47.7
+      "distance_miles": 355.8
     },
     {
       "id": "fbcaf668422c410fa60ed8e154d8296b",
@@ -583,8 +519,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 39,
-      "distance_miles": 396.9,
-      "duration_hours": 50.2
+      "distance_miles": 396.9
     },
     {
       "id": "34309e4308984de78b7058dee5f5d00b",
@@ -592,8 +527,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 62,
-      "distance_miles": 394.5,
-      "duration_hours": 59.9
+      "distance_miles": 394.5
     },
     {
       "id": "b122a27f1cc146d89957f9643426d484",
@@ -601,8 +535,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 39,
-      "distance_miles": 262.3,
-      "duration_hours": 35.5
+      "distance_miles": 262.3
     },
     {
       "id": "6de9a149f6684e76869c4b07d4fbd1b1",
@@ -610,8 +543,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 54,
-      "distance_miles": 435.6,
-      "duration_hours": 57.8
+      "distance_miles": 435.6
     },
     {
       "id": "d21dae6ac94142ecb15808925cfaa62d",
@@ -619,8 +551,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 67,
-      "distance_miles": 492.1,
-      "duration_hours": 62.3
+      "distance_miles": 492.1
     },
     {
       "id": "2f0c312e2c4140e3a79dcdb16a15c3cc",
@@ -628,8 +559,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 52,
-      "distance_miles": 426.2,
-      "duration_hours": 54.8
+      "distance_miles": 426.2
     },
     {
       "id": "719346b68f5840d3b1f6692418768ccc",
@@ -637,8 +567,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 51,
-      "distance_miles": 489.0,
-      "duration_hours": 60.7
+      "distance_miles": 489.0
     },
     {
       "id": "044543caf80e4bf9955a8581d1bab51e",
@@ -646,8 +575,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 52,
-      "distance_miles": 351.2,
-      "duration_hours": 47.3
+      "distance_miles": 351.2
     },
     {
       "id": "8ac7ac6c1f2f4811b953e58dd6b829a7",
@@ -655,8 +583,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 52,
-      "distance_miles": 390.9,
-      "duration_hours": 53.2
+      "distance_miles": 390.9
     },
     {
       "id": "e12d2411e73c4beab2720cd9871cad09",
@@ -664,8 +591,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 67,
-      "distance_miles": 438.9,
-      "duration_hours": 55.0
+      "distance_miles": 438.9
     },
     {
       "id": "60922815e868413aa18271bdd9ba313d",
@@ -673,8 +599,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 36,
-      "distance_miles": 263.9,
-      "duration_hours": 37.3
+      "distance_miles": 263.9
     },
     {
       "id": "c800da8bc3fc4eca90ab632d95b85258",
@@ -682,8 +607,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 48,
-      "distance_miles": 219.4,
-      "duration_hours": 31.1
+      "distance_miles": 219.4
     },
     {
       "id": "969226dd948d4e8292ce5900c4a31186",
@@ -691,8 +615,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 78,
-      "distance_miles": 377.3,
-      "duration_hours": 62.0
+      "distance_miles": 377.3
     },
     {
       "id": "ea7e28201ba94754aaccc65d48e71944",
@@ -700,8 +623,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 57,
-      "distance_miles": 401.3,
-      "duration_hours": 57.0
+      "distance_miles": 401.3
     },
     {
       "id": "d05d1f41d14f4f69be05ab96d80ea74e",
@@ -709,8 +631,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 35,
-      "distance_miles": 318.0,
-      "duration_hours": 43.1
+      "distance_miles": 318.0
     },
     {
       "id": "4100e72495f040d3841d4a13a4ef9160",
@@ -718,8 +639,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 61,
-      "distance_miles": 396.0,
-      "duration_hours": 54.5
+      "distance_miles": 396.0
     },
     {
       "id": "eca964f8826140789a7fbca87a442cb6",
@@ -727,8 +647,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 69,
-      "distance_miles": 401.5,
-      "duration_hours": 52.5
+      "distance_miles": 401.5
     },
     {
       "id": "e5754c14427348c28adf9e5ec9a85a7b",
@@ -736,8 +655,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 44,
-      "distance_miles": 347.4,
-      "duration_hours": 43.5
+      "distance_miles": 347.4
     },
     {
       "id": "14cc0c9ec8c74bde934347cb5e4b5489",
@@ -745,8 +663,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 62,
-      "distance_miles": 431.1,
-      "duration_hours": 59.2
+      "distance_miles": 431.1
     },
     {
       "id": "039123a1d4934148b8b5275cfaa8fb60",
@@ -754,26 +671,23 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 50,
-      "distance_miles": 344.4,
-      "duration_hours": 47.0
+      "distance_miles": 344.4
     },
     {
       "id": "29c0fa2b59eb4613903ebeb58d949058",
       "name": "Tempo Tokyo Olympics",
       "type": "Shoes",
       "status": "retired",
-      "activity_count": 78,
-      "distance_miles": 459.4,
-      "duration_hours": 60.5
+      "activity_count": 79,
+      "distance_miles": 462.7
     },
     {
       "id": "b3d91697a11d491fbcec0a10b003d07f",
       "name": "Triathlon",
       "type": "Shoes",
       "status": "retired",
-      "activity_count": 38,
-      "distance_miles": 261.8,
-      "duration_hours": 33.3
+      "activity_count": 42,
+      "distance_miles": 271.9
     },
     {
       "id": "d3655608d798499c83160911ab15dd50",
@@ -781,8 +695,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 56,
-      "distance_miles": 331.3,
-      "duration_hours": 45.8
+      "distance_miles": 331.3
     },
     {
       "id": "98554b44a1df4e049f14ee55e7792eb6",
@@ -790,8 +703,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 56,
-      "distance_miles": 416.2,
-      "duration_hours": 55.4
+      "distance_miles": 416.2
     },
     {
       "id": "4996f85d64674c8380962950406cfeee",
@@ -799,8 +711,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 55,
-      "distance_miles": 449.9,
-      "duration_hours": 56.9
+      "distance_miles": 449.9
     },
     {
       "id": "e3e5d5dc92eb4dc6893ca7d5ddbd1d94",
@@ -808,8 +719,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 47,
-      "distance_miles": 404.4,
-      "duration_hours": 52.7
+      "distance_miles": 404.4
     },
     {
       "id": "ac3ab348711646c6b82330b1158213c6",
@@ -817,8 +727,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 46,
-      "distance_miles": 273.8,
-      "duration_hours": 38.0
+      "distance_miles": 273.8
     }
   ]
 }
