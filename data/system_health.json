@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-09-16T23:01:29Z",
+  "overall_status": "error",
+  "uptime_seconds": 80822,
+  "cpu_temperature_c": 64.5,
+  "load_1m": 1.11,
+  "load_5m": 0.82,
+  "load_15m": 0.44,
+  "memory_total_bytes": 949071872,
+  "memory_available_bytes": 529170432,
+  "memory_percent_used": 44.2,
+  "storage_free_bytes": 117763760128,
+  "storage_total_bytes": 125425360896,
+  "storage_percent_used": 1.0,
+  "last_refresh_result": "failed",
+  "last_refresh_at": "2026-09-16T22:47:12.383780+00:00",
+  "last_full_result": null,
+  "last_full_at": null,
+  "last_backup_result": null,
+  "last_backup_at": null
+}
