@@ -5,6 +5,7 @@ const BASE_WEEKLY_URL = 'data/weekly_training.json';
 const BASE_OVERVIEW_URL = 'data/overview.json';
 const BASE_HEALTH_URL = 'data/health.json';
 const BASE_GEAR_URL = 'data/gear.json';
+const BASE_SYSTEM_HEALTH_URL = 'data/system_health.json';
 let dataVersion = '';
 let DATA_URL = BASE_DATA_URL;
 let RACES_URL = BASE_RACES_URL;
@@ -12,6 +13,9 @@ let WEEKLY_URL = BASE_WEEKLY_URL;
 let OVERVIEW_URL = BASE_OVERVIEW_URL;
 let HEALTH_URL = BASE_HEALTH_URL;
 let GEAR_URL = BASE_GEAR_URL;
+let SYSTEM_HEALTH_URL = BASE_SYSTEM_HEALTH_URL;
+
+const SYSTEM_HEALTH_STALE_SECONDS = 43200;
 const CHART_ID = 'training-load';
 const STATUS_ID = 'status';
 const UPDATED_ID = 'updated';
@@ -1101,6 +1105,7 @@ async function loadVersion() {
       OVERVIEW_URL = BASE_OVERVIEW_URL + qs;
       HEALTH_URL = BASE_HEALTH_URL + qs;
       GEAR_URL = BASE_GEAR_URL + qs;
+      SYSTEM_HEALTH_URL = BASE_SYSTEM_HEALTH_URL + qs;
     }
   } catch (err) {
     console.error('[dashboard] failed to load version.json, using unversioned URLs:', err);
@@ -1961,6 +1966,129 @@ async function loadGear() {
 }
 
 // ---------------------------------------------------------------------------
+// Pi / System Health card (system_health.json)
+// ---------------------------------------------------------------------------
+
+function _isStale(checkedAt) {
+  if (!checkedAt || typeof checkedAt !== 'string') return true;
+  const ms = Date.parse(checkedAt);
+  if (!Number.isFinite(ms)) return true;
+  return (Date.now() - ms) / 1000 > SYSTEM_HEALTH_STALE_SECONDS;
+}
+
+function _fmtStatus(status, checkedAt) {
+  if (_isStale(checkedAt)) return 'not reporting';
+  if (status == null) return '—';
+  const s = String(status);
+  const map = { healthy: 'Healthy', warning: 'Warning', error: 'Error' };
+  return map[s] || s;
+}
+
+function _statusClass(status, checkedAt) {
+  if (_isStale(checkedAt)) return 'pi-status-stale';
+  const map = { healthy: 'pi-status-healthy', warning: 'pi-status-warning', error: 'pi-status-error' };
+  return map[String(status)] || '';
+}
+
+function _fmtUptime(seconds) {
+  if (seconds == null || !Number.isFinite(Number(seconds))) return '—';
+  const s = Number(seconds);
+  const d = Math.floor(s / 86400);
+  const h = Math.floor((s % 86400) / 3600);
+  const m = Math.floor((s % 3600) / 60);
+  if (d > 0) return d + 'd ' + h + 'h ' + m + 'm';
+  if (h > 0) return h + 'h ' + m + 'm';
+  return m + 'm';
+}
+
+function _fmtTemp(c) {
+  if (c == null || !Number.isFinite(Number(c))) return '—';
+  return Number(c).toFixed(1) + '\u202f°C';
+}
+
+function _fmtBytes(bytes) {
+  if (bytes == null || !Number.isFinite(Number(bytes))) return '—';
+  const b = Number(bytes);
+  const units = ['B', 'KB', 'MB', 'GB', 'TB'];
+  let i = 0;
+  let v = b;
+  while (v >= 1024 && i < units.length - 1) { v /= 1024; i++; }
+  return v.toFixed(i === 0 ? 0 : 1) + '\u202f' + units[i];
+}
+
+function _fmtCheckedAt(checkedAt) {
+  if (!checkedAt || typeof checkedAt !== 'string') return '—';
+  const ms = Date.parse(checkedAt);
+  if (!Number.isFinite(ms)) return '—';
+  const d = new Date(ms);
+  const y = d.getUTCFullYear();
+  const mo = String(d.getUTCMonth() + 1).padStart(2, '0');
+  const dy = String(d.getUTCDate()).padStart(2, '0');
+  const h = String(d.getUTCHours()).padStart(2, '0');
+  const mi = String(d.getUTCMinutes()).padStart(2, '0');
+  return y + '-' + mo + '-' + dy + ' ' + h + ':' + mi + ' UTC';
+}
+
+function _fmtRunResult(result, at) {
+  if (result == null && at == null) return '—';
+  const label = result != null ? String(result) : '?';
+  const time = at ? fmtMediumDate(String(at).slice(0, 10)) : '';
+  return time ? label + ' · ' + time : label;
+}
+
+function renderPiHealthCard(doc) {
+  const container = document.getElementById('overview-cards');
+  if (!container) return;
+
+  const old = document.getElementById('pi-health-card');
+  if (old) old.remove();
+
+  const checkedAt = doc && doc.checked_at;
+  const status = doc && doc.overall_status;
+  const stale = _isStale(checkedAt);
+
+  const statusLabel = _fmtStatus(status, checkedAt);
+  const statusCls = _statusClass(status, checkedAt);
+
+  const rows = [
+    ['Status', '<span class="pi-status-badge ' + statusCls + '">' + statusLabel + '</span>'],
+    ['Last refresh', _fmtRunResult(doc && doc.last_refresh_result, doc && doc.last_refresh_at)],
+    ['Last full sync', _fmtRunResult(doc && doc.last_full_result, doc && doc.last_full_at)],
+    ['Last backup', _fmtRunResult(doc && doc.last_backup_result, doc && doc.last_backup_at)],
+    ['Pi uptime', _fmtUptime(doc && doc.uptime_seconds)],
+    ['CPU temp', _fmtTemp(doc && doc.cpu_temperature_c)],
+    ['SSD free', _fmtBytes(doc && doc.storage_free_bytes)],
+    ['Last checked', stale
+      ? '<span class="pi-stale-note">' + _fmtCheckedAt(checkedAt) + '</span>'
+      : _fmtCheckedAt(checkedAt)],
+  ];
+
+  let html = '<div class="overview-card" id="pi-health-card">'
+    + '<div class="overview-card-title">Pi / System Health</div>';
+  rows.forEach(([label, value]) => {
+    html += '<div class="overview-stat">'
+      + '<span class="overview-stat-label">' + label + '</span>'
+      + '<span class="overview-stat-value">' + value + '</span>'
+      + '</div>';
+  });
+  html += '</div>';
+  container.insertAdjacentHTML('beforeend', html);
+}
+
+async function loadPiHealth() {
+  try {
+    const response = await fetch(SYSTEM_HEALTH_URL, { cache: 'no-store' });
+    if (!response.ok) throw new Error('HTTP ' + response.status);
+    const doc = await response.json();
+    if (!doc || typeof doc !== 'object') throw new Error('Invalid system_health document');
+    renderPiHealthCard(doc);
+  } catch (err) {
+    console.error('[dashboard] failed to load system_health.json:', err);
+    renderPiHealthCard(null);
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Tab navigation (hash routing)
 // ---------------------------------------------------------------------------
 
@@ -2001,6 +2129,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTabs();
   loadVersion().then(() => {
     loadOverview();
+    loadPiHealth();
     loadTrainingLoad();
     loadRaces();
     loadWeekly();
