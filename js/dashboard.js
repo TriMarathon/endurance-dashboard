@@ -1572,6 +1572,16 @@ function fmtHrv(value) {
   return value.toFixed(1) + ' ms';
 }
 
+function fmtInt(value) {
+  if (typeof value !== 'number' || !Number.isFinite(value)) return '—';
+  return String(Math.round(value));
+}
+
+function fmtIntUnit(value, unit) {
+  const n = fmtInt(value);
+  return n === '—' ? '—' : n + '\u202f' + unit;
+}
+
 function statHtml(label, value) {
   return '<div class="overview-stat">'
     + '<span class="overview-stat-label">' + label + '</span>'
@@ -1607,6 +1617,7 @@ function renderOverview(doc) {
   const cl = doc.current_load || {};
   const rt = doc.recent_training || {};
   const hl = doc.health || {};
+  const th = doc.thresholds || {};
   const nr = doc.next_race;
 
   const cards = [
@@ -1634,6 +1645,13 @@ function renderOverview(doc) {
       ['Sleep Score', fmtMaybe(hl.sleep_score)],
       ['Resting HR', fmtMaybe(hl.resting_heart_rate)],
       ['HRV', fmtHrv(hl.hrv)],
+    ]),
+    overviewCard('Current Thresholds', [
+      ['Bike FTP', fmtIntUnit(th.ftp_watts, 'W')],
+      ['Run rFTP', fmtIntUnit(th.rftp_watts, 'W')],
+      ['Swim CSS', fmtMaybe(th.css_pace)],
+      ['Swim Threshold', fmtMaybe(th.swim_threshold_pace)],
+      ['Threshold HR', fmtIntUnit(th.threshold_heart_rate_bpm, 'bpm')],
     ]),
   ];
 
