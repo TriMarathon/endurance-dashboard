@@ -37,6 +37,7 @@ let weeklyRange = null;
 let healthRange = null;
 let gearData = [];
 let gearSort = { key: 'default', direction: 'asc' };
+let gearFilter = 'active';
 
 const TAB_PANELS = ['overview', 'training', 'racing', 'health', 'gear'];
 
@@ -1857,9 +1858,13 @@ function gearStatusRank(value) {
 
 function sortedGearRows() {
   const rows = gearData.slice();
+  const filtered = rows.filter((r) => {
+    if (gearFilter === 'all') return true;
+    return String(r.status || '').toLowerCase() === gearFilter;
+  });
   const { key, direction } = gearSort;
   const factor = direction === 'desc' ? -1 : 1;
-  return rows.sort((a, b) => {
+  return filtered.sort((a, b) => {
     if (key === 'default') {
       return gearStatusRank(a.status) - gearStatusRank(b.status)
         || String(a.type || '').localeCompare(String(b.type || ''))
@@ -1879,8 +1884,27 @@ function sortedGearRows() {
 function renderGear() {
   const container = document.getElementById('gear-container');
   if (!container) return;
+  // compact filter control above the table
+  const filterHtml = `
+    <div style="margin-bottom:8px">
+      <label style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;margin-right:8px">Show</label>
+      <select id="gear-filter" aria-label="Filter gear" style="padding:4px 8px;border-radius:6px;border:1px solid var(--panel-border);background:transparent;color:var(--text);font-size:13px">
+        <option value="active">Active</option>
+        <option value="retired">Retired</option>
+        <option value="all">All</option>
+      </select>
+    </div>`;
+  container.innerHTML = filterHtml;
+  const filterEl = container.querySelector('#gear-filter');
+  if (filterEl) {
+    filterEl.value = gearFilter;
+    filterEl.addEventListener('change', (e) => {
+      gearFilter = e.target.value;
+      renderGear();
+    });
+  }
   if (gearData.length === 0) {
-    container.innerHTML = '<p class="gear-empty">No gear found.</p>';
+    container.insertAdjacentHTML('beforeend', '<p class="gear-empty">No gear found.</p>');
     return;
   }
   const columns = [
@@ -1909,7 +1933,7 @@ function renderGear() {
       + '</tr>';
   });
   html += '</tbody></table></div>';
-  container.innerHTML = html;
+  container.insertAdjacentHTML('beforeend', html);
   container.querySelectorAll('[data-gear-sort]').forEach((button) => {
     button.addEventListener('click', () => {
       const key = button.getAttribute('data-gear-sort');
