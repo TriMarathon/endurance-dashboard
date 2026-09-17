@@ -1631,6 +1631,7 @@ function renderOverview(doc) {
       ['As of', fmtDate(cl.date)],
       ['CTL (chronic)', fmtTss(cl.ctl)],
       ['ATL (acute)', fmtTss(cl.atl)],
+      ['TSS', fmtTss(cl.tss)],
       ['TSB', fmtTss(cl.tsb)],
       ['Load Ratio', fmtTss(cl.load_ratio)],
       ['Ramp Rate', fmtTss(cl.ramp_rate)],
