@@ -1,10 +1,11 @@
 {
-  "generated_at": "2026-09-17T22:34:53Z",
+  "generated_at": "2026-09-17T23:18:21Z",
   "reference_date": "2026-09-17",
   "current_load": {
     "date": "2026-09-17",
     "ctl": 89.2,
     "atl": 74.4,
+    "tss": 99.6,
     "tsb": 18.4,
     "load_ratio": 0.8,
     "ramp_rate": -2.9
