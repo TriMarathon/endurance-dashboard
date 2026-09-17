@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-17T00:33:27Z",
+  "generated_at": "2026-09-17T09:22:10Z",
   "start_date": "2015-01-01",
-  "end_date": "2026-09-16",
-  "days": 4277,
+  "end_date": "2026-09-17",
+  "days": 4278,
   "latest": {
-    "date": "2026-09-16",
+    "date": "2026-09-17",
     "sleep_hours": 7.6,
     "sleep_score": 77,
-    "resting_heart_rate_bpm": 44,
+    "resting_heart_rate_bpm": 46,
     "hrv_ms": 76.0,
     "weight_lbs": 154.4
   },
@@ -51335,6 +51335,18 @@
       "resting_heart_rate_7d": 44.43,
       "hrv_7d": 69.57,
       "weight_lbs_7d": 154.86
+    },
+    {
+      "date": "2026-09-17",
+      "sleep_hours": null,
+      "sleep_score": null,
+      "resting_heart_rate_bpm": 46,
+      "hrv_ms": null,
+      "weight_lbs": null,
+      "sleep_hours_7d": 7.27,
+      "resting_heart_rate_7d": 44.71,
+      "hrv_7d": 70.0,
+      "weight_lbs_7d": 155.22
     }
   ]
 }
