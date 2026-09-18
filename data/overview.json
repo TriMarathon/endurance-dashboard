@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-09-18T09:22:29Z",
+  "generated_at": "2026-09-18T12:06:49Z",
   "reference_date": "2026-09-18",
   "current_load": {
     "date": "2026-09-18",
-    "ctl": 87.1,
-    "atl": 64.5,
-    "tss": 0.0,
+    "ctl": 88.3,
+    "atl": 71.2,
+    "tss": 49.9,
     "tsb": 14.8,
-    "load_ratio": 0.7,
-    "ramp_rate": -2.8
+    "load_ratio": 0.8,
+    "ramp_rate": -1.6
   },
   "recent_training": {
     "start_date": "2026-09-12",
     "end_date": "2026-09-18",
-    "total_tss": 521.2,
+    "total_tss": 571.1,
     "run_distance_miles": 19.7,
     "run_time_seconds": 7952,
     "bike_distance_miles": 56.7,
     "bike_time_seconds": 9529,
-    "swim_distance_yards": 10525,
-    "swim_time_seconds": 11731,
+    "swim_distance_yards": 13575,
+    "swim_time_seconds": 15124,
     "other_time_seconds": 81,
-    "total_time_seconds": 29294
+    "total_time_seconds": 32687
   },
   "health": {
     "date": "2026-09-18",
     "weight_lbs": null,
-    "sleep_seconds": null,
-    "sleep_score": null,
-    "resting_heart_rate": 49,
-    "hrv": null
+    "sleep_seconds": 21600,
+    "sleep_score": 61,
+    "resting_heart_rate": 48,
+    "hrv": 48.0
   },
   "next_race": {
     "date": "2026-09-20",
