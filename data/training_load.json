@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T12:06:48Z",
+  "generated_at": "2026-09-18T17:25:05Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-18",
   "days": 4279,
@@ -46998,13 +46998,13 @@
     },
     {
       "date": "2026-09-12",
-      "tss": 343.1,
+      "tss": 365.9,
       "run_tss": 128.3,
       "bike_tss": 171.6,
-      "swim_tss": 36.0,
+      "swim_tss": 58.8,
       "other_tss": 7.3,
-      "ctl": 95.9,
-      "atl": 108.6,
+      "ctl": 96.4,
+      "atl": 111.7,
       "tsb": 17.3
     },
     {
@@ -47014,64 +47014,64 @@
       "bike_tss": 0.0,
       "swim_tss": 0.0,
       "other_tss": 0.0,
-      "ctl": 93.6,
-      "atl": 94.2,
-      "tsb": -12.8
+      "ctl": 94.1,
+      "atl": 96.8,
+      "tsb": -15.3
     },
     {
       "date": "2026-09-14",
-      "tss": 28.3,
+      "tss": 46.3,
       "run_tss": 0.0,
       "bike_tss": 0.0,
-      "swim_tss": 28.3,
+      "swim_tss": 46.3,
       "other_tss": 0.0,
-      "ctl": 92.1,
-      "atl": 85.4,
-      "tsb": -0.6
+      "ctl": 93.0,
+      "atl": 90.1,
+      "tsb": -2.7
     },
     {
       "date": "2026-09-15",
-      "tss": 17.1,
+      "tss": 28.0,
       "run_tss": 0.0,
       "bike_tss": 0.0,
-      "swim_tss": 17.1,
+      "swim_tss": 28.0,
       "other_tss": 0.0,
-      "ctl": 90.3,
-      "atl": 76.3,
-      "tsb": 6.7
+      "ctl": 91.5,
+      "atl": 81.8,
+      "tsb": 2.9
     },
     {
       "date": "2026-09-16",
-      "tss": 33.0,
+      "tss": 53.9,
       "run_tss": 0.0,
       "bike_tss": 0.0,
-      "swim_tss": 33.0,
+      "swim_tss": 53.9,
       "other_tss": 0.0,
-      "ctl": 89.0,
-      "atl": 70.5,
-      "tsb": 14.0
+      "ctl": 90.6,
+      "atl": 78.1,
+      "tsb": 9.7
     },
     {
       "date": "2026-09-17",
-      "tss": 99.6,
+      "tss": 126.9,
       "run_tss": 56.5,
       "bike_tss": 0.0,
-      "swim_tss": 43.1,
+      "swim_tss": 70.4,
       "other_tss": 0.0,
-      "ctl": 89.2,
-      "atl": 74.4,
-      "tsb": 18.4
+      "ctl": 91.4,
+      "atl": 84.6,
+      "tsb": 12.5
     },
     {
       "date": "2026-09-18",
-      "tss": 49.9,
+      "tss": 81.5,
       "run_tss": 0.0,
       "bike_tss": 0.0,
-      "swim_tss": 49.9,
+      "swim_tss": 81.5,
       "other_tss": 0.0,
-      "ctl": 88.3,
-      "atl": 71.2,
-      "tsb": 14.8
+      "ctl": 91.2,
+      "atl": 84.2,
+      "tsb": 6.9
     }
   ]
 }

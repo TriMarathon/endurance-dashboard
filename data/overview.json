@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-09-18T12:06:49Z",
+  "generated_at": "2026-09-18T17:25:06Z",
   "reference_date": "2026-09-18",
   "current_load": {
     "date": "2026-09-18",
-    "ctl": 88.3,
-    "atl": 71.2,
-    "tss": 49.9,
-    "tsb": 14.8,
-    "load_ratio": 0.8,
-    "ramp_rate": -1.6
+    "ctl": 91.2,
+    "atl": 84.2,
+    "tss": 81.5,
+    "tsb": 6.9,
+    "load_ratio": 0.9,
+    "ramp_rate": 1.3
   },
   "recent_training": {
     "start_date": "2026-09-12",
     "end_date": "2026-09-18",
-    "total_tss": 571.1,
+    "total_tss": 702.5,
     "run_distance_miles": 19.7,
     "run_time_seconds": 7952,
     "bike_distance_miles": 56.7,
     "bike_time_seconds": 9529,
-    "swim_distance_yards": 13575,
+    "swim_distance_yards": 13625,
     "swim_time_seconds": 15124,
     "other_time_seconds": 81,
     "total_time_seconds": 32687
   },
   "health": {
     "date": "2026-09-18",
-    "weight_lbs": null,
-    "sleep_seconds": 21600,
-    "sleep_score": 61,
+    "weight_lbs": 154.8,
+    "sleep_seconds": 25140,
+    "sleep_score": 62,
     "resting_heart_rate": 48,
     "hrv": 48.0
   },
@@ -47,7 +47,7 @@
     "ftp_watts": 206.0,
     "rftp_watts": 315.0,
     "css_pace": "1:46/100 yd",
-    "swim_threshold_pace": "1:30/100 yd",
+    "swim_threshold_pace": "1:46/100 yd",
     "threshold_heart_rate_bpm": 170.0
   }
 }
