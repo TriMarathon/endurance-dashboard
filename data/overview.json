@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-17T23:18:21Z",
-  "reference_date": "2026-09-17",
+  "generated_at": "2026-09-18T09:22:29Z",
+  "reference_date": "2026-09-18",
   "current_load": {
-    "date": "2026-09-17",
-    "ctl": 89.2,
-    "atl": 74.4,
-    "tss": 99.6,
-    "tsb": 18.4,
-    "load_ratio": 0.8,
-    "ramp_rate": -2.9
+    "date": "2026-09-18",
+    "ctl": 87.1,
+    "atl": 64.5,
+    "tss": 0.0,
+    "tsb": 14.8,
+    "load_ratio": 0.7,
+    "ramp_rate": -2.8
   },
   "recent_training": {
-    "start_date": "2026-09-11",
-    "end_date": "2026-09-17",
+    "start_date": "2026-09-12",
+    "end_date": "2026-09-18",
     "total_tss": 521.2,
     "run_distance_miles": 19.7,
     "run_time_seconds": 7952,
@@ -24,12 +24,12 @@
     "total_time_seconds": 29294
   },
   "health": {
-    "date": "2026-09-17",
-    "weight_lbs": 153.8,
-    "sleep_seconds": 26460,
-    "sleep_score": 77,
-    "resting_heart_rate": 46,
-    "hrv": 57.0
+    "date": "2026-09-18",
+    "weight_lbs": null,
+    "sleep_seconds": null,
+    "sleep_score": null,
+    "resting_heart_rate": 49,
+    "hrv": null
   },
   "next_race": {
     "date": "2026-09-20",
@@ -40,8 +40,8 @@
     "series": null,
     "priority": null,
     "url": "https://www.cararuns.org/readytorun",
-    "days_until": 3,
-    "when": "in 3 days"
+    "days_until": 2,
+    "when": "in 2 days"
   },
   "thresholds": {
     "ftp_watts": 206.0,
