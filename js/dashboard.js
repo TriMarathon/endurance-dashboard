@@ -799,7 +799,14 @@ function setUpdatedTimestamp(generatedAt) {
   const datePart = generatedAt && typeof generatedAt === 'string'
     ? generatedAt.slice(0, 10)
     : '';
-  el.textContent = datePart ? `Updated ${fmtMediumDate(datePart)}` : '';
+  if (datePart) {
+    const label = fmtMediumDate(datePart);
+    el.textContent = 'Updated ' + label;
+    el.setAttribute('aria-label', 'Refresh dashboard, last updated ' + label);
+  } else {
+    el.textContent = '';
+    el.setAttribute('aria-label', 'Refresh dashboard');
+  }
 }
 
 function fmtStatus(status) {
@@ -2126,8 +2133,17 @@ function initTabs() {
   window.addEventListener('hashchange', () => showTab(currentTab()));
 }
 
+function bindUpdatedRefresh() {
+  const el = document.getElementById(UPDATED_ID);
+  if (!el) return;
+  el.addEventListener('click', () => {
+    window.location.reload();
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initTabs();
+  bindUpdatedRefresh();
   loadVersion().then(() => {
     loadOverview();
     loadPiHealth();
