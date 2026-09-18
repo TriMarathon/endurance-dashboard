@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T17:25:05Z",
+  "generated_at": "2026-09-18T18:51:47Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-18",
   "days": 4279,
@@ -47020,58 +47020,58 @@
     },
     {
       "date": "2026-09-14",
-      "tss": 46.3,
+      "tss": 28.3,
       "run_tss": 0.0,
       "bike_tss": 0.0,
-      "swim_tss": 46.3,
+      "swim_tss": 28.3,
       "other_tss": 0.0,
-      "ctl": 93.0,
-      "atl": 90.1,
+      "ctl": 92.6,
+      "atl": 87.7,
       "tsb": -2.7
     },
     {
       "date": "2026-09-15",
-      "tss": 28.0,
+      "tss": 17.1,
       "run_tss": 0.0,
       "bike_tss": 0.0,
-      "swim_tss": 28.0,
+      "swim_tss": 17.1,
       "other_tss": 0.0,
-      "ctl": 91.5,
-      "atl": 81.8,
-      "tsb": 2.9
+      "ctl": 90.8,
+      "atl": 78.3,
+      "tsb": 4.9
     },
     {
       "date": "2026-09-16",
-      "tss": 53.9,
+      "tss": 33.0,
       "run_tss": 0.0,
       "bike_tss": 0.0,
-      "swim_tss": 53.9,
+      "swim_tss": 33.0,
       "other_tss": 0.0,
-      "ctl": 90.6,
-      "atl": 78.1,
-      "tsb": 9.7
-    },
-    {
-      "date": "2026-09-17",
-      "tss": 126.9,
-      "run_tss": 56.5,
-      "bike_tss": 0.0,
-      "swim_tss": 70.4,
-      "other_tss": 0.0,
-      "ctl": 91.4,
-      "atl": 84.6,
+      "ctl": 89.4,
+      "atl": 72.3,
       "tsb": 12.5
     },
     {
+      "date": "2026-09-17",
+      "tss": 99.6,
+      "run_tss": 56.5,
+      "bike_tss": 0.0,
+      "swim_tss": 43.1,
+      "other_tss": 0.0,
+      "ctl": 89.7,
+      "atl": 75.9,
+      "tsb": 17.2
+    },
+    {
       "date": "2026-09-18",
-      "tss": 81.5,
+      "tss": 49.9,
       "run_tss": 0.0,
       "bike_tss": 0.0,
-      "swim_tss": 81.5,
+      "swim_tss": 49.9,
       "other_tss": 0.0,
-      "ctl": 91.2,
-      "atl": 84.2,
-      "tsb": 6.9
+      "ctl": 88.7,
+      "atl": 72.4,
+      "tsb": 13.8
     }
   ]
 }
