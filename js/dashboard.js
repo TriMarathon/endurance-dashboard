@@ -39,6 +39,8 @@ let fullHealth = null;
 let dailyRange = null;
 let weeklyRange = null;
 let healthRange = null;
+let overviewDoc = null;
+let overviewHealthDoc = null;
 let gearData = [];
 let gearSort = { key: 'default', direction: 'asc' };
 let gearFilter = 'active';
@@ -54,6 +56,17 @@ const MONTHS_LONG = [
   'January', 'February', 'March', 'April', 'May', 'June',
   'July', 'August', 'September', 'October', 'November', 'December',
 ];
+
+const CHICAGO_FMT = new Intl.DateTimeFormat('en-US', {
+  timeZone: 'America/Chicago',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  hourCycle: 'h23',
+  timeZoneName: 'short',
+});
 
 function cssVar(name) {
   const value = getComputedStyle(document.documentElement)
@@ -1694,6 +1707,7 @@ function renderOverview(doc) {
   }
 
   container.innerHTML = html;
+  renderPiHealthCard(overviewHealthDoc);
 }
 
 async function loadOverview() {
@@ -1730,6 +1744,7 @@ async function loadOverview() {
   }
 
   container.innerHTML = '';
+  overviewDoc = doc;
   renderOverview(doc);
 }
 
@@ -2028,13 +2043,13 @@ function _fmtCheckedAt(checkedAt) {
   if (!checkedAt || typeof checkedAt !== 'string') return '—';
   const ms = Date.parse(checkedAt);
   if (!Number.isFinite(ms)) return '—';
-  const d = new Date(ms);
-  const y = d.getUTCFullYear();
-  const mo = String(d.getUTCMonth() + 1).padStart(2, '0');
-  const dy = String(d.getUTCDate()).padStart(2, '0');
-  const h = String(d.getUTCHours()).padStart(2, '0');
-  const mi = String(d.getUTCMinutes()).padStart(2, '0');
-  return y + '-' + mo + '-' + dy + ' ' + h + ':' + mi + ' UTC';
+  const parts = CHICAGO_FMT.formatToParts(ms);
+  const out = Object.create(null);
+  for (let i = 0; i < parts.length; i++) {
+    const p = parts[i];
+    if (p.type !== 'literal') out[p.type] = (out[p.type] || '') + p.value;
+  }
+  return out.year + '-' + out.month + '-' + out.day + ' ' + out.hour + ':' + out.minute + ' ' + out.timeZoneName;
 }
 
 function _fmtRunResult(result, at) {
@@ -2089,10 +2104,14 @@ async function loadPiHealth() {
     if (!response.ok) throw new Error('HTTP ' + response.status);
     const doc = await response.json();
     if (!doc || typeof doc !== 'object') throw new Error('Invalid system_health document');
-    renderPiHealthCard(doc);
+    overviewHealthDoc = doc;
   } catch (err) {
     console.error('[dashboard] failed to load system_health.json:', err);
-    renderPiHealthCard(null);
+    overviewHealthDoc = null;
+  }
+
+  if (overviewDoc) {
+    renderOverview(overviewDoc);
   }
 }
 
