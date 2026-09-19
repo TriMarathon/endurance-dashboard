@@ -10,7 +10,7 @@
       name="description"
       content="Endurance training-load dashboard showing 90-day TSS, CTL and ATL from Garmin training data."
     />
-    <link rel="stylesheet" href="css/dashboard.css?v=20260917-1" />
+    <link rel="stylesheet" href="css/dashboard.css?v=20260919-1" />
   </head>
   <body>
     <header>
@@ -166,16 +166,91 @@
         role="tabpanel"
         aria-label="Racing"
       >
-        <h2 class="chart-title" id="races-title">Upcoming Races</h2>
+        <nav class="racing-subtabs" role="tablist" aria-label="Racing sections">
+          <button
+            type="button"
+            id="subtab-upcoming"
+            data-subtab="upcoming"
+            class="subtab-link active"
+            role="tab"
+            aria-selected="true"
+            tabindex="0"
+            >Upcoming Races</button
+          >
+          <button
+            type="button"
+            id="subtab-history"
+            data-subtab="history"
+            class="subtab-link"
+            role="tab"
+            aria-selected="false"
+            tabindex="-1"
+            >Race History</button
+          >
+        </nav>
+
         <section
-          id="races-wrap"
-          class="chart-wrap races-wrap"
-          aria-labelledby="races-title"
+          id="racing-sub-upcoming"
+          class="racing-subview active"
+          role="tabpanel"
+          aria-label="Upcoming races"
         >
-          <div id="races-container" class="races-container">
-            <div class="status placeholder" role="status"></div>
+          <h2 class="chart-title" id="races-title">Upcoming Races</h2>
+          <section
+            id="races-wrap"
+            class="chart-wrap races-wrap"
+            aria-labelledby="races-title"
+          >
+            <div id="races-container" class="races-container">
+              <div class="status placeholder" role="status"></div>
+            </div>
+            <span id="races-state" class="races-state" aria-hidden="true">list</span>
+          </section>
+        </section>
+
+        <section
+          id="racing-sub-history"
+          class="racing-subview"
+          role="tabpanel"
+          aria-label="Race history"
+        >
+          <h2 class="chart-title" id="race-history-title">Race History</h2>
+          <div class="race-history-controls" id="race-history-controls">
+            <div class="race-history-year-row">
+              <span class="race-history-year-label">Year</span>
+              <div
+                class="race-history-years"
+                role="group"
+                aria-label="Year filter"
+              ></div>
+            </div>
+            <div class="race-history-row">
+              <label for="history-category" class="race-history-label">Category</label>
+              <select id="history-category" class="race-history-select"></select>
+            </div>
+            <div class="race-history-row">
+              <label for="history-sort" class="race-history-label">Sort by</label>
+              <select id="history-sort" class="race-history-select"></select>
+            </div>
           </div>
-          <span id="races-state" class="races-state" aria-hidden="true">list</span>
+          <div class="race-history-table-wrap">
+            <table
+              id="race-history-table"
+              class="races-table race-history-table"
+              role="table"
+            >
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Race</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Time</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <p id="race-history-empty" class="races-empty">No completed races.</p>
+          </div>
         </section>
       </section>
 
@@ -245,6 +320,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" defer></script>
-    <script src="js/dashboard.js?v=20260918-2" defer></script>
+    <script src="js/dashboard.js?v=20260919-2" defer></script>
   </body>
 </html>

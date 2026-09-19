@@ -6,6 +6,7 @@ const BASE_OVERVIEW_URL = 'data/overview.json';
 const BASE_HEALTH_URL = 'data/health.json';
 const BASE_GEAR_URL = 'data/gear.json';
 const BASE_SYSTEM_HEALTH_URL = 'data/system_health.json';
+const BASE_COMPLETED_RACES_URL = 'data/completed_races.json';
 let dataVersion = '';
 let DATA_URL = BASE_DATA_URL;
 let RACES_URL = BASE_RACES_URL;
@@ -14,6 +15,7 @@ let OVERVIEW_URL = BASE_OVERVIEW_URL;
 let HEALTH_URL = BASE_HEALTH_URL;
 let GEAR_URL = BASE_GEAR_URL;
 let SYSTEM_HEALTH_URL = BASE_SYSTEM_HEALTH_URL;
+let COMPLETED_RACES_URL = BASE_COMPLETED_RACES_URL;
 
 const SYSTEM_HEALTH_STALE_SECONDS = 43200;
 const CHART_ID = 'training-load';
@@ -44,6 +46,12 @@ let overviewHealthDoc = null;
 let gearData = [];
 let gearSort = { key: 'default', direction: 'asc' };
 let gearFilter = 'active';
+
+let completedRacesData = [];
+let racingSubtab = 'upcoming';
+let historyYear = null;
+let historyCategory = 'all';
+let historySort = 'newest';
 
 const TAB_PANELS = ['overview', 'training', 'racing', 'health', 'gear'];
 
@@ -1109,6 +1117,263 @@ async function loadRaces() {
   renderRaces(json);
 }
 
+// ---------------------------------------------------------------------------
+// Race History sub-view under the Racing tab.
+// Consumes data/completed_races.json (read-only export). All filtering,
+// sorting, and formatting happens client-side -- no DB or backend logic.
+// Year and category controls are generated dynamically from the exported
+// data so a widened export window (e.g. older years) needs no front-end
+// change.
+// ---------------------------------------------------------------------------
+
+const COMPLETED_RACES_UNCLASSIFIED_CATEGORY = '5 Mile / 8K';
+
+const COMPLETED_RACE_SORTS = [
+  { value: 'newest',  label: 'Newest first'  },
+  { value: 'oldest',  label: 'Oldest first'  },
+  { value: 'fastest', label: 'Fastest first' },
+  { value: 'slowest', label: 'Slowest first' },
+];
+
+function normalizeCompletedRace(record) {
+  if (!record || typeof record !== 'object') return null;
+  const date = record.date != null ? String(record.date) : null;
+  const name = record.activity_name != null ? String(record.activity_name).trim() : '';
+  let category = record.category != null ? String(record.category).trim() : null;
+  if (category === '' || category === COMPLETED_RACES_UNCLASSIFIED_CATEGORY) {
+    category = null;
+  }
+  const duration = typeof record.duration_seconds === 'number'
+    ? record.duration_seconds
+    : null;
+  return { date: date, name: name, category: category, duration: duration };
+}
+
+function fmtRaceTime(seconds) {
+  if (seconds == null || !Number.isFinite(Number(seconds))) return '—';
+  const total = Number(seconds);
+  const h = Math.floor(total / 3600);
+  const m = Math.floor((total % 3600) / 60);
+  const s = Math.floor(total % 60);
+  if (h < 1) {
+    return m + ':' + String(s).padStart(2, '0');
+  }
+  return h + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+}
+
+function collectHistoryYears(records) {
+  const set = new Set();
+  records.forEach((r) => {
+    if (r && r.date) {
+      const y = String(r.date).slice(0, 4);
+      if (/^\d{4}$/.test(y)) set.add(Number(y));
+    }
+  });
+  return Array.from(set).sort((a, b) => b - a);
+}
+
+function collectHistoryCategoryOptions(records) {
+  const options = [{ value: 'all', label: 'All' }];
+  let hasUnclassified = false;
+  const set = new Set();
+  records.forEach((r) => {
+    if (!r) return;
+    if (r.category === null) {
+      hasUnclassified = true;
+    } else {
+      set.add(r.category);
+    }
+  });
+  if (hasUnclassified) {
+    options.push({ value: 'unclassified', label: 'Unclassified' });
+  }
+  Array.from(set).sort().forEach((c) => options.push({ value: c, label: c }));
+  return options;
+}
+
+function historyRaceSort(a, b, sort) {
+  let cmp = 0;
+  if (sort === 'newest' || sort === 'oldest') {
+    if (a.date && b.date) cmp = String(a.date).localeCompare(String(b.date));
+    else if (a.date) cmp = -1;
+    else if (b.date) cmp = 1;
+    if (sort === 'newest') cmp = -cmp;
+  } else {
+    const ad = a.duration != null ? a.duration : Infinity;
+    const bd = b.duration != null ? b.duration : Infinity;
+    cmp = ad - bd;
+    if (sort === 'slowest') cmp = -cmp;
+  }
+  if (cmp === 0 && a.date && b.date) cmp = String(a.date).localeCompare(String(b.date));
+  if (cmp === 0) cmp = String(a.name || '').localeCompare(b.name || '');
+  return cmp;
+}
+
+function filterAndSortHistory() {
+  const records = completedRacesData
+    .map(normalizeCompletedRace)
+    .filter((r) => r !== null);
+  const year = historyYear;
+  const category = historyCategory;
+  return records
+    .filter((r) => {
+      if (year !== 'all' && year != null) {
+        if (!r.date || String(r.date).slice(0, 4) !== String(year)) return false;
+      }
+      if (category !== 'all' && category != null) {
+        if (category === 'unclassified') {
+          if (r.category !== null) return false;
+        } else if (r.category !== category) {
+          return false;
+        }
+      }
+      return true;
+    })
+    .sort((a, b) => historyRaceSort(a, b, historySort));
+}
+
+function buildRaceHistoryControls() {
+  if (historyYear == null) {
+    const years = collectHistoryYears(completedRacesData);
+    const currentYear = new Date().getFullYear();
+    historyYear = years.includes(currentYear) ? currentYear : 'all';
+  }
+
+  const yearContainer = document.querySelector('#racing-sub-history .race-history-years');
+  if (yearContainer) {
+    const years = collectHistoryYears(completedRacesData);
+    let html = '<button type="button" class="year-btn" data-year="all">All</button>';
+    years.forEach((y) => {
+      html += '<button type="button" class="year-btn" data-year="' + y + '">' + y + '</button>';
+    });
+    yearContainer.innerHTML = html;
+    yearContainer.querySelectorAll('.year-btn').forEach((btn) => {
+      if (String(btn.getAttribute('data-year')) === String(historyYear)) {
+        btn.classList.add('active');
+      }
+      btn.addEventListener('click', function () {
+        historyYear = btn.getAttribute('data-year') === 'all'
+          ? 'all'
+          : Number(btn.getAttribute('data-year'));
+        yearContainer.querySelectorAll('.year-btn').forEach((b) => {
+          b.classList.toggle('active', String(b.getAttribute('data-year')) === String(historyYear));
+        });
+        renderRaceHistoryTable();
+      });
+    });
+  }
+
+  const catSelect = document.getElementById('history-category');
+  if (catSelect) {
+    const options = collectHistoryCategoryOptions(completedRacesData);
+    catSelect.innerHTML = options
+      .map((o) => '<option value="' + escapeHtml(o.value) + '">' + escapeHtml(o.label) + '</option>')
+      .join('');
+    catSelect.value = historyCategory;
+    catSelect.onchange = function () {
+      historyCategory = catSelect.value;
+      renderRaceHistoryTable();
+    };
+  }
+
+  const sortSelect = document.getElementById('history-sort');
+  if (sortSelect) {
+    sortSelect.innerHTML = COMPLETED_RACE_SORTS
+      .map((s) => '<option value="' + escapeHtml(s.value) + '">' + escapeHtml(s.label) + '</option>')
+      .join('');
+    sortSelect.value = historySort;
+    sortSelect.onchange = function () {
+      historySort = sortSelect.value;
+      renderRaceHistoryTable();
+    };
+  }
+}
+
+function renderRaceHistoryTable() {
+  const tbody = document.querySelector('#race-history-table tbody');
+  const empty = document.getElementById('race-history-empty');
+  if (!tbody) return;
+
+  const rows = filterAndSortHistory();
+  if (rows.length === 0) {
+    tbody.innerHTML = '';
+    if (empty) empty.hidden = false;
+    return;
+  }
+  if (empty) empty.hidden = true;
+
+  let html = '';
+  rows.forEach((r) => {
+    const dateCell = r.date ? fmtMediumDate(r.date) : '—';
+    const nameCell = r.name ? escapeHtml(r.name) : '—';
+    const catCell = r.category === null ? 'Unclassified' : escapeHtml(r.category);
+    const timeCell = r.duration != null ? fmtRaceTime(r.duration) : '—';
+    html += '<tr>'
+      + '<td class="races-col-date">' + dateCell + '</td>'
+      + '<td class="races-col-name">' + nameCell + '</td>'
+      + '<td class="races-col-type">' + catCell + '</td>'
+      + '<td class="race-history-col-time">' + timeCell + '</td>'
+      + '</tr>';
+  });
+  tbody.innerHTML = html;
+}
+
+function renderRaceHistory() {
+  buildRaceHistoryControls();
+  renderRaceHistoryTable();
+}
+
+function switchRacingSubtab(tab) {
+  racingSubtab = tab;
+  const isHistory = tab === 'history';
+  document.querySelectorAll('.racing-subview').forEach((view) => {
+    view.classList.toggle('active', view.getAttribute('id') === 'racing-sub-' + tab);
+  });
+  document.querySelectorAll('.subtab-link').forEach((btn) => {
+    const selected = btn.getAttribute('data-subtab') === tab;
+    btn.classList.toggle('active', selected);
+    btn.setAttribute('aria-selected', String(selected));
+    btn.setAttribute('tabindex', selected ? '0' : '-1');
+  });
+  if (isHistory) {
+    renderRaceHistory();
+  }
+}
+
+function initRacingSubtabs() {
+  document.querySelectorAll('.subtab-link').forEach((btn) => {
+    btn.addEventListener('click', function () {
+      switchRacingSubtab(btn.getAttribute('data-subtab'));
+    });
+    btn.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        btn.click();
+      }
+    });
+  });
+}
+
+async function loadCompletedRaces() {
+  let json;
+  try {
+    const response = await fetch(COMPLETED_RACES_URL, { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error('HTTP ' + response.status + ' ' + response.statusText);
+    }
+    json = await response.json();
+  } catch (err) {
+    console.error('[dashboard] failed to load completed_races.json:', err);
+    completedRacesData = [];
+    if (racingSubtab === 'history') renderRaceHistoryTable();
+    return;
+  }
+  completedRacesData = Array.isArray(json && json.data) ? json.data : [];
+  if (racingSubtab === 'history') {
+    renderRaceHistory();
+  }
+}
+
 async function loadVersion() {
   try {
     const response = await fetch(VERSION_URL, { cache: 'no-store' });
@@ -1126,6 +1391,7 @@ async function loadVersion() {
       HEALTH_URL = BASE_HEALTH_URL + qs;
       GEAR_URL = BASE_GEAR_URL + qs;
       SYSTEM_HEALTH_URL = BASE_SYSTEM_HEALTH_URL + qs;
+      COMPLETED_RACES_URL = BASE_COMPLETED_RACES_URL + qs;
     }
   } catch (err) {
     console.error('[dashboard] failed to load version.json, using unversioned URLs:', err);
@@ -2159,12 +2425,14 @@ function bindUpdatedRefresh() {
 
 document.addEventListener('DOMContentLoaded', () => {
   initTabs();
+  initRacingSubtabs();
   bindUpdatedRefresh();
   loadVersion().then(() => {
     loadOverview();
     loadPiHealth();
     loadTrainingLoad();
     loadRaces();
+    loadCompletedRaces();
     loadWeekly();
     loadHealth();
     loadGear();
