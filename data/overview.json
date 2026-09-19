@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-19T12:02:20Z",
+  "generated_at": "2026-09-19T13:37:34Z",
   "reference_date": "2026-09-19",
   "current_load": {
     "date": "2026-09-19",
-    "ctl": 88.0,
+    "ctl": 88.4,
     "atl": 69.6,
     "tss": 0.0,
-    "tsb": 9.9,
+    "tsb": 10.3,
     "load_ratio": 0.8,
-    "ramp_rate": -8.4
+    "ramp_rate": -8.5
   },
   "recent_training": {
     "start_date": "2026-09-13",
