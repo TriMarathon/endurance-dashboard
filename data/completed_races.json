@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-19T17:16:59Z",
+  "generated_at": "2026-09-19T17:53:11Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-19",
-  "count": 180,
+  "count": 172,
   "data": [
     {
       "date": "2026-09-12",
@@ -1261,36 +1261,12 @@
       "distance_meters": 21097.54
     },
     {
-      "date": "2016-07-17",
-      "activity_name": "w/u",
-      "category": null,
-      "duration_seconds": 709.56,
-      "garmin_activity_id": 1259811215,
-      "distance_meters": 2070.86
-    },
-    {
-      "date": "2016-07-09",
-      "activity_name": "c/d",
-      "category": null,
-      "duration_seconds": 1173.457,
-      "garmin_activity_id": 1248068357,
-      "distance_meters": 3053.44
-    },
-    {
       "date": "2016-07-09",
       "activity_name": "Waterfall Glen Xtreme10",
       "category": "10 Mile",
       "duration_seconds": 4300.0,
       "garmin_activity_id": 1248066956,
       "distance_meters": 16093.44
-    },
-    {
-      "date": "2016-07-09",
-      "activity_name": "w/u",
-      "category": null,
-      "duration_seconds": 727.796,
-      "garmin_activity_id": 1248048794,
-      "distance_meters": 2002.23
     },
     {
       "date": "2016-07-04",
@@ -1302,43 +1278,11 @@
     },
     {
       "date": "2016-06-26",
-      "activity_name": "cd",
-      "category": null,
-      "duration_seconds": 1156.367,
-      "garmin_activity_id": 1229890110,
-      "distance_meters": 3071.84
-    },
-    {
-      "date": "2016-06-26",
       "activity_name": "Downers Grove 5 Miler",
       "category": "5 Mile / 8K",
       "duration_seconds": 1977.692,
       "garmin_activity_id": 1229888799,
       "distance_meters": 8046.72
-    },
-    {
-      "date": "2016-06-26",
-      "activity_name": "wu",
-      "category": null,
-      "duration_seconds": 1077.547,
-      "garmin_activity_id": 1229886325,
-      "distance_meters": 3409.24
-    },
-    {
-      "date": "2016-06-18",
-      "activity_name": "cd",
-      "category": null,
-      "duration_seconds": 161.086,
-      "garmin_activity_id": 1219172932,
-      "distance_meters": 846.69
-    },
-    {
-      "date": "2016-06-18",
-      "activity_name": "Track 3200m DPFT",
-      "category": null,
-      "duration_seconds": 724.574,
-      "garmin_activity_id": 1219108545,
-      "distance_meters": 3221.11
     },
     {
       "date": "2016-05-30",
@@ -1395,14 +1339,6 @@
       "duration_seconds": 1142.0,
       "garmin_activity_id": 1082030010,
       "distance_meters": 5000.0
-    },
-    {
-      "date": "2016-01-03",
-      "activity_name": "Long run 8M",
-      "category": null,
-      "duration_seconds": 3798.453,
-      "garmin_activity_id": 1002501320,
-      "distance_meters": 12876.77
     },
     {
       "date": "2015-11-28",
