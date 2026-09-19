@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-19T20:44:37Z",
+  "generated_at": "2026-09-19T21:08:34Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-19",
-  "count": 172,
+  "count": 198,
   "data": [
     {
       "date": "2026-09-12",
@@ -173,6 +173,46 @@
       "distance_meters": 21488.609375
     },
     {
+      "date": "2026-03-14",
+      "activity_name": "Core Indoor Triathlon - Run",
+      "category": null,
+      "duration_seconds": 912.4210205078125,
+      "garmin_activity_id": 22172909290,
+      "distance_meters": 3368.14990234375
+    },
+    {
+      "date": "2026-03-14",
+      "activity_name": "Core Indoor Triathlon - Bike",
+      "category": null,
+      "duration_seconds": 901.7880249023438,
+      "garmin_activity_id": 22172908446,
+      "distance_meters": 8207.654296875
+    },
+    {
+      "date": "2026-03-14",
+      "activity_name": "Core Indoor Triathlon - Swim",
+      "category": null,
+      "duration_seconds": 601.2520141601562,
+      "garmin_activity_id": 22186128771,
+      "distance_meters": 525.780029296875
+    },
+    {
+      "date": "2026-01-25",
+      "activity_name": "ET Indoor Triathlon - Run",
+      "category": "5K",
+      "duration_seconds": 1200.0,
+      "garmin_activity_id": 21663855848,
+      "distance_meters": 5326.93
+    },
+    {
+      "date": "2026-01-25",
+      "activity_name": "ET Indoor Triathlon - Bike",
+      "category": null,
+      "duration_seconds": 1800.0,
+      "garmin_activity_id": 21663855440,
+      "distance_meters": 17992.47
+    },
+    {
       "date": "2026-01-25",
       "activity_name": "ET Indoor Triathlon - Swim",
       "category": null,
@@ -197,6 +237,14 @@
       "distance_meters": 5159.490234375
     },
     {
+      "date": "2025-10-25",
+      "activity_name": "Lake Bluff PTO Pumpkin Chase 5K - 18:05, 1st AG",
+      "category": "5K",
+      "duration_seconds": 1085.0,
+      "garmin_activity_id": 20792952496,
+      "distance_meters": 5137.66015625
+    },
+    {
       "date": "2025-10-12",
       "activity_name": "Chicago Marathon - 2:53:56",
       "category": "Marathon",
@@ -205,12 +253,100 @@
       "distance_meters": 42646.33984375
     },
     {
+      "date": "2025-09-06",
+      "activity_name": "Hidden Gem Half Marathon - 1:21:50, 1st AG",
+      "category": "Half Marathon",
+      "duration_seconds": 4910.0,
+      "garmin_activity_id": 20299532473,
+      "distance_meters": 21399.869140625
+    },
+    {
+      "date": "2025-08-24",
+      "activity_name": "Chicago Sprint Triathlon - 1:21:21, 1st AG",
+      "category": "Sprint",
+      "duration_seconds": 4881.0,
+      "garmin_activity_id": 20164051613,
+      "distance_meters": 31296.53
+    },
+    {
+      "date": "2025-08-17",
+      "activity_name": "Alpine Races 10 Mile - 1:05:12, 1st AG",
+      "category": "10 Mile",
+      "duration_seconds": 3912.0,
+      "garmin_activity_id": 20087947032,
+      "distance_meters": 16093.44
+    },
+    {
+      "date": "2025-07-19",
+      "activity_name": "Chi Town Miles - 5:13, 2nd AG",
+      "category": "1 Mile",
+      "duration_seconds": 313.7550048828125,
+      "garmin_activity_id": 19787337224,
+      "distance_meters": 1632.27001953125
+    },
+    {
+      "date": "2025-07-13",
+      "activity_name": "Lake Zurich Sprint Triathlon - 1st AG",
+      "category": "Sprint",
+      "duration_seconds": 4400.0,
+      "garmin_activity_id": 19721112703,
+      "distance_meters": 34610.97
+    },
+    {
+      "date": "2025-07-04",
+      "activity_name": "4 on the 4th - 23:35, 1st AG",
+      "category": "4 Mile",
+      "duration_seconds": 1415.0,
+      "garmin_activity_id": 19629832656,
+      "distance_meters": 6534.7099609375
+    },
+    {
       "date": "2025-06-22",
       "activity_name": "IRONMAN 70.3 Rockford - 05:02:10 - 1st AG",
       "category": "70.3",
       "duration_seconds": 18130.0,
       "garmin_activity_id": 19514337111,
       "distance_meters": 115401.28
+    },
+    {
+      "date": "2025-06-15",
+      "activity_name": "Race Against Hate - 18:13, 1st AG",
+      "category": "5K",
+      "duration_seconds": 1093.0,
+      "garmin_activity_id": 19440362284,
+      "distance_meters": 5031.919921875
+    },
+    {
+      "date": "2025-05-24",
+      "activity_name": "Soldier Field 10 - 1:02:46, 1st AG",
+      "category": "10 Mile",
+      "duration_seconds": 3766.0,
+      "garmin_activity_id": 19220716333,
+      "distance_meters": 16446.66015625
+    },
+    {
+      "date": "2025-05-18",
+      "activity_name": "CARA Spring Trail Chase - 37:27, 1st AG",
+      "category": "10K",
+      "duration_seconds": 2247.0,
+      "garmin_activity_id": 19162492631,
+      "distance_meters": 10079.6796875
+    },
+    {
+      "date": "2025-04-27",
+      "activity_name": "Ravenswood  5K- 18:28, 2nd AG",
+      "category": "5K",
+      "duration_seconds": 1108.0,
+      "garmin_activity_id": 18951105940,
+      "distance_meters": 5068.509765625
+    },
+    {
+      "date": "2025-04-21",
+      "activity_name": "Boston Marathon",
+      "category": "Marathon",
+      "duration_seconds": 11635.87890625,
+      "garmin_activity_id": 18894608650,
+      "distance_meters": 42434.140625
     },
     {
       "date": "2025-04-13",
@@ -229,6 +365,30 @@
       "distance_meters": 5105.330078125
     },
     {
+      "date": "2025-03-29",
+      "activity_name": "CORE Indoor Triathlon - Run",
+      "category": null,
+      "duration_seconds": 942.5859985351562,
+      "garmin_activity_id": 18672590658,
+      "distance_meters": 4092.139892578125
+    },
+    {
+      "date": "2025-03-29",
+      "activity_name": "CORE Indoor Triathlon - Bike",
+      "category": null,
+      "duration_seconds": 900.0,
+      "garmin_activity_id": 18673316636,
+      "distance_meters": 9656.064
+    },
+    {
+      "date": "2025-03-29",
+      "activity_name": "CORE Indoor Triathlon - Swim",
+      "category": null,
+      "duration_seconds": 600.7219848632812,
+      "garmin_activity_id": 18673478988,
+      "distance_meters": 560.0700158049196
+    },
+    {
       "date": "2025-03-23",
       "activity_name": "Shamrock Shuffle -  29:39, 1st AG",
       "category": "8K",
@@ -243,6 +403,54 @@
       "duration_seconds": 5132.0,
       "garmin_activity_id": 18551036245,
       "distance_meters": 21370.0
+    },
+    {
+      "date": "2025-02-16",
+      "activity_name": "February ET Indoor Tri - Run",
+      "category": "5K",
+      "duration_seconds": 1230.137939453125,
+      "garmin_activity_id": 18295947513,
+      "distance_meters": 5359.31982421875
+    },
+    {
+      "date": "2025-02-16",
+      "activity_name": "February ET Indoor Tri - Bike",
+      "category": null,
+      "duration_seconds": 1800.0,
+      "garmin_activity_id": 18295947086,
+      "distance_meters": 19038.54
+    },
+    {
+      "date": "2025-02-16",
+      "activity_name": "February ET Indoor Tri - Swim",
+      "category": null,
+      "duration_seconds": 622.8800048828125,
+      "garmin_activity_id": 18296539312,
+      "distance_meters": 585.219970703125
+    },
+    {
+      "date": "2025-01-19",
+      "activity_name": "January ET Indoor Tri - Run",
+      "category": null,
+      "duration_seconds": 1200.0,
+      "garmin_activity_id": 18049336668,
+      "distance_meters": 5697.08
+    },
+    {
+      "date": "2025-01-19",
+      "activity_name": "January ET Indoor Tri - Bike",
+      "category": null,
+      "duration_seconds": 1800.0,
+      "garmin_activity_id": 18049195232,
+      "distance_meters": 18105.12
+    },
+    {
+      "date": "2025-01-19",
+      "activity_name": "January ET Indoor Tri - Swim",
+      "category": null,
+      "duration_seconds": 589.98,
+      "garmin_activity_id": 18049513130,
+      "distance_meters": 548.64
     },
     {
       "date": "2024-11-24",
