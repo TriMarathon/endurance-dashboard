@@ -2075,9 +2075,6 @@ function renderPiHealthCard(doc) {
 
   const rows = [
     ['Status', '<span class="pi-status-badge ' + statusCls + '">' + statusLabel + '</span>'],
-    ['Last refresh', _fmtRunResult(doc && doc.last_refresh_result, doc && doc.last_refresh_at)],
-    ['Last full sync', _fmtRunResult(doc && doc.last_full_result, doc && doc.last_full_at)],
-    ['Last backup', _fmtRunResult(doc && doc.last_backup_result, doc && doc.last_backup_at)],
     ['Pi uptime', _fmtUptime(doc && doc.uptime_seconds)],
     ['CPU temp', _fmtTemp(doc && doc.cpu_temperature_c)],
     ['SSD free', _fmtBytes(doc && doc.storage_free_bytes)],
