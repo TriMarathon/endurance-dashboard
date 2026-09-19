@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T20:37:19Z",
+  "generated_at": "2026-09-19T20:39:17Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-19",
   "count": 172,
@@ -783,7 +783,7 @@
     {
       "date": "2021-11-13",
       "activity_name": "CARA Autumn Trail Chase 8k - 32:02, AG 1st",
-      "category": "5 Mile / 8K",
+      "category": "8K",
       "duration_seconds": 1922.0,
       "garmin_activity_id": 7812809603,
       "distance_meters": 8121.06005859375
