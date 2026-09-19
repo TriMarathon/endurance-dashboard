@@ -1126,7 +1126,9 @@ async function loadRaces() {
 // change.
 // ---------------------------------------------------------------------------
 
-const COMPLETED_RACES_UNCLASSIFIED_CATEGORY = '5 Mile / 8K';
+const COMPLETED_RACES_AMBIGUOUS_CATEGORY = '5 Mile / 8K';
+const COMPLETED_RACES_5MILE_CATEGORY = '5 Mile';
+const COMPLETED_RACES_8K_CATEGORY = '8K';
 
 const COMPLETED_RACE_SORTS = [
   { value: 'newest',  label: 'Newest first'  },
@@ -1140,8 +1142,10 @@ function normalizeCompletedRace(record) {
   const date = record.date != null ? String(record.date) : null;
   const name = record.activity_name != null ? String(record.activity_name).trim() : '';
   let category = record.category != null ? String(record.category).trim() : null;
-  if (category === '' || category === COMPLETED_RACES_UNCLASSIFIED_CATEGORY) {
+  if (category === '') {
     category = null;
+  } else if (category === COMPLETED_RACES_AMBIGUOUS_CATEGORY) {
+    category = COMPLETED_RACES_5MILE_CATEGORY;
   }
   const duration = typeof record.duration_seconds === 'number'
     ? record.duration_seconds
@@ -1176,6 +1180,7 @@ function collectHistoryCategoryOptions(records) {
   const options = [{ value: 'all', label: 'All' }];
   let hasUnclassified = false;
   const set = new Set();
+  set.add(COMPLETED_RACES_8K_CATEGORY);
   records.forEach((r) => {
     if (!r) return;
     if (r.category === null) {
@@ -1265,7 +1270,9 @@ function buildRaceHistoryControls() {
 
   const catSelect = document.getElementById('history-category');
   if (catSelect) {
-    const options = collectHistoryCategoryOptions(completedRacesData);
+    const options = collectHistoryCategoryOptions(
+      completedRacesData.map(normalizeCompletedRace).filter((r) => r !== null)
+    );
     catSelect.innerHTML = options
       .map((o) => '<option value="' + escapeHtml(o.value) + '">' + escapeHtml(o.label) + '</option>')
       .join('');
