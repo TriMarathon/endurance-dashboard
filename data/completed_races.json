@@ -1,0 +1,432 @@
+{
+  "generated_at": "2026-09-19T14:09:03Z",
+  "start_date": "2024-01-01",
+  "end_date": "2027-01-01",
+  "count": 53,
+  "data": [
+    {
+      "date": "2026-09-12",
+      "activity_name": "IRONMAN 70.3 Wisconsin ",
+      "category": "70.3",
+      "duration_seconds": 17561.0,
+      "garmin_activity_id": 24337280789,
+      "distance_meters": 114813.36
+    },
+    {
+      "date": "2026-08-23",
+      "activity_name": "Supertri Chicago - 1:20:03, 1st AG Illinois State Championships",
+      "category": null,
+      "duration_seconds": 4803.0,
+      "garmin_activity_id": 24086514051,
+      "distance_meters": 29803.939453125
+    },
+    {
+      "date": "2026-08-16",
+      "activity_name": "Alpine Races 10 Mile - 1:08:49, 3rd AG",
+      "category": "10 Mile",
+      "duration_seconds": 4128.0,
+      "garmin_activity_id": 23999243055,
+      "distance_meters": 16186.6298828125
+    },
+    {
+      "date": "2026-08-09",
+      "activity_name": "Sprint Distance National Championships\n",
+      "category": "Sprint",
+      "duration_seconds": 4256.046,
+      "garmin_activity_id": 23912592763,
+      "distance_meters": 26086.81
+    },
+    {
+      "date": "2026-08-02",
+      "activity_name": "Naperville Sprint Triathlon - 1:05:14, 1st AG",
+      "category": "Sprint",
+      "duration_seconds": 3914.0,
+      "garmin_activity_id": 23825256006,
+      "distance_meters": 27111.62
+    },
+    {
+      "date": "2026-07-26",
+      "activity_name": "Wauconda Sprint Triathlon - 2nd Male ",
+      "category": "Sprint",
+      "duration_seconds": 4233.0,
+      "garmin_activity_id": 23741579012,
+      "distance_meters": 25023.76
+    },
+    {
+      "date": "2026-07-18",
+      "activity_name": "Chi Town Miles - 5:13, 1st AG",
+      "category": "1 Mile",
+      "duration_seconds": 313.0,
+      "garmin_activity_id": 23648066902,
+      "distance_meters": 1631.72998046875
+    },
+    {
+      "date": "2026-07-12",
+      "activity_name": "Lake Zurich Triathlon - 1:09:41, 1st Ag\n",
+      "category": "Sprint",
+      "duration_seconds": 4181.0,
+      "garmin_activity_id": 23571362637,
+      "distance_meters": 26083.6
+    },
+    {
+      "date": "2026-07-04",
+      "activity_name": "4 on the 4th - 24:19, 2nd AG",
+      "category": "4 Mile",
+      "duration_seconds": 1459.0,
+      "garmin_activity_id": 23476203532,
+      "distance_meters": 6505.2998046875
+    },
+    {
+      "date": "2026-06-28",
+      "activity_name": "Pleasant Prairie Sprint Triathlon - 1:17:22, 2nd AG",
+      "category": "Sprint",
+      "duration_seconds": 4642.0,
+      "garmin_activity_id": 23408209956,
+      "distance_meters": 28553.81
+    },
+    {
+      "date": "2026-06-21",
+      "activity_name": "Race Against Hate - 18:38, 1st AG",
+      "category": "5K",
+      "duration_seconds": 1118.0,
+      "garmin_activity_id": 23329954063,
+      "distance_meters": 5072.97998046875
+    },
+    {
+      "date": "2026-06-14",
+      "activity_name": "IRONMAN 70.3 Rockford - 04:39:57, 5th AG",
+      "category": "70.3",
+      "duration_seconds": 16797.0,
+      "garmin_activity_id": 23250821308,
+      "distance_meters": 113673.29
+    },
+    {
+      "date": "2026-05-25",
+      "activity_name": "Ridge Run 10k - 38:10, 2nd AG",
+      "category": "10K",
+      "duration_seconds": 2289.885986328125,
+      "garmin_activity_id": 23007759436,
+      "distance_meters": 10010.9501953125
+    },
+    {
+      "date": "2026-05-23",
+      "activity_name": "Soldier Field 10k - 38:00, 1st AG",
+      "category": "10K",
+      "duration_seconds": 2280.0,
+      "garmin_activity_id": 22983848051,
+      "distance_meters": 10099.080078125
+    },
+    {
+      "date": "2026-05-17",
+      "activity_name": "Spring Trail Chase - 39:28, 1st AG",
+      "category": "10K",
+      "duration_seconds": 2368.25,
+      "garmin_activity_id": 22913291022,
+      "distance_meters": 9971.73046875
+    },
+    {
+      "date": "2026-05-09",
+      "activity_name": "Quarryman Challange 5k",
+      "category": "5K",
+      "duration_seconds": 1155.0,
+      "garmin_activity_id": 22820148159,
+      "distance_meters": 5086.81005859375
+    },
+    {
+      "date": "2026-04-26",
+      "activity_name": "Good Life Race 5k - 18:12, 2nd AG",
+      "category": "5K",
+      "duration_seconds": 1092.0,
+      "garmin_activity_id": 22667174941,
+      "distance_meters": 5003.18017578125
+    },
+    {
+      "date": "2026-04-20",
+      "activity_name": "Boston Marathon #10 - 2:58:07",
+      "category": "Marathon",
+      "duration_seconds": 10687.0,
+      "garmin_activity_id": 22596593479,
+      "distance_meters": 42182.171875
+    },
+    {
+      "date": "2026-04-12",
+      "activity_name": "Lakefront 10 Miler - 1:06:30, 2nd AG (Boston -8)",
+      "category": "10 Mile",
+      "duration_seconds": 3990.0,
+      "garmin_activity_id": 22501896609,
+      "distance_meters": 16480.220703125
+    },
+    {
+      "date": "2026-03-22",
+      "activity_name": "Shamrock Shuffle 8k - 30:10, 2nd AG",
+      "category": "5 Mile / 8K",
+      "duration_seconds": 1809.782958984375,
+      "garmin_activity_id": 22261372083,
+      "distance_meters": 8236.5498046875
+    },
+    {
+      "date": "2026-03-15",
+      "activity_name": "March Madness Half Marathon - 1:25:18, 1st AG",
+      "category": "Half Marathon",
+      "duration_seconds": 5118.0,
+      "garmin_activity_id": 22183031149,
+      "distance_meters": 21488.609375
+    },
+    {
+      "date": "2026-01-25",
+      "activity_name": "ET Indoor Triathlon - Swim",
+      "category": null,
+      "duration_seconds": 600.0,
+      "garmin_activity_id": 21664238697,
+      "distance_meters": 512.064
+    },
+    {
+      "date": "2025-11-27",
+      "activity_name": "Grove Express 5K - 17:55, 1st 50-59",
+      "category": "5K",
+      "duration_seconds": 1075.0,
+      "garmin_activity_id": 21105862230,
+      "distance_meters": 5138.75
+    },
+    {
+      "date": "2025-11-09",
+      "activity_name": "Fast Track Cross Country Open - 19:38, 1st AG",
+      "category": "5K",
+      "duration_seconds": 1178.0,
+      "garmin_activity_id": 20940996793,
+      "distance_meters": 5159.490234375
+    },
+    {
+      "date": "2025-10-12",
+      "activity_name": "Chicago Marathon - 2:53:56",
+      "category": "Marathon",
+      "duration_seconds": 10436.0,
+      "garmin_activity_id": 20668733476,
+      "distance_meters": 42646.33984375
+    },
+    {
+      "date": "2025-04-13",
+      "activity_name": "Lakefront 10 Miler -  1:03:41, 1st AG",
+      "category": "10 Mile",
+      "duration_seconds": 3821.0,
+      "garmin_activity_id": 18817494556,
+      "distance_meters": 16384.6796875
+    },
+    {
+      "date": "2025-04-06",
+      "activity_name": "Good Life Race - 17:56, 2nd AG",
+      "category": "5K",
+      "duration_seconds": 1076.0,
+      "garmin_activity_id": 18749364348,
+      "distance_meters": 5105.330078125
+    },
+    {
+      "date": "2025-03-23",
+      "activity_name": "Shamrock Shuffle -  29:39, 1st AG",
+      "category": "5 Mile / 8K",
+      "duration_seconds": 1779.0,
+      "garmin_activity_id": 18614724778,
+      "distance_meters": 8134.43017578125
+    },
+    {
+      "date": "2025-03-16",
+      "activity_name": "March Madness Half Marathon - 1:25:32, 2nd AG",
+      "category": "Half Marathon",
+      "duration_seconds": 5132.0,
+      "garmin_activity_id": 18551036245,
+      "distance_meters": 21370.0
+    },
+    {
+      "date": "2024-11-24",
+      "activity_name": "Lincolnwood Turkey Trot 10K",
+      "category": "10K",
+      "duration_seconds": 2301.19091796875,
+      "garmin_activity_id": 17612817592,
+      "distance_meters": 10193.2900390625
+    },
+    {
+      "date": "2024-11-10",
+      "activity_name": "Fast Track Cross Country Presented by Xtra Mile Running",
+      "category": "5K",
+      "duration_seconds": 1180.114990234375,
+      "garmin_activity_id": 17506264278,
+      "distance_meters": 5061.31005859375
+    },
+    {
+      "date": "2024-10-13",
+      "activity_name": "Chicago Running - 3:26:48",
+      "category": "Marathon",
+      "duration_seconds": 12409.0,
+      "garmin_activity_id": 17276905020,
+      "distance_meters": 42172.98828125
+    },
+    {
+      "date": "2024-08-25",
+      "activity_name": "Chicago Sprint Triathlon - 1st AG",
+      "category": "Sprint",
+      "duration_seconds": 4980.0,
+      "garmin_activity_id": 16858837733,
+      "distance_meters": 31680.79
+    },
+    {
+      "date": "2024-08-04",
+      "activity_name": "Naperville Sprint Triathlon - 1st AG",
+      "category": "Sprint",
+      "duration_seconds": 3854.0,
+      "garmin_activity_id": 16672949703,
+      "distance_meters": 27817.8
+    },
+    {
+      "date": "2024-07-28",
+      "activity_name": "Wauconda Sprint Triathlon -  1st AG",
+      "category": "Sprint",
+      "duration_seconds": 4437.923,
+      "garmin_activity_id": 16612463125,
+      "distance_meters": 25325.58
+    },
+    {
+      "date": "2024-07-27",
+      "activity_name": "Chi-Town Mile - 5:19.53",
+      "category": "1 Mile",
+      "duration_seconds": 319.489013671875,
+      "garmin_activity_id": 16607973678,
+      "distance_meters": 1644.0999755859375
+    },
+    {
+      "date": "2024-07-04",
+      "activity_name": "4 on the 4th - 23:28, 2nd AG",
+      "category": "4 Mile",
+      "duration_seconds": 1408.0,
+      "garmin_activity_id": 16238739080,
+      "distance_meters": 6554.68994140625
+    },
+    {
+      "date": "2024-06-23",
+      "activity_name": "Pleasant Prairie Olympic Triathlon - 2nd AG",
+      "category": "Olympic",
+      "duration_seconds": 9289.0,
+      "garmin_activity_id": 16059457979,
+      "distance_meters": 51126.1
+    },
+    {
+      "date": "2024-06-16",
+      "activity_name": "Ricky Byrdsong Memorial Race Against Hate - 18:07, 3rd AG",
+      "category": "5K",
+      "duration_seconds": 1087.0,
+      "garmin_activity_id": 15941437281,
+      "distance_meters": 5245.990234375
+    },
+    {
+      "date": "2024-06-09",
+      "activity_name": "Chicago 13.1 - 1:22:35, 2nd AG",
+      "category": "Half Marathon",
+      "duration_seconds": 4955.0,
+      "garmin_activity_id": 15824463961,
+      "distance_meters": 21373.650390625
+    },
+    {
+      "date": "2024-06-02",
+      "activity_name": "Run for the Roses 5k - 17:51, 5th AG",
+      "category": "5K",
+      "duration_seconds": 1071.301025390625,
+      "garmin_activity_id": 15705259830,
+      "distance_meters": 5020.64013671875
+    },
+    {
+      "date": "2024-05-25",
+      "activity_name": "Soldier Field 10 -1:03:46, 2nd AG",
+      "category": "10 Mile",
+      "duration_seconds": 3826.0,
+      "garmin_activity_id": 15571972419,
+      "distance_meters": 16409.490234375
+    },
+    {
+      "date": "2024-05-19",
+      "activity_name": "Spring Trail Chase 10K - 38:24, 3rd AG",
+      "category": "10K",
+      "duration_seconds": 2304.0,
+      "garmin_activity_id": 15472634416,
+      "distance_meters": 9918.6103515625
+    },
+    {
+      "date": "2024-05-11",
+      "activity_name": "Quarryman Challenge - 19:00, 3rd OA",
+      "category": "5K",
+      "duration_seconds": 1140.0,
+      "garmin_activity_id": 15337970382,
+      "distance_meters": 5115.2900390625
+    },
+    {
+      "date": "2024-04-28",
+      "activity_name": "Good Life Race - 18:03",
+      "category": "5K",
+      "duration_seconds": 1083.0,
+      "garmin_activity_id": 15120300878,
+      "distance_meters": 5067.43994140625
+    },
+    {
+      "date": "2024-04-21",
+      "activity_name": "Naperville Women's Half & 5K - 19:13, 1st OA",
+      "category": "5K",
+      "duration_seconds": 1153.0,
+      "garmin_activity_id": 15006680630,
+      "distance_meters": 5218.64990234375
+    },
+    {
+      "date": "2024-04-15",
+      "activity_name": "Boston Marathon - 3:11:21",
+      "category": "Marathon",
+      "duration_seconds": 11481.0,
+      "garmin_activity_id": 14915609757,
+      "distance_meters": 42516.37109375
+    },
+    {
+      "date": "2024-03-24",
+      "activity_name": "Shamrock Shuffle - 29:34",
+      "category": "5 Mile / 8K",
+      "duration_seconds": 1774.0,
+      "garmin_activity_id": 14561416716,
+      "distance_meters": 8257.3095703125
+    },
+    {
+      "date": "2024-03-09",
+      "activity_name": "St. Paddy's Day 5K - 17:25, 26th OA, 2nd AG",
+      "category": "5K",
+      "duration_seconds": 1045.0,
+      "garmin_activity_id": 14326206920,
+      "distance_meters": 4958.47021484375
+    },
+    {
+      "date": "2024-02-11",
+      "activity_name": "Super Shuffle 5K",
+      "category": "5K",
+      "duration_seconds": 1077.0,
+      "garmin_activity_id": 13917382533,
+      "distance_meters": 4996.5400390625
+    },
+    {
+      "date": "2024-01-14",
+      "activity_name": "ET Indoor Triathlon - Run",
+      "category": "5K",
+      "duration_seconds": 1200.0,
+      "garmin_activity_id": 13504441031,
+      "distance_meters": 5487.87
+    },
+    {
+      "date": "2024-01-14",
+      "activity_name": "ET Indoor Triathlon - Bike",
+      "category": null,
+      "duration_seconds": 1800.0,
+      "garmin_activity_id": 13504440036,
+      "distance_meters": 18748.86
+    },
+    {
+      "date": "2024-01-14",
+      "activity_name": "ET Indoor Triathlon - Swim",
+      "category": null,
+      "duration_seconds": 673.7109985351562,
+      "garmin_activity_id": 13504439204,
+      "distance_meters": 566.9900292431724
+    }
+  ]
+}
