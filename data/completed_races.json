@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T20:41:08Z",
+  "generated_at": "2026-09-19T20:44:37Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-19",
   "count": 172,
@@ -1351,7 +1351,7 @@
     {
       "date": "2015-11-15",
       "activity_name": "Red Eye 8K Run",
-      "category": "5 Mile / 8K",
+      "category": "8K",
       "duration_seconds": 2015.0,
       "garmin_activity_id": 962891138,
       "distance_meters": 7983.5
