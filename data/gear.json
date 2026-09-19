@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T18:56:45Z",
+  "generated_at": "2026-09-19T00:46:03Z",
   "gear": [
     {
       "id": "15f7b270d3f44537b70921baf82dc3b8",
@@ -114,20 +114,20 @@
       "distance_miles": 77.2
     },
     {
-      "id": "b8b1373689084a70bd0c0c59add47960",
-      "name": "3 - Boston 26",
-      "type": "Shoes",
-      "status": "active",
-      "activity_count": 1,
-      "distance_miles": 26.2
-    },
-    {
       "id": "4bdb992252a94e64b4f07a9f654eed13",
       "name": "Next% 3 Crimson Tint",
       "type": "Shoes",
       "status": "active",
       "activity_count": 36,
       "distance_miles": 240.8
+    },
+    {
+      "id": "b8b1373689084a70bd0c0c59add47960",
+      "name": "Nike Alphafly 3 Bright Crimson/Lime Blast/Mint Foam/Cave Purple",
+      "type": "Shoes",
+      "status": "active",
+      "activity_count": 1,
+      "distance_miles": 26.2
     },
     {
       "id": "1b4311125fe64951917400208311e665",
