@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-20T00:32:51Z",
-  "reference_date": "2026-09-19",
+  "generated_at": "2026-09-20T12:02:24Z",
+  "reference_date": "2026-09-20",
   "count": 17,
   "data": [
     {
@@ -13,8 +13,8 @@
       "priority": null,
       "notes": "Pacer",
       "url": "https://www.cararuns.org/readytorun",
-      "days_until": 1,
-      "when": "tomorrow"
+      "days_until": 0,
+      "when": "today"
     },
     {
       "date": "2026-10-11",
@@ -26,8 +26,8 @@
       "priority": null,
       "notes": null,
       "url": "https://www.chicagomarathon.com/",
-      "days_until": 22,
-      "when": "in 22 days"
+      "days_until": 21,
+      "when": "in 21 days"
     },
     {
       "date": "2026-10-24",
@@ -39,8 +39,8 @@
       "priority": null,
       "notes": null,
       "url": "https://www.lakebluffpumpkinchase.org/",
-      "days_until": 35,
-      "when": "in 35 days"
+      "days_until": 34,
+      "when": "in 34 days"
     },
     {
       "date": "2026-11-08",
@@ -52,8 +52,8 @@
       "priority": null,
       "notes": null,
       "url": "https://runsignup.com/Race/IL/Schaumburg/FastTrackCrossCountryOpen",
-      "days_until": 50,
-      "when": "in 50 days"
+      "days_until": 49,
+      "when": "in 49 days"
     },
     {
       "date": "2026-11-26",
@@ -65,8 +65,8 @@
       "priority": null,
       "notes": null,
       "url": "https://www.groveexpress.com/",
-      "days_until": 68,
-      "when": "in 68 days"
+      "days_until": 67,
+      "when": "in 67 days"
     },
     {
       "date": "2027-03-14",
@@ -78,8 +78,8 @@
       "priority": null,
       "notes": null,
       "url": "https://www.hillstriders.com/march-madness-half-marathon.html",
-      "days_until": 176,
-      "when": "in 176 days"
+      "days_until": 175,
+      "when": "in 175 days"
     },
     {
       "date": "2027-03-21",
@@ -91,8 +91,8 @@
       "priority": null,
       "notes": null,
       "url": null,
-      "days_until": 183,
-      "when": "in 183 days"
+      "days_until": 182,
+      "when": "in 182 days"
     },
     {
       "date": "2027-04-11",
@@ -104,8 +104,8 @@
       "priority": null,
       "notes": null,
       "url": "https://www.cararuns.org/lakefront10",
-      "days_until": 204,
-      "when": "in 204 days"
+      "days_until": 203,
+      "when": "in 203 days"
     },
     {
       "date": "2027-04-19",
@@ -117,8 +117,8 @@
       "priority": null,
       "notes": null,
       "url": "https://www.baa.org/races/boston-marathon/",
-      "days_until": 212,
-      "when": "in 212 days"
+      "days_until": 211,
+      "when": "in 211 days"
     },
     {
       "date": "2027-06-13",
@@ -130,8 +130,8 @@
       "priority": null,
       "notes": null,
       "url": "https://www.ironman.com/races/im703-rockford-illinois",
-      "days_until": 267,
-      "when": "in 267 days"
+      "days_until": 266,
+      "when": "in 266 days"
     },
     {
       "date": "2027-06-27",
@@ -143,8 +143,8 @@
       "priority": null,
       "notes": null,
       "url": "https://runsignup.com/Race/WI/PleasantPrairie/PleasantPrairieTriathlon",
-      "days_until": 281,
-      "when": "in 281 days"
+      "days_until": 280,
+      "when": "in 280 days"
     },
     {
       "date": "2027-07-11",
@@ -156,8 +156,8 @@
       "priority": null,
       "notes": null,
       "url": "https://lakezurichtriathlon.com/",
-      "days_until": 295,
-      "when": "in 295 days"
+      "days_until": 294,
+      "when": "in 294 days"
     },
     {
       "date": "2027-08-01",
@@ -169,8 +169,8 @@
       "priority": null,
       "notes": null,
       "url": "https://napervilletri.events/",
-      "days_until": 316,
-      "when": "in 316 days"
+      "days_until": 315,
+      "when": "in 315 days"
     },
     {
       "date": "2027-08-07",
@@ -182,8 +182,8 @@
       "priority": null,
       "notes": null,
       "url": "https://www.usatriathlon.org/get-racing/national-championships",
-      "days_until": 322,
-      "when": "in 322 days"
+      "days_until": 321,
+      "when": "in 321 days"
     },
     {
       "date": "2027-08-22",
@@ -195,8 +195,8 @@
       "priority": null,
       "notes": null,
       "url": "https://supertri.com/chicago",
-      "days_until": 337,
-      "when": "in 337 days"
+      "days_until": 336,
+      "when": "in 336 days"
     },
     {
       "date": "2027-09-08",
@@ -208,8 +208,8 @@
       "priority": "A",
       "notes": null,
       "url": "https://triathlon.org/events/2027-wtcf-hamburg",
-      "days_until": 354,
-      "when": "in 354 days"
+      "days_until": 353,
+      "when": "in 353 days"
     },
     {
       "date": "2027-09-12",
@@ -221,8 +221,8 @@
       "priority": "A",
       "notes": null,
       "url": "https://triathlon.org/events/2027-wtcf-hamburg",
-      "days_until": 358,
-      "when": "in 358 days"
+      "days_until": 357,
+      "when": "in 357 days"
     }
   ]
 }
