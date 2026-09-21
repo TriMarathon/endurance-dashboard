@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-21T12:50:11Z",
+  "generated_at": "2026-09-21T12:56:47Z",
   "reference_date": "2026-09-21",
   "current_load": {
     "date": "2026-09-21",
-    "ctl": 90.8,
-    "atl": 85.9,
+    "ctl": 91.0,
+    "atl": 86.2,
     "tss": 36.0,
-    "tsb": -1.4,
+    "tsb": -1.6,
     "load_ratio": 0.9,
     "ramp_rate": -1.9
   },
@@ -44,7 +44,7 @@
     "when": "in 20 days"
   },
   "thresholds": {
-    "ftp_watts": 210.0,
+    "ftp_watts": 206.0,
     "rftp_watts": 313.0,
     "css_pace": "1:46/100 yd",
     "swim_threshold_pace": "1:30/100 yd",
