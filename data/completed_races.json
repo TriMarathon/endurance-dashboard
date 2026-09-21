@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T14:10:11Z",
+  "generated_at": "2026-09-21T14:10:38Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-21",
   "count": 198,
@@ -647,7 +647,7 @@
     {
       "date": "2024-01-14",
       "activity_name": "ET Indoor Triathlon - Swim",
-      "category": null,
+      "category": "Indoor Triathlon",
       "duration_seconds": 673.7109985351562,
       "garmin_activity_id": 13504439204,
       "distance_meters": 566.9900292431724
