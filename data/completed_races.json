@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T15:17:53Z",
+  "generated_at": "2026-09-21T17:45:08Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-21",
   "count": 198,
@@ -1574,7 +1574,7 @@
     },
     {
       "date": "2015-08-08",
-      "activity_name": "Downers Grove Running",
+      "activity_name": "Gary Sinise Foundation 5k",
       "category": "5K",
       "duration_seconds": 1308.0,
       "garmin_activity_id": 962889209,

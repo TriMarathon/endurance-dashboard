@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T15:18:13Z",
+  "generated_at": "2026-09-21T17:45:27Z",
   "gear": [
     {
       "id": "15f7b270d3f44537b70921baf82dc3b8",
@@ -51,7 +51,7 @@
     },
     {
       "id": "6902c7b9cfdf43ee9478938237aa216e",
-      "name": "Forza 3",
+      "name": "GOrun Forza 3b Red/Gray",
       "type": "Shoes",
       "status": "active",
       "activity_count": 14,
@@ -106,20 +106,12 @@
       "distance_miles": 59.7
     },
     {
-      "id": "e0b1e50045e0497c85aca153b7abb24e",
-      "name": "Nike Invincible 3   Aluminum/Racer Blue",
-      "type": "Shoes",
-      "status": "active",
-      "activity_count": 17,
-      "distance_miles": 77.2
-    },
-    {
       "id": "4bdb992252a94e64b4f07a9f654eed13",
       "name": "Next% 3 Crimson Tint",
       "type": "Shoes",
       "status": "active",
-      "activity_count": 36,
-      "distance_miles": 240.8
+      "activity_count": 39,
+      "distance_miles": 261.8
     },
     {
       "id": "b8b1373689084a70bd0c0c59add47960",
@@ -134,8 +126,8 @@
       "name": "Nike ZoomX Vaporfly Next% 4   Ghost/Persian Violet/Football",
       "type": "Shoes",
       "status": "active",
-      "activity_count": 5,
-      "distance_miles": 29.7
+      "activity_count": 6,
+      "distance_miles": 51.2
     },
     {
       "id": "2244d42b2ff44d1596df3fc0da78f270",
@@ -423,7 +415,7 @@
       "type": "Shoes",
       "status": "retired",
       "activity_count": 57,
-      "distance_miles": 365.7
+      "distance_miles": 365.8
     },
     {
       "id": "adc2401264324b40a4767c87aa54cb25",
@@ -496,6 +488,14 @@
       "status": "retired",
       "activity_count": 23,
       "distance_miles": 156.7
+    },
+    {
+      "id": "e0b1e50045e0497c85aca153b7abb24e",
+      "name": "Nike Invincible 3   Aluminum/Racer Blue",
+      "type": "Shoes",
+      "status": "retired",
+      "activity_count": 17,
+      "distance_miles": 77.2
     },
     {
       "id": "e43edafb264e4041b79bf5905877e57b",
