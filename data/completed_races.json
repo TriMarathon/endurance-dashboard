@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T14:06:11Z",
+  "generated_at": "2026-09-21T14:06:51Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-21",
   "count": 198,
@@ -415,7 +415,7 @@
     {
       "date": "2025-02-16",
       "activity_name": "February ET Indoor Tri - Bike",
-      "category": null,
+      "category": "Indoor Triathlon",
       "duration_seconds": 1800.0,
       "garmin_activity_id": 18295947086,
       "distance_meters": 19038.54
@@ -423,7 +423,7 @@
     {
       "date": "2025-02-16",
       "activity_name": "February ET Indoor Tri - Swim",
-      "category": null,
+      "category": "Indoor Triathlon",
       "duration_seconds": 622.8800048828125,
       "garmin_activity_id": 18296539312,
       "distance_meters": 585.219970703125
