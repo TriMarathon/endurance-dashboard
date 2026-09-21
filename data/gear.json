@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T18:47:31Z",
+  "generated_at": "2026-09-21T19:05:01Z",
   "gear": [
     {
       "id": "15f7b270d3f44537b70921baf82dc3b8",
@@ -91,19 +91,6 @@
       "hours_of_use": null,
       "days_of_use": null,
       "first_use_date": "2024-04-30T00:00:00.0"
-    },
-    {
-      "id": "06d2376bec8a475eb7a4e4489716abb0",
-      "name": "Fizik Transiro Infinito R3",
-      "type": "Shoes",
-      "category": "Shoes",
-      "status": "active",
-      "activity_count": 25,
-      "distance_miles": 722.7,
-      "maximum_distance_miles": 4000.0,
-      "hours_of_use": null,
-      "days_of_use": null,
-      "first_use_date": "2023-05-19T00:00:00.0"
     },
     {
       "id": "46b822ba30a44ed288de39fdb96d0bf0",
@@ -455,6 +442,19 @@
       "hours_of_use": null,
       "days_of_use": null,
       "first_use_date": "2021-05-13T05:00:00.0"
+    },
+    {
+      "id": "06d2376bec8a475eb7a4e4489716abb0",
+      "name": "Fizik Transiro Infinito R3",
+      "type": "Shoes",
+      "category": "Shoes",
+      "status": "retired",
+      "activity_count": 25,
+      "distance_miles": 722.7,
+      "maximum_distance_miles": 4000.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2023-05-19T00:00:00.0"
     },
     {
       "id": "06e7ec9b64574f8bb96c574db4762cf5",
