@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T14:05:25Z",
+  "generated_at": "2026-09-21T14:06:11Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-21",
   "count": 198,
@@ -407,7 +407,7 @@
     {
       "date": "2025-02-16",
       "activity_name": "February ET Indoor Tri - Run",
-      "category": "5K",
+      "category": "Indoor Triathlon",
       "duration_seconds": 1230.137939453125,
       "garmin_activity_id": 18295947513,
       "distance_meters": 5359.31982421875
