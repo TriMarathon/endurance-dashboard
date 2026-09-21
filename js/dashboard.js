@@ -44,7 +44,6 @@ let healthRange = null;
 let overviewDoc = null;
 let overviewHealthDoc = null;
 let gearData = [];
-let gearSort = { key: 'default', direction: 'asc' };
 let gearFilter = 'active';
 
 let completedRacesData = [];
@@ -2150,100 +2149,104 @@ async function loadHealth() {
   }
 }
 
-function gearStatusRank(value) {
-  const status = String(value || '').toLowerCase();
-  if (status === 'active') return 0;
-  if (status === 'retired') return 1;
-  return 2;
+const GEAR_CATEGORY_ORDER = ['Shoes', 'Bikes', 'Bike Components', 'Other'];
+
+function gearRowsForFilter() {
+  return gearData.filter((row) => (
+    gearFilter === 'all'
+      || String(row.status || '').toLowerCase() === gearFilter
+  ));
 }
 
-function sortedGearRows() {
-  const rows = gearData.slice();
-  const filtered = rows.filter((r) => {
-    if (gearFilter === 'all') return true;
-    return String(r.status || '').toLowerCase() === gearFilter;
-  });
-  const { key, direction } = gearSort;
-  const factor = direction === 'desc' ? -1 : 1;
-  return filtered.sort((a, b) => {
-    if (key === 'default') {
-      return gearStatusRank(a.status) - gearStatusRank(b.status)
-        || String(a.type || '').localeCompare(String(b.type || ''))
-        || String(a.name || '').localeCompare(String(b.name || ''))
-        || String(a.id || '').localeCompare(String(b.id || ''));
-    }
-    const av = a[key];
-    const bv = b[key];
-    if (av == null && bv == null) return 0;
-    if (av == null) return 1;
-    if (bv == null) return -1;
-    if (typeof av === 'number' && typeof bv === 'number') return factor * (av - bv);
-    return factor * String(av).localeCompare(String(bv));
-  });
+function gearCategory(row) {
+  return GEAR_CATEGORY_ORDER.includes(row.category) ? row.category : 'Other';
+}
+
+function groupedGearRows(rows) {
+  const groups = new Map(GEAR_CATEGORY_ORDER.map((category) => [category, []]));
+  rows.forEach((row) => groups.get(gearCategory(row)).push(row));
+  groups.forEach((group) => group.sort((a, b) => (
+    String(a.name || '').localeCompare(String(b.name || ''))
+      || String(a.id || '').localeCompare(String(b.id || ''))
+  )));
+  return GEAR_CATEGORY_ORDER
+    .map((category) => [category, groups.get(category)])
+    .filter(([, group]) => group.length > 0);
+}
+
+function formatGearMiles(value) {
+  return typeof value === 'number' && Number.isFinite(value)
+    ? `${value.toFixed(1)} mi`
+    : null;
+}
+
+function formatGearFirstUse(value) {
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}/.test(value)) return null;
+  const [year, month, day] = value.slice(0, 10).split('-').map(Number);
+  const date = new Date(year, month - 1, day);
+  return Number.isNaN(date.getTime()) ? null : new Intl.DateTimeFormat('en-US', {
+    month: 'short', day: 'numeric', year: 'numeric',
+  }).format(date);
+}
+
+function gearMetric(label, value) {
+  if (value == null || value === '') return '';
+  return `<div class="gear-metric"><strong>${escapeHtml(String(value))}</strong><span>${escapeHtml(label)}</span></div>`;
+}
+
+function renderGearCard(row) {
+  const distance = formatGearMiles(row.distance_miles);
+  const maximum = formatGearMiles(row.maximum_distance_miles);
+  const hasTarget = distance && maximum && row.maximum_distance_miles > 0;
+  const percent = hasTarget
+    ? Math.min(100, Math.max(0, (row.distance_miles / row.maximum_distance_miles) * 100))
+    : null;
+  const retiredInAll = gearFilter === 'all' && String(row.status || '').toLowerCase() === 'retired';
+  const target = hasTarget
+    ? `<div class="gear-target"><div class="gear-target-text">${distance} <span>of ${maximum}</span></div><div class="gear-progress" role="progressbar" aria-label="${escapeHtml(row.name || 'Gear')} distance target" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(percent)}"><span style="width:${percent}%"></span></div></div>`
+    : '';
+  const metrics = [
+    gearMetric('Distance', distance),
+    gearMetric('Activities', typeof row.activity_count === 'number' ? row.activity_count.toLocaleString('en-US') : null),
+    gearMetric('First Use', formatGearFirstUse(row.first_use_date)),
+    gearMetric('Hours of Use', row.hours_of_use),
+    gearMetric('Days of Use', row.days_of_use),
+  ].filter(Boolean).join('');
+  return `<article class="gear-card">
+    <div class="gear-card-heading"><h3>${escapeHtml(row.name || 'Unnamed gear')}</h3>${retiredInAll ? '<span class="gear-retired">Retired</span>' : ''}</div>
+    ${target}
+    ${metrics ? `<div class="gear-metrics">${metrics}</div>` : ''}
+  </article>`;
 }
 
 function renderGear() {
   const container = document.getElementById('gear-container');
   if (!container) return;
-  // compact filter control above the table
   const filterHtml = `
-    <div style="margin-bottom:8px">
-      <label style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;margin-right:8px">Show</label>
-      <select id="gear-filter" aria-label="Filter gear" style="padding:4px 8px;border-radius:6px;border:1px solid var(--panel-border);background:transparent;color:var(--text);font-size:13px">
-        <option value="active">Active</option>
-        <option value="retired">Retired</option>
-        <option value="all">All</option>
-      </select>
+    <div class="gear-filter" role="group" aria-label="Filter gear by status">
+      ${['active', 'retired', 'all'].map((status) => `<button type="button" class="gear-filter-button${gearFilter === status ? ' is-selected' : ''}" data-gear-filter="${status}" aria-pressed="${gearFilter === status}">${status[0].toUpperCase() + status.slice(1)}</button>`).join('')}
     </div>`;
   container.innerHTML = filterHtml;
-  const filterEl = container.querySelector('#gear-filter');
-  if (filterEl) {
-    filterEl.value = gearFilter;
-    filterEl.addEventListener('change', (e) => {
-      gearFilter = e.target.value;
+  container.querySelectorAll('[data-gear-filter]').forEach((button) => {
+    button.addEventListener('click', () => {
+      gearFilter = button.getAttribute('data-gear-filter');
       renderGear();
     });
-  }
+  });
   if (gearData.length === 0) {
     container.insertAdjacentHTML('beforeend', '<p class="gear-empty">No gear found.</p>');
     return;
   }
-  const columns = [
-    ['name', 'Gear'],
-    ['type', 'Type'],
-    ['status', 'Status'],
-    ['activity_count', 'Activities'],
-    ['distance_miles', 'Distance'],
-  ];
-  let html = '<div class="gear-table-scroll"><table class="gear-table"><thead><tr>';
-  columns.forEach(([key, label]) => {
-    const active = gearSort.key === key;
-    const ariaSort = active ? (gearSort.direction === 'asc' ? 'ascending' : 'descending') : 'none';
-    const marker = active ? (gearSort.direction === 'asc' ? ' ↑' : ' ↓') : '';
-    html += `<th aria-sort="${ariaSort}"><button type="button" class="gear-sort" data-gear-sort="${key}">${label}${marker}</button></th>`;
-  });
-  html += '</tr></thead><tbody>';
-  sortedGearRows().forEach((row) => {
-    const distance = typeof row.distance_miles === 'number' ? `${row.distance_miles.toFixed(1)} mi` : '—';
-    html += '<tr>'
-      + `<td class="gear-col-name">${escapeHtml(row.name || '—')}</td>`
-      + `<td>${escapeHtml(row.type || '—')}</td>`
-      + `<td><span class="status-badge">${escapeHtml(row.status || '—')}</span></td>`
-      + `<td class="gear-col-number">${typeof row.activity_count === 'number' ? row.activity_count.toLocaleString('en-US') : '—'}</td>`
-      + `<td class="gear-col-number">${distance}</td>`
-      + '</tr>';
-  });
-  html += '</tbody></table></div>';
-  container.insertAdjacentHTML('beforeend', html);
-  container.querySelectorAll('[data-gear-sort]').forEach((button) => {
-    button.addEventListener('click', () => {
-      const key = button.getAttribute('data-gear-sort');
-      gearSort = gearSort.key === key
-        ? { key, direction: gearSort.direction === 'asc' ? 'desc' : 'asc' }
-        : { key, direction: 'asc' };
-      renderGear();
-    });
-  });
+  const groups = groupedGearRows(gearRowsForFilter());
+  if (groups.length === 0) {
+    container.insertAdjacentHTML('beforeend', `<p class="gear-empty">No ${escapeHtml(gearFilter)} gear found.</p>`);
+    return;
+  }
+  container.insertAdjacentHTML('beforeend', groups.map(([category, rows]) => `
+    <section class="gear-category" aria-labelledby="gear-category-${category.toLowerCase().replace(/[^a-z]+/g, '-')}">
+      <h3 id="gear-category-${category.toLowerCase().replace(/[^a-z]+/g, '-')}">${escapeHtml(category)}</h3>
+      <div class="gear-cards">${rows.map(renderGearCard).join('')}</div>
+    </section>`).join(''));
 }
 
 async function loadGear() {

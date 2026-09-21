@@ -1,0 +1,53 @@
+#!/usr/bin/env osascript -l JavaScript
+// Run from the dashboard checkout:
+// DASHBOARD_JS=js/dashboard.js osascript -l JavaScript tests/gear-render-smoke.jxa
+
+ObjC.import('Foundation');
+
+const sourcePath = ObjC.unwrap(
+  $.NSProcessInfo.processInfo.environment.objectForKey('DASHBOARD_JS')
+);
+if (!sourcePath) {
+  throw new Error('Set DASHBOARD_JS to the dashboard.js path before running this test.');
+}
+
+var document = {
+  addEventListener: function () {},
+  createElement: function () {
+    var value = '';
+    return {
+      set textContent(v) { value = String(v); },
+      get innerHTML() { return value; },
+    };
+  },
+};
+var window = {};
+var history = {};
+
+var source = ObjC.unwrap($.NSString.stringWithContentsOfFileEncodingError(
+  sourcePath,
+  $.NSUTF8StringEncoding,
+  null
+));
+
+source += `
+gearData = [
+  {id: 'shoe', name: 'Shoe', category: 'Shoes', status: 'active', distance_miles: 82.7, maximum_distance_miles: 400, activity_count: 7, first_use_date: '2025-04-21T00:00:00.0', hours_of_use: null, days_of_use: null},
+  {id: 'bike', name: 'Bike', category: 'Bikes', status: 'active'},
+  {id: 'component', name: 'Chain', category: 'Bike Components', status: 'retired'},
+  {id: 'unknown', name: 'Unknown', category: 'Unexpected', status: 'retired'}
+];
+gearFilter = 'active';
+var activeGroups = groupedGearRows(gearRowsForFilter());
+if (activeGroups.length !== 2 || activeGroups[0][0] !== 'Shoes' || activeGroups[1][0] !== 'Bikes') throw new Error('Active filter/category grouping failed');
+gearFilter = 'all';
+var allGroups = groupedGearRows(gearRowsForFilter());
+if (allGroups.length !== 4 || allGroups[3][0] !== 'Other') throw new Error('All filter/Other fallback failed');
+var targetCard = renderGearCard({name: 'Over target', distance_miles: 450, maximum_distance_miles: 400, activity_count: 2, first_use_date: '2025-04-21', hours_of_use: null, days_of_use: null, status: 'retired'});
+if (targetCard.indexOf('450.0 mi') < 0 || targetCard.indexOf('of 400.0 mi') < 0 || targetCard.indexOf('width:100%') < 0 || targetCard.indexOf('Apr 21, 2025') < 0 || targetCard.indexOf('Hours of Use') >= 0 || targetCard.indexOf('Days of Use') >= 0) throw new Error('Target, first-use, or null-metric rendering failed');
+var noTargetCard = renderGearCard({name: 'No target', distance_miles: 10, maximum_distance_miles: null, status: 'active'});
+if (noTargetCard.indexOf('gear-progress') >= 0 || noTargetCard.indexOf('10.0 mi') < 0) throw new Error('No-target rendering failed');
+console.log('gear-render smoke tests passed');
+`;
+
+eval(source);
