@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T12:56:46Z",
+  "generated_at": "2026-09-21T13:55:43Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-21",
   "count": 198,
@@ -175,7 +175,7 @@
     {
       "date": "2026-03-14",
       "activity_name": "Core Indoor Triathlon - Run",
-      "category": null,
+      "category": "Indoor Triathlon",
       "duration_seconds": 912.4210205078125,
       "garmin_activity_id": 22172909290,
       "distance_meters": 3368.14990234375
