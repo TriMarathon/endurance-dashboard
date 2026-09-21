@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T18:31:41Z",
+  "generated_at": "2026-09-21T18:47:31Z",
   "gear": [
     {
       "id": "15f7b270d3f44537b70921baf82dc3b8",
@@ -104,19 +104,6 @@
       "hours_of_use": null,
       "days_of_use": null,
       "first_use_date": "2023-05-19T00:00:00.0"
-    },
-    {
-      "id": "376eb1484abc43668b44b60e2758e2d5",
-      "name": "Specialized Torch 1.0",
-      "type": "Shoes",
-      "category": "Shoes",
-      "status": "active",
-      "activity_count": 142,
-      "distance_miles": 2787.1,
-      "maximum_distance_miles": 4000.0,
-      "hours_of_use": null,
-      "days_of_use": null,
-      "first_use_date": "2022-05-15T00:00:00.0"
     },
     {
       "id": "46b822ba30a44ed288de39fdb96d0bf0",
@@ -520,6 +507,19 @@
       "hours_of_use": null,
       "days_of_use": null,
       "first_use_date": "2024-04-28T00:00:00.0"
+    },
+    {
+      "id": "376eb1484abc43668b44b60e2758e2d5",
+      "name": "Specialized Torch 1.0",
+      "type": "Shoes",
+      "category": "Shoes",
+      "status": "retired",
+      "activity_count": 142,
+      "distance_miles": 2787.1,
+      "maximum_distance_miles": 4000.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2022-05-15T00:00:00.0"
     },
     {
       "id": "3816712052964ce9aa8d05c053ea40d9",
