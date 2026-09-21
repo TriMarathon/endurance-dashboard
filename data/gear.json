@@ -1,733 +1,1188 @@
 {
-  "generated_at": "2026-09-21T17:45:27Z",
+  "generated_at": "2026-09-21T18:15:08Z",
   "gear": [
     {
       "id": "15f7b270d3f44537b70921baf82dc3b8",
       "name": "Domane AL5",
       "type": "Bike",
+      "category": "Bikes",
       "status": "active",
       "activity_count": 213,
-      "distance_miles": 4782.1
+      "distance_miles": 4782.1,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2022-07-08T00:00:00.0"
     },
     {
       "id": "78b5a3daf9fc4af5a00cfae0db452e0d",
       "name": "Cervelo P-Series",
       "type": "Bike",
+      "category": "Bikes",
       "status": "active",
       "activity_count": 36,
-      "distance_miles": 721.7
+      "distance_miles": 721.7,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2024-06-08T00:00:00.0"
     },
     {
       "id": "31938112e28346059ff3f4b1e475eee1",
       "name": "ON - P-Series CN-HG601A (TL)",
       "type": "Other",
+      "category": "Other",
       "status": "active",
       "activity_count": 24,
-      "distance_miles": 458.0
+      "distance_miles": 458.0,
+      "maximum_distance_miles": 602.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2024-06-08T00:00:00.0"
     },
     {
       "id": "44bc00fbc73c4b34b3011593cccd9192",
       "name": "off - AL5-CN-HG601A (TJ)",
       "type": "Other",
+      "category": "Other",
       "status": "active",
       "activity_count": 104,
-      "distance_miles": 2369.0
+      "distance_miles": 2369.0,
+      "maximum_distance_miles": 2569.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2022-07-08T00:00:00.0"
     },
     {
       "id": "7c4540589cc940bd9d3bc66c3ddf97be",
       "name": "OFF - P-Series CN-HG901 (XD)",
       "type": "Other",
+      "category": "Other",
       "status": "active",
       "activity_count": 2,
-      "distance_miles": 24.1
+      "distance_miles": 24.1,
+      "maximum_distance_miles": 20.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2026-07-26T00:00:00.0"
     },
     {
       "id": "8636c59eb05f4364880ed2894bf65233",
       "name": "on - AL5 SRAM PC-RED22",
       "type": "Other",
+      "category": "Other",
       "status": "active",
       "activity_count": 32,
-      "distance_miles": 781.5
+      "distance_miles": 781.5,
+      "maximum_distance_miles": 711.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2023-06-11T00:00:00.0"
     },
     {
       "id": "6902c7b9cfdf43ee9478938237aa216e",
       "name": "GOrun Forza 3b Red/Gray",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "active",
       "activity_count": 14,
-      "distance_miles": 90.3
+      "distance_miles": 90.3,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2024-04-30T00:00:00.0"
     },
     {
       "id": "06d2376bec8a475eb7a4e4489716abb0",
       "name": "Fizik Transiro Infinito R3",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "active",
       "activity_count": 25,
-      "distance_miles": 722.7
+      "distance_miles": 722.7,
+      "maximum_distance_miles": 4000.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2023-05-19T00:00:00.0"
     },
     {
       "id": "376eb1484abc43668b44b60e2758e2d5",
       "name": "Specialized Torch 1.0",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "active",
       "activity_count": 142,
-      "distance_miles": 2787.1
+      "distance_miles": 2787.1,
+      "maximum_distance_miles": 4000.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2022-05-15T00:00:00.0"
     },
     {
       "id": "46b822ba30a44ed288de39fdb96d0bf0",
       "name": "Nike InfinityRN4 Oil Green",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "active",
       "activity_count": 40,
-      "distance_miles": 231.1
+      "distance_miles": 231.1,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2025-03-12T00:00:00.0"
     },
     {
       "id": "5ef6093ecebb410fb3ae3ec9731b54dd",
       "name": "New Balance XC Seven v3",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "active",
       "activity_count": 13,
-      "distance_miles": 28.5
+      "distance_miles": 28.5,
+      "maximum_distance_miles": 300.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2021-11-07T05:00:00.0"
     },
     {
       "id": "8264884ced3641c7b83aa2ec5ee11b2b",
       "name": "Nike Air Zoom Alphafly NEXT% Flyknit White",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "active",
       "activity_count": 7,
-      "distance_miles": 82.7
+      "distance_miles": 82.7,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2025-04-21T00:00:00.0"
     },
     {
       "id": "8844376bbbc54f95a4bd1af3853ca263",
       "name": "Nike Steakfly White",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "active",
       "activity_count": 13,
-      "distance_miles": 59.7
+      "distance_miles": 59.7,
+      "maximum_distance_miles": 300.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2024-03-24T00:00:00.0"
     },
     {
       "id": "4bdb992252a94e64b4f07a9f654eed13",
       "name": "Next% 3 Crimson Tint",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "active",
       "activity_count": 39,
-      "distance_miles": 261.8
+      "distance_miles": 261.8,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2026-07-20T00:00:00.0"
     },
     {
       "id": "b8b1373689084a70bd0c0c59add47960",
       "name": "Nike Alphafly 3 Bright Crimson/Lime Blast/Mint Foam/Cave Purple",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "active",
       "activity_count": 1,
-      "distance_miles": 26.2
+      "distance_miles": 26.2,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2026-04-20T00:00:00.0"
     },
     {
       "id": "1b4311125fe64951917400208311e665",
       "name": "Nike ZoomX Vaporfly Next% 4   Ghost/Persian Violet/Football",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "active",
       "activity_count": 6,
-      "distance_miles": 51.2
+      "distance_miles": 51.2,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2026-03-22T00:00:00.0"
     },
     {
       "id": "2244d42b2ff44d1596df3fc0da78f270",
       "name": "Spike",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "active",
       "activity_count": 21,
-      "distance_miles": 155.3
+      "distance_miles": 155.3,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2019-09-14T05:00:00.0"
     },
     {
       "id": "d287e0c445534cb99a2092deb0ba7687",
       "name": "Triathlon",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "active",
       "activity_count": 5,
-      "distance_miles": 78.9
+      "distance_miles": 78.9,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2024-04-15T00:00:00.0"
     },
     {
       "id": "1bdfefe78b1a47ee806f1f18c65e8618",
       "name": "P-Series-CN-HG901A (HS)",
       "type": "Other",
+      "category": "Other",
       "status": "retired",
       "activity_count": 90,
-      "distance_miles": 1879.0
+      "distance_miles": 1879.0,
+      "maximum_distance_miles": 2060.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2022-08-07T00:00:00.0"
     },
     {
       "id": "3a99e2dc95784af79becb8bd9bf02690",
       "name": "Superfeet Comfort Max",
       "type": "Other",
+      "category": "Other",
       "status": "retired",
       "activity_count": 77,
-      "distance_miles": 440.2
+      "distance_miles": 440.2,
+      "maximum_distance_miles": 500.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2020-07-03T05:00:00.0"
     },
     {
       "id": "461b76f6b9934d7ca740900f6d860ebe",
       "name": "Powerstep Original",
       "type": "Other",
+      "category": "Other",
       "status": "retired",
       "activity_count": 7,
-      "distance_miles": 61.1
+      "distance_miles": 61.1,
+      "maximum_distance_miles": 500.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2019-05-11T05:00:00.0"
     },
     {
       "id": "78e8fc134f9e4d8f9c4c224d703f0fd4",
       "name": "Superfeet Carbon I 12.0",
       "type": "Other",
+      "category": "Other",
       "status": "retired",
       "activity_count": 15,
-      "distance_miles": 47.5
+      "distance_miles": 47.5,
+      "maximum_distance_miles": 500.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2019-05-16T05:00:00.0"
     },
     {
       "id": "0783f74d2783461e874c13ab3dc0b79f",
       "name": "Nike Zoom Fly 3 white",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 67,
-      "distance_miles": 482.9
+      "distance_miles": 482.9,
+      "maximum_distance_miles": 450.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2020-02-12T06:00:00.0"
     },
     {
       "id": "25ab1c4c0a7a4764a2248bfbd139b30c",
       "name": "ASICS Gel DS Racer 10 Red",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 58,
-      "distance_miles": 203.0
+      "distance_miles": 203.0,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2015-09-19T05:00:00.0"
     },
     {
       "id": "29e8fcbbfe824db9b56ba39ffe5ea8a4",
       "name": "ASICS GT-2000 Lime",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 27,
-      "distance_miles": 148.7
+      "distance_miles": 148.7,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2015-01-14T06:00:00.0"
     },
     {
       "id": "6050326de6cb4571ae2d041c02904737",
       "name": "Mizuno Wave Paradox White",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 39,
-      "distance_miles": 303.0
+      "distance_miles": 303.0,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2015-07-28T05:00:00.0"
     },
     {
       "id": "7fc6f359a75741e19e2604ff0b77845f",
       "name": "Mizuno Wave Inspire 10 White No1",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 53,
-      "distance_miles": 350.7
+      "distance_miles": 350.7,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2015-02-20T06:00:00.0"
     },
     {
       "id": "8d7db77226c44e22ab8eb5b8c6820cd6",
       "name": "Mizuno Wave Inspire 10 ChiRed",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 47,
-      "distance_miles": 334.6
+      "distance_miles": 334.6,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2015-08-23T05:00:00.0"
     },
     {
       "id": "8fe38f43127d4047b19a6741fda3b822",
       "name": "Mizuno Wave Inspire 11 Alloy",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 62,
-      "distance_miles": 445.6
+      "distance_miles": 445.6,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2015-11-21T06:00:00.0"
     },
     {
       "id": "a87c6e8b6f3f49049b45fd21190db14b",
       "name": "Mizuno Wave Inspire 10 Dark Blue",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 48,
-      "distance_miles": 288.8
+      "distance_miles": 288.8,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2015-05-09T05:00:00.0"
     },
     {
       "id": "e08c6be83cd0411fb365bc35d42d7d8a",
       "name": "Wave Inspire 10 201601white2",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 66,
-      "distance_miles": 409.8
+      "distance_miles": 409.8,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2016-01-01T06:00:00.0"
     },
     {
       "id": "e154b0b35d8f4a19bfeb19d2a7dfdce1",
       "name": "Brooks Hyperion Elite 3",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 50,
-      "distance_miles": 416.1
+      "distance_miles": 416.1,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2024-12-25T00:00:00.0"
     },
     {
       "id": "e5ed2c0433e64d3ab3e82afbb472be47",
       "name": "NB 1500v2 Gn/Gy",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 85,
-      "distance_miles": 412.5
+      "distance_miles": 412.5,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2016-11-20T06:00:00.0"
     },
     {
       "id": "f3f6411be3624d5881039e8c04c0cc9b",
       "name": "Mizuno Wave Inspire 10 Blue",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 36,
-      "distance_miles": 273.4
+      "distance_miles": 273.4,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2015-05-28T05:00:00.0"
     },
     {
       "id": "fbd059ff950349969c3bc1b0bc732612",
       "name": "ASICS GT-3000 White",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 34,
-      "distance_miles": 214.5
+      "distance_miles": 214.5,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2015-01-29T06:00:00.0"
     },
     {
       "id": "0681662927304600b17e54f6e8cc5acc",
       "name": "Hoka Bondi 6",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 45,
-      "distance_miles": 319.2
+      "distance_miles": 319.2,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2021-05-13T05:00:00.0"
     },
     {
       "id": "06e7ec9b64574f8bb96c574db4762cf5",
       "name": "New Balance 1500v3 #1 Berlin 2018",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 28,
-      "distance_miles": 199.9
+      "distance_miles": 199.9,
+      "maximum_distance_miles": 300.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2018-08-25T05:00:00.0"
     },
     {
       "id": "082e4e01f99e4ec3a0f2fa55f7693efc",
       "name": "Nike Invincible 3   Light Cream Coconut Milk/Oxygen Purple/Light Orew",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 47,
-      "distance_miles": 294.1
+      "distance_miles": 294.1,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2025-08-29T00:00:00.0"
     },
     {
       "id": "30b8c1cfcd124b529fa4e3f0d5ace16e",
       "name": "Nike Air Zoom Tempo Next% Flyknit Racer Blue",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 61,
-      "distance_miles": 447.8
+      "distance_miles": 447.8,
+      "maximum_distance_miles": 450.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2022-12-16T18:00:00.0"
     },
     {
       "id": "349401ca530749af8e7c71f5ab9e0f48",
       "name": "Nike ZoomX Vaporfly Next% 2 Red Clay/Ghost Green/Phantom/Game Royal",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 64,
-      "distance_miles": 397.7
+      "distance_miles": 397.7,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2024-04-28T00:00:00.0"
     },
     {
       "id": "3816712052964ce9aa8d05c053ea40d9",
       "name": "Saucony Type A",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 20,
-      "distance_miles": 62.4
+      "distance_miles": 62.4,
+      "maximum_distance_miles": 175.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2017-08-26T05:00:00.0"
     },
     {
       "id": "4736bb0529ab498dbec6810d1ef20ae4",
       "name": "Nike ZoomX Invincible Run Volt",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 58,
-      "distance_miles": 356.3
+      "distance_miles": 356.3,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2021-12-25T06:00:00.0"
     },
     {
       "id": "47395418eee8468d9fde75c9d5fe392b",
       "name": "Nike Invincible 3 White",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 81,
-      "distance_miles": 464.7
+      "distance_miles": 464.7,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2024-06-25T00:00:00.0"
     },
     {
       "id": "4f581f1da84e4260b8dbf792521d7df6",
       "name": "Nike ZoomX Invincible Run    Rawdacious",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 79,
-      "distance_miles": 446.5
+      "distance_miles": 446.5,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2021-07-30T05:00:00.0"
     },
     {
       "id": "5579b68ff30241aa9e1fb39918696a58",
       "name": "Nike Zoom Fly 3 Chicago",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 69,
-      "distance_miles": 389.8
+      "distance_miles": 389.8,
+      "maximum_distance_miles": 450.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2020-07-29T05:00:00.0"
     },
     {
       "id": "6ce8d08f4ed14b88bc4861363f9d45a3",
       "name": "Nike ZoomX Inv Run Phantom/Football Grey/Volt/Black",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 60,
-      "distance_miles": 318.9
+      "distance_miles": 318.9,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2022-08-12T05:00:00.0"
     },
     {
       "id": "709e37097b9e43709bf4f48d0f301f25",
       "name": "New Balance 1500v3 12 Speedwork",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 58,
-      "distance_miles": 299.7
+      "distance_miles": 299.7,
+      "maximum_distance_miles": 300.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2019-01-23T06:00:00.0"
     },
     {
       "id": "7401082e12b14bdd90730e6f4bbd7d3e",
       "name": "Nike Zoom Fly Flyknit Black/Gunsmoke",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 49,
-      "distance_miles": 424.9
+      "distance_miles": 424.9,
+      "maximum_distance_miles": 350.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2021-05-27T05:00:00.0"
     },
     {
       "id": "76bea6d8e2d34f049c284cf365c468a3",
       "name": "Nike Zoom Fly 3",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 66,
-      "distance_miles": 502.0
+      "distance_miles": 502.0,
+      "maximum_distance_miles": 500.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2019-09-28T05:00:00.0"
     },
     {
       "id": "89227946f1fa4c4788cfe90c66281c3a",
       "name": "Nike Zoom Fly 3 Chicago II",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 38,
-      "distance_miles": 363.3
+      "distance_miles": 363.3,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2021-07-04T05:00:00.0"
     },
     {
       "id": "8b577674bcdc4307ba16f4fdc5ec512e",
       "name": "Brooks Hyperion Elite 3 U Shoe Bl/Ch",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 58,
-      "distance_miles": 408.9
+      "distance_miles": 408.9,
+      "maximum_distance_miles": 450.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2024-05-12T00:00:00.0"
     },
     {
       "id": "a73064846fcf4d58860d3eddce1a0dcf",
       "name": "Nike Vaporfly 2 Barely Volt",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 57,
-      "distance_miles": 365.8
+      "distance_miles": 365.8,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2025-04-06T00:00:00.0"
     },
     {
       "id": "adc2401264324b40a4767c87aa54cb25",
       "name": "Nike ZoomX Vaporfly Next%",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 60,
-      "distance_miles": 496.6
+      "distance_miles": 496.6,
+      "maximum_distance_miles": 450.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2019-10-27T04:00:00.0"
     },
     {
       "id": "adff9b6150e94647a2ca190f90ca3e23",
       "name": "New Balance 1500 T2 Tokyo 2019",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 16,
-      "distance_miles": 114.6
+      "distance_miles": 114.6,
+      "maximum_distance_miles": 300.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2019-02-21T06:00:00.0"
     },
     {
       "id": "b05e4bf0dd8b4afcad00378a34e5d35e",
       "name": "﻿Nike ZoomX Vaporfly Next% 2 Aurora Green",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 60,
-      "distance_miles": 576.1
+      "distance_miles": 576.1,
+      "maximum_distance_miles": 350.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2021-09-24T10:00:00.0"
     },
     {
       "id": "bd6268c11851467b9f6fc0dabe0bf4c9",
       "name": "Nike Vaporfly 2 BRS",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 45,
-      "distance_miles": 349.5
+      "distance_miles": 349.5,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2025-11-27T00:00:00.0"
     },
     {
       "id": "bd94968ba567410e8f559c3ee57ddd64",
       "name": "Nike Air Zoom Tempo Next% Flyknit Hakone",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 49,
-      "distance_miles": 460.5
+      "distance_miles": 460.5,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2022-01-30T06:00:00.0"
     },
     {
       "id": "bf79b65dad294286885e1f214f7a9cb6",
       "name": "Mizuno Wave Paradox 2",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 43,
-      "distance_miles": 328.3
+      "distance_miles": 328.3,
+      "maximum_distance_miles": 450.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2016-11-05T05:00:00.0"
     },
     {
       "id": "caab1f0445de4c838c3f99ae66eb7841",
       "name": "Nike Zoom Fly 3 corona",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 52,
-      "distance_miles": 331.5
+      "distance_miles": 331.5,
+      "maximum_distance_miles": 500.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2020-04-26T05:00:00.0"
     },
     {
       "id": "d81c8ae21fd54d9d83082199482eb7b1",
       "name": "Nike Zoom Fly Flyknit Bright Crimson-obsidian Mist",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 53,
-      "distance_miles": 403.9
+      "distance_miles": 403.9,
+      "maximum_distance_miles": 350.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2019-09-22T05:00:00.0"
     },
     {
       "id": "ded3486233fa4881b66aa9bb20268125",
       "name": "Adidas adizero Tempo 9 #1",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 23,
-      "distance_miles": 156.7
+      "distance_miles": 156.7,
+      "maximum_distance_miles": 350.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2018-12-30T06:00:00.0"
     },
     {
       "id": "e0b1e50045e0497c85aca153b7abb24e",
       "name": "Nike Invincible 3   Aluminum/Racer Blue",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 17,
-      "distance_miles": 77.2
+      "distance_miles": 77.2,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2026-02-14T00:00:00.0"
     },
     {
       "id": "e43edafb264e4041b79bf5905877e57b",
       "name": "Nike Odysee React",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 37,
-      "distance_miles": 255.9
+      "distance_miles": 255.9,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2019-09-15T05:00:00.0"
     },
     {
       "id": "ee0bd4ccc42648b3b6754f3c9020a70d",
       "name": "Sketchers GOrun Forza 3 San Diego",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 39,
-      "distance_miles": 355.8
+      "distance_miles": 355.8,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2019-08-11T00:00:00.0"
     },
     {
       "id": "fbcaf668422c410fa60ed8e154d8296b",
       "name": "Nike ZoomX Vaporfly Next% 3 Blk/Crimson Tint",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 39,
-      "distance_miles": 396.9
+      "distance_miles": 396.9,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2026-02-14T00:00:00.0"
     },
     {
       "id": "34309e4308984de78b7058dee5f5d00b",
       "name": "10blk",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 62,
-      "distance_miles": 394.5
+      "distance_miles": 394.5,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2016-03-05T06:00:00.0"
     },
     {
       "id": "b122a27f1cc146d89957f9643426d484",
       "name": "201605blk",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 39,
-      "distance_miles": 262.3
+      "distance_miles": 262.3,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2016-05-07T05:00:00.0"
     },
     {
       "id": "6de9a149f6684e76869c4b07d4fbd1b1",
       "name": "Alloy3",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 54,
-      "distance_miles": 435.6
+      "distance_miles": 435.6,
+      "maximum_distance_miles": 450.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2017-05-06T05:00:00.0"
     },
     {
       "id": "d21dae6ac94142ecb15808925cfaa62d",
       "name": "Alpha Volt 1",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 67,
-      "distance_miles": 492.1
+      "distance_miles": 492.1,
+      "maximum_distance_miles": 450.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2023-04-09T00:00:00.0"
     },
     {
       "id": "2f0c312e2c4140e3a79dcdb16a15c3cc",
       "name": "Barely Volt",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 52,
-      "distance_miles": 426.2
+      "distance_miles": 426.2,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2022-09-30T00:00:00.0"
     },
     {
       "id": "719346b68f5840d3b1f6692418768ccc",
       "name": "Berlin",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 51,
-      "distance_miles": 489.0
+      "distance_miles": 489.0,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2023-09-21T00:00:00.0"
     },
     {
       "id": "044543caf80e4bf9955a8581d1bab51e",
       "name": "Black-2",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 52,
-      "distance_miles": 351.2
+      "distance_miles": 351.2,
+      "maximum_distance_miles": 450.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2018-01-30T06:00:00.0"
     },
     {
       "id": "8ac7ac6c1f2f4811b953e58dd6b829a7",
       "name": "blue WI11",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 52,
-      "distance_miles": 390.9
+      "distance_miles": 390.9,
+      "maximum_distance_miles": 450.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2017-07-29T05:00:00.0"
     },
     {
       "id": "e12d2411e73c4beab2720cd9871cad09",
       "name": "Boston 2022",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 67,
-      "distance_miles": 438.9
+      "distance_miles": 438.9,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2022-04-16T00:00:00.0"
     },
     {
       "id": "60922815e868413aa18271bdd9ba313d",
       "name": "Chicago 2017",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 36,
-      "distance_miles": 263.9
+      "distance_miles": 263.9,
+      "maximum_distance_miles": 300.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2017-09-30T05:00:00.0"
     },
     {
       "id": "c800da8bc3fc4eca90ab632d95b85258",
       "name": "Fastwitch red 1",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 48,
-      "distance_miles": 219.4
+      "distance_miles": 219.4,
+      "maximum_distance_miles": 350.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2017-09-09T05:00:00.0"
     },
     {
       "id": "969226dd948d4e8292ce5900c4a31186",
       "name": "Forza NY2015",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 78,
-      "distance_miles": 377.3
+      "distance_miles": 377.3,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2016-09-18T05:00:00.0"
     },
     {
       "id": "ea7e28201ba94754aaccc65d48e71944",
       "name": "Germany 19",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 57,
-      "distance_miles": 401.3
+      "distance_miles": 401.3,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2019-03-22T05:00:00.0"
     },
     {
       "id": "d05d1f41d14f4f69be05ab96d80ea74e",
       "name": "Inspire 11 Alloy2",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 35,
-      "distance_miles": 318.0
+      "distance_miles": 318.0,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2016-03-06T06:00:00.0"
     },
     {
       "id": "4100e72495f040d3841d4a13a4ef9160",
       "name": "LA Blue",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 61,
-      "distance_miles": 396.0
+      "distance_miles": 396.0,
+      "maximum_distance_miles": 450.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2018-03-05T08:00:00.0"
     },
     {
       "id": "eca964f8826140789a7fbca87a442cb6",
       "name": "Next% 3 Pink",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 69,
-      "distance_miles": 401.5
+      "distance_miles": 401.5,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2026-04-05T00:00:00.0"
     },
     {
       "id": "e5754c14427348c28adf9e5ec9a85a7b",
       "name": "Nike Vaporfly 2 Black",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 44,
-      "distance_miles": 347.4
+      "distance_miles": 347.4,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2024-11-24T00:00:00.0"
     },
     {
       "id": "14cc0c9ec8c74bde934347cb5e4b5489",
       "name": "Taipai2018",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 62,
-      "distance_miles": 431.1
+      "distance_miles": 431.1,
+      "maximum_distance_miles": 425.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2018-06-06T23:58:04.0"
     },
     {
       "id": "039123a1d4934148b8b5275cfaa8fb60",
       "name": "Tempo Merkstein 22",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 50,
-      "distance_miles": 344.4
+      "distance_miles": 344.4,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2022-07-13T22:00:00.0"
     },
     {
       "id": "29c0fa2b59eb4613903ebeb58d949058",
       "name": "Tempo Tokyo Olympics",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 79,
-      "distance_miles": 462.7
+      "distance_miles": 462.7,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2023-03-27T00:00:00.0"
     },
     {
       "id": "b3d91697a11d491fbcec0a10b003d07f",
       "name": "Triathlon",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 42,
-      "distance_miles": 271.9
+      "distance_miles": 271.9,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2023-06-25T00:00:00.0"
     },
     {
       "id": "d3655608d798499c83160911ab15dd50",
       "name": "White 4",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 56,
-      "distance_miles": 331.3
+      "distance_miles": 331.3,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2018-11-14T06:00:00.0"
     },
     {
       "id": "98554b44a1df4e049f14ee55e7792eb6",
       "name": "White-3",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 56,
-      "distance_miles": 416.2
+      "distance_miles": 416.2,
+      "maximum_distance_miles": 450.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2017-12-02T06:00:00.0"
     },
     {
       "id": "4996f85d64674c8380962950406cfeee",
       "name": "white1",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 55,
-      "distance_miles": 449.9
+      "distance_miles": 449.9,
+      "maximum_distance_miles": 0.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2016-09-04T05:00:00.0"
     },
     {
       "id": "e3e5d5dc92eb4dc6893ca7d5ddbd1d94",
       "name": "white2",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 47,
-      "distance_miles": 404.4
+      "distance_miles": 404.4,
+      "maximum_distance_miles": 500.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2017-01-29T06:00:00.0"
     },
     {
       "id": "ac3ab348711646c6b82330b1158213c6",
       "name": "Winter",
       "type": "Shoes",
+      "category": "Shoes",
       "status": "retired",
       "activity_count": 46,
-      "distance_miles": 273.8
+      "distance_miles": 273.8,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2018-08-26T05:00:00.0"
     }
   ]
 }
