@@ -7,6 +7,7 @@ const BASE_HEALTH_URL = 'data/health.json';
 const BASE_GEAR_URL = 'data/gear.json';
 const BASE_SYSTEM_HEALTH_URL = 'data/system_health.json';
 const BASE_COMPLETED_RACES_URL = 'data/completed_races.json';
+const BASE_PR_SB_URL = 'data/pr_sb.json';
 let dataVersion = '';
 let DATA_URL = BASE_DATA_URL;
 let RACES_URL = BASE_RACES_URL;
@@ -16,6 +17,7 @@ let HEALTH_URL = BASE_HEALTH_URL;
 let GEAR_URL = BASE_GEAR_URL;
 let SYSTEM_HEALTH_URL = BASE_SYSTEM_HEALTH_URL;
 let COMPLETED_RACES_URL = BASE_COMPLETED_RACES_URL;
+let PR_SB_URL = BASE_PR_SB_URL;
 
 const SYSTEM_HEALTH_STALE_SECONDS = 43200;
 const CHART_ID = 'training-load';
@@ -51,6 +53,9 @@ let racingSubtab = 'upcoming';
 let historyYear = null;
 let historyCategory = 'all';
 let historySort = 'newest';
+let prSbData = [];
+let prSbType = 'all';
+let prSbSeason = String(new Date().getFullYear());
 
 const TAB_PANELS = ['overview', 'training', 'racing', 'health', 'gear'];
 
@@ -1343,7 +1348,83 @@ function switchRacingSubtab(tab) {
   });
   if (isHistory) {
     renderRaceHistory();
+  } else if (tab === 'prsb') {
+    renderPrSb();
   }
+}
+
+function normalizePrSb(record) {
+  if (!record || typeof record !== 'object') return null;
+  const type = record.type === 'PR' || record.type === 'SB' ? record.type : null;
+  if (!type || !record.sport || !record.event || !record.result || !record.date) return null;
+  return {
+    sport: String(record.sport), event: String(record.event), result: String(record.result),
+    date: String(record.date), eventName: record.event_name ? String(record.event_name) : '',
+    type: type, seasonYear: record.season_year == null ? null : Number(record.season_year),
+  };
+}
+
+function buildPrSbSeasonOptions(records) {
+  const current = String(new Date().getFullYear());
+  const years = Array.from(new Set(records
+    .filter((record) => record.type === 'SB' && Number.isInteger(record.seasonYear))
+    .map((record) => record.seasonYear))).sort((a, b) => b - a);
+  const select = document.getElementById('prsb-season');
+  if (!select) return;
+  let html = '<option value="' + current + '">Current season (' + current + ')</option>';
+  html += '<option value="all">All seasons</option>';
+  years.filter((year) => String(year) !== current).forEach((year) => {
+    html += '<option value="' + year + '">' + year + '</option>';
+  });
+  select.innerHTML = html;
+  if (!Array.from(select.options).some((option) => option.value === prSbSeason)) {
+    prSbSeason = 'all';
+  }
+  select.value = prSbSeason;
+}
+
+function renderPrSb() {
+  const container = document.getElementById('prsb-container');
+  if (!container) return;
+  const records = prSbData.map(normalizePrSb).filter((record) => record !== null);
+  buildPrSbSeasonOptions(records);
+  const filtered = records.filter((record) => {
+    if (prSbType !== 'all' && record.type !== prSbType) return false;
+    // Lifetime PRs remain visible when a season is selected; the season
+    // filter applies only to season-best rows.
+    return record.type === 'PR' || prSbSeason === 'all'
+      || String(record.seasonYear) === prSbSeason;
+  });
+  if (filtered.length === 0) {
+    container.innerHTML = '<p class="races-empty">No PR or SB records for this view.</p>';
+    return;
+  }
+  let html = '<div class="prsb-cards">';
+  filtered.forEach((record) => {
+    const detail = [record.eventName, fmtMediumDate(record.date)].filter(Boolean).join(' · ');
+    html += '<article class="prsb-card">'
+      + '<span class="prsb-badge prsb-' + record.type.toLowerCase() + '">' + record.type + '</span>'
+      + '<div class="prsb-result">' + escapeHtml(record.result) + '</div>'
+      + '<div class="prsb-event">' + escapeHtml(record.event) + '</div>'
+      + '<div class="prsb-sport">' + escapeHtml(record.sport) + '</div>'
+      + (detail ? '<div class="prsb-detail">' + escapeHtml(detail) + '</div>' : '')
+      + (record.type === 'SB' ? '<div class="prsb-season">Season ' + record.seasonYear + '</div>' : '')
+      + '</article>';
+  });
+  container.innerHTML = html + '</div>';
+}
+
+async function loadPrSb() {
+  try {
+    const response = await fetch(PR_SB_URL, { cache: 'no-store' });
+    if (!response.ok) throw new Error('HTTP ' + response.status);
+    const json = await response.json();
+    prSbData = Array.isArray(json && json.data) ? json.data : [];
+  } catch (err) {
+    console.error('[dashboard] failed to load pr_sb.json:', err);
+    prSbData = [];
+  }
+  if (racingSubtab === 'prsb') renderPrSb();
 }
 
 function initRacingSubtabs() {
@@ -1357,6 +1438,16 @@ function initRacingSubtabs() {
         btn.click();
       }
     });
+  });
+  const typeSelect = document.getElementById('prsb-type');
+  if (typeSelect) typeSelect.addEventListener('change', () => {
+    prSbType = typeSelect.value;
+    renderPrSb();
+  });
+  const seasonSelect = document.getElementById('prsb-season');
+  if (seasonSelect) seasonSelect.addEventListener('change', () => {
+    prSbSeason = seasonSelect.value;
+    renderPrSb();
   });
 }
 
@@ -1398,6 +1489,7 @@ async function loadVersion() {
       GEAR_URL = BASE_GEAR_URL + qs;
       SYSTEM_HEALTH_URL = BASE_SYSTEM_HEALTH_URL + qs;
       COMPLETED_RACES_URL = BASE_COMPLETED_RACES_URL + qs;
+      PR_SB_URL = BASE_PR_SB_URL + qs;
     }
   } catch (err) {
     console.error('[dashboard] failed to load version.json, using unversioned URLs:', err);
@@ -2443,6 +2535,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadTrainingLoad();
     loadRaces();
     loadCompletedRaces();
+    loadPrSb();
     loadWeekly();
     loadHealth();
     loadGear();

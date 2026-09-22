@@ -222,16 +222,21 @@ footer {
 .races-wrap {
   padding: 18px;
   cursor: default;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .races-container {
   min-height: 40px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .races-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 13px;
+  table-layout: fixed;
 }
 
 .races-table thead th {
@@ -249,6 +254,7 @@ footer {
   padding: 8px 10px;
   border-bottom: 1px solid var(--grid);
   color: var(--text);
+  overflow-wrap: anywhere;
 }
 
 .races-col-date {
@@ -287,13 +293,15 @@ footer {
 
 .race-card {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   grid-template-rows: auto auto auto auto;
   gap: 2px 8px;
   padding: 10px 12px;
   border: 1px solid var(--panel-border);
   border-radius: 8px;
   background: var(--panel);
+  min-width: 0;
+  max-width: 100%;
 }
 
 .race-card-date {
@@ -311,12 +319,14 @@ footer {
   font-weight: 500;
   font-size: 13px;
   grid-column: 1 / -1;
+  overflow-wrap: anywhere;
 }
 
 .race-card-sub {
   font-size: 12px;
   color: var(--muted);
   grid-column: 1 / -1;
+  overflow-wrap: anywhere;
 }
 
 .status-badge {
@@ -340,7 +350,7 @@ footer {
   font-size: 10px;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 900px) {
   .races-cards {
     display: none;
   }
@@ -349,7 +359,7 @@ footer {
   }
 }
 
-@media (max-width: 639px) {
+@media (max-width: 899px) {
   .races-table {
     display: none;
   }
@@ -580,6 +590,7 @@ footer {
   font-weight: 600;
   color: var(--text);
   margin: 14px 0 4px;
+  overflow-wrap: anywhere;
 }
 
 .races-detail-date,
@@ -595,6 +606,8 @@ footer {
   padding: 6px 0;
   border-bottom: 1px solid var(--grid);
   font-size: 13px;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
 .races-detail-label {
@@ -605,6 +618,9 @@ footer {
 .races-detail-value {
   color: var(--text);
   font-weight: 400;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-align: right;
 }
 
 .races-detail-notes {
@@ -863,10 +879,60 @@ footer {
   white-space: nowrap;
 }
 
-@media (max-width: 639px) {
+@media (max-width: 899px) {
   .race-history-table-wrap .races-table {
     display: table;
   }
+}
+
+/* PR / SB */
+.prsb-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin-bottom: 14px;
+}
+.prsb-controls label {
+  display: grid;
+  gap: 4px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.prsb-container { min-width: 0; }
+.prsb-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 10px;
+}
+.prsb-card {
+  position: relative;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  background: var(--panel);
+}
+.prsb-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 2px 8px;
+  border: 1px solid var(--panel-border);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+.prsb-pr { color: #74a3ff; border-color: var(--accent-line); }
+.prsb-sb { color: #f1c40f; border-color: #f39c12; }
+.prsb-result { padding-right: 48px; font-size: 22px; font-weight: 650; }
+.prsb-event { margin-top: 3px; font-size: 15px; font-weight: 600; overflow-wrap: anywhere; }
+.prsb-sport, .prsb-detail, .prsb-season {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 12px;
+  overflow-wrap: anywhere;
 }
 
 /* ---------------------------------------------------------------------------

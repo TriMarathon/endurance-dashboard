@@ -10,7 +10,7 @@
       name="description"
       content="Endurance training-load dashboard showing 90-day TSS, CTL and ATL from Garmin training data."
     />
-    <link rel="stylesheet" href="css/dashboard.css?v=20260921-1" />
+    <link rel="stylesheet" href="css/dashboard.css?v=20260922-1" />
   </head>
   <body>
     <header>
@@ -187,6 +187,16 @@
             tabindex="-1"
             >Race History</button
           >
+          <button
+            type="button"
+            id="subtab-prsb"
+            data-subtab="prsb"
+            class="subtab-link"
+            role="tab"
+            aria-selected="false"
+            tabindex="-1"
+            >PR / SB</button
+          >
         </nav>
 
         <section
@@ -250,6 +260,30 @@
               <tbody></tbody>
             </table>
             <p id="race-history-empty" class="races-empty">No completed races.</p>
+          </div>
+        </section>
+
+        <section
+          id="racing-sub-prsb"
+          class="racing-subview"
+          role="tabpanel"
+          aria-label="Personal records and season bests"
+        >
+          <h2 class="chart-title">PR / SB</h2>
+          <div class="prsb-controls">
+            <label>Type
+              <select id="prsb-type" class="race-history-select">
+                <option value="all">All</option>
+                <option value="PR">PR</option>
+                <option value="SB">SB</option>
+              </select>
+            </label>
+            <label>Season
+              <select id="prsb-season" class="race-history-select"></select>
+            </label>
+          </div>
+          <div id="prsb-container" class="prsb-container">
+            <p class="races-empty">No PR or SB records.</p>
           </div>
         </section>
       </section>
@@ -320,6 +354,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" defer></script>
-    <script src="js/dashboard.js?v=20260921-1" defer></script>
+    <script src="js/dashboard.js?v=20260922-1" defer></script>
   </body>
 </html>
