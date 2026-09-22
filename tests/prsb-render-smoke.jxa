@@ -1,6 +1,6 @@
 #!/usr/bin/env osascript -l JavaScript
 // Run from the dashboard checkout:
-// DASHBOARD_JS=js/dashboard.js osascript -l JavaScript tests/prsb-render-smoke.jxa
+// DASHBOARD_JS=js/dashboard.js DASHBOARD_CSS=css/dashboard.css osascript -l JavaScript tests/prsb-render-smoke.jxa
 
 ObjC.import('Foundation');
 
@@ -9,6 +9,12 @@ const sourcePath = ObjC.unwrap(
 );
 if (!sourcePath) {
   throw new Error('Set DASHBOARD_JS to the dashboard.js path before running this test.');
+}
+const cssPath = ObjC.unwrap(
+  $.NSProcessInfo.processInfo.environment.objectForKey('DASHBOARD_CSS')
+);
+if (!cssPath) {
+  throw new Error('Set DASHBOARD_CSS to the dashboard.css path before running this test.');
 }
 
 function select() {
@@ -51,6 +57,14 @@ var source = ObjC.unwrap($.NSString.stringWithContentsOfFileEncodingError(
   $.NSUTF8StringEncoding,
   null
 ));
+var css = ObjC.unwrap($.NSString.stringWithContentsOfFileEncodingError(
+  cssPath,
+  $.NSUTF8StringEncoding,
+  null
+));
+if (css.indexOf('.prsb-controls label[hidden] { display: none; }') < 0) {
+  throw new Error('Hidden PR/SB season control can be overridden by the label display rule');
+}
 
 source += `
 prSbData = [
@@ -65,7 +79,7 @@ prSbData = [
 prSbType = 'PR';
 prSbSeason = '2025';
 renderPrSb();
-if (!elements['prsb-season-control'].hidden) throw new Error('Season control should be hidden for PR');
+if (!elements['prsb-season-control'].hidden) throw new Error('Initial PR state should hide the season control');
 if (elements['prsb-container'].innerHTML.indexOf('4 Mile') >= 0) throw new Error('SB tile leaked into PR');
 var prEvents = ['1 Mile', '5K', 'Marathon', 'Sprint'];
 var prPositions = prEvents.map(function (event) { return elements['prsb-container'].innerHTML.indexOf(event); });
@@ -82,6 +96,10 @@ if (elements['prsb-container'].innerHTML.indexOf('4 Mile') < 0
     || elements['prsb-container'].innerHTML.indexOf('10K') >= 0) {
   throw new Error('SB season filtering failed');
 }
+prSbType = 'PR';
+renderPrSb();
+if (!elements['prsb-season-control'].hidden) throw new Error('Season control should hide after returning to PR');
+if (prSbSeason !== '2025') throw new Error('Selected season was not preserved after returning to PR');
 console.log('PR/SB render smoke tests passed');
 `;
 

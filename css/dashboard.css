@@ -900,6 +900,7 @@ footer {
   font-weight: 600;
   text-transform: uppercase;
 }
+.prsb-controls label[hidden] { display: none; }
 .prsb-container { min-width: 0; }
 .prsb-cards {
   display: grid;
