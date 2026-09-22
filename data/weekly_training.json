@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T17:34:50Z",
+  "generated_at": "2026-09-22T18:14:40Z",
   "start_date": "2014-12-29",
   "end_date": "2026-09-27",
   "weeks": 613,
@@ -9952,8 +9952,8 @@
     {
       "week_start": "2026-03-16",
       "week_end": "2026-03-22",
-      "total_tss": 471.4,
-      "run_tss": 471.4,
+      "total_tss": 471.1,
+      "run_tss": 471.1,
       "bike_tss": 0.0,
       "swim_tss": 0.0,
       "other_tss": 0.0,
