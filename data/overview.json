@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-09-22T19:28:42Z",
+  "generated_at": "2026-09-22T19:37:24Z",
   "reference_date": "2026-09-22",
   "current_load": {
     "date": "2026-09-22",
-    "ctl": 91.2,
-    "atl": 87.1,
-    "tss": 40.1,
+    "ctl": 91.0,
+    "atl": 86.3,
+    "tss": 34.4,
     "tsb": -1.9,
-    "load_ratio": 1.0,
-    "ramp_rate": 0.1
+    "load_ratio": 0.9,
+    "ramp_rate": -0.1
   },
   "recent_training": {
     "start_date": "2026-09-16",
     "end_date": "2026-09-22",
-    "total_tss": 638.4,
+    "total_tss": 632.7,
     "run_distance_miles": 49.7,
     "run_time_seconds": 22975,
     "bike_distance_miles": 0.0,
@@ -47,7 +47,7 @@
     "ftp_watts": 206.0,
     "rftp_watts": 313.0,
     "css_pace": "1:46/100 yd",
-    "swim_threshold_pace": "1:40/100 yd",
+    "swim_threshold_pace": "1:35/100 yd",
     "threshold_heart_rate_bpm": 170.0
   }
 }
