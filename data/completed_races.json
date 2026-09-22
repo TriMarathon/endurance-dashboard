@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T15:58:06Z",
+  "generated_at": "2026-09-22T16:17:49Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-22",
   "count": 198,
@@ -839,7 +839,7 @@
     {
       "date": "2023-02-12",
       "activity_name": "Toyota Miles Per Hour - 9.57mi, 1st AG, 5th OA",
-      "category": "10 Mile",
+      "category": null,
       "duration_seconds": 3600.0,
       "garmin_activity_id": 10496802553,
       "distance_meters": 15932.9599609375
