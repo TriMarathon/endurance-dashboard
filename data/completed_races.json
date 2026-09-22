@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T18:50:45Z",
+  "generated_at": "2026-09-22T19:28:41Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-22",
   "count": 198,
@@ -160,7 +160,7 @@
       "date": "2026-03-22",
       "activity_name": "Shamrock Shuffle 8k - 30:10, 2nd AG",
       "category": "8K",
-      "duration_seconds": 1810.0,
+      "duration_seconds": 1800.0,
       "garmin_activity_id": 22261372083,
       "distance_meters": 8236.5498046875
     },
