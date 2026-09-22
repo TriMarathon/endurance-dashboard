@@ -1,0 +1,88 @@
+#!/usr/bin/env osascript -l JavaScript
+// Run from the dashboard checkout:
+// DASHBOARD_JS=js/dashboard.js osascript -l JavaScript tests/prsb-render-smoke.jxa
+
+ObjC.import('Foundation');
+
+const sourcePath = ObjC.unwrap(
+  $.NSProcessInfo.processInfo.environment.objectForKey('DASHBOARD_JS')
+);
+if (!sourcePath) {
+  throw new Error('Set DASHBOARD_JS to the dashboard.js path before running this test.');
+}
+
+function select() {
+  return {
+    options: [],
+    _value: '',
+    set innerHTML(html) {
+      this.options = [];
+      const re = /<option value="([^"]+)"/g;
+      let match;
+      while ((match = re.exec(html)) !== null) this.options.push({ value: match[1] });
+    },
+    set value(value) { this._value = String(value); },
+    get value() { return this._value; },
+  };
+}
+
+var elements = {
+  'prsb-container': { innerHTML: '' },
+  'prsb-season': select(),
+  'prsb-season-control': { hidden: true },
+  'prsb-type': select(),
+};
+var document = {
+  addEventListener: function () {},
+  getElementById: function (id) { return elements[id] || null; },
+  createElement: function () {
+    var value = '';
+    return {
+      set textContent(v) { value = String(v); },
+      get innerHTML() { return value; },
+    };
+  },
+};
+var window = { location: { hash: '' }, addEventListener: function () {} };
+var history = { replaceState: function () {} };
+
+var source = ObjC.unwrap($.NSString.stringWithContentsOfFileEncodingError(
+  sourcePath,
+  $.NSUTF8StringEncoding,
+  null
+));
+
+source += `
+prSbData = [
+  {sport: 'Running', event: 'Marathon', result: '3:10:00', date: '2025-01-01', type: 'PR'},
+  {sport: 'Running', event: '5K', result: '20:00', date: '2025-02-01', type: 'PR'},
+  {sport: 'Running', event: '1 Mile', result: '5:30', date: '2025-03-01', type: 'PR'},
+  {sport: 'Triathlon', event: 'Sprint', result: '1:10:00', date: '2025-04-01', type: 'PR'},
+  {sport: 'Running', event: '4 Mile', result: '28:00', date: '2025-05-01', type: 'SB', season_year: 2025},
+  {sport: 'Running', event: '10K', result: '42:00', date: '2024-05-01', type: 'SB', season_year: 2024}
+];
+
+prSbType = 'PR';
+prSbSeason = '2025';
+renderPrSb();
+if (!elements['prsb-season-control'].hidden) throw new Error('Season control should be hidden for PR');
+if (elements['prsb-container'].innerHTML.indexOf('4 Mile') >= 0) throw new Error('SB tile leaked into PR');
+var prEvents = ['1 Mile', '5K', 'Marathon', 'Sprint'];
+var prPositions = prEvents.map(function (event) { return elements['prsb-container'].innerHTML.indexOf(event); });
+if (prPositions.some(function (position) { return position < 0; })
+    || prPositions.join(',') !== prPositions.slice().sort(function (a, b) { return a - b; }).join(',')) {
+  throw new Error('PR event ordering failed');
+}
+
+prSbType = 'SB';
+renderPrSb();
+if (elements['prsb-season-control'].hidden) throw new Error('Season control should be visible for SB');
+if (prSbSeason !== '2025') throw new Error('Selected season was not preserved');
+if (elements['prsb-container'].innerHTML.indexOf('4 Mile') < 0
+    || elements['prsb-container'].innerHTML.indexOf('10K') >= 0) {
+  throw new Error('SB season filtering failed');
+}
+console.log('PR/SB render smoke tests passed');
+`;
+
+eval(source);

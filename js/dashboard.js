@@ -54,8 +54,13 @@ let historyYear = null;
 let historyCategory = 'all';
 let historySort = 'newest';
 let prSbData = [];
-let prSbType = 'all';
+let prSbType = 'PR';
 let prSbSeason = String(new Date().getFullYear());
+
+const PR_SB_EVENT_ORDER = [
+  '1 Mile', '5K', '4 Mile', '5 Mile', '8K', '10K', '10 Mile',
+  'Half Marathon', 'Marathon', 'Sprint', 'Olympic', '70.3', '140.6',
+];
 
 const TAB_PANELS = ['overview', 'training', 'racing', 'health', 'gear'];
 
@@ -1372,15 +1377,26 @@ function buildPrSbSeasonOptions(records) {
   const select = document.getElementById('prsb-season');
   if (!select) return;
   let html = '<option value="' + current + '">Current season (' + current + ')</option>';
-  html += '<option value="all">All seasons</option>';
   years.filter((year) => String(year) !== current).forEach((year) => {
     html += '<option value="' + year + '">' + year + '</option>';
   });
   select.innerHTML = html;
   if (!Array.from(select.options).some((option) => option.value === prSbSeason)) {
-    prSbSeason = 'all';
+    prSbSeason = current;
   }
   select.value = prSbSeason;
+}
+
+function updatePrSbControls() {
+  const seasonControl = document.getElementById('prsb-season-control');
+  if (seasonControl) seasonControl.hidden = prSbType !== 'SB';
+}
+
+function comparePrSbEvents(left, right) {
+  const leftIndex = PR_SB_EVENT_ORDER.indexOf(left.event);
+  const rightIndex = PR_SB_EVENT_ORDER.indexOf(right.event);
+  return (leftIndex === -1 ? PR_SB_EVENT_ORDER.length : leftIndex)
+    - (rightIndex === -1 ? PR_SB_EVENT_ORDER.length : rightIndex);
 }
 
 function renderPrSb() {
@@ -1388,13 +1404,11 @@ function renderPrSb() {
   if (!container) return;
   const records = prSbData.map(normalizePrSb).filter((record) => record !== null);
   buildPrSbSeasonOptions(records);
+  updatePrSbControls();
   const filtered = records.filter((record) => {
-    if (prSbType !== 'all' && record.type !== prSbType) return false;
-    // Lifetime PRs remain visible when a season is selected; the season
-    // filter applies only to season-best rows.
-    return record.type === 'PR' || prSbSeason === 'all'
-      || String(record.seasonYear) === prSbSeason;
-  });
+    if (record.type !== prSbType) return false;
+    return prSbType === 'PR' || String(record.seasonYear) === prSbSeason;
+  }).sort(comparePrSbEvents);
   if (filtered.length === 0) {
     container.innerHTML = '<p class="races-empty">No PR or SB records for this view.</p>';
     return;
