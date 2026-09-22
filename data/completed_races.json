@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T16:18:47Z",
+  "generated_at": "2026-09-22T17:01:29Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-22",
   "count": 198,
@@ -16,7 +16,7 @@
       "date": "2026-08-23",
       "activity_name": "Supertri Chicago - 1:20:03, 1st AG Illinois State Championships",
       "category": "Sprint",
-      "duration_seconds": 4803.0,
+      "duration_seconds": 4678.3509953022,
       "garmin_activity_id": 24086514051,
       "distance_meters": 29803.939453125
     },
@@ -24,7 +24,7 @@
       "date": "2026-08-16",
       "activity_name": "Alpine Races 10 Mile - 1:08:49, 3rd AG",
       "category": "10 Mile",
-      "duration_seconds": 4128.0,
+      "duration_seconds": 4127.6209716796875,
       "garmin_activity_id": 23999243055,
       "distance_meters": 16186.6298828125
     },
@@ -56,7 +56,7 @@
       "date": "2026-07-18",
       "activity_name": "Chi Town Miles - 5:13, 1st AG",
       "category": "1 Mile",
-      "duration_seconds": 313.0,
+      "duration_seconds": 317.0,
       "garmin_activity_id": 23648066902,
       "distance_meters": 1631.72998046875
     },
@@ -72,7 +72,7 @@
       "date": "2026-07-04",
       "activity_name": "4 on the 4th - 24:19, 2nd AG",
       "category": "4 Mile",
-      "duration_seconds": 1459.0,
+      "duration_seconds": 1497.426986694336,
       "garmin_activity_id": 23476203532,
       "distance_meters": 6505.2998046875
     },
@@ -88,7 +88,7 @@
       "date": "2026-06-21",
       "activity_name": "Race Against Hate - 18:38, 1st AG",
       "category": "5K",
-      "duration_seconds": 1118.0,
+      "duration_seconds": 1116.9269981384277,
       "garmin_activity_id": 23329954063,
       "distance_meters": 5072.97998046875
     },
@@ -104,7 +104,7 @@
       "date": "2026-05-25",
       "activity_name": "Ridge Run 10k - 38:10, 2nd AG",
       "category": "10K",
-      "duration_seconds": 2289.885986328125,
+      "duration_seconds": 2288.851982116699,
       "garmin_activity_id": 23007759436,
       "distance_meters": 10010.9501953125
     },
@@ -120,7 +120,7 @@
       "date": "2026-05-17",
       "activity_name": "Spring Trail Chase - 39:28, 1st AG",
       "category": "10K",
-      "duration_seconds": 2368.25,
+      "duration_seconds": 2366.7769927978516,
       "garmin_activity_id": 22913291022,
       "distance_meters": 9971.73046875
     },
@@ -128,7 +128,7 @@
       "date": "2026-05-09",
       "activity_name": "Quarryman Challange 5k",
       "category": "5K",
-      "duration_seconds": 1155.0,
+      "duration_seconds": 1154.9970092773438,
       "garmin_activity_id": 22820148159,
       "distance_meters": 5086.81005859375
     },
@@ -136,7 +136,7 @@
       "date": "2026-04-26",
       "activity_name": "Good Life Race 5k - 18:12, 2nd AG",
       "category": "5K",
-      "duration_seconds": 1092.0,
+      "duration_seconds": 1091.9979858398438,
       "garmin_activity_id": 22667174941,
       "distance_meters": 5003.18017578125
     },
@@ -144,7 +144,7 @@
       "date": "2026-04-20",
       "activity_name": "Boston Marathon #10 - 2:58:07",
       "category": "Marathon",
-      "duration_seconds": 10687.0,
+      "duration_seconds": 10642.603149414062,
       "garmin_activity_id": 22596593479,
       "distance_meters": 42182.171875
     },
@@ -152,7 +152,7 @@
       "date": "2026-04-12",
       "activity_name": "Lakefront 10 Miler - 1:06:30, 2nd AG (Boston -8)",
       "category": "10 Mile",
-      "duration_seconds": 3990.0,
+      "duration_seconds": 3990.9049682617188,
       "garmin_activity_id": 22501896609,
       "distance_meters": 16480.220703125
     },
@@ -160,7 +160,7 @@
       "date": "2026-03-22",
       "activity_name": "Shamrock Shuffle 8k - 30:10, 2nd AG",
       "category": "8K",
-      "duration_seconds": 1809.782958984375,
+      "duration_seconds": 1809.4759941101074,
       "garmin_activity_id": 22261372083,
       "distance_meters": 8236.5498046875
     },
@@ -168,7 +168,7 @@
       "date": "2026-03-15",
       "activity_name": "March Madness Half Marathon - 1:25:18, 1st AG",
       "category": "Half Marathon",
-      "duration_seconds": 5118.0,
+      "duration_seconds": 5119.828125,
       "garmin_activity_id": 22183031149,
       "distance_meters": 21488.609375
     },
@@ -176,7 +176,7 @@
       "date": "2026-03-14",
       "activity_name": "Core Indoor Triathlon - Run",
       "category": "Indoor Triathlon",
-      "duration_seconds": 912.4210205078125,
+      "duration_seconds": 911.689998626709,
       "garmin_activity_id": 22172909290,
       "distance_meters": 3368.14990234375
     },
@@ -184,7 +184,7 @@
       "date": "2026-03-14",
       "activity_name": "Core Indoor Triathlon - Bike",
       "category": "Indoor Triathlon",
-      "duration_seconds": 901.7880249023438,
+      "duration_seconds": null,
       "garmin_activity_id": 22172908446,
       "distance_meters": 8207.654296875
     },
@@ -200,7 +200,7 @@
       "date": "2026-01-25",
       "activity_name": "ET Indoor Triathlon - Run",
       "category": "Indoor Triathlon",
-      "duration_seconds": 1200.0,
+      "duration_seconds": 1216.9969787597656,
       "garmin_activity_id": 21663855848,
       "distance_meters": 5326.93
     },
@@ -208,7 +208,7 @@
       "date": "2026-01-25",
       "activity_name": "ET Indoor Triathlon - Bike",
       "category": "Indoor Triathlon",
-      "duration_seconds": 1800.0,
+      "duration_seconds": null,
       "garmin_activity_id": 21663855440,
       "distance_meters": 17992.47
     },
@@ -224,7 +224,7 @@
       "date": "2025-11-27",
       "activity_name": "Grove Express 5K - 17:55, 1st 50-59",
       "category": "5K",
-      "duration_seconds": 1075.0,
+      "duration_seconds": 1076.9760131835938,
       "garmin_activity_id": 21105862230,
       "distance_meters": 5138.75
     },
@@ -232,7 +232,7 @@
       "date": "2025-11-09",
       "activity_name": "Fast Track Cross Country Open - 19:38, 1st AG",
       "category": "5K",
-      "duration_seconds": 1178.0,
+      "duration_seconds": 1177.4659881591797,
       "garmin_activity_id": 20940996793,
       "distance_meters": 5159.490234375
     },
@@ -240,7 +240,7 @@
       "date": "2025-10-25",
       "activity_name": "Lake Bluff PTO Pumpkin Chase 5K - 18:05, 1st AG",
       "category": "5K",
-      "duration_seconds": 1085.0,
+      "duration_seconds": 1085.3969955444336,
       "garmin_activity_id": 20792952496,
       "distance_meters": 5137.66015625
     },
@@ -248,7 +248,7 @@
       "date": "2025-10-12",
       "activity_name": "Chicago Marathon - 2:53:56",
       "category": "Marathon",
-      "duration_seconds": 10436.0,
+      "duration_seconds": 10437.0,
       "garmin_activity_id": 20668733476,
       "distance_meters": 42646.33984375
     },
@@ -256,7 +256,7 @@
       "date": "2025-09-06",
       "activity_name": "Hidden Gem Half Marathon - 1:21:50, 1st AG",
       "category": "Half Marathon",
-      "duration_seconds": 4910.0,
+      "duration_seconds": 4912.253021240234,
       "garmin_activity_id": 20299532473,
       "distance_meters": 21399.869140625
     },
@@ -272,7 +272,7 @@
       "date": "2025-08-17",
       "activity_name": "Alpine Races 10 Mile - 1:05:12, 1st AG",
       "category": "10 Mile",
-      "duration_seconds": 3912.0,
+      "duration_seconds": 3870.2509765625,
       "garmin_activity_id": 20087947032,
       "distance_meters": 16093.44
     },
@@ -280,7 +280,7 @@
       "date": "2025-07-19",
       "activity_name": "Chi Town Miles - 5:13, 2nd AG",
       "category": "1 Mile",
-      "duration_seconds": 313.7550048828125,
+      "duration_seconds": 311.5740022659302,
       "garmin_activity_id": 19787337224,
       "distance_meters": 1632.27001953125
     },
@@ -296,7 +296,7 @@
       "date": "2025-07-04",
       "activity_name": "4 on the 4th - 23:35, 1st AG",
       "category": "4 Mile",
-      "duration_seconds": 1415.0,
+      "duration_seconds": 1426.537992477417,
       "garmin_activity_id": 19629832656,
       "distance_meters": 6534.7099609375
     },
@@ -312,7 +312,7 @@
       "date": "2025-06-15",
       "activity_name": "Race Against Hate - 18:13, 1st AG",
       "category": "5K",
-      "duration_seconds": 1093.0,
+      "duration_seconds": 1079.0,
       "garmin_activity_id": 19440362284,
       "distance_meters": 5031.919921875
     },
@@ -320,7 +320,7 @@
       "date": "2025-05-24",
       "activity_name": "Soldier Field 10 - 1:02:46, 1st AG",
       "category": "10 Mile",
-      "duration_seconds": 3766.0,
+      "duration_seconds": 3787.9939880371094,
       "garmin_activity_id": 19220716333,
       "distance_meters": 16446.66015625
     },
@@ -328,7 +328,7 @@
       "date": "2025-05-18",
       "activity_name": "CARA Spring Trail Chase - 37:27, 1st AG",
       "category": "10K",
-      "duration_seconds": 2247.0,
+      "duration_seconds": 2247.5730056762695,
       "garmin_activity_id": 19162492631,
       "distance_meters": 10079.6796875
     },
@@ -336,7 +336,7 @@
       "date": "2025-04-27",
       "activity_name": "Ravenswood  5K- 18:28, 2nd AG",
       "category": "5K",
-      "duration_seconds": 1108.0,
+      "duration_seconds": 1107.9989929199219,
       "garmin_activity_id": 18951105940,
       "distance_meters": 5068.509765625
     },
@@ -344,7 +344,7 @@
       "date": "2025-04-21",
       "activity_name": "Boston Marathon",
       "category": "Marathon",
-      "duration_seconds": 11635.87890625,
+      "duration_seconds": 11635.035888671875,
       "garmin_activity_id": 18894608650,
       "distance_meters": 42434.140625
     },
@@ -352,7 +352,7 @@
       "date": "2025-04-13",
       "activity_name": "Lakefront 10 Miler -  1:03:41, 1st AG",
       "category": "10 Mile",
-      "duration_seconds": 3821.0,
+      "duration_seconds": 3821.9150390625,
       "garmin_activity_id": 18817494556,
       "distance_meters": 16384.6796875
     },
@@ -360,7 +360,7 @@
       "date": "2025-04-06",
       "activity_name": "Good Life Race - 17:56, 2nd AG",
       "category": "5K",
-      "duration_seconds": 1076.0,
+      "duration_seconds": 1077.0,
       "garmin_activity_id": 18749364348,
       "distance_meters": 5105.330078125
     },
@@ -368,7 +368,7 @@
       "date": "2025-03-29",
       "activity_name": "CORE Indoor Triathlon - Run",
       "category": "Indoor Triathlon",
-      "duration_seconds": 942.5859985351562,
+      "duration_seconds": 919.9989929199219,
       "garmin_activity_id": 18672590658,
       "distance_meters": 4092.139892578125
     },
@@ -376,7 +376,7 @@
       "date": "2025-03-29",
       "activity_name": "CORE Indoor Triathlon - Bike",
       "category": "Indoor Triathlon",
-      "duration_seconds": 900.0,
+      "duration_seconds": 352.0,
       "garmin_activity_id": 18673316636,
       "distance_meters": 9656.064
     },
@@ -392,7 +392,7 @@
       "date": "2025-03-23",
       "activity_name": "Shamrock Shuffle -  29:39, 1st AG",
       "category": "8K",
-      "duration_seconds": 1779.0,
+      "duration_seconds": 1779.9969787597656,
       "garmin_activity_id": 18614724778,
       "distance_meters": 8134.43017578125
     },
@@ -400,7 +400,7 @@
       "date": "2025-03-16",
       "activity_name": "March Madness Half Marathon - 1:25:32, 2nd AG",
       "category": "Half Marathon",
-      "duration_seconds": 5132.0,
+      "duration_seconds": 5130.0,
       "garmin_activity_id": 18551036245,
       "distance_meters": 21370.0
     },
@@ -408,7 +408,7 @@
       "date": "2025-02-16",
       "activity_name": "February ET Indoor Tri - Run",
       "category": "Indoor Triathlon",
-      "duration_seconds": 1230.137939453125,
+      "duration_seconds": 1222.4129943847656,
       "garmin_activity_id": 18295947513,
       "distance_meters": 5359.31982421875
     },
@@ -416,7 +416,7 @@
       "date": "2025-02-16",
       "activity_name": "February ET Indoor Tri - Bike",
       "category": "Indoor Triathlon",
-      "duration_seconds": 1800.0,
+      "duration_seconds": null,
       "garmin_activity_id": 18295947086,
       "distance_meters": 19038.54
     },
@@ -424,7 +424,7 @@
       "date": "2025-02-16",
       "activity_name": "February ET Indoor Tri - Swim",
       "category": "Indoor Triathlon",
-      "duration_seconds": 622.8800048828125,
+      "duration_seconds": 615.1269998550415,
       "garmin_activity_id": 18296539312,
       "distance_meters": 585.219970703125
     },
@@ -440,7 +440,7 @@
       "date": "2025-01-19",
       "activity_name": "January ET Indoor Tri - Bike",
       "category": "Indoor Triathlon",
-      "duration_seconds": 1800.0,
+      "duration_seconds": null,
       "garmin_activity_id": 18049195232,
       "distance_meters": 18105.12
     },
@@ -456,7 +456,7 @@
       "date": "2024-11-24",
       "activity_name": "Lincolnwood Turkey Trot 10K",
       "category": "10K",
-      "duration_seconds": 2301.19091796875,
+      "duration_seconds": 2299.375,
       "garmin_activity_id": 17612817592,
       "distance_meters": 10193.2900390625
     },
@@ -464,7 +464,7 @@
       "date": "2024-11-10",
       "activity_name": "Fast Track Cross Country Presented by Xtra Mile Running",
       "category": "5K",
-      "duration_seconds": 1180.114990234375,
+      "duration_seconds": 1176.3349914550781,
       "garmin_activity_id": 17506264278,
       "distance_meters": 5061.31005859375
     },
@@ -472,7 +472,7 @@
       "date": "2024-10-13",
       "activity_name": "Chicago Running - 3:26:48",
       "category": "Marathon",
-      "duration_seconds": 12409.0,
+      "duration_seconds": 12404.770935058594,
       "garmin_activity_id": 17276905020,
       "distance_meters": 42172.98828125
     },
@@ -512,7 +512,7 @@
       "date": "2024-07-27",
       "activity_name": "Chi-Town Mile - 5:19.53",
       "category": "1 Mile",
-      "duration_seconds": 319.489013671875,
+      "duration_seconds": 318.947998046875,
       "garmin_activity_id": 16607973678,
       "distance_meters": 1644.0999755859375
     },
@@ -520,7 +520,7 @@
       "date": "2024-07-04",
       "activity_name": "4 on the 4th - 23:28, 2nd AG",
       "category": "4 Mile",
-      "duration_seconds": 1408.0,
+      "duration_seconds": 1407.7359924316406,
       "garmin_activity_id": 16238739080,
       "distance_meters": 6554.68994140625
     },
@@ -536,7 +536,7 @@
       "date": "2024-06-16",
       "activity_name": "Ricky Byrdsong Memorial Race Against Hate - 18:07, 3rd AG",
       "category": "5K",
-      "duration_seconds": 1087.0,
+      "duration_seconds": 1086.4330139160156,
       "garmin_activity_id": 15941437281,
       "distance_meters": 5245.990234375
     },
@@ -544,7 +544,7 @@
       "date": "2024-06-09",
       "activity_name": "Chicago 13.1 - 1:22:35, 2nd AG",
       "category": "Half Marathon",
-      "duration_seconds": 4955.0,
+      "duration_seconds": 4960.8370361328125,
       "garmin_activity_id": 15824463961,
       "distance_meters": 21373.650390625
     },
@@ -552,7 +552,7 @@
       "date": "2024-06-02",
       "activity_name": "Run for the Roses 5k - 17:51, 5th AG",
       "category": "5K",
-      "duration_seconds": 1071.301025390625,
+      "duration_seconds": 1069.3110046386719,
       "garmin_activity_id": 15705259830,
       "distance_meters": 5020.64013671875
     },
@@ -560,7 +560,7 @@
       "date": "2024-05-25",
       "activity_name": "Soldier Field 10 -1:03:46, 2nd AG",
       "category": "10 Mile",
-      "duration_seconds": 3826.0,
+      "duration_seconds": 3825.748016357422,
       "garmin_activity_id": 15571972419,
       "distance_meters": 16409.490234375
     },
@@ -568,7 +568,7 @@
       "date": "2024-05-19",
       "activity_name": "Spring Trail Chase 10K - 38:24, 3rd AG",
       "category": "10K",
-      "duration_seconds": 2304.0,
+      "duration_seconds": 2301.0079956054688,
       "garmin_activity_id": 15472634416,
       "distance_meters": 9918.6103515625
     },
@@ -576,7 +576,7 @@
       "date": "2024-05-11",
       "activity_name": "Quarryman Challenge - 19:00, 3rd OA",
       "category": "5K",
-      "duration_seconds": 1140.0,
+      "duration_seconds": 1139.478,
       "garmin_activity_id": 15337970382,
       "distance_meters": 5115.2900390625
     },
@@ -584,7 +584,7 @@
       "date": "2024-04-28",
       "activity_name": "Good Life Race - 18:03",
       "category": "5K",
-      "duration_seconds": 1083.0,
+      "duration_seconds": 1082.3590087890625,
       "garmin_activity_id": 15120300878,
       "distance_meters": 5067.43994140625
     },
@@ -592,7 +592,7 @@
       "date": "2024-04-21",
       "activity_name": "Naperville Women's Half & 5K - 19:13, 1st OA",
       "category": "5K",
-      "duration_seconds": 1153.0,
+      "duration_seconds": 1158.3900146484375,
       "garmin_activity_id": 15006680630,
       "distance_meters": 5218.64990234375
     },
@@ -600,7 +600,7 @@
       "date": "2024-04-15",
       "activity_name": "Boston Marathon - 3:11:21",
       "category": "Marathon",
-      "duration_seconds": 11481.0,
+      "duration_seconds": 11333.345031738281,
       "garmin_activity_id": 14915609757,
       "distance_meters": 42516.37109375
     },
@@ -608,7 +608,7 @@
       "date": "2024-03-24",
       "activity_name": "Shamrock Shuffle - 29:34",
       "category": "8K",
-      "duration_seconds": 1774.0,
+      "duration_seconds": 1776.0419960021973,
       "garmin_activity_id": 14561416716,
       "distance_meters": 8257.3095703125
     },
@@ -616,7 +616,7 @@
       "date": "2024-03-09",
       "activity_name": "St. Paddy's Day 5K - 17:25, 26th OA, 2nd AG",
       "category": "5K",
-      "duration_seconds": 1045.0,
+      "duration_seconds": 1046.8370056152344,
       "garmin_activity_id": 14326206920,
       "distance_meters": 4958.47021484375
     },
@@ -624,7 +624,7 @@
       "date": "2024-02-11",
       "activity_name": "Super Shuffle 5K",
       "category": "5K",
-      "duration_seconds": 1077.0,
+      "duration_seconds": 1075.167,
       "garmin_activity_id": 13917382533,
       "distance_meters": 4996.5400390625
     },
@@ -632,7 +632,7 @@
       "date": "2024-01-14",
       "activity_name": "ET Indoor Triathlon - Run",
       "category": "Indoor Triathlon",
-      "duration_seconds": 1200.0,
+      "duration_seconds": 1204.0,
       "garmin_activity_id": 13504441031,
       "distance_meters": 5487.87
     },
@@ -640,7 +640,7 @@
       "date": "2024-01-14",
       "activity_name": "ET Indoor Triathlon - Bike",
       "category": "Indoor Triathlon",
-      "duration_seconds": 1800.0,
+      "duration_seconds": null,
       "garmin_activity_id": 13504440036,
       "distance_meters": 18748.86
     },
@@ -656,7 +656,7 @@
       "date": "2023-11-12",
       "activity_name": "Fast Track Cross Country - 3rd AG",
       "category": "5K",
-      "duration_seconds": 1131.0,
+      "duration_seconds": 1129.1170043945312,
       "garmin_activity_id": 12705461882,
       "distance_meters": 5017.83984375
     },
@@ -664,7 +664,7 @@
       "date": "2023-10-28",
       "activity_name": "Lake Bluff PTO Pumpkin Chase 5K - 18:22, 2nd AG",
       "category": "5K",
-      "duration_seconds": 1102.0,
+      "duration_seconds": 1104.2089920043945,
       "garmin_activity_id": 12502522137,
       "distance_meters": 5115.1298828125
     },
@@ -672,7 +672,7 @@
       "date": "2023-10-08",
       "activity_name": "Bank of America Chicago Marathon - 2:58:51",
       "category": "Marathon",
-      "duration_seconds": 10731.0,
+      "duration_seconds": 10735.0,
       "garmin_activity_id": 12235073469,
       "distance_meters": 42195.07
     },
@@ -680,7 +680,7 @@
       "date": "2023-09-30",
       "activity_name": "Lawndale 5k - 18:19, 5th OA, 1st AG",
       "category": "5K",
-      "duration_seconds": 1099.0,
+      "duration_seconds": 1097.7869873046875,
       "garmin_activity_id": 12140540567,
       "distance_meters": 5033.3701171875
     },
@@ -688,7 +688,7 @@
       "date": "2023-09-24",
       "activity_name": "BMW BERLIN-MARATHON 2023 - 3:13:23",
       "category": "Marathon",
-      "duration_seconds": 11603.0,
+      "duration_seconds": 11465.511993408203,
       "garmin_activity_id": 12094333869,
       "distance_meters": 42197.0
     },
@@ -696,7 +696,7 @@
       "date": "2023-09-09",
       "activity_name": "Hidden Gem Half Marathon - 1:21:38, 4th AG",
       "category": "Half Marathon",
-      "duration_seconds": 4898.0,
+      "duration_seconds": 4900.797958374023,
       "garmin_activity_id": 11983700671,
       "distance_meters": 21296.94921875
     },
@@ -712,7 +712,7 @@
       "date": "2023-08-20",
       "activity_name": "Alpine Runners 10 Miler - 4th AG",
       "category": "10 Mile",
-      "duration_seconds": 3899.31396484375,
+      "duration_seconds": 3898.2440185546875,
       "garmin_activity_id": 11833756114,
       "distance_meters": 16313.5
     },
@@ -728,7 +728,7 @@
       "date": "2023-07-29",
       "activity_name": "Chi-Town Miles - 4:59.95, 1st AG",
       "category": "1 Mile",
-      "duration_seconds": 299.0,
+      "duration_seconds": 307.9409980773926,
       "garmin_activity_id": 11671824420,
       "distance_meters": 1609.35
     },
@@ -736,7 +736,7 @@
       "date": "2023-07-04",
       "activity_name": "4 on the 4th - 22:59, 2nd AG",
       "category": "4 Mile",
-      "duration_seconds": 1379.0,
+      "duration_seconds": 1378.9819946289062,
       "garmin_activity_id": 11485015773,
       "distance_meters": 6514.14990234375
     },
@@ -752,7 +752,7 @@
       "date": "2023-06-18",
       "activity_name": "Race Against Hate 5K - 17:29, 1st AG",
       "category": "5K",
-      "duration_seconds": 1049.0,
+      "duration_seconds": 1049.718,
       "garmin_activity_id": 11371343265,
       "distance_meters": 5112.31005859375
     },
@@ -760,7 +760,7 @@
       "date": "2023-06-04",
       "activity_name": "Bank of America Chicago 13.1 - 1:23:01, 2nd AG",
       "category": "Half Marathon",
-      "duration_seconds": 4981.0,
+      "duration_seconds": 4984.647,
       "garmin_activity_id": 11268232739,
       "distance_meters": 21518.75
     },
@@ -768,7 +768,7 @@
       "date": "2023-05-27",
       "activity_name": "Soldier Field 10 - 1:01:42, 16th OA, 1st AG",
       "category": "10 Mile",
-      "duration_seconds": 3702.0,
+      "duration_seconds": 3702.5039978027344,
       "garmin_activity_id": 11208201335,
       "distance_meters": 16588.890625
     },
@@ -776,7 +776,7 @@
       "date": "2023-05-21",
       "activity_name": "CARA Spring Trail Chase - 36:49, 11th OA, 1st AG",
       "category": "10K",
-      "duration_seconds": 2209.0,
+      "duration_seconds": 2208.0,
       "garmin_activity_id": 11165414491,
       "distance_meters": 10104.1103515625
     },
@@ -792,7 +792,7 @@
       "date": "2023-05-07",
       "activity_name": "Great Western Half Marathon - 1:23:21, 3rd OA, 1st AG",
       "category": "Half Marathon",
-      "duration_seconds": 5001.0,
+      "duration_seconds": 5033.59,
       "garmin_activity_id": 11065513075,
       "distance_meters": 21597.939453125
     },
@@ -800,7 +800,7 @@
       "date": "2023-04-30",
       "activity_name": "Good Life Race 5K - 17:35, 13th OA, 1st AG",
       "category": "5K",
-      "duration_seconds": 1055.0,
+      "duration_seconds": 1055.163,
       "garmin_activity_id": 11015056679,
       "distance_meters": 5121.580078125
     },
@@ -808,7 +808,7 @@
       "date": "2023-04-17",
       "activity_name": "Boston Marathon - 2:54:40",
       "category": "Marathon",
-      "duration_seconds": 10480.0,
+      "duration_seconds": 10490.0,
       "garmin_activity_id": 10934435760,
       "distance_meters": 42356.0
     },
@@ -816,7 +816,7 @@
       "date": "2023-03-26",
       "activity_name": "Shamrock Shuffle 8k - 29:02, 4th AG",
       "category": "8K",
-      "duration_seconds": 1742.0,
+      "duration_seconds": 1750.532,
       "garmin_activity_id": 10774234402,
       "distance_meters": 8318.009765625
     },
@@ -832,7 +832,7 @@
       "date": "2023-03-11",
       "activity_name": "St. Paddy's Day 5K - 17:19, 35th OA, AG 1st",
       "category": "5K",
-      "duration_seconds": 1039.0,
+      "duration_seconds": 1040.836,
       "garmin_activity_id": 10673554741,
       "distance_meters": 5000.0
     },
@@ -840,7 +840,7 @@
       "date": "2023-02-12",
       "activity_name": "Toyota Miles Per Hour - 9.57mi, 1st AG, 5th OA",
       "category": null,
-      "duration_seconds": 3600.0,
+      "duration_seconds": 3596.543,
       "garmin_activity_id": 10496802553,
       "distance_meters": 15932.9599609375
     },
@@ -848,7 +848,7 @@
       "date": "2023-01-14",
       "activity_name": "Frosty 5K - 18:02, 3rd OA, 1st AG",
       "category": "5K",
-      "duration_seconds": 1082.0,
+      "duration_seconds": 1084.9769897460938,
       "garmin_activity_id": 10307594346,
       "distance_meters": 5137.8701171875
     },
@@ -856,7 +856,7 @@
       "date": "2022-11-06",
       "activity_name": "New York City Marathon ",
       "category": "Marathon",
-      "duration_seconds": 17222.0,
+      "duration_seconds": 17179.634,
       "garmin_activity_id": 9930560821,
       "distance_meters": 42754.7109375
     },
@@ -864,7 +864,7 @@
       "date": "2022-10-02",
       "activity_name": "TCS London Marathon / AbbottWMM Wanda AG World Championships - 2:55:38",
       "category": "Marathon",
-      "duration_seconds": 10538.0,
+      "duration_seconds": 10538.915,
       "garmin_activity_id": 9714518939,
       "distance_meters": 42742.9296875
     },
@@ -872,7 +872,7 @@
       "date": "2022-08-27",
       "activity_name": "Parkie's 5K - 17:42, 1st OA",
       "category": "5K",
-      "duration_seconds": 1062.0,
+      "duration_seconds": 1064.0,
       "garmin_activity_id": 9487633550,
       "distance_meters": 5152.3701171875
     },
@@ -880,7 +880,7 @@
       "date": "2022-07-31",
       "activity_name": "Summer Sizzler 5K - 17:41, 1st Master, 2nd OA",
       "category": "5K",
-      "duration_seconds": 1061.0,
+      "duration_seconds": 1061.988,
       "garmin_activity_id": 9309918176,
       "distance_meters": 4927.0400390625
     },
@@ -888,7 +888,7 @@
       "date": "2022-07-09",
       "activity_name": "Christmas in July Half Marathon - 1:23:08, 1st AG",
       "category": "Half Marathon",
-      "duration_seconds": 4988.0,
+      "duration_seconds": 4991.558,
       "garmin_activity_id": 9170198313,
       "distance_meters": 21621.2890625
     },
@@ -896,7 +896,7 @@
       "date": "2022-07-04",
       "activity_name": "Elmhurst Running Club 4 on the 4th - 23:09, 2nd AG",
       "category": "4 Mile",
-      "duration_seconds": 1389.0,
+      "duration_seconds": 1398.268,
       "garmin_activity_id": 9138580719,
       "distance_meters": 6637.3701171875
     },
@@ -904,7 +904,7 @@
       "date": "2022-06-05",
       "activity_name": "Run for the Roses 5K - 17:38, 1st AG, 5th OA",
       "category": "5K",
-      "duration_seconds": 1058.0,
+      "duration_seconds": 1059.6029930114746,
       "garmin_activity_id": 8958596457,
       "distance_meters": 5071.68017578125
     },
@@ -912,7 +912,7 @@
       "date": "2022-05-28",
       "activity_name": "Soldier Field 10 - 1:00:11, 1st AG, 12th OA",
       "category": "10 Mile",
-      "duration_seconds": 3611.0,
+      "duration_seconds": 3608.0,
       "garmin_activity_id": 8908739122,
       "distance_meters": 16193.7001953125
     },
@@ -920,7 +920,7 @@
       "date": "2022-05-22",
       "activity_name": "Darien Dash 5K - 17:46, 1st AG, 3rd OA",
       "category": "5K",
-      "duration_seconds": 1066.0,
+      "duration_seconds": 1066.278,
       "garmin_activity_id": 8872380695,
       "distance_meters": 5086.8701171875
     },
@@ -928,7 +928,7 @@
       "date": "2022-05-14",
       "activity_name": "The Michael J. Fox Foundation's Chicago Run 5K - 17:43, 1st OA",
       "category": "5K",
-      "duration_seconds": 1063.0,
+      "duration_seconds": 1064.26900100708,
       "garmin_activity_id": 8821586231,
       "distance_meters": 5062.68017578125
     },
@@ -936,7 +936,7 @@
       "date": "2022-05-07",
       "activity_name": "Run the Ridge 5K - 18:08, 1st OA",
       "category": "5K",
-      "duration_seconds": 1088.218994140625,
+      "duration_seconds": 1086.4789924621582,
       "garmin_activity_id": 8777284634,
       "distance_meters": 5075.8701171875
     },
@@ -944,7 +944,7 @@
       "date": "2022-04-18",
       "activity_name": "Boston Marathon  -  2:58:46",
       "category": "Marathon",
-      "duration_seconds": 10726.0,
+      "duration_seconds": 10726.21,
       "garmin_activity_id": 8663390417,
       "distance_meters": 42454.49472
     },
@@ -952,7 +952,7 @@
       "date": "2022-03-19",
       "activity_name": "Deer Park St Paddy's Half Marathon - 1:21:47, AG 1st",
       "category": "Half Marathon",
-      "duration_seconds": 4907.0,
+      "duration_seconds": 4908.784980773926,
       "garmin_activity_id": 8485373016,
       "distance_meters": 21136.0390625
     },
@@ -960,7 +960,7 @@
       "date": "2022-03-12",
       "activity_name": "St. Paddy's Day 5K - 17:49, AG 1st",
       "category": "5K",
-      "duration_seconds": 1069.0,
+      "duration_seconds": 1072.9760131835938,
       "garmin_activity_id": 8444176764,
       "distance_meters": 4925.240234375
     },
@@ -968,7 +968,7 @@
       "date": "2022-02-12",
       "activity_name": "The USOLE Valentine's Trail Challenge - AG 1st",
       "category": "5 Mile / 8K",
-      "duration_seconds": 1909.0,
+      "duration_seconds": 1910.615,
       "garmin_activity_id": 8284516266,
       "distance_meters": 7549.85986328125
     },
@@ -976,7 +976,7 @@
       "date": "2021-12-18",
       "activity_name": "The USOLE December Trail Challenge - AG 1st",
       "category": "5 Mile / 8K",
-      "duration_seconds": 1812.0,
+      "duration_seconds": 1811.4710083007812,
       "garmin_activity_id": 7977972333,
       "distance_meters": 7575.7900390625
     },
@@ -984,7 +984,7 @@
       "date": "2021-11-25",
       "activity_name": "Grove Express 5K - 18:20, 1st AG",
       "category": "5K",
-      "duration_seconds": 1100.0,
+      "duration_seconds": 1101.4990005493164,
       "garmin_activity_id": 7872048322,
       "distance_meters": 5051.06005859375
     },
@@ -992,7 +992,7 @@
       "date": "2021-11-13",
       "activity_name": "CARA Autumn Trail Chase 8k - 32:02, AG 1st",
       "category": "8K",
-      "duration_seconds": 1922.0,
+      "duration_seconds": 1923.3719816207886,
       "garmin_activity_id": 7812809603,
       "distance_meters": 8121.06005859375
     },
@@ -1000,7 +1000,7 @@
       "date": "2021-11-07",
       "activity_name": "Fast Track Cross Country Regionals - 19:29",
       "category": "5K",
-      "duration_seconds": 1173.303955078125,
+      "duration_seconds": 1170.0,
       "garmin_activity_id": 7783338804,
       "distance_meters": 5022.02978515625
     },
@@ -1008,7 +1008,7 @@
       "date": "2021-10-11",
       "activity_name": "Boston Marathon - 2:56:41",
       "category": "Marathon",
-      "duration_seconds": 10601.0,
+      "duration_seconds": 10601.114959716797,
       "garmin_activity_id": 7640797571,
       "distance_meters": 42195.07
     },
@@ -1016,7 +1016,7 @@
       "date": "2021-10-03",
       "activity_name": "Virgin Money London  Marathon - 2:49:21",
       "category": "Marathon",
-      "duration_seconds": 10161.0,
+      "duration_seconds": 10164.268013000488,
       "garmin_activity_id": 7595687553,
       "distance_meters": 42266.41015625
     },
@@ -1056,7 +1056,7 @@
       "date": "2021-07-03",
       "activity_name": "Elmhurst Running Club 4 on the 3rd",
       "category": "4 Mile",
-      "duration_seconds": 1431.0,
+      "duration_seconds": 1434.375,
       "garmin_activity_id": 7062293551,
       "distance_meters": 6437.38
     },
@@ -1064,7 +1064,7 @@
       "date": "2021-06-13",
       "activity_name": "Naperville 10K",
       "category": "10K",
-      "duration_seconds": 2443.0,
+      "duration_seconds": 2450.0,
       "garmin_activity_id": 6951318081,
       "distance_meters": 10356.23046875
     },
@@ -1072,7 +1072,7 @@
       "date": "2020-10-04",
       "activity_name": "Virtual Virgin Money London Marathon",
       "category": "Marathon",
-      "duration_seconds": 13301.0,
+      "duration_seconds": 13175.381958007812,
       "garmin_activity_id": 5632482943,
       "distance_meters": 42196.55078125
     },
@@ -1080,7 +1080,7 @@
       "date": "2020-09-12",
       "activity_name": "Boston Marathon - Virtual Experience",
       "category": "Marathon",
-      "duration_seconds": 14513.205078125,
+      "duration_seconds": 14482.697967529297,
       "garmin_activity_id": 5527028290,
       "distance_meters": 42214.51171875
     },
@@ -1088,7 +1088,7 @@
       "date": "2019-11-03",
       "activity_name": "TCS New York City Marathon",
       "category": "Marathon",
-      "duration_seconds": 10407.0,
+      "duration_seconds": 10408.422912597656,
       "garmin_activity_id": 4219338135,
       "distance_meters": 42196.99968
     },
@@ -1096,7 +1096,7 @@
       "date": "2019-10-23",
       "activity_name": "39th Annual AVS 5km Run",
       "category": "5K",
-      "duration_seconds": 1064.0,
+      "duration_seconds": 1068.6950073242188,
       "garmin_activity_id": 4183894166,
       "distance_meters": 5000.0
     },
@@ -1104,7 +1104,7 @@
       "date": "2019-10-05",
       "activity_name": "College of DuPage Food Truck  Rally & Sunset 5K",
       "category": "5K",
-      "duration_seconds": 1048.0,
+      "duration_seconds": 1072.9140014648438,
       "garmin_activity_id": 4128398616,
       "distance_meters": 5000.0
     },
@@ -1112,7 +1112,7 @@
       "date": "2019-09-08",
       "activity_name": "Naperville Trails Half Marathon",
       "category": "Half Marathon",
-      "duration_seconds": 5182.0,
+      "duration_seconds": 5185.0419921875,
       "garmin_activity_id": 4037448347,
       "distance_meters": 21097.54
     },
@@ -1120,7 +1120,7 @@
       "date": "2019-09-07",
       "activity_name": "BBQ Bolt 5K",
       "category": "5K",
-      "duration_seconds": 1105.0,
+      "duration_seconds": 1106.0,
       "garmin_activity_id": 4033085753,
       "distance_meters": 5000.0
     },
@@ -1128,7 +1128,7 @@
       "date": "2019-08-24",
       "activity_name": "Parkie's Famous 10K",
       "category": "10K",
-      "duration_seconds": 2369.0,
+      "duration_seconds": 2366.687961578369,
       "garmin_activity_id": 3984299108,
       "distance_meters": 10000.0
     },
@@ -1136,7 +1136,7 @@
       "date": "2019-07-21",
       "activity_name": "Rock 'n' Roll Chicago Half Marathon",
       "category": "Half Marathon",
-      "duration_seconds": 5196.0,
+      "duration_seconds": 5197.5069971084595,
       "garmin_activity_id": 3867685992,
       "distance_meters": 21097.54
     },
@@ -1144,7 +1144,7 @@
       "date": "2019-07-04",
       "activity_name": "Elmhurst Running Club 4 or the 4th",
       "category": "4 Mile",
-      "duration_seconds": 1456.0,
+      "duration_seconds": 1453.0,
       "garmin_activity_id": 3811316566,
       "distance_meters": 6429.60986328125
     },
@@ -1152,7 +1152,7 @@
       "date": "2019-06-22",
       "activity_name": "Champions for Children 5K",
       "category": "5K",
-      "duration_seconds": 1102.0,
+      "duration_seconds": 1097.0,
       "garmin_activity_id": 3772580712,
       "distance_meters": 5005.059840000001
     },
@@ -1160,7 +1160,7 @@
       "date": "2019-06-09",
       "activity_name": "Naperville 10K",
       "category": "10K",
-      "duration_seconds": 2348.0,
+      "duration_seconds": 2342.0,
       "garmin_activity_id": 3730804857,
       "distance_meters": 9994.026240000001
     },
@@ -1168,7 +1168,7 @@
       "date": "2019-06-01",
       "activity_name": "Run The Ridge 5K",
       "category": "5K",
-      "duration_seconds": 1096.0,
+      "duration_seconds": 1143.0,
       "garmin_activity_id": 3704584828,
       "distance_meters": 5000.0
     },
@@ -1176,7 +1176,7 @@
       "date": "2019-05-26",
       "activity_name": "Race to the Flag 5K",
       "category": "5K",
-      "duration_seconds": 1099.0,
+      "duration_seconds": 1096.0,
       "garmin_activity_id": 3685777412,
       "distance_meters": 5000.0
     },
@@ -1184,7 +1184,7 @@
       "date": "2019-04-15",
       "activity_name": "Boston Marathon",
       "category": "Marathon",
-      "duration_seconds": 10995.0,
+      "duration_seconds": 10968.0,
       "garmin_activity_id": 3558724097,
       "distance_meters": 42195.4
     },
@@ -1192,7 +1192,7 @@
       "date": "2019-03-03",
       "activity_name": "Tokyo Marathon",
       "category": "Marathon",
-      "duration_seconds": 10709.0,
+      "duration_seconds": 10673.0,
       "garmin_activity_id": 3431151184,
       "distance_meters": 42197.0
     },
@@ -1200,7 +1200,7 @@
       "date": "2018-10-07",
       "activity_name": "Chicago Marathon",
       "category": "Marathon",
-      "duration_seconds": 11336.0,
+      "duration_seconds": 11332.0,
       "garmin_activity_id": 3072085758,
       "distance_meters": 42197.0
     },
@@ -1208,7 +1208,7 @@
       "date": "2018-09-16",
       "activity_name": "45th BMW BERLIN-MARATHON",
       "category": "Marathon",
-      "duration_seconds": 10695.0,
+      "duration_seconds": 10696.0,
       "garmin_activity_id": 3019078986,
       "distance_meters": 42197.0
     },
@@ -1216,7 +1216,7 @@
       "date": "2018-08-25",
       "activity_name": "Parkie's Famous 10K",
       "category": "10K",
-      "duration_seconds": 2346.4208984375,
+      "duration_seconds": 2343.0,
       "garmin_activity_id": 2961262925,
       "distance_meters": 10235.43
     },
@@ -1224,7 +1224,7 @@
       "date": "2018-07-22",
       "activity_name": "Rock 'n' Roll Chicago Halfmarathon",
       "category": "Half Marathon",
-      "duration_seconds": 5183.0,
+      "duration_seconds": 5186.0,
       "garmin_activity_id": 2871499623,
       "distance_meters": 21381.16015625
     },
@@ -1232,7 +1232,7 @@
       "date": "2018-07-04",
       "activity_name": "Elmhurst Running Club 4 on the 4th",
       "category": "4 Mile",
-      "duration_seconds": 1459.0,
+      "duration_seconds": 844.0,
       "garmin_activity_id": 2825582312,
       "distance_meters": 6437.38
     },
@@ -1240,7 +1240,7 @@
       "date": "2018-06-02",
       "activity_name": "Run the Ridge 5K",
       "category": "5K",
-      "duration_seconds": 1085.0,
+      "duration_seconds": 62.0,
       "garmin_activity_id": 2745796312,
       "distance_meters": 5000.0
     },
@@ -1248,7 +1248,7 @@
       "date": "2018-05-27",
       "activity_name": "Race to the Flag 5K",
       "category": "5K",
-      "duration_seconds": 1147.0,
+      "duration_seconds": 1250.0,
       "garmin_activity_id": 2731157372,
       "distance_meters": 5117.72
     },
@@ -1256,7 +1256,7 @@
       "date": "2018-04-16",
       "activity_name": "122nd Boston Marathon",
       "category": "Marathon",
-      "duration_seconds": 11130.0,
+      "duration_seconds": 10998.0,
       "garmin_activity_id": 2629227787,
       "distance_meters": 42197.0
     },
@@ -1264,7 +1264,7 @@
       "date": "2018-03-18",
       "activity_name": "Amita Health Bolingbrook St. Paddy's Half Marathon",
       "category": "Half Marathon",
-      "duration_seconds": 5118.0,
+      "duration_seconds": 5121.0,
       "garmin_activity_id": 2563617691,
       "distance_meters": 21098.5
     },
@@ -1272,7 +1272,7 @@
       "date": "2018-03-10",
       "activity_name": "Naperville St. Paddy’s Day 5K",
       "category": "5K",
-      "duration_seconds": 1076.0,
+      "duration_seconds": 1079.0,
       "garmin_activity_id": 2546265092,
       "distance_meters": 5000.0
     },
@@ -1280,7 +1280,7 @@
       "date": "2017-11-01",
       "activity_name": "37th Annual AVS 5K Run",
       "category": "5K",
-      "duration_seconds": 1076.0,
+      "duration_seconds": 1078.0,
       "garmin_activity_id": 2256480154,
       "distance_meters": 4940.68608
     },
@@ -1288,7 +1288,7 @@
       "date": "2017-10-08",
       "activity_name": "Chicago Marathon",
       "category": "Marathon",
-      "duration_seconds": 10918.0,
+      "duration_seconds": 10845.0,
       "garmin_activity_id": 2068806965,
       "distance_meters": 42197.0
     },
@@ -1312,7 +1312,7 @@
       "date": "2017-08-20",
       "activity_name": "Windrunner 10k",
       "category": "10K",
-      "duration_seconds": 2403.0,
+      "duration_seconds": 2407.0,
       "garmin_activity_id": 1928015820,
       "distance_meters": 10000.0
     },
@@ -1320,7 +1320,7 @@
       "date": "2017-08-06",
       "activity_name": "The 8th Annual San Diego Free to Breathe 5K",
       "category": "5K",
-      "duration_seconds": 1164.0,
+      "duration_seconds": 1162.0,
       "garmin_activity_id": 1900035996,
       "distance_meters": 5000.0
     },
