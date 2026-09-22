@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T16:17:50Z",
+  "generated_at": "2026-09-22T16:18:47Z",
   "count": 91,
   "data": [
     {
@@ -484,6 +484,18 @@
     },
     {
       "sport": "Running",
+      "event": "10 Mile",
+      "result": "1:01:42",
+      "result_seconds": 3702.0,
+      "date": "2023-05-27",
+      "event_name": "Soldier Field 10 - 1:01:42, 16th OA, 1st AG",
+      "type": "SB",
+      "season_year": 2023,
+      "notes": "Garmin activity 11208201335",
+      "source": "automatic_race_history"
+    },
+    {
+      "sport": "Running",
       "event": "10K",
       "result": "36:49",
       "result_seconds": 2209.0,
@@ -568,30 +580,6 @@
     },
     {
       "sport": "Running",
-      "event": "10 Mile",
-      "result": "1:00:00",
-      "result_seconds": 3600.0,
-      "date": "2023-02-12",
-      "event_name": "Toyota Miles Per Hour - 9.57mi, 1st AG, 5th OA",
-      "type": "SB",
-      "season_year": 2023,
-      "notes": "Garmin activity 10496802553",
-      "source": "automatic_race_history"
-    },
-    {
-      "sport": "Running",
-      "event": "10 Mile",
-      "result": "1:00:00",
-      "result_seconds": 3600.0,
-      "date": "2023-02-12",
-      "event_name": "Toyota Miles Per Hour - 9.57mi, 1st AG, 5th OA",
-      "type": "PR",
-      "season_year": null,
-      "notes": "Garmin activity 10496802553",
-      "source": "automatic_race_history"
-    },
-    {
-      "sport": "Running",
       "event": "Marathon",
       "result": "2:55:38",
       "result_seconds": 10538.0,
@@ -635,6 +623,18 @@
       "event_name": "Soldier Field 10 - 1:00:11, 1st AG, 12th OA",
       "type": "SB",
       "season_year": 2022,
+      "notes": "Garmin activity 8908739122",
+      "source": "automatic_race_history"
+    },
+    {
+      "sport": "Running",
+      "event": "10 Mile",
+      "result": "1:00:11",
+      "result_seconds": 3611.0,
+      "date": "2022-05-28",
+      "event_name": "Soldier Field 10 - 1:00:11, 1st AG, 12th OA",
+      "type": "PR",
+      "season_year": null,
       "notes": "Garmin activity 8908739122",
       "source": "automatic_race_history"
     },
