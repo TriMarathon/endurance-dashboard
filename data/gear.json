@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T19:05:01Z",
+  "generated_at": "2026-09-22T00:03:05Z",
   "gear": [
     {
       "id": "15f7b270d3f44537b70921baf82dc3b8",
@@ -163,8 +163,8 @@
       "type": "Shoes",
       "category": "Shoes",
       "status": "active",
-      "activity_count": 39,
-      "distance_miles": 261.8,
+      "activity_count": 40,
+      "distance_miles": 269.1,
       "maximum_distance_miles": 400.0,
       "hours_of_use": null,
       "days_of_use": null,
