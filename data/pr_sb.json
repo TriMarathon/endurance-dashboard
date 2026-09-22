@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T17:22:46Z",
+  "generated_at": "2026-09-22T17:34:50Z",
   "count": 91,
   "data": [
     {
@@ -113,14 +113,14 @@
     {
       "sport": "Running",
       "event": "8K",
-      "result": "30:09",
-      "result_seconds": 1809.0,
+      "result": "30:10",
+      "result_seconds": 1810.0,
       "date": "2026-03-22",
       "event_name": "Shamrock Shuffle 8k - 30:10, 2nd AG",
       "type": "SB",
       "season_year": 2026,
       "notes": "Garmin activity 22261372083",
-      "source": "automatic_race_history"
+      "source": "manual"
     },
     {
       "sport": "Running",
