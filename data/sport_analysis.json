@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T18:47:28Z",
+  "generated_at": "2026-09-23T19:35:40Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-23",
   "sports": {
@@ -25401,7 +25401,7 @@
           "date": "2024-06-04",
           "duration_seconds": 109,
           "tss": null,
-          "distance_miles": 0.2017,
+          "distance_miles": 7.0301,
           "is_race": false,
           "is_multisport_leg": false
         },
@@ -25409,7 +25409,7 @@
           "date": "2024-06-04",
           "duration_seconds": 3724,
           "tss": 50.31,
-          "distance_miles": 7.0301,
+          "distance_miles": 0.2017,
           "is_race": false,
           "is_multisport_leg": false
         },
