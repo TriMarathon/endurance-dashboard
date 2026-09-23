@@ -1204,6 +1204,7 @@ footer {
 
 .sport-subtabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin: 0 0 18px;
 }
