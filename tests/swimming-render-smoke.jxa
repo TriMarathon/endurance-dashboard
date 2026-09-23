@@ -1,0 +1,97 @@
+#!/usr/bin/env osascript -l JavaScript
+// DASHBOARD_JS=js/dashboard.js osascript -l JavaScript tests/swimming-render-smoke.jxa
+
+ObjC.import('Foundation');
+
+const sourcePath = ObjC.unwrap(
+  $.NSProcessInfo.processInfo.environment.objectForKey('DASHBOARD_JS')
+);
+if (!sourcePath) throw new Error('Set DASHBOARD_JS before running this test.');
+
+var elements = {
+  'running-summary': { innerHTML: '' },
+  'running-load': { getContext: function () { return {}; } },
+  'running-distance': { getContext: function () { return {}; } },
+  'running-long': { getContext: function () { return {}; } },
+};
+var document = {
+  addEventListener: function () {},
+  getElementById: function (id) { return elements[id] || null; },
+};
+var window = { location: { hash: '' }, addEventListener: function () {} };
+var history = { replaceState: function () {} };
+var getComputedStyle = function () {
+  return { getPropertyValue: function () { return ''; } };
+};
+var Chart = function (context, config) {
+  this.config = config;
+  this.destroy = function () {};
+};
+
+var source = ObjC.unwrap($.NSString.stringWithContentsOfFileEncodingError(
+  sourcePath,
+  $.NSUTF8StringEncoding,
+  null
+));
+
+[
+  "shortName = swimming ? 'Swim'",
+  "swimming ? 'Yards' : 'Miles'",
+  "swimming ? 'Longest Swim'",
+  '!doc.sports.swimming',
+].forEach(function (expected) {
+  if (source.indexOf(expected) < 0) throw new Error('Missing swimming chart/load path: ' + expected);
+});
+
+source += `
+activeSport = 'swimming';
+runningRange = {start: '2026-08-31', end: '2026-09-27'};
+var originalRange = JSON.stringify(runningRange);
+var swims = [
+  {date: '2026-08-31', distance_yards: 500, duration_seconds: 500, tss: 15, is_race: true},
+  {date: '2026-09-07', distance_yards: 1000, duration_seconds: 900, tss: 30, is_race: false},
+  {date: '2026-09-14', distance_yards: null, duration_seconds: 600, tss: 12, is_race: false},
+  {date: '2026-09-21', distance_yards: 2000, duration_seconds: 1600, tss: 50, is_race: false}
+];
+var summary = sportSummary(swims, 'swimming');
+if (summary.count !== 4 || summary.seconds !== 3600 || summary.tss !== 107) throw new Error('No-distance swim did not contribute non-distance metrics');
+if (summary.distance !== 3500 || summary.longest !== 2000 || Math.abs(summary.average - (3500 / 3)) > 0.0001) throw new Error('Swimming distance metrics failed');
+if (Math.abs(summary.pace - (3000 / 35)) > 0.0001) throw new Error('Weighted 100-yard pace failed');
+if (Math.abs(summary.perWeek - 1) > 0.0001 || summary.races !== 1) throw new Error('Swimming count metrics failed');
+if (fmtSwimPace(89.6) !== '1:30/100 yd') throw new Error('Swim pace formatting failed');
+renderRunningSummary(swims);
+var html = elements['running-summary'].innerHTML;
+if ((html.match(/running-metric"/g) || []).length !== 8) throw new Error('Eight swimming metrics were not rendered');
+['Swims/week', 'Avg Pace', 'Longest Swim', 'yd/swim'].forEach(function (label) {
+  if (html.indexOf(label) < 0) throw new Error('Missing swimming metric: ' + label);
+});
+var weeks = sportWeeks(swims);
+if (weeks.length !== 4 || weeks[2].distance !== 0 || weeks[3].longest !== 2000
+    || Math.abs(weeks[3].moving_average - 875) > 0.0001) {
+  throw new Error('Swimming weekly yards, moving average, or longest swim failed');
+}
+var loadChart = buildRunningLoadChart([{date: '2026-09-01', tss: 20, ctl: 10, atl: 12}]);
+if (loadChart.config.data.datasets[0].label !== 'Swim TSS'
+    || loadChart.config.data.datasets[1].label !== 'Swim CTL'
+    || loadChart.config.data.datasets[2].label !== 'Swim ATL') {
+  throw new Error('Swimming load chart labels failed');
+}
+var distanceChart = buildRunningDistanceChart(weeks);
+if (distanceChart.config.options.scales.y.title.text !== 'Yards'
+    || distanceChart.config.data.datasets[1].label !== '4-week average') {
+  throw new Error('Swimming weekly distance chart failed');
+}
+var longChart = buildRunningLongChart(weeks);
+if (longChart.config.options.scales.y.title.text !== 'Yards'
+    || longChart.config.data.datasets[0].label !== 'Longest Swim') {
+  throw new Error('Swimming longest chart failed');
+}
+activeSport = 'running';
+if (JSON.stringify(runningRange) !== originalRange) throw new Error('Date range changed while switching sports');
+activeSport = 'swimming';
+var noDistance = sportSummary([{date: '2026-09-14', distance_yards: null, duration_seconds: 600, tss: 12, is_race: false}], 'swimming');
+if (noDistance.distance !== 0 || noDistance.pace !== null || noDistance.average !== null || noDistance.longest !== 0) throw new Error('No-distance range was not graceful');
+console.log('Swimming render smoke tests passed');
+`;
+
+eval(source);

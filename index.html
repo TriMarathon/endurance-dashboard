@@ -10,7 +10,7 @@
       name="description"
       content="Endurance training-load dashboard showing 90-day TSS, CTL and ATL from Garmin training data."
     />
-    <link rel="stylesheet" href="css/dashboard.css?v=20260923-2" />
+    <link rel="stylesheet" href="css/dashboard.css?v=20260923-3" />
   </head>
   <body>
     <header>
@@ -170,12 +170,13 @@
         <nav class="sport-subtabs" role="tablist" aria-label="Sports">
           <button type="button" class="sport-subtab active" data-sport="running" role="tab" aria-selected="true">Running</button>
           <button type="button" class="sport-subtab" data-sport="cycling" role="tab" aria-selected="false">Cycling</button>
+          <button type="button" class="sport-subtab" data-sport="swimming" role="tab" aria-selected="false">Swimming</button>
         </nav>
         <h2 class="chart-title" id="running-title">Running</h2>
         <div
           class="date-range-controls"
           role="group"
-          aria-label="Running date range"
+          aria-label="Sport date range"
         >
           <div class="date-field">
             <label for="running-start">Start date</label>
@@ -190,27 +191,27 @@
         </div>
 
         <div id="running-summary" class="running-summary" aria-live="polite">
-          <div class="status loading" role="status"><span class="loader"></span>Loading running data…</div>
+          <div class="status loading" role="status"><span class="loader"></span>Loading sport data…</div>
         </div>
 
         <h2 class="chart-title sport-chart-title" id="running-load-title">Running Load</h2>
         <section class="chart-wrap" aria-labelledby="running-load-title">
           <div class="chart-container sport-chart-container">
-            <canvas id="running-load">Daily Run TSS with Running CTL and ATL.</canvas>
+            <canvas id="running-load">Daily sport TSS with sport-specific CTL and ATL.</canvas>
           </div>
         </section>
 
         <h2 class="chart-title sport-chart-title" id="running-distance-title">Weekly Distance</h2>
         <section class="chart-wrap" aria-labelledby="running-distance-title">
           <div class="chart-container sport-chart-container">
-            <canvas id="running-distance">Weekly running miles with a four-week moving average.</canvas>
+            <canvas id="running-distance">Weekly sport distance with a four-week moving average.</canvas>
           </div>
         </section>
 
         <h2 class="chart-title sport-chart-title" id="running-long-title">Long Run Progression</h2>
         <section class="chart-wrap" aria-labelledby="running-long-title">
           <div class="chart-container sport-chart-container">
-            <canvas id="running-long">Longest run distance in each Monday through Sunday week.</canvas>
+            <canvas id="running-long">Longest sport activity in each Monday through Sunday week.</canvas>
           </div>
         </section>
       </section>
@@ -408,6 +409,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" defer></script>
-    <script src="js/dashboard.js?v=20260923-2" defer></script>
+    <script src="js/dashboard.js?v=20260923-3" defer></script>
   </body>
 </html>

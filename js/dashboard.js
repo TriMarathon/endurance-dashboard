@@ -2429,10 +2429,17 @@ function fmtRunningPace(secondsPerMile) {
   return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, '0')}/mi`;
 }
 
+function fmtSwimPace(secondsPer100Yd) {
+  if (!Number.isFinite(secondsPer100Yd)) return '—';
+  const total = Math.round(secondsPer100Yd);
+  return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, '0')}/100 yd`;
+}
+
 function sportSummary(activities, sportName = activeSport) {
-  const distanceRows = activities.filter((row) => Number.isFinite(Number(row.distance_miles))
-    && Number(row.distance_miles) > 0);
-  const distance = distanceRows.reduce((sum, row) => sum + Number(row.distance_miles), 0);
+  const distanceKey = sportName === 'swimming' ? 'distance_yards' : 'distance_miles';
+  const distanceRows = activities.filter((row) => Number.isFinite(Number(row[distanceKey]))
+    && Number(row[distanceKey]) > 0);
+  const distance = distanceRows.reduce((sum, row) => sum + Number(row[distanceKey]), 0);
   const seconds = activities.reduce((sum, row) => sum + Number(row.duration_seconds || 0), 0);
   const count = activities.length;
   const selectedDays = runningRange
@@ -2445,15 +2452,21 @@ function sportSummary(activities, sportName = activeSport) {
     perWeek: selectedDays > 0 ? count / (selectedDays / 7) : 0,
     races: activities.filter((row) => row.is_race === true).length,
     tss: activities.reduce((sum, row) => sum + Number(row.tss || 0), 0),
-    longest: distanceRows.reduce((best, row) => Math.max(best, Number(row.distance_miles)), 0),
+    longest: distanceRows.reduce((best, row) => Math.max(best, Number(row[distanceKey])), 0),
     average: distanceRows.length > 0 ? distance / distanceRows.length : null,
   };
   if (sportName === 'cycling') {
     const pairedRows = distanceRows.filter((row) => Number.isFinite(Number(row.duration_seconds))
       && Number(row.duration_seconds) > 0);
-    const pairedDistance = pairedRows.reduce((sum, row) => sum + Number(row.distance_miles), 0);
+    const pairedDistance = pairedRows.reduce((sum, row) => sum + Number(row[distanceKey]), 0);
     const pairedSeconds = pairedRows.reduce((sum, row) => sum + Number(row.duration_seconds), 0);
     result.speed = pairedSeconds > 0 ? pairedDistance / (pairedSeconds / 3600) : null;
+  } else if (sportName === 'swimming') {
+    const pairedRows = distanceRows.filter((row) => Number.isFinite(Number(row.duration_seconds))
+      && Number(row.duration_seconds) > 0);
+    const pairedDistance = pairedRows.reduce((sum, row) => sum + Number(row[distanceKey]), 0);
+    const pairedSeconds = pairedRows.reduce((sum, row) => sum + Number(row.duration_seconds), 0);
+    result.pace = pairedDistance > 0 ? pairedSeconds / pairedDistance * 100 : null;
   } else {
     result.pace = distance > 0 ? seconds / distance : null;
     // Preserve Running v1: Avg Distance divides by every run.
@@ -2473,7 +2486,17 @@ function renderRunningSummary(activities) {
   if (!container) return;
   const value = sportSummary(activities);
   const cycling = activeSport === 'cycling';
-  const metrics = cycling ? [
+  const swimming = activeSport === 'swimming';
+  const metrics = swimming ? [
+    ['Distance', `${Math.round(value.distance).toLocaleString('en-US')} yd`],
+    ['Time', fmtRunningTime(value.seconds)],
+    ['Swims/week', value.perWeek.toFixed(1)],
+    ['Races', String(value.races)],
+    ['TSS', Math.round(value.tss).toLocaleString('en-US')],
+    ['Avg Pace', fmtSwimPace(value.pace)],
+    ['Longest Swim', `${Math.round(value.longest).toLocaleString('en-US')} yd`],
+    ['Avg Distance', value.average == null ? '—' : `${Math.round(value.average).toLocaleString('en-US')} yd/swim`],
+  ] : cycling ? [
     ['Distance', `${value.distance.toFixed(1)} mi`],
     ['Time', fmtRunningTime(value.seconds)],
     ['Rides/week', value.perWeek.toFixed(1)],
@@ -2516,7 +2539,8 @@ function sportWeeks(activities) {
   activities.forEach((row) => {
     const week = byWeek.get(mondayForDate(row.date));
     if (!week) return;
-    const distance = Number(row.distance_miles || 0);
+    const distanceKey = activeSport === 'swimming' ? 'distance_yards' : 'distance_miles';
+    const distance = Number(row[distanceKey] || 0);
     week.distance += distance;
     week.longest = Math.max(week.longest, distance);
   });
@@ -2572,9 +2596,10 @@ function sportChartBase(labels, datasets, yTitle) {
 function buildRunningLoadChart(rows) {
   const labels = rows.map((row) => row.date);
   const cycling = activeSport === 'cycling';
-  const barBackground = cycling ? palette.bikeBg : palette.runBg;
-  const barBorder = cycling ? palette.bikeBd : palette.runBd;
-  const shortName = cycling ? 'Bike' : 'Run';
+  const swimming = activeSport === 'swimming';
+  const barBackground = swimming ? palette.swimBg : cycling ? palette.bikeBg : palette.runBg;
+  const barBorder = swimming ? palette.swimBd : cycling ? palette.bikeBd : palette.runBd;
+  const shortName = swimming ? 'Swim' : cycling ? 'Bike' : 'Run';
   const config = sportChartBase(labels, [
     { type: 'bar', label: `${shortName} TSS`, data: rows.map((row) => row.tss), backgroundColor: barBackground, borderColor: barBorder, borderWidth: 0 },
     { type: 'line', label: `${shortName} CTL`, data: rows.map((row) => row.ctl), borderColor: palette.line, backgroundColor: palette.lineBg, borderWidth: 2, pointRadius: 1, tension: 0 },
@@ -2586,19 +2611,21 @@ function buildRunningLoadChart(rows) {
 function buildRunningDistanceChart(weeks) {
   const labels = weeks.map((row) => row.week_start);
   const cycling = activeSport === 'cycling';
+  const swimming = activeSport === 'swimming';
   const config = sportChartBase(labels, [
-    { type: 'bar', label: 'Weekly Distance', data: weeks.map((row) => row.distance), backgroundColor: cycling ? palette.bikeBg : palette.runBg, borderColor: cycling ? palette.bikeBd : palette.runBd, borderWidth: 0 },
+    { type: 'bar', label: 'Weekly Distance', data: weeks.map((row) => row.distance), backgroundColor: swimming ? palette.swimBg : cycling ? palette.bikeBg : palette.runBg, borderColor: swimming ? palette.swimBd : cycling ? palette.bikeBd : palette.runBd, borderWidth: 0 },
     { type: 'line', label: '4-week average', data: weeks.map((row) => row.moving_average), borderColor: palette.line, backgroundColor: palette.lineBg, borderWidth: 2, pointRadius: 2, tension: 0 },
-  ], 'Miles');
+  ], swimming ? 'Yards' : 'Miles');
   return new Chart(document.getElementById('running-distance').getContext('2d'), config);
 }
 
 function buildRunningLongChart(weeks) {
   const labels = weeks.map((row) => row.week_start);
   const cycling = activeSport === 'cycling';
+  const swimming = activeSport === 'swimming';
   const config = sportChartBase(labels, [
-    { type: 'bar', label: cycling ? 'Longest Ride' : 'Longest Run', data: weeks.map((row) => row.longest), backgroundColor: cycling ? palette.bikeBg : palette.runBg, borderColor: cycling ? palette.bikeBd : palette.runBd, borderWidth: 0 },
-  ], 'Miles');
+    { type: 'bar', label: swimming ? 'Longest Swim' : cycling ? 'Longest Ride' : 'Longest Run', data: weeks.map((row) => row.longest), backgroundColor: swimming ? palette.swimBg : cycling ? palette.bikeBg : palette.runBg, borderColor: swimming ? palette.swimBd : cycling ? palette.bikeBd : palette.runBd, borderWidth: 0 },
+  ], swimming ? 'Yards' : 'Miles');
   config.options.plugins.legend.display = false;
   return new Chart(document.getElementById('running-long').getContext('2d'), config);
 }
@@ -2610,12 +2637,13 @@ function renderRunning() {
   const daily = filterDailyRange(source.daily, runningRange.start, runningRange.end);
   const weeks = sportWeeks(activities);
   const cycling = activeSport === 'cycling';
+  const swimming = activeSport === 'swimming';
   const pageTitle = document.getElementById('running-title');
   const loadTitle = document.getElementById('running-load-title');
   const longTitle = document.getElementById('running-long-title');
-  if (pageTitle) pageTitle.textContent = cycling ? 'Cycling' : 'Running';
-  if (loadTitle) loadTitle.textContent = cycling ? 'Cycling Load' : 'Running Load';
-  if (longTitle) longTitle.textContent = cycling ? 'Long Ride Progression' : 'Long Run Progression';
+  if (pageTitle) pageTitle.textContent = swimming ? 'Swimming' : cycling ? 'Cycling' : 'Running';
+  if (loadTitle) loadTitle.textContent = swimming ? 'Swimming Load' : cycling ? 'Cycling Load' : 'Running Load';
+  if (longTitle) longTitle.textContent = swimming ? 'Long Swim Progression' : cycling ? 'Long Ride Progression' : 'Long Run Progression';
   renderRunningSummary(activities);
   [runningLoadChart, runningDistanceChart, runningLongChart].forEach((chart) => {
     if (chart) chart.destroy();
@@ -2665,7 +2693,7 @@ function initSportSubtabs() {
   document.querySelectorAll('.sport-subtab[data-sport]').forEach((button) => {
     button.addEventListener('click', () => {
       const requested = button.getAttribute('data-sport');
-      if (requested !== 'running' && requested !== 'cycling') return;
+      if (requested !== 'running' && requested !== 'cycling' && requested !== 'swimming') return;
       activeSport = requested;
       document.querySelectorAll('.sport-subtab[data-sport]').forEach((item) => {
         const selected = item.getAttribute('data-sport') === activeSport;
@@ -2685,10 +2713,13 @@ async function loadSportAnalysis() {
     if (!response.ok) throw new Error('HTTP ' + response.status);
     const doc = await response.json();
     if (!doc || !doc.sports || !doc.sports.running || !doc.sports.cycling
+        || !doc.sports.swimming
         || !Array.isArray(doc.sports.running.activities)
         || !Array.isArray(doc.sports.running.daily)
         || !Array.isArray(doc.sports.cycling.activities)
-        || !Array.isArray(doc.sports.cycling.daily)) {
+        || !Array.isArray(doc.sports.cycling.daily)
+        || !Array.isArray(doc.sports.swimming.activities)
+        || !Array.isArray(doc.sports.swimming.daily)) {
       throw new Error('Invalid sport analysis document');
     }
     fullSportAnalysis = doc;
@@ -2699,7 +2730,7 @@ async function loadSportAnalysis() {
   } catch (err) {
     console.error('[dashboard] failed to load sport_analysis.json:', err);
     const container = document.getElementById('running-summary');
-    if (container) container.innerHTML = '<div class="status error" role="status">Running data unavailable.</div>';
+    if (container) container.innerHTML = '<div class="status error" role="status">Sport data unavailable.</div>';
   }
 }
 
