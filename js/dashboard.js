@@ -8,6 +8,7 @@ const BASE_GEAR_URL = 'data/gear.json';
 const BASE_SYSTEM_HEALTH_URL = 'data/system_health.json';
 const BASE_COMPLETED_RACES_URL = 'data/completed_races.json';
 const BASE_PR_SB_URL = 'data/pr_sb.json';
+const BASE_SPORT_ANALYSIS_URL = 'data/sport_analysis.json';
 let dataVersion = '';
 let DATA_URL = BASE_DATA_URL;
 let RACES_URL = BASE_RACES_URL;
@@ -18,6 +19,7 @@ let GEAR_URL = BASE_GEAR_URL;
 let SYSTEM_HEALTH_URL = BASE_SYSTEM_HEALTH_URL;
 let COMPLETED_RACES_URL = BASE_COMPLETED_RACES_URL;
 let PR_SB_URL = BASE_PR_SB_URL;
+let SPORT_ANALYSIS_URL = BASE_SPORT_ANALYSIS_URL;
 
 const SYSTEM_HEALTH_STALE_SECONDS = 43200;
 const CHART_ID = 'training-load';
@@ -36,6 +38,9 @@ let trainingLoadChart = null;
 let weeklyTssChart = null;
 let weeklyTimeChart = null;
 let healthCharts = [];
+let runningLoadChart = null;
+let runningDistanceChart = null;
+let runningLongChart = null;
 
 let fullTrainingLoad = null;
 let fullWeekly = null;
@@ -47,6 +52,8 @@ let overviewDoc = null;
 let overviewHealthDoc = null;
 let gearData = [];
 let gearFilter = 'active';
+let fullSportAnalysis = null;
+let runningRange = null;
 
 let completedRacesData = [];
 let racingSubtab = 'upcoming';
@@ -62,7 +69,7 @@ const PR_SB_EVENT_ORDER = [
   'Half Marathon', 'Marathon', 'Sprint', 'Olympic', '70.3', '140.6',
 ];
 
-const TAB_PANELS = ['overview', 'training', 'racing', 'health', 'gear'];
+const TAB_PANELS = ['overview', 'training', 'sports', 'racing', 'health', 'gear'];
 
 const MONTHS_SHORT = [
   'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
@@ -1504,6 +1511,7 @@ async function loadVersion() {
       SYSTEM_HEALTH_URL = BASE_SYSTEM_HEALTH_URL + qs;
       COMPLETED_RACES_URL = BASE_COMPLETED_RACES_URL + qs;
       PR_SB_URL = BASE_PR_SB_URL + qs;
+      SPORT_ANALYSIS_URL = BASE_SPORT_ANALYSIS_URL + qs;
     }
   } catch (err) {
     console.error('[dashboard] failed to load version.json, using unversioned URLs:', err);
@@ -2371,6 +2379,259 @@ async function loadGear() {
 }
 
 // ---------------------------------------------------------------------------
+// Sport-specific analytics (Phase 1: Running)
+// ---------------------------------------------------------------------------
+
+function runningRows() {
+  const sport = fullSportAnalysis && fullSportAnalysis.sports
+    ? fullSportAnalysis.sports.running : null;
+  return sport || { activities: [], daily: [] };
+}
+
+function runningDefaultRange(daily) {
+  const fallback = dailyDefaultRange(daily);
+  if (!fallback) return null;
+  try {
+    const saved = JSON.parse(localStorage.getItem('sport-analysis-range') || 'null');
+    if (saved && saved.start >= String(daily[0].date)
+        && saved.end <= String(daily[daily.length - 1].date)
+        && saved.start <= saved.end) {
+      return { start: saved.start, end: saved.end };
+    }
+  } catch (_) {
+    // A malformed or unavailable localStorage value should not block charts.
+  }
+  return fallback;
+}
+
+function selectedRunningActivities() {
+  const activities = runningRows().activities;
+  if (!runningRange) return [];
+  return activities.filter((row) => row && row.date >= runningRange.start
+    && row.date <= runningRange.end);
+}
+
+function fmtRunningTime(seconds) {
+  const totalMinutes = Math.round(Number(seconds || 0) / 60);
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+  return `${hours}:${String(minutes).padStart(2, '0')} h`;
+}
+
+function fmtRunningPace(secondsPerMile) {
+  if (!Number.isFinite(secondsPerMile)) return '—';
+  const total = Math.round(secondsPerMile);
+  return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, '0')}/mi`;
+}
+
+function runningSummary(activities) {
+  const distance = activities.reduce((sum, row) => sum + Number(row.distance_miles || 0), 0);
+  const seconds = activities.reduce((sum, row) => sum + Number(row.duration_seconds || 0), 0);
+  const count = activities.length;
+  const selectedDays = runningRange
+    ? Math.round((dateToUtcMs(runningRange.end) - dateToUtcMs(runningRange.start)) / 86400000) + 1
+    : 0;
+  return {
+    distance,
+    seconds,
+    count,
+    runsPerWeek: selectedDays > 0 ? count / (selectedDays / 7) : 0,
+    races: activities.filter((row) => row.is_race === true).length,
+    tss: activities.reduce((sum, row) => sum + Number(row.tss || 0), 0),
+    pace: distance > 0 ? seconds / distance : null,
+    longest: activities.reduce((best, row) => Math.max(best, Number(row.distance_miles || 0)), 0),
+    average: count > 0 ? distance / count : null,
+  };
+}
+
+function renderRunningSummary(activities) {
+  const container = document.getElementById('running-summary');
+  if (!container) return;
+  const value = runningSummary(activities);
+  const metrics = [
+    ['Distance', `${value.distance.toFixed(1)} mi`],
+    ['Time', fmtRunningTime(value.seconds)],
+    ['Runs/week', value.runsPerWeek.toFixed(1)],
+    ['Races', String(value.races)],
+    ['TSS', Math.round(value.tss).toLocaleString('en-US')],
+    ['Avg Pace', fmtRunningPace(value.pace)],
+    ['Longest Run', `${value.longest.toFixed(1)} mi`],
+    ['Avg Distance', value.average == null ? '—' : `${value.average.toFixed(1)} mi/run`],
+  ];
+  container.innerHTML = metrics.map(([label, display]) =>
+    `<div class="running-metric"><span class="running-metric-value">${display}</span><span class="running-metric-label">${label}</span></div>`,
+  ).join('');
+}
+
+function mondayForDate(isoDate) {
+  const ms = dateToUtcMs(isoDate);
+  if (!Number.isFinite(ms)) return null;
+  const day = new Date(ms).getUTCDay();
+  return msToIsoDate(ms - ((day + 6) % 7) * 86400000);
+}
+
+function runningWeeks(activities) {
+  if (!runningRange) return [];
+  const firstMonday = mondayForDate(runningRange.start);
+  const lastMonday = mondayForDate(runningRange.end);
+  const byWeek = new Map();
+  for (let ms = dateToUtcMs(firstMonday); ms <= dateToUtcMs(lastMonday); ms += 7 * 86400000) {
+    const weekStart = msToIsoDate(ms);
+    byWeek.set(weekStart, { week_start: weekStart, distance: 0, longest: 0 });
+  }
+  activities.forEach((row) => {
+    const week = byWeek.get(mondayForDate(row.date));
+    if (!week) return;
+    const distance = Number(row.distance_miles || 0);
+    week.distance += distance;
+    week.longest = Math.max(week.longest, distance);
+  });
+  const weeks = Array.from(byWeek.values());
+  weeks.forEach((week, index) => {
+    const window = weeks.slice(Math.max(0, index - 3), index + 1);
+    week.moving_average = window.reduce((sum, row) => sum + row.distance, 0) / window.length;
+  });
+  return weeks;
+}
+
+function sportChartBase(labels, datasets, yTitle) {
+  return {
+    type: 'bar',
+    data: { labels, datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: { color: palette.text, usePointStyle: true, pointStyle: 'circle', padding: 16 },
+        },
+        tooltip: {
+          backgroundColor: 'rgba(18, 19, 22, 0.96)',
+          titleColor: '#fff',
+          bodyColor: '#e0e0e0',
+          callbacks: { title: (items) => items.length ? fmtMediumDate(labels[items[0].dataIndex]) : '' },
+        },
+      },
+      scales: {
+        x: {
+          grid: { color: palette.grid },
+          ticks: { color: palette.muted, maxTicksLimit: 12, maxRotation: 0, callback: function (v) { return fmtAxis(this.getLabelForValue(v)); } },
+        },
+        y: {
+          beginAtZero: true,
+          grid: { color: palette.grid },
+          ticks: { color: palette.muted },
+          title: { display: true, text: yTitle, color: palette.muted },
+        },
+      },
+    },
+  };
+}
+
+function buildRunningLoadChart(rows) {
+  const labels = rows.map((row) => row.date);
+  const config = sportChartBase(labels, [
+    { type: 'bar', label: 'Run TSS', data: rows.map((row) => row.tss), backgroundColor: palette.runBg, borderColor: palette.runBd, borderWidth: 0 },
+    { type: 'line', label: 'Run CTL', data: rows.map((row) => row.ctl), borderColor: palette.line, backgroundColor: palette.lineBg, borderWidth: 2, pointRadius: 1, tension: 0 },
+    { type: 'line', label: 'Run ATL', data: rows.map((row) => row.atl), borderColor: palette.atl, backgroundColor: palette.atlBg, borderWidth: 2, pointRadius: 1, tension: 0 },
+  ], 'TSS / Load');
+  return new Chart(document.getElementById('running-load').getContext('2d'), config);
+}
+
+function buildRunningDistanceChart(weeks) {
+  const labels = weeks.map((row) => row.week_start);
+  const config = sportChartBase(labels, [
+    { type: 'bar', label: 'Weekly Distance', data: weeks.map((row) => row.distance), backgroundColor: palette.runBg, borderColor: palette.runBd, borderWidth: 0 },
+    { type: 'line', label: '4-week average', data: weeks.map((row) => row.moving_average), borderColor: palette.line, backgroundColor: palette.lineBg, borderWidth: 2, pointRadius: 2, tension: 0 },
+  ], 'Miles');
+  return new Chart(document.getElementById('running-distance').getContext('2d'), config);
+}
+
+function buildRunningLongChart(weeks) {
+  const labels = weeks.map((row) => row.week_start);
+  const config = sportChartBase(labels, [
+    { type: 'bar', label: 'Longest Run', data: weeks.map((row) => row.longest), backgroundColor: palette.runBg, borderColor: palette.runBd, borderWidth: 0 },
+  ], 'Miles');
+  config.options.plugins.legend.display = false;
+  return new Chart(document.getElementById('running-long').getContext('2d'), config);
+}
+
+function renderRunning() {
+  if (!fullSportAnalysis || !runningRange) return;
+  const source = runningRows();
+  const activities = selectedRunningActivities();
+  const daily = filterDailyRange(source.daily, runningRange.start, runningRange.end);
+  const weeks = runningWeeks(activities);
+  renderRunningSummary(activities);
+  [runningLoadChart, runningDistanceChart, runningLongChart].forEach((chart) => {
+    if (chart) chart.destroy();
+  });
+  runningLoadChart = buildRunningLoadChart(daily);
+  runningDistanceChart = buildRunningDistanceChart(weeks);
+  runningLongChart = buildRunningLongChart(weeks);
+}
+
+function initRunningControls() {
+  const start = document.getElementById('running-start');
+  const end = document.getElementById('running-end');
+  const reset = document.getElementById('running-reset');
+  const validation = document.getElementById('running-validation');
+  const daily = runningRows().daily;
+  if (!start || !end || !reset || daily.length === 0 || !runningRange) return;
+  const min = String(daily[0].date);
+  const max = String(daily[daily.length - 1].date);
+  [start, end].forEach((input) => { input.min = min; input.max = max; input.disabled = false; });
+  reset.disabled = false;
+  start.value = runningRange.start;
+  end.value = runningRange.end;
+
+  function applyRange() {
+    if (!start.value || !end.value || start.value > end.value) {
+      showValidation(validation, 'Start date must be on or before end date.');
+      return;
+    }
+    showValidation(validation, '');
+    runningRange = { start: start.value, end: end.value };
+    try { localStorage.setItem('sport-analysis-range', JSON.stringify(runningRange)); } catch (_) {}
+    renderRunning();
+  }
+  start.addEventListener('change', applyRange);
+  end.addEventListener('change', applyRange);
+  reset.addEventListener('click', () => {
+    runningRange = dailyDefaultRange(daily);
+    start.value = runningRange.start;
+    end.value = runningRange.end;
+    try { localStorage.setItem('sport-analysis-range', JSON.stringify(runningRange)); } catch (_) {}
+    showValidation(validation, '');
+    renderRunning();
+  });
+}
+
+async function loadSportAnalysis() {
+  try {
+    const response = await fetch(SPORT_ANALYSIS_URL, { cache: 'no-store' });
+    if (!response.ok) throw new Error('HTTP ' + response.status);
+    const doc = await response.json();
+    if (!doc || !doc.sports || !doc.sports.running
+        || !Array.isArray(doc.sports.running.activities)
+        || !Array.isArray(doc.sports.running.daily)) {
+      throw new Error('Invalid sport analysis document');
+    }
+    fullSportAnalysis = doc;
+    runningRange = runningDefaultRange(doc.sports.running.daily);
+    initRunningControls();
+    renderRunning();
+  } catch (err) {
+    console.error('[dashboard] failed to load sport_analysis.json:', err);
+    const container = document.getElementById('running-summary');
+    if (container) container.innerHTML = '<div class="status error" role="status">Running data unavailable.</div>';
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Pi / System Health card (system_health.json)
 // ---------------------------------------------------------------------------
 
@@ -2522,6 +2783,13 @@ function showTab(tabId) {
   if (tabId === 'health') {
     requestAnimationFrame(() => healthCharts.forEach((chart) => chart.resize()));
   }
+  if (tabId === 'sports') {
+    requestAnimationFrame(() => {
+      [runningLoadChart, runningDistanceChart, runningLongChart].forEach((chart) => {
+        if (chart) chart.resize();
+      });
+    });
+  }
 }
 
 function initTabs() {
@@ -2553,6 +2821,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadWeekly();
     loadHealth();
     loadGear();
+    loadSportAnalysis();
   });
 });
 

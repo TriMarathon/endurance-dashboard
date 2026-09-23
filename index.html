@@ -10,7 +10,7 @@
       name="description"
       content="Endurance training-load dashboard showing 90-day TSS, CTL and ATL from Garmin training data."
     />
-    <link rel="stylesheet" href="css/dashboard.css?v=20260922-3" />
+    <link rel="stylesheet" href="css/dashboard.css?v=20260923-1" />
   </head>
   <body>
     <header>
@@ -24,6 +24,7 @@
       <nav class="tab-nav" role="tablist" aria-label="Dashboard tabs">
         <a href="#overview" data-tab="overview" class="tab-link active" role="tab" tabindex="0">Overview</a>
         <a href="#training" data-tab="training" class="tab-link" role="tab" tabindex="0">Training</a>
+        <a href="#sports" data-tab="sports" class="tab-link" role="tab" tabindex="0">Sports</a>
         <a href="#racing" data-tab="racing" class="tab-link" role="tab" tabindex="0">Racing</a>
         <a href="#health" data-tab="health" class="tab-link" role="tab" tabindex="0">Health</a>
         <a href="#gear" data-tab="gear" class="tab-link" role="tab" tabindex="0">Gear</a>
@@ -156,6 +157,59 @@
               >Stacked bar chart of weekly moving time by sport (Swim, Bike, Run, Other).</canvas
             >
             <div id="weekly-time-status" class="status placeholder" role="status"></div>
+          </div>
+        </section>
+      </section>
+
+      <section
+        id="tab-sports"
+        class="tab-panel"
+        role="tabpanel"
+        aria-label="Sports"
+      >
+        <nav class="sport-subtabs" aria-label="Sports">
+          <span class="sport-subtab active" aria-current="page">Running</span>
+        </nav>
+        <h2 class="chart-title" id="running-title">Running</h2>
+        <div
+          class="date-range-controls"
+          role="group"
+          aria-label="Running date range"
+        >
+          <div class="date-field">
+            <label for="running-start">Start date</label>
+            <input type="date" id="running-start" disabled />
+          </div>
+          <div class="date-field">
+            <label for="running-end">End date</label>
+            <input type="date" id="running-end" disabled />
+          </div>
+          <button type="button" id="running-reset" class="range-reset-btn" disabled>Reset</button>
+          <span id="running-validation" class="date-validation" role="alert"></span>
+        </div>
+
+        <div id="running-summary" class="running-summary" aria-live="polite">
+          <div class="status loading" role="status"><span class="loader"></span>Loading running data…</div>
+        </div>
+
+        <h2 class="chart-title sport-chart-title" id="running-load-title">Running Load</h2>
+        <section class="chart-wrap" aria-labelledby="running-load-title">
+          <div class="chart-container sport-chart-container">
+            <canvas id="running-load">Daily Run TSS with Running CTL and ATL.</canvas>
+          </div>
+        </section>
+
+        <h2 class="chart-title sport-chart-title" id="running-distance-title">Weekly Distance</h2>
+        <section class="chart-wrap" aria-labelledby="running-distance-title">
+          <div class="chart-container sport-chart-container">
+            <canvas id="running-distance">Weekly running miles with a four-week moving average.</canvas>
+          </div>
+        </section>
+
+        <h2 class="chart-title sport-chart-title" id="running-long-title">Long Run Progression</h2>
+        <section class="chart-wrap" aria-labelledby="running-long-title">
+          <div class="chart-container sport-chart-container">
+            <canvas id="running-long">Longest run distance in each Monday through Sunday week.</canvas>
           </div>
         </section>
       </section>
@@ -353,6 +407,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" defer></script>
-    <script src="js/dashboard.js?v=20260922-2" defer></script>
+    <script src="js/dashboard.js?v=20260923-1" defer></script>
   </body>
 </html>

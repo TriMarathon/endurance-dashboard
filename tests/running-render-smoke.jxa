@@ -1,0 +1,42 @@
+#!/usr/bin/env osascript -l JavaScript
+// DASHBOARD_JS=js/dashboard.js osascript -l JavaScript tests/running-render-smoke.jxa
+
+ObjC.import('Foundation');
+
+const sourcePath = ObjC.unwrap(
+  $.NSProcessInfo.processInfo.environment.objectForKey('DASHBOARD_JS')
+);
+if (!sourcePath) throw new Error('Set DASHBOARD_JS before running this test.');
+
+var document = { addEventListener: function () {} };
+var window = { location: { hash: '' }, addEventListener: function () {} };
+var history = { replaceState: function () {} };
+
+var source = ObjC.unwrap($.NSString.stringWithContentsOfFileEncodingError(
+  sourcePath,
+  $.NSUTF8StringEncoding,
+  null
+));
+
+source += `
+runningRange = {start: '2026-09-01', end: '2026-09-07'};
+var rows = [
+  {date: '2026-09-01', distance_miles: 5, duration_seconds: 2400, tss: 50, is_race: true},
+  {date: '2026-09-03', distance_miles: 10, duration_seconds: 4200, tss: 90, is_race: true},
+  {date: '2026-09-10', distance_miles: 20, duration_seconds: 9000, tss: 180, is_race: false}
+];
+var summary = runningSummary(rows.slice(0, 2));
+if (summary.distance !== 15 || summary.seconds !== 6600) throw new Error('Running totals failed');
+if (Math.abs(summary.runsPerWeek - 2) > 0.0001) throw new Error('Exact-day runs/week failed');
+if (summary.races !== 2 || summary.tss !== 140) throw new Error('Race or TSS summary failed');
+if (Math.abs(summary.pace - 440) > 0.0001) throw new Error('Weighted pace failed');
+if (summary.longest !== 10 || Math.abs(summary.average - 7.5) > 0.0001) throw new Error('Distance summary failed');
+var weeks = runningWeeks(rows.slice(0, 2));
+if (weeks.length !== 2 || weeks[0].distance !== 15 || weeks[0].longest !== 10
+    || weeks[1].distance !== 0 || Math.abs(weeks[1].moving_average - 7.5) > 0.0001) {
+  throw new Error('Weekly aggregation failed');
+}
+console.log('Running render smoke tests passed');
+`;
+
+eval(source);
