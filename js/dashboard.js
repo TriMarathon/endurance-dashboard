@@ -54,6 +54,7 @@ let gearData = [];
 let gearFilter = 'active';
 let fullSportAnalysis = null;
 let runningRange = null;
+let activeSport = 'running';
 
 let completedRacesData = [];
 let racingSubtab = 'upcoming';
@@ -2379,13 +2380,17 @@ async function loadGear() {
 }
 
 // ---------------------------------------------------------------------------
-// Sport-specific analytics (Phase 1: Running)
+// Sport-specific analytics
 // ---------------------------------------------------------------------------
 
-function runningRows() {
+function sportRows(sportName = activeSport) {
   const sport = fullSportAnalysis && fullSportAnalysis.sports
-    ? fullSportAnalysis.sports.running : null;
+    ? fullSportAnalysis.sports[sportName] : null;
   return sport || { activities: [], daily: [] };
+}
+
+function runningRows() {
+  return sportRows('running');
 }
 
 function runningDefaultRange(daily) {
@@ -2405,7 +2410,7 @@ function runningDefaultRange(daily) {
 }
 
 function selectedRunningActivities() {
-  const activities = runningRows().activities;
+  const activities = sportRows().activities;
   if (!runningRange) return [];
   return activities.filter((row) => row && row.date >= runningRange.start
     && row.date <= runningRange.end);
@@ -2424,34 +2429,63 @@ function fmtRunningPace(secondsPerMile) {
   return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, '0')}/mi`;
 }
 
-function runningSummary(activities) {
-  const distance = activities.reduce((sum, row) => sum + Number(row.distance_miles || 0), 0);
+function sportSummary(activities, sportName = activeSport) {
+  const distanceRows = activities.filter((row) => Number.isFinite(Number(row.distance_miles))
+    && Number(row.distance_miles) > 0);
+  const distance = distanceRows.reduce((sum, row) => sum + Number(row.distance_miles), 0);
   const seconds = activities.reduce((sum, row) => sum + Number(row.duration_seconds || 0), 0);
   const count = activities.length;
   const selectedDays = runningRange
     ? Math.round((dateToUtcMs(runningRange.end) - dateToUtcMs(runningRange.start)) / 86400000) + 1
     : 0;
-  return {
+  const result = {
     distance,
     seconds,
     count,
-    runsPerWeek: selectedDays > 0 ? count / (selectedDays / 7) : 0,
+    perWeek: selectedDays > 0 ? count / (selectedDays / 7) : 0,
     races: activities.filter((row) => row.is_race === true).length,
     tss: activities.reduce((sum, row) => sum + Number(row.tss || 0), 0),
-    pace: distance > 0 ? seconds / distance : null,
-    longest: activities.reduce((best, row) => Math.max(best, Number(row.distance_miles || 0)), 0),
-    average: count > 0 ? distance / count : null,
+    longest: distanceRows.reduce((best, row) => Math.max(best, Number(row.distance_miles)), 0),
+    average: distanceRows.length > 0 ? distance / distanceRows.length : null,
   };
+  if (sportName === 'cycling') {
+    const pairedRows = distanceRows.filter((row) => Number.isFinite(Number(row.duration_seconds))
+      && Number(row.duration_seconds) > 0);
+    const pairedDistance = pairedRows.reduce((sum, row) => sum + Number(row.distance_miles), 0);
+    const pairedSeconds = pairedRows.reduce((sum, row) => sum + Number(row.duration_seconds), 0);
+    result.speed = pairedSeconds > 0 ? pairedDistance / (pairedSeconds / 3600) : null;
+  } else {
+    result.pace = distance > 0 ? seconds / distance : null;
+    // Preserve Running v1: Avg Distance divides by every run.
+    result.average = count > 0 ? distance / count : null;
+  }
+  return result;
+}
+
+function runningSummary(activities) {
+  const result = sportSummary(activities, 'running');
+  result.runsPerWeek = result.perWeek;
+  return result;
 }
 
 function renderRunningSummary(activities) {
   const container = document.getElementById('running-summary');
   if (!container) return;
-  const value = runningSummary(activities);
-  const metrics = [
+  const value = sportSummary(activities);
+  const cycling = activeSport === 'cycling';
+  const metrics = cycling ? [
     ['Distance', `${value.distance.toFixed(1)} mi`],
     ['Time', fmtRunningTime(value.seconds)],
-    ['Runs/week', value.runsPerWeek.toFixed(1)],
+    ['Rides/week', value.perWeek.toFixed(1)],
+    ['Races', String(value.races)],
+    ['TSS', Math.round(value.tss).toLocaleString('en-US')],
+    ['Avg Speed', value.speed == null ? '—' : `${value.speed.toFixed(1)} mph`],
+    ['Longest Ride', `${value.longest.toFixed(1)} mi`],
+    ['Avg Distance', value.average == null ? '—' : `${value.average.toFixed(1)} mi/ride`],
+  ] : [
+    ['Distance', `${value.distance.toFixed(1)} mi`],
+    ['Time', fmtRunningTime(value.seconds)],
+    ['Runs/week', value.perWeek.toFixed(1)],
     ['Races', String(value.races)],
     ['TSS', Math.round(value.tss).toLocaleString('en-US')],
     ['Avg Pace', fmtRunningPace(value.pace)],
@@ -2470,7 +2504,7 @@ function mondayForDate(isoDate) {
   return msToIsoDate(ms - ((day + 6) % 7) * 86400000);
 }
 
-function runningWeeks(activities) {
+function sportWeeks(activities) {
   if (!runningRange) return [];
   const firstMonday = mondayForDate(runningRange.start);
   const lastMonday = mondayForDate(runningRange.end);
@@ -2492,6 +2526,10 @@ function runningWeeks(activities) {
     week.moving_average = window.reduce((sum, row) => sum + row.distance, 0) / window.length;
   });
   return weeks;
+}
+
+function runningWeeks(activities) {
+  return sportWeeks(activities);
 }
 
 function sportChartBase(labels, datasets, yTitle) {
@@ -2533,18 +2571,23 @@ function sportChartBase(labels, datasets, yTitle) {
 
 function buildRunningLoadChart(rows) {
   const labels = rows.map((row) => row.date);
+  const cycling = activeSport === 'cycling';
+  const barBackground = cycling ? palette.bikeBg : palette.runBg;
+  const barBorder = cycling ? palette.bikeBd : palette.runBd;
+  const shortName = cycling ? 'Bike' : 'Run';
   const config = sportChartBase(labels, [
-    { type: 'bar', label: 'Run TSS', data: rows.map((row) => row.tss), backgroundColor: palette.runBg, borderColor: palette.runBd, borderWidth: 0 },
-    { type: 'line', label: 'Run CTL', data: rows.map((row) => row.ctl), borderColor: palette.line, backgroundColor: palette.lineBg, borderWidth: 2, pointRadius: 1, tension: 0 },
-    { type: 'line', label: 'Run ATL', data: rows.map((row) => row.atl), borderColor: palette.atl, backgroundColor: palette.atlBg, borderWidth: 2, pointRadius: 1, tension: 0 },
+    { type: 'bar', label: `${shortName} TSS`, data: rows.map((row) => row.tss), backgroundColor: barBackground, borderColor: barBorder, borderWidth: 0 },
+    { type: 'line', label: `${shortName} CTL`, data: rows.map((row) => row.ctl), borderColor: palette.line, backgroundColor: palette.lineBg, borderWidth: 2, pointRadius: 1, tension: 0 },
+    { type: 'line', label: `${shortName} ATL`, data: rows.map((row) => row.atl), borderColor: palette.atl, backgroundColor: palette.atlBg, borderWidth: 2, pointRadius: 1, tension: 0 },
   ], 'TSS / Load');
   return new Chart(document.getElementById('running-load').getContext('2d'), config);
 }
 
 function buildRunningDistanceChart(weeks) {
   const labels = weeks.map((row) => row.week_start);
+  const cycling = activeSport === 'cycling';
   const config = sportChartBase(labels, [
-    { type: 'bar', label: 'Weekly Distance', data: weeks.map((row) => row.distance), backgroundColor: palette.runBg, borderColor: palette.runBd, borderWidth: 0 },
+    { type: 'bar', label: 'Weekly Distance', data: weeks.map((row) => row.distance), backgroundColor: cycling ? palette.bikeBg : palette.runBg, borderColor: cycling ? palette.bikeBd : palette.runBd, borderWidth: 0 },
     { type: 'line', label: '4-week average', data: weeks.map((row) => row.moving_average), borderColor: palette.line, backgroundColor: palette.lineBg, borderWidth: 2, pointRadius: 2, tension: 0 },
   ], 'Miles');
   return new Chart(document.getElementById('running-distance').getContext('2d'), config);
@@ -2552,8 +2595,9 @@ function buildRunningDistanceChart(weeks) {
 
 function buildRunningLongChart(weeks) {
   const labels = weeks.map((row) => row.week_start);
+  const cycling = activeSport === 'cycling';
   const config = sportChartBase(labels, [
-    { type: 'bar', label: 'Longest Run', data: weeks.map((row) => row.longest), backgroundColor: palette.runBg, borderColor: palette.runBd, borderWidth: 0 },
+    { type: 'bar', label: cycling ? 'Longest Ride' : 'Longest Run', data: weeks.map((row) => row.longest), backgroundColor: cycling ? palette.bikeBg : palette.runBg, borderColor: cycling ? palette.bikeBd : palette.runBd, borderWidth: 0 },
   ], 'Miles');
   config.options.plugins.legend.display = false;
   return new Chart(document.getElementById('running-long').getContext('2d'), config);
@@ -2561,10 +2605,17 @@ function buildRunningLongChart(weeks) {
 
 function renderRunning() {
   if (!fullSportAnalysis || !runningRange) return;
-  const source = runningRows();
+  const source = sportRows();
   const activities = selectedRunningActivities();
   const daily = filterDailyRange(source.daily, runningRange.start, runningRange.end);
-  const weeks = runningWeeks(activities);
+  const weeks = sportWeeks(activities);
+  const cycling = activeSport === 'cycling';
+  const pageTitle = document.getElementById('running-title');
+  const loadTitle = document.getElementById('running-load-title');
+  const longTitle = document.getElementById('running-long-title');
+  if (pageTitle) pageTitle.textContent = cycling ? 'Cycling' : 'Running';
+  if (loadTitle) loadTitle.textContent = cycling ? 'Cycling Load' : 'Running Load';
+  if (longTitle) longTitle.textContent = cycling ? 'Long Ride Progression' : 'Long Run Progression';
   renderRunningSummary(activities);
   [runningLoadChart, runningDistanceChart, runningLongChart].forEach((chart) => {
     if (chart) chart.destroy();
@@ -2610,18 +2661,39 @@ function initRunningControls() {
   });
 }
 
+function initSportSubtabs() {
+  document.querySelectorAll('.sport-subtab[data-sport]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const requested = button.getAttribute('data-sport');
+      if (requested !== 'running' && requested !== 'cycling') return;
+      activeSport = requested;
+      document.querySelectorAll('.sport-subtab[data-sport]').forEach((item) => {
+        const selected = item.getAttribute('data-sport') === activeSport;
+        item.classList.toggle('active', selected);
+        item.setAttribute('aria-selected', selected ? 'true' : 'false');
+      });
+      // runningRange is deliberately shared: switching sports preserves the
+      // exact selected dates and the same value remains in localStorage.
+      renderRunning();
+    });
+  });
+}
+
 async function loadSportAnalysis() {
   try {
     const response = await fetch(SPORT_ANALYSIS_URL, { cache: 'no-store' });
     if (!response.ok) throw new Error('HTTP ' + response.status);
     const doc = await response.json();
-    if (!doc || !doc.sports || !doc.sports.running
+    if (!doc || !doc.sports || !doc.sports.running || !doc.sports.cycling
         || !Array.isArray(doc.sports.running.activities)
-        || !Array.isArray(doc.sports.running.daily)) {
+        || !Array.isArray(doc.sports.running.daily)
+        || !Array.isArray(doc.sports.cycling.activities)
+        || !Array.isArray(doc.sports.cycling.daily)) {
       throw new Error('Invalid sport analysis document');
     }
     fullSportAnalysis = doc;
     runningRange = runningDefaultRange(doc.sports.running.daily);
+    initSportSubtabs();
     initRunningControls();
     renderRunning();
   } catch (err) {

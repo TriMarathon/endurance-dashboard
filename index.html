@@ -10,7 +10,7 @@
       name="description"
       content="Endurance training-load dashboard showing 90-day TSS, CTL and ATL from Garmin training data."
     />
-    <link rel="stylesheet" href="css/dashboard.css?v=20260923-1" />
+    <link rel="stylesheet" href="css/dashboard.css?v=20260923-2" />
   </head>
   <body>
     <header>
@@ -167,8 +167,9 @@
         role="tabpanel"
         aria-label="Sports"
       >
-        <nav class="sport-subtabs" aria-label="Sports">
-          <span class="sport-subtab active" aria-current="page">Running</span>
+        <nav class="sport-subtabs" role="tablist" aria-label="Sports">
+          <button type="button" class="sport-subtab active" data-sport="running" role="tab" aria-selected="true">Running</button>
+          <button type="button" class="sport-subtab" data-sport="cycling" role="tab" aria-selected="false">Cycling</button>
         </nav>
         <h2 class="chart-title" id="running-title">Running</h2>
         <div
@@ -407,6 +408,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" defer></script>
-    <script src="js/dashboard.js?v=20260923-1" defer></script>
+    <script src="js/dashboard.js?v=20260923-2" defer></script>
   </body>
 </html>

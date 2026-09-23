@@ -1,0 +1,61 @@
+#!/usr/bin/env osascript -l JavaScript
+// DASHBOARD_JS=js/dashboard.js osascript -l JavaScript tests/cycling-render-smoke.jxa
+
+ObjC.import('Foundation');
+
+const sourcePath = ObjC.unwrap(
+  $.NSProcessInfo.processInfo.environment.objectForKey('DASHBOARD_JS')
+);
+if (!sourcePath) throw new Error('Set DASHBOARD_JS before running this test.');
+
+var elements = {
+  'running-summary': { innerHTML: '' },
+};
+var document = {
+  addEventListener: function () {},
+  getElementById: function (id) { return elements[id] || null; },
+};
+var window = { location: { hash: '' }, addEventListener: function () {} };
+var history = { replaceState: function () {} };
+
+var source = ObjC.unwrap($.NSString.stringWithContentsOfFileEncodingError(
+  sourcePath,
+  $.NSUTF8StringEncoding,
+  null
+));
+
+source += `
+activeSport = 'cycling';
+runningRange = {start: '2026-08-31', end: '2026-09-27'};
+var originalRange = JSON.stringify(runningRange);
+var rides = [
+  {date: '2026-08-31', distance_miles: 10, duration_seconds: 1800, tss: 30, is_race: true},
+  {date: '2026-09-07', distance_miles: 20, duration_seconds: 3600, tss: 60, is_race: false},
+  {date: '2026-09-14', distance_miles: null, duration_seconds: 2700, tss: 45, is_race: false},
+  {date: '2026-09-21', distance_miles: 40, duration_seconds: 7200, tss: 120, is_race: false}
+];
+var summary = sportSummary(rides, 'cycling');
+if (summary.count !== 4 || summary.seconds !== 15300 || summary.tss !== 255) throw new Error('Indoor ride did not contribute non-distance metrics');
+if (summary.distance !== 70 || summary.longest !== 40 || Math.abs(summary.average - (70 / 3)) > 0.0001) throw new Error('Cycling distance metrics failed');
+if (Math.abs(summary.speed - (70 / 3.5)) > 0.0001) throw new Error('Weighted speed failed');
+if (Math.abs(summary.perWeek - 1) > 0.0001 || summary.races !== 1) throw new Error('Cycling count metrics failed');
+renderRunningSummary(rides);
+var html = elements['running-summary'].innerHTML;
+if ((html.match(/running-metric"/g) || []).length !== 8) throw new Error('Eight cycling metrics were not rendered');
+['Rides/week', 'Avg Speed', 'Longest Ride', 'mi/ride'].forEach(function (label) {
+  if (html.indexOf(label) < 0) throw new Error('Missing cycling metric: ' + label);
+});
+var weeks = sportWeeks(rides);
+if (weeks.length !== 4 || weeks[2].distance !== 0 || weeks[3].longest !== 40
+    || Math.abs(weeks[3].moving_average - 17.5) > 0.0001) {
+  throw new Error('Cycling weekly distance, moving average, or longest ride failed');
+}
+activeSport = 'running';
+if (JSON.stringify(runningRange) !== originalRange) throw new Error('Date range changed while switching sports');
+activeSport = 'cycling';
+var noDistance = sportSummary([{date: '2026-09-14', distance_miles: null, duration_seconds: 1800, tss: 30, is_race: false}], 'cycling');
+if (noDistance.distance !== 0 || noDistance.speed !== null || noDistance.average !== null || noDistance.longest !== 0) throw new Error('No-distance range was not graceful');
+console.log('Cycling render smoke tests passed');
+`;
+
+eval(source);

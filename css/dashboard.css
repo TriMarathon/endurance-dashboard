@@ -1215,9 +1215,18 @@ footer {
   padding: 0 12px;
   border: 1px solid var(--panel-border);
   border-radius: 999px;
+  background: transparent;
   color: var(--muted);
+  cursor: pointer;
+  font-family: inherit;
   font-size: 12px;
   font-weight: 600;
+}
+
+.sport-subtab:hover,
+.sport-subtab:focus-visible {
+  color: var(--text);
+  outline: none;
 }
 
 .sport-subtab.active {
