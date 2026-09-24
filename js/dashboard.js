@@ -121,6 +121,17 @@ const palette = {
   get grid() { return cssVar('--grid'); },
 };
 
+function chartDensity() {
+  const compact = typeof window.matchMedia === 'function'
+    && window.matchMedia('(max-width: 480px)').matches;
+  return {
+    legendFontSize: compact ? 11 : 12,
+    legendPadding: compact ? 10 : 18,
+    xTicks: compact ? 6 : 12,
+    showYAxisTitle: !compact,
+  };
+}
+
 function splitDate(isoDate) {
   const parts = String(isoDate).split('-');
   if (parts.length !== 3) return null;
@@ -253,6 +264,7 @@ function buildChart(rows) {
   const canvas = document.getElementById(CHART_ID);
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
+  const density = chartDensity();
 
   rows = Array.isArray(rows) ? rows : [];
 
@@ -356,10 +368,10 @@ function buildChart(rows) {
           position: 'top',
           labels: {
             color: palette.text,
-            font: { size: 12 },
+            font: { size: density.legendFontSize },
             usePointStyle: true,
             pointStyle: 'circle',
-            padding: 18,
+            padding: density.legendPadding,
           },
         },
         tooltip: {
@@ -401,7 +413,7 @@ function buildChart(rows) {
           type: 'category',
           border: { color: palette.panelBorder },
           ticks: {
-            maxTicksLimit: 12,
+            maxTicksLimit: density.xTicks,
             autoSkip: true,
             maxRotation: 0,
             minRotation: 0,
@@ -518,6 +530,7 @@ function buildWeeklyTssChart(rows) {
   const canvas = document.getElementById(WEEKLY_TSS_ID);
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
+  const density = chartDensity();
 
   rows = Array.isArray(rows) ? rows : [];
 
@@ -594,10 +607,10 @@ function buildWeeklyTssChart(rows) {
           position: 'top',
           labels: {
             color: palette.text,
-            font: { size: 12 },
+            font: { size: density.legendFontSize },
             usePointStyle: true,
             pointStyle: 'circle',
-            padding: 18,
+            padding: density.legendPadding,
           },
         },
         tooltip: {
@@ -635,7 +648,7 @@ function buildWeeklyTssChart(rows) {
             drawBorder: false,
           },
           ticks: {
-            maxTicksLimit: 12,
+            maxTicksLimit: density.xTicks,
             autoSkip: true,
             maxRotation: 0,
             minRotation: 0,
@@ -673,6 +686,7 @@ function buildWeeklyTimeChart(rows) {
   const canvas = document.getElementById(WEEKLY_TIME_ID);
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
+  const density = chartDensity();
 
   rows = Array.isArray(rows) ? rows : [];
 
@@ -756,10 +770,10 @@ function buildWeeklyTimeChart(rows) {
           position: 'top',
           labels: {
             color: palette.text,
-            font: { size: 12 },
+            font: { size: density.legendFontSize },
             usePointStyle: true,
             pointStyle: 'circle',
-            padding: 18,
+            padding: density.legendPadding,
           },
         },
         tooltip: {
@@ -797,7 +811,7 @@ function buildWeeklyTimeChart(rows) {
             drawBorder: false,
           },
           ticks: {
-            maxTicksLimit: 12,
+            maxTicksLimit: density.xTicks,
             autoSkip: true,
             maxRotation: 0,
             minRotation: 0,
@@ -2158,6 +2172,7 @@ function latestHealthValues(rows) {
 function buildHealthChart(id, rows, config) {
   const canvas = document.getElementById(id);
   if (!canvas) return null;
+  const density = chartDensity();
   const labels = rows.map((row) => String(row.date));
   const raw = rows.map((row) => numOrNU(row && row[config.rawKey]));
   const average = config.averageKey
@@ -2196,7 +2211,14 @@ function buildHealthChart(id, rows, config) {
       responsive: true, maintainAspectRatio: false, animation: false,
       interaction: { mode: 'index', intersect: false },
       plugins: {
-        legend: { labels: { color: palette.text, usePointStyle: true } },
+        legend: {
+          labels: {
+            color: palette.text,
+            usePointStyle: true,
+            font: { size: density.legendFontSize },
+            padding: density.legendPadding,
+          },
+        },
         tooltip: {
           callbacks: {
             title: (items) => items.length ? fmtFullDate(labels[items[0].dataIndex]) : '',
@@ -2209,7 +2231,7 @@ function buildHealthChart(id, rows, config) {
         x: {
           grid: { color: palette.grid },
           ticks: {
-            color: palette.muted, maxTicksLimit: 12, maxRotation: 0,
+            color: palette.muted, maxTicksLimit: density.xTicks, maxRotation: 0,
             callback: function (value) { return fmtAxis(this.getLabelForValue(value)); },
           },
         },
@@ -2594,6 +2616,7 @@ function runningWeeks(activities) {
 }
 
 function sportChartBase(labels, datasets, yTitle) {
+  const density = chartDensity();
   return {
     type: 'bar',
     data: { labels, datasets },
@@ -2605,7 +2628,13 @@ function sportChartBase(labels, datasets, yTitle) {
       plugins: {
         legend: {
           position: 'top',
-          labels: { color: palette.text, usePointStyle: true, pointStyle: 'circle', padding: 16 },
+          labels: {
+            color: palette.text,
+            usePointStyle: true,
+            pointStyle: 'circle',
+            font: { size: density.legendFontSize },
+            padding: density.legendPadding,
+          },
         },
         tooltip: {
           backgroundColor: 'rgba(18, 19, 22, 0.96)',
@@ -2617,13 +2646,13 @@ function sportChartBase(labels, datasets, yTitle) {
       scales: {
         x: {
           grid: { color: palette.grid },
-          ticks: { color: palette.muted, maxTicksLimit: 12, maxRotation: 0, callback: function (v) { return fmtAxis(this.getLabelForValue(v)); } },
+          ticks: { color: palette.muted, maxTicksLimit: density.xTicks, maxRotation: 0, callback: function (v) { return fmtAxis(this.getLabelForValue(v)); } },
         },
         y: {
           beginAtZero: true,
           grid: { color: palette.grid },
           ticks: { color: palette.muted },
-          title: { display: true, text: yTitle, color: palette.muted },
+          title: { display: density.showYAxisTitle, text: yTitle, color: palette.muted },
         },
       },
     },
@@ -2756,7 +2785,9 @@ function initSportSubtabs() {
         const selected = item.getAttribute('data-sport') === activeSport;
         item.classList.toggle('active', selected);
         item.setAttribute('aria-selected', selected ? 'true' : 'false');
+        item.setAttribute('tabindex', selected ? '0' : '-1');
       });
+      revealActiveTab(button);
       // runningRange is deliberately shared: switching sports preserves the
       // exact selected dates and the same value remains in localStorage.
       renderRunning();
@@ -2928,6 +2959,17 @@ function currentTab() {
   return TAB_PANELS.includes(hash) ? hash : 'overview';
 }
 
+function revealActiveTab(tab) {
+  const nav = tab && tab.parentElement;
+  if (!nav || nav.scrollWidth <= nav.clientWidth) return;
+  const left = tab.offsetLeft;
+  const right = left + tab.offsetWidth;
+  if (left < nav.scrollLeft) nav.scrollLeft = left;
+  else if (right > nav.scrollLeft + nav.clientWidth) {
+    nav.scrollLeft = right - nav.clientWidth;
+  }
+}
+
 function showTab(tabId) {
   TAB_PANELS.forEach((id) => {
     const panel = document.getElementById('tab-' + id);
@@ -2936,6 +2978,9 @@ function showTab(tabId) {
     const active = id === tabId;
     panel.classList.toggle('active', active);
     link.classList.toggle('active', active);
+    link.setAttribute('aria-selected', active ? 'true' : 'false');
+    link.setAttribute('tabindex', active ? '0' : '-1');
+    if (active) revealActiveTab(link);
   });
   if (tabId === 'training') {
     requestAnimationFrame(() => {

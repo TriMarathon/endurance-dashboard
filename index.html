@@ -2,15 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0d0f12" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Endurance" />
     <title>Endurance Dashboard</title>
     <link rel="icon" type="image/png" sizes="32x32" href="endurance-dashboard-favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="endurance-dashboard-favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="endurance-dashboard-icon-180.png" />
+    <link rel="manifest" href="site.webmanifest" />
     <meta
       name="description"
       content="Endurance training-load dashboard showing 90-day TSS, CTL and ATL from Garmin training data."
     />
-    <link rel="stylesheet" href="css/dashboard.css?v=20260923-4" />
+    <link rel="stylesheet" href="css/dashboard.css?v=20260924-1" />
   </head>
   <body>
     <header>
@@ -22,12 +30,12 @@
 
     <main>
       <nav class="tab-nav" role="tablist" aria-label="Dashboard tabs">
-        <a href="#overview" data-tab="overview" class="tab-link active" role="tab" tabindex="0">Overview</a>
-        <a href="#training" data-tab="training" class="tab-link" role="tab" tabindex="0">Training</a>
-        <a href="#sports" data-tab="sports" class="tab-link" role="tab" tabindex="0">Sports</a>
-        <a href="#racing" data-tab="racing" class="tab-link" role="tab" tabindex="0">Racing</a>
-        <a href="#health" data-tab="health" class="tab-link" role="tab" tabindex="0">Health</a>
-        <a href="#gear" data-tab="gear" class="tab-link" role="tab" tabindex="0">Gear</a>
+        <a href="#overview" data-tab="overview" class="tab-link active" role="tab" aria-selected="true" tabindex="0">Overview</a>
+        <a href="#training" data-tab="training" class="tab-link" role="tab" aria-selected="false" tabindex="-1">Training</a>
+        <a href="#sports" data-tab="sports" class="tab-link" role="tab" aria-selected="false" tabindex="-1">Sports</a>
+        <a href="#racing" data-tab="racing" class="tab-link" role="tab" aria-selected="false" tabindex="-1">Racing</a>
+        <a href="#health" data-tab="health" class="tab-link" role="tab" aria-selected="false" tabindex="-1">Health</a>
+        <a href="#gear" data-tab="gear" class="tab-link" role="tab" aria-selected="false" tabindex="-1">Gear</a>
       </nav>
 
       <section
@@ -168,11 +176,11 @@
         aria-label="Sports"
       >
         <nav class="sport-subtabs" role="tablist" aria-label="Sports">
-          <button type="button" class="sport-subtab active" data-sport="running" role="tab" aria-selected="true">Running</button>
-          <button type="button" class="sport-subtab" data-sport="cycling" role="tab" aria-selected="false">Cycling</button>
-          <button type="button" class="sport-subtab" data-sport="swimming" role="tab" aria-selected="false">Swimming</button>
-          <button type="button" class="sport-subtab" data-sport="strength" role="tab" aria-selected="false">Strength</button>
-          <button type="button" class="sport-subtab" data-sport="other" role="tab" aria-selected="false">Other</button>
+          <button type="button" class="sport-subtab active" data-sport="running" role="tab" aria-selected="true" tabindex="0">Running</button>
+          <button type="button" class="sport-subtab" data-sport="cycling" role="tab" aria-selected="false" tabindex="-1">Cycling</button>
+          <button type="button" class="sport-subtab" data-sport="swimming" role="tab" aria-selected="false" tabindex="-1">Swimming</button>
+          <button type="button" class="sport-subtab" data-sport="strength" role="tab" aria-selected="false" tabindex="-1">Strength</button>
+          <button type="button" class="sport-subtab" data-sport="other" role="tab" aria-selected="false" tabindex="-1">Other</button>
         </nav>
         <h2 class="chart-title" id="running-title">Running</h2>
         <div
@@ -411,6 +419,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" defer></script>
-    <script src="js/dashboard.js?v=20260923-5" defer></script>
+    <script src="js/dashboard.js?v=20260924-1" defer></script>
   </body>
 </html>

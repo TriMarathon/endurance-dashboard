@@ -53,10 +53,13 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 header {
-  padding: 20px 24px 14px;
+  padding: calc(20px + env(safe-area-inset-top))
+    calc(24px + env(safe-area-inset-right)) 14px
+    calc(24px + env(safe-area-inset-left));
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -84,6 +87,9 @@ header h1 {
 }
 
 .updated {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
   color: var(--muted);
   font-size: 12px;
   font-weight: 500;
@@ -112,7 +118,9 @@ main {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px 24px;
+  padding: 0 calc(24px + env(safe-area-inset-right))
+    calc(24px + env(safe-area-inset-bottom))
+    calc(24px + env(safe-area-inset-left));
 }
 
 .chart-title {
@@ -183,7 +191,9 @@ main {
 }
 
 footer {
-  padding: 16px 24px;
+  padding: 16px calc(24px + env(safe-area-inset-right))
+    calc(16px + env(safe-area-inset-bottom))
+    calc(24px + env(safe-area-inset-left));
   color: var(--muted);
   font-size: 12px;
   text-align: center;
@@ -191,7 +201,9 @@ footer {
 
 @media (max-width: 480px) {
   header {
-    padding: 16px 16px 12px;
+    padding: calc(12px + env(safe-area-inset-top))
+      calc(16px + env(safe-area-inset-right)) 8px
+      calc(16px + env(safe-area-inset-left));
   }
 
   header h1 {
@@ -203,15 +215,25 @@ footer {
   }
 
   main {
-    padding: 0 16px 20px;
+    padding: 0 calc(16px + env(safe-area-inset-right))
+      calc(20px + env(safe-area-inset-bottom))
+      calc(16px + env(safe-area-inset-left));
   }
 
   .chart-wrap {
-    padding: 14px;
+    padding: 10px;
   }
 
   .chart-title {
     font-size: 14px;
+  }
+
+  .chart-container {
+    height: 400px;
+  }
+
+  .updated {
+    min-height: 44px;
   }
 }
 
@@ -1107,12 +1129,23 @@ footer {
   .tab-nav {
     margin-top: 14px;
     overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding-inline: 12px;
+  }
+
+  .tab-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .tab-link {
-    padding: 0 12px;
+    flex: 0 0 auto;
+    min-height: 44px;
+    padding: 0 14px;
     font-size: 12px;
-    height: 34px;
+    height: 44px;
+    white-space: nowrap;
   }
 
   .overview-cards {
@@ -1153,6 +1186,7 @@ footer {
 }
 
 .date-field input[type="date"] {
+  min-height: 36px;
   padding: 5px 8px;
   border: 1px solid var(--panel-border);
   border-radius: 6px;
@@ -1281,6 +1315,98 @@ footer {
   height: 340px;
 }
 
+@media (max-width: 480px) {
+  .date-range-controls {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .date-field {
+    min-width: 0;
+  }
+
+  .date-field input[type="date"] {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    font-size: 16px;
+  }
+
+  .range-reset-btn {
+    grid-column: 1 / -1;
+    justify-content: center;
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .date-validation {
+    grid-column: 1 / -1;
+  }
+
+  .sport-subtabs {
+    flex-wrap: nowrap;
+    gap: 6px;
+    margin-right: calc(-16px - env(safe-area-inset-right));
+    margin-left: calc(-16px - env(safe-area-inset-left));
+    padding-right: calc(16px + env(safe-area-inset-right));
+    padding-left: calc(16px + env(safe-area-inset-left));
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding-inline: 16px;
+  }
+
+  .sport-subtabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sport-subtab {
+    flex: 0 0 auto;
+    min-height: 44px;
+    padding: 0 14px;
+    white-space: nowrap;
+  }
+
+  .running-summary {
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+
+  .running-metric {
+    padding: 12px;
+  }
+
+  .sport-chart-title {
+    margin-top: 22px;
+  }
+
+  .sport-chart-container {
+    height: 320px;
+  }
+
+  .health-chart-card {
+    padding: 12px;
+  }
+
+  .health-chart-container {
+    height: 280px;
+  }
+}
+
+@media (max-width: 360px) {
+  .date-range-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .range-reset-btn,
+  .date-validation {
+    grid-column: 1;
+  }
+}
+
 @media (min-width: 720px) {
   .running-summary {
     grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -1305,6 +1431,17 @@ footer {
 
 .date-validation.show {
   display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
 
 /* ---------------------------------------------------------------------------
