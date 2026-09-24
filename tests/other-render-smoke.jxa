@@ -1,5 +1,5 @@
 #!/usr/bin/env osascript -l JavaScript
-// DASHBOARD_JS=js/dashboard.js osascript -l JavaScript tests/strength-render-smoke.jxa
+// DASHBOARD_JS=js/dashboard.js osascript -l JavaScript tests/other-render-smoke.jxa
 
 ObjC.import('Foundation');
 
@@ -35,16 +35,16 @@ var source = ObjC.unwrap($.NSString.stringWithContentsOfFileEncodingError(
 ));
 
 [
-  "other ? 'Other' : strength ? 'Strength'",
-  "workload ? 'Hours'",
-  "label: 'Weekly Workouts'",
-  '!doc.sports.strength',
+  "shortName = other ? 'Other'",
+  "other ? 'Other Load'",
+  "requested !== 'other'",
+  '!doc.sports.other',
 ].forEach(function (expected) {
-  if (source.indexOf(expected) < 0) throw new Error('Missing Strength chart/load path: ' + expected);
+  if (source.indexOf(expected) < 0) throw new Error('Missing Other chart/load path: ' + expected);
 });
 
 source += `
-activeSport = 'strength';
+activeSport = 'other';
 runningRange = {start: '2026-08-31', end: '2026-09-27'};
 var originalRange = JSON.stringify(runningRange);
 var workouts = [
@@ -53,55 +53,53 @@ var workouts = [
   {date: '2026-09-14', duration_seconds: 1800, tss: 0},
   {date: '2026-09-21', duration_seconds: 7200, tss: 60}
 ];
-var summary = sportSummary(workouts, 'strength');
-if (summary.count !== 4 || summary.seconds !== 14400 || summary.tss !== 120) throw new Error('Strength totals failed');
-if (Math.abs(summary.perWeek - 1) > 0.0001) throw new Error('Strength exact-day frequency failed');
-if (summary.averageDuration !== 3600 || summary.averageTss !== 30) throw new Error('Strength averages failed');
-if (fmtAverageDuration(2700) !== '45 min' || fmtAverageDuration(5400) !== '1:30 h') throw new Error('Strength duration formatting failed');
+var summary = sportSummary(workouts, 'other');
+if (summary.count !== 4 || summary.seconds !== 14400 || summary.tss !== 120) throw new Error('Other totals failed');
+if (Math.abs(summary.perWeek - 1) > 0.0001) throw new Error('Other exact-day frequency failed');
+if (summary.averageDuration !== 3600 || summary.averageTss !== 30) throw new Error('Other averages failed');
 renderRunningSummary(workouts);
 var html = elements['running-summary'].innerHTML;
-if ((html.match(/running-metric"/g) || []).length !== 6) throw new Error('Six Strength metrics were not rendered');
+if ((html.match(/running-metric"/g) || []).length !== 6) throw new Error('Six Other metrics were not rendered');
 ['Workouts', 'Time', 'Workouts/week', 'TSS', 'Avg Duration', 'Avg TSS'].forEach(function (label) {
-  if (html.indexOf(label) < 0) throw new Error('Missing Strength metric: ' + label);
+  if (html.indexOf(label) < 0) throw new Error('Missing Other metric: ' + label);
 });
-if (html.indexOf('Distance') >= 0 || html.indexOf('Races') >= 0) throw new Error('Endurance-only metrics leaked into Strength');
+if (html.indexOf('Distance') >= 0 || html.indexOf('Races') >= 0) throw new Error('Endurance-only metrics leaked into Other');
 var weeks = sportWeeks(workouts);
 if (weeks.length !== 4 || weeks[0].time_hours !== 0.5 || weeks[3].time_hours !== 2
     || Math.abs(weeks[3].time_moving_average - 1) > 0.0001
     || weeks[3].workouts !== 1 || weeks[3].workouts_moving_average !== 1) {
-  throw new Error('Strength weekly time/workout moving averages failed');
+  throw new Error('Other weekly time/workout moving averages failed');
 }
 var loadChart = buildRunningLoadChart([{date: '2026-09-01', tss: 20, ctl: 10, atl: 12}]);
-if (loadChart.config.data.datasets[0].label !== 'Strength TSS'
-    || loadChart.config.data.datasets[1].label !== 'Strength CTL'
-    || loadChart.config.data.datasets[2].label !== 'Strength ATL') {
-  throw new Error('Strength load chart labels failed');
+if (loadChart.config.data.datasets[0].label !== 'Other TSS'
+    || loadChart.config.data.datasets[1].label !== 'Other CTL'
+    || loadChart.config.data.datasets[2].label !== 'Other ATL') {
+  throw new Error('Other load chart labels failed');
 }
 var timeChart = buildRunningDistanceChart(weeks);
 if (timeChart.config.options.scales.y.title.text !== 'Hours'
     || timeChart.config.data.datasets[0].label !== 'Weekly Time'
     || timeChart.config.data.datasets[1].label !== '4-week average') {
-  throw new Error('Strength weekly time chart failed');
+  throw new Error('Other weekly time chart failed');
 }
 var workoutChart = buildRunningLongChart(weeks);
 if (workoutChart.config.options.scales.y.title.text !== 'Workouts'
     || workoutChart.config.data.datasets[0].label !== 'Weekly Workouts'
     || workoutChart.config.data.datasets[1].label !== '4-week average') {
-  throw new Error('Strength weekly workout chart failed');
+  throw new Error('Other weekly workout chart failed');
 }
 activeSport = 'running';
 activeSport = 'cycling';
 activeSport = 'swimming';
 activeSport = 'strength';
-activeSport = 'running';
+activeSport = 'other';
 if (JSON.stringify(runningRange) !== originalRange) throw new Error('Date range changed while switching sports');
-activeSport = 'strength';
-var empty = sportSummary([], 'strength');
+var empty = sportSummary([], 'other');
 if (empty.count !== 0 || empty.seconds !== 0 || empty.tss !== 0
     || empty.averageDuration !== null || empty.averageTss !== null) {
-  throw new Error('Empty Strength range was not graceful');
+  throw new Error('Empty Other range was not graceful');
 }
-console.log('Strength render smoke tests passed');
+console.log('Other render smoke tests passed');
 `;
 
 eval(source);
