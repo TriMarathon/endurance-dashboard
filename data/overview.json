@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T16:07:57Z",
+  "generated_at": "2026-09-25T16:09:19Z",
   "reference_date": "2026-09-25",
   "current_load": {
     "date": "2026-09-25",
@@ -46,7 +46,7 @@
   "thresholds": {
     "ftp_watts": 206.0,
     "rftp_watts": 313.0,
-    "css_pace": "1:51/100 yd",
+    "css_pace": "1:49/100 yd",
     "swim_threshold_pace": "1:36/100 yd",
     "threshold_heart_rate_bpm": 170.0
   }
