@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T14:15:54Z",
+  "generated_at": "2026-09-25T15:16:36Z",
   "gear": [
     {
       "id": "15f7b270d3f44537b70921baf82dc3b8",
@@ -1199,6 +1199,13 @@
       "purchase_date": "2025-09-15",
       "retailer": null,
       "price_paid": "162.52"
+    },
+    {
+      "id": 5,
+      "name": "Nike Vaporfly 4 Citron Pulse/Indigo Burst/Laser Orange",
+      "purchase_date": "2026-09-25",
+      "retailer": "Dick’s",
+      "price_paid": "116.33"
     },
     {
       "id": 2,
