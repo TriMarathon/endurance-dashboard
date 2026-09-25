@@ -23,10 +23,12 @@ assert.match(css, /\.tab-nav::-webkit-scrollbar/);
 assert.match(css, /\.sport-subtabs::-webkit-scrollbar/);
 assert.match(css, /\.date-field input\[type="date"\][\s\S]*font-size: 16px/);
 assert.match(css, /@media \(prefers-reduced-motion: reduce\)/);
+assert.match(css, /\.gear-section-button[\s\S]*min-height: 44px/);
 
 assert.match(js, /function chartDensity\(\)/);
 assert.match(js, /link\.setAttribute\('aria-selected', active \? 'true' : 'false'\)/);
 assert.match(js, /item\.setAttribute\('tabindex', selected \? '0' : '-1'\)/);
 assert.match(js, /function revealActiveTab\(tab\)/);
+assert.match(js, /No unused gear\./);
 
 console.log('Mobile UI smoke checks passed.');

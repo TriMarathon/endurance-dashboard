@@ -51,6 +51,8 @@ let healthRange = null;
 let overviewDoc = null;
 let overviewHealthDoc = null;
 let gearData = [];
+let unusedGearData = [];
+let gearSection = 'in-use';
 let gearFilter = 'active';
 let fullSportAnalysis = null;
 let runningRange = null;
@@ -2356,14 +2358,69 @@ function renderGearCard(row) {
   </article>`;
 }
 
+function sortedUnusedGearRows() {
+  return [...unusedGearData].sort((a, b) => (
+    String(a.name || '').localeCompare(String(b.name || ''), undefined, { sensitivity: 'base' })
+      || Number(a.id || 0) - Number(b.id || 0)
+  ));
+}
+
+function formatUnusedGearPrice(value) {
+  const text = String(value == null ? '' : value);
+  return /^\d+\.\d{2}$/.test(text) ? `$${text}` : null;
+}
+
+function formatUnusedGearDate(value) {
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return null;
+  const [year, month, day] = value.split('-').map(Number);
+  const parsed = new Date(year, month - 1, day);
+  if (parsed.getFullYear() !== year || parsed.getMonth() !== month - 1 || parsed.getDate() !== day) return null;
+  return new Intl.DateTimeFormat('en-US', {
+    month: 'short', day: 'numeric', year: 'numeric',
+  }).format(parsed);
+}
+
+function renderUnusedGearCard(row) {
+  const metrics = [
+    gearMetric('Purchase Date', formatUnusedGearDate(row.purchase_date)),
+    gearMetric('Retailer', row.retailer),
+    gearMetric('Price Paid', formatUnusedGearPrice(row.price_paid)),
+  ].filter(Boolean).join('');
+  return `<article class="gear-card unused-gear-card">
+    <div class="gear-card-heading"><h3>${escapeHtml(row.name || 'Unnamed gear')}</h3></div>
+    ${metrics ? `<div class="gear-metrics">${metrics}</div>` : ''}
+  </article>`;
+}
+
 function renderGear() {
   const container = document.getElementById('gear-container');
   if (!container) return;
+  const sectionHtml = `
+    <div class="gear-sections" role="tablist" aria-label="Gear sections">
+      <button type="button" role="tab" class="gear-section-button${gearSection === 'in-use' ? ' is-selected' : ''}" data-gear-section="in-use" aria-selected="${gearSection === 'in-use'}">In Use</button>
+      <button type="button" role="tab" class="gear-section-button${gearSection === 'unused' ? ' is-selected' : ''}" data-gear-section="unused" aria-selected="${gearSection === 'unused'}">Unused</button>
+    </div>`;
+  container.innerHTML = sectionHtml;
+  container.querySelectorAll('[data-gear-section]').forEach((button) => {
+    button.addEventListener('click', () => {
+      gearSection = button.getAttribute('data-gear-section');
+      renderGear();
+    });
+  });
+  if (gearSection === 'unused') {
+    const rows = sortedUnusedGearRows();
+    if (rows.length === 0) {
+      container.insertAdjacentHTML('beforeend', '<p class="gear-empty">No unused gear.</p>');
+      return;
+    }
+    container.insertAdjacentHTML('beforeend', `<div class="gear-cards unused-gear-cards">${rows.map(renderUnusedGearCard).join('')}</div>`);
+    return;
+  }
   const filterHtml = `
     <div class="gear-filter" role="group" aria-label="Filter gear by status">
       ${['active', 'retired', 'all'].map((status) => `<button type="button" class="gear-filter-button${gearFilter === status ? ' is-selected' : ''}" data-gear-filter="${status}" aria-pressed="${gearFilter === status}">${status[0].toUpperCase() + status.slice(1)}</button>`).join('')}
     </div>`;
-  container.innerHTML = filterHtml;
+  container.insertAdjacentHTML('beforeend', filterHtml);
   container.querySelectorAll('[data-gear-filter]').forEach((button) => {
     button.addEventListener('click', () => {
       gearFilter = button.getAttribute('data-gear-filter');
@@ -2393,6 +2450,7 @@ async function loadGear() {
     const doc = await response.json();
     if (!doc || !Array.isArray(doc.gear)) throw new Error('Invalid gear document');
     gearData = doc.gear;
+    unusedGearData = Array.isArray(doc.unused_gear) ? doc.unused_gear : [];
     renderGear();
   } catch (err) {
     console.error('[dashboard] failed to load gear.json:', err);

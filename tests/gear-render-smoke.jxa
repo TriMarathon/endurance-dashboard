@@ -47,6 +47,17 @@ var targetCard = renderGearCard({name: 'Over target', distance_miles: 450, maxim
 if (targetCard.indexOf('450.0 mi') < 0 || targetCard.indexOf('of 400.0 mi') < 0 || targetCard.indexOf('width:100%') < 0 || targetCard.indexOf('Apr 21, 2025') < 0 || targetCard.indexOf('Hours of Use') >= 0 || targetCard.indexOf('Days of Use') >= 0) throw new Error('Target, first-use, or null-metric rendering failed');
 var noTargetCard = renderGearCard({name: 'No target', distance_miles: 10, maximum_distance_miles: null, status: 'active'});
 if (noTargetCard.indexOf('gear-progress') >= 0 || noTargetCard.indexOf('10.0 mi') < 0) throw new Error('No-target rendering failed');
+unusedGearData = [
+  {id: 2, name: 'zulu', purchase_date: null, retailer: null, price_paid: null},
+  {id: 1, name: 'Alpha', purchase_date: '2026-09-25', retailer: 'Run Shop', price_paid: '139.95'}
+];
+var unusedRows = sortedUnusedGearRows();
+if (unusedRows[0].name !== 'Alpha' || unusedRows[1].name !== 'zulu') throw new Error('Unused gear sorting failed');
+var unusedCard = renderUnusedGearCard(unusedRows[0]);
+if (unusedCard.indexOf('Sep 25, 2026') < 0 || unusedCard.indexOf('Run Shop') < 0 || unusedCard.indexOf('$139.95') < 0) throw new Error('Unused gear fields failed');
+var nullCard = renderUnusedGearCard(unusedRows[1]);
+if (nullCard.indexOf('null') >= 0 || nullCard.indexOf('None') >= 0 || nullCard.indexOf('Purchase Date') >= 0) throw new Error('Unused gear null rendering failed');
+if (formatUnusedGearDate('2026-02-31') !== null || formatUnusedGearPrice('139.9') !== null) throw new Error('Invalid optional value handling failed');
 console.log('gear-render smoke tests passed');
 `;
 
