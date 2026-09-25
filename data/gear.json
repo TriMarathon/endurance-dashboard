@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T14:13:12Z",
+  "generated_at": "2026-09-25T14:15:54Z",
   "gear": [
     {
       "id": "15f7b270d3f44537b70921baf82dc3b8",
@@ -1212,7 +1212,7 @@
       "name": "Nike Vaporfly 4 Red/Green",
       "purchase_date": "2026-07-15",
       "retailer": null,
-      "price_paid": null
+      "price_paid": "129.64"
     }
   ]
 }
