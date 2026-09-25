@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T21:37:14Z",
+  "generated_at": "2026-09-25T21:55:52Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-25",
   "threshold_changes": {
@@ -86607,7 +86607,7 @@
         },
         {
           "date": "2023-03-10",
-          "duration_seconds": 1804,
+          "duration_seconds": 1436,
           "tss": 21.35,
           "distance_yards": 1100.0,
           "is_race": false,
@@ -86615,7 +86615,7 @@
         },
         {
           "date": "2023-03-12",
-          "duration_seconds": 637,
+          "duration_seconds": 615,
           "tss": 10.93,
           "distance_yards": 500.0,
           "is_race": true,
@@ -86623,7 +86623,7 @@
         },
         {
           "date": "2023-03-14",
-          "duration_seconds": 2896,
+          "duration_seconds": 2224,
           "tss": 23.72,
           "distance_yards": 1525.0,
           "is_race": false,
@@ -86631,7 +86631,7 @@
         },
         {
           "date": "2023-03-16",
-          "duration_seconds": 2451,
+          "duration_seconds": 1427,
           "tss": 16.25,
           "distance_yards": 1000.0,
           "is_race": false,
@@ -86647,7 +86647,7 @@
         },
         {
           "date": "2023-03-24",
-          "duration_seconds": 2719,
+          "duration_seconds": 1832,
           "tss": 36.71,
           "distance_yards": 1549.9999,
           "is_race": false,
@@ -86655,7 +86655,7 @@
         },
         {
           "date": "2023-03-30",
-          "duration_seconds": 2730,
+          "duration_seconds": 1351,
           "tss": 22.51,
           "distance_yards": 1075.0,
           "is_race": false,
@@ -86663,7 +86663,7 @@
         },
         {
           "date": "2023-04-01",
-          "duration_seconds": 3398,
+          "duration_seconds": 2796,
           "tss": 5.26,
           "distance_yards": 1075.0,
           "is_race": false,
@@ -86671,7 +86671,7 @@
         },
         {
           "date": "2023-04-03",
-          "duration_seconds": 2758,
+          "duration_seconds": 1688,
           "tss": 24.07,
           "distance_yards": 1275.0,
           "is_race": false,
@@ -86679,7 +86679,7 @@
         },
         {
           "date": "2023-04-04",
-          "duration_seconds": 4107,
+          "duration_seconds": 2186,
           "tss": 35.52,
           "distance_yards": 1725.0,
           "is_race": false,
@@ -86687,7 +86687,7 @@
         },
         {
           "date": "2023-04-06",
-          "duration_seconds": 3110,
+          "duration_seconds": 1712,
           "tss": 24.8,
           "distance_yards": 1300.0,
           "is_race": false,
@@ -86695,7 +86695,7 @@
         },
         {
           "date": "2023-04-07",
-          "duration_seconds": 2958,
+          "duration_seconds": 1937,
           "tss": 36.12,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -86703,7 +86703,7 @@
         },
         {
           "date": "2023-04-08",
-          "duration_seconds": 3344,
+          "duration_seconds": 1951,
           "tss": 32.37,
           "distance_yards": 1549.9999,
           "is_race": false,
@@ -86711,7 +86711,7 @@
         },
         {
           "date": "2023-04-10",
-          "duration_seconds": 2497,
+          "duration_seconds": 1915,
           "tss": 28.96,
           "distance_yards": 1475.0,
           "is_race": false,
@@ -86719,7 +86719,7 @@
         },
         {
           "date": "2023-04-11",
-          "duration_seconds": 4760,
+          "duration_seconds": 2621,
           "tss": 39.99,
           "distance_yards": 2025.0,
           "is_race": false,
@@ -86727,7 +86727,7 @@
         },
         {
           "date": "2023-04-13",
-          "duration_seconds": 2922,
+          "duration_seconds": 1953,
           "tss": 32.3,
           "distance_yards": 1549.9999,
           "is_race": false,
@@ -86735,7 +86735,7 @@
         },
         {
           "date": "2023-04-14",
-          "duration_seconds": 3115,
+          "duration_seconds": 2427,
           "tss": 44.93,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -86743,7 +86743,7 @@
         },
         {
           "date": "2023-04-19",
-          "duration_seconds": 2942,
+          "duration_seconds": 2552,
           "tss": 40.65,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -86751,7 +86751,7 @@
         },
         {
           "date": "2023-04-20",
-          "duration_seconds": 3068,
+          "duration_seconds": 2393,
           "tss": 36.57,
           "distance_yards": 1850.0,
           "is_race": false,
@@ -86759,7 +86759,7 @@
         },
         {
           "date": "2023-04-21",
-          "duration_seconds": 2903,
+          "duration_seconds": 2292,
           "tss": 33.75,
           "distance_yards": 1749.9999,
           "is_race": false,
@@ -86767,7 +86767,7 @@
         },
         {
           "date": "2023-04-22",
-          "duration_seconds": 3143,
+          "duration_seconds": 2170,
           "tss": 34.51,
           "distance_yards": 1700.0,
           "is_race": false,
@@ -86775,7 +86775,7 @@
         },
         {
           "date": "2023-04-23",
-          "duration_seconds": 3116,
+          "duration_seconds": 2560,
           "tss": 45.08,
           "distance_yards": 2075.0,
           "is_race": false,
@@ -86783,7 +86783,7 @@
         },
         {
           "date": "2023-04-24",
-          "duration_seconds": 1999,
+          "duration_seconds": 1606,
           "tss": 31.55,
           "distance_yards": 1349.9999,
           "is_race": false,
@@ -86791,7 +86791,7 @@
         },
         {
           "date": "2023-04-25",
-          "duration_seconds": 5147,
+          "duration_seconds": 3653,
           "tss": 48.79,
           "distance_yards": 2699.9999,
           "is_race": false,
@@ -86799,7 +86799,7 @@
         },
         {
           "date": "2023-04-26",
-          "duration_seconds": 3097,
+          "duration_seconds": 2024,
           "tss": 34.65,
           "distance_yards": 1625.0,
           "is_race": false,
@@ -86807,7 +86807,7 @@
         },
         {
           "date": "2023-04-28",
-          "duration_seconds": 2208,
+          "duration_seconds": 1628,
           "tss": 32.46,
           "distance_yards": 1375.0001,
           "is_race": false,
@@ -86815,7 +86815,7 @@
         },
         {
           "date": "2023-04-29",
-          "duration_seconds": 4661,
+          "duration_seconds": 3698,
           "tss": 65.33,
           "distance_yards": 2999.9999,
           "is_race": false,
@@ -86823,7 +86823,7 @@
         },
         {
           "date": "2023-05-01",
-          "duration_seconds": 2267,
+          "duration_seconds": 1703,
           "tss": 34.79,
           "distance_yards": 1450.0,
           "is_race": false,
@@ -86831,7 +86831,7 @@
         },
         {
           "date": "2023-05-02",
-          "duration_seconds": 4838,
+          "duration_seconds": 3175,
           "tss": 64.62,
           "distance_yards": 2699.9999,
           "is_race": false,
@@ -86839,7 +86839,7 @@
         },
         {
           "date": "2023-05-05",
-          "duration_seconds": 3010,
+          "duration_seconds": 2272,
           "tss": 51.29,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -86847,7 +86847,7 @@
         },
         {
           "date": "2023-05-06",
-          "duration_seconds": 2146,
+          "duration_seconds": 1611,
           "tss": 38.86,
           "distance_yards": 1450.0,
           "is_race": false,
@@ -86855,7 +86855,7 @@
         },
         {
           "date": "2023-05-08",
-          "duration_seconds": 3032,
+          "duration_seconds": 2294,
           "tss": 50.28,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -86863,7 +86863,7 @@
         },
         {
           "date": "2023-05-09",
-          "duration_seconds": 2909,
+          "duration_seconds": 2429,
           "tss": 44.85,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -86871,7 +86871,7 @@
         },
         {
           "date": "2023-05-10",
-          "duration_seconds": 3606,
+          "duration_seconds": 2364,
           "tss": 47.35,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -86879,7 +86879,7 @@
         },
         {
           "date": "2023-05-12",
-          "duration_seconds": 2371,
+          "duration_seconds": 2020,
           "tss": 43.45,
           "distance_yards": 1749.9999,
           "is_race": false,
@@ -86887,7 +86887,7 @@
         },
         {
           "date": "2023-05-15",
-          "duration_seconds": 3273,
+          "duration_seconds": 2697,
           "tss": 55.33,
           "distance_yards": 2300.0001,
           "is_race": false,
@@ -86895,7 +86895,7 @@
         },
         {
           "date": "2023-05-17",
-          "duration_seconds": 2796,
+          "duration_seconds": 2360,
           "tss": 47.5,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -86903,7 +86903,7 @@
         },
         {
           "date": "2023-05-21",
-          "duration_seconds": 2850,
+          "duration_seconds": 2323,
           "tss": 49.04,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -86911,7 +86911,7 @@
         },
         {
           "date": "2023-05-22",
-          "duration_seconds": 2398,
+          "duration_seconds": 2026,
           "tss": 47.0,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -86919,7 +86919,7 @@
         },
         {
           "date": "2023-05-24",
-          "duration_seconds": 3108,
+          "duration_seconds": 2258,
           "tss": 49.48,
           "distance_yards": 1968.5039,
           "is_race": false,
@@ -86927,7 +86927,7 @@
         },
         {
           "date": "2023-05-28",
-          "duration_seconds": 3213,
+          "duration_seconds": 2859,
           "tss": 57.73,
           "distance_yards": 2424.9999,
           "is_race": false,
@@ -86935,7 +86935,7 @@
         },
         {
           "date": "2023-05-30",
-          "duration_seconds": 1675,
+          "duration_seconds": 611,
           "tss": 1.57,
           "distance_yards": 510.7502,
           "is_race": false,
@@ -86943,7 +86943,7 @@
         },
         {
           "date": "2023-06-01",
-          "duration_seconds": 2714,
+          "duration_seconds": 2315,
           "tss": 53.2,
           "distance_yards": 2050.0,
           "is_race": false,
@@ -86951,7 +86951,7 @@
         },
         {
           "date": "2023-06-02",
-          "duration_seconds": 2593,
+          "duration_seconds": 2440,
           "tss": 44.47,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -86959,7 +86959,7 @@
         },
         {
           "date": "2023-06-08",
-          "duration_seconds": 2633,
+          "duration_seconds": 2335,
           "tss": 48.54,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -86967,7 +86967,7 @@
         },
         {
           "date": "2023-06-09",
-          "duration_seconds": 2529,
+          "duration_seconds": 2354,
           "tss": 47.76,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -86975,7 +86975,7 @@
         },
         {
           "date": "2023-06-11",
-          "duration_seconds": 3189,
+          "duration_seconds": 2935,
           "tss": 53.1,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -86983,7 +86983,7 @@
         },
         {
           "date": "2023-06-13",
-          "duration_seconds": 2579,
+          "duration_seconds": 2329,
           "tss": 48.8,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -86991,7 +86991,7 @@
         },
         {
           "date": "2023-06-17",
-          "duration_seconds": 2909,
+          "duration_seconds": 2888,
           "tss": 43.74,
           "distance_yards": 2236.7017,
           "is_race": false,
@@ -86999,7 +86999,7 @@
         },
         {
           "date": "2023-06-19",
-          "duration_seconds": 2564,
+          "duration_seconds": 2201,
           "tss": 43.23,
           "distance_yards": 1850.0,
           "is_race": false,
@@ -87007,7 +87007,7 @@
         },
         {
           "date": "2023-06-20",
-          "duration_seconds": 2490,
+          "duration_seconds": 2454,
           "tss": 0.19,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -87015,7 +87015,7 @@
         },
         {
           "date": "2023-06-25",
-          "duration_seconds": 955,
+          "duration_seconds": 951,
           "tss": 21.13,
           "distance_yards": 835.1269,
           "is_race": true,
@@ -87023,7 +87023,7 @@
         },
         {
           "date": "2023-06-26",
-          "duration_seconds": 2394,
+          "duration_seconds": 1470,
           "tss": 57.05,
           "distance_yards": 1549.9999,
           "is_race": false,
@@ -87031,7 +87031,7 @@
         },
         {
           "date": "2023-06-27",
-          "duration_seconds": 2177,
+          "duration_seconds": 1977,
           "tss": 34.66,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -87039,7 +87039,7 @@
         },
         {
           "date": "2023-06-28",
-          "duration_seconds": 2283,
+          "duration_seconds": 1819,
           "tss": 44.89,
           "distance_yards": 1650.0,
           "is_race": false,
@@ -87047,7 +87047,7 @@
         },
         {
           "date": "2023-06-29",
-          "duration_seconds": 2872,
+          "duration_seconds": 2123,
           "tss": 30.12,
           "distance_yards": 1549.9999,
           "is_race": false,
@@ -87055,7 +87055,7 @@
         },
         {
           "date": "2023-07-02",
-          "duration_seconds": 3180,
+          "duration_seconds": 2285,
           "tss": 43.48,
           "distance_yards": 1900.0,
           "is_race": false,
@@ -87063,7 +87063,7 @@
         },
         {
           "date": "2023-07-03",
-          "duration_seconds": 3002,
+          "duration_seconds": 2174,
           "tss": 37.51,
           "distance_yards": 1749.9999,
           "is_race": false,
@@ -87071,7 +87071,7 @@
         },
         {
           "date": "2023-07-05",
-          "duration_seconds": 2436,
+          "duration_seconds": 1984,
           "tss": 37.77,
           "distance_yards": 1650.0,
           "is_race": false,
@@ -87079,7 +87079,7 @@
         },
         {
           "date": "2023-07-15",
-          "duration_seconds": 1510,
+          "duration_seconds": 1149,
           "tss": 11.25,
           "distance_yards": 1020.6037,
           "is_race": false,
@@ -87087,7 +87087,7 @@
         },
         {
           "date": "2023-07-15",
-          "duration_seconds": 1664,
+          "duration_seconds": 1418,
           "tss": 23.74,
           "distance_yards": 1129.954,
           "is_race": false,
@@ -87095,7 +87095,7 @@
         },
         {
           "date": "2023-07-18",
-          "duration_seconds": 3628,
+          "duration_seconds": 2707,
           "tss": 47.24,
           "distance_yards": 2187.2266,
           "is_race": false,
@@ -87103,7 +87103,7 @@
         },
         {
           "date": "2023-07-29",
-          "duration_seconds": 2157,
+          "duration_seconds": 1840,
           "tss": 40.04,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -87111,7 +87111,7 @@
         },
         {
           "date": "2023-07-30",
-          "duration_seconds": 2101,
+          "duration_seconds": 1882,
           "tss": 41.98,
           "distance_yards": 1650.0,
           "is_race": false,
@@ -87119,7 +87119,7 @@
         },
         {
           "date": "2023-08-02",
-          "duration_seconds": 2820,
+          "duration_seconds": 1150,
           "tss": 3.26,
           "distance_yards": 921.5442,
           "is_race": false,
@@ -87127,7 +87127,7 @@
         },
         {
           "date": "2023-08-06",
-          "duration_seconds": 486,
+          "duration_seconds": 457,
           "tss": 9.66,
           "distance_yards": 410.105,
           "is_race": true,
@@ -87135,7 +87135,7 @@
         },
         {
           "date": "2023-08-14",
-          "duration_seconds": 2169,
+          "duration_seconds": 1707,
           "tss": 38.34,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -87143,7 +87143,7 @@
         },
         {
           "date": "2023-08-15",
-          "duration_seconds": 2484,
+          "duration_seconds": 1897,
           "tss": 31.03,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -87151,7 +87151,7 @@
         },
         {
           "date": "2023-08-18",
-          "duration_seconds": 3036,
+          "duration_seconds": 2449,
           "tss": 44.12,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -87159,7 +87159,7 @@
         },
         {
           "date": "2023-08-19",
-          "duration_seconds": 2748,
+          "duration_seconds": 2149,
           "tss": 49.15,
           "distance_yards": 1900.0,
           "is_race": false,
@@ -87167,7 +87167,7 @@
         },
         {
           "date": "2023-08-20",
-          "duration_seconds": 3190,
+          "duration_seconds": 2095,
           "tss": 51.69,
           "distance_yards": 1900.0,
           "is_race": false,
@@ -87175,7 +87175,7 @@
         },
         {
           "date": "2023-08-27",
-          "duration_seconds": 249,
+          "duration_seconds": 246,
           "tss": 5.0,
           "distance_yards": 1312.336,
           "is_race": true,
@@ -87183,7 +87183,7 @@
         },
         {
           "date": "2023-08-29",
-          "duration_seconds": 3671,
+          "duration_seconds": 2754,
           "tss": 64.14,
           "distance_yards": 2450.0,
           "is_race": false,
@@ -87191,7 +87191,7 @@
         },
         {
           "date": "2023-08-31",
-          "duration_seconds": 3091,
+          "duration_seconds": 2245,
           "tss": 60.77,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -87199,7 +87199,7 @@
         },
         {
           "date": "2023-09-01",
-          "duration_seconds": 3165,
+          "duration_seconds": 2275,
           "tss": 51.13,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -87207,7 +87207,7 @@
         },
         {
           "date": "2023-09-17",
-          "duration_seconds": 3641,
+          "duration_seconds": 2592,
           "tss": 52.42,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -87215,7 +87215,7 @@
         },
         {
           "date": "2023-09-19",
-          "duration_seconds": 3746,
+          "duration_seconds": 3743,
           "tss": 65.35,
           "distance_yards": 3050.0001,
           "is_race": false,
@@ -87223,7 +87223,7 @@
         },
         {
           "date": "2023-09-25",
-          "duration_seconds": 2328,
+          "duration_seconds": 2293,
           "tss": 40.43,
           "distance_yards": 1859.1426,
           "is_race": false,
@@ -87239,7 +87239,7 @@
         },
         {
           "date": "2023-09-29",
-          "duration_seconds": 3582,
+          "duration_seconds": 2789,
           "tss": 58.9,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -87247,7 +87247,7 @@
         },
         {
           "date": "2023-09-30",
-          "duration_seconds": 3279,
+          "duration_seconds": 2594,
           "tss": 52.34,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -87255,7 +87255,7 @@
         },
         {
           "date": "2023-10-01",
-          "duration_seconds": 3552,
+          "duration_seconds": 2794,
           "tss": 66.21,
           "distance_yards": 2500.0,
           "is_race": false,
@@ -87263,7 +87263,7 @@
         },
         {
           "date": "2023-10-02",
-          "duration_seconds": 3551,
+          "duration_seconds": 2820,
           "tss": 61.18,
           "distance_yards": 2450.0,
           "is_race": false,
@@ -87279,7 +87279,7 @@
         },
         {
           "date": "2023-10-04",
-          "duration_seconds": 3253,
+          "duration_seconds": 2484,
           "tss": 57.15,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -87287,7 +87287,7 @@
         },
         {
           "date": "2023-10-05",
-          "duration_seconds": 3442,
+          "duration_seconds": 2410,
           "tss": 60.64,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -87295,7 +87295,7 @@
         },
         {
           "date": "2023-10-06",
-          "duration_seconds": 2526,
+          "duration_seconds": 2145,
           "tss": 57.51,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -87303,7 +87303,7 @@
         },
         {
           "date": "2023-10-11",
-          "duration_seconds": 3336,
+          "duration_seconds": 2547,
           "tss": 62.04,
           "distance_yards": 2300.0001,
           "is_race": false,
@@ -87311,7 +87311,7 @@
         },
         {
           "date": "2023-10-12",
-          "duration_seconds": 3876,
+          "duration_seconds": 2711,
           "tss": 70.35,
           "distance_yards": 2500.0,
           "is_race": false,
@@ -87319,7 +87319,7 @@
         },
         {
           "date": "2023-10-13",
-          "duration_seconds": 3862,
+          "duration_seconds": 2608,
           "tss": 67.22,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -87327,7 +87327,7 @@
         },
         {
           "date": "2023-10-14",
-          "duration_seconds": 3449,
+          "duration_seconds": 2506,
           "tss": 42.16,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -87335,7 +87335,7 @@
         },
         {
           "date": "2023-10-15",
-          "duration_seconds": 3035,
+          "duration_seconds": 2349,
           "tss": 72.95,
           "distance_yards": 2300.0001,
           "is_race": false,
@@ -87343,7 +87343,7 @@
         },
         {
           "date": "2023-10-18",
-          "duration_seconds": 2028,
+          "duration_seconds": 1535,
           "tss": 42.79,
           "distance_yards": 1450.0,
           "is_race": false,
@@ -87351,7 +87351,7 @@
         },
         {
           "date": "2023-10-19",
-          "duration_seconds": 3359,
+          "duration_seconds": 2502,
           "tss": 68.59,
           "distance_yards": 2350.0001,
           "is_race": false,
@@ -87359,7 +87359,7 @@
         },
         {
           "date": "2023-10-20",
-          "duration_seconds": 2607,
+          "duration_seconds": 1950,
           "tss": 59.69,
           "distance_yards": 1900.0,
           "is_race": false,
@@ -87367,7 +87367,7 @@
         },
         {
           "date": "2023-10-21",
-          "duration_seconds": 2913,
+          "duration_seconds": 2260,
           "tss": 51.83,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -87375,7 +87375,7 @@
         },
         {
           "date": "2023-10-23",
-          "duration_seconds": 2559,
+          "duration_seconds": 1903,
           "tss": 26.45,
           "distance_yards": 1425.0,
           "is_race": false,
@@ -87383,7 +87383,7 @@
         },
         {
           "date": "2023-10-26",
-          "duration_seconds": 2844,
+          "duration_seconds": 2250,
           "tss": 56.29,
           "distance_yards": 2050.0,
           "is_race": false,
@@ -87391,7 +87391,7 @@
         },
         {
           "date": "2023-10-28",
-          "duration_seconds": 2544,
+          "duration_seconds": 2226,
           "tss": 53.4,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -87399,7 +87399,7 @@
         },
         {
           "date": "2023-10-30",
-          "duration_seconds": 2726,
+          "duration_seconds": 2144,
           "tss": 62.0,
           "distance_yards": 2050.0,
           "is_race": false,
@@ -87407,7 +87407,7 @@
         },
         {
           "date": "2023-11-02",
-          "duration_seconds": 3743,
+          "duration_seconds": 2233,
           "tss": 70.64,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -87415,7 +87415,7 @@
         },
         {
           "date": "2023-11-03",
-          "duration_seconds": 3358,
+          "duration_seconds": 2427,
           "tss": 77.67,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -87423,7 +87423,7 @@
         },
         {
           "date": "2023-11-04",
-          "duration_seconds": 3315,
+          "duration_seconds": 2487,
           "tss": 73.95,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -87431,7 +87431,7 @@
         },
         {
           "date": "2023-11-09",
-          "duration_seconds": 3036,
+          "duration_seconds": 2693,
           "tss": 63.08,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -87439,7 +87439,7 @@
         },
         {
           "date": "2023-11-11",
-          "duration_seconds": 2466,
+          "duration_seconds": 1813,
           "tss": 41.23,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -87447,7 +87447,7 @@
         },
         {
           "date": "2023-11-12",
-          "duration_seconds": 2832,
+          "duration_seconds": 2354,
           "tss": 63.55,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -87455,7 +87455,7 @@
         },
         {
           "date": "2023-11-13",
-          "duration_seconds": 2888,
+          "duration_seconds": 2285,
           "tss": 50.68,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -87463,7 +87463,7 @@
         },
         {
           "date": "2023-11-15",
-          "duration_seconds": 3158,
+          "duration_seconds": 2427,
           "tss": 48.41,
           "distance_yards": 2050.0,
           "is_race": false,
@@ -87471,7 +87471,7 @@
         },
         {
           "date": "2023-11-16",
-          "duration_seconds": 3058,
+          "duration_seconds": 2348,
           "tss": 51.72,
           "distance_yards": 2050.0,
           "is_race": false,
@@ -87479,7 +87479,7 @@
         },
         {
           "date": "2023-11-17",
-          "duration_seconds": 3125,
+          "duration_seconds": 2351,
           "tss": 55.46,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -87487,7 +87487,7 @@
         },
         {
           "date": "2023-11-20",
-          "duration_seconds": 2847,
+          "duration_seconds": 2212,
           "tss": 54.07,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -87495,7 +87495,7 @@
         },
         {
           "date": "2023-11-21",
-          "duration_seconds": 2915,
+          "duration_seconds": 2111,
           "tss": 61.63,
           "distance_yards": 2025.0,
           "is_race": false,
@@ -87503,7 +87503,7 @@
         },
         {
           "date": "2023-11-22",
-          "duration_seconds": 2893,
+          "duration_seconds": 2258,
           "tss": 51.89,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -87511,7 +87511,7 @@
         },
         {
           "date": "2023-11-23",
-          "duration_seconds": 2974,
+          "duration_seconds": 2367,
           "tss": 56.65,
           "distance_yards": 2125.0,
           "is_race": false,
@@ -87519,7 +87519,7 @@
         },
         {
           "date": "2023-11-24",
-          "duration_seconds": 2975,
+          "duration_seconds": 2292,
           "tss": 58.31,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -87527,7 +87527,7 @@
         },
         {
           "date": "2023-11-28",
-          "duration_seconds": 2931,
+          "duration_seconds": 2394,
           "tss": 65.77,
           "distance_yards": 2249.9999,
           "is_race": false,
@@ -87535,7 +87535,7 @@
         },
         {
           "date": "2023-12-04",
-          "duration_seconds": 2626,
+          "duration_seconds": 2118,
           "tss": 59.02,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -87543,7 +87543,7 @@
         },
         {
           "date": "2023-12-05",
-          "duration_seconds": 2570,
+          "duration_seconds": 2169,
           "tss": 56.25,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -87551,7 +87551,7 @@
         },
         {
           "date": "2023-12-07",
-          "duration_seconds": 2989,
+          "duration_seconds": 2383,
           "tss": 53.96,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -87559,7 +87559,7 @@
         },
         {
           "date": "2023-12-08",
-          "duration_seconds": 2796,
+          "duration_seconds": 2318,
           "tss": 65.59,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -87567,7 +87567,7 @@
         },
         {
           "date": "2023-12-11",
-          "duration_seconds": 2757,
+          "duration_seconds": 2394,
           "tss": 53.44,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -87575,7 +87575,7 @@
         },
         {
           "date": "2023-12-14",
-          "duration_seconds": 2741,
+          "duration_seconds": 2232,
           "tss": 53.14,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -87583,7 +87583,7 @@
         },
         {
           "date": "2023-12-21",
-          "duration_seconds": 2972,
+          "duration_seconds": 2488,
           "tss": 65.05,
           "distance_yards": 2300.0001,
           "is_race": false,
@@ -87591,7 +87591,7 @@
         },
         {
           "date": "2024-01-08",
-          "duration_seconds": 2811,
+          "duration_seconds": 2352,
           "tss": 59.43,
           "distance_yards": 2150.0,
           "is_race": false,
@@ -87607,7 +87607,7 @@
         },
         {
           "date": "2024-01-15",
-          "duration_seconds": 2734,
+          "duration_seconds": 2369,
           "tss": 58.58,
           "distance_yards": 2150.0,
           "is_race": false,
@@ -87615,7 +87615,7 @@
         },
         {
           "date": "2024-03-10",
-          "duration_seconds": 202,
+          "duration_seconds": 155,
           "tss": 4.64,
           "distance_yards": 150.0,
           "is_race": false,
@@ -87631,7 +87631,7 @@
         },
         {
           "date": "2024-05-23",
-          "duration_seconds": 4223,
+          "duration_seconds": 2587,
           "tss": 44.15,
           "distance_yards": 2075.0,
           "is_race": false,
@@ -87639,7 +87639,7 @@
         },
         {
           "date": "2024-05-24",
-          "duration_seconds": 2701,
+          "duration_seconds": 1987,
           "tss": 39.36,
           "distance_yards": 1675.0,
           "is_race": false,
@@ -87647,7 +87647,7 @@
         },
         {
           "date": "2024-05-26",
-          "duration_seconds": 3622,
+          "duration_seconds": 2706,
           "tss": 48.09,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -87655,7 +87655,7 @@
         },
         {
           "date": "2024-05-31",
-          "duration_seconds": 3256,
+          "duration_seconds": 2343,
           "tss": 48.23,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -87663,7 +87663,7 @@
         },
         {
           "date": "2024-06-01",
-          "duration_seconds": 2978,
+          "duration_seconds": 1992,
           "tss": 48.63,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -87671,7 +87671,7 @@
         },
         {
           "date": "2024-06-03",
-          "duration_seconds": 3031,
+          "duration_seconds": 2307,
           "tss": 49.74,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -87679,7 +87679,7 @@
         },
         {
           "date": "2024-06-04",
-          "duration_seconds": 2973,
+          "duration_seconds": 2297,
           "tss": 50.16,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -87687,7 +87687,7 @@
         },
         {
           "date": "2024-06-06",
-          "duration_seconds": 2458,
+          "duration_seconds": 1937,
           "tss": 43.33,
           "distance_yards": 1700.0,
           "is_race": false,
@@ -87695,7 +87695,7 @@
         },
         {
           "date": "2024-06-08",
-          "duration_seconds": 2219,
+          "duration_seconds": 2182,
           "tss": 27.72,
           "distance_yards": 1603.762,
           "is_race": false,
@@ -87703,7 +87703,7 @@
         },
         {
           "date": "2024-06-08",
-          "duration_seconds": 1207,
+          "duration_seconds": 1189,
           "tss": 12.44,
           "distance_yards": 818.3727,
           "is_race": false,
@@ -87711,7 +87711,7 @@
         },
         {
           "date": "2024-06-10",
-          "duration_seconds": 2765,
+          "duration_seconds": 2124,
           "tss": 50.3,
           "distance_yards": 1900.0,
           "is_race": false,
@@ -87719,7 +87719,7 @@
         },
         {
           "date": "2024-06-17",
-          "duration_seconds": 2166,
+          "duration_seconds": 1780,
           "tss": 42.78,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -87727,7 +87727,7 @@
         },
         {
           "date": "2024-06-20",
-          "duration_seconds": 2415,
+          "duration_seconds": 2028,
           "tss": 46.9,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -87735,7 +87735,7 @@
         },
         {
           "date": "2024-06-21",
-          "duration_seconds": 2233,
+          "duration_seconds": 1815,
           "tss": 41.14,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -87743,7 +87743,7 @@
         },
         {
           "date": "2024-06-23",
-          "duration_seconds": 2370,
+          "duration_seconds": 2354,
           "tss": 38.23,
           "distance_yards": 1865.3215,
           "is_race": true,
@@ -87751,7 +87751,7 @@
         },
         {
           "date": "2024-06-24",
-          "duration_seconds": 2178,
+          "duration_seconds": 1745,
           "tss": 44.48,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -87759,7 +87759,7 @@
         },
         {
           "date": "2024-06-27",
-          "duration_seconds": 2410,
+          "duration_seconds": 2381,
           "tss": 36.35,
           "distance_yards": 1854.8994,
           "is_race": false,
@@ -87767,7 +87767,7 @@
         },
         {
           "date": "2024-07-25",
-          "duration_seconds": 2341,
+          "duration_seconds": 2319,
           "tss": 28.49,
           "distance_yards": 1677.3732,
           "is_race": false,
@@ -87775,7 +87775,7 @@
         },
         {
           "date": "2024-07-28",
-          "duration_seconds": 1123,
+          "duration_seconds": 1113,
           "tss": 17.73,
           "distance_yards": 877.5919,
           "is_race": true,
@@ -87783,7 +87783,7 @@
         },
         {
           "date": "2024-08-01",
-          "duration_seconds": 2588,
+          "duration_seconds": 2549,
           "tss": 30.88,
           "distance_yards": 1842.3228,
           "is_race": false,
@@ -87791,7 +87791,7 @@
         },
         {
           "date": "2024-08-04",
-          "duration_seconds": 504,
+          "duration_seconds": 460,
           "tss": 8.98,
           "distance_yards": 410.105,
           "is_race": true,
@@ -87799,7 +87799,7 @@
         },
         {
           "date": "2024-08-23",
-          "duration_seconds": 1921,
+          "duration_seconds": 1755,
           "tss": 36.6,
           "distance_yards": 1400.0,
           "is_race": false,
@@ -87807,7 +87807,7 @@
         },
         {
           "date": "2024-08-25",
-          "duration_seconds": 942,
+          "duration_seconds": 869,
           "tss": 15.24,
           "distance_yards": 742.0822,
           "is_race": true,
@@ -87815,7 +87815,7 @@
         },
         {
           "date": "2024-08-26",
-          "duration_seconds": 3072,
+          "duration_seconds": 2539,
           "tss": 67.86,
           "distance_yards": 2300.0001,
           "is_race": false,
@@ -87823,7 +87823,7 @@
         },
         {
           "date": "2024-08-27",
-          "duration_seconds": 3224,
+          "duration_seconds": 2834,
           "tss": 46.9,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -87831,7 +87831,7 @@
         },
         {
           "date": "2024-08-28",
-          "duration_seconds": 2306,
+          "duration_seconds": 2009,
           "tss": 46.45,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -87839,7 +87839,7 @@
         },
         {
           "date": "2024-08-29",
-          "duration_seconds": 2226,
+          "duration_seconds": 2004,
           "tss": 48.77,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -87847,7 +87847,7 @@
         },
         {
           "date": "2024-08-30",
-          "duration_seconds": 2415,
+          "duration_seconds": 2189,
           "tss": 49.48,
           "distance_yards": 1700.0,
           "is_race": false,
@@ -87855,7 +87855,7 @@
         },
         {
           "date": "2024-08-31",
-          "duration_seconds": 2566,
+          "duration_seconds": 2191,
           "tss": 59.48,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -87863,7 +87863,7 @@
         },
         {
           "date": "2024-09-01",
-          "duration_seconds": 2299,
+          "duration_seconds": 1937,
           "tss": 50.86,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -87871,7 +87871,7 @@
         },
         {
           "date": "2024-09-02",
-          "duration_seconds": 2023,
+          "duration_seconds": 1734,
           "tss": 46.51,
           "distance_yards": 1400.0,
           "is_race": false,
@@ -87879,7 +87879,7 @@
         },
         {
           "date": "2024-09-03",
-          "duration_seconds": 2018,
+          "duration_seconds": 1688,
           "tss": 46.36,
           "distance_yards": 1400.0,
           "is_race": false,
@@ -87887,7 +87887,7 @@
         },
         {
           "date": "2024-09-04",
-          "duration_seconds": 1749,
+          "duration_seconds": 1454,
           "tss": 40.97,
           "distance_yards": 1200.0,
           "is_race": false,
@@ -87895,7 +87895,7 @@
         },
         {
           "date": "2024-09-05",
-          "duration_seconds": 1724,
+          "duration_seconds": 1444,
           "tss": 44.63,
           "distance_yards": 1200.0,
           "is_race": false,
@@ -87903,7 +87903,7 @@
         },
         {
           "date": "2024-09-07",
-          "duration_seconds": 2449,
+          "duration_seconds": 2441,
           "tss": 52.95,
           "distance_yards": 2125.2406,
           "is_race": true,
@@ -87911,7 +87911,7 @@
         },
         {
           "date": "2024-11-13",
-          "duration_seconds": 3416,
+          "duration_seconds": 3080,
           "tss": 48.54,
           "distance_yards": 2125.0,
           "is_race": false,
@@ -87919,7 +87919,7 @@
         },
         {
           "date": "2024-11-14",
-          "duration_seconds": 1581,
+          "duration_seconds": 1419,
           "tss": 33.24,
           "distance_yards": 1100.0,
           "is_race": false,
@@ -87927,7 +87927,7 @@
         },
         {
           "date": "2024-11-15",
-          "duration_seconds": 1461,
+          "duration_seconds": 1327,
           "tss": 31.56,
           "distance_yards": 1000.0,
           "is_race": false,
@@ -87935,7 +87935,7 @@
         },
         {
           "date": "2024-11-17",
-          "duration_seconds": 1775,
+          "duration_seconds": 1565,
           "tss": 32.16,
           "distance_yards": 1200.0,
           "is_race": false,
@@ -87951,7 +87951,7 @@
         },
         {
           "date": "2024-11-18",
-          "duration_seconds": 1732,
+          "duration_seconds": 1603,
           "tss": 34.26,
           "distance_yards": 1200.0,
           "is_race": false,
@@ -87959,7 +87959,7 @@
         },
         {
           "date": "2024-11-25",
-          "duration_seconds": 1769,
+          "duration_seconds": 1633,
           "tss": 32.9,
           "distance_yards": 1200.0,
           "is_race": false,
@@ -87967,7 +87967,7 @@
         },
         {
           "date": "2024-11-27",
-          "duration_seconds": 2053,
+          "duration_seconds": 1828,
           "tss": 30.07,
           "distance_yards": 1400.0,
           "is_race": false,
@@ -87975,7 +87975,7 @@
         },
         {
           "date": "2024-11-28",
-          "duration_seconds": 2046,
+          "duration_seconds": 1870,
           "tss": 41.83,
           "distance_yards": 1475.0,
           "is_race": false,
@@ -87983,7 +87983,7 @@
         },
         {
           "date": "2024-11-30",
-          "duration_seconds": 1852,
+          "duration_seconds": 1607,
           "tss": 28.82,
           "distance_yards": 1200.0,
           "is_race": false,
@@ -87991,7 +87991,7 @@
         },
         {
           "date": "2024-12-01",
-          "duration_seconds": 1827,
+          "duration_seconds": 1651,
           "tss": 37.01,
           "distance_yards": 1300.0,
           "is_race": false,
@@ -87999,7 +87999,7 @@
         },
         {
           "date": "2024-12-02",
-          "duration_seconds": 2003,
+          "duration_seconds": 1777,
           "tss": 40.02,
           "distance_yards": 1400.0,
           "is_race": false,
@@ -88007,7 +88007,7 @@
         },
         {
           "date": "2024-12-03",
-          "duration_seconds": 1817,
+          "duration_seconds": 1638,
           "tss": 36.5,
           "distance_yards": 1300.0,
           "is_race": false,
@@ -88015,7 +88015,7 @@
         },
         {
           "date": "2024-12-06",
-          "duration_seconds": 2191,
+          "duration_seconds": 1997,
           "tss": 34.33,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -88023,7 +88023,7 @@
         },
         {
           "date": "2024-12-08",
-          "duration_seconds": 2089,
+          "duration_seconds": 1920,
           "tss": 33.95,
           "distance_yards": 1400.0,
           "is_race": false,
@@ -88031,7 +88031,7 @@
         },
         {
           "date": "2024-12-09",
-          "duration_seconds": 2218,
+          "duration_seconds": 2033,
           "tss": 42.58,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -88039,7 +88039,7 @@
         },
         {
           "date": "2024-12-11",
-          "duration_seconds": 2463,
+          "duration_seconds": 2203,
           "tss": 34.31,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -88047,7 +88047,7 @@
         },
         {
           "date": "2024-12-13",
-          "duration_seconds": 2093,
+          "duration_seconds": 1859,
           "tss": 38.85,
           "distance_yards": 1400.0,
           "is_race": false,
@@ -88055,7 +88055,7 @@
         },
         {
           "date": "2024-12-14",
-          "duration_seconds": 2446,
+          "duration_seconds": 2202,
           "tss": 43.33,
           "distance_yards": 1700.0,
           "is_race": false,
@@ -88063,7 +88063,7 @@
         },
         {
           "date": "2024-12-16",
-          "duration_seconds": 2024,
+          "duration_seconds": 1785,
           "tss": 48.44,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -88071,7 +88071,7 @@
         },
         {
           "date": "2024-12-18",
-          "duration_seconds": 2636,
+          "duration_seconds": 2360,
           "tss": 44.17,
           "distance_yards": 1700.0,
           "is_race": false,
@@ -88079,7 +88079,7 @@
         },
         {
           "date": "2024-12-19",
-          "duration_seconds": 2124,
+          "duration_seconds": 1885,
           "tss": 42.82,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -88087,7 +88087,7 @@
         },
         {
           "date": "2024-12-20",
-          "duration_seconds": 2215,
+          "duration_seconds": 2033,
           "tss": 49.42,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -88095,7 +88095,7 @@
         },
         {
           "date": "2024-12-21",
-          "duration_seconds": 2539,
+          "duration_seconds": 2345,
           "tss": 51.86,
           "distance_yards": 1850.0,
           "is_race": false,
@@ -88103,7 +88103,7 @@
         },
         {
           "date": "2024-12-22",
-          "duration_seconds": 2531,
+          "duration_seconds": 2294,
           "tss": 52.95,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -88111,7 +88111,7 @@
         },
         {
           "date": "2024-12-23",
-          "duration_seconds": 2380,
+          "duration_seconds": 2158,
           "tss": 42.05,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -88119,7 +88119,7 @@
         },
         {
           "date": "2024-12-24",
-          "duration_seconds": 2702,
+          "duration_seconds": 2417,
           "tss": 45.29,
           "distance_yards": 1900.0,
           "is_race": false,
@@ -88127,7 +88127,7 @@
         },
         {
           "date": "2024-12-26",
-          "duration_seconds": 2200,
+          "duration_seconds": 1956,
           "tss": 53.95,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -88135,7 +88135,7 @@
         },
         {
           "date": "2024-12-28",
-          "duration_seconds": 2246,
+          "duration_seconds": 2005,
           "tss": 50.9,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -88143,7 +88143,7 @@
         },
         {
           "date": "2024-12-30",
-          "duration_seconds": 2619,
+          "duration_seconds": 2464,
           "tss": 65.65,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -88151,7 +88151,7 @@
         },
         {
           "date": "2024-12-31",
-          "duration_seconds": 2977,
+          "duration_seconds": 2573,
           "tss": 37.53,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -88159,7 +88159,7 @@
         },
         {
           "date": "2025-01-01",
-          "duration_seconds": 2837,
+          "duration_seconds": 2690,
           "tss": 54.17,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -88167,7 +88167,7 @@
         },
         {
           "date": "2025-01-02",
-          "duration_seconds": 1841,
+          "duration_seconds": 1612,
           "tss": 44.2,
           "distance_yards": 1400.0,
           "is_race": false,
@@ -88175,7 +88175,7 @@
         },
         {
           "date": "2025-01-03",
-          "duration_seconds": 2175,
+          "duration_seconds": 2000,
           "tss": 60.28,
           "distance_yards": 1700.0,
           "is_race": false,
@@ -88183,7 +88183,7 @@
         },
         {
           "date": "2025-01-04",
-          "duration_seconds": 2213,
+          "duration_seconds": 1987,
           "tss": 55.15,
           "distance_yards": 1700.0,
           "is_race": false,
@@ -88191,7 +88191,7 @@
         },
         {
           "date": "2025-01-06",
-          "duration_seconds": 2719,
+          "duration_seconds": 2549,
           "tss": 72.84,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -88199,7 +88199,7 @@
         },
         {
           "date": "2025-01-09",
-          "duration_seconds": 2496,
+          "duration_seconds": 2266,
           "tss": 67.49,
           "distance_yards": 1900.0,
           "is_race": false,
@@ -88207,7 +88207,7 @@
         },
         {
           "date": "2025-01-10",
-          "duration_seconds": 1678,
+          "duration_seconds": 1470,
           "tss": 49.13,
           "distance_yards": 1300.0,
           "is_race": false,
@@ -88223,7 +88223,7 @@
         },
         {
           "date": "2025-01-11",
-          "duration_seconds": 2592,
+          "duration_seconds": 2470,
           "tss": 68.47,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -88231,7 +88231,7 @@
         },
         {
           "date": "2025-01-13",
-          "duration_seconds": 2649,
+          "duration_seconds": 2394,
           "tss": 74.29,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -88239,7 +88239,7 @@
         },
         {
           "date": "2025-01-16",
-          "duration_seconds": 2373,
+          "duration_seconds": 2117,
           "tss": 63.83,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -88247,7 +88247,7 @@
         },
         {
           "date": "2025-01-17",
-          "duration_seconds": 2542,
+          "duration_seconds": 2399,
           "tss": 69.74,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -88255,7 +88255,7 @@
         },
         {
           "date": "2025-01-18",
-          "duration_seconds": 1803,
+          "duration_seconds": 1735,
           "tss": 46.84,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -88263,7 +88263,7 @@
         },
         {
           "date": "2025-01-20",
-          "duration_seconds": 2279,
+          "duration_seconds": 2057,
           "tss": 59.11,
           "distance_yards": 1700.0,
           "is_race": false,
@@ -88271,7 +88271,7 @@
         },
         {
           "date": "2025-01-22",
-          "duration_seconds": 2258,
+          "duration_seconds": 1990,
           "tss": 49.15,
           "distance_yards": 1625.0,
           "is_race": false,
@@ -88279,7 +88279,7 @@
         },
         {
           "date": "2025-01-23",
-          "duration_seconds": 2857,
+          "duration_seconds": 2549,
           "tss": 71.87,
           "distance_yards": 2300.0001,
           "is_race": false,
@@ -88287,7 +88287,7 @@
         },
         {
           "date": "2025-01-24",
-          "duration_seconds": 2668,
+          "duration_seconds": 2456,
           "tss": 82.77,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -88295,7 +88295,7 @@
         },
         {
           "date": "2025-01-27",
-          "duration_seconds": 3000,
+          "duration_seconds": 2591,
           "tss": 83.2,
           "distance_yards": 2300.0001,
           "is_race": false,
@@ -88303,7 +88303,7 @@
         },
         {
           "date": "2025-01-30",
-          "duration_seconds": 3088,
+          "duration_seconds": 2761,
           "tss": 84.78,
           "distance_yards": 2424.9999,
           "is_race": false,
@@ -88311,7 +88311,7 @@
         },
         {
           "date": "2025-01-31",
-          "duration_seconds": 3301,
+          "duration_seconds": 3004,
           "tss": 75.55,
           "distance_yards": 2599.9999,
           "is_race": false,
@@ -88319,7 +88319,7 @@
         },
         {
           "date": "2025-02-10",
-          "duration_seconds": 3095,
+          "duration_seconds": 2469,
           "tss": 68.42,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -88327,7 +88327,7 @@
         },
         {
           "date": "2025-02-11",
-          "duration_seconds": 2565,
+          "duration_seconds": 2299,
           "tss": 72.78,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -88335,7 +88335,7 @@
         },
         {
           "date": "2025-02-12",
-          "duration_seconds": 2655,
+          "duration_seconds": 2384,
           "tss": 69.12,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -88343,7 +88343,7 @@
         },
         {
           "date": "2025-02-13",
-          "duration_seconds": 2243,
+          "duration_seconds": 2068,
           "tss": 64.65,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -88351,7 +88351,7 @@
         },
         {
           "date": "2025-02-14",
-          "duration_seconds": 2279,
+          "duration_seconds": 2051,
           "tss": 58.49,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -88359,7 +88359,7 @@
         },
         {
           "date": "2025-02-15",
-          "duration_seconds": 1840,
+          "duration_seconds": 1637,
           "tss": 56.42,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -88367,7 +88367,7 @@
         },
         {
           "date": "2025-02-16",
-          "duration_seconds": 623,
+          "duration_seconds": 615,
           "tss": 22.98,
           "distance_yards": 640.0043,
           "is_race": true,
@@ -88375,7 +88375,7 @@
         },
         {
           "date": "2025-02-17",
-          "duration_seconds": 1657,
+          "duration_seconds": 1477,
           "tss": 44.97,
           "distance_yards": 1300.0,
           "is_race": false,
@@ -88383,7 +88383,7 @@
         },
         {
           "date": "2025-02-28",
-          "duration_seconds": 1647,
+          "duration_seconds": 1499,
           "tss": 47.11,
           "distance_yards": 1300.0,
           "is_race": false,
@@ -88391,7 +88391,7 @@
         },
         {
           "date": "2025-03-03",
-          "duration_seconds": 1391,
+          "duration_seconds": 1213,
           "tss": 44.07,
           "distance_yards": 1100.0,
           "is_race": false,
@@ -88399,7 +88399,7 @@
         },
         {
           "date": "2025-03-04",
-          "duration_seconds": 1490,
+          "duration_seconds": 1361,
           "tss": 41.5,
           "distance_yards": 1200.0,
           "is_race": false,
@@ -88407,7 +88407,7 @@
         },
         {
           "date": "2025-03-05",
-          "duration_seconds": 1672,
+          "duration_seconds": 1432,
           "tss": 56.62,
           "distance_yards": 1300.0,
           "is_race": false,
@@ -88415,7 +88415,7 @@
         },
         {
           "date": "2025-03-06",
-          "duration_seconds": 1453,
+          "duration_seconds": 1281,
           "tss": 42.14,
           "distance_yards": 1100.0,
           "is_race": false,
@@ -88423,7 +88423,7 @@
         },
         {
           "date": "2025-03-07",
-          "duration_seconds": 1571,
+          "duration_seconds": 1371,
           "tss": 48.18,
           "distance_yards": 1200.0,
           "is_race": false,
@@ -88431,7 +88431,7 @@
         },
         {
           "date": "2025-03-10",
-          "duration_seconds": 2501,
+          "duration_seconds": 2302,
           "tss": 68.8,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -88439,7 +88439,7 @@
         },
         {
           "date": "2025-03-11",
-          "duration_seconds": 1899,
+          "duration_seconds": 1635,
           "tss": 52.8,
           "distance_yards": 1400.0,
           "is_race": false,
@@ -88447,7 +88447,7 @@
         },
         {
           "date": "2025-03-12",
-          "duration_seconds": 2681,
+          "duration_seconds": 2375,
           "tss": 62.64,
           "distance_yards": 1900.0,
           "is_race": false,
@@ -88455,7 +88455,7 @@
         },
         {
           "date": "2025-03-13",
-          "duration_seconds": 2493,
+          "duration_seconds": 2360,
           "tss": 56.79,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -88463,7 +88463,7 @@
         },
         {
           "date": "2025-03-14",
-          "duration_seconds": 3183,
+          "duration_seconds": 2529,
           "tss": 60.1,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -88471,7 +88471,7 @@
         },
         {
           "date": "2025-03-15",
-          "duration_seconds": 2121,
+          "duration_seconds": 1912,
           "tss": 60.61,
           "distance_yards": 1700.0,
           "is_race": false,
@@ -88479,7 +88479,7 @@
         },
         {
           "date": "2025-03-17",
-          "duration_seconds": 3345,
+          "duration_seconds": 2997,
           "tss": 86.19,
           "distance_yards": 2225.0,
           "is_race": false,
@@ -88487,7 +88487,7 @@
         },
         {
           "date": "2025-03-18",
-          "duration_seconds": 3608,
+          "duration_seconds": 3034,
           "tss": 77.06,
           "distance_yards": 2424.9999,
           "is_race": false,
@@ -88495,7 +88495,7 @@
         },
         {
           "date": "2025-03-19",
-          "duration_seconds": 3823,
+          "duration_seconds": 3273,
           "tss": 73.16,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -88503,7 +88503,7 @@
         },
         {
           "date": "2025-03-21",
-          "duration_seconds": 3104,
+          "duration_seconds": 2922,
           "tss": 61.82,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -88511,7 +88511,7 @@
         },
         {
           "date": "2025-03-22",
-          "duration_seconds": 2684,
+          "duration_seconds": 2406,
           "tss": 63.54,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -88519,7 +88519,7 @@
         },
         {
           "date": "2025-03-24",
-          "duration_seconds": 2592,
+          "duration_seconds": 2257,
           "tss": 29.62,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -88527,7 +88527,7 @@
         },
         {
           "date": "2025-03-25",
-          "duration_seconds": 3158,
+          "duration_seconds": 2672,
           "tss": 52.01,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -88535,7 +88535,7 @@
         },
         {
           "date": "2025-03-26",
-          "duration_seconds": 2534,
+          "duration_seconds": 2278,
           "tss": 65.29,
           "distance_yards": 1900.0,
           "is_race": false,
@@ -88543,7 +88543,7 @@
         },
         {
           "date": "2025-03-27",
-          "duration_seconds": 2453,
+          "duration_seconds": 2253,
           "tss": 71.26,
           "distance_yards": 1900.0,
           "is_race": false,
@@ -88551,7 +88551,7 @@
         },
         {
           "date": "2025-03-28",
-          "duration_seconds": 2520,
+          "duration_seconds": 2181,
           "tss": 60.37,
           "distance_yards": 1900.0,
           "is_race": false,
@@ -88567,7 +88567,7 @@
         },
         {
           "date": "2025-03-31",
-          "duration_seconds": 1748,
+          "duration_seconds": 1561,
           "tss": 50.37,
           "distance_yards": 1400.0,
           "is_race": false,
@@ -88575,7 +88575,7 @@
         },
         {
           "date": "2025-04-01",
-          "duration_seconds": 2890,
+          "duration_seconds": 2734,
           "tss": 88.36,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -88583,7 +88583,7 @@
         },
         {
           "date": "2025-04-02",
-          "duration_seconds": 1548,
+          "duration_seconds": 1380,
           "tss": 42.22,
           "distance_yards": 1200.0,
           "is_race": false,
@@ -88591,7 +88591,7 @@
         },
         {
           "date": "2025-04-03",
-          "duration_seconds": 2080,
+          "duration_seconds": 1927,
           "tss": 59.33,
           "distance_yards": 1700.0,
           "is_race": false,
@@ -88599,7 +88599,7 @@
         },
         {
           "date": "2025-04-04",
-          "duration_seconds": 2944,
+          "duration_seconds": 2602,
           "tss": 62.55,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -88607,7 +88607,7 @@
         },
         {
           "date": "2025-04-05",
-          "duration_seconds": 3156,
+          "duration_seconds": 2841,
           "tss": 55.41,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -88615,7 +88615,7 @@
         },
         {
           "date": "2025-04-07",
-          "duration_seconds": 2734,
+          "duration_seconds": 2326,
           "tss": 85.15,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -88623,7 +88623,7 @@
         },
         {
           "date": "2025-04-09",
-          "duration_seconds": 3254,
+          "duration_seconds": 2681,
           "tss": 48.71,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -88631,7 +88631,7 @@
         },
         {
           "date": "2025-04-10",
-          "duration_seconds": 2824,
+          "duration_seconds": 2632,
           "tss": 59.4,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -88639,7 +88639,7 @@
         },
         {
           "date": "2025-04-11",
-          "duration_seconds": 2514,
+          "duration_seconds": 2346,
           "tss": 71.47,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -88647,7 +88647,7 @@
         },
         {
           "date": "2025-04-14",
-          "duration_seconds": 2998,
+          "duration_seconds": 2589,
           "tss": 50.35,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -88655,7 +88655,7 @@
         },
         {
           "date": "2025-04-15",
-          "duration_seconds": 2879,
+          "duration_seconds": 2652,
           "tss": 76.05,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -88663,7 +88663,7 @@
         },
         {
           "date": "2025-04-16",
-          "duration_seconds": 3144,
+          "duration_seconds": 2886,
           "tss": 71.19,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -88671,7 +88671,7 @@
         },
         {
           "date": "2025-04-17",
-          "duration_seconds": 2870,
+          "duration_seconds": 2629,
           "tss": 79.05,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -88679,7 +88679,7 @@
         },
         {
           "date": "2025-04-18",
-          "duration_seconds": 2242,
+          "duration_seconds": 2030,
           "tss": 61.08,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -88687,7 +88687,7 @@
         },
         {
           "date": "2025-04-23",
-          "duration_seconds": 2312,
+          "duration_seconds": 2088,
           "tss": 58.0,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -88695,7 +88695,7 @@
         },
         {
           "date": "2025-04-24",
-          "duration_seconds": 3177,
+          "duration_seconds": 2875,
           "tss": 68.81,
           "distance_yards": 2374.9999,
           "is_race": false,
@@ -88703,7 +88703,7 @@
         },
         {
           "date": "2025-04-25",
-          "duration_seconds": 2341,
+          "duration_seconds": 1984,
           "tss": 37.63,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -88711,7 +88711,7 @@
         },
         {
           "date": "2025-04-26",
-          "duration_seconds": 2891,
+          "duration_seconds": 2687,
           "tss": 60.9,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -88719,7 +88719,7 @@
         },
         {
           "date": "2025-04-28",
-          "duration_seconds": 3569,
+          "duration_seconds": 3153,
           "tss": 67.27,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -88727,7 +88727,7 @@
         },
         {
           "date": "2025-04-29",
-          "duration_seconds": 3487,
+          "duration_seconds": 3082,
           "tss": 50.57,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -88735,7 +88735,7 @@
         },
         {
           "date": "2025-05-01",
-          "duration_seconds": 3559,
+          "duration_seconds": 2942,
           "tss": 59.56,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -88743,7 +88743,7 @@
         },
         {
           "date": "2025-05-02",
-          "duration_seconds": 2827,
+          "duration_seconds": 2601,
           "tss": 67.2,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -88751,7 +88751,7 @@
         },
         {
           "date": "2025-05-05",
-          "duration_seconds": 3447,
+          "duration_seconds": 3002,
           "tss": 57.86,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -88759,7 +88759,7 @@
         },
         {
           "date": "2025-05-06",
-          "duration_seconds": 2637,
+          "duration_seconds": 2554,
           "tss": 76.99,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -88767,7 +88767,7 @@
         },
         {
           "date": "2025-05-08",
-          "duration_seconds": 2875,
+          "duration_seconds": 2664,
           "tss": 70.05,
           "distance_yards": 2249.9999,
           "is_race": false,
@@ -88775,7 +88775,7 @@
         },
         {
           "date": "2025-05-09",
-          "duration_seconds": 2982,
+          "duration_seconds": 2594,
           "tss": 77.99,
           "distance_yards": 2300.0001,
           "is_race": false,
@@ -88783,7 +88783,7 @@
         },
         {
           "date": "2025-05-12",
-          "duration_seconds": 4747,
+          "duration_seconds": 4071,
           "tss": 84.61,
           "distance_yards": 3200.0001,
           "is_race": false,
@@ -88791,7 +88791,7 @@
         },
         {
           "date": "2025-05-13",
-          "duration_seconds": 2882,
+          "duration_seconds": 2736,
           "tss": 72.05,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -88799,7 +88799,7 @@
         },
         {
           "date": "2025-05-15",
-          "duration_seconds": 3177,
+          "duration_seconds": 2892,
           "tss": 78.73,
           "distance_yards": 2474.9999,
           "is_race": false,
@@ -88807,7 +88807,7 @@
         },
         {
           "date": "2025-05-16",
-          "duration_seconds": 3014,
+          "duration_seconds": 2725,
           "tss": 79.97,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -88815,7 +88815,7 @@
         },
         {
           "date": "2025-05-20",
-          "duration_seconds": 2959,
+          "duration_seconds": 2571,
           "tss": 53.27,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -88823,7 +88823,7 @@
         },
         {
           "date": "2025-05-22",
-          "duration_seconds": 3103,
+          "duration_seconds": 2633,
           "tss": 61.02,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -88831,7 +88831,7 @@
         },
         {
           "date": "2025-05-23",
-          "duration_seconds": 2879,
+          "duration_seconds": 2615,
           "tss": 68.96,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -88839,7 +88839,7 @@
         },
         {
           "date": "2025-06-02",
-          "duration_seconds": 3272,
+          "duration_seconds": 2947,
           "tss": 69.28,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -88847,7 +88847,7 @@
         },
         {
           "date": "2025-06-03",
-          "duration_seconds": 2522,
+          "duration_seconds": 2226,
           "tss": 62.51,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -88855,7 +88855,7 @@
         },
         {
           "date": "2025-06-05",
-          "duration_seconds": 3294,
+          "duration_seconds": 2890,
           "tss": 61.09,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -88863,7 +88863,7 @@
         },
         {
           "date": "2025-06-06",
-          "duration_seconds": 2794,
+          "duration_seconds": 2516,
           "tss": 84.87,
           "distance_yards": 2300.0001,
           "is_race": false,
@@ -88871,7 +88871,7 @@
         },
         {
           "date": "2025-06-09",
-          "duration_seconds": 2982,
+          "duration_seconds": 2663,
           "tss": 63.98,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -88879,7 +88879,7 @@
         },
         {
           "date": "2025-06-10",
-          "duration_seconds": 2347,
+          "duration_seconds": 2141,
           "tss": 50.09,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -88887,7 +88887,7 @@
         },
         {
           "date": "2025-06-12",
-          "duration_seconds": 1896,
+          "duration_seconds": 1714,
           "tss": 44.22,
           "distance_yards": 1300.0,
           "is_race": false,
@@ -88895,7 +88895,7 @@
         },
         {
           "date": "2025-06-13",
-          "duration_seconds": 3111,
+          "duration_seconds": 2745,
           "tss": 47.72,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -88903,7 +88903,7 @@
         },
         {
           "date": "2025-06-14",
-          "duration_seconds": 2785,
+          "duration_seconds": 2705,
           "tss": 50.67,
           "distance_yards": 2281.5836,
           "is_race": false,
@@ -88911,7 +88911,7 @@
         },
         {
           "date": "2025-06-16",
-          "duration_seconds": 1952,
+          "duration_seconds": 1789,
           "tss": 36.08,
           "distance_yards": 1400.0,
           "is_race": false,
@@ -88919,7 +88919,7 @@
         },
         {
           "date": "2025-06-17",
-          "duration_seconds": 1778,
+          "duration_seconds": 1589,
           "tss": 37.39,
           "distance_yards": 1300.0,
           "is_race": false,
@@ -88927,7 +88927,7 @@
         },
         {
           "date": "2025-06-18",
-          "duration_seconds": 1691,
+          "duration_seconds": 1494,
           "tss": 27.59,
           "distance_yards": 1100.0,
           "is_race": false,
@@ -88935,7 +88935,7 @@
         },
         {
           "date": "2025-06-19",
-          "duration_seconds": 2802,
+          "duration_seconds": 2433,
           "tss": 20.14,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -88943,7 +88943,7 @@
         },
         {
           "date": "2025-06-22",
-          "duration_seconds": 2024,
+          "duration_seconds": 1966,
           "tss": null,
           "distance_yards": 2135.0612,
           "is_race": true,
@@ -88951,7 +88951,7 @@
         },
         {
           "date": "2025-06-23",
-          "duration_seconds": 1914,
+          "duration_seconds": 1699,
           "tss": null,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -88959,7 +88959,7 @@
         },
         {
           "date": "2025-06-24",
-          "duration_seconds": 1902,
+          "duration_seconds": 1568,
           "tss": null,
           "distance_yards": 1200.0,
           "is_race": false,
@@ -88967,7 +88967,7 @@
         },
         {
           "date": "2025-06-25",
-          "duration_seconds": 1830,
+          "duration_seconds": 1693,
           "tss": null,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -88975,7 +88975,7 @@
         },
         {
           "date": "2025-06-27",
-          "duration_seconds": 1950,
+          "duration_seconds": 1788,
           "tss": null,
           "distance_yards": 1400.0,
           "is_race": false,
@@ -88983,7 +88983,7 @@
         },
         {
           "date": "2025-06-28",
-          "duration_seconds": 2152,
+          "duration_seconds": 2015,
           "tss": null,
           "distance_yards": 1700.0,
           "is_race": false,
@@ -88991,7 +88991,7 @@
         },
         {
           "date": "2025-07-01",
-          "duration_seconds": 2276,
+          "duration_seconds": 1947,
           "tss": null,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -88999,7 +88999,7 @@
         },
         {
           "date": "2025-07-03",
-          "duration_seconds": 2029,
+          "duration_seconds": 1816,
           "tss": null,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -89007,7 +89007,7 @@
         },
         {
           "date": "2025-07-13",
-          "duration_seconds": 1033,
+          "duration_seconds": 1009,
           "tss": null,
           "distance_yards": 804.1995,
           "is_race": true,
@@ -89015,7 +89015,7 @@
         },
         {
           "date": "2025-07-14",
-          "duration_seconds": 1663,
+          "duration_seconds": 1486,
           "tss": null,
           "distance_yards": 1225.0,
           "is_race": false,
@@ -89023,7 +89023,7 @@
         },
         {
           "date": "2025-07-15",
-          "duration_seconds": 2119,
+          "duration_seconds": 1938,
           "tss": null,
           "distance_yards": 1625.0,
           "is_race": false,
@@ -89031,7 +89031,7 @@
         },
         {
           "date": "2025-07-16",
-          "duration_seconds": 2342,
+          "duration_seconds": 2012,
           "tss": 21.67,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -89039,7 +89039,7 @@
         },
         {
           "date": "2025-07-17",
-          "duration_seconds": 2343,
+          "duration_seconds": 1929,
           "tss": 25.26,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -89047,7 +89047,7 @@
         },
         {
           "date": "2025-07-18",
-          "duration_seconds": 2516,
+          "duration_seconds": 2279,
           "tss": 38.49,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -89055,7 +89055,7 @@
         },
         {
           "date": "2025-07-19",
-          "duration_seconds": 2491,
+          "duration_seconds": 2243,
           "tss": 45.33,
           "distance_yards": 1974.9999,
           "is_race": false,
@@ -89063,7 +89063,7 @@
         },
         {
           "date": "2025-07-21",
-          "duration_seconds": 2380,
+          "duration_seconds": 2151,
           "tss": 40.5,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -89071,7 +89071,7 @@
         },
         {
           "date": "2025-07-22",
-          "duration_seconds": 2690,
+          "duration_seconds": 2475,
           "tss": 33.32,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -89079,7 +89079,7 @@
         },
         {
           "date": "2025-07-23",
-          "duration_seconds": 2046,
+          "duration_seconds": 1848,
           "tss": 39.07,
           "distance_yards": 1700.0,
           "is_race": false,
@@ -89087,7 +89087,7 @@
         },
         {
           "date": "2025-08-22",
-          "duration_seconds": 1024,
+          "duration_seconds": 980,
           "tss": 15.74,
           "distance_yards": 800.0,
           "is_race": false,
@@ -89095,7 +89095,7 @@
         },
         {
           "date": "2025-08-23",
-          "duration_seconds": 1033,
+          "duration_seconds": 990,
           "tss": 15.43,
           "distance_yards": 800.0,
           "is_race": false,
@@ -89103,7 +89103,7 @@
         },
         {
           "date": "2025-08-24",
-          "duration_seconds": 900,
+          "duration_seconds": 879,
           "tss": 9.71,
           "distance_yards": 729.7135,
           "is_race": true,
@@ -89111,7 +89111,7 @@
         },
         {
           "date": "2025-09-01",
-          "duration_seconds": 3001,
+          "duration_seconds": 2504,
           "tss": 37.16,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -89119,7 +89119,7 @@
         },
         {
           "date": "2025-09-02",
-          "duration_seconds": 3015,
+          "duration_seconds": 2650,
           "tss": 37.72,
           "distance_yards": 2125.0,
           "is_race": false,
@@ -89127,7 +89127,7 @@
         },
         {
           "date": "2025-09-03",
-          "duration_seconds": 2850,
+          "duration_seconds": 2520,
           "tss": 35.96,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -89135,7 +89135,7 @@
         },
         {
           "date": "2025-09-04",
-          "duration_seconds": 1991,
+          "duration_seconds": 1654,
           "tss": 26.41,
           "distance_yards": 1300.0,
           "is_race": false,
@@ -89143,7 +89143,7 @@
         },
         {
           "date": "2025-09-04",
-          "duration_seconds": 978,
+          "duration_seconds": 834,
           "tss": 13.84,
           "distance_yards": 700.0,
           "is_race": false,
@@ -89151,7 +89151,7 @@
         },
         {
           "date": "2025-09-05",
-          "duration_seconds": 2085,
+          "duration_seconds": 1820,
           "tss": 27.73,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -89159,7 +89159,7 @@
         },
         {
           "date": "2025-09-07",
-          "duration_seconds": 2151,
+          "duration_seconds": 1902,
           "tss": 30.38,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -89167,7 +89167,7 @@
         },
         {
           "date": "2025-09-08",
-          "duration_seconds": 2302,
+          "duration_seconds": 2014,
           "tss": 36.04,
           "distance_yards": 1700.0,
           "is_race": false,
@@ -89175,7 +89175,7 @@
         },
         {
           "date": "2025-09-09",
-          "duration_seconds": 2775,
+          "duration_seconds": 2458,
           "tss": 41.12,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -89191,7 +89191,7 @@
         },
         {
           "date": "2025-09-15",
-          "duration_seconds": 2534,
+          "duration_seconds": 2175,
           "tss": 24.7,
           "distance_yards": 1700.0,
           "is_race": false,
@@ -89199,7 +89199,7 @@
         },
         {
           "date": "2025-09-17",
-          "duration_seconds": 2547,
+          "duration_seconds": 2328,
           "tss": 37.7,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -89207,7 +89207,7 @@
         },
         {
           "date": "2025-09-22",
-          "duration_seconds": 2740,
+          "duration_seconds": 2338,
           "tss": 30.32,
           "distance_yards": 1900.0,
           "is_race": false,
@@ -89215,7 +89215,7 @@
         },
         {
           "date": "2025-09-23",
-          "duration_seconds": 2472,
+          "duration_seconds": 2118,
           "tss": 39.44,
           "distance_yards": 1900.0,
           "is_race": false,
@@ -89223,7 +89223,7 @@
         },
         {
           "date": "2025-09-24",
-          "duration_seconds": 3075,
+          "duration_seconds": 2453,
           "tss": 22.56,
           "distance_yards": 1900.0,
           "is_race": false,
@@ -89231,7 +89231,7 @@
         },
         {
           "date": "2025-09-26",
-          "duration_seconds": 2994,
+          "duration_seconds": 2468,
           "tss": 37.52,
           "distance_yards": 2174.9999,
           "is_race": false,
@@ -89239,7 +89239,7 @@
         },
         {
           "date": "2025-09-29",
-          "duration_seconds": 3197,
+          "duration_seconds": 2544,
           "tss": 28.03,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -89247,7 +89247,7 @@
         },
         {
           "date": "2025-09-30",
-          "duration_seconds": 2998,
+          "duration_seconds": 2466,
           "tss": 45.87,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -89255,7 +89255,7 @@
         },
         {
           "date": "2025-10-01",
-          "duration_seconds": 2630,
+          "duration_seconds": 2066,
           "tss": 32.03,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -89263,7 +89263,7 @@
         },
         {
           "date": "2025-10-03",
-          "duration_seconds": 2871,
+          "duration_seconds": 2308,
           "tss": 27.38,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -89271,7 +89271,7 @@
         },
         {
           "date": "2025-10-06",
-          "duration_seconds": 3142,
+          "duration_seconds": 2528,
           "tss": 27.13,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -89279,7 +89279,7 @@
         },
         {
           "date": "2025-10-07",
-          "duration_seconds": 2980,
+          "duration_seconds": 2361,
           "tss": 21.11,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -89287,7 +89287,7 @@
         },
         {
           "date": "2025-10-08",
-          "duration_seconds": 2477,
+          "duration_seconds": 2209,
           "tss": 30.36,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -89295,7 +89295,7 @@
         },
         {
           "date": "2025-10-27",
-          "duration_seconds": 2478,
+          "duration_seconds": 2128,
           "tss": 39.38,
           "distance_yards": 1900.0,
           "is_race": false,
@@ -89303,7 +89303,7 @@
         },
         {
           "date": "2025-10-30",
-          "duration_seconds": 3362,
+          "duration_seconds": 2603,
           "tss": 48.62,
           "distance_yards": 2300.0001,
           "is_race": false,
@@ -89311,7 +89311,7 @@
         },
         {
           "date": "2025-10-31",
-          "duration_seconds": 2473,
+          "duration_seconds": 2143,
           "tss": 37.36,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -89319,7 +89319,7 @@
         },
         {
           "date": "2025-11-04",
-          "duration_seconds": 2621,
+          "duration_seconds": 2233,
           "tss": 28.62,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -89327,7 +89327,7 @@
         },
         {
           "date": "2025-11-22",
-          "duration_seconds": 2963,
+          "duration_seconds": 2584,
           "tss": 38.31,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -89335,7 +89335,7 @@
         },
         {
           "date": "2026-01-10",
-          "duration_seconds": 2443,
+          "duration_seconds": 2115,
           "tss": 30.67,
           "distance_yards": 1700.0,
           "is_race": false,
@@ -89343,7 +89343,7 @@
         },
         {
           "date": "2026-01-15",
-          "duration_seconds": 2301,
+          "duration_seconds": 1999,
           "tss": 33.08,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -89351,7 +89351,7 @@
         },
         {
           "date": "2026-01-16",
-          "duration_seconds": 2161,
+          "duration_seconds": 1809,
           "tss": 29.9,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -89359,7 +89359,7 @@
         },
         {
           "date": "2026-01-17",
-          "duration_seconds": 2071,
+          "duration_seconds": 1721,
           "tss": 27.04,
           "distance_yards": 1400.0,
           "is_race": false,
@@ -89367,7 +89367,7 @@
         },
         {
           "date": "2026-01-19",
-          "duration_seconds": 2097,
+          "duration_seconds": 1738,
           "tss": 26.38,
           "distance_yards": 1400.0,
           "is_race": false,
@@ -89375,7 +89375,7 @@
         },
         {
           "date": "2026-01-22",
-          "duration_seconds": 1896,
+          "duration_seconds": 1544,
           "tss": 26.15,
           "distance_yards": 1300.0,
           "is_race": false,
@@ -89383,7 +89383,7 @@
         },
         {
           "date": "2026-01-23",
-          "duration_seconds": 1905,
+          "duration_seconds": 1567,
           "tss": 27.98,
           "distance_yards": 1349.9999,
           "is_race": false,
@@ -89391,7 +89391,7 @@
         },
         {
           "date": "2026-01-24",
-          "duration_seconds": 1919,
+          "duration_seconds": 1612,
           "tss": 25.97,
           "distance_yards": 1300.0,
           "is_race": false,
@@ -89407,7 +89407,7 @@
         },
         {
           "date": "2026-03-07",
-          "duration_seconds": 3066,
+          "duration_seconds": 2812,
           "tss": 27.79,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -89415,7 +89415,7 @@
         },
         {
           "date": "2026-03-09",
-          "duration_seconds": 2198,
+          "duration_seconds": 1857,
           "tss": 23.26,
           "distance_yards": 1400.0,
           "is_race": false,
@@ -89423,7 +89423,7 @@
         },
         {
           "date": "2026-03-11",
-          "duration_seconds": 2738,
+          "duration_seconds": 2427,
           "tss": 27.51,
           "distance_yards": 1900.0,
           "is_race": false,
@@ -89439,7 +89439,7 @@
         },
         {
           "date": "2026-05-04",
-          "duration_seconds": 3246,
+          "duration_seconds": 2934,
           "tss": 37.6,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -89447,7 +89447,7 @@
         },
         {
           "date": "2026-05-05",
-          "duration_seconds": 3608,
+          "duration_seconds": 3121,
           "tss": 37.12,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -89455,7 +89455,7 @@
         },
         {
           "date": "2026-05-06",
-          "duration_seconds": 3032,
+          "duration_seconds": 2747,
           "tss": 38.51,
           "distance_yards": 2225.0,
           "is_race": false,
@@ -89463,7 +89463,7 @@
         },
         {
           "date": "2026-05-07",
-          "duration_seconds": 2298,
+          "duration_seconds": 2060,
           "tss": 27.53,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -89471,7 +89471,7 @@
         },
         {
           "date": "2026-05-08",
-          "duration_seconds": 2089,
+          "duration_seconds": 1840,
           "tss": 28.8,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -89479,7 +89479,7 @@
         },
         {
           "date": "2026-05-09",
-          "duration_seconds": 2648,
+          "duration_seconds": 2385,
           "tss": 36.32,
           "distance_yards": 1925.0,
           "is_race": false,
@@ -89487,7 +89487,7 @@
         },
         {
           "date": "2026-05-11",
-          "duration_seconds": 3916,
+          "duration_seconds": 3450,
           "tss": 27.4,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -89495,7 +89495,7 @@
         },
         {
           "date": "2026-05-13",
-          "duration_seconds": 3015,
+          "duration_seconds": 2751,
           "tss": 36.5,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -89503,7 +89503,7 @@
         },
         {
           "date": "2026-05-14",
-          "duration_seconds": 2462,
+          "duration_seconds": 2033,
           "tss": 30.86,
           "distance_yards": 1700.0,
           "is_race": false,
@@ -89511,7 +89511,7 @@
         },
         {
           "date": "2026-05-15",
-          "duration_seconds": 3390,
+          "duration_seconds": 3083,
           "tss": 35.46,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -89519,7 +89519,7 @@
         },
         {
           "date": "2026-05-18",
-          "duration_seconds": 4789,
+          "duration_seconds": 4041,
           "tss": 52.47,
           "distance_yards": 3224.9999,
           "is_race": false,
@@ -89527,7 +89527,7 @@
         },
         {
           "date": "2026-05-19",
-          "duration_seconds": 3086,
+          "duration_seconds": 2877,
           "tss": 40.75,
           "distance_yards": 2424.9999,
           "is_race": false,
@@ -89535,7 +89535,7 @@
         },
         {
           "date": "2026-05-20",
-          "duration_seconds": 3317,
+          "duration_seconds": 3012,
           "tss": 49.83,
           "distance_yards": 2599.9999,
           "is_race": false,
@@ -89543,7 +89543,7 @@
         },
         {
           "date": "2026-05-21",
-          "duration_seconds": 3042,
+          "duration_seconds": 2632,
           "tss": 30.26,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -89551,7 +89551,7 @@
         },
         {
           "date": "2026-05-22",
-          "duration_seconds": 2905,
+          "duration_seconds": 2539,
           "tss": 28.82,
           "distance_yards": 1775.0001,
           "is_race": false,
@@ -89559,7 +89559,7 @@
         },
         {
           "date": "2026-05-26",
-          "duration_seconds": 3018,
+          "duration_seconds": 2723,
           "tss": 37.06,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -89567,7 +89567,7 @@
         },
         {
           "date": "2026-05-27",
-          "duration_seconds": 3373,
+          "duration_seconds": 3014,
           "tss": 38.41,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -89575,7 +89575,7 @@
         },
         {
           "date": "2026-05-28",
-          "duration_seconds": 2639,
+          "duration_seconds": 2335,
           "tss": 34.13,
           "distance_yards": 1800.0,
           "is_race": false,
@@ -89583,7 +89583,7 @@
         },
         {
           "date": "2026-05-29",
-          "duration_seconds": 3561,
+          "duration_seconds": 3097,
           "tss": 31.8,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -89591,7 +89591,7 @@
         },
         {
           "date": "2026-06-01",
-          "duration_seconds": 3044,
+          "duration_seconds": 2124,
           "tss": 37.26,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -89599,7 +89599,7 @@
         },
         {
           "date": "2026-06-03",
-          "duration_seconds": 2497,
+          "duration_seconds": 1734,
           "tss": 33.09,
           "distance_yards": 1800.0001,
           "is_race": false,
@@ -89607,7 +89607,7 @@
         },
         {
           "date": "2026-06-05",
-          "duration_seconds": 1971,
+          "duration_seconds": 1169,
           "tss": 25.61,
           "distance_yards": 1300.0,
           "is_race": false,
@@ -89615,7 +89615,7 @@
         },
         {
           "date": "2026-06-06",
-          "duration_seconds": 2031,
+          "duration_seconds": 2023,
           "tss": 22.21,
           "distance_yards": 1653.8386,
           "is_race": false,
@@ -89623,7 +89623,7 @@
         },
         {
           "date": "2026-06-06",
-          "duration_seconds": 1079,
+          "duration_seconds": 1074,
           "tss": 10.49,
           "distance_yards": 844.8163,
           "is_race": false,
@@ -89631,7 +89631,7 @@
         },
         {
           "date": "2026-06-07",
-          "duration_seconds": 3182,
+          "duration_seconds": 1867,
           "tss": 38.31,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -89639,7 +89639,7 @@
         },
         {
           "date": "2026-06-08",
-          "duration_seconds": 1948,
+          "duration_seconds": 1338,
           "tss": 26.31,
           "distance_yards": 1400.0,
           "is_race": false,
@@ -89647,7 +89647,7 @@
         },
         {
           "date": "2026-06-09",
-          "duration_seconds": 2227,
+          "duration_seconds": 1636,
           "tss": 26.85,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -89655,7 +89655,7 @@
         },
         {
           "date": "2026-06-10",
-          "duration_seconds": 2415,
+          "duration_seconds": 1221,
           "tss": 23.45,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -89663,7 +89663,7 @@
         },
         {
           "date": "2026-06-11",
-          "duration_seconds": 1790,
+          "duration_seconds": 939,
           "tss": 18.19,
           "distance_yards": 1100.0,
           "is_race": false,
@@ -89671,7 +89671,7 @@
         },
         {
           "date": "2026-06-12",
-          "duration_seconds": 1970,
+          "duration_seconds": 1098,
           "tss": 23.91,
           "distance_yards": 1400.0,
           "is_race": false,
@@ -89679,7 +89679,7 @@
         },
         {
           "date": "2026-06-14",
-          "duration_seconds": 1617,
+          "duration_seconds": 1608,
           "tss": 74.71,
           "distance_yards": 2038.189,
           "is_race": true,
@@ -89687,7 +89687,7 @@
         },
         {
           "date": "2026-06-16",
-          "duration_seconds": 2398,
+          "duration_seconds": 1319,
           "tss": 25.58,
           "distance_yards": 1700.0,
           "is_race": false,
@@ -89695,7 +89695,7 @@
         },
         {
           "date": "2026-06-17",
-          "duration_seconds": 2395,
+          "duration_seconds": 1303,
           "tss": 23.28,
           "distance_yards": 1700.0,
           "is_race": false,
@@ -89703,7 +89703,7 @@
         },
         {
           "date": "2026-06-19",
-          "duration_seconds": 2441,
+          "duration_seconds": 1038,
           "tss": 28.58,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -89711,7 +89711,7 @@
         },
         {
           "date": "2026-06-20",
-          "duration_seconds": 3092,
+          "duration_seconds": 3020,
           "tss": 33.63,
           "distance_yards": 2513.4734,
           "is_race": false,
@@ -89719,7 +89719,7 @@
         },
         {
           "date": "2026-06-22",
-          "duration_seconds": 2783,
+          "duration_seconds": 1990,
           "tss": 35.06,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -89727,7 +89727,7 @@
         },
         {
           "date": "2026-06-23",
-          "duration_seconds": 2151,
+          "duration_seconds": 1187,
           "tss": 26.43,
           "distance_yards": 1400.0,
           "is_race": false,
@@ -89735,7 +89735,7 @@
         },
         {
           "date": "2026-06-25",
-          "duration_seconds": 2669,
+          "duration_seconds": 1550,
           "tss": 31.37,
           "distance_yards": 1900.0001,
           "is_race": false,
@@ -89743,7 +89743,7 @@
         },
         {
           "date": "2026-06-26",
-          "duration_seconds": 2527,
+          "duration_seconds": 1926,
           "tss": 33.17,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -89751,7 +89751,7 @@
         },
         {
           "date": "2026-06-28",
-          "duration_seconds": 988,
+          "duration_seconds": 956,
           "tss": 11.25,
           "distance_yards": 815.4199,
           "is_race": true,
@@ -89759,7 +89759,7 @@
         },
         {
           "date": "2026-06-30",
-          "duration_seconds": 3269,
+          "duration_seconds": 1906,
           "tss": 32.49,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -89767,7 +89767,7 @@
         },
         {
           "date": "2026-07-01",
-          "duration_seconds": 3400,
+          "duration_seconds": 1960,
           "tss": 42.18,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -89775,7 +89775,7 @@
         },
         {
           "date": "2026-07-02",
-          "duration_seconds": 3393,
+          "duration_seconds": 1937,
           "tss": 44.83,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -89783,7 +89783,7 @@
         },
         {
           "date": "2026-07-03",
-          "duration_seconds": 3937,
+          "duration_seconds": 2163,
           "tss": 38.65,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -89791,7 +89791,7 @@
         },
         {
           "date": "2026-07-05",
-          "duration_seconds": 3090,
+          "duration_seconds": 2884,
           "tss": 36.75,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -89799,7 +89799,7 @@
         },
         {
           "date": "2026-07-06",
-          "duration_seconds": 2123,
+          "duration_seconds": 1317,
           "tss": 22.79,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -89807,7 +89807,7 @@
         },
         {
           "date": "2026-07-07",
-          "duration_seconds": 3174,
+          "duration_seconds": 1683,
           "tss": 36.7,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -89815,7 +89815,7 @@
         },
         {
           "date": "2026-07-08",
-          "duration_seconds": 3024,
+          "duration_seconds": 2357,
           "tss": 50.39,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -89823,7 +89823,7 @@
         },
         {
           "date": "2026-07-09",
-          "duration_seconds": 3037,
+          "duration_seconds": 2170,
           "tss": 37.05,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -89831,7 +89831,7 @@
         },
         {
           "date": "2026-07-10",
-          "duration_seconds": 2784,
+          "duration_seconds": 1694,
           "tss": 37.82,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -89839,7 +89839,7 @@
         },
         {
           "date": "2026-07-12",
-          "duration_seconds": 826,
+          "duration_seconds": 810,
           "tss": 10.31,
           "distance_yards": 702.909,
           "is_race": true,
@@ -89847,7 +89847,7 @@
         },
         {
           "date": "2026-07-14",
-          "duration_seconds": 3055,
+          "duration_seconds": 1951,
           "tss": 36.47,
           "distance_yards": 2100.0001,
           "is_race": false,
@@ -89855,7 +89855,7 @@
         },
         {
           "date": "2026-07-15",
-          "duration_seconds": 2853,
+          "duration_seconds": 1619,
           "tss": 34.69,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -89863,7 +89863,7 @@
         },
         {
           "date": "2026-07-16",
-          "duration_seconds": 2774,
+          "duration_seconds": 2366,
           "tss": 33.5,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -89871,7 +89871,7 @@
         },
         {
           "date": "2026-07-17",
-          "duration_seconds": 2358,
+          "duration_seconds": 1147,
           "tss": 21.92,
           "distance_yards": 1800.0001,
           "is_race": false,
@@ -89879,7 +89879,7 @@
         },
         {
           "date": "2026-07-18",
-          "duration_seconds": 2800,
+          "duration_seconds": 2358,
           "tss": 37.47,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -89887,7 +89887,7 @@
         },
         {
           "date": "2026-07-20",
-          "duration_seconds": 3216,
+          "duration_seconds": 2666,
           "tss": 41.91,
           "distance_yards": 2600.0001,
           "is_race": false,
@@ -89895,7 +89895,7 @@
         },
         {
           "date": "2026-07-21",
-          "duration_seconds": 3143,
+          "duration_seconds": 2454,
           "tss": 40.93,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -89903,7 +89903,7 @@
         },
         {
           "date": "2026-07-23",
-          "duration_seconds": 2701,
+          "duration_seconds": 1351,
           "tss": 25.82,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -89911,7 +89911,7 @@
         },
         {
           "date": "2026-07-26",
-          "duration_seconds": 972,
+          "duration_seconds": 937,
           "tss": 13.23,
           "distance_yards": 851.4545,
           "is_race": true,
@@ -89919,7 +89919,7 @@
         },
         {
           "date": "2026-07-28",
-          "duration_seconds": 2923,
+          "duration_seconds": 2182,
           "tss": 42.27,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -89927,7 +89927,7 @@
         },
         {
           "date": "2026-07-31",
-          "duration_seconds": 3164,
+          "duration_seconds": 2489,
           "tss": 43.78,
           "distance_yards": 2500.0001,
           "is_race": false,
@@ -89935,7 +89935,7 @@
         },
         {
           "date": "2026-08-01",
-          "duration_seconds": 3371,
+          "duration_seconds": 2700,
           "tss": 38.69,
           "distance_yards": 2405.9493,
           "is_race": false,
@@ -89943,7 +89943,7 @@
         },
         {
           "date": "2026-08-02",
-          "duration_seconds": 539,
+          "duration_seconds": 496,
           "tss": 3.47,
           "distance_yards": 367.7165,
           "is_race": true,
@@ -89951,7 +89951,7 @@
         },
         {
           "date": "2026-08-03",
-          "duration_seconds": 3504,
+          "duration_seconds": 2657,
           "tss": 32.33,
           "distance_yards": 2296.5879,
           "is_race": false,
@@ -89959,7 +89959,7 @@
         },
         {
           "date": "2026-08-03",
-          "duration_seconds": 335,
+          "duration_seconds": 251,
           "tss": 3.37,
           "distance_yards": 218.7227,
           "is_race": false,
@@ -89967,7 +89967,7 @@
         },
         {
           "date": "2026-08-04",
-          "duration_seconds": 1434,
+          "duration_seconds": 648,
           "tss": 9.18,
           "distance_yards": 700.0,
           "is_race": false,
@@ -89975,7 +89975,7 @@
         },
         {
           "date": "2026-08-04",
-          "duration_seconds": 2557,
+          "duration_seconds": 1673,
           "tss": 20.78,
           "distance_yards": 1421.6973,
           "is_race": false,
@@ -89983,7 +89983,7 @@
         },
         {
           "date": "2026-08-05",
-          "duration_seconds": 3504,
+          "duration_seconds": 2317,
           "tss": 39.45,
           "distance_yards": 2187.2266,
           "is_race": false,
@@ -89991,7 +89991,7 @@
         },
         {
           "date": "2026-08-06",
-          "duration_seconds": 4042,
+          "duration_seconds": 2677,
           "tss": 42.11,
           "distance_yards": 2405.9493,
           "is_race": false,
@@ -89999,7 +89999,7 @@
         },
         {
           "date": "2026-08-07",
-          "duration_seconds": 3096,
+          "duration_seconds": 2205,
           "tss": 37.21,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -90007,7 +90007,7 @@
         },
         {
           "date": "2026-08-09",
-          "duration_seconds": 836,
+          "duration_seconds": 830,
           "tss": 14.07,
           "distance_yards": 786.1002,
           "is_race": true,
@@ -90015,7 +90015,7 @@
         },
         {
           "date": "2026-08-10",
-          "duration_seconds": 4134,
+          "duration_seconds": 2104,
           "tss": 19.63,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -90023,7 +90023,7 @@
         },
         {
           "date": "2026-08-11",
-          "duration_seconds": 3712,
+          "duration_seconds": 2752,
           "tss": 30.45,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -90031,7 +90031,7 @@
         },
         {
           "date": "2026-08-12",
-          "duration_seconds": 4334,
+          "duration_seconds": 2465,
           "tss": 33.11,
           "distance_yards": 2700.0001,
           "is_race": false,
@@ -90039,7 +90039,7 @@
         },
         {
           "date": "2026-08-13",
-          "duration_seconds": 4079,
+          "duration_seconds": 2590,
           "tss": 36.72,
           "distance_yards": 2500.0001,
           "is_race": false,
@@ -90047,7 +90047,7 @@
         },
         {
           "date": "2026-08-14",
-          "duration_seconds": 3629,
+          "duration_seconds": 3054,
           "tss": 24.73,
           "distance_yards": 2350.0001,
           "is_race": false,
@@ -90055,7 +90055,7 @@
         },
         {
           "date": "2026-08-15",
-          "duration_seconds": 3213,
+          "duration_seconds": 2493,
           "tss": 30.17,
           "distance_yards": 2100.0,
           "is_race": false,
@@ -90063,7 +90063,7 @@
         },
         {
           "date": "2026-08-17",
-          "duration_seconds": 4359,
+          "duration_seconds": 2623,
           "tss": 31.33,
           "distance_yards": 2675.0001,
           "is_race": false,
@@ -90071,7 +90071,7 @@
         },
         {
           "date": "2026-08-18",
-          "duration_seconds": 3817,
+          "duration_seconds": 2452,
           "tss": 37.1,
           "distance_yards": 2500.0001,
           "is_race": false,
@@ -90079,7 +90079,7 @@
         },
         {
           "date": "2026-08-19",
-          "duration_seconds": 3789,
+          "duration_seconds": 2676,
           "tss": 42.88,
           "distance_yards": 2450.0001,
           "is_race": false,
@@ -90087,7 +90087,7 @@
         },
         {
           "date": "2026-08-20",
-          "duration_seconds": 3034,
+          "duration_seconds": 2204,
           "tss": 35.9,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -90095,7 +90095,7 @@
         },
         {
           "date": "2026-08-21",
-          "duration_seconds": 3622,
+          "duration_seconds": 2821,
           "tss": 47.36,
           "distance_yards": 2725.0001,
           "is_race": false,
@@ -90103,7 +90103,7 @@
         },
         {
           "date": "2026-08-22",
-          "duration_seconds": 1862,
+          "duration_seconds": 1467,
           "tss": 19.51,
           "distance_yards": 1300.0,
           "is_race": false,
@@ -90111,7 +90111,7 @@
         },
         {
           "date": "2026-08-24",
-          "duration_seconds": 3754,
+          "duration_seconds": 3079,
           "tss": 37.53,
           "distance_yards": 2850.0001,
           "is_race": false,
@@ -90119,7 +90119,7 @@
         },
         {
           "date": "2026-08-25",
-          "duration_seconds": 4112,
+          "duration_seconds": 2023,
           "tss": 28.86,
           "distance_yards": 2175.0001,
           "is_race": false,
@@ -90127,7 +90127,7 @@
         },
         {
           "date": "2026-08-26",
-          "duration_seconds": 4102,
+          "duration_seconds": 3129,
           "tss": 53.09,
           "distance_yards": 2950.0,
           "is_race": false,
@@ -90135,7 +90135,7 @@
         },
         {
           "date": "2026-08-27",
-          "duration_seconds": 2713,
+          "duration_seconds": 2045,
           "tss": 29.45,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -90143,7 +90143,7 @@
         },
         {
           "date": "2026-08-28",
-          "duration_seconds": 4340,
+          "duration_seconds": 3306,
           "tss": 52.58,
           "distance_yards": 3049.9999,
           "is_race": false,
@@ -90151,7 +90151,7 @@
         },
         {
           "date": "2026-08-31",
-          "duration_seconds": 4481,
+          "duration_seconds": 3650,
           "tss": 53.4,
           "distance_yards": 3300.0001,
           "is_race": false,
@@ -90159,7 +90159,7 @@
         },
         {
           "date": "2026-09-01",
-          "duration_seconds": 3047,
+          "duration_seconds": 2557,
           "tss": 32.97,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -90167,7 +90167,7 @@
         },
         {
           "date": "2026-09-02",
-          "duration_seconds": 3803,
+          "duration_seconds": 3108,
           "tss": 48.53,
           "distance_yards": 2900.0001,
           "is_race": false,
@@ -90175,7 +90175,7 @@
         },
         {
           "date": "2026-09-03",
-          "duration_seconds": 3837,
+          "duration_seconds": 2374,
           "tss": 23.69,
           "distance_yards": 2300.0001,
           "is_race": false,
@@ -90183,7 +90183,7 @@
         },
         {
           "date": "2026-09-04",
-          "duration_seconds": 4207,
+          "duration_seconds": 3506,
           "tss": 45.6,
           "distance_yards": 3000.0001,
           "is_race": false,
@@ -90191,7 +90191,7 @@
         },
         {
           "date": "2026-09-05",
-          "duration_seconds": 2909,
+          "duration_seconds": 2240,
           "tss": 27.67,
           "distance_yards": 2000.0001,
           "is_race": false,
@@ -90199,7 +90199,7 @@
         },
         {
           "date": "2026-09-07",
-          "duration_seconds": 2525,
+          "duration_seconds": 1511,
           "tss": 24.35,
           "distance_yards": 1500.0,
           "is_race": false,
@@ -90207,7 +90207,7 @@
         },
         {
           "date": "2026-09-08",
-          "duration_seconds": 3594,
+          "duration_seconds": 2223,
           "tss": 21.95,
           "distance_yards": 2100.0001,
           "is_race": false,
@@ -90215,7 +90215,7 @@
         },
         {
           "date": "2026-09-09",
-          "duration_seconds": 3837,
+          "duration_seconds": 2576,
           "tss": 39.6,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -90223,7 +90223,7 @@
         },
         {
           "date": "2026-09-10",
-          "duration_seconds": 2682,
+          "duration_seconds": 2306,
           "tss": 14.88,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -90231,7 +90231,7 @@
         },
         {
           "date": "2026-09-12",
-          "duration_seconds": 2324,
+          "duration_seconds": 2497,
           "tss": 58.78,
           "distance_yards": 2125.0,
           "is_race": true,
@@ -90239,7 +90239,7 @@
         },
         {
           "date": "2026-09-14",
-          "duration_seconds": 3053,
+          "duration_seconds": 2527,
           "tss": 28.34,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -90247,7 +90247,7 @@
         },
         {
           "date": "2026-09-15",
-          "duration_seconds": 4004,
+          "duration_seconds": 1474,
           "tss": 17.14,
           "distance_yards": 1600.0,
           "is_race": false,
@@ -90255,7 +90255,7 @@
         },
         {
           "date": "2026-09-16",
-          "duration_seconds": 4196,
+          "duration_seconds": 2645,
           "tss": 32.97,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -90263,7 +90263,7 @@
         },
         {
           "date": "2026-09-17",
-          "duration_seconds": 3199,
+          "duration_seconds": 2589,
           "tss": 43.07,
           "distance_yards": 2400.0001,
           "is_race": false,
@@ -90271,7 +90271,7 @@
         },
         {
           "date": "2026-09-18",
-          "duration_seconds": 4440,
+          "duration_seconds": 3393,
           "tss": 49.91,
           "distance_yards": 3100.0001,
           "is_race": false,
@@ -90279,7 +90279,7 @@
         },
         {
           "date": "2026-09-21",
-          "duration_seconds": 3668,
+          "duration_seconds": 3282,
           "tss": 35.99,
           "distance_yards": 2700.0001,
           "is_race": false,
@@ -90287,7 +90287,7 @@
         },
         {
           "date": "2026-09-22",
-          "duration_seconds": 3303,
+          "duration_seconds": 2267,
           "tss": 35.46,
           "distance_yards": 2200.0001,
           "is_race": false,
@@ -90295,7 +90295,7 @@
         },
         {
           "date": "2026-09-23",
-          "duration_seconds": 3685,
+          "duration_seconds": 2415,
           "tss": 37.66,
           "distance_yards": 2350.0001,
           "is_race": false,
@@ -90303,7 +90303,7 @@
         },
         {
           "date": "2026-09-24",
-          "duration_seconds": 2713,
+          "duration_seconds": 1927,
           "tss": 32.53,
           "distance_yards": 1800.0001,
           "is_race": false,
@@ -90311,7 +90311,7 @@
         },
         {
           "date": "2026-09-25",
-          "duration_seconds": 3768,
+          "duration_seconds": 2885,
           "tss": 48.95,
           "distance_yards": 2550.0,
           "is_race": false,
