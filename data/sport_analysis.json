@@ -1,7 +1,875 @@
 {
-  "generated_at": "2026-09-25T15:16:17Z",
+  "generated_at": "2026-09-25T15:35:20Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-25",
+  "threshold_changes": {
+    "running": [
+      {
+        "date": "2018-01-01",
+        "type": "rftp",
+        "old_value": 300.0,
+        "new_value": 282.0,
+        "direction": "down"
+      },
+      {
+        "date": "2018-02-01",
+        "type": "rftp",
+        "old_value": 282.0,
+        "new_value": 285.0,
+        "direction": "up"
+      },
+      {
+        "date": "2018-04-01",
+        "type": "rftp",
+        "old_value": 285.0,
+        "new_value": 301.0,
+        "direction": "up"
+      },
+      {
+        "date": "2018-08-02",
+        "type": "rftp",
+        "old_value": 301.0,
+        "new_value": 299.0,
+        "direction": "down"
+      },
+      {
+        "date": "2018-09-01",
+        "type": "rftp",
+        "old_value": 299.0,
+        "new_value": 293.0,
+        "direction": "down"
+      },
+      {
+        "date": "2019-03-02",
+        "type": "rftp",
+        "old_value": 293.0,
+        "new_value": 298.0,
+        "direction": "up"
+      },
+      {
+        "date": "2019-05-01",
+        "type": "rftp",
+        "old_value": 298.0,
+        "new_value": 292.0,
+        "direction": "down"
+      },
+      {
+        "date": "2019-06-01",
+        "type": "rftp",
+        "old_value": 292.0,
+        "new_value": 307.0,
+        "direction": "up"
+      },
+      {
+        "date": "2019-07-01",
+        "type": "rftp",
+        "old_value": 307.0,
+        "new_value": 309.0,
+        "direction": "up"
+      },
+      {
+        "date": "2019-09-01",
+        "type": "rftp",
+        "old_value": 309.0,
+        "new_value": 293.0,
+        "direction": "down"
+      },
+      {
+        "date": "2019-10-01",
+        "type": "rftp",
+        "old_value": 293.0,
+        "new_value": 307.0,
+        "direction": "up"
+      },
+      {
+        "date": "2019-11-03",
+        "type": "rftp",
+        "old_value": 307.0,
+        "new_value": 311.0,
+        "direction": "up"
+      },
+      {
+        "date": "2020-02-01",
+        "type": "rftp",
+        "old_value": 311.0,
+        "new_value": 285.0,
+        "direction": "down"
+      },
+      {
+        "date": "2020-03-01",
+        "type": "rftp",
+        "old_value": 285.0,
+        "new_value": 300.0,
+        "direction": "up"
+      },
+      {
+        "date": "2020-06-02",
+        "type": "rftp",
+        "old_value": 300.0,
+        "new_value": 273.0,
+        "direction": "down"
+      },
+      {
+        "date": "2020-07-29",
+        "type": "rftp",
+        "old_value": 273.0,
+        "new_value": 267.0,
+        "direction": "down"
+      },
+      {
+        "date": "2020-09-08",
+        "type": "rftp",
+        "old_value": 267.0,
+        "new_value": 263.0,
+        "direction": "down"
+      },
+      {
+        "date": "2020-10-04",
+        "type": "rftp",
+        "old_value": 263.0,
+        "new_value": 261.0,
+        "direction": "down"
+      },
+      {
+        "date": "2020-11-02",
+        "type": "rftp",
+        "old_value": 261.0,
+        "new_value": 250.0,
+        "direction": "down"
+      },
+      {
+        "date": "2020-12-07",
+        "type": "rftp",
+        "old_value": 250.0,
+        "new_value": 248.0,
+        "direction": "down"
+      },
+      {
+        "date": "2021-03-01",
+        "type": "rftp",
+        "old_value": 248.0,
+        "new_value": 244.0,
+        "direction": "down"
+      },
+      {
+        "date": "2021-03-08",
+        "type": "rftp",
+        "old_value": 244.0,
+        "new_value": 232.0,
+        "direction": "down"
+      },
+      {
+        "date": "2021-03-15",
+        "type": "rftp",
+        "old_value": 232.0,
+        "new_value": 230.0,
+        "direction": "down"
+      },
+      {
+        "date": "2021-03-22",
+        "type": "rftp",
+        "old_value": 230.0,
+        "new_value": 226.0,
+        "direction": "down"
+      },
+      {
+        "date": "2021-03-29",
+        "type": "rftp",
+        "old_value": 226.0,
+        "new_value": 224.0,
+        "direction": "down"
+      },
+      {
+        "date": "2021-04-05",
+        "type": "rftp",
+        "old_value": 224.0,
+        "new_value": 222.0,
+        "direction": "down"
+      },
+      {
+        "date": "2021-04-12",
+        "type": "rftp",
+        "old_value": 222.0,
+        "new_value": 220.0,
+        "direction": "down"
+      },
+      {
+        "date": "2021-05-03",
+        "type": "rftp",
+        "old_value": 220.0,
+        "new_value": 234.0,
+        "direction": "up"
+      },
+      {
+        "date": "2021-05-10",
+        "type": "rftp",
+        "old_value": 234.0,
+        "new_value": 239.0,
+        "direction": "up"
+      },
+      {
+        "date": "2021-05-17",
+        "type": "rftp",
+        "old_value": 239.0,
+        "new_value": 247.0,
+        "direction": "up"
+      },
+      {
+        "date": "2021-05-24",
+        "type": "rftp",
+        "old_value": 247.0,
+        "new_value": 264.0,
+        "direction": "up"
+      },
+      {
+        "date": "2021-06-14",
+        "type": "rftp",
+        "old_value": 264.0,
+        "new_value": 283.0,
+        "direction": "up"
+      },
+      {
+        "date": "2021-06-21",
+        "type": "rftp",
+        "old_value": 283.0,
+        "new_value": 281.0,
+        "direction": "down"
+      },
+      {
+        "date": "2021-06-28",
+        "type": "rftp",
+        "old_value": 281.0,
+        "new_value": 299.0,
+        "direction": "up"
+      },
+      {
+        "date": "2021-07-26",
+        "type": "rftp",
+        "old_value": 299.0,
+        "new_value": 307.0,
+        "direction": "up"
+      },
+      {
+        "date": "2021-09-27",
+        "type": "rftp",
+        "old_value": 307.0,
+        "new_value": 310.0,
+        "direction": "up"
+      },
+      {
+        "date": "2021-11-22",
+        "type": "rftp",
+        "old_value": 310.0,
+        "new_value": 301.0,
+        "direction": "down"
+      },
+      {
+        "date": "2021-11-29",
+        "type": "rftp",
+        "old_value": 301.0,
+        "new_value": 299.0,
+        "direction": "down"
+      },
+      {
+        "date": "2021-12-27",
+        "type": "rftp",
+        "old_value": 299.0,
+        "new_value": 298.0,
+        "direction": "down"
+      },
+      {
+        "date": "2022-01-10",
+        "type": "rftp",
+        "old_value": 298.0,
+        "new_value": 303.0,
+        "direction": "up"
+      },
+      {
+        "date": "2022-01-24",
+        "type": "rftp",
+        "old_value": 303.0,
+        "new_value": 325.0,
+        "direction": "up"
+      },
+      {
+        "date": "2022-02-07",
+        "type": "rftp",
+        "old_value": 325.0,
+        "new_value": 332.0,
+        "direction": "up"
+      },
+      {
+        "date": "2022-03-07",
+        "type": "rftp",
+        "old_value": 332.0,
+        "new_value": 330.0,
+        "direction": "down"
+      },
+      {
+        "date": "2022-03-14",
+        "type": "rftp",
+        "old_value": 330.0,
+        "new_value": 326.0,
+        "direction": "down"
+      },
+      {
+        "date": "2022-04-04",
+        "type": "rftp",
+        "old_value": 326.0,
+        "new_value": 333.0,
+        "direction": "up"
+      },
+      {
+        "date": "2022-04-18",
+        "type": "rftp",
+        "old_value": 333.0,
+        "new_value": 326.0,
+        "direction": "down"
+      },
+      {
+        "date": "2022-06-13",
+        "type": "rftp",
+        "old_value": 326.0,
+        "new_value": 322.0,
+        "direction": "down"
+      },
+      {
+        "date": "2022-07-04",
+        "type": "rftp",
+        "old_value": 322.0,
+        "new_value": 325.0,
+        "direction": "up"
+      },
+      {
+        "date": "2022-08-22",
+        "type": "rftp",
+        "old_value": 325.0,
+        "new_value": 328.0,
+        "direction": "up"
+      },
+      {
+        "date": "2022-11-28",
+        "type": "rftp",
+        "old_value": 328.0,
+        "new_value": 315.0,
+        "direction": "down"
+      },
+      {
+        "date": "2022-12-05",
+        "type": "rftp",
+        "old_value": 315.0,
+        "new_value": 311.0,
+        "direction": "down"
+      },
+      {
+        "date": "2022-12-12",
+        "type": "rftp",
+        "old_value": 311.0,
+        "new_value": 310.0,
+        "direction": "down"
+      },
+      {
+        "date": "2022-12-19",
+        "type": "rftp",
+        "old_value": 310.0,
+        "new_value": 313.0,
+        "direction": "up"
+      },
+      {
+        "date": "2023-01-09",
+        "type": "rftp",
+        "old_value": 313.0,
+        "new_value": 316.0,
+        "direction": "up"
+      },
+      {
+        "date": "2023-03-06",
+        "type": "rftp",
+        "old_value": 316.0,
+        "new_value": 326.0,
+        "direction": "up"
+      },
+      {
+        "date": "2023-05-01",
+        "type": "rftp",
+        "old_value": 326.0,
+        "new_value": 327.0,
+        "direction": "up"
+      },
+      {
+        "date": "2023-06-05",
+        "type": "rftp",
+        "old_value": 327.0,
+        "new_value": 326.0,
+        "direction": "down"
+      },
+      {
+        "date": "2023-07-03",
+        "type": "rftp",
+        "old_value": 326.0,
+        "new_value": 333.0,
+        "direction": "up"
+      },
+      {
+        "date": "2023-07-24",
+        "type": "rftp",
+        "old_value": 333.0,
+        "new_value": 326.0,
+        "direction": "down"
+      },
+      {
+        "date": "2023-08-28",
+        "type": "rftp",
+        "old_value": 326.0,
+        "new_value": 325.0,
+        "direction": "down"
+      },
+      {
+        "date": "2023-09-04",
+        "type": "rftp",
+        "old_value": 325.0,
+        "new_value": 327.0,
+        "direction": "up"
+      },
+      {
+        "date": "2023-10-30",
+        "type": "rftp",
+        "old_value": 327.0,
+        "new_value": 319.0,
+        "direction": "down"
+      },
+      {
+        "date": "2023-12-04",
+        "type": "rftp",
+        "old_value": 319.0,
+        "new_value": 314.0,
+        "direction": "down"
+      },
+      {
+        "date": "2023-12-11",
+        "type": "rftp",
+        "old_value": 314.0,
+        "new_value": 320.0,
+        "direction": "up"
+      },
+      {
+        "date": "2024-01-01",
+        "type": "rftp",
+        "old_value": 320.0,
+        "new_value": 319.0,
+        "direction": "down"
+      },
+      {
+        "date": "2024-01-08",
+        "type": "rftp",
+        "old_value": 319.0,
+        "new_value": 336.0,
+        "direction": "up"
+      },
+      {
+        "date": "2024-01-29",
+        "type": "rftp",
+        "old_value": 336.0,
+        "new_value": 327.0,
+        "direction": "down"
+      },
+      {
+        "date": "2024-02-05",
+        "type": "rftp",
+        "old_value": 327.0,
+        "new_value": 322.0,
+        "direction": "down"
+      },
+      {
+        "date": "2024-03-04",
+        "type": "rftp",
+        "old_value": 322.0,
+        "new_value": 325.0,
+        "direction": "up"
+      },
+      {
+        "date": "2024-03-25",
+        "type": "rftp",
+        "old_value": 325.0,
+        "new_value": 322.0,
+        "direction": "down"
+      },
+      {
+        "date": "2024-05-20",
+        "type": "rftp",
+        "old_value": 322.0,
+        "new_value": 323.0,
+        "direction": "up"
+      },
+      {
+        "date": "2024-06-03",
+        "type": "rftp",
+        "old_value": 323.0,
+        "new_value": 325.0,
+        "direction": "up"
+      },
+      {
+        "date": "2024-08-12",
+        "type": "rftp",
+        "old_value": 325.0,
+        "new_value": 326.0,
+        "direction": "up"
+      },
+      {
+        "date": "2024-09-30",
+        "type": "rftp",
+        "old_value": 326.0,
+        "new_value": 307.0,
+        "direction": "down"
+      },
+      {
+        "date": "2024-10-07",
+        "type": "rftp",
+        "old_value": 307.0,
+        "new_value": 312.0,
+        "direction": "up"
+      },
+      {
+        "date": "2024-11-11",
+        "type": "rftp",
+        "old_value": 312.0,
+        "new_value": 314.0,
+        "direction": "up"
+      },
+      {
+        "date": "2024-12-09",
+        "type": "rftp",
+        "old_value": 314.0,
+        "new_value": 311.0,
+        "direction": "down"
+      },
+      {
+        "date": "2025-01-13",
+        "type": "rftp",
+        "old_value": 311.0,
+        "new_value": 312.0,
+        "direction": "up"
+      },
+      {
+        "date": "2025-02-17",
+        "type": "rftp",
+        "old_value": 312.0,
+        "new_value": 316.0,
+        "direction": "up"
+      },
+      {
+        "date": "2025-03-10",
+        "type": "rftp",
+        "old_value": 316.0,
+        "new_value": 321.0,
+        "direction": "up"
+      },
+      {
+        "date": "2025-03-17",
+        "type": "rftp",
+        "old_value": 321.0,
+        "new_value": 326.0,
+        "direction": "up"
+      },
+      {
+        "date": "2025-03-31",
+        "type": "rftp",
+        "old_value": 326.0,
+        "new_value": 328.0,
+        "direction": "up"
+      },
+      {
+        "date": "2025-06-30",
+        "type": "rftp",
+        "old_value": 328.0,
+        "new_value": 325.0,
+        "direction": "down"
+      },
+      {
+        "date": "2025-07-14",
+        "type": "rftp",
+        "old_value": 325.0,
+        "new_value": 323.0,
+        "direction": "down"
+      },
+      {
+        "date": "2025-08-11",
+        "type": "rftp",
+        "old_value": 323.0,
+        "new_value": 318.0,
+        "direction": "down"
+      },
+      {
+        "date": "2025-09-01",
+        "type": "rftp",
+        "old_value": 318.0,
+        "new_value": 321.0,
+        "direction": "up"
+      },
+      {
+        "date": "2025-10-06",
+        "type": "rftp",
+        "old_value": 321.0,
+        "new_value": 322.0,
+        "direction": "up"
+      },
+      {
+        "date": "2025-11-24",
+        "type": "rftp",
+        "old_value": 322.0,
+        "new_value": 326.0,
+        "direction": "up"
+      },
+      {
+        "date": "2025-12-08",
+        "type": "rftp",
+        "old_value": 326.0,
+        "new_value": 324.0,
+        "direction": "down"
+      },
+      {
+        "date": "2025-12-29",
+        "type": "rftp",
+        "old_value": 324.0,
+        "new_value": 329.0,
+        "direction": "up"
+      },
+      {
+        "date": "2026-01-12",
+        "type": "rftp",
+        "old_value": 329.0,
+        "new_value": 328.0,
+        "direction": "down"
+      },
+      {
+        "date": "2026-02-23",
+        "type": "rftp",
+        "old_value": 328.0,
+        "new_value": 316.0,
+        "direction": "down"
+      },
+      {
+        "date": "2026-03-02",
+        "type": "rftp",
+        "old_value": 316.0,
+        "new_value": 320.0,
+        "direction": "up"
+      },
+      {
+        "date": "2026-03-16",
+        "type": "rftp",
+        "old_value": 320.0,
+        "new_value": 322.0,
+        "direction": "up"
+      },
+      {
+        "date": "2026-04-13",
+        "type": "rftp",
+        "old_value": 322.0,
+        "new_value": 323.0,
+        "direction": "up"
+      },
+      {
+        "date": "2026-05-04",
+        "type": "rftp",
+        "old_value": 323.0,
+        "new_value": 324.0,
+        "direction": "up"
+      },
+      {
+        "date": "2026-05-18",
+        "type": "rftp",
+        "old_value": 324.0,
+        "new_value": 325.0,
+        "direction": "up"
+      },
+      {
+        "date": "2026-07-13",
+        "type": "rftp",
+        "old_value": 325.0,
+        "new_value": 322.0,
+        "direction": "down"
+      },
+      {
+        "date": "2026-08-17",
+        "type": "rftp",
+        "old_value": 322.0,
+        "new_value": 314.0,
+        "direction": "down"
+      },
+      {
+        "date": "2026-09-12",
+        "type": "rftp",
+        "old_value": 314.0,
+        "new_value": 315.0,
+        "direction": "up"
+      },
+      {
+        "date": "2026-09-19",
+        "type": "rftp",
+        "old_value": 315.0,
+        "new_value": 313.0,
+        "direction": "down"
+      }
+    ],
+    "cycling": [
+      {
+        "date": "2018-09-05",
+        "type": "ftp",
+        "old_value": 190.0,
+        "new_value": 220.0,
+        "direction": "up"
+      },
+      {
+        "date": "2022-01-01",
+        "type": "ftp",
+        "old_value": 220.0,
+        "new_value": 200.0,
+        "direction": "down"
+      },
+      {
+        "date": "2022-11-23",
+        "type": "ftp",
+        "old_value": 200.0,
+        "new_value": 226.0,
+        "direction": "up"
+      },
+      {
+        "date": "2023-05-10",
+        "type": "ftp",
+        "old_value": 226.0,
+        "new_value": 220.0,
+        "direction": "down"
+      },
+      {
+        "date": "2023-05-31",
+        "type": "ftp",
+        "old_value": 220.0,
+        "new_value": 223.0,
+        "direction": "up"
+      },
+      {
+        "date": "2023-06-07",
+        "type": "ftp",
+        "old_value": 223.0,
+        "new_value": 220.0,
+        "direction": "down"
+      },
+      {
+        "date": "2023-07-05",
+        "type": "ftp",
+        "old_value": 220.0,
+        "new_value": 215.0,
+        "direction": "down"
+      },
+      {
+        "date": "2023-12-01",
+        "type": "ftp",
+        "old_value": 215.0,
+        "new_value": 211.0,
+        "direction": "down"
+      },
+      {
+        "date": "2024-06-02",
+        "type": "ftp",
+        "old_value": 211.0,
+        "new_value": 192.0,
+        "direction": "down"
+      },
+      {
+        "date": "2024-07-01",
+        "type": "ftp",
+        "old_value": 192.0,
+        "new_value": 194.0,
+        "direction": "up"
+      },
+      {
+        "date": "2025-01-13",
+        "type": "ftp",
+        "old_value": 194.0,
+        "new_value": 204.0,
+        "direction": "up"
+      },
+      {
+        "date": "2025-03-24",
+        "type": "ftp",
+        "old_value": 204.0,
+        "new_value": 206.0,
+        "direction": "up"
+      },
+      {
+        "date": "2025-05-12",
+        "type": "ftp",
+        "old_value": 206.0,
+        "new_value": 212.0,
+        "direction": "up"
+      },
+      {
+        "date": "2025-06-02",
+        "type": "ftp",
+        "old_value": 212.0,
+        "new_value": 217.0,
+        "direction": "up"
+      },
+      {
+        "date": "2025-06-09",
+        "type": "ftp",
+        "old_value": 217.0,
+        "new_value": 224.0,
+        "direction": "up"
+      },
+      {
+        "date": "2025-06-16",
+        "type": "ftp",
+        "old_value": 224.0,
+        "new_value": 221.0,
+        "direction": "down"
+      },
+      {
+        "date": "2025-06-23",
+        "type": "ftp",
+        "old_value": 221.0,
+        "new_value": 210.0,
+        "direction": "down"
+      },
+      {
+        "date": "2025-06-30",
+        "type": "ftp",
+        "old_value": 210.0,
+        "new_value": 215.0,
+        "direction": "up"
+      },
+      {
+        "date": "2025-07-07",
+        "type": "ftp",
+        "old_value": 215.0,
+        "new_value": 216.0,
+        "direction": "up"
+      },
+      {
+        "date": "2025-07-14",
+        "type": "ftp",
+        "old_value": 216.0,
+        "new_value": 207.0,
+        "direction": "down"
+      },
+      {
+        "date": "2025-07-21",
+        "type": "ftp",
+        "old_value": 207.0,
+        "new_value": 210.0,
+        "direction": "up"
+      },
+      {
+        "date": "2025-07-28",
+        "type": "ftp",
+        "old_value": 210.0,
+        "new_value": 206.0,
+        "direction": "down"
+      }
+    ],
+    "swimming": []
+  },
   "sports": {
     "running": {
       "activities": [
