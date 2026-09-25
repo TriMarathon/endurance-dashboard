@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T12:32:55Z",
+  "generated_at": "2026-09-25T13:47:09Z",
   "gear": [
     {
       "id": "15f7b270d3f44537b70921baf82dc3b8",
@@ -1183,6 +1183,15 @@
       "hours_of_use": null,
       "days_of_use": null,
       "first_use_date": "2018-08-26T05:00:00.0"
+    }
+  ],
+  "unused_gear": [
+    {
+      "id": 1,
+      "name": "Nike Vaporfly 3 Vapor Green/Dragon",
+      "purchase_date": null,
+      "retailer": null,
+      "price_paid": "136.07"
     }
   ]
 }
