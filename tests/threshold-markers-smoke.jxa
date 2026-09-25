@@ -1,0 +1,110 @@
+#!/usr/bin/env osascript -l JavaScript
+// DASHBOARD_JS=js/dashboard.js osascript -l JavaScript tests/threshold-markers-smoke.jxa
+
+ObjC.import('Foundation');
+
+const sourcePath = ObjC.unwrap(
+  $.NSProcessInfo.processInfo.environment.objectForKey('DASHBOARD_JS')
+);
+if (!sourcePath) throw new Error('Set DASHBOARD_JS before running this test.');
+
+var elements = {
+  'running-load': { getContext: function () { return {}; } },
+  'running-distance': { getContext: function () { return {}; } },
+  'running-long': { getContext: function () { return {}; } },
+};
+var document = {
+  addEventListener: function () {},
+  getElementById: function (id) { return elements[id] || null; },
+};
+var window = { location: { hash: '' }, addEventListener: function () {} };
+var history = { replaceState: function () {} };
+var getComputedStyle = function () {
+  return { getPropertyValue: function () { return '#ddd'; } };
+};
+var Chart = function (context, config) {
+  this.config = config;
+  this.destroy = function () {};
+};
+
+var source = ObjC.unwrap($.NSString.stringWithContentsOfFileEncodingError(
+  sourcePath,
+  $.NSUTF8StringEncoding,
+  null
+));
+
+source += `
+var daily = [
+  {date: '2026-07-01', tss: 20, ctl: 10, atl: 12},
+  {date: '2026-07-02', tss: 30, ctl: 11, atl: 14},
+  {date: '2026-07-03', tss: 10, ctl: 12, atl: 13},
+];
+runningRange = {start: '2026-07-02', end: '2026-07-03'};
+fullSportAnalysis = {threshold_changes: {
+  running: [
+    {date: '2026-07-01', type: 'rftp', old_value: 300, new_value: 305, direction: 'up'},
+    {date: '2026-07-02', type: 'rftp', old_value: 305, new_value: 300, direction: 'down'},
+    {date: '2026-07-03', type: 'lthr', old_value: 170, new_value: 175, direction: 'up'},
+  ],
+  cycling: [{date: '2026-07-02', type: 'ftp', old_value: 220, new_value: 230, direction: 'up'}],
+  swimming: [{date: '2026-07-02', type: 'css', old_value: 100, new_value: 98, direction: 'up'}],
+}};
+
+activeSport = 'running';
+var runningChanges = thresholdChangesForSport();
+if (runningChanges.length !== 1 || runningChanges[0].date !== '2026-07-02'
+    || runningChanges[0].type !== 'rftp') {
+  throw new Error('Running markers did not enforce type and selected range');
+}
+var runningChart = buildRunningLoadChart(daily.slice(1), runningChanges);
+if (runningChart.config.data.datasets.length !== 4) throw new Error('Running marker dataset missing');
+var marker = runningChart.config.data.datasets[3];
+if (!marker.thresholdMarker || marker.pointRotation[0] !== 180 || marker.pointHitRadius < 12) {
+  throw new Error('Running down marker or mobile hit target failed');
+}
+var tooltip = runningChart.config.options.plugins.tooltip.callbacks.label({
+  dataset: marker, dataIndex: 0, formattedValue: '32.4',
+});
+if (tooltip !== '▼ rFTP: 305 W → 300 W') throw new Error('rFTP tooltip failed: ' + tooltip);
+if (runningChart.config.options.plugins.legend.labels.filter(
+  {datasetIndex: 3}, runningChart.config.data,
+)) throw new Error('Threshold marker leaked into legend');
+
+activeSport = 'cycling';
+var cyclingChart = buildRunningLoadChart(daily.slice(1), thresholdChangesForSport());
+marker = cyclingChart.config.data.datasets[3];
+if (marker.pointRotation[0] !== 0) throw new Error('Cycling up marker failed');
+tooltip = cyclingChart.config.options.plugins.tooltip.callbacks.label({
+  dataset: marker, dataIndex: 0, formattedValue: '32.4',
+});
+if (tooltip !== '▲ Bike FTP: 220 W → 230 W') throw new Error('Bike FTP tooltip failed: ' + tooltip);
+
+activeSport = 'swimming';
+var swimmingChart = buildRunningLoadChart(daily.slice(1), thresholdChangesForSport());
+marker = swimmingChart.config.data.datasets[3];
+tooltip = swimmingChart.config.options.plugins.tooltip.callbacks.label({
+  dataset: marker, dataIndex: 0, formattedValue: '32.4',
+});
+if (tooltip !== '▲ CSS: 1:40/100 yd → 1:38/100 yd') throw new Error('CSS tooltip failed: ' + tooltip);
+
+activeSport = 'strength';
+if (thresholdChangesForSport().length !== 0
+    || buildRunningLoadChart(daily.slice(1), thresholdChangesForSport()).config.data.datasets.length !== 3) {
+  throw new Error('Threshold markers appeared for Strength');
+}
+activeSport = 'other';
+if (thresholdChangesForSport().length !== 0
+    || buildRunningLoadChart(daily.slice(1), thresholdChangesForSport()).config.data.datasets.length !== 3) {
+  throw new Error('Threshold markers appeared for Other');
+}
+
+var weekly = [{week_start: '2026-06-29', distance: 10, moving_average: 10, longest: 6}];
+activeSport = 'running';
+if (buildRunningDistanceChart(weekly).config.data.datasets.some(function (d) { return d.thresholdMarker; })
+    || buildRunningLongChart(weekly).config.data.datasets.some(function (d) { return d.thresholdMarker; })) {
+  throw new Error('Threshold markers appeared on non-Load Sports charts');
+}
+console.log('Threshold marker smoke tests passed');
+`;
+
+eval(source);

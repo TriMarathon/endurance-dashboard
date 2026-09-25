@@ -2479,6 +2479,17 @@ function runningRows() {
   return sportRows('running');
 }
 
+function thresholdChangesForSport(sportName = activeSport) {
+  if (!runningRange || sportName === 'strength' || sportName === 'other') return [];
+  const grouped = fullSportAnalysis && fullSportAnalysis.threshold_changes;
+  const changes = grouped && Array.isArray(grouped[sportName]) ? grouped[sportName] : [];
+  const expectedType = sportName === 'running' ? 'rftp'
+    : sportName === 'cycling' ? 'ftp'
+      : sportName === 'swimming' ? 'css' : null;
+  return changes.filter((change) => change && change.type === expectedType
+    && change.date >= runningRange.start && change.date <= runningRange.end);
+}
+
 function runningDefaultRange(daily) {
   if (!Array.isArray(daily) || daily.length === 0 || daily[0] == null
       || daily[0].date == null) return null;
@@ -2513,6 +2524,12 @@ function fmtSwimPace(secondsPer100Yd) {
   if (!Number.isFinite(secondsPer100Yd)) return '—';
   const total = Math.round(secondsPer100Yd);
   return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, '0')}/100 yd`;
+}
+
+function fmtThresholdWatts(value) {
+  const watts = Number(value);
+  if (!Number.isFinite(watts)) return '—';
+  return Number.isInteger(watts) ? String(watts) : String(Math.round(watts * 10) / 10);
 }
 
 function fmtAverageDuration(seconds) {
@@ -2692,13 +2709,30 @@ function sportChartBase(labels, datasets, yTitle) {
             pointStyle: 'circle',
             font: { size: density.legendFontSize },
             padding: density.legendPadding,
+            filter: (item, data) => !data.datasets[item.datasetIndex].thresholdMarker,
           },
         },
         tooltip: {
           backgroundColor: 'rgba(18, 19, 22, 0.96)',
           titleColor: '#fff',
           bodyColor: '#e0e0e0',
-          callbacks: { title: (items) => items.length ? fmtMediumDate(labels[items[0].dataIndex]) : '' },
+          callbacks: {
+            title: (items) => items.length ? fmtMediumDate(labels[items[0].dataIndex]) : '',
+            label: (context) => {
+              const dataset = context.dataset;
+              if (!dataset.thresholdMarker) {
+                return `${dataset.label}: ${context.formattedValue}`;
+              }
+              const change = dataset.thresholdEvents[context.dataIndex];
+              if (!change) return '';
+              const arrow = change.direction === 'up' ? '▲' : '▼';
+              if (dataset.thresholdSport === 'swimming') {
+                return `${arrow} CSS: ${fmtSwimPace(Number(change.old_value))} → ${fmtSwimPace(Number(change.new_value))}`;
+              }
+              const name = dataset.thresholdSport === 'cycling' ? 'Bike FTP' : 'rFTP';
+              return `${arrow} ${name}: ${fmtThresholdWatts(change.old_value)} W → ${fmtThresholdWatts(change.new_value)} W`;
+            },
+          },
         },
       },
       scales: {
@@ -2717,7 +2751,42 @@ function sportChartBase(labels, datasets, yTitle) {
   };
 }
 
-function buildRunningLoadChart(rows) {
+function thresholdMarkerDataset(labels, rows, changes, sportName) {
+  const allowedType = sportName === 'running' ? 'rftp'
+    : sportName === 'cycling' ? 'ftp'
+      : sportName === 'swimming' ? 'css' : null;
+  if (!allowedType) return null;
+  const byDate = new Map(changes
+    .filter((change) => change && change.type === allowedType)
+    .map((change) => [change.date, change]));
+  const events = labels.map((label) => byDate.get(label) || null);
+  if (!events.some((event) => event !== null)) return null;
+  const maximum = rows.reduce((best, row) => Math.max(
+    best, Number(row.tss) || 0, Number(row.ctl) || 0, Number(row.atl) || 0,
+  ), 0);
+  const markerHeight = maximum > 0 ? maximum * 1.08 : 1;
+  return {
+    type: 'line',
+    label: 'Threshold change',
+    data: events.map((event) => event ? markerHeight : null),
+    showLine: false,
+    pointStyle: 'triangle',
+    pointRotation: events.map((event) => event && event.direction === 'down' ? 180 : 0),
+    pointRadius: events.map((event) => event ? 5 : 0),
+    pointHoverRadius: events.map((event) => event ? 7 : 0),
+    pointHitRadius: 12,
+    pointBackgroundColor: palette.text,
+    pointBorderColor: palette.text,
+    pointBorderWidth: 0,
+    clip: false,
+    order: -1,
+    thresholdMarker: true,
+    thresholdEvents: events,
+    thresholdSport: sportName,
+  };
+}
+
+function buildRunningLoadChart(rows, changes = thresholdChangesForSport()) {
   const labels = rows.map((row) => row.date);
   const cycling = activeSport === 'cycling';
   const swimming = activeSport === 'swimming';
@@ -2732,6 +2801,11 @@ function buildRunningLoadChart(rows) {
     { type: 'line', label: `${shortName} CTL`, data: rows.map((row) => row.ctl), borderColor: palette.line, backgroundColor: palette.lineBg, borderWidth: 2, pointRadius: 1, tension: 0 },
     { type: 'line', label: `${shortName} ATL`, data: rows.map((row) => row.atl), borderColor: palette.atl, backgroundColor: palette.atlBg, borderWidth: 2, pointRadius: 1, tension: 0 },
   ], 'TSS / Load');
+  const markers = thresholdMarkerDataset(labels, rows, changes, activeSport);
+  if (markers) {
+    config.data.datasets.push(markers);
+    config.options.layout = { padding: { top: 8 } };
+  }
   return new Chart(document.getElementById('running-load').getContext('2d'), config);
 }
 
@@ -2790,7 +2864,7 @@ function renderRunning() {
   [runningLoadChart, runningDistanceChart, runningLongChart].forEach((chart) => {
     if (chart) chart.destroy();
   });
-  runningLoadChart = buildRunningLoadChart(daily);
+  runningLoadChart = buildRunningLoadChart(daily, thresholdChangesForSport());
   runningDistanceChart = buildRunningDistanceChart(weeks);
   runningLongChart = buildRunningLongChart(weeks);
 }
