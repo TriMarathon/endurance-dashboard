@@ -231,15 +231,21 @@ function filterWeeklyOverlap(rows, start, end) {
   });
 }
 
+function dailyDefaultEndDate(rows) {
+  if (!Array.isArray(rows) || rows.length === 0) return null;
+  const last = rows[rows.length - 1];
+  if (last == null || last.date == null) return null;
+  const endStr = String(last.date);
+  return Number.isFinite(dateToUtcMs(endStr)) ? endStr : null;
+}
+
 function dailyDefaultRange(rows) {
   if (!Array.isArray(rows) || rows.length === 0) return null;
   const first = rows[0];
-  const last = rows[rows.length - 1];
-  if (first == null || last == null
-      || first.date == null || last.date == null) return null;
-  const endStr = String(last.date);
+  if (first == null || first.date == null) return null;
+  const endStr = dailyDefaultEndDate(rows);
+  if (!endStr) return null;
   const endMs = dateToUtcMs(endStr);
-  if (!Number.isFinite(endMs)) return null;
   const startStr = msToIsoDate(endMs - (DEFAULT_VISIBLE_DAYS - 1) * 86400000);
   const firstDate = String(first.date);
   const startClamped = startStr < firstDate ? firstDate : startStr;
@@ -2474,19 +2480,13 @@ function runningRows() {
 }
 
 function runningDefaultRange(daily) {
-  const fallback = dailyDefaultRange(daily);
-  if (!fallback) return null;
-  try {
-    const saved = JSON.parse(localStorage.getItem('sport-analysis-range') || 'null');
-    if (saved && saved.start >= String(daily[0].date)
-        && saved.end <= String(daily[daily.length - 1].date)
-        && saved.start <= saved.end) {
-      return { start: saved.start, end: saved.end };
-    }
-  } catch (_) {
-    // A malformed or unavailable localStorage value should not block charts.
-  }
-  return fallback;
+  if (!Array.isArray(daily) || daily.length === 0 || daily[0] == null
+      || daily[0].date == null) return null;
+  const end = dailyDefaultEndDate(daily);
+  if (!end) return null;
+  const start = msToIsoDate(dateToUtcMs(end) - DEFAULT_VISIBLE_DAYS * 86400000);
+  const firstDate = String(daily[0].date);
+  return { start: start < firstDate ? firstDate : start, end };
 }
 
 function selectedRunningActivities() {
@@ -2816,19 +2816,23 @@ function initRunningControls() {
     }
     showValidation(validation, '');
     runningRange = { start: start.value, end: end.value };
-    try { localStorage.setItem('sport-analysis-range', JSON.stringify(runningRange)); } catch (_) {}
     renderRunning();
   }
   start.addEventListener('change', applyRange);
   end.addEventListener('change', applyRange);
-  reset.addEventListener('click', () => {
-    runningRange = dailyDefaultRange(daily);
-    start.value = runningRange.start;
-    end.value = runningRange.end;
-    try { localStorage.setItem('sport-analysis-range', JSON.stringify(runningRange)); } catch (_) {}
-    showValidation(validation, '');
-    renderRunning();
-  });
+  reset.addEventListener('click', onRunningReset);
+}
+
+function onRunningReset() {
+  const start = document.getElementById('running-start');
+  const end = document.getElementById('running-end');
+  const validation = document.getElementById('running-validation');
+  const def = runningDefaultRange(runningRows().daily);
+  if (def) runningRange = def;
+  showValidation(validation, '');
+  if (start && runningRange) start.value = runningRange.start;
+  if (end && runningRange) end.value = runningRange.end;
+  renderRunning();
 }
 
 function initSportSubtabs() {

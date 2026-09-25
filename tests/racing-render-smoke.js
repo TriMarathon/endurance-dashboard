@@ -11,7 +11,7 @@ assert(css.includes('overflow-wrap: anywhere'));
 assert(css.includes('.races-detail-row'));
 assert(html.includes('data-subtab="prsb"'));
 assert(html.includes('css/dashboard.css?v=20260924-1'));
-assert(html.includes('js/dashboard.js?v=20260924-1'));
+assert(html.includes('js/dashboard.js?v=20260925-1'));
 assert(html.includes('data-tab="sports"'));
 assert(html.includes('id="running-summary"'));
 assert(html.includes('id="running-load"'));

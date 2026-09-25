@@ -1,0 +1,118 @@
+#!/usr/bin/env osascript -l JavaScript
+// DASHBOARD_JS=js/dashboard.js osascript -l JavaScript tests/sports-date-range-smoke.jxa
+
+ObjC.import('Foundation');
+
+const sourcePath = ObjC.unwrap(
+  $.NSProcessInfo.processInfo.environment.objectForKey('DASHBOARD_JS')
+);
+if (!sourcePath) throw new Error('Set DASHBOARD_JS before running this test.');
+
+var document = { addEventListener: function () {} };
+var window = { location: { hash: '' }, addEventListener: function () {} };
+var history = { replaceState: function () {} };
+
+var source = ObjC.unwrap($.NSString.stringWithContentsOfFileEncodingError(
+  sourcePath,
+  $.NSUTF8StringEncoding,
+  null
+));
+
+source += `
+function testDaily(first, last) {
+  return [{date: first}, {date: last}];
+}
+
+var initialDaily = testDaily('2015-01-01', '2026-09-25');
+var initial = runningDefaultRange(initialDaily);
+if (initial.end !== '2026-09-25') throw new Error('Sports did not use the latest exported daily date');
+if (initial.start !== '2026-06-27') throw new Error('Sports start was not 90 calendar days before end');
+if ((dateToUtcMs(initial.end) - dateToUtcMs(initial.start)) / 86400000 !== 90) {
+  throw new Error('Sports range is not exactly 90 calendar days');
+}
+
+var later = runningDefaultRange(testDaily('2015-01-01', '2026-10-02'));
+if (later.start !== '2026-07-04' || later.end !== '2026-10-02') {
+  throw new Error('A later dashboard date did not produce a later Sports range');
+}
+
+var training = dailyDefaultRange(initialDaily);
+if (training.start !== '2026-06-28' || training.end !== '2026-09-25') {
+  throw new Error('Existing Training default behavior changed');
+}
+
+var timezoneSafe = runningDefaultRange(testDaily('2020-01-01', '2024-03-10'));
+if (timezoneSafe.start !== '2023-12-11' || timezoneSafe.end !== '2024-03-10'
+    || msToIsoDate(dateToUtcMs(timezoneSafe.end)) !== timezoneSafe.end) {
+  throw new Error('Calendar-date conversion introduced an off-by-one error');
+}
+
+function control() {
+  return {
+    value: '', min: '', max: '', disabled: true,
+    listeners: {},
+    addEventListener: function (name, callback) { this.listeners[name] = callback; },
+  };
+}
+var elements = {
+  'running-start': control(),
+  'running-end': control(),
+  'running-reset': control(),
+  'running-validation': {textContent: '', classList: {toggle: function () {}}},
+};
+var sports = ['running', 'cycling', 'swimming', 'strength', 'other'];
+var buttons = sports.map(function (sport) {
+  return {
+    sport: sport,
+    listeners: {},
+    parentElement: null,
+    classList: {toggle: function () {}},
+    getAttribute: function (name) { return name === 'data-sport' ? this.sport : null; },
+    setAttribute: function () {},
+    addEventListener: function (name, callback) { this.listeners[name] = callback; },
+  };
+});
+document = {
+  addEventListener: function () {},
+  getElementById: function (id) { return elements[id] || null; },
+  querySelectorAll: function (selector) {
+    return selector === '.sport-subtab[data-sport]' ? buttons : [];
+  },
+};
+renderRunning = function () {};
+fullSportAnalysis = {sports: {
+  running: {activities: [], daily: initialDaily},
+  cycling: {activities: [], daily: initialDaily},
+  swimming: {activities: [], daily: initialDaily},
+  strength: {activities: [], daily: initialDaily},
+  other: {activities: [], daily: initialDaily},
+}};
+runningRange = runningDefaultRange(initialDaily);
+initRunningControls();
+initSportSubtabs();
+
+elements['running-start'].value = '2026-08-01';
+elements['running-end'].value = '2026-09-01';
+elements['running-start'].listeners.change();
+var manual = JSON.stringify(runningRange);
+buttons.forEach(function (button) {
+  button.listeners.click();
+  if (JSON.stringify(runningRange) !== manual) {
+    throw new Error('Manual Sports range changed while switching to ' + button.sport);
+  }
+});
+
+fullSportAnalysis.sports.running.daily = testDaily('2015-01-01', '2026-10-02');
+elements['running-reset'].listeners.click();
+if (runningRange.start !== '2026-07-04' || runningRange.end !== '2026-10-02') {
+  throw new Error('Reset restored a captured stale range');
+}
+if (elements['running-start'].value !== runningRange.start
+    || elements['running-end'].value !== runningRange.end) {
+  throw new Error('Reset did not update both Sports controls');
+}
+
+console.log('Sports date-range smoke tests passed');
+`;
+
+eval(source);
