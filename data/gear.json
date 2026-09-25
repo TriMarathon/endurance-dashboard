@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T13:50:35Z",
+  "generated_at": "2026-09-25T13:52:29Z",
   "gear": [
     {
       "id": "15f7b270d3f44537b70921baf82dc3b8",
@@ -1192,6 +1192,13 @@
       "purchase_date": null,
       "retailer": null,
       "price_paid": "136.07"
+    },
+    {
+      "id": 4,
+      "name": "Nike Vaporfly 4 Bright Crimson",
+      "purchase_date": "2025-09-15",
+      "retailer": null,
+      "price_paid": "162.52"
     },
     {
       "id": 2,
