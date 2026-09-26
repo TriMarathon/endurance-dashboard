@@ -8,6 +8,7 @@ const BASE_GEAR_URL = 'data/gear.json';
 const BASE_SYSTEM_HEALTH_URL = 'data/system_health.json';
 const BASE_COMPLETED_RACES_URL = 'data/completed_races.json';
 const BASE_PR_SB_URL = 'data/pr_sb.json';
+const BASE_USAT_RESULTS_URL = 'data/usat_results.json';
 const BASE_SPORT_ANALYSIS_URL = 'data/sport_analysis.json';
 let dataVersion = '';
 let DATA_URL = BASE_DATA_URL;
@@ -19,6 +20,7 @@ let GEAR_URL = BASE_GEAR_URL;
 let SYSTEM_HEALTH_URL = BASE_SYSTEM_HEALTH_URL;
 let COMPLETED_RACES_URL = BASE_COMPLETED_RACES_URL;
 let PR_SB_URL = BASE_PR_SB_URL;
+let USAT_RESULTS_URL = BASE_USAT_RESULTS_URL;
 let SPORT_ANALYSIS_URL = BASE_SPORT_ANALYSIS_URL;
 
 const SYSTEM_HEALTH_STALE_SECONDS = 43200;
@@ -66,6 +68,8 @@ let historySort = 'newest';
 let prSbData = [];
 let prSbType = 'PR';
 let prSbSeason = String(new Date().getFullYear());
+let usatResultsData = [];
+let usatYear = null;
 
 const PR_SB_EVENT_ORDER = [
   '1 Mile', '5K', '4 Mile', '5 Mile', '8K', '10K', '10 Mile',
@@ -1385,7 +1389,117 @@ function switchRacingSubtab(tab) {
     renderRaceHistory();
   } else if (tab === 'prsb') {
     renderPrSb();
+  } else if (tab === 'usat') {
+    renderUsatResults();
   }
+  const selected = document.querySelector('.subtab-link[data-subtab="' + tab + '"]');
+  if (selected) revealActiveTab(selected);
+}
+
+function normalizeUsatResult(record) {
+  if (!record || typeof record !== 'object' || !record.event_date || !record.event_name) return null;
+  const year = Number(String(record.event_date).slice(0, 4));
+  return {
+    id: record.source_result_id == null ? '' : String(record.source_result_id),
+    date: String(record.event_date),
+    year: Number.isInteger(year) ? year : null,
+    name: String(record.event_name),
+    raceLabel: record.race_label == null ? null : String(record.race_label),
+    placement: typeof record.placement === 'number' && Number.isFinite(record.placement)
+      ? record.placement : null,
+    finishSeconds: typeof record.finish_time_seconds === 'number' && Number.isFinite(record.finish_time_seconds)
+      ? record.finish_time_seconds : null,
+    finishDisplay: record.finish_time_display == null ? null : String(record.finish_time_display),
+    score: typeof record.usat_score === 'number' && Number.isFinite(record.usat_score)
+      ? record.usat_score : null,
+  };
+}
+
+function formatUsatScore(score) {
+  return score == null ? '—' : Number(score).toFixed(3);
+}
+
+function formatUsatTime(record) {
+  if (record.finishDisplay) return record.finishDisplay.replace(/\.000$/, '');
+  return record.finishSeconds == null ? '—' : fmtRaceTime(record.finishSeconds);
+}
+
+function buildUsatYearControls(records) {
+  const years = Array.from(new Set(records
+    .map((record) => record.year)
+    .filter((year) => Number.isInteger(year))))
+    .sort((a, b) => b - a);
+  if (usatYear == null || !years.includes(usatYear)) usatYear = years[0] || null;
+  const container = document.getElementById('usat-years');
+  if (!container) return;
+  container.innerHTML = years.map((year) =>
+    '<button type="button" class="year-btn' + (year === usatYear ? ' active' : '')
+      + '" data-year="' + year + '">' + year + '</button>'
+  ).join('');
+  container.hidden = years.length === 0;
+  container.querySelectorAll('.year-btn').forEach((button) => {
+    button.addEventListener('click', () => {
+      usatYear = Number(button.getAttribute('data-year'));
+      renderUsatResults();
+    });
+  });
+}
+
+function renderUsatSummary(records) {
+  const summary = document.getElementById('usat-summary');
+  if (!summary) return;
+  if (records.length === 0) {
+    summary.innerHTML = '';
+    return;
+  }
+  const scores = records.map((record) => record.score).filter((score) => score != null);
+  const average = scores.length ? scores.reduce((sum, score) => sum + score, 0) / scores.length : null;
+  const best = scores.length ? Math.max(...scores) : null;
+  summary.innerHTML = [
+    ['Races', String(records.length)],
+    ['Average USAT Score', formatUsatScore(average)],
+    ['Best USAT Score', formatUsatScore(best)],
+  ].map(([label, value]) => '<div class="usat-summary-item"><span>' + label
+    + '</span><strong>' + value + '</strong></div>').join('');
+}
+
+function renderUsatResults() {
+  const tbody = document.querySelector('#usat-results-table tbody');
+  const empty = document.getElementById('usat-results-empty');
+  if (!tbody) return;
+  const normalized = usatResultsData.map(normalizeUsatResult).filter((record) => record !== null);
+  buildUsatYearControls(normalized);
+  const records = normalized
+    .filter((record) => usatYear == null || record.year === usatYear)
+    .sort((left, right) => right.date.localeCompare(left.date) || right.id.localeCompare(left.id));
+  renderUsatSummary(records);
+  if (records.length === 0) {
+    tbody.innerHTML = '';
+    if (empty) empty.hidden = false;
+    return;
+  }
+  if (empty) empty.hidden = true;
+  tbody.innerHTML = records.map((record) => '<tr>'
+    + '<td class="races-col-date">' + fmtMediumDate(record.date) + '</td>'
+    + '<td class="races-col-name">' + escapeHtml(record.name) + '</td>'
+    + '<td class="races-col-type">' + (record.raceLabel ? escapeHtml(record.raceLabel) : '—') + '</td>'
+    + '<td class="usat-number">' + (record.placement == null ? '—' : record.placement) + '</td>'
+    + '<td class="usat-number">' + escapeHtml(formatUsatTime(record)) + '</td>'
+    + '<td class="usat-number usat-score">' + formatUsatScore(record.score) + '</td>'
+    + '</tr>').join('');
+}
+
+async function loadUsatResults() {
+  try {
+    const response = await fetch(USAT_RESULTS_URL, { cache: 'no-store' });
+    if (!response.ok) throw new Error('HTTP ' + response.status);
+    const json = await response.json();
+    usatResultsData = Array.isArray(json && json.data) ? json.data : [];
+  } catch (err) {
+    console.error('[dashboard] failed to load usat_results.json:', err);
+    usatResultsData = [];
+  }
+  if (racingSubtab === 'usat') renderUsatResults();
 }
 
 function normalizePrSb(record) {
@@ -1534,6 +1648,7 @@ async function loadVersion() {
       SYSTEM_HEALTH_URL = BASE_SYSTEM_HEALTH_URL + qs;
       COMPLETED_RACES_URL = BASE_COMPLETED_RACES_URL + qs;
       PR_SB_URL = BASE_PR_SB_URL + qs;
+      USAT_RESULTS_URL = BASE_USAT_RESULTS_URL + qs;
       SPORT_ANALYSIS_URL = BASE_SPORT_ANALYSIS_URL + qs;
     }
   } catch (err) {
@@ -3197,6 +3312,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadRaces();
     loadCompletedRaces();
     loadPrSb();
+    loadUsatResults();
     loadWeekly();
     loadHealth();
     loadGear();

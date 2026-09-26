@@ -18,7 +18,7 @@
       name="description"
       content="Endurance training-load dashboard showing 90-day TSS, CTL and ATL from Garmin training data."
     />
-    <link rel="stylesheet" href="css/dashboard.css?v=20260924-1" />
+    <link rel="stylesheet" href="css/dashboard.css?v=20260926-1" />
   </head>
   <body>
     <header>
@@ -264,6 +264,16 @@
             tabindex="-1"
             >PR / SB</button
           >
+          <button
+            type="button"
+            id="subtab-usat"
+            data-subtab="usat"
+            class="subtab-link"
+            role="tab"
+            aria-selected="false"
+            tabindex="-1"
+            >USAT Race Scores</button
+          >
         </nav>
 
         <section
@@ -352,6 +362,36 @@
             <p class="races-empty">No PR or SB records.</p>
           </div>
         </section>
+
+        <section
+          id="racing-sub-usat"
+          class="racing-subview"
+          role="tabpanel"
+          aria-label="USAT race scores"
+        >
+          <h2 class="chart-title">USAT Race Scores</h2>
+          <div class="usat-year-row">
+            <span class="race-history-year-label">Year</span>
+            <div id="usat-years" class="race-history-years" role="group" aria-label="USAT score year filter"></div>
+          </div>
+          <div id="usat-summary" class="usat-summary" aria-label="USAT race score summary"></div>
+          <div class="usat-table-wrap">
+            <table id="usat-results-table" class="races-table usat-results-table">
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Race</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Place</th>
+                  <th scope="col">Finish Time</th>
+                  <th scope="col">USAT Score</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <p id="usat-results-empty" class="races-empty">No imported USAT race scores.</p>
+          </div>
+        </section>
       </section>
 
       <section
@@ -420,6 +460,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" defer></script>
-    <script src="js/dashboard.js?v=20260926-1" defer></script>
+    <script src="js/dashboard.js?v=20260926-2" defer></script>
   </body>
 </html>

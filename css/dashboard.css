@@ -776,12 +776,18 @@ footer {
   margin: 0 0 14px;
   border-bottom: 1px solid var(--panel-border);
   -webkit-box-pack: start;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
+
+.racing-subtabs::-webkit-scrollbar { display: none; }
 
 .subtab-link {
   display: inline-flex;
   align-items: center;
-  height: 38px;
+  min-height: 44px;
   padding: 0 18px;
   border: 1px solid transparent;
   border-bottom: none;
@@ -985,6 +991,38 @@ footer {
   color: var(--muted);
   font-size: 12px;
   overflow-wrap: anywhere;
+}
+
+/* USAT Race Scores */
+.usat-year-row { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+.usat-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.usat-summary-item {
+  display: grid;
+  gap: 3px;
+  padding: 12px;
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  background: var(--panel);
+}
+.usat-summary-item span { color: var(--muted); font-size: 11px; }
+.usat-summary-item strong { font-size: 18px; }
+.usat-table-wrap { width: 100%; max-width: 100%; overflow-x: auto; }
+.usat-results-table { width: 100%; min-width: 760px; }
+.usat-number { text-align: right; white-space: nowrap; }
+.usat-score { font-variant-numeric: tabular-nums; font-weight: 650; }
+
+@media (max-width: 899px) {
+  .usat-table-wrap .races-table { display: table; }
+}
+
+@media (max-width: 480px) {
+  .usat-summary { grid-template-columns: 1fr; gap: 7px; }
+  .usat-summary-item { grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
 }
 
 /* ---------------------------------------------------------------------------
