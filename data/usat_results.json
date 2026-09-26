@@ -1,0 +1,196 @@
+{
+  "generated_at": "2026-09-26T19:54:20Z",
+  "count": 19,
+  "data": [
+    {
+      "source_result_id": "6588855",
+      "event_date": "2026-08-23",
+      "event_name": "2026 Chicago Triathlon",
+      "race_label": "Sprint Triathlon",
+      "placement": 11,
+      "finish_time_seconds": 4803.0,
+      "finish_time_display": "1:20:03.000",
+      "usat_score": 97.079
+    },
+    {
+      "source_result_id": "6533007",
+      "event_date": "2026-08-09",
+      "event_name": "2026 2026 USA Triathlon Nationals",
+      "race_label": "Sprint Triathlon (Non-Draft)",
+      "placement": 144,
+      "finish_time_seconds": 4254.0,
+      "finish_time_display": "1:10:54.000",
+      "usat_score": 92.707
+    },
+    {
+      "source_result_id": "6521858",
+      "event_date": "2026-08-01",
+      "event_name": "2026 2026 Naperville Sprint Triathlon",
+      "race_label": "Sprint Triathlon",
+      "placement": 9,
+      "finish_time_seconds": 3914.0,
+      "finish_time_display": "1:05:14.000",
+      "usat_score": 89.874
+    },
+    {
+      "source_result_id": "6523801",
+      "event_date": "2026-07-26",
+      "event_name": "2026 Wauconda Triathlons",
+      "race_label": "Short Triathlon",
+      "placement": 3,
+      "finish_time_seconds": 4233.0,
+      "finish_time_display": "1:10:33.000",
+      "usat_score": 90.14
+    },
+    {
+      "source_result_id": "6515538",
+      "event_date": "2026-07-12",
+      "event_name": "2026 2026 Lake Zurich Triathlon",
+      "race_label": "Sprint Triathlon",
+      "placement": 7,
+      "finish_time_seconds": 4181.0,
+      "finish_time_display": "1:09:41.000",
+      "usat_score": 90.432
+    },
+    {
+      "source_result_id": "6509008",
+      "event_date": "2026-06-28",
+      "event_name": "2026 Pleasant Prairie Triathlon 2026",
+      "race_label": "Pleasant Prairie Triathlon - Short Triathlon",
+      "placement": 15,
+      "finish_time_seconds": 4642.5,
+      "finish_time_display": "1:17:22.500",
+      "usat_score": 90.08
+    },
+    {
+      "source_result_id": "6550775",
+      "event_date": "2026-06-14",
+      "event_name": "2026 IRONMAN 70.3 Rockford",
+      "race_label": "Long Triathlon",
+      "placement": 118,
+      "finish_time_seconds": 16797.0,
+      "finish_time_display": "4:39:57.000",
+      "usat_score": 93.608
+    },
+    {
+      "source_result_id": "6299674",
+      "event_date": "2025-08-24",
+      "event_name": "2025 Chicago Triathlon",
+      "race_label": "Short - Triathlon - Short",
+      "placement": 26,
+      "finish_time_seconds": 4881.0,
+      "finish_time_display": "1:21:21.000",
+      "usat_score": 90.709
+    },
+    {
+      "source_result_id": "6202888",
+      "event_date": "2025-07-27",
+      "event_name": "2025 Wauconda Triathlons",
+      "race_label": "Short - Triathlon -",
+      "placement": null,
+      "finish_time_seconds": 0.0,
+      "finish_time_display": "0:00:00.000",
+      "usat_score": 0.0
+    },
+    {
+      "source_result_id": "6166220",
+      "event_date": "2025-07-12",
+      "event_name": "2025 2025 Lake Zurich Triathlon",
+      "race_label": "Short Triathlon",
+      "placement": 6,
+      "finish_time_seconds": 4400.0,
+      "finish_time_display": "1:13:20.000",
+      "usat_score": 88.966
+    },
+    {
+      "source_result_id": "6163626",
+      "event_date": "2025-06-22",
+      "event_name": "2025 IRONMAN 70.3 Rockford-Illinois",
+      "race_label": "Long - Triathlon -",
+      "placement": 73,
+      "finish_time_seconds": 18130.0,
+      "finish_time_display": "5:02:10.000",
+      "usat_score": 98.714
+    },
+    {
+      "source_result_id": "5909615",
+      "event_date": "2024-09-04",
+      "event_name": "2024 Ironman Wisconsin 70.3",
+      "race_label": "Long - Triathlon -",
+      "placement": 105,
+      "finish_time_seconds": 18234.0,
+      "finish_time_display": "5:03:54.000",
+      "usat_score": 90.614
+    },
+    {
+      "source_result_id": "5940195",
+      "event_date": "2024-08-25",
+      "event_name": "2024 Chicago Triathlon",
+      "race_label": "Short - Triathlon -",
+      "placement": 17,
+      "finish_time_seconds": 4980.0,
+      "finish_time_display": "1:23:00.000",
+      "usat_score": 92.29
+    },
+    {
+      "source_result_id": "5871487",
+      "event_date": "2024-08-04",
+      "event_name": "2024 2024 Naperville Sprint Triathlon",
+      "race_label": "Short - Triathlon -",
+      "placement": 24,
+      "finish_time_seconds": 3854.0,
+      "finish_time_display": "1:04:14.000",
+      "usat_score": 88.51
+    },
+    {
+      "source_result_id": "5809593",
+      "event_date": "2024-07-28",
+      "event_name": "2024 Wauconda Triathlons",
+      "race_label": "Short - Triathlon -",
+      "placement": 14,
+      "finish_time_seconds": 4438.0,
+      "finish_time_display": "1:13:58.000",
+      "usat_score": 85.358
+    },
+    {
+      "source_result_id": "5774128",
+      "event_date": "2024-06-23",
+      "event_name": "2024 Pleasant Prairie Triathlon 2024",
+      "race_label": "Intermediate - Triathlon -",
+      "placement": 69,
+      "finish_time_seconds": 9289.9,
+      "finish_time_display": "2:34:49.900",
+      "usat_score": 84.407
+    },
+    {
+      "source_result_id": "5634652",
+      "event_date": "2023-08-27",
+      "event_name": "2023 Chicago Triathlon",
+      "race_label": "Short - Triathlon",
+      "placement": 10,
+      "finish_time_seconds": 4084.0,
+      "finish_time_display": "1:08:04.000",
+      "usat_score": 95.013
+    },
+    {
+      "source_result_id": "5494125",
+      "event_date": "2023-08-06",
+      "event_name": "2023 2023 Naperville Sprint Triathlon",
+      "race_label": "Short Triathlon",
+      "placement": 21,
+      "finish_time_seconds": 3992.0,
+      "finish_time_display": "1:06:32.000",
+      "usat_score": 86.838
+    },
+    {
+      "source_result_id": "5270588",
+      "event_date": "2023-06-25",
+      "event_name": "2023 Pleasant Prairie Triathlon 2023",
+      "race_label": "Short Triathlon",
+      "placement": 21,
+      "finish_time_seconds": 4844.693,
+      "finish_time_display": "1:20:44.693",
+      "usat_score": 86.066
+    }
+  ]
+}
