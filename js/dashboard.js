@@ -1425,16 +1425,16 @@ function validUsatScores(records) {
     .filter((score) => typeof score === 'number' && Number.isFinite(score) && score > 0);
 }
 
-function calculateUsatRankingScore(records) {
+function calculateUsatOverallScore(records) {
   const topScores = validUsatScores(records)
     .sort((left, right) => right - left)
     .slice(0, 3);
   if (topScores.length < 3) return null;
-  return topScores.reduce((sum, score) => sum + score, 0) / topScores.length;
+  return 3 / topScores.reduce((sum, score) => sum + (1 / score), 0);
 }
 
 function formatUsatTime(record) {
-  if (record.finishDisplay) return record.finishDisplay.replace(/\.000$/, '');
+  if (record.finishDisplay) return record.finishDisplay.replace(/\.\d+$/, '');
   return record.finishSeconds == null ? '—' : fmtRaceTime(record.finishSeconds);
 }
 
@@ -1467,11 +1467,11 @@ function renderUsatSummary(records) {
     return;
   }
   const scores = validUsatScores(records);
-  const rankingScore = calculateUsatRankingScore(records);
+  const overallScore = calculateUsatOverallScore(records);
   const best = scores.length ? Math.max(...scores) : null;
   const items = [['Races', String(records.length)]];
-  if (rankingScore != null) {
-    items.push(['USAT Ranking Score', formatUsatScore(rankingScore)]);
+  if (overallScore != null) {
+    items.push(['Overall Score', formatUsatScore(overallScore)]);
   }
   items.push(['Best USAT Score', formatUsatScore(best)]);
   summary.innerHTML = items.map(([label, value]) => '<div class="usat-summary-item"><span>' + label
