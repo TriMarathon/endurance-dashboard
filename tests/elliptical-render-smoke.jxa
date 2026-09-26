@@ -1,0 +1,103 @@
+#!/usr/bin/env osascript -l JavaScript
+// DASHBOARD_JS=js/dashboard.js osascript -l JavaScript tests/elliptical-render-smoke.jxa
+
+ObjC.import('Foundation');
+
+const sourcePath = ObjC.unwrap(
+  $.NSProcessInfo.processInfo.environment.objectForKey('DASHBOARD_JS')
+);
+if (!sourcePath) throw new Error('Set DASHBOARD_JS before running this test.');
+
+var elements = {
+  'running-summary': { innerHTML: '' },
+  'running-load': { getContext: function () { return {}; } },
+  'running-distance': { getContext: function () { return {}; } },
+  'running-long': { getContext: function () { return {}; } },
+};
+var document = {
+  addEventListener: function () {},
+  getElementById: function (id) { return elements[id] || null; },
+};
+var window = { location: { hash: '' }, addEventListener: function () {} };
+var history = { replaceState: function () {} };
+var getComputedStyle = function () {
+  return { getPropertyValue: function () { return ''; } };
+};
+var Chart = function (context, config) {
+  this.config = config;
+  this.destroy = function () {};
+};
+
+var source = ObjC.unwrap($.NSString.stringWithContentsOfFileEncodingError(
+  sourcePath,
+  $.NSUTF8StringEncoding,
+  null
+));
+
+source += `
+activeSport = 'elliptical';
+runningRange = {start: '2026-08-31', end: '2026-09-27'};
+var originalRange = JSON.stringify(runningRange);
+var workouts = [
+  {date: '2026-08-31', distance_miles: 3.5, duration_seconds: 1800, tss: 20},
+  {date: '2026-09-07', distance_miles: 0, duration_seconds: 3600, tss: 40},
+  {date: '2026-09-14', distance_miles: null, duration_seconds: 1800, tss: 0},
+  {date: '2026-09-21', distance_miles: 5.25, duration_seconds: 7200, tss: 60}
+];
+var summary = sportSummary(workouts, 'elliptical');
+if (summary.distance !== 8.75 || summary.count !== 4 || summary.seconds !== 14400
+    || summary.tss !== 120) throw new Error('Elliptical totals failed');
+if (Math.abs(summary.perWeek - 1) > 0.0001) throw new Error('Elliptical exact-day frequency failed');
+if (summary.averageDuration !== 3600 || summary.averageTss !== 30) {
+  throw new Error('Elliptical averages failed');
+}
+renderRunningSummary(workouts);
+var html = elements['running-summary'].innerHTML;
+if ((html.match(/running-metric"/g) || []).length !== 7) {
+  throw new Error('Seven Elliptical metrics were not rendered');
+}
+['Distance', 'Time', 'Workouts/week', 'Workouts', 'TSS', 'Avg Duration', 'Avg TSS'].forEach(function (label) {
+  if (html.indexOf(label) < 0) throw new Error('Missing Elliptical metric: ' + label);
+});
+['Avg Distance', 'Races', 'Avg Pace', 'Avg Speed', 'Long Workout'].forEach(function (label) {
+  if (html.indexOf(label) >= 0) throw new Error('Disallowed Elliptical metric: ' + label);
+});
+var weeks = sportWeeks(workouts);
+if (weeks.length !== 4 || weeks[0].distance !== 3.5 || weeks[3].distance !== 5.25
+    || Math.abs(weeks[3].moving_average - 2.1875) > 0.0001
+    || weeks[0].time_hours !== 0.5 || weeks[3].time_hours !== 2
+    || Math.abs(weeks[3].time_moving_average - 1) > 0.0001) {
+  throw new Error('Elliptical weekly distance/time moving averages failed');
+}
+var loadChart = buildRunningLoadChart([{date: '2026-09-01', tss: 20, ctl: 10, atl: 12}]);
+if (loadChart.config.data.datasets[0].label !== 'Elliptical TSS'
+    || loadChart.config.data.datasets[1].label !== 'Elliptical CTL'
+    || loadChart.config.data.datasets[2].label !== 'Elliptical ATL'
+    || loadChart.config.data.datasets.length !== 3) {
+  throw new Error('Elliptical load chart failed');
+}
+var distanceChart = buildRunningDistanceChart(weeks);
+if (distanceChart.config.options.scales.y.title.text !== 'Miles'
+    || distanceChart.config.data.datasets[0].label !== 'Weekly Distance') {
+  throw new Error('Elliptical weekly distance chart failed');
+}
+var timeChart = buildRunningLongChart(weeks);
+if (timeChart.config.options.scales.y.title.text !== 'Hours'
+    || timeChart.config.data.datasets[0].label !== 'Weekly Time') {
+  throw new Error('Elliptical weekly time chart failed');
+}
+activeSport = 'running';
+activeSport = 'elliptical';
+activeSport = 'other';
+if (JSON.stringify(runningRange) !== originalRange) {
+  throw new Error('Date range changed while switching sports');
+}
+var empty = sportSummary([], 'elliptical');
+if (empty.distance !== 0 || empty.count !== 0 || empty.seconds !== 0 || empty.tss !== 0
+    || empty.averageDuration !== null || empty.averageTss !== null) {
+  throw new Error('Empty Elliptical range was not graceful');
+}
+console.log('Elliptical render smoke tests passed');
+`;
+
+eval(source);

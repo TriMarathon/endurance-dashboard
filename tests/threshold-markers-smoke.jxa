@@ -92,6 +92,11 @@ if (thresholdChangesForSport().length !== 0
     || buildRunningLoadChart(daily.slice(1), thresholdChangesForSport()).config.data.datasets.length !== 3) {
   throw new Error('Threshold markers appeared for Strength');
 }
+activeSport = 'elliptical';
+if (thresholdChangesForSport().length !== 0
+    || buildRunningLoadChart(daily.slice(1), thresholdChangesForSport()).config.data.datasets.length !== 3) {
+  throw new Error('Threshold markers appeared for Elliptical');
+}
 activeSport = 'other';
 if (thresholdChangesForSport().length !== 0
     || buildRunningLoadChart(daily.slice(1), thresholdChangesForSport()).config.data.datasets.length !== 3) {

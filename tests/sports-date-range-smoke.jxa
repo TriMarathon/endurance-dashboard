@@ -60,7 +60,7 @@ var elements = {
   'running-reset': control(),
   'running-validation': {textContent: '', classList: {toggle: function () {}}},
 };
-var sports = ['running', 'cycling', 'swimming', 'strength', 'other'];
+var sports = ['running', 'cycling', 'swimming', 'strength', 'elliptical', 'other'];
 var buttons = sports.map(function (sport) {
   return {
     sport: sport,
@@ -85,6 +85,7 @@ fullSportAnalysis = {sports: {
   cycling: {activities: [], daily: initialDaily},
   swimming: {activities: [], daily: initialDaily},
   strength: {activities: [], daily: initialDaily},
+  elliptical: {activities: [], daily: initialDaily},
   other: {activities: [], daily: initialDaily},
 }};
 runningRange = runningDefaultRange(initialDaily);

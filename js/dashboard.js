@@ -2480,7 +2480,8 @@ function runningRows() {
 }
 
 function thresholdChangesForSport(sportName = activeSport) {
-  if (!runningRange || sportName === 'strength' || sportName === 'other') return [];
+  if (!runningRange || sportName === 'strength' || sportName === 'elliptical'
+      || sportName === 'other') return [];
   const grouped = fullSportAnalysis && fullSportAnalysis.threshold_changes;
   const changes = grouped && Array.isArray(grouped[sportName]) ? grouped[sportName] : [];
   const expectedType = sportName === 'running' ? 'rftp'
@@ -2556,6 +2557,20 @@ function sportSummary(activities, sportName = activeSport) {
     };
   }
 
+  if (sportName === 'elliptical') {
+    const distanceRows = activities.filter((row) => Number.isFinite(Number(row.distance_miles))
+      && Number(row.distance_miles) > 0);
+    return {
+      distance: distanceRows.reduce((sum, row) => sum + Number(row.distance_miles), 0),
+      seconds,
+      count,
+      perWeek: selectedDays > 0 ? count / (selectedDays / 7) : 0,
+      tss,
+      averageDuration: count > 0 ? seconds / count : null,
+      averageTss: count > 0 ? tss / count : null,
+    };
+  }
+
   const distanceKey = sportName === 'swimming' ? 'distance_yards' : 'distance_miles';
   const distanceRows = activities.filter((row) => Number.isFinite(Number(row[distanceKey]))
     && Number(row[distanceKey]) > 0);
@@ -2603,8 +2618,17 @@ function renderRunningSummary(activities) {
   const cycling = activeSport === 'cycling';
   const swimming = activeSport === 'swimming';
   const strength = activeSport === 'strength';
+  const elliptical = activeSport === 'elliptical';
   const workload = strength || activeSport === 'other';
-  const metrics = workload ? [
+  const metrics = elliptical ? [
+    ['Distance', `${value.distance.toFixed(1)} mi`],
+    ['Time', fmtRunningTime(value.seconds)],
+    ['Workouts/week', value.perWeek.toFixed(1)],
+    ['Workouts', String(value.count)],
+    ['TSS', Math.round(value.tss).toLocaleString('en-US')],
+    ['Avg Duration', fmtAverageDuration(value.averageDuration)],
+    ['Avg TSS', value.averageTss == null ? '—' : value.averageTss.toFixed(1)],
+  ] : workload ? [
     ['Workouts', String(value.count)],
     ['Time', fmtRunningTime(value.seconds)],
     ['Workouts/week', value.perWeek.toFixed(1)],
@@ -2791,11 +2815,12 @@ function buildRunningLoadChart(rows, changes = thresholdChangesForSport()) {
   const cycling = activeSport === 'cycling';
   const swimming = activeSport === 'swimming';
   const strength = activeSport === 'strength';
+  const elliptical = activeSport === 'elliptical';
   const other = activeSport === 'other';
-  const workload = strength || other;
+  const workload = strength || elliptical || other;
   const barBackground = workload ? palette.otherBg : swimming ? palette.swimBg : cycling ? palette.bikeBg : palette.runBg;
   const barBorder = workload ? palette.otherBd : swimming ? palette.swimBd : cycling ? palette.bikeBd : palette.runBd;
-  const shortName = other ? 'Other' : strength ? 'Strength' : swimming ? 'Swim' : cycling ? 'Bike' : 'Run';
+  const shortName = other ? 'Other' : elliptical ? 'Elliptical' : strength ? 'Strength' : swimming ? 'Swim' : cycling ? 'Bike' : 'Run';
   const config = sportChartBase(labels, [
     { type: 'bar', label: `${shortName} TSS`, data: rows.map((row) => row.tss), backgroundColor: barBackground, borderColor: barBorder, borderWidth: 0 },
     { type: 'line', label: `${shortName} CTL`, data: rows.map((row) => row.ctl), borderColor: palette.line, backgroundColor: palette.lineBg, borderWidth: 2, pointRadius: 1, tension: 0 },
@@ -2830,14 +2855,18 @@ function buildRunningLongChart(weeks) {
   const cycling = activeSport === 'cycling';
   const swimming = activeSport === 'swimming';
   const strength = activeSport === 'strength';
+  const elliptical = activeSport === 'elliptical';
   const workload = strength || activeSport === 'other';
-  const config = sportChartBase(labels, workload ? [
+  const config = sportChartBase(labels, elliptical ? [
+    { type: 'bar', label: 'Weekly Time', data: weeks.map((row) => row.time_hours), backgroundColor: palette.otherBg, borderColor: palette.otherBd, borderWidth: 0 },
+    { type: 'line', label: '4-week average', data: weeks.map((row) => row.time_moving_average), borderColor: palette.line, backgroundColor: palette.lineBg, borderWidth: 2, pointRadius: 2, tension: 0 },
+  ] : workload ? [
     { type: 'bar', label: 'Weekly Workouts', data: weeks.map((row) => row.workouts), backgroundColor: palette.otherBg, borderColor: palette.otherBd, borderWidth: 0 },
     { type: 'line', label: '4-week average', data: weeks.map((row) => row.workouts_moving_average), borderColor: palette.line, backgroundColor: palette.lineBg, borderWidth: 2, pointRadius: 2, tension: 0 },
   ] : [
     { type: 'bar', label: swimming ? 'Longest Swim' : cycling ? 'Longest Ride' : 'Longest Run', data: weeks.map((row) => row.longest), backgroundColor: swimming ? palette.swimBg : cycling ? palette.bikeBg : palette.runBg, borderColor: swimming ? palette.swimBd : cycling ? palette.bikeBd : palette.runBd, borderWidth: 0 },
-  ], workload ? 'Workouts' : swimming ? 'Yards' : 'Miles');
-  config.options.plugins.legend.display = workload;
+  ], elliptical ? 'Hours' : workload ? 'Workouts' : swimming ? 'Yards' : 'Miles');
+  config.options.plugins.legend.display = workload || elliptical;
   return new Chart(document.getElementById('running-long').getContext('2d'), config);
 }
 
@@ -2850,16 +2879,17 @@ function renderRunning() {
   const cycling = activeSport === 'cycling';
   const swimming = activeSport === 'swimming';
   const strength = activeSport === 'strength';
+  const elliptical = activeSport === 'elliptical';
   const other = activeSport === 'other';
   const workload = strength || other;
   const pageTitle = document.getElementById('running-title');
   const loadTitle = document.getElementById('running-load-title');
   const distanceTitle = document.getElementById('running-distance-title');
   const longTitle = document.getElementById('running-long-title');
-  if (pageTitle) pageTitle.textContent = other ? 'Other' : strength ? 'Strength' : swimming ? 'Swimming' : cycling ? 'Cycling' : 'Running';
-  if (loadTitle) loadTitle.textContent = other ? 'Other Load' : strength ? 'Strength Load' : swimming ? 'Swimming Load' : cycling ? 'Cycling Load' : 'Running Load';
+  if (pageTitle) pageTitle.textContent = other ? 'Other' : elliptical ? 'Elliptical' : strength ? 'Strength' : swimming ? 'Swimming' : cycling ? 'Cycling' : 'Running';
+  if (loadTitle) loadTitle.textContent = other ? 'Other Load' : elliptical ? 'Elliptical Load' : strength ? 'Strength Load' : swimming ? 'Swimming Load' : cycling ? 'Cycling Load' : 'Running Load';
   if (distanceTitle) distanceTitle.textContent = workload ? 'Weekly Time' : 'Weekly Distance';
-  if (longTitle) longTitle.textContent = workload ? 'Weekly Workouts' : swimming ? 'Long Swim Progression' : cycling ? 'Long Ride Progression' : 'Long Run Progression';
+  if (longTitle) longTitle.textContent = elliptical ? 'Weekly Time' : workload ? 'Weekly Workouts' : swimming ? 'Long Swim Progression' : cycling ? 'Long Ride Progression' : 'Long Run Progression';
   renderRunningSummary(activities);
   [runningLoadChart, runningDistanceChart, runningLongChart].forEach((chart) => {
     if (chart) chart.destroy();
@@ -2915,6 +2945,7 @@ function initSportSubtabs() {
       const requested = button.getAttribute('data-sport');
       if (requested !== 'running' && requested !== 'cycling'
           && requested !== 'swimming' && requested !== 'strength'
+          && requested !== 'elliptical'
           && requested !== 'other') return;
       activeSport = requested;
       document.querySelectorAll('.sport-subtab[data-sport]').forEach((item) => {
@@ -2937,7 +2968,8 @@ async function loadSportAnalysis() {
     if (!response.ok) throw new Error('HTTP ' + response.status);
     const doc = await response.json();
     if (!doc || !doc.sports || !doc.sports.running || !doc.sports.cycling
-        || !doc.sports.swimming || !doc.sports.strength || !doc.sports.other
+        || !doc.sports.swimming || !doc.sports.strength || !doc.sports.elliptical
+        || !doc.sports.other
         || !Array.isArray(doc.sports.running.activities)
         || !Array.isArray(doc.sports.running.daily)
         || !Array.isArray(doc.sports.cycling.activities)
@@ -2946,6 +2978,8 @@ async function loadSportAnalysis() {
         || !Array.isArray(doc.sports.swimming.daily)
         || !Array.isArray(doc.sports.strength.activities)
         || !Array.isArray(doc.sports.strength.daily)
+        || !Array.isArray(doc.sports.elliptical.activities)
+        || !Array.isArray(doc.sports.elliptical.daily)
         || !Array.isArray(doc.sports.other.activities)
         || !Array.isArray(doc.sports.other.daily)) {
       throw new Error('Invalid sport analysis document');

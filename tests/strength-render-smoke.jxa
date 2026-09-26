@@ -35,7 +35,7 @@ var source = ObjC.unwrap($.NSString.stringWithContentsOfFileEncodingError(
 ));
 
 [
-  "other ? 'Other' : strength ? 'Strength'",
+  "strength ? 'Strength'",
   "workload ? 'Hours'",
   "label: 'Weekly Workouts'",
   '!doc.sports.strength',

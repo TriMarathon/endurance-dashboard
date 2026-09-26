@@ -35,7 +35,7 @@ var source = ObjC.unwrap($.NSString.stringWithContentsOfFileEncodingError(
 ));
 
 [
-  "strength ? 'Strength' : swimming ? 'Swim'",
+  "swimming ? 'Swim'",
   "swimming ? 'Yards' : 'Miles'",
   "swimming ? 'Longest Swim'",
   '!doc.sports.swimming',
