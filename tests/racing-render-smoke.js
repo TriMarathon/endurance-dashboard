@@ -15,7 +15,7 @@ const racingTabOrder = ['upcoming', 'history', 'prsb', 'usat']
   .map((tab) => html.indexOf(`data-subtab="${tab}"`));
 assert.deepStrictEqual(racingTabOrder, [...racingTabOrder].sort((a, b) => a - b));
 assert(html.includes('css/dashboard.css?v=20260926-1'));
-assert(html.includes('js/dashboard.js?v=20260926-2'));
+assert(html.includes('js/dashboard.js?v=20260926-3'));
 assert(html.includes('data-tab="sports"'));
 assert(html.includes('id="running-summary"'));
 assert(html.includes('id="running-load"'));
@@ -42,6 +42,9 @@ assert(css.includes('flex-wrap: wrap'));
 assert(js.includes("const BASE_PR_SB_URL = 'data/pr_sb.json'"));
 assert(js.includes("const BASE_USAT_RESULTS_URL = 'data/usat_results.json'"));
 assert(js.includes('function renderUsatResults()'));
+assert(js.includes('function calculateUsatRankingScore(records)'));
+assert(js.includes("items.push(['USAT Ranking Score'"));
+assert(!js.includes("['Average USAT Score'"));
 assert(js.includes("Number(score).toFixed(3)"));
 assert(js.includes("record.finishDisplay.replace(/\\.000$/, '')"));
 assert(html.includes('id="usat-results-table"'));
