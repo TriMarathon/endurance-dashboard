@@ -1193,7 +1193,16 @@ function normalizeCompletedRace(record) {
   const duration = typeof record.duration_seconds === 'number'
     ? record.duration_seconds
     : null;
-  return { date: date, name: name, category: category, duration: duration };
+  const metric = (key) => Number.isFinite(Number(record[key])) ? Number(record[key]) : null;
+  return {
+    date: date, name: name, category: category, duration: duration,
+    preRaceCtl: metric('pre_race_ctl'),
+    raceDayTsb: metric('race_day_tsb'),
+    preRaceLoadRatio: metric('pre_race_load_ratio'),
+    preRaceRampRate: metric('pre_race_ramp_rate'),
+    raceTss: metric('race_tss'), dayTss: metric('day_tss'),
+    deltaAtl: metric('delta_atl'),
+  };
 }
 
 function fmtRaceTime(seconds) {
@@ -1206,6 +1215,32 @@ function fmtRaceTime(seconds) {
     return m + ':' + String(s).padStart(2, '0');
   }
   return h + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+}
+
+function fmtRaceMetric(value, decimals, signed) {
+  if (value == null || !Number.isFinite(Number(value))) return '—';
+  const numeric = Number(value);
+  const text = numeric.toFixed(decimals);
+  return signed && numeric > 0 ? '+' + text : text;
+}
+
+const RACE_HISTORY_METRICS = [
+  ['CTL', 'Chronic Training Load from the day before the race.', 'preRaceCtl', 1, false],
+  ['TSB', 'Race-day Training Stress Balance, representing pre-race freshness.', 'raceDayTsb', 1, true],
+  ['Load Ratio', 'ATL/CTL ratio from the day before the race.', 'preRaceLoadRatio', 2, false],
+  ['Ramp', '7-day CTL ramp rate from the day before the race.', 'preRaceRampRate', 1, true],
+  ['Race TSS', 'TSS from the race activity only.', 'raceTss', 1, false],
+  ['Day TSS', 'Total TSS from all activities on race day.', 'dayTss', 1, false],
+  ['ΔATL', 'Net change in ATL across race day.', 'deltaAtl', 1, true],
+];
+
+function renderRaceHistoryMetrics(race) {
+  return '<dl class="race-history-metrics">' + RACE_HISTORY_METRICS.map((metric) =>
+    '<div class="race-history-metric">'
+      + '<dt title="' + escapeHtml(metric[1]) + '">' + metric[0] + '</dt>'
+      + '<dd>' + fmtRaceMetric(race[metric[2]], metric[3], metric[4]) + '</dd>'
+    + '</div>'
+  ).join('') + '</dl>';
 }
 
 function collectHistoryYears(records) {
@@ -1363,6 +1398,9 @@ function renderRaceHistoryTable() {
       + '<td class="races-col-name">' + nameCell + '</td>'
       + '<td class="races-col-type">' + catCell + '</td>'
       + '<td class="race-history-col-time">' + timeCell + '</td>'
+      + '</tr>';
+    html += '<tr class="race-history-detail-row">'
+      + '<td colspan="4">' + renderRaceHistoryMetrics(r) + '</td>'
       + '</tr>';
   });
   tbody.innerHTML = html;

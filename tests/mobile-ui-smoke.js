@@ -23,6 +23,7 @@ assert.match(css, /\.tab-nav::-webkit-scrollbar/);
 assert.match(css, /\.sport-subtabs::-webkit-scrollbar/);
 assert.match(css, /\.racing-subtabs::-webkit-scrollbar/);
 assert.match(css, /\.usat-table-wrap[\s\S]*overflow-x: auto/);
+assert.match(css, /\.race-history-metrics[\s\S]*grid-template-columns: repeat\(3, minmax\(0, 1fr\)\)/);
 assert.match(css, /\.usat-table-wrap \.races-table \{ display: table; \}/);
 assert.match(css, /\.subtab-link[\s\S]*min-height: 44px/);
 assert.match(css, /\.date-field input\[type="date"\][\s\S]*font-size: 16px/);
