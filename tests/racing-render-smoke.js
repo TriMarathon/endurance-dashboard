@@ -1,5 +1,6 @@
 const fs = require('fs');
 const assert = require('assert');
+const vm = require('vm');
 
 const css = fs.readFileSync('css/dashboard.css', 'utf8');
 const js = fs.readFileSync('js/dashboard.js', 'utf8');
@@ -14,8 +15,8 @@ assert(html.includes('data-subtab="usat"'));
 const racingTabOrder = ['upcoming', 'history', 'prsb', 'usat']
   .map((tab) => html.indexOf(`data-subtab="${tab}"`));
 assert.deepStrictEqual(racingTabOrder, [...racingTabOrder].sort((a, b) => a - b));
-assert(html.includes('css/dashboard.css?v=20260926-1'));
-assert(html.includes('js/dashboard.js?v=20260926-4'));
+assert(html.includes('css/dashboard.css?v=20260927-1'));
+assert(html.includes('js/dashboard.js?v=20260927-1'));
 assert(html.includes('data-tab="sports"'));
 assert(html.includes('id="running-summary"'));
 assert(html.includes('id="running-load"'));
@@ -47,7 +48,12 @@ assert(js.includes('const RACE_HISTORY_METRICS = ['));
 assert(js.includes("'pre_race_ctl'"));
 assert(js.includes("'delta_atl'"));
 assert(js.includes('function renderRaceHistoryMetrics(race)'));
+assert(js.includes('record.age_grade_percent != null'));
+assert(js.includes('function renderRaceAgeGrade(race)'));
+assert(js.includes("race.ageGradePercent.toFixed(1) + '%'"));
+assert(js.includes("if (!race.ageGradeExpected) return ''"));
 assert(css.includes('.race-history-metrics'));
+assert(css.includes('.race-history-age-grade'));
 assert(css.includes('grid-template-columns: repeat(3, minmax(0, 1fr))'));
 assert(js.includes("items.push(['Overall Score'"));
 assert(!js.includes('USAT Ranking Score'));
@@ -75,5 +81,54 @@ assert.deepStrictEqual(
   ['1 Mile', '5K', '4 Mile', '5 Mile', '8K', '10K', '10 Mile',
     'Half Marathon', 'Marathon', 'Sprint', 'Olympic', '70.3', '140.6'],
 );
+
+function extractFunction(name) {
+  const start = js.indexOf(`function ${name}(`);
+  assert(start >= 0, `Missing function ${name}`);
+  const bodyStart = js.indexOf('{', start);
+  let depth = 0;
+  for (let i = bodyStart; i < js.length; i += 1) {
+    if (js[i] === '{') depth += 1;
+    if (js[i] === '}') depth -= 1;
+    if (depth === 0) return js.slice(start, i + 1);
+  }
+  throw new Error(`Unclosed function ${name}`);
+}
+
+const ageGradeContext = {};
+vm.createContext(ageGradeContext);
+vm.runInContext(`
+  const COMPLETED_RACES_AMBIGUOUS_CATEGORY = '5 Mile / 8K';
+  const COMPLETED_RACES_5MILE_CATEGORY = '5 Mile';
+  const RUNNING_AGE_GRADE_EVENTS = new Set([
+    '1 Mile', '5K', '4 Mile', '5 Mile', '8K', '10K', '10 Mile',
+    'Half Marathon', 'Marathon'
+  ]);
+  ${extractFunction('normalizeCompletedRace')}
+  ${extractFunction('renderRaceAgeGrade')}
+  this.normalizeCompletedRace = normalizeCompletedRace;
+  this.renderRaceAgeGrade = renderRaceAgeGrade;
+`, ageGradeContext);
+
+const gradedRun = ageGradeContext.normalizeCompletedRace({
+  category: '5K', age_grade_percent: 83.74,
+});
+assert(ageGradeContext.renderRaceAgeGrade(gradedRun).includes('Age Grade 83.7%'));
+const over100 = ageGradeContext.normalizeCompletedRace({
+  category: 'Marathon', age_grade_percent: 104.96,
+});
+assert(ageGradeContext.renderRaceAgeGrade(over100).includes('Age Grade 105.0%'));
+const missingGrade = ageGradeContext.normalizeCompletedRace({
+  category: '10K', age_grade_percent: null,
+});
+assert(ageGradeContext.renderRaceAgeGrade(missingGrade).includes('Age Grade —'));
+const triathlon = ageGradeContext.normalizeCompletedRace({
+  category: 'Sprint', age_grade_percent: 83.7,
+});
+assert.strictEqual(ageGradeContext.renderRaceAgeGrade(triathlon), '');
+const ambiguous = ageGradeContext.normalizeCompletedRace({
+  category: '5 Mile / 8K', age_grade_percent: 83.7,
+});
+assert.strictEqual(ageGradeContext.renderRaceAgeGrade(ambiguous), '');
 
 console.log('Racing/PR-SB static smoke checks passed.');

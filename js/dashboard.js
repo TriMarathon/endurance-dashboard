@@ -1172,6 +1172,10 @@ async function loadRaces() {
 const COMPLETED_RACES_AMBIGUOUS_CATEGORY = '5 Mile / 8K';
 const COMPLETED_RACES_5MILE_CATEGORY = '5 Mile';
 const COMPLETED_RACES_8K_CATEGORY = '8K';
+const RUNNING_AGE_GRADE_EVENTS = new Set([
+  '1 Mile', '5K', '4 Mile', '5 Mile', '8K', '10K', '10 Mile',
+  'Half Marathon', 'Marathon',
+]);
 
 const COMPLETED_RACE_SORTS = [
   { value: 'newest',  label: 'Newest first'  },
@@ -1185,6 +1189,7 @@ function normalizeCompletedRace(record) {
   const date = record.date != null ? String(record.date) : null;
   const name = record.activity_name != null ? String(record.activity_name).trim() : '';
   let category = record.category != null ? String(record.category).trim() : null;
+  const ageGradeExpected = RUNNING_AGE_GRADE_EVENTS.has(category);
   if (category === '') {
     category = null;
   } else if (category === COMPLETED_RACES_AMBIGUOUS_CATEGORY) {
@@ -1194,6 +1199,10 @@ function normalizeCompletedRace(record) {
     ? record.duration_seconds
     : null;
   const metric = (key) => Number.isFinite(Number(record[key])) ? Number(record[key]) : null;
+  const ageGradePercent = record.age_grade_percent != null
+    && Number.isFinite(Number(record.age_grade_percent))
+    ? Number(record.age_grade_percent)
+    : null;
   return {
     date: date, name: name, category: category, duration: duration,
     preRaceCtl: metric('pre_race_ctl'),
@@ -1202,6 +1211,7 @@ function normalizeCompletedRace(record) {
     preRaceRampRate: metric('pre_race_ramp_rate'),
     raceTss: metric('race_tss'), dayTss: metric('day_tss'),
     deltaAtl: metric('delta_atl'),
+    ageGradePercent: ageGradePercent, ageGradeExpected: ageGradeExpected,
   };
 }
 
@@ -1222,6 +1232,13 @@ function fmtRaceMetric(value, decimals, signed) {
   const numeric = Number(value);
   const text = numeric.toFixed(decimals);
   return signed && numeric > 0 ? '+' + text : text;
+}
+
+function renderRaceAgeGrade(race) {
+  if (!race.ageGradeExpected) return '';
+  return '<div class="race-history-age-grade">Age Grade '
+    + (race.ageGradePercent == null ? '—' : race.ageGradePercent.toFixed(1) + '%')
+    + '</div>';
 }
 
 const RACE_HISTORY_METRICS = [
@@ -1392,7 +1409,8 @@ function renderRaceHistoryTable() {
     const dateCell = r.date ? fmtMediumDate(r.date) : '—';
     const nameCell = r.name ? escapeHtml(r.name) : '—';
     const catCell = r.category === null ? 'Unclassified' : escapeHtml(r.category);
-    const timeCell = r.duration != null ? fmtRaceTime(r.duration) : '—';
+    const timeCell = (r.duration != null ? fmtRaceTime(r.duration) : '—')
+      + renderRaceAgeGrade(r);
     html += '<tr>'
       + '<td class="races-col-date">' + dateCell + '</td>'
       + '<td class="races-col-name">' + nameCell + '</td>'
