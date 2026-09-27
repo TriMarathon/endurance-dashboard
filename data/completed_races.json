@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T21:12:11Z",
+  "generated_at": "2026-09-27T21:13:20Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-27",
   "count": 198,
@@ -2287,7 +2287,7 @@
     {
       "date": "2022-02-12",
       "activity_name": "The USOLE Valentine's Trail Challenge - AG 1st",
-      "category": "5 Mile / 8K",
+      "category": null,
       "duration_seconds": 1909.0,
       "garmin_activity_id": 8284516266,
       "distance_meters": 7549.85986328125,
