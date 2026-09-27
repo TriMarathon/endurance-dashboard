@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T18:47:29Z",
+  "generated_at": "2026-09-27T20:19:42Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-27",
   "count": 198,
@@ -17,7 +17,11 @@
       "pre_race_ramp_rate": -6.361586369205938,
       "race_tss": 365.82883116569417,
       "day_tss": 365.82883116569417,
-      "delta_atl": 39.033317797676446
+      "delta_atl": 39.033317797676446,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2026-08-23",
@@ -32,7 +36,11 @@
       "pre_race_ramp_rate": 2.2991706980565,
       "race_tss": 83.0,
       "day_tss": 83.0,
-      "delta_atl": -1.2332376140521433
+      "delta_atl": -1.2332376140521433,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2026-08-16",
@@ -47,7 +55,11 @@
       "pre_race_ramp_rate": 1.9453526978356308,
       "race_tss": 93.85047638433942,
       "day_tss": 103.62971988727001,
-      "delta_atl": 2.2233070616920685
+      "delta_atl": 2.2233070616920685,
+      "age_grade_percent": 75.43604651162791,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10 Mile",
+      "age_grade_age": 57
     },
     {
       "date": "2026-08-09",
@@ -62,7 +74,11 @@
       "pre_race_ramp_rate": -1.9881175701582379,
       "race_tss": 88.14059605142498,
       "day_tss": 88.14059605142499,
-      "delta_atl": 1.4370974509509296
+      "delta_atl": 1.4370974509509296,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2026-08-02",
@@ -77,7 +93,11 @@
       "pre_race_ramp_rate": 2.2609771536304777,
       "race_tss": 78.75923693682098,
       "day_tss": 193.41801102221729,
-      "delta_atl": 12.959246188273355
+      "delta_atl": 12.959246188273355,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2026-07-26",
@@ -92,7 +112,11 @@
       "pre_race_ramp_rate": 3.032038994348923,
       "race_tss": 80.24804828555453,
       "day_tss": 80.24804828555453,
-      "delta_atl": -1.7468743354900766
+      "delta_atl": -1.7468743354900766,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2026-07-18",
@@ -107,7 +131,11 @@
       "pre_race_ramp_rate": -0.003969938557048636,
       "race_tss": 11.667644491221129,
       "day_tss": 61.54916875309388,
-      "delta_atl": -3.597377281465029
+      "delta_atl": -3.597377281465029,
+      "age_grade_percent": 89.45686900958466,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "1 Mile",
+      "age_grade_age": 57
     },
     {
       "date": "2026-07-12",
@@ -122,7 +150,11 @@
       "pre_race_ramp_rate": 4.402283135577989,
       "race_tss": 96.69051368572435,
       "day_tss": 96.69051368572434,
-      "delta_atl": 0.7755058552475873
+      "delta_atl": 0.7755058552475873,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2026-07-04",
@@ -137,7 +169,11 @@
       "pre_race_ramp_rate": -2.054119729184592,
       "race_tss": 40.37476522503341,
       "day_tss": 85.44235109248703,
-      "delta_atl": 2.0490593429483965
+      "delta_atl": 2.0490593429483965,
+      "age_grade_percent": 81.76833447566827,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "4 Mile",
+      "age_grade_age": 56
     },
     {
       "date": "2026-06-28",
@@ -152,7 +188,11 @@
       "pre_race_ramp_rate": -0.24350417495605825,
       "race_tss": 85.60894264063617,
       "day_tss": 85.60894264063617,
-      "delta_atl": 2.397525681855413
+      "delta_atl": 2.397525681855413,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2026-06-21",
@@ -167,7 +207,11 @@
       "pre_race_ramp_rate": -1.658719221424633,
       "race_tss": 32.253839249989454,
       "day_tss": 66.81931185949095,
-      "delta_atl": 1.1514827156283047
+      "delta_atl": 1.1514827156283047,
+      "age_grade_percent": 82.28980322003578,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 56
     },
     {
       "date": "2026-06-14",
@@ -182,7 +226,11 @@
       "pre_race_ramp_rate": -5.324303105951373,
       "race_tss": 368.05215116725174,
       "day_tss": 368.05215116725185,
-      "delta_atl": 40.434644298885544
+      "delta_atl": 40.434644298885544,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2026-05-25",
@@ -197,7 +245,11 @@
       "pre_race_ramp_rate": 3.433896848401332,
       "race_tss": 62.19973161364491,
       "day_tss": 190.15611925111648,
-      "delta_atl": 13.352741033512316
+      "delta_atl": 13.352741033512316,
+      "age_grade_percent": 82.01281684820509,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10K",
+      "age_grade_age": 56
     },
     {
       "date": "2026-05-23",
@@ -212,7 +264,11 @@
       "pre_race_ramp_rate": 5.744959825777713,
       "race_tss": 64.85474725561957,
       "day_tss": 87.75223454284017,
-      "delta_atl": -1.5596408714262822
+      "delta_atl": -1.5596408714262822,
+      "age_grade_percent": 82.36842105263158,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10K",
+      "age_grade_age": 56
     },
     {
       "date": "2026-05-17",
@@ -227,7 +283,11 @@
       "pre_race_ramp_rate": 3.5504674829962397,
       "race_tss": 59.38448808730392,
       "day_tss": 170.06461778314605,
-      "delta_atl": 12.073219110527873
+      "delta_atl": 12.073219110527873,
+      "age_grade_percent": 79.2990604877019,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10K",
+      "age_grade_age": 56
     },
     {
       "date": "2026-05-09",
@@ -242,7 +302,11 @@
       "pre_race_ramp_rate": 3.82349951409185,
       "race_tss": 33.83325024151771,
       "day_tss": 94.16223876136182,
-      "delta_atl": 3.7323273713984264
+      "delta_atl": 3.7323273713984264,
+      "age_grade_percent": 79.65367965367966,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 56
     },
     {
       "date": "2026-04-26",
@@ -257,7 +321,11 @@
       "pre_race_ramp_rate": -6.104400019332559,
       "race_tss": 31.435118634920546,
       "day_tss": 69.33887299246996,
-      "delta_atl": 4.855866000187206
+      "delta_atl": 4.855866000187206,
+      "age_grade_percent": 84.24908424908425,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 56
     },
     {
       "date": "2026-04-20",
@@ -272,7 +340,11 @@
       "pre_race_ramp_rate": -9.052188218176013,
       "race_tss": 242.08143677015562,
       "day_tss": 242.08143677015562,
-      "delta_atl": 26.86668058830397
+      "delta_atl": 26.86668058830397,
+      "age_grade_percent": 79.91952839898943,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 56
     },
     {
       "date": "2026-04-12",
@@ -287,7 +359,11 @@
       "pre_race_ramp_rate": -1.9504644751243205,
       "race_tss": 96.97756966701343,
       "day_tss": 122.27260658219213,
-      "delta_atl": 6.7844750508809994
+      "delta_atl": 6.7844750508809994,
+      "age_grade_percent": 77.34335839598997,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10 Mile",
+      "age_grade_age": 56
     },
     {
       "date": "2026-03-22",
@@ -302,7 +378,11 @@
       "pre_race_ramp_rate": -0.18687715443125796,
       "race_tss": 52.06877314138361,
       "day_tss": 62.50590825682273,
-      "delta_atl": -1.67383485423791
+      "delta_atl": -1.67383485423791,
+      "age_grade_percent": 82.43093922651934,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "8K",
+      "age_grade_age": 56
     },
     {
       "date": "2026-03-15",
@@ -317,7 +397,11 @@
       "pre_race_ramp_rate": 1.3062188527109129,
       "race_tss": 130.47364496261568,
       "day_tss": 130.47364496261568,
-      "delta_atl": 6.5263990275362005
+      "delta_atl": 6.5263990275362005,
+      "age_grade_percent": 80.34388432981633,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 56
     },
     {
       "date": "2026-03-14",
@@ -332,7 +416,11 @@
       "pre_race_ramp_rate": 2.2005006980663495,
       "race_tss": 19.059651299427674,
       "day_tss": 43.99869281517445,
-      "delta_atl": -5.750900124193265
+      "delta_atl": -5.750900124193265,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2026-03-14",
@@ -347,7 +435,11 @@
       "pre_race_ramp_rate": 2.2005006980663495,
       "race_tss": 13.75857958814833,
       "day_tss": 43.99869281517445,
-      "delta_atl": -5.750900124193265
+      "delta_atl": -5.750900124193265,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2026-03-14",
@@ -362,7 +454,11 @@
       "pre_race_ramp_rate": 2.2005006980663495,
       "race_tss": 10.649163466532094,
       "day_tss": 43.99869281517445,
-      "delta_atl": -5.750900124193265
+      "delta_atl": -5.750900124193265,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2026-01-25",
@@ -377,7 +473,11 @@
       "pre_race_ramp_rate": 3.11529467504225,
       "race_tss": 31.898441940266043,
       "day_tss": 76.62013638471049,
-      "delta_atl": -0.5130668794004976
+      "delta_atl": -0.5130668794004976,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2026-01-25",
@@ -392,7 +492,11 @@
       "pre_race_ramp_rate": 3.11529467504225,
       "race_tss": 34.721694444444445,
       "day_tss": 76.62013638471049,
-      "delta_atl": -0.5130668794004976
+      "delta_atl": -0.5130668794004976,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2026-01-25",
@@ -407,7 +511,11 @@
       "pre_race_ramp_rate": 3.11529467504225,
       "race_tss": 10.0,
       "day_tss": 76.62013638471049,
-      "delta_atl": -0.5130668794004976
+      "delta_atl": -0.5130668794004976,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2025-11-27",
@@ -422,7 +530,11 @@
       "pre_race_ramp_rate": -2.231050460956169,
       "race_tss": 32.11347867724517,
       "day_tss": 88.68228394052332,
-      "delta_atl": 4.267024971708246
+      "delta_atl": 4.267024971708246,
+      "age_grade_percent": 85.5813953488372,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 56
     },
     {
       "date": "2025-11-09",
@@ -437,7 +549,11 @@
       "pre_race_ramp_rate": -2.654516789339425,
       "race_tss": 31.427252542387073,
       "day_tss": 66.01346740051571,
-      "delta_atl": 1.5210349003727544
+      "delta_atl": 1.5210349003727544,
+      "age_grade_percent": 78.09847198641766,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 56
     },
     {
       "date": "2025-10-25",
@@ -452,7 +568,11 @@
       "pre_race_ramp_rate": -8.440814797334852,
       "race_tss": 32.18812035795136,
       "day_tss": 72.20236984688181,
-      "delta_atl": 5.3073296674269415
+      "delta_atl": 5.3073296674269415,
+      "age_grade_percent": 84.7926267281106,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 56
     },
     {
       "date": "2025-10-12",
@@ -467,7 +587,11 @@
       "pre_race_ramp_rate": -5.59088137214593,
       "race_tss": 238.04412770923608,
       "day_tss": 238.04412770923608,
-      "delta_atl": 23.507209819981874
+      "delta_atl": 23.507209819981874,
+      "age_grade_percent": 81.8417018014565,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 56
     },
     {
       "date": "2025-09-06",
@@ -482,7 +606,11 @@
       "pre_race_ramp_rate": 5.222495756730822,
       "race_tss": 130.25526871847845,
       "day_tss": 139.8721667551349,
-      "delta_atl": 6.914135240965592
+      "delta_atl": 6.914135240965592,
+      "age_grade_percent": 83.74745417515274,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 56
     },
     {
       "date": "2025-08-24",
@@ -497,7 +625,11 @@
       "pre_race_ramp_rate": -0.912281271183943,
       "race_tss": 27.11546999652321,
       "day_tss": 27.115469996523213,
-      "delta_atl": -5.037513782613999
+      "delta_atl": -5.037513782613999,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2025-08-17",
@@ -512,7 +644,11 @@
       "pre_race_ramp_rate": -2.387126932205277,
       "race_tss": 104.55422302477663,
       "day_tss": 117.25358789765752,
-      "delta_atl": 7.832183610649182
+      "delta_atl": 7.832183610649182,
+      "age_grade_percent": 78.88548057259713,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10 Mile",
+      "age_grade_age": 56
     },
     {
       "date": "2025-07-19",
@@ -527,7 +663,11 @@
       "pre_race_ramp_rate": -2.8326133309399495,
       "race_tss": 11.09046765797669,
       "day_tss": 86.70453031071894,
-      "delta_atl": 0.4167086977879535
+      "delta_atl": 0.4167086977879535,
+      "age_grade_percent": 88.6041642917642,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "1 Mile",
+      "age_grade_age": 56
     },
     {
       "date": "2025-07-13",
@@ -542,7 +682,11 @@
       "pre_race_ramp_rate": -4.053264860906836,
       "race_tss": 62.69293123724145,
       "day_tss": 62.69293123724145,
-      "delta_atl": -1.2344541106615878
+      "delta_atl": -1.2344541106615878,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2025-07-04",
@@ -557,7 +701,11 @@
       "pre_race_ramp_rate": -3.423129826216538,
       "race_tss": 40.36424889988034,
       "day_tss": 89.70662703924317,
-      "delta_atl": 1.6033293528901993
+      "delta_atl": 1.6033293528901993,
+      "age_grade_percent": 83.60424028268551,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "4 Mile",
+      "age_grade_age": 55
     },
     {
       "date": "2025-06-22",
@@ -572,7 +720,11 @@
       "pre_race_ramp_rate": -8.856369303711375,
       "race_tss": 231.28699042535726,
       "day_tss": 231.28699042535726,
-      "delta_atl": 21.212219077195456
+      "delta_atl": 21.212219077195456,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2025-06-15",
@@ -587,7 +739,11 @@
       "pre_race_ramp_rate": 1.6848763170938383,
       "race_tss": 30.334895086737657,
       "day_tss": 77.01326913087337,
-      "delta_atl": -5.256418799323953
+      "delta_atl": -5.256418799323953,
+      "age_grade_percent": 83.53156450137237,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 55
     },
     {
       "date": "2025-05-24",
@@ -602,7 +758,11 @@
       "pre_race_ramp_rate": -2.349194706584626,
       "race_tss": 96.80951990095937,
       "day_tss": 151.30729662263366,
-      "delta_atl": 4.800336671870397
+      "delta_atl": 4.800336671870397,
+      "age_grade_percent": 81.20021242697823,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10 Mile",
+      "age_grade_age": 55
     },
     {
       "date": "2025-05-18",
@@ -617,7 +777,11 @@
       "pre_race_ramp_rate": 3.2973222348273765,
       "race_tss": 62.568592514984246,
       "day_tss": 93.89700722801071,
-      "delta_atl": -3.7409967517231735
+      "delta_atl": -3.7409967517231735,
+      "age_grade_percent": 82.82153983088563,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10K",
+      "age_grade_age": 55
     },
     {
       "date": "2025-04-27",
@@ -632,7 +796,11 @@
       "pre_race_ramp_rate": -6.393918388844895,
       "race_tss": 30.296075298003206,
       "day_tss": 45.099312777750086,
-      "delta_atl": -3.422289490144891
+      "delta_atl": -3.422289490144891,
+      "age_grade_percent": 82.40072202166066,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 55
     },
     {
       "date": "2025-04-21",
@@ -647,7 +815,11 @@
       "pre_race_ramp_rate": -6.677634486109341,
       "race_tss": 214.93991956396653,
       "day_tss": 214.93991956396653,
-      "delta_atl": 18.438111535635784
+      "delta_atl": 18.438111535635784,
+      "age_grade_percent": 72.69755957546448,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 55
     },
     {
       "date": "2025-04-13",
@@ -662,7 +834,11 @@
       "pre_race_ramp_rate": -1.658160939530049,
       "race_tss": 96.46894366485633,
       "day_tss": 121.68695332463221,
-      "delta_atl": 2.165714857110217
+      "delta_atl": 2.165714857110217,
+      "age_grade_percent": 80.03140539125883,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10 Mile",
+      "age_grade_age": 55
     },
     {
       "date": "2025-04-06",
@@ -677,7 +853,11 @@
       "pre_race_ramp_rate": 4.535461463613345,
       "race_tss": 31.69974338268593,
       "day_tss": 146.12666480433106,
-      "delta_atl": 2.5881881708096017
+      "delta_atl": 2.5881881708096017,
+      "age_grade_percent": 84.85130111524164,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 55
     },
     {
       "date": "2025-03-29",
@@ -692,7 +872,11 @@
       "pre_race_ramp_rate": 4.7552297026054475,
       "race_tss": 26.51567853829637,
       "day_tss": 66.32271523696335,
-      "delta_atl": -8.44662916438763
+      "delta_atl": -8.44662916438763,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2025-03-29",
@@ -707,7 +891,11 @@
       "pre_race_ramp_rate": 4.7552297026054475,
       "race_tss": null,
       "day_tss": 66.32271523696335,
-      "delta_atl": -8.44662916438763
+      "delta_atl": -8.44662916438763,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2025-03-29",
@@ -722,7 +910,11 @@
       "pre_race_ramp_rate": 4.7552297026054475,
       "race_tss": 22.382473171241852,
       "day_tss": 66.32271523696335,
-      "delta_atl": -8.44662916438763
+      "delta_atl": -8.44662916438763,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2025-03-23",
@@ -737,7 +929,11 @@
       "pre_race_ramp_rate": 4.555581790355703,
       "race_tss": 50.90074293296131,
       "day_tss": 176.97197509991747,
-      "delta_atl": 7.912022631530974
+      "delta_atl": 7.912022631530974,
+      "age_grade_percent": 83.13659359190557,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "8K",
+      "age_grade_age": 55
     },
     {
       "date": "2025-03-16",
@@ -752,7 +948,11 @@
       "pre_race_ramp_rate": 3.066298862494051,
       "race_tss": 132.0,
       "day_tss": 209.07363797888308,
-      "delta_atl": 12.460741568503451
+      "delta_atl": 12.460741568503451,
+      "age_grade_percent": 79.38425565081839,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 55
     },
     {
       "date": "2025-02-16",
@@ -767,7 +967,11 @@
       "pre_race_ramp_rate": 5.802280539500458,
       "race_tss": 37.62440927241265,
       "day_tss": 107.79060310995754,
-      "delta_atl": 0.24844691575631828
+      "delta_atl": 0.24844691575631828,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2025-02-16",
@@ -782,7 +986,11 @@
       "pre_race_ramp_rate": 5.802280539500458,
       "race_tss": 47.184333333333335,
       "day_tss": 107.79060310995754,
-      "delta_atl": 0.24844691575631828
+      "delta_atl": 0.24844691575631828,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2025-02-16",
@@ -797,7 +1005,11 @@
       "pre_race_ramp_rate": 5.802280539500458,
       "race_tss": 22.981860504211564,
       "day_tss": 107.79060310995754,
-      "delta_atl": 0.24844691575631828
+      "delta_atl": 0.24844691575631828,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2025-01-19",
@@ -812,7 +1024,11 @@
       "pre_race_ramp_rate": 4.749345917982964,
       "race_tss": null,
       "day_tss": 83.95154465484114,
-      "delta_atl": -3.2771628373002244
+      "delta_atl": -3.2771628373002244,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2025-01-19",
@@ -827,7 +1043,11 @@
       "pre_race_ramp_rate": 4.749345917982964,
       "race_tss": null,
       "day_tss": 83.95154465484114,
-      "delta_atl": -3.2771628373002244
+      "delta_atl": -3.2771628373002244,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2025-01-19",
@@ -842,7 +1062,11 @@
       "pre_race_ramp_rate": 4.749345917982964,
       "race_tss": null,
       "day_tss": 83.95154465484114,
-      "delta_atl": -3.2771628373002244
+      "delta_atl": -3.2771628373002244,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2024-11-24",
@@ -857,7 +1081,11 @@
       "pre_race_ramp_rate": 1.3237003539619607,
       "race_tss": 64.92913581138143,
       "day_tss": 102.0527437556709,
-      "delta_atl": 6.546935771138145
+      "delta_atl": 6.546935771138145,
+      "age_grade_percent": 80.87116916151814,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10K",
+      "age_grade_age": 55
     },
     {
       "date": "2024-11-10",
@@ -872,7 +1100,11 @@
       "pre_race_ramp_rate": -1.3584932404992927,
       "race_tss": 33.54404979385156,
       "day_tss": 43.67421118690228,
-      "delta_atl": 1.4386784393022438
+      "delta_atl": 1.4386784393022438,
+      "age_grade_percent": 77.36534215353666,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 55
     },
     {
       "date": "2024-10-13",
@@ -887,7 +1119,11 @@
       "pre_race_ramp_rate": -4.766943538341678,
       "race_tss": 218.2439858951311,
       "day_tss": 218.2439858951311,
-      "delta_atl": 25.948571621025422
+      "delta_atl": 25.948571621025422,
+      "age_grade_percent": 68.16826496897413,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 55
     },
     {
       "date": "2024-09-07",
@@ -902,7 +1138,11 @@
       "pre_race_ramp_rate": 1.466569392609017,
       "race_tss": 391.59283270891405,
       "day_tss": 391.5928327089141,
-      "delta_atl": 41.41439197050346
+      "delta_atl": 41.41439197050346,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2024-08-25",
@@ -917,7 +1157,11 @@
       "pre_race_ramp_rate": -2.0051971137526294,
       "race_tss": 100.22488406736908,
       "day_tss": 140.23238237025294,
-      "delta_atl": 10.491504124766138
+      "delta_atl": 10.491504124766138,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2024-08-04",
@@ -932,7 +1176,11 @@
       "pre_race_ramp_rate": -0.769412768601768,
       "race_tss": 88.96045897576397,
       "day_tss": 119.04492454104042,
-      "delta_atl": 7.646160582769994
+      "delta_atl": 7.646160582769994,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2024-07-28",
@@ -947,7 +1195,11 @@
       "pre_race_ramp_rate": -4.806785452090992,
       "race_tss": 91.26868713365333,
       "day_tss": 91.26868713365333,
-      "delta_atl": 4.5730799049980675
+      "delta_atl": 4.5730799049980675,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2024-07-27",
@@ -962,7 +1214,11 @@
       "pre_race_ramp_rate": -2.0084410784939877,
       "race_tss": 10.722975560634271,
       "day_tss": 22.85890701672448,
-      "delta_atl": -5.230002637167615
+      "delta_atl": -5.230002637167615,
+      "age_grade_percent": 86.07494725387753,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "1 Mile",
+      "age_grade_age": 55
     },
     {
       "date": "2024-07-04",
@@ -977,7 +1233,11 @@
       "pre_race_ramp_rate": 0.17865246859823003,
       "race_tss": 41.244844587906734,
       "day_tss": 64.89380629311594,
-      "delta_atl": -1.3829135741152214
+      "delta_atl": -1.3829135741152214,
+      "age_grade_percent": 83.3096590909091,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "4 Mile",
+      "age_grade_age": 54
     },
     {
       "date": "2024-06-23",
@@ -992,7 +1252,11 @@
       "pre_race_ramp_rate": 0.7645643120397096,
       "race_tss": 173.6137706974751,
       "day_tss": 173.61377069747508,
-      "delta_atl": 12.607232111173516
+      "delta_atl": 12.607232111173516,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2024-06-16",
@@ -1007,7 +1271,11 @@
       "pre_race_ramp_rate": 1.682833750497963,
       "race_tss": 35.182966062399316,
       "day_tss": 150.47307043772537,
-      "delta_atl": 8.731983732054715
+      "delta_atl": 8.731983732054715,
+      "age_grade_percent": 83.25666973321067,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 54
     },
     {
       "date": "2024-06-09",
@@ -1022,7 +1290,11 @@
       "pre_race_ramp_rate": 5.47093495663438,
       "race_tss": 127.07151613180861,
       "day_tss": 132.8372099412307,
-      "delta_atl": 5.807434744516925
+      "delta_atl": 5.807434744516925,
+      "age_grade_percent": 81.47325933400606,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 54
     },
     {
       "date": "2024-06-02",
@@ -1037,7 +1309,11 @@
       "pre_race_ramp_rate": 2.801072506567465,
       "race_tss": 32.22971811390269,
       "day_tss": 157.5447670374367,
-      "delta_atl": 10.360604111344585
+      "delta_atl": 10.360604111344585,
+      "age_grade_percent": 84.47672302656602,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 54
     },
     {
       "date": "2024-05-25",
@@ -1052,7 +1328,11 @@
       "pre_race_ramp_rate": 1.6984656972620868,
       "race_tss": 98.55675563345235,
       "day_tss": 103.91421843135275,
-      "delta_atl": 4.366137130698164
+      "delta_atl": 4.366137130698164,
+      "age_grade_percent": 79.22111866178777,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10 Mile",
+      "age_grade_age": 54
     },
     {
       "date": "2024-05-19",
@@ -1067,7 +1347,11 @@
       "pre_race_ramp_rate": 0.43545688253475845,
       "race_tss": 60.5095458498653,
       "day_tss": 70.89632323062725,
-      "delta_atl": 1.2836116300087923
+      "delta_atl": 1.2836116300087923,
+      "age_grade_percent": 80.078125,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10K",
+      "age_grade_age": 54
     },
     {
       "date": "2024-05-11",
@@ -1082,7 +1366,11 @@
       "pre_race_ramp_rate": 2.2133406291275364,
       "race_tss": 34.8870667847929,
       "day_tss": 62.12816550988667,
-      "delta_atl": -0.10865683245414459
+      "delta_atl": -0.10865683245414459,
+      "age_grade_percent": 79.3859649122807,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 54
     },
     {
       "date": "2024-04-28",
@@ -1097,7 +1385,11 @@
       "pre_race_ramp_rate": -4.921759601827979,
       "race_tss": 32.44769170205561,
       "day_tss": 63.357459714750135,
-      "delta_atl": 4.294248264594874
+      "delta_atl": 4.294248264594874,
+      "age_grade_percent": 83.56417359187442,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 54
     },
     {
       "date": "2024-04-21",
@@ -1112,7 +1404,11 @@
       "pre_race_ramp_rate": -5.90110211393511,
       "race_tss": 33.515728301660005,
       "day_tss": 59.66081311462743,
-      "delta_atl": 3.4612414138171985
+      "delta_atl": 3.4612414138171985,
+      "age_grade_percent": 78.49089332176929,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 54
     },
     {
       "date": "2024-04-15",
@@ -1127,7 +1423,11 @@
       "pre_race_ramp_rate": -7.045881960802163,
       "race_tss": 225.0634991228958,
       "day_tss": 225.0634991228958,
-      "delta_atl": 24.002925867369214
+      "delta_atl": 24.002925867369214,
+      "age_grade_percent": 72.98144760909328,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 54
     },
     {
       "date": "2024-03-24",
@@ -1142,7 +1442,11 @@
       "pre_race_ramp_rate": 1.2521544976172834,
       "race_tss": 49.710981044131856,
       "day_tss": 96.04585905576572,
-      "delta_atl": 3.028238793819625
+      "delta_atl": 3.028238793819625,
+      "age_grade_percent": 82.6944757609921,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "8K",
+      "age_grade_age": 54
     },
     {
       "date": "2024-03-09",
@@ -1157,7 +1461,11 @@
       "pre_race_ramp_rate": -3.8263322246079383,
       "race_tss": 31.31205143791943,
       "day_tss": 48.88077612663987,
-      "delta_atl": -1.6548251230026807
+      "delta_atl": -1.6548251230026807,
+      "age_grade_percent": 86.60287081339713,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 54
     },
     {
       "date": "2024-02-11",
@@ -1172,7 +1480,11 @@
       "pre_race_ramp_rate": -1.7653485213850217,
       "race_tss": 31.56851137648127,
       "day_tss": 59.64931861368143,
-      "delta_atl": -0.4814451684707137
+      "delta_atl": -0.4814451684707137,
+      "age_grade_percent": 84.0297121634169,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 54
     },
     {
       "date": "2024-01-14",
@@ -1187,7 +1499,11 @@
       "pre_race_ramp_rate": -1.3270791907274742,
       "race_tss": 33.50164131764771,
       "day_tss": 93.9743312812924,
-      "delta_atl": 4.291010254163247
+      "delta_atl": 4.291010254163247,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2024-01-14",
@@ -1202,7 +1518,11 @@
       "pre_race_ramp_rate": -1.3270791907274742,
       "race_tss": 41.35875,
       "day_tss": 93.9743312812924,
-      "delta_atl": 4.291010254163247
+      "delta_atl": 4.291010254163247,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2024-01-14",
@@ -1217,7 +1537,11 @@
       "pre_race_ramp_rate": -1.3270791907274742,
       "race_tss": 19.11393996364469,
       "day_tss": 93.9743312812924,
-      "delta_atl": 4.291010254163247
+      "delta_atl": 4.291010254163247,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2023-11-12",
@@ -1232,7 +1556,11 @@
       "pre_race_ramp_rate": -3.04394775241974,
       "race_tss": 31.974667206058744,
       "day_tss": 116.69707630961027,
-      "delta_atl": 6.502697545294552
+      "delta_atl": 6.502697545294552,
+      "age_grade_percent": 80.01768346595934,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 54
     },
     {
       "date": "2023-10-28",
@@ -1247,7 +1575,11 @@
       "pre_race_ramp_rate": -4.103629376644108,
       "race_tss": 31.37854298475237,
       "day_tss": 114.58559940422877,
-      "delta_atl": 8.468678590705458
+      "delta_atl": 8.468678590705458,
+      "age_grade_percent": 82.12341197822141,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 54
     },
     {
       "date": "2023-10-08",
@@ -1262,7 +1594,11 @@
       "pre_race_ramp_rate": -4.644571587791219,
       "race_tss": 220.89131312607063,
       "day_tss": 220.89131312607063,
-      "delta_atl": 21.54894387772118
+      "delta_atl": 21.54894387772118,
+      "age_grade_percent": 78.08219178082192,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 54
     },
     {
       "date": "2023-09-30",
@@ -1277,7 +1613,11 @@
       "pre_race_ramp_rate": -3.8733400570467893,
       "race_tss": 30.65336145726289,
       "day_tss": 122.40497041605629,
-      "delta_atl": 7.847652071575098
+      "delta_atl": 7.847652071575098,
+      "age_grade_percent": 82.34758871701547,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 54
     },
     {
       "date": "2023-09-24",
@@ -1292,7 +1632,11 @@
       "pre_race_ramp_rate": -9.64632239024779,
       "race_tss": 214.58023192064223,
       "day_tss": 214.58023192064223,
-      "delta_atl": 21.20870812215285
+      "delta_atl": 21.20870812215285,
+      "age_grade_percent": 72.21408256485392,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 54
     },
     {
       "date": "2023-09-09",
@@ -1307,7 +1651,11 @@
       "pre_race_ramp_rate": -0.13693460633575683,
       "race_tss": 123.11046911676864,
       "day_tss": 147.1733748429591,
-      "delta_atl": 6.502285958030598
+      "delta_atl": 6.502285958030598,
+      "age_grade_percent": 82.4213964883626,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 54
     },
     {
       "date": "2023-08-27",
@@ -1322,7 +1670,11 @@
       "pre_race_ramp_rate": -2.190229265542527,
       "race_tss": 86.53722622720964,
       "day_tss": 98.80962475605145,
-      "delta_atl": 1.4703836197954274
+      "delta_atl": 1.4703836197954274,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2023-08-20",
@@ -1337,7 +1689,11 @@
       "pre_race_ramp_rate": 4.778958562296779,
       "race_tss": 93.63184334573053,
       "day_tss": 165.96893916864317,
-      "delta_atl": 7.14672061853031
+      "delta_atl": 7.14672061853031,
+      "age_grade_percent": 77.73162221168963,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10 Mile",
+      "age_grade_age": 54
     },
     {
       "date": "2023-08-06",
@@ -1352,7 +1708,11 @@
       "pre_race_ramp_rate": -2.7203002820578916,
       "race_tss": 82.09692111922944,
       "day_tss": 137.96987314473924,
-      "delta_atl": 9.479479585301732
+      "delta_atl": 9.479479585301732,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2023-07-29",
@@ -1367,7 +1727,11 @@
       "pre_race_ramp_rate": -3.584972887541369,
       "race_tss": 11.141467436836827,
       "day_tss": 70.61687560880091,
-      "delta_atl": -0.11881099228909875
+      "delta_atl": -0.11881099228909875,
+      "age_grade_percent": 91.30434782608695,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "1 Mile",
+      "age_grade_age": 54
     },
     {
       "date": "2023-07-04",
@@ -1382,7 +1746,11 @@
       "pre_race_ramp_rate": 1.7853435381695846,
       "race_tss": 38.867272432778336,
       "day_tss": 73.71898496855214,
-      "delta_atl": -3.525663962294445
+      "delta_atl": -3.525663962294445,
+      "age_grade_percent": 84.33647570703408,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "4 Mile",
+      "age_grade_age": 53
     },
     {
       "date": "2023-06-25",
@@ -1397,7 +1765,11 @@
       "pre_race_ramp_rate": -1.9828340043177235,
       "race_tss": 91.15920088763957,
       "day_tss": 91.15920088763957,
-      "delta_atl": 0.3754591960608167
+      "delta_atl": 0.3754591960608167,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2023-06-18",
@@ -1412,7 +1784,11 @@
       "pre_race_ramp_rate": 0.5059177359702431,
       "race_tss": 32.2098920517431,
       "day_tss": 70.27745540008695,
-      "delta_atl": -4.7885773208627995
+      "delta_atl": -4.7885773208627995,
+      "age_grade_percent": 85.60533841754051,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 53
     },
     {
       "date": "2023-06-04",
@@ -1427,7 +1803,11 @@
       "pre_race_ramp_rate": 2.5781751986045975,
       "race_tss": 123.33983728067737,
       "day_tss": 123.33983728067737,
-      "delta_atl": 3.49927815127009
+      "delta_atl": 3.49927815127009,
+      "age_grade_percent": 80.30515960650472,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 53
     },
     {
       "date": "2023-05-27",
@@ -1442,7 +1822,11 @@
       "pre_race_ramp_rate": -4.018199472425877,
       "race_tss": 99.04720026571448,
       "day_tss": 171.04106105629594,
-      "delta_atl": 12.73644455880165
+      "delta_atl": 12.73644455880165,
+      "age_grade_percent": 81.14532685035117,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10 Mile",
+      "age_grade_age": 53
     },
     {
       "date": "2023-05-21",
@@ -1457,7 +1841,11 @@
       "pre_race_ramp_rate": 0.15240025813361058,
       "race_tss": 61.32238439027989,
       "day_tss": 133.59757962323917,
-      "delta_atl": 5.007095691077467
+      "delta_atl": 5.007095691077467,
+      "age_grade_percent": 82.7976459936623,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10K",
+      "age_grade_age": 53
     },
     {
       "date": "2023-05-11",
@@ -1472,7 +1860,11 @@
       "pre_race_ramp_rate": 4.031600341596885,
       "race_tss": 41.13234124893738,
       "day_tss": 66.39779553825475,
-      "delta_atl": -4.636843957827622
+      "delta_atl": -4.636843957827622,
+      "age_grade_percent": 83.24982104509664,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "4 Mile",
+      "age_grade_age": 53
     },
     {
       "date": "2023-05-07",
@@ -1487,7 +1879,11 @@
       "pre_race_ramp_rate": 2.768877422866524,
       "race_tss": 123.36785610748527,
       "day_tss": 149.95398061059026,
-      "delta_atl": 8.532449797359988
+      "delta_atl": 8.532449797359988,
+      "age_grade_percent": 79.98400319936013,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 53
     },
     {
       "date": "2023-04-30",
@@ -1502,7 +1898,11 @@
       "pre_race_ramp_rate": 2.242019440746759,
       "race_tss": 32.18317582846099,
       "day_tss": 58.34534383892083,
-      "delta_atl": -2.0419157149116813
+      "delta_atl": -2.0419157149116813,
+      "age_grade_percent": 85.11848341232228,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 53
     },
     {
       "date": "2023-04-17",
@@ -1517,7 +1917,11 @@
       "pre_race_ramp_rate": -7.858578728510935,
       "race_tss": 100.14222222222222,
       "day_tss": 100.14222222222222,
-      "delta_atl": 6.153647355352319
+      "delta_atl": 6.153647355352319,
+      "age_grade_percent": 79.19847328244275,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 53
     },
     {
       "date": "2023-03-26",
@@ -1532,7 +1936,11 @@
       "pre_race_ramp_rate": 4.141872587643249,
       "race_tss": 50.65681468606904,
       "day_tss": 104.20699451184173,
-      "delta_atl": 1.1752155147194685
+      "delta_atl": 1.1752155147194685,
+      "age_grade_percent": 83.46727898966705,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "8K",
+      "age_grade_age": 53
     },
     {
       "date": "2023-03-12",
@@ -1547,7 +1955,11 @@
       "pre_race_ramp_rate": -0.2487638007329167,
       "race_tss": 75.00964725879248,
       "day_tss": 146.70320693958348,
-      "delta_atl": 9.484127953661144
+      "delta_atl": 9.484127953661144,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2023-03-11",
@@ -1562,7 +1974,11 @@
       "pre_race_ramp_rate": -0.3143039379875745,
       "race_tss": 32.03650056425425,
       "day_tss": 62.35929776862568,
-      "delta_atl": -2.0117139668219153
+      "delta_atl": -2.0117139668219153,
+      "age_grade_percent": 86.42925890279115,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 53
     },
     {
       "date": "2023-02-12",
@@ -1577,7 +1993,11 @@
       "pre_race_ramp_rate": 0.04688757716567693,
       "race_tss": 96.74944115582876,
       "day_tss": 106.69326345613288,
-      "delta_atl": 4.949154191420661
+      "delta_atl": 4.949154191420661,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2023-01-14",
@@ -1592,7 +2012,11 @@
       "pre_race_ramp_rate": 1.1489942926289842,
       "race_tss": 33.39711484113271,
       "day_tss": 79.69225504919297,
-      "delta_atl": 1.8810312617463865
+      "delta_atl": 1.8810312617463865,
+      "age_grade_percent": 82.99445471349352,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 53
     },
     {
       "date": "2022-11-06",
@@ -1607,7 +2031,11 @@
       "pre_race_ramp_rate": -7.047770918030082,
       "race_tss": 168.63786569005595,
       "day_tss": 168.63786569005595,
-      "delta_atl": 15.97825787401861
+      "delta_atl": 15.97825787401861,
+      "age_grade_percent": 48.19417024735803,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 53
     },
     {
       "date": "2022-10-02",
@@ -1622,7 +2050,11 @@
       "pre_race_ramp_rate": -10.52721041391969,
       "race_tss": 226.2042245391965,
       "day_tss": 226.2042245391965,
-      "delta_atl": 21.98262752179209
+      "delta_atl": 21.98262752179209,
+      "age_grade_percent": 78.76257354336687,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 53
     },
     {
       "date": "2022-08-27",
@@ -1637,7 +2069,11 @@
       "pre_race_ramp_rate": 2.5116467182006517,
       "race_tss": 32.42642364083754,
       "day_tss": 135.87004348412302,
-      "delta_atl": 3.097941838658244
+      "delta_atl": 3.097941838658244,
+      "age_grade_percent": 84.55743879472693,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 53
     },
     {
       "date": "2022-07-31",
@@ -1652,7 +2088,11 @@
       "pre_race_ramp_rate": 3.0885212919697835,
       "race_tss": 31.420531501228943,
       "day_tss": 144.64715065297304,
-      "delta_atl": 7.5902200198563605
+      "delta_atl": 7.5902200198563605,
+      "age_grade_percent": 84.63713477851084,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 53
     },
     {
       "date": "2022-07-09",
@@ -1667,7 +2107,11 @@
       "pre_race_ramp_rate": -0.8331194367113,
       "race_tss": 124.18916327787845,
       "day_tss": 206.53460900792757,
-      "delta_atl": 18.417257087816424
+      "delta_atl": 18.417257087816424,
+      "age_grade_percent": 80.1924619085806,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 53
     },
     {
       "date": "2022-07-04",
@@ -1682,7 +2126,11 @@
       "pre_race_ramp_rate": -1.4559725946565578,
       "race_tss": 41.34011944484464,
       "day_tss": 62.96034011579491,
-      "delta_atl": -0.5345584056655355
+      "delta_atl": -0.5345584056655355,
+      "age_grade_percent": 83.0093592512599,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "4 Mile",
+      "age_grade_age": 52
     },
     {
       "date": "2022-06-05",
@@ -1697,7 +2145,11 @@
       "pre_race_ramp_rate": 0.6670365637188951,
       "race_tss": 31.70501837123261,
       "day_tss": 75.02996244776362,
-      "delta_atl": 0.31402014096860853
+      "delta_atl": 0.31402014096860853,
+      "age_grade_percent": 84.21550094517958,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 52
     },
     {
       "date": "2022-05-28",
@@ -1712,7 +2164,11 @@
       "pre_race_ramp_rate": 0.20380614022035104,
       "race_tss": 95.32026514728518,
       "day_tss": 95.32026514728518,
-      "delta_atl": 3.3927309701473405
+      "delta_atl": 3.3927309701473405,
+      "age_grade_percent": 82.44253669343672,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10 Mile",
+      "age_grade_age": 52
     },
     {
       "date": "2022-05-22",
@@ -1727,7 +2183,11 @@
       "pre_race_ramp_rate": 3.154758257540905,
       "race_tss": 31.97069775093083,
       "day_tss": 79.23189129150697,
-      "delta_atl": 1.1943974227933722
+      "delta_atl": 1.1943974227933722,
+      "age_grade_percent": 83.58348968105066,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 52
     },
     {
       "date": "2022-05-14",
@@ -1742,7 +2202,11 @@
       "pre_race_ramp_rate": 0.6868407549269193,
       "race_tss": 32.0153262702406,
       "day_tss": 65.31268102082154,
-      "delta_atl": 1.52585363936263
+      "delta_atl": 1.52585363936263,
+      "age_grade_percent": 83.81937911571026,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 52
     },
     {
       "date": "2022-05-07",
@@ -1757,7 +2221,11 @@
       "pre_race_ramp_rate": -4.178865619694619,
       "race_tss": 31.817445804656213,
       "day_tss": 63.7518893996616,
-      "delta_atl": 3.9240236833912476
+      "delta_atl": 3.9240236833912476,
+      "age_grade_percent": 81.87690205716632,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 52
     },
     {
       "date": "2022-04-18",
@@ -1772,7 +2240,11 @@
       "pre_race_ramp_rate": -8.182284628942611,
       "race_tss": 227.6365000597175,
       "day_tss": 227.6365000597175,
-      "delta_atl": 23.295863836551206
+      "delta_atl": 23.295863836551206,
+      "age_grade_percent": 76.66418049599105,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 52
     },
     {
       "date": "2022-03-19",
@@ -1787,7 +2259,11 @@
       "pre_race_ramp_rate": 2.7258909726583056,
       "race_tss": 130.80171983799272,
       "day_tss": 163.5113571257088,
-      "delta_atl": 10.370306228672973
+      "delta_atl": 10.370306228672973,
+      "age_grade_percent": 80.78255553291217,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 52
     },
     {
       "date": "2022-03-12",
@@ -1802,7 +2278,11 @@
       "pre_race_ramp_rate": -0.28196104153080626,
       "race_tss": 31.392762152063288,
       "day_tss": 86.64876556053646,
-      "delta_atl": 1.3032569367012314
+      "delta_atl": 1.3032569367012314,
+      "age_grade_percent": 83.3489242282507,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 52
     },
     {
       "date": "2022-02-12",
@@ -1817,7 +2297,11 @@
       "pre_race_ramp_rate": 0.7936783181936278,
       "race_tss": 40.97728149322047,
       "day_tss": 70.67489412198475,
-      "delta_atl": -0.36418228503795547
+      "delta_atl": -0.36418228503795547,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2021-12-18",
@@ -1832,7 +2316,11 @@
       "pre_race_ramp_rate": 0.10140770661121223,
       "race_tss": 45.37975606136613,
       "day_tss": 74.28386299900289,
-      "delta_atl": 1.693265925692927
+      "delta_atl": 1.693265925692927,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2021-11-25",
@@ -1847,7 +2335,11 @@
       "pre_race_ramp_rate": 2.995498454417209,
       "race_tss": 32.6818904401673,
       "day_tss": 69.6685231450908,
-      "delta_atl": 1.381458711944397
+      "delta_atl": 1.381458711944397,
+      "age_grade_percent": 81.0,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 52
     },
     {
       "date": "2021-11-13",
@@ -1862,7 +2354,11 @@
       "pre_race_ramp_rate": -1.1077185825469726,
       "race_tss": 45.95805244387487,
       "day_tss": 55.768888713777855,
-      "delta_atl": 2.907542912289621
+      "delta_atl": 2.907542912289621,
+      "age_grade_percent": 75.02601456815817,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "8K",
+      "age_grade_age": 52
     },
     {
       "date": "2021-11-07",
@@ -1877,7 +2373,11 @@
       "pre_race_ramp_rate": -6.3170074831059395,
       "race_tss": 28.67555255886083,
       "day_tss": 40.69200306066949,
-      "delta_atl": 3.441716037281461
+      "delta_atl": 3.441716037281461,
+      "age_grade_percent": 75.93940139242711,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 52
     },
     {
       "date": "2021-10-11",
@@ -1892,7 +2392,11 @@
       "pre_race_ramp_rate": -12.336688593795145,
       "race_tss": 222.0577558674492,
       "day_tss": 222.0577558674492,
-      "delta_atl": 25.375649834903864
+      "delta_atl": 25.375649834903864,
+      "age_grade_percent": 77.56815394774078,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 52
     },
     {
       "date": "2021-10-03",
@@ -1907,7 +2411,11 @@
       "pre_race_ramp_rate": -7.358216857683345,
       "race_tss": 233.71122532262478,
       "day_tss": 233.71122532262478,
-      "delta_atl": 24.287956524199444
+      "delta_atl": 24.287956524199444,
+      "age_grade_percent": 80.92707410687925,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 52
     },
     {
       "date": "2021-09-04",
@@ -1922,7 +2430,11 @@
       "pre_race_ramp_rate": 2.5767428201066878,
       "race_tss": 123.26068045449693,
       "day_tss": 166.2083009655343,
-      "delta_atl": 9.302140725908217
+      "delta_atl": 9.302140725908217,
+      "age_grade_percent": 81.29614438063987,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 52
     },
     {
       "date": "2021-08-28",
@@ -1937,7 +2449,11 @@
       "pre_race_ramp_rate": 1.80699281438433,
       "race_tss": 32.87109327348848,
       "day_tss": 51.719626309148396,
-      "delta_atl": -5.461628942339516
+      "delta_atl": -5.461628942339516,
+      "age_grade_percent": 83.97737983034872,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 52
     },
     {
       "date": "2021-07-31",
@@ -1952,7 +2468,11 @@
       "pre_race_ramp_rate": 0.7236116667148877,
       "race_tss": 31.408156551393816,
       "day_tss": 91.85270716074037,
-      "delta_atl": 1.6293471569304359
+      "delta_atl": 1.6293471569304359,
+      "age_grade_percent": 85.26315789473684,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 52
     },
     {
       "date": "2021-07-11",
@@ -1967,7 +2487,11 @@
       "pre_race_ramp_rate": -0.6449639186159573,
       "race_tss": 123.692678290603,
       "day_tss": 156.64901703590266,
-      "delta_atl": 11.816036600883606
+      "delta_atl": 11.816036600883606,
+      "age_grade_percent": 78.86639045249314,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 52
     },
     {
       "date": "2021-07-03",
@@ -1982,7 +2506,11 @@
       "pre_race_ramp_rate": -0.12011786482872822,
       "race_tss": 42.34209269278961,
       "day_tss": 84.99711403331223,
-      "delta_atl": 1.6265385308884674
+      "delta_atl": 1.6265385308884674,
+      "age_grade_percent": 79.94409503843465,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "4 Mile",
+      "age_grade_age": 51
     },
     {
       "date": "2021-06-13",
@@ -1997,7 +2525,11 @@
       "pre_race_ramp_rate": 2.4356525016808988,
       "race_tss": 70.77008333333333,
       "day_tss": 167.62447358805747,
-      "delta_atl": 11.322345629833961
+      "delta_atl": 11.322345629833961,
+      "age_grade_percent": 73.59803520261973,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10K",
+      "age_grade_age": 51
     },
     {
       "date": "2020-10-04",
@@ -2012,7 +2544,11 @@
       "pre_race_ramp_rate": -3.5513317708301066,
       "race_tss": 270.69265720310096,
       "day_tss": 270.69265720310096,
-      "delta_atl": 33.814063406347444
+      "delta_atl": 33.814063406347444,
+      "age_grade_percent": 61.25103375686039,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 51
     },
     {
       "date": "2020-09-12",
@@ -2027,7 +2563,11 @@
       "pre_race_ramp_rate": -4.371316760105039,
       "race_tss": 258.7368964954748,
       "day_tss": 258.7368964954748,
-      "delta_atl": 32.27983165690328
+      "delta_atl": 32.27983165690328,
+      "age_grade_percent": 56.13508495294089,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 51
     },
     {
       "date": "2019-11-03",
@@ -2042,7 +2582,11 @@
       "pre_race_ramp_rate": -7.861355508599161,
       "race_tss": 226.12293185971163,
       "day_tss": 226.12293185971163,
-      "delta_atl": 25.483398986301225
+      "delta_atl": 25.483398986301225,
+      "age_grade_percent": 77.56317862976843,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 50
     },
     {
       "date": "2019-10-23",
@@ -2057,7 +2601,11 @@
       "pre_race_ramp_rate": -3.923540934738554,
       "race_tss": 15.477277777777777,
       "day_tss": 29.251957445780437,
-      "delta_atl": -5.402497001007262
+      "delta_atl": -5.402497001007262,
+      "age_grade_percent": 82.33082706766918,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 50
     },
     {
       "date": "2019-10-05",
@@ -2072,7 +2620,11 @@
       "pre_race_ramp_rate": 1.972079904605664,
       "race_tss": 31.39809567902516,
       "day_tss": 49.09412711457588,
-      "delta_atl": -5.949285643652615
+      "delta_atl": -5.949285643652615,
+      "age_grade_percent": 83.58778625954199,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 50
     },
     {
       "date": "2019-09-08",
@@ -2087,7 +2639,11 @@
       "pre_race_ramp_rate": 1.1717519034132664,
       "race_tss": 131.33272564725607,
       "day_tss": 152.99307268478537,
-      "delta_atl": 9.726980207918828
+      "delta_atl": 9.726980207918828,
+      "age_grade_percent": 75.16402933230412,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 50
     },
     {
       "date": "2019-09-07",
@@ -2102,7 +2658,11 @@
       "pre_race_ramp_rate": 1.790187671429166,
       "race_tss": 33.428331006313705,
       "day_tss": 76.26463842339038,
-      "delta_atl": -0.562097741768028
+      "delta_atl": -0.562097741768028,
+      "age_grade_percent": 79.27601809954751,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 50
     },
     {
       "date": "2019-08-24",
@@ -2117,7 +2677,11 @@
       "pre_race_ramp_rate": 1.9586654224605269,
       "race_tss": 57.874223860293604,
       "day_tss": 92.38506765580658,
-      "delta_atl": 2.0820332755699127
+      "delta_atl": 2.0820332755699127,
+      "age_grade_percent": 75.26382439848037,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10K",
+      "age_grade_age": 50
     },
     {
       "date": "2019-07-21",
@@ -2132,7 +2696,11 @@
       "pre_race_ramp_rate": 1.46763929820019,
       "race_tss": 118.9803588622976,
       "day_tss": 124.04860091801658,
-      "delta_atl": 9.150239599855567
+      "delta_atl": 9.150239599855567,
+      "age_grade_percent": 74.96150885296382,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 50
     },
     {
       "date": "2019-07-04",
@@ -2147,7 +2715,11 @@
       "pre_race_ramp_rate": -1.3999359903721356,
       "race_tss": 41.62046333522943,
       "day_tss": 72.30437028648133,
-      "delta_atl": 4.061132181201778
+      "delta_atl": 4.061132181201778,
+      "age_grade_percent": 77.26648351648352,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "4 Mile",
+      "age_grade_age": 49
     },
     {
       "date": "2019-06-22",
@@ -2162,7 +2734,11 @@
       "pre_race_ramp_rate": -2.0892471779638413,
       "race_tss": 33.21325283658483,
       "day_tss": 83.97361511524583,
-      "delta_atl": 6.138832165011081
+      "delta_atl": 6.138832165011081,
+      "age_grade_percent": 78.85662431941924,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 49
     },
     {
       "date": "2019-06-09",
@@ -2177,7 +2753,11 @@
       "pre_race_ramp_rate": 0.3681273446328248,
       "race_tss": 62.360688579983446,
       "day_tss": 88.2023417502989,
-      "delta_atl": 4.1822602567404985
+      "delta_atl": 4.1822602567404985,
+      "age_grade_percent": 75.29812606473595,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10K",
+      "age_grade_age": 49
     },
     {
       "date": "2019-06-01",
@@ -2192,7 +2772,11 @@
       "pre_race_ramp_rate": 0.761518533877684,
       "race_tss": 33.06230999665348,
       "day_tss": 59.940270282179085,
-      "delta_atl": -0.1838794063616902
+      "delta_atl": -0.1838794063616902,
+      "age_grade_percent": 79.28832116788321,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 49
     },
     {
       "date": "2019-05-26",
@@ -2207,7 +2791,11 @@
       "pre_race_ramp_rate": 1.51443974207222,
       "race_tss": 36.208890795168834,
       "day_tss": 66.08640153787556,
-      "delta_atl": -0.0077124112115853904
+      "delta_atl": -0.0077124112115853904,
+      "age_grade_percent": 79.07188353048225,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 49
     },
     {
       "date": "2019-04-15",
@@ -2222,7 +2810,11 @@
       "pre_race_ramp_rate": -6.468429521259644,
       "race_tss": 256.0278342856516,
       "day_tss": 256.0278342856516,
-      "delta_atl": 29.60545753748496
+      "delta_atl": 29.60545753748496,
+      "age_grade_percent": 72.7512505684402,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 49
     },
     {
       "date": "2019-03-03",
@@ -2237,7 +2829,11 @@
       "pre_race_ramp_rate": -7.728951573702261,
       "race_tss": 244.64287381248707,
       "day_tss": 244.64287381248707,
-      "delta_atl": 28.025914028094412
+      "delta_atl": 28.025914028094412,
+      "age_grade_percent": 74.6941824633486,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 49
     },
     {
       "date": "2018-10-07",
@@ -2252,7 +2848,11 @@
       "pre_race_ramp_rate": -7.0734191103436075,
       "race_tss": 244.47806665305495,
       "day_tss": 244.47806665305495,
-      "delta_atl": 30.319060758259067
+      "delta_atl": 30.319060758259067,
+      "age_grade_percent": 70.56280875088214,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 49
     },
     {
       "date": "2018-09-16",
@@ -2267,7 +2867,11 @@
       "pre_race_ramp_rate": -7.550957712929801,
       "race_tss": 253.805894515606,
       "day_tss": 253.805894515606,
-      "delta_atl": 29.036702293502145
+      "delta_atl": 29.036702293502145,
+      "age_grade_percent": 74.79195885928004,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 49
     },
     {
       "date": "2018-08-25",
@@ -2282,7 +2886,11 @@
       "pre_race_ramp_rate": 0.3541911744639492,
       "race_tss": 61.91438403190336,
       "day_tss": 104.62457053468783,
-      "delta_atl": 2.748678513664089
+      "delta_atl": 2.748678513664089,
+      "age_grade_percent": 75.34880042951053,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10K",
+      "age_grade_age": 49
     },
     {
       "date": "2018-07-22",
@@ -2297,7 +2905,11 @@
       "pre_race_ramp_rate": 2.2337506076066234,
       "race_tss": 121.39618543800701,
       "day_tss": 124.53556587193403,
-      "delta_atl": 7.486926472232781
+      "delta_atl": 7.486926472232781,
+      "age_grade_percent": 74.49353656183678,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 49
     },
     {
       "date": "2018-07-04",
@@ -2312,7 +2924,11 @@
       "pre_race_ramp_rate": -3.444678591807275,
       "race_tss": null,
       "day_tss": 67.99902883704834,
-      "delta_atl": 3.651657286239171
+      "delta_atl": 3.651657286239171,
+      "age_grade_percent": 76.49074708704592,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "4 Mile",
+      "age_grade_age": 48
     },
     {
       "date": "2018-06-02",
@@ -2327,7 +2943,11 @@
       "pre_race_ramp_rate": -1.627780098005374,
       "race_tss": 23.740055555555553,
       "day_tss": 102.5348661076132,
-      "delta_atl": 6.607045108033965
+      "delta_atl": 6.607045108033965,
+      "age_grade_percent": 79.53917050691244,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 48
     },
     {
       "date": "2018-05-27",
@@ -2342,7 +2962,11 @@
       "pre_race_ramp_rate": 1.2810690311596034,
       "race_tss": 44.269888888888886,
       "day_tss": 118.91544314236111,
-      "delta_atl": 8.217027965865654
+      "delta_atl": 8.217027965865654,
+      "age_grade_percent": 75.23975588491717,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 48
     },
     {
       "date": "2018-04-16",
@@ -2357,7 +2981,11 @@
       "pre_race_ramp_rate": -8.066004296178477,
       "race_tss": 174.66671121355282,
       "day_tss": 174.66671121355282,
-      "delta_atl": 19.176073984875664
+      "delta_atl": 19.176073984875664,
+      "age_grade_percent": 71.22192273135668,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 48
     },
     {
       "date": "2018-03-18",
@@ -2372,7 +3000,11 @@
       "pre_race_ramp_rate": 0.7867170557187109,
       "race_tss": 61.61248371766573,
       "day_tss": 80.87271047683457,
-      "delta_atl": 0.06710099394697977
+      "delta_atl": 0.06710099394697977,
+      "age_grade_percent": 74.79484173505276,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 48
     },
     {
       "date": "2018-03-10",
@@ -2387,7 +3019,11 @@
       "pre_race_ramp_rate": 0.03331059353857313,
       "race_tss": 29.25484052158035,
       "day_tss": 85.46523180999574,
-      "delta_atl": 0.8592295400822252
+      "delta_atl": 0.8592295400822252,
+      "age_grade_percent": 80.20446096654274,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 48
     },
     {
       "date": "2017-11-01",
@@ -2402,7 +3038,11 @@
       "pre_race_ramp_rate": 2.495135205436114,
       "race_tss": null,
       "day_tss": 43.27640435112847,
-      "delta_atl": -0.40773369116666913
+      "delta_atl": -0.40773369116666913,
+      "age_grade_percent": 80.20446096654274,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 48
     },
     {
       "date": "2017-10-08",
@@ -2417,7 +3057,11 @@
       "pre_race_ramp_rate": -6.895781495583066,
       "race_tss": null,
       "day_tss": 0.0,
-      "delta_atl": -3.52645493984436
+      "delta_atl": -3.52645493984436,
+      "age_grade_percent": 72.60487268730536,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 48
     },
     {
       "date": "2017-09-23",
@@ -2432,7 +3076,11 @@
       "pre_race_ramp_rate": 0.040485939327027154,
       "race_tss": null,
       "day_tss": 0.0,
-      "delta_atl": -7.724518044988159
+      "delta_atl": -7.724518044988159,
+      "age_grade_percent": 76.9162210338681,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 48
     },
     {
       "date": "2017-08-26",
@@ -2447,7 +3095,11 @@
       "pre_race_ramp_rate": -0.04159055947026502,
       "race_tss": null,
       "day_tss": 109.89533159722222,
-      "delta_atl": 5.876075218644758
+      "delta_atl": 5.876075218644758,
+      "age_grade_percent": 76.50709219858156,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 48
     },
     {
       "date": "2017-08-20",
@@ -2462,7 +3114,11 @@
       "pre_race_ramp_rate": 1.2315328648923867,
       "race_tss": 82.65680555555555,
       "day_tss": 196.37280158487954,
-      "delta_atl": 16.41021966292027
+      "delta_atl": 16.41021966292027,
+      "age_grade_percent": 72.9504785684561,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10K",
+      "age_grade_age": 48
     },
     {
       "date": "2017-08-06",
@@ -2477,7 +3133,11 @@
       "pre_race_ramp_rate": -2.2351825359948734,
       "race_tss": null,
       "day_tss": 81.70907801649305,
-      "delta_atl": 3.7114348402435766
+      "delta_atl": 3.7114348402435766,
+      "age_grade_percent": 74.14089347079039,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 48
     },
     {
       "date": "2017-07-16",
@@ -2492,7 +3152,11 @@
       "pre_race_ramp_rate": -3.8202619752661064,
       "race_tss": 219.74327777777776,
       "day_tss": 229.16883821614582,
-      "delta_atl": 24.130125977703337
+      "delta_atl": 24.130125977703337,
+      "age_grade_percent": 68.01705756929638,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 48
     },
     {
       "date": "2017-07-04",
@@ -2507,7 +3171,11 @@
       "pre_race_ramp_rate": 1.296879373366643,
       "race_tss": 55.39980555555555,
       "day_tss": 103.14767020331487,
-      "delta_atl": 5.35078031633924
+      "delta_atl": 5.35078031633924,
+      "age_grade_percent": 73.50597609561753,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "4 Mile",
+      "age_grade_age": 47
     },
     {
       "date": "2017-06-24",
@@ -2522,7 +3190,11 @@
       "pre_race_ramp_rate": 0.28466579125159797,
       "race_tss": 93.98930555555555,
       "day_tss": 180.69952904256184,
-      "delta_atl": 16.570663005929255
+      "delta_atl": 16.570663005929255,
+      "age_grade_percent": 70.43337383556096,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10K",
+      "age_grade_age": 47
     },
     {
       "date": "2017-06-17",
@@ -2537,7 +3209,11 @@
       "pre_race_ramp_rate": 1.1496619706029065,
       "race_tss": 10.942083333333333,
       "day_tss": 14.00046120876736,
-      "delta_atl": -6.123232871534498
+      "delta_atl": -6.123232871534498,
+      "age_grade_percent": 84.86842105263158,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "1 Mile",
+      "age_grade_age": 47
     },
     {
       "date": "2017-06-03",
@@ -2552,7 +3228,11 @@
       "pre_race_ramp_rate": 0.13163611091429317,
       "race_tss": 45.87788888888889,
       "day_tss": 105.46252397325304,
-      "delta_atl": 7.620304337472639
+      "delta_atl": 7.620304337472639,
+      "age_grade_percent": 73.92055267702936,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 47
     },
     {
       "date": "2017-05-28",
@@ -2567,7 +3247,11 @@
       "pre_race_ramp_rate": -1.5081518743546738,
       "race_tss": 45.664249999999996,
       "day_tss": 61.96275999959309,
-      "delta_atl": 2.3619277216819796
+      "delta_atl": 2.3619277216819796,
+      "age_grade_percent": 72.6039016115352,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 47
     },
     {
       "date": "2017-05-13",
@@ -2582,7 +3266,11 @@
       "pre_race_ramp_rate": 1.8601581100156181,
       "race_tss": 152.66733333333335,
       "day_tss": 166.10967748684354,
-      "delta_atl": 16.90821426614432
+      "delta_atl": 16.90821426614432,
+      "age_grade_percent": 67.35947094945678,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10 Mile",
+      "age_grade_age": 47
     },
     {
       "date": "2017-04-17",
@@ -2597,7 +3285,11 @@
       "pre_race_ramp_rate": -4.929009008921959,
       "race_tss": 292.88141666666667,
       "day_tss": 292.88141666666667,
-      "delta_atl": 35.82335857256318
+      "delta_atl": 35.82335857256318,
+      "age_grade_percent": 67.73581652008967,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 47
     },
     {
       "date": "2017-04-02",
@@ -2612,7 +3304,11 @@
       "pre_race_ramp_rate": -5.62758527770594,
       "race_tss": 72.7632649468316,
       "day_tss": 116.21981428866916,
-      "delta_atl": 10.511631280774722
+      "delta_atl": 10.511631280774722,
+      "age_grade_percent": 72.72727272727273,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "8K",
+      "age_grade_age": 47
     },
     {
       "date": "2017-03-18",
@@ -2627,7 +3323,11 @@
       "pre_race_ramp_rate": -0.4443411386288787,
       "race_tss": 131.5003888888889,
       "day_tss": 217.03294576687284,
-      "delta_atl": 22.839526310026365
+      "delta_atl": 22.839526310026365,
+      "age_grade_percent": 72.84802043422734,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10 Mile",
+      "age_grade_age": 47
     },
     {
       "date": "2016-11-26",
@@ -2642,7 +3342,11 @@
       "pre_race_ramp_rate": -1.5286916211770745,
       "race_tss": 151.83847222222224,
       "day_tss": 151.83847222222224,
-      "delta_atl": 15.229601156466323
+      "delta_atl": 15.229601156466323,
+      "age_grade_percent": 72.23068138561096,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 47
     },
     {
       "date": "2016-11-09",
@@ -2657,7 +3361,11 @@
       "pre_race_ramp_rate": 2.129143264742808,
       "race_tss": 37.05386111111111,
       "day_tss": 60.09023313888889,
-      "delta_atl": 0.8598127029054368
+      "delta_atl": 0.8598127029054368,
+      "age_grade_percent": 79.11275415896488,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 47
     },
     {
       "date": "2016-10-09",
@@ -2672,7 +3380,11 @@
       "pre_race_ramp_rate": -2.0292389579708754,
       "race_tss": null,
       "day_tss": 0.0,
-      "delta_atl": -4.890304764435143
+      "delta_atl": -4.890304764435143,
+      "age_grade_percent": 69.17319714713392,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 47
     },
     {
       "date": "2016-09-10",
@@ -2687,7 +3399,11 @@
       "pre_race_ramp_rate": -0.5615051747059425,
       "race_tss": 338.7721666666667,
       "day_tss": 338.7721666666667,
-      "delta_atl": 42.14757029572127
+      "delta_atl": 42.14757029572127,
+      "age_grade_percent": 68.05856363163822,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 47
     },
     {
       "date": "2016-08-27",
@@ -2702,7 +3418,11 @@
       "pre_race_ramp_rate": -8.815815329998756,
       "race_tss": null,
       "day_tss": 0.0,
-      "delta_atl": -1.9755638760409422
+      "delta_atl": -1.9755638760409422,
+      "age_grade_percent": 74.62946817785527,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 47
     },
     {
       "date": "2016-08-21",
@@ -2717,7 +3437,11 @@
       "pre_race_ramp_rate": -7.787217767419634,
       "race_tss": null,
       "day_tss": 0.0,
-      "delta_atl": -4.6552551516098255
+      "delta_atl": -4.6552551516098255,
+      "age_grade_percent": 71.80016515276631,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10K",
+      "age_grade_age": 47
     },
     {
       "date": "2016-07-23",
@@ -2732,7 +3456,11 @@
       "pre_race_ramp_rate": 1.070138308750451,
       "race_tss": 173.71966666666668,
       "day_tss": 177.0243888888889,
-      "delta_atl": 15.234472295791875
+      "delta_atl": 15.234472295791875,
+      "age_grade_percent": 66.36935991605456,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 47
     },
     {
       "date": "2016-07-17",
@@ -2747,7 +3475,11 @@
       "pre_race_ramp_rate": -2.0335573305438643,
       "race_tss": 189.28269444444445,
       "day_tss": 229.77698544444442,
-      "delta_atl": 22.845898186936715
+      "delta_atl": 22.845898186936715,
+      "age_grade_percent": 70.51282051282051,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 47
     },
     {
       "date": "2016-07-09",
@@ -2762,7 +3494,11 @@
       "pre_race_ramp_rate": 1.7681171052352695,
       "race_tss": 167.56805555555556,
       "day_tss": 228.57207769444446,
-      "delta_atl": 22.83437524461523
+      "delta_atl": 22.83437524461523,
+      "age_grade_percent": 66.32558139534885,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10 Mile",
+      "age_grade_age": 47
     },
     {
       "date": "2016-07-04",
@@ -2777,7 +3513,11 @@
       "pre_race_ramp_rate": 1.5338801476674888,
       "race_tss": 52.402499999999996,
       "day_tss": 97.36935494444444,
-      "delta_atl": 5.7420876135436885
+      "delta_atl": 5.7420876135436885,
+      "age_grade_percent": 71.92408376963351,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "4 Mile",
+      "age_grade_age": 46
     },
     {
       "date": "2016-06-26",
@@ -2792,7 +3532,11 @@
       "pre_race_ramp_rate": -5.742191271565453,
       "race_tss": 77.16219444444444,
       "day_tss": 116.81400277777777,
-      "delta_atl": 11.185046396296308
+      "delta_atl": 11.185046396296308,
+      "age_grade_percent": null,
+      "age_grade_table_version": null,
+      "age_grade_event": null,
+      "age_grade_age": null
     },
     {
       "date": "2016-05-30",
@@ -2807,7 +3551,11 @@
       "pre_race_ramp_rate": -3.7402052447117597,
       "race_tss": 44.007888888888886,
       "day_tss": 57.244,
-      "delta_atl": 2.477657139983215
+      "delta_atl": 2.477657139983215,
+      "age_grade_percent": 73.25280414150129,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 46
     },
     {
       "date": "2016-05-15",
@@ -2822,7 +3570,11 @@
       "pre_race_ramp_rate": -6.142878999051291,
       "race_tss": 394.35397222222224,
       "day_tss": 394.35397222222224,
-      "delta_atl": 47.37579478032429
+      "delta_atl": 47.37579478032429,
+      "age_grade_percent": 67.45495495495496,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Marathon",
+      "age_grade_age": 46
     },
     {
       "date": "2016-04-30",
@@ -2837,7 +3589,11 @@
       "pre_race_ramp_rate": -0.7388418392214788,
       "race_tss": 43.06894444444444,
       "day_tss": 43.06894444444444,
-      "delta_atl": -3.322475500123005
+      "delta_atl": -3.322475500123005,
+      "age_grade_percent": 75.39964476021315,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 46
     },
     {
       "date": "2016-04-09",
@@ -2852,7 +3608,11 @@
       "pre_race_ramp_rate": -0.13795054911280147,
       "race_tss": 188.83825000000002,
       "day_tss": 188.83825000000002,
-      "delta_atl": 15.943339306552915
+      "delta_atl": 15.943339306552915,
+      "age_grade_percent": 67.8874255818149,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 46
     },
     {
       "date": "2016-04-02",
@@ -2867,7 +3627,11 @@
       "pre_race_ramp_rate": -0.2992717889471095,
       "race_tss": 45.86102777777778,
       "day_tss": 45.86102777777778,
-      "delta_atl": -4.002097067095477
+      "delta_atl": -4.002097067095477,
+      "age_grade_percent": 71.10552763819096,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 46
     },
     {
       "date": "2016-03-19",
@@ -2882,7 +3646,11 @@
       "pre_race_ramp_rate": 0.9069425628926382,
       "race_tss": 137.9680277777778,
       "day_tss": 137.9680277777778,
-      "delta_atl": 9.25007554203654
+      "delta_atl": 9.25007554203654,
+      "age_grade_percent": 71.99592668024441,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10 Mile",
+      "age_grade_age": 46
     },
     {
       "date": "2016-03-12",
@@ -2897,7 +3665,11 @@
       "pre_race_ramp_rate": 1.7398326522312288,
       "race_tss": 41.80136111111111,
       "day_tss": 116.43493847222223,
-      "delta_atl": 5.666899488502224
+      "delta_atl": 5.666899488502224,
+      "age_grade_percent": 74.34325744308231,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 46
     },
     {
       "date": "2015-11-28",
@@ -2912,7 +3684,11 @@
       "pre_race_ramp_rate": 0.8143734843235262,
       "race_tss": 232.6908611111111,
       "day_tss": 232.6908611111111,
-      "delta_atl": 30.36291114059338
+      "delta_atl": 30.36291114059338,
+      "age_grade_percent": 65.14889196675901,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "Half Marathon",
+      "age_grade_age": 46
     },
     {
       "date": "2015-11-15",
@@ -2927,7 +3703,11 @@
       "pre_race_ramp_rate": 0.0,
       "race_tss": null,
       "day_tss": 0.0,
-      "delta_atl": 0.0
+      "delta_atl": 0.0,
+      "age_grade_percent": 68.0893300248139,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "8K",
+      "age_grade_age": 46
     },
     {
       "date": "2015-09-26",
@@ -2942,7 +3722,11 @@
       "pre_race_ramp_rate": 0.0,
       "race_tss": null,
       "day_tss": 0.0,
-      "delta_atl": 0.0
+      "delta_atl": 0.0,
+      "age_grade_percent": 67.97437950360288,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 46
     },
     {
       "date": "2015-08-08",
@@ -2957,7 +3741,11 @@
       "pre_race_ramp_rate": 0.0,
       "race_tss": null,
       "day_tss": 0.0,
-      "delta_atl": 0.0
+      "delta_atl": 0.0,
+      "age_grade_percent": 64.90825688073394,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5K",
+      "age_grade_age": 46
     },
     {
       "date": "2015-07-11",
@@ -2972,7 +3760,11 @@
       "pre_race_ramp_rate": 0.0,
       "race_tss": null,
       "day_tss": 0.0,
-      "delta_atl": 0.0
+      "delta_atl": 0.0,
+      "age_grade_percent": 59.47423764458465,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "10 Mile",
+      "age_grade_age": 46
     }
   ]
 }
