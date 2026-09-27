@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T20:19:42Z",
+  "generated_at": "2026-09-27T21:11:05Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-27",
   "count": 198,
@@ -3522,7 +3522,7 @@
     {
       "date": "2016-06-26",
       "activity_name": "Downers Grove 5 Miler",
-      "category": "5 Mile / 8K",
+      "category": "5 Mile",
       "duration_seconds": 1977.692,
       "garmin_activity_id": 1229888799,
       "distance_meters": 8046.72,
