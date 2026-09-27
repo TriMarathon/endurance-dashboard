@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T21:13:20Z",
+  "generated_at": "2026-09-27T22:43:30Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-27",
   "count": 198,
@@ -3533,10 +3533,10 @@
       "race_tss": 77.16219444444444,
       "day_tss": 116.81400277777777,
       "delta_atl": 11.185046396296308,
-      "age_grade_percent": null,
-      "age_grade_table_version": null,
-      "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_percent": 69.87943522044888,
+      "age_grade_table_version": "USATF-MLDR-2025-20250727",
+      "age_grade_event": "5 Mile",
+      "age_grade_age": 46
     },
     {
       "date": "2016-05-30",
