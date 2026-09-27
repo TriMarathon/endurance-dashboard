@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T12:33:34Z",
+  "generated_at": "2026-09-27T13:28:52Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-27",
   "count": 198,
@@ -10,7 +10,14 @@
       "category": "70.3",
       "duration_seconds": 17561.0,
       "garmin_activity_id": 24337280789,
-      "distance_meters": 114813.36
+      "distance_meters": 114813.36,
+      "pre_race_ctl": 90.24695366397059,
+      "race_day_tsb": 17.632530357122477,
+      "pre_race_load_ratio": 0.8046191074462613,
+      "pre_race_ramp_rate": -6.361586369205938,
+      "race_tss": 365.82883116569417,
+      "day_tss": 365.82883116569417,
+      "delta_atl": 39.033317797676446
     },
     {
       "date": "2026-08-23",
@@ -18,7 +25,14 @@
       "category": "Sprint",
       "duration_seconds": 4803.0,
       "garmin_activity_id": 24086514051,
-      "distance_meters": 29803.939453125
+      "distance_meters": 29803.939453125,
+      "pre_race_ctl": 89.04789135897026,
+      "race_day_tsb": -3.2160671553397577,
+      "pre_race_load_ratio": 1.036116151727559,
+      "pre_race_ramp_rate": 2.2991706980565,
+      "race_tss": 83.0,
+      "day_tss": 83.0,
+      "delta_atl": -1.2332376140521433
     },
     {
       "date": "2026-08-16",
@@ -26,7 +40,14 @@
       "category": "10 Mile",
       "duration_seconds": 4128.0,
       "garmin_activity_id": 23999243055,
-      "distance_meters": 16186.6298828125
+      "distance_meters": 16186.6298828125,
+      "pre_race_ctl": 86.74872066091376,
+      "race_day_tsb": -0.17973732078399962,
+      "pre_race_load_ratio": 1.0020719305070396,
+      "pre_race_ramp_rate": 1.9453526978356308,
+      "race_tss": 93.85047638433942,
+      "day_tss": 103.62971988727001,
+      "delta_atl": 2.2233070616920685
     },
     {
       "date": "2026-08-09",
@@ -34,7 +55,14 @@
       "category": "Sprint",
       "duration_seconds": 4256.046,
       "garmin_activity_id": 23912592763,
-      "distance_meters": 26086.81
+      "distance_meters": 26086.81,
+      "pre_race_ctl": 84.80336796307813,
+      "race_day_tsb": 7.458105280448024,
+      "pre_race_load_ratio": 0.9120541381835784,
+      "pre_race_ramp_rate": -1.9881175701582379,
+      "race_tss": 88.14059605142498,
+      "day_tss": 88.14059605142499,
+      "delta_atl": 1.4370974509509296
     },
     {
       "date": "2026-08-02",
@@ -42,7 +70,14 @@
       "category": "Sprint",
       "duration_seconds": 3914.0,
       "garmin_activity_id": 23825256006,
-      "distance_meters": 27111.62
+      "distance_meters": 27111.62,
+      "pre_race_ctl": 86.79148553323637,
+      "race_day_tsb": -9.277954786190904,
+      "pre_race_load_ratio": 1.106899366097818,
+      "pre_race_ramp_rate": 2.2609771536304777,
+      "race_tss": 78.75923693682098,
+      "day_tss": 193.41801102221729,
+      "delta_atl": 12.959246188273355
     },
     {
       "date": "2026-07-26",
@@ -50,7 +85,14 @@
       "category": "Sprint",
       "duration_seconds": 4233.0,
       "garmin_activity_id": 23741579012,
-      "distance_meters": 25023.76
+      "distance_meters": 25023.76,
+      "pre_race_ctl": 84.53050837960589,
+      "race_day_tsb": -8.839886475089855,
+      "pre_race_load_ratio": 1.1045762842853386,
+      "pre_race_ramp_rate": 3.032038994348923,
+      "race_tss": 80.24804828555453,
+      "day_tss": 80.24804828555453,
+      "delta_atl": -1.7468743354900766
     },
     {
       "date": "2026-07-18",
@@ -58,7 +100,14 @@
       "category": "1 Mile",
       "duration_seconds": 313.0,
       "garmin_activity_id": 23648066902,
-      "distance_meters": 1631.72998046875
+      "distance_meters": 1631.72998046875,
+      "pre_race_ctl": 81.97915244320752,
+      "race_day_tsb": -6.593157281326526,
+      "pre_race_load_ratio": 1.0804248041707194,
+      "pre_race_ramp_rate": -0.003969938557048636,
+      "race_tss": 11.667644491221129,
+      "day_tss": 61.54916875309388,
+      "delta_atl": -3.597377281465029
     },
     {
       "date": "2026-07-12",
@@ -66,7 +115,14 @@
       "category": "Sprint",
       "duration_seconds": 4181.0,
       "garmin_activity_id": 23571362637,
-      "distance_meters": 26083.6
+      "distance_meters": 26083.6,
+      "pre_race_ctl": 80.92871758831156,
+      "race_day_tsb": -9.936273109176653,
+      "pre_race_load_ratio": 1.1227780867568293,
+      "pre_race_ramp_rate": 4.402283135577989,
+      "race_tss": 96.69051368572435,
+      "day_tss": 96.69051368572434,
+      "delta_atl": 0.7755058552475873
     },
     {
       "date": "2026-07-04",
@@ -74,7 +130,14 @@
       "category": "4 Mile",
       "duration_seconds": 1459.0,
       "garmin_activity_id": 23476203532,
-      "distance_meters": 6505.2998046875
+      "distance_meters": 6505.2998046875,
+      "pre_race_ctl": 76.31160335895981,
+      "race_day_tsb": 6.261582609091363,
+      "pre_race_load_ratio": 0.9179471753510708,
+      "pre_race_ramp_rate": -2.054119729184592,
+      "race_tss": 40.37476522503341,
+      "day_tss": 85.44235109248703,
+      "delta_atl": 2.0490593429483965
     },
     {
       "date": "2026-06-28",
@@ -82,7 +145,14 @@
       "category": "Sprint",
       "duration_seconds": 4642.0,
       "garmin_activity_id": 23408209956,
-      "distance_meters": 28553.81
+      "distance_meters": 28553.81,
+      "pre_race_ctl": 77.04224074800447,
+      "race_day_tsb": 9.443272990247976,
+      "pre_race_load_ratio": 0.8774273320899928,
+      "pre_race_ramp_rate": -0.24350417495605825,
+      "race_tss": 85.60894264063617,
+      "day_tss": 85.60894264063617,
+      "delta_atl": 2.397525681855413
     },
     {
       "date": "2026-06-21",
@@ -90,7 +160,14 @@
       "category": "5K",
       "duration_seconds": 1118.0,
       "garmin_activity_id": 23329954063,
-      "distance_meters": 5072.97998046875
+      "distance_meters": 5072.97998046875,
+      "pre_race_ctl": 77.28574492296053,
+      "race_day_tsb": 19.116256897884902,
+      "pre_race_load_ratio": 0.7526548147146638,
+      "pre_race_ramp_rate": -1.658719221424633,
+      "race_tss": 32.253839249989454,
+      "day_tss": 66.81931185949095,
+      "delta_atl": 1.1514827156283047
     },
     {
       "date": "2026-06-14",
@@ -98,7 +175,14 @@
       "category": "70.3",
       "duration_seconds": 16797.0,
       "garmin_activity_id": 23250821308,
-      "distance_meters": 113673.29
+      "distance_meters": 113673.29,
+      "pre_race_ctl": 78.94446414438517,
+      "race_day_tsb": 14.633346381845499,
+      "pre_race_load_ratio": 0.8146374601380295,
+      "pre_race_ramp_rate": -5.324303105951373,
+      "race_tss": 368.05215116725174,
+      "day_tss": 368.05215116725185,
+      "delta_atl": 40.434644298885544
     },
     {
       "date": "2026-05-25",
@@ -106,7 +190,14 @@
       "category": "10K",
       "duration_seconds": 2289.885986328125,
       "garmin_activity_id": 23007759436,
-      "distance_meters": 10010.9501953125
+      "distance_meters": 10010.9501953125,
+      "pre_race_ctl": 75.3261661711126,
+      "race_day_tsb": -14.525488168059013,
+      "pre_race_load_ratio": 1.1928345607695285,
+      "pre_race_ramp_rate": 3.433896848401332,
+      "race_tss": 62.19973161364491,
+      "day_tss": 190.15611925111648,
+      "delta_atl": 13.352741033512316
     },
     {
       "date": "2026-05-23",
@@ -114,7 +205,14 @@
       "category": "10K",
       "duration_seconds": 2280.0,
       "garmin_activity_id": 22983848051,
-      "distance_meters": 10099.080078125
+      "distance_meters": 10099.080078125,
+      "pre_race_ctl": 75.96294857591712,
+      "race_day_tsb": -23.505153343560266,
+      "pre_race_load_ratio": 1.3094291859941336,
+      "pre_race_ramp_rate": 5.744959825777713,
+      "race_tss": 64.85474725561957,
+      "day_tss": 87.75223454284017,
+      "delta_atl": -1.5596408714262822
     },
     {
       "date": "2026-05-17",
@@ -122,7 +220,14 @@
       "category": "10K",
       "duration_seconds": 2368.25,
       "garmin_activity_id": 22913291022,
-      "distance_meters": 9971.73046875
+      "distance_meters": 9971.73046875,
+      "pre_race_ctl": 69.52678365811269,
+      "race_day_tsb": -9.845010860743372,
+      "pre_race_load_ratio": 1.1416002631324742,
+      "pre_race_ramp_rate": 3.5504674829962397,
+      "race_tss": 59.38448808730392,
+      "day_tss": 170.06461778314605,
+      "delta_atl": 12.073219110527873
     },
     {
       "date": "2026-05-09",
@@ -130,7 +235,14 @@
       "category": "5K",
       "duration_seconds": 1155.0,
       "garmin_activity_id": 22820148159,
-      "distance_meters": 5086.81005859375
+      "distance_meters": 5086.81005859375,
+      "pre_race_ctl": 65.2971697874947,
+      "race_day_tsb": -0.8281963254165277,
+      "pre_race_load_ratio": 1.012683494983195,
+      "pre_race_ramp_rate": 3.82349951409185,
+      "race_tss": 33.83325024151771,
+      "day_tss": 94.16223876136182,
+      "delta_atl": 3.7323273713984264
     },
     {
       "date": "2026-04-26",
@@ -138,7 +250,14 @@
       "category": "5K",
       "duration_seconds": 1092.0,
       "garmin_activity_id": 22667174941,
-      "distance_meters": 5003.18017578125
+      "distance_meters": 5003.18017578125,
+      "pre_race_ctl": 66.59643245537706,
+      "race_day_tsb": 33.73434273987339,
+      "pre_race_load_ratio": 0.49345120307342155,
+      "pre_race_ramp_rate": -6.104400019332559,
+      "race_tss": 31.435118634920546,
+      "day_tss": 69.33887299246996,
+      "delta_atl": 4.855866000187206
     },
     {
       "date": "2026-04-20",
@@ -146,7 +265,14 @@
       "category": "Marathon",
       "duration_seconds": 10687.0,
       "garmin_activity_id": 22596593479,
-      "distance_meters": 42182.171875
+      "distance_meters": 42182.171875,
+      "pre_race_ctl": 70.99030450760188,
+      "race_day_tsb": 30.728704848531912,
+      "pre_race_load_ratio": 0.5671422307360101,
+      "pre_race_ramp_rate": -9.052188218176013,
+      "race_tss": 242.08143677015562,
+      "day_tss": 242.08143677015562,
+      "delta_atl": 26.86668058830397
     },
     {
       "date": "2026-04-12",
@@ -154,7 +280,14 @@
       "category": "10 Mile",
       "duration_seconds": 3990.0,
       "garmin_activity_id": 22501896609,
-      "distance_meters": 16480.220703125
+      "distance_meters": 16480.220703125,
+      "pre_race_ctl": 79.02494826943871,
+      "race_day_tsb": 7.716644670366435,
+      "pre_race_load_ratio": 0.9023517909299197,
+      "pre_race_ramp_rate": -1.9504644751243205,
+      "race_tss": 96.97756966701343,
+      "day_tss": 122.27260658219213,
+      "delta_atl": 6.7844750508809994
     },
     {
       "date": "2026-03-22",
@@ -162,7 +295,14 @@
       "category": "8K",
       "duration_seconds": 1810.0,
       "garmin_activity_id": 22261372083,
-      "distance_meters": 8236.5498046875
+      "distance_meters": 8236.5498046875,
+      "pre_race_ctl": 77.09374611511716,
+      "race_day_tsb": 2.0141566205677464,
+      "pre_race_load_ratio": 0.9738739298313486,
+      "pre_race_ramp_rate": -0.18687715443125796,
+      "race_tss": 52.06877314138361,
+      "day_tss": 62.50590825682273,
+      "delta_atl": -1.67383485423791
     },
     {
       "date": "2026-03-15",
@@ -170,7 +310,14 @@
       "category": "Half Marathon",
       "duration_seconds": 5118.0,
       "garmin_activity_id": 22183031149,
-      "distance_meters": 21488.609375
+      "distance_meters": 21488.609375,
+      "pre_race_ctl": 77.28062326954841,
+      "race_day_tsb": -4.167360174140697,
+      "pre_race_load_ratio": 1.0539250331820602,
+      "pre_race_ramp_rate": 1.3062188527109129,
+      "race_tss": 130.47364496261568,
+      "day_tss": 130.47364496261568,
+      "delta_atl": 6.5263990275362005
     },
     {
       "date": "2026-03-14",
@@ -178,7 +325,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 912.4210205078125,
       "garmin_activity_id": 22172909290,
-      "distance_meters": 3368.14990234375
+      "distance_meters": 3368.14990234375,
+      "pre_race_ctl": 78.08255915694055,
+      "race_day_tsb": -9.116324410941829,
+      "pre_race_load_ratio": 1.1167523773474002,
+      "pre_race_ramp_rate": 2.2005006980663495,
+      "race_tss": 19.059651299427674,
+      "day_tss": 43.99869281517445,
+      "delta_atl": -5.750900124193265
     },
     {
       "date": "2026-03-14",
@@ -186,7 +340,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 901.7880249023438,
       "garmin_activity_id": 22172908446,
-      "distance_meters": 8207.654296875
+      "distance_meters": 8207.654296875,
+      "pre_race_ctl": 78.08255915694055,
+      "race_day_tsb": -9.116324410941829,
+      "pre_race_load_ratio": 1.1167523773474002,
+      "pre_race_ramp_rate": 2.2005006980663495,
+      "race_tss": 13.75857958814833,
+      "day_tss": 43.99869281517445,
+      "delta_atl": -5.750900124193265
     },
     {
       "date": "2026-03-14",
@@ -194,7 +355,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 601.2520141601562,
       "garmin_activity_id": 22186128771,
-      "distance_meters": 525.780029296875
+      "distance_meters": 525.780029296875,
+      "pre_race_ctl": 78.08255915694055,
+      "race_day_tsb": -9.116324410941829,
+      "pre_race_load_ratio": 1.1167523773474002,
+      "pre_race_ramp_rate": 2.2005006980663495,
+      "race_tss": 10.649163466532094,
+      "day_tss": 43.99869281517445,
+      "delta_atl": -5.750900124193265
     },
     {
       "date": "2026-01-25",
@@ -202,7 +370,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 1200.0,
       "garmin_activity_id": 21663855848,
-      "distance_meters": 5326.93
+      "distance_meters": 5326.93,
+      "pre_race_ctl": 67.87640914072968,
+      "race_day_tsb": -12.597834702003723,
+      "pre_race_load_ratio": 1.1855996046562267,
+      "pre_race_ramp_rate": 3.11529467504225,
+      "race_tss": 31.898441940266043,
+      "day_tss": 76.62013638471049,
+      "delta_atl": -0.5130668794004976
     },
     {
       "date": "2026-01-25",
@@ -210,7 +385,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 1800.0,
       "garmin_activity_id": 21663855440,
-      "distance_meters": 17992.47
+      "distance_meters": 17992.47,
+      "pre_race_ctl": 67.87640914072968,
+      "race_day_tsb": -12.597834702003723,
+      "pre_race_load_ratio": 1.1855996046562267,
+      "pre_race_ramp_rate": 3.11529467504225,
+      "race_tss": 34.721694444444445,
+      "day_tss": 76.62013638471049,
+      "delta_atl": -0.5130668794004976
     },
     {
       "date": "2026-01-25",
@@ -218,7 +400,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 600.0,
       "garmin_activity_id": 21664238697,
-      "distance_meters": 512.064
+      "distance_meters": 512.064,
+      "pre_race_ctl": 67.87640914072968,
+      "race_day_tsb": -12.597834702003723,
+      "pre_race_load_ratio": 1.1855996046562267,
+      "pre_race_ramp_rate": 3.11529467504225,
+      "race_tss": 10.0,
+      "day_tss": 76.62013638471049,
+      "delta_atl": -0.5130668794004976
     },
     {
       "date": "2025-11-27",
@@ -226,7 +415,14 @@
       "category": "5K",
       "duration_seconds": 1075.0,
       "garmin_activity_id": 21105862230,
-      "distance_meters": 5138.75
+      "distance_meters": 5138.75,
+      "pre_race_ctl": 64.40569924125604,
+      "race_day_tsb": 7.776883235062947,
+      "pre_race_load_ratio": 0.8792516294880726,
+      "pre_race_ramp_rate": -2.231050460956169,
+      "race_tss": 32.11347867724517,
+      "day_tss": 88.68228394052332,
+      "delta_atl": 4.267024971708246
     },
     {
       "date": "2025-11-09",
@@ -234,7 +430,14 @@
       "category": "5K",
       "duration_seconds": 1178.0,
       "garmin_activity_id": 20940996793,
-      "distance_meters": 5159.490234375
+      "distance_meters": 5159.490234375,
+      "pre_race_ctl": 67.7555009279105,
+      "race_day_tsb": 13.167896682485974,
+      "pre_race_load_ratio": 0.8056556810568613,
+      "pre_race_ramp_rate": -2.654516789339425,
+      "race_tss": 31.427252542387073,
+      "day_tss": 66.01346740051571,
+      "delta_atl": 1.5210349003727544
     },
     {
       "date": "2025-10-25",
@@ -242,7 +445,14 @@
       "category": "5K",
       "duration_seconds": 1085.0,
       "garmin_activity_id": 20792952496,
-      "distance_meters": 5137.66015625
+      "distance_meters": 5137.66015625,
+      "pre_race_ctl": 69.75575107296035,
+      "race_day_tsb": 37.42151474761367,
+      "pre_race_load_ratio": 0.463535060951849,
+      "pre_race_ramp_rate": -8.440814797334852,
+      "race_tss": 32.18812035795136,
+      "day_tss": 72.20236984688181,
+      "delta_atl": 5.3073296674269415
     },
     {
       "date": "2025-10-12",
@@ -250,7 +460,14 @@
       "category": "Marathon",
       "duration_seconds": 10436.0,
       "garmin_activity_id": 20668733476,
-      "distance_meters": 42646.33984375
+      "distance_meters": 42646.33984375,
+      "pre_race_ctl": 82.66248176716893,
+      "race_day_tsb": 21.20218030367247,
+      "pre_race_load_ratio": 0.7435090279119427,
+      "pre_race_ramp_rate": -5.59088137214593,
+      "race_tss": 238.04412770923608,
+      "day_tss": 238.04412770923608,
+      "delta_atl": 23.507209819981874
     },
     {
       "date": "2025-09-06",
@@ -258,7 +475,14 @@
       "category": "Half Marathon",
       "duration_seconds": 4910.0,
       "garmin_activity_id": 20299532473,
-      "distance_meters": 21399.869140625
+      "distance_meters": 21399.869140625,
+      "pre_race_ctl": 79.41445597777236,
+      "race_day_tsb": -8.51941331968689,
+      "pre_race_load_ratio": 1.1072778654061601,
+      "pre_race_ramp_rate": 5.222495756730822,
+      "race_tss": 130.25526871847845,
+      "day_tss": 139.8721667551349,
+      "delta_atl": 6.914135240965592
     },
     {
       "date": "2025-08-24",
@@ -266,7 +490,14 @@
       "category": "Sprint",
       "duration_seconds": 4881.0,
       "garmin_activity_id": 20164051613,
-      "distance_meters": 31296.53
+      "distance_meters": 31296.53,
+      "pre_race_ctl": 76.53590676895386,
+      "race_day_tsb": 11.579133388841129,
+      "pre_race_load_ratio": 0.8487097902453008,
+      "pre_race_ramp_rate": -0.912281271183943,
+      "race_tss": 27.11546999652321,
+      "day_tss": 27.115469996523213,
+      "delta_atl": -5.037513782613999
     },
     {
       "date": "2025-08-17",
@@ -274,7 +505,14 @@
       "category": "10 Mile",
       "duration_seconds": 3912.0,
       "garmin_activity_id": 20087947032,
-      "distance_meters": 16093.44
+      "distance_meters": 16093.44,
+      "pre_race_ctl": 77.44818804013781,
+      "race_day_tsb": 19.029185804449398,
+      "pre_race_load_ratio": 0.7542978565930109,
+      "pre_race_ramp_rate": -2.387126932205277,
+      "race_tss": 104.55422302477663,
+      "day_tss": 117.25358789765752,
+      "delta_atl": 7.832183610649182
     },
     {
       "date": "2025-07-19",
@@ -282,7 +520,14 @@
       "category": "1 Mile",
       "duration_seconds": 313.7550048828125,
       "garmin_activity_id": 19787337224,
-      "distance_meters": 1632.27001953125
+      "distance_meters": 1632.27001953125,
+      "pre_race_ctl": 91.44989763583465,
+      "race_day_tsb": 7.875641689822629,
+      "pre_race_load_ratio": 0.9138802569119929,
+      "pre_race_ramp_rate": -2.8326133309399495,
+      "race_tss": 11.09046765797669,
+      "day_tss": 86.70453031071894,
+      "delta_atl": 0.4167086977879535
     },
     {
       "date": "2025-07-13",
@@ -290,7 +535,14 @@
       "category": "Sprint",
       "duration_seconds": 4400.0,
       "garmin_activity_id": 19721112703,
-      "distance_meters": 34610.97
+      "distance_meters": 34610.97,
+      "pre_race_ctl": 92.06420250553501,
+      "race_day_tsb": 20.098174552233615,
+      "pre_race_load_ratio": 0.7816939265723255,
+      "pre_race_ramp_rate": -4.053264860906836,
+      "race_tss": 62.69293123724145,
+      "day_tss": 62.69293123724145,
+      "delta_atl": -1.2344541106615878
     },
     {
       "date": "2025-07-04",
@@ -298,7 +550,14 @@
       "category": "4 Mile",
       "duration_seconds": 1415.0,
       "garmin_activity_id": 19629832656,
-      "distance_meters": 6534.7099609375
+      "distance_meters": 6534.7099609375,
+      "pre_race_ctl": 95.63254337935382,
+      "race_day_tsb": 17.969967251877932,
+      "pre_race_load_ratio": 0.8120935968355989,
+      "pre_race_ramp_rate": -3.423129826216538,
+      "race_tss": 40.36424889988034,
+      "day_tss": 89.70662703924317,
+      "delta_atl": 1.6033293528901993
     },
     {
       "date": "2025-06-22",
@@ -306,7 +565,14 @@
       "category": "70.3",
       "duration_seconds": 18130.0,
       "garmin_activity_id": 19514337111,
-      "distance_meters": 115401.28
+      "distance_meters": 115401.28,
+      "pre_race_ctl": 100.77272102109852,
+      "race_day_tsb": 28.829814240668526,
+      "pre_race_load_ratio": 0.7139125157230546,
+      "pre_race_ramp_rate": -8.856369303711375,
+      "race_tss": 231.28699042535726,
+      "day_tss": 231.28699042535726,
+      "delta_atl": 21.212219077195456
     },
     {
       "date": "2025-06-15",
@@ -314,7 +580,14 @@
       "category": "5K",
       "duration_seconds": 1093.0,
       "garmin_activity_id": 19440362284,
-      "distance_meters": 5031.919921875
+      "distance_meters": 5031.919921875,
+      "pre_race_ctl": 109.6290903248099,
+      "race_day_tsb": -6.869874941113167,
+      "pre_race_load_ratio": 1.062664708069355,
+      "pre_race_ramp_rate": 1.6848763170938383,
+      "race_tss": 30.334895086737657,
+      "day_tss": 77.01326913087337,
+      "delta_atl": -5.256418799323953
     },
     {
       "date": "2025-05-24",
@@ -322,7 +595,14 @@
       "category": "10 Mile",
       "duration_seconds": 3766.0,
       "garmin_activity_id": 19220716333,
-      "distance_meters": 16446.66015625
+      "distance_meters": 16446.66015625,
+      "pre_race_ctl": 107.08073929837386,
+      "race_day_tsb": -8.166904848359565,
+      "pre_race_load_ratio": 1.07626866327102,
+      "pre_race_ramp_rate": -2.349194706584626,
+      "race_tss": 96.80951990095937,
+      "day_tss": 151.30729662263366,
+      "delta_atl": 4.800336671870397
     },
     {
       "date": "2025-05-18",
@@ -330,7 +610,14 @@
       "category": "10K",
       "duration_seconds": 2247.0,
       "garmin_activity_id": 19162492631,
-      "distance_meters": 10079.6796875
+      "distance_meters": 10079.6796875,
+      "pre_race_ctl": 107.2945059790992,
+      "race_day_tsb": -14.704497421618953,
+      "pre_race_load_ratio": 1.137047999684936,
+      "pre_race_ramp_rate": 3.2973222348273765,
+      "race_tss": 62.568592514984246,
+      "day_tss": 93.89700722801071,
+      "delta_atl": -3.7409967517231735
     },
     {
       "date": "2025-04-27",
@@ -338,7 +625,14 @@
       "category": "5K",
       "duration_seconds": 1108.0,
       "garmin_activity_id": 18951105940,
-      "distance_meters": 5068.509765625
+      "distance_meters": 5068.509765625,
+      "pre_race_ctl": 97.79655523604441,
+      "race_day_tsb": 26.989343591595386,
+      "pre_race_load_ratio": 0.7240256210819167,
+      "pre_race_ramp_rate": -6.393918388844895,
+      "race_tss": 30.296075298003206,
+      "day_tss": 45.099312777750086,
+      "delta_atl": -3.422289490144891
     },
     {
       "date": "2025-04-21",
@@ -346,7 +640,14 @@
       "category": "Marathon",
       "duration_seconds": 11635.87890625,
       "garmin_activity_id": 18894608650,
-      "distance_meters": 42434.140625
+      "distance_meters": 42434.140625,
+      "pre_race_ctl": 101.73904751359173,
+      "race_day_tsb": 25.304391170642774,
+      "pre_race_load_ratio": 0.7512814225308896,
+      "pre_race_ramp_rate": -6.677634486109341,
+      "race_tss": 214.93991956396653,
+      "day_tss": 214.93991956396653,
+      "delta_atl": 18.438111535635784
     },
     {
       "date": "2025-04-13",
@@ -354,7 +655,14 @@
       "category": "10 Mile",
       "duration_seconds": 3821.0,
       "garmin_activity_id": 18817494556,
-      "distance_meters": 16384.6796875
+      "distance_meters": 16384.6796875,
+      "pre_race_ctl": 108.09693171281546,
+      "race_day_tsb": 2.678613370999855,
+      "pre_race_load_ratio": 0.9752202645481538,
+      "pre_race_ramp_rate": -1.658160939530049,
+      "race_tss": 96.46894366485633,
+      "day_tss": 121.68695332463221,
+      "delta_atl": 2.165714857110217
     },
     {
       "date": "2025-04-06",
@@ -362,7 +670,14 @@
       "category": "5K",
       "duration_seconds": 1076.0,
       "garmin_activity_id": 18749364348,
-      "distance_meters": 5105.330078125
+      "distance_meters": 5105.330078125,
+      "pre_race_ctl": 109.75509265234551,
+      "race_day_tsb": -16.929359582077353,
+      "pre_race_load_ratio": 1.1542466884493634,
+      "pre_race_ramp_rate": 4.535461463613345,
+      "race_tss": 31.69974338268593,
+      "day_tss": 146.12666480433106,
+      "delta_atl": 2.5881881708096017
     },
     {
       "date": "2025-03-29",
@@ -370,7 +685,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 942.5859985351562,
       "garmin_activity_id": 18672590658,
-      "distance_meters": 4092.139892578125
+      "distance_meters": 4092.139892578125,
+      "pre_race_ctl": 106.15686146308062,
+      "race_day_tsb": -23.616093430082543,
+      "pre_race_load_ratio": 1.2224641262429916,
+      "pre_race_ramp_rate": 4.7552297026054475,
+      "race_tss": 26.51567853829637,
+      "day_tss": 66.32271523696335,
+      "delta_atl": -8.44662916438763
     },
     {
       "date": "2025-03-29",
@@ -378,7 +700,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 900.0,
       "garmin_activity_id": 18673316636,
-      "distance_meters": 9656.064
+      "distance_meters": 9656.064,
+      "pre_race_ctl": 106.15686146308062,
+      "race_day_tsb": -23.616093430082543,
+      "pre_race_load_ratio": 1.2224641262429916,
+      "pre_race_ramp_rate": 4.7552297026054475,
+      "race_tss": null,
+      "day_tss": 66.32271523696335,
+      "delta_atl": -8.44662916438763
     },
     {
       "date": "2025-03-29",
@@ -386,7 +715,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 600.7219848632812,
       "garmin_activity_id": 18673478988,
-      "distance_meters": 560.0700158049196
+      "distance_meters": 560.0700158049196,
+      "pre_race_ctl": 106.15686146308062,
+      "race_day_tsb": -23.616093430082543,
+      "pre_race_load_ratio": 1.2224641262429916,
+      "pre_race_ramp_rate": 4.7552297026054475,
+      "race_tss": 22.382473171241852,
+      "day_tss": 66.32271523696335,
+      "delta_atl": -8.44662916438763
     },
     {
       "date": "2025-03-23",
@@ -394,7 +730,14 @@
       "category": "8K",
       "duration_seconds": 1779.0,
       "garmin_activity_id": 18614724778,
-      "distance_meters": 8134.43017578125
+      "distance_meters": 8134.43017578125,
+      "pre_race_ctl": 101.15158952722409,
+      "race_day_tsb": -16.38605711270681,
+      "pre_race_load_ratio": 1.161995053061392,
+      "pre_race_ramp_rate": 4.555581790355703,
+      "race_tss": 50.90074293296131,
+      "day_tss": 176.97197509991747,
+      "delta_atl": 7.912022631530974
     },
     {
       "date": "2025-03-16",
@@ -402,7 +745,14 @@
       "category": "Half Marathon",
       "duration_seconds": 5132.0,
       "garmin_activity_id": 18551036245,
-      "distance_meters": 21370.0
+      "distance_meters": 21370.0,
+      "pre_race_ctl": 96.59600773686839,
+      "race_day_tsb": -18.873776748721824,
+      "pre_race_load_ratio": 1.1953887866684385,
+      "pre_race_ramp_rate": 3.066298862494051,
+      "race_tss": 132.0,
+      "day_tss": 209.07363797888308,
+      "delta_atl": 12.460741568503451
     },
     {
       "date": "2025-02-16",
@@ -410,7 +760,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 1230.137939453125,
       "garmin_activity_id": 18295947513,
-      "distance_meters": 5359.31982421875
+      "distance_meters": 5359.31982421875,
+      "pre_race_ctl": 93.14540382119598,
+      "race_day_tsb": -12.77889072474342,
+      "pre_race_load_ratio": 1.1371929284806588,
+      "pre_race_ramp_rate": 5.802280539500458,
+      "race_tss": 37.62440927241265,
+      "day_tss": 107.79060310995754,
+      "delta_atl": 0.24844691575631828
     },
     {
       "date": "2025-02-16",
@@ -418,7 +775,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 1800.0,
       "garmin_activity_id": 18295947086,
-      "distance_meters": 19038.54
+      "distance_meters": 19038.54,
+      "pre_race_ctl": 93.14540382119598,
+      "race_day_tsb": -12.77889072474342,
+      "pre_race_load_ratio": 1.1371929284806588,
+      "pre_race_ramp_rate": 5.802280539500458,
+      "race_tss": 47.184333333333335,
+      "day_tss": 107.79060310995754,
+      "delta_atl": 0.24844691575631828
     },
     {
       "date": "2025-02-16",
@@ -426,7 +790,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 622.8800048828125,
       "garmin_activity_id": 18296539312,
-      "distance_meters": 585.219970703125
+      "distance_meters": 585.219970703125,
+      "pre_race_ctl": 93.14540382119598,
+      "race_day_tsb": -12.77889072474342,
+      "pre_race_load_ratio": 1.1371929284806588,
+      "pre_race_ramp_rate": 5.802280539500458,
+      "race_tss": 22.981860504211564,
+      "day_tss": 107.79060310995754,
+      "delta_atl": 0.24844691575631828
     },
     {
       "date": "2025-01-19",
@@ -434,7 +805,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 1200.0,
       "garmin_activity_id": 18049336668,
-      "distance_meters": 5697.08
+      "distance_meters": 5697.08,
+      "pre_race_ctl": 84.22507065547173,
+      "race_day_tsb": -24.344195858852316,
+      "pre_race_load_ratio": 1.2890374050077544,
+      "pre_race_ramp_rate": 4.749345917982964,
+      "race_tss": null,
+      "day_tss": 83.95154465484114,
+      "delta_atl": -3.2771628373002244
     },
     {
       "date": "2025-01-19",
@@ -442,7 +820,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 1800.0,
       "garmin_activity_id": 18049195232,
-      "distance_meters": 18105.12
+      "distance_meters": 18105.12,
+      "pre_race_ctl": 84.22507065547173,
+      "race_day_tsb": -24.344195858852316,
+      "pre_race_load_ratio": 1.2890374050077544,
+      "pre_race_ramp_rate": 4.749345917982964,
+      "race_tss": null,
+      "day_tss": 83.95154465484114,
+      "delta_atl": -3.2771628373002244
     },
     {
       "date": "2025-01-19",
@@ -450,7 +835,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 589.98,
       "garmin_activity_id": 18049513130,
-      "distance_meters": 548.64
+      "distance_meters": 548.64,
+      "pre_race_ctl": 84.22507065547173,
+      "race_day_tsb": -24.344195858852316,
+      "pre_race_load_ratio": 1.2890374050077544,
+      "pre_race_ramp_rate": 4.749345917982964,
+      "race_tss": null,
+      "day_tss": 83.95154465484114,
+      "delta_atl": -3.2771628373002244
     },
     {
       "date": "2024-11-24",
@@ -458,7 +850,14 @@
       "category": "10K",
       "duration_seconds": 2301.19091796875,
       "garmin_activity_id": 17612817592,
-      "distance_meters": 10193.2900390625
+      "distance_meters": 10193.2900390625,
+      "pre_race_ctl": 46.41008601992001,
+      "race_day_tsb": -6.462726237884709,
+      "pre_race_load_ratio": 1.1392526235592582,
+      "pre_race_ramp_rate": 1.3237003539619607,
+      "race_tss": 64.92913581138143,
+      "day_tss": 102.0527437556709,
+      "delta_atl": 6.546935771138145
     },
     {
       "date": "2024-11-10",
@@ -466,7 +865,14 @@
       "category": "5K",
       "duration_seconds": 1180.114990234375,
       "garmin_activity_id": 17506264278,
-      "distance_meters": 5061.31005859375
+      "distance_meters": 5061.31005859375,
+      "pre_race_ctl": 41.65764697461984,
+      "race_day_tsb": 8.79064538403857,
+      "pre_race_load_ratio": 0.7889788304799279,
+      "pre_race_ramp_rate": -1.3584932404992927,
+      "race_tss": 33.54404979385156,
+      "day_tss": 43.67421118690228,
+      "delta_atl": 1.4386784393022438
     },
     {
       "date": "2024-10-13",
@@ -474,7 +880,14 @@
       "category": "Marathon",
       "duration_seconds": 12409.0,
       "garmin_activity_id": 17276905020,
-      "distance_meters": 42172.98828125
+      "distance_meters": 42172.98828125,
+      "pre_race_ctl": 45.944784530719986,
+      "race_day_tsb": 22.62389233926426,
+      "pre_race_load_ratio": 0.5075851901288756,
+      "pre_race_ramp_rate": -4.766943538341678,
+      "race_tss": 218.2439858951311,
+      "day_tss": 218.2439858951311,
+      "delta_atl": 25.948571621025422
     },
     {
       "date": "2024-09-07",
@@ -482,7 +895,14 @@
       "category": "70.3",
       "duration_seconds": 18234.0,
       "garmin_activity_id": 16974690953,
-      "distance_meters": 110320.55
+      "distance_meters": 110320.55,
+      "pre_race_ctl": 76.79013220531571,
+      "race_day_tsb": -3.7018998643000174,
+      "pre_race_load_ratio": 1.048208015248654,
+      "pre_race_ramp_rate": 1.466569392609017,
+      "race_tss": 391.59283270891405,
+      "day_tss": 391.5928327089141,
+      "delta_atl": 41.41439197050346
     },
     {
       "date": "2024-08-25",
@@ -490,7 +910,14 @@
       "category": "Sprint",
       "duration_seconds": 4980.0,
       "garmin_activity_id": 16858837733,
-      "distance_meters": 31680.79
+      "distance_meters": 31680.79,
+      "pre_race_ctl": 69.72686659400311,
+      "race_day_tsb": 8.305621556151507,
+      "pre_race_load_ratio": 0.8808834820512953,
+      "pre_race_ramp_rate": -2.0051971137526294,
+      "race_tss": 100.22488406736908,
+      "day_tss": 140.23238237025294,
+      "delta_atl": 10.491504124766138
     },
     {
       "date": "2024-08-04",
@@ -498,7 +925,14 @@
       "category": "Sprint",
       "duration_seconds": 3854.0,
       "garmin_activity_id": 16672949703,
-      "distance_meters": 27817.8
+      "distance_meters": 27817.8,
+      "pre_race_ctl": 71.79455749344802,
+      "race_day_tsb": 10.186832098312934,
+      "pre_race_load_ratio": 0.858111360331978,
+      "pre_race_ramp_rate": -0.769412768601768,
+      "race_tss": 88.96045897576397,
+      "day_tss": 119.04492454104042,
+      "delta_atl": 7.646160582769994
     },
     {
       "date": "2024-07-28",
@@ -506,7 +940,14 @@
       "category": "Sprint",
       "duration_seconds": 4437.923,
       "garmin_activity_id": 16612463125,
-      "distance_meters": 25325.58
+      "distance_meters": 25325.58,
+      "pre_race_ctl": 72.56397026204979,
+      "race_day_tsb": 15.647805334823289,
+      "pre_race_load_ratio": 0.7843584732434778,
+      "pre_race_ramp_rate": -4.806785452090992,
+      "race_tss": 91.26868713365333,
+      "day_tss": 91.26868713365333,
+      "delta_atl": 4.5730799049980675
     },
     {
       "date": "2024-07-27",
@@ -514,7 +955,14 @@
       "category": "1 Mile",
       "duration_seconds": 319.489013671875,
       "garmin_activity_id": 16607973678,
-      "distance_meters": 1644.0999755859375
+      "distance_meters": 1644.0999755859375,
+      "pre_race_ctl": 73.76162536971148,
+      "race_day_tsb": 11.615457805317362,
+      "pre_race_load_ratio": 0.8425270898370553,
+      "pre_race_ramp_rate": -2.0084410784939877,
+      "race_tss": 10.722975560634271,
+      "day_tss": 22.85890701672448,
+      "delta_atl": -5.230002637167615
     },
     {
       "date": "2024-07-04",
@@ -522,7 +970,14 @@
       "category": "4 Mile",
       "duration_seconds": 1408.0,
       "garmin_activity_id": 16238739080,
-      "distance_meters": 6554.68994140625
+      "distance_meters": 6554.68994140625,
+      "pre_race_ctl": 76.29477086966027,
+      "race_day_tsb": 1.0126551108731405,
+      "pre_race_load_ratio": 0.9867270705537194,
+      "pre_race_ramp_rate": 0.17865246859823003,
+      "race_tss": 41.244844587906734,
+      "day_tss": 64.89380629311594,
+      "delta_atl": -1.3829135741152214
     },
     {
       "date": "2024-06-23",
@@ -530,7 +985,14 @@
       "category": "Olympic",
       "duration_seconds": 9289.0,
       "garmin_activity_id": 16059457979,
-      "distance_meters": 51126.1
+      "distance_meters": 51126.1,
+      "pre_race_ctl": 75.18697508542758,
+      "race_day_tsb": -3.7225197065844213,
+      "pre_race_load_ratio": 1.0495101671846072,
+      "pre_race_ramp_rate": 0.7645643120397096,
+      "race_tss": 173.6137706974751,
+      "day_tss": 173.61377069747508,
+      "delta_atl": 12.607232111173516
     },
     {
       "date": "2024-06-16",
@@ -538,7 +1000,14 @@
       "category": "5K",
       "duration_seconds": 1087.0,
       "garmin_activity_id": 15941437281,
-      "distance_meters": 5245.990234375
+      "distance_meters": 5245.990234375,
+      "pre_race_ctl": 74.42241077338787,
+      "race_day_tsb": -10.456864827355716,
+      "pre_race_load_ratio": 1.1405069349230879,
+      "pre_race_ramp_rate": 1.682833750497963,
+      "race_tss": 35.182966062399316,
+      "day_tss": 150.47307043772537,
+      "delta_atl": 8.731983732054715
     },
     {
       "date": "2024-06-09",
@@ -546,7 +1015,14 @@
       "category": "Half Marathon",
       "duration_seconds": 4955.0,
       "garmin_activity_id": 15824463961,
-      "distance_meters": 21373.650390625
+      "distance_meters": 21373.650390625,
+      "pre_race_ctl": 72.7395770228899,
+      "race_day_tsb": -16.472759710822032,
+      "pre_race_load_ratio": 1.2264621322397617,
+      "pre_race_ramp_rate": 5.47093495663438,
+      "race_tss": 127.07151613180861,
+      "day_tss": 132.8372099412307,
+      "delta_atl": 5.807434744516925
     },
     {
       "date": "2024-06-02",
@@ -554,7 +1030,14 @@
       "category": "5K",
       "duration_seconds": 1071.301025390625,
       "garmin_activity_id": 15705259830,
-      "distance_meters": 5020.64013671875
+      "distance_meters": 5020.64013671875,
+      "pre_race_ctl": 67.26864206625552,
+      "race_day_tsb": -12.448295543146628,
+      "pre_race_load_ratio": 1.1850534686115086,
+      "pre_race_ramp_rate": 2.801072506567465,
+      "race_tss": 32.22971811390269,
+      "day_tss": 157.5447670374367,
+      "delta_atl": 10.360604111344585
     },
     {
       "date": "2024-05-25",
@@ -562,7 +1045,14 @@
       "category": "10 Mile",
       "duration_seconds": 3826.0,
       "garmin_activity_id": 15571972419,
-      "distance_meters": 16409.490234375
+      "distance_meters": 16409.490234375,
+      "pre_race_ctl": 63.517093342242966,
+      "race_day_tsb": -7.599136456834437,
+      "pre_race_load_ratio": 1.1196392349991324,
+      "pre_race_ramp_rate": 1.6984656972620868,
+      "race_tss": 98.55675563345235,
+      "day_tss": 103.91421843135275,
+      "delta_atl": 4.366137130698164
     },
     {
       "date": "2024-05-19",
@@ -570,7 +1060,14 @@
       "category": "10K",
       "duration_seconds": 2304.0,
       "garmin_activity_id": 15472634416,
-      "distance_meters": 9918.6103515625
+      "distance_meters": 9918.6103515625,
+      "pre_race_ctl": 61.30445698186323,
+      "race_day_tsb": 0.050496872009730964,
+      "pre_race_load_ratio": 0.9991762936253612,
+      "pre_race_ramp_rate": 0.43545688253475845,
+      "race_tss": 60.5095458498653,
+      "day_tss": 70.89632323062725,
+      "delta_atl": 1.2836116300087923
     },
     {
       "date": "2024-05-11",
@@ -578,7 +1075,14 @@
       "category": "5K",
       "duration_seconds": 1140.0,
       "garmin_activity_id": 15337970382,
-      "distance_meters": 5115.2900390625
+      "distance_meters": 5115.2900390625,
+      "pre_race_ctl": 60.838660214679244,
+      "race_day_tsb": -2.1057246325694265,
+      "pre_race_load_ratio": 1.0346116207217422,
+      "pre_race_ramp_rate": 2.2133406291275364,
+      "race_tss": 34.8870667847929,
+      "day_tss": 62.12816550988667,
+      "delta_atl": -0.10865683245414459
     },
     {
       "date": "2024-04-28",
@@ -586,7 +1090,14 @@
       "category": "5K",
       "duration_seconds": 1083.0,
       "garmin_activity_id": 15120300878,
-      "distance_meters": 5067.43994140625
+      "distance_meters": 5067.43994140625,
+      "pre_race_ctl": 58.23825937855492,
+      "race_day_tsb": 27.138766271424718,
+      "pre_race_load_ratio": 0.534004509045852,
+      "pre_race_ramp_rate": -4.921759601827979,
+      "race_tss": 32.44769170205561,
+      "day_tss": 63.357459714750135,
+      "delta_atl": 4.294248264594874
     },
     {
       "date": "2024-04-21",
@@ -594,7 +1105,14 @@
       "category": "5K",
       "duration_seconds": 1153.0,
       "garmin_activity_id": 15006680630,
-      "distance_meters": 5218.64990234375
+      "distance_meters": 5218.64990234375,
+      "pre_race_ctl": 63.1600189803829,
+      "race_day_tsb": 29.49970771572476,
+      "pre_race_load_ratio": 0.5329370036306167,
+      "pre_race_ramp_rate": -5.90110211393511,
+      "race_tss": 33.515728301660005,
+      "day_tss": 59.66081311462743,
+      "delta_atl": 3.4612414138171985
     },
     {
       "date": "2024-04-15",
@@ -602,7 +1120,14 @@
       "category": "Marathon",
       "duration_seconds": 11481.0,
       "garmin_activity_id": 14915609757,
-      "distance_meters": 42516.37109375
+      "distance_meters": 42516.37109375,
+      "pre_race_ctl": 67.43622939706353,
+      "race_day_tsb": 22.680326250531195,
+      "pre_race_load_ratio": 0.6636774260169594,
+      "pre_race_ramp_rate": -7.045881960802163,
+      "race_tss": 225.0634991228958,
+      "day_tss": 225.0634991228958,
+      "delta_atl": 24.002925867369214
     },
     {
       "date": "2024-03-24",
@@ -610,7 +1135,14 @@
       "category": "8K",
       "duration_seconds": 1774.0,
       "garmin_activity_id": 14561416716,
-      "distance_meters": 8257.3095703125
+      "distance_meters": 8257.3095703125,
+      "pre_race_ctl": 73.56490664219179,
+      "race_day_tsb": 0.26687674579778786,
+      "pre_race_load_ratio": 0.9963722274929834,
+      "pre_race_ramp_rate": 1.2521544976172834,
+      "race_tss": 49.710981044131856,
+      "day_tss": 96.04585905576572,
+      "delta_atl": 3.028238793819625
     },
     {
       "date": "2024-03-09",
@@ -618,7 +1150,14 @@
       "category": "5K",
       "duration_seconds": 1045.0,
       "garmin_activity_id": 14326206920,
-      "distance_meters": 4958.47021484375
+      "distance_meters": 4958.47021484375,
+      "pre_race_ctl": 70.93450695192051,
+      "race_day_tsb": 9.622848801204853,
+      "pre_race_load_ratio": 0.8643417820930618,
+      "pre_race_ramp_rate": -3.8263322246079383,
+      "race_tss": 31.31205143791943,
+      "day_tss": 48.88077612663987,
+      "delta_atl": -1.6548251230026807
     },
     {
       "date": "2024-02-11",
@@ -626,7 +1165,14 @@
       "category": "5K",
       "duration_seconds": 1077.0,
       "garmin_activity_id": 13917382533,
-      "distance_meters": 4996.5400390625
+      "distance_meters": 4996.5400390625,
+      "pre_race_ctl": 70.63155243621704,
+      "race_day_tsb": 7.365665517444043,
+      "pre_race_load_ratio": 0.8957170660506787,
+      "pre_race_ramp_rate": -1.7653485213850217,
+      "race_tss": 31.56851137648127,
+      "day_tss": 59.64931861368143,
+      "delta_atl": -0.4814451684707137
     },
     {
       "date": "2024-01-14",
@@ -634,7 +1180,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 1200.0,
       "garmin_activity_id": 13504441031,
-      "distance_meters": 5487.87
+      "distance_meters": 5487.87,
+      "pre_race_ctl": 70.60072783402089,
+      "race_day_tsb": 8.8600395474731,
+      "pre_race_load_ratio": 0.8745049828905072,
+      "pre_race_ramp_rate": -1.3270791907274742,
+      "race_tss": 33.50164131764771,
+      "day_tss": 93.9743312812924,
+      "delta_atl": 4.291010254163247
     },
     {
       "date": "2024-01-14",
@@ -642,7 +1195,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 1800.0,
       "garmin_activity_id": 13504440036,
-      "distance_meters": 18748.86
+      "distance_meters": 18748.86,
+      "pre_race_ctl": 70.60072783402089,
+      "race_day_tsb": 8.8600395474731,
+      "pre_race_load_ratio": 0.8745049828905072,
+      "pre_race_ramp_rate": -1.3270791907274742,
+      "race_tss": 41.35875,
+      "day_tss": 93.9743312812924,
+      "delta_atl": 4.291010254163247
     },
     {
       "date": "2024-01-14",
@@ -650,7 +1210,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 673.7109985351562,
       "garmin_activity_id": 13504439204,
-      "distance_meters": 566.9900292431724
+      "distance_meters": 566.9900292431724,
+      "pre_race_ctl": 70.60072783402089,
+      "race_day_tsb": 8.8600395474731,
+      "pre_race_load_ratio": 0.8745049828905072,
+      "pre_race_ramp_rate": -1.3270791907274742,
+      "race_tss": 19.11393996364469,
+      "day_tss": 93.9743312812924,
+      "delta_atl": 4.291010254163247
     },
     {
       "date": "2023-11-12",
@@ -658,7 +1225,14 @@
       "category": "5K",
       "duration_seconds": 1131.0,
       "garmin_activity_id": 12705461882,
-      "distance_meters": 5017.83984375
+      "distance_meters": 5017.83984375,
+      "pre_race_ctl": 73.65261964102773,
+      "race_day_tsb": 5.8031616689550845,
+      "pre_race_load_ratio": 0.9212090255955747,
+      "pre_race_ramp_rate": -3.04394775241974,
+      "race_tss": 31.974667206058744,
+      "day_tss": 116.69707630961027,
+      "delta_atl": 6.502697545294552
     },
     {
       "date": "2023-10-28",
@@ -666,7 +1240,14 @@
       "category": "5K",
       "duration_seconds": 1102.0,
       "garmin_activity_id": 12502522137,
-      "distance_meters": 5115.1298828125
+      "distance_meters": 5115.1298828125,
+      "pre_race_ctl": 72.2758327284471,
+      "race_day_tsb": 21.306106081732246,
+      "pre_race_load_ratio": 0.7052111988555981,
+      "pre_race_ramp_rate": -4.103629376644108,
+      "race_tss": 31.37854298475237,
+      "day_tss": 114.58559940422877,
+      "delta_atl": 8.468678590705458
     },
     {
       "date": "2023-10-08",
@@ -674,7 +1255,14 @@
       "category": "Marathon",
       "duration_seconds": 10731.0,
       "garmin_activity_id": 12235073469,
-      "distance_meters": 42195.07
+      "distance_meters": 42195.07,
+      "pre_race_ctl": 82.53397934394006,
+      "race_day_tsb": 23.516193132500426,
+      "pre_race_load_ratio": 0.7150725880488268,
+      "pre_race_ramp_rate": -4.644571587791219,
+      "race_tss": 220.89131312607063,
+      "day_tss": 220.89131312607063,
+      "delta_atl": 21.54894387772118
     },
     {
       "date": "2023-09-30",
@@ -682,7 +1270,14 @@
       "category": "5K",
       "duration_seconds": 1099.0,
       "garmin_activity_id": 12140540567,
-      "distance_meters": 5033.3701171875
+      "distance_meters": 5033.3701171875,
+      "pre_race_ctl": 86.32976212702127,
+      "race_day_tsb": 22.875574915617776,
+      "pre_race_load_ratio": 0.735020989841721,
+      "pre_race_ramp_rate": -3.8733400570467893,
+      "race_tss": 30.65336145726289,
+      "day_tss": 122.40497041605629,
+      "delta_atl": 7.847652071575098
     },
     {
       "date": "2023-09-24",
@@ -690,7 +1285,14 @@
       "category": "Marathon",
       "duration_seconds": 11603.0,
       "garmin_activity_id": 12094333869,
-      "distance_meters": 42197.0
+      "distance_meters": 42197.0,
+      "pre_race_ctl": 88.08077533094159,
+      "race_day_tsb": 32.818253109532996,
+      "pre_race_load_ratio": 0.627407308959003,
+      "pre_race_ramp_rate": -9.64632239024779,
+      "race_tss": 214.58023192064223,
+      "day_tss": 214.58023192064223,
+      "delta_atl": 21.20870812215285
     },
     {
       "date": "2023-09-09",
@@ -698,7 +1300,14 @@
       "category": "Half Marathon",
       "duration_seconds": 4898.0,
       "garmin_activity_id": 11983700671,
-      "distance_meters": 21296.94921875
+      "distance_meters": 21296.94921875,
+      "pre_race_ctl": 98.04382571855102,
+      "race_day_tsb": -0.28502258953274406,
+      "pre_race_load_ratio": 1.0029070937149163,
+      "pre_race_ramp_rate": -0.13693460633575683,
+      "race_tss": 123.11046911676864,
+      "day_tss": 147.1733748429591,
+      "delta_atl": 6.502285958030598
     },
     {
       "date": "2023-08-27",
@@ -706,7 +1315,14 @@
       "category": "Sprint",
       "duration_seconds": 4083.726,
       "garmin_activity_id": 11886614630,
-      "distance_meters": 31751.47
+      "distance_meters": 31751.47,
+      "pre_race_ctl": 93.10665922173712,
+      "race_day_tsb": 5.342410230010927,
+      "pre_race_load_ratio": 0.942620535688132,
+      "pre_race_ramp_rate": -2.190229265542527,
+      "race_tss": 86.53722622720964,
+      "day_tss": 98.80962475605145,
+      "delta_atl": 1.4703836197954274
     },
     {
       "date": "2023-08-20",
@@ -714,7 +1330,14 @@
       "category": "10 Mile",
       "duration_seconds": 3899.31396484375,
       "garmin_activity_id": 11833756114,
-      "distance_meters": 16313.5
+      "distance_meters": 16313.5,
+      "pre_race_ctl": 95.29688848727965,
+      "race_day_tsb": -16.98659495974637,
+      "pre_race_load_ratio": 1.178249208650855,
+      "pre_race_ramp_rate": 4.778958562296779,
+      "race_tss": 93.63184334573053,
+      "day_tss": 165.96893916864317,
+      "delta_atl": 7.14672061853031
     },
     {
       "date": "2023-08-06",
@@ -722,7 +1345,14 @@
       "category": "Sprint",
       "duration_seconds": 3992.0,
       "garmin_activity_id": 11726940773,
-      "distance_meters": 27991.24
+      "distance_meters": 27991.24,
+      "pre_race_ctl": 83.98081779557835,
+      "race_day_tsb": 17.219854122012137,
+      "pre_race_load_ratio": 0.7949549126334088,
+      "pre_race_ramp_rate": -2.7203002820578916,
+      "race_tss": 82.09692111922944,
+      "day_tss": 137.96987314473924,
+      "delta_atl": 9.479479585301732
     },
     {
       "date": "2023-07-29",
@@ -730,7 +1360,14 @@
       "category": "1 Mile",
       "duration_seconds": 299.0,
       "garmin_activity_id": 11671824420,
-      "distance_meters": 1609.35
+      "distance_meters": 1609.35,
+      "pre_race_ctl": 87.08867165644556,
+      "race_day_tsb": 15.579299669761951,
+      "pre_race_load_ratio": 0.8211099173584776,
+      "pre_race_ramp_rate": -3.584972887541369,
+      "race_tss": 11.141467436836827,
+      "day_tss": 70.61687560880091,
+      "delta_atl": -0.11881099228909875
     },
     {
       "date": "2023-07-04",
@@ -738,7 +1375,14 @@
       "category": "4 Mile",
       "duration_seconds": 1379.0,
       "garmin_activity_id": 11485015773,
-      "distance_meters": 6514.14990234375
+      "distance_meters": 6514.14990234375,
+      "pre_race_ctl": 94.69170955377423,
+      "race_day_tsb": -5.511713052691817,
+      "pre_race_load_ratio": 1.0582069230629085,
+      "pre_race_ramp_rate": 1.7853435381695846,
+      "race_tss": 38.867272432778336,
+      "day_tss": 73.71898496855214,
+      "delta_atl": -3.525663962294445
     },
     {
       "date": "2023-06-25",
@@ -746,7 +1390,14 @@
       "category": "Sprint",
       "duration_seconds": 4843.994,
       "garmin_activity_id": 11421595405,
-      "distance_meters": 29501.4
+      "distance_meters": 29501.4,
+      "pre_race_ctl": 92.79762683097542,
+      "race_day_tsb": 4.458838146540444,
+      "pre_race_load_ratio": 0.9519509463893736,
+      "pre_race_ramp_rate": -1.9828340043177235,
+      "race_tss": 91.15920088763957,
+      "day_tss": 91.15920088763957,
+      "delta_atl": 0.3754591960608167
     },
     {
       "date": "2023-06-18",
@@ -754,7 +1405,14 @@
       "category": "5K",
       "duration_seconds": 1049.0,
       "garmin_activity_id": 11371343265,
-      "distance_meters": 5112.31005859375
+      "distance_meters": 5112.31005859375,
+      "pre_race_ctl": 94.78046083529314,
+      "race_day_tsb": -11.468311963456443,
+      "pre_race_load_ratio": 1.1209986938487855,
+      "pre_race_ramp_rate": 0.5059177359702431,
+      "race_tss": 32.2098920517431,
+      "day_tss": 70.27745540008695,
+      "delta_atl": -4.7885773208627995
     },
     {
       "date": "2023-06-04",
@@ -762,7 +1420,14 @@
       "category": "Half Marathon",
       "duration_seconds": 4981.0,
       "garmin_activity_id": 11268232739,
-      "distance_meters": 21518.75
+      "distance_meters": 21518.75,
+      "pre_race_ctl": 88.6148906962542,
+      "race_day_tsb": -8.43871653919922,
+      "pre_race_load_ratio": 1.0952291028392132,
+      "pre_race_ramp_rate": 2.5781751986045975,
+      "race_tss": 123.33983728067737,
+      "day_tss": 123.33983728067737,
+      "delta_atl": 3.49927815127009
     },
     {
       "date": "2023-05-27",
@@ -770,7 +1435,14 @@
       "category": "10 Mile",
       "duration_seconds": 3702.0,
       "garmin_activity_id": 11208201335,
-      "distance_meters": 16588.890625
+      "distance_meters": 16588.890625,
+      "pre_race_ctl": 83.9885159383959,
+      "race_day_tsb": 8.622361865240194,
+      "pre_race_load_ratio": 0.8973387996096449,
+      "pre_race_ramp_rate": -4.018199472425877,
+      "race_tss": 99.04720026571448,
+      "day_tss": 171.04106105629594,
+      "delta_atl": 12.73644455880165
     },
     {
       "date": "2023-05-21",
@@ -778,7 +1450,14 @@
       "category": "10K",
       "duration_seconds": 2209.0,
       "garmin_activity_id": 11165414491,
-      "distance_meters": 10104.1103515625
+      "distance_meters": 10104.1103515625,
+      "pre_race_ctl": 86.51954813014535,
+      "race_day_tsb": -9.465225793055367,
+      "pre_race_load_ratio": 1.10939985237576,
+      "pre_race_ramp_rate": 0.15240025813361058,
+      "race_tss": 61.32238439027989,
+      "day_tss": 133.59757962323917,
+      "delta_atl": 5.007095691077467
     },
     {
       "date": "2023-05-11",
@@ -786,7 +1465,14 @@
       "category": "4 Mile",
       "duration_seconds": 1397.0,
       "garmin_activity_id": 11097647712,
-      "distance_meters": 6501.75
+      "distance_meters": 6501.75,
+      "pre_race_ctl": 82.35431752086643,
+      "race_day_tsb": -18.87498945783335,
+      "pre_race_load_ratio": 1.2291924701221757,
+      "pre_race_ramp_rate": 4.031600341596885,
+      "race_tss": 41.13234124893738,
+      "day_tss": 66.39779553825475,
+      "delta_atl": -4.636843957827622
     },
     {
       "date": "2023-05-07",
@@ -794,7 +1480,14 @@
       "category": "Half Marathon",
       "duration_seconds": 5001.0,
       "garmin_activity_id": 11065513075,
-      "distance_meters": 21597.939453125
+      "distance_meters": 21597.939453125,
+      "pre_race_ctl": 78.5691913262057,
+      "race_day_tsb": -7.289873554029498,
+      "pre_race_load_ratio": 1.0927828507711528,
+      "pre_race_ramp_rate": 2.768877422866524,
+      "race_tss": 123.36785610748527,
+      "day_tss": 149.95398061059026,
+      "delta_atl": 8.532449797359988
     },
     {
       "date": "2023-04-30",
@@ -802,7 +1495,14 @@
       "category": "5K",
       "duration_seconds": 1055.0,
       "garmin_activity_id": 11015056679,
-      "distance_meters": 5121.580078125
+      "distance_meters": 5121.580078125,
+      "pre_race_ctl": 75.80031390333917,
+      "race_day_tsb": 2.116301946353758,
+      "pre_race_load_ratio": 0.9720805648766512,
+      "pre_race_ramp_rate": 2.242019440746759,
+      "race_tss": 32.18317582846099,
+      "day_tss": 58.34534383892083,
+      "delta_atl": -2.0419157149116813
     },
     {
       "date": "2023-04-17",
@@ -810,7 +1510,14 @@
       "category": "Marathon",
       "duration_seconds": 10480.0,
       "garmin_activity_id": 10934435760,
-      "distance_meters": 42356.0
+      "distance_meters": 42356.0,
+      "pre_race_ctl": 78.63661996601441,
+      "race_day_tsb": 24.719985710060115,
+      "pre_race_load_ratio": 0.6856428249237604,
+      "pre_race_ramp_rate": -7.858578728510935,
+      "race_tss": 100.14222222222222,
+      "day_tss": 100.14222222222222,
+      "delta_atl": 6.153647355352319
     },
     {
       "date": "2023-03-26",
@@ -818,7 +1525,14 @@
       "category": "8K",
       "duration_seconds": 1742.0,
       "garmin_activity_id": 10774234402,
-      "distance_meters": 8318.009765625
+      "distance_meters": 8318.009765625,
+      "pre_race_ctl": 83.23734895044504,
+      "race_day_tsb": -12.141543296528198,
+      "pre_race_load_ratio": 1.1458665304652675,
+      "pre_race_ramp_rate": 4.141872587643249,
+      "race_tss": 50.65681468606904,
+      "day_tss": 104.20699451184173,
+      "delta_atl": 1.1752155147194685
     },
     {
       "date": "2023-03-12",
@@ -826,7 +1540,14 @@
       "category": "Indoor Triathlon",
       "duration_seconds": 3339.919,
       "garmin_activity_id": 10680857673,
-      "distance_meters": 13807.61
+      "distance_meters": 13807.61,
+      "pre_race_ctl": 75.7890330225886,
+      "race_day_tsb": 0.3296536357790103,
+      "pre_race_load_ratio": 0.9956503781268623,
+      "pre_race_ramp_rate": -0.2487638007329167,
+      "race_tss": 75.00964725879248,
+      "day_tss": 146.70320693958348,
+      "delta_atl": 9.484127953661144
     },
     {
       "date": "2023-03-11",
@@ -834,7 +1555,14 @@
       "category": "5K",
       "duration_seconds": 1039.0,
       "garmin_activity_id": 10673554741,
-      "distance_meters": 5000.0
+      "distance_meters": 5000.0,
+      "pre_race_ctl": 76.1126256300875,
+      "race_day_tsb": -1.3584677235439955,
+      "pre_race_load_ratio": 1.0178481258831649,
+      "pre_race_ramp_rate": -0.3143039379875745,
+      "race_tss": 32.03650056425425,
+      "day_tss": 62.35929776862568,
+      "delta_atl": -2.0117139668219153
     },
     {
       "date": "2023-02-12",
@@ -842,7 +1570,14 @@
       "category": null,
       "duration_seconds": 3600.0,
       "garmin_activity_id": 10496802553,
-      "distance_meters": 15932.9599609375
+      "distance_meters": 15932.9599609375,
+      "pre_race_ctl": 68.27226717127236,
+      "race_day_tsb": -1.2434413775009006,
+      "pre_race_load_ratio": 1.0182129791351666,
+      "pre_race_ramp_rate": 0.04688757716567693,
+      "race_tss": 96.74944115582876,
+      "day_tss": 106.69326345613288,
+      "delta_atl": 4.949154191420661
     },
     {
       "date": "2023-01-14",
@@ -850,7 +1585,14 @@
       "category": "5K",
       "duration_seconds": 1082.0,
       "garmin_activity_id": 10307594346,
-      "distance_meters": 5137.8701171875
+      "distance_meters": 5137.8701171875,
+      "pre_race_ctl": 58.47490711411558,
+      "race_day_tsb": -7.087227855718481,
+      "pre_race_load_ratio": 1.1212011819341163,
+      "pre_race_ramp_rate": 1.1489942926289842,
+      "race_tss": 33.39711484113271,
+      "day_tss": 79.69225504919297,
+      "delta_atl": 1.8810312617463865
     },
     {
       "date": "2022-11-06",
@@ -858,7 +1600,14 @@
       "category": "Marathon",
       "duration_seconds": 17222.0,
       "garmin_activity_id": 9930560821,
-      "distance_meters": 42754.7109375
+      "distance_meters": 42754.7109375,
+      "pre_race_ctl": 77.99756111829397,
+      "race_day_tsb": 29.386782170662002,
+      "pre_race_load_ratio": 0.6232346018346275,
+      "pre_race_ramp_rate": -7.047770918030082,
+      "race_tss": 168.63786569005595,
+      "day_tss": 168.63786569005595,
+      "delta_atl": 15.97825787401861
     },
     {
       "date": "2022-10-02",
@@ -866,7 +1615,14 @@
       "category": "Marathon",
       "duration_seconds": 10538.0,
       "garmin_activity_id": 9714518939,
-      "distance_meters": 42742.9296875
+      "distance_meters": 42742.9296875,
+      "pre_race_ctl": 98.36175824117187,
+      "race_day_tsb": 37.288849092427036,
+      "pre_race_load_ratio": 0.6209009501334959,
+      "pre_race_ramp_rate": -10.52721041391969,
+      "race_tss": 226.2042245391965,
+      "day_tss": 226.2042245391965,
+      "delta_atl": 21.98262752179209
     },
     {
       "date": "2022-08-27",
@@ -874,7 +1630,14 @@
       "category": "5K",
       "duration_seconds": 1062.0,
       "garmin_activity_id": 9487633550,
-      "distance_meters": 5152.3701171875
+      "distance_meters": 5152.3701171875,
+      "pre_race_ctl": 96.06534889864334,
+      "race_day_tsb": -16.533263073772716,
+      "pre_race_load_ratio": 1.1721043358851133,
+      "pre_race_ramp_rate": 2.5116467182006517,
+      "race_tss": 32.42642364083754,
+      "day_tss": 135.87004348412302,
+      "delta_atl": 3.097941838658244
     },
     {
       "date": "2022-07-31",
@@ -882,7 +1645,14 @@
       "category": "5K",
       "duration_seconds": 1061.0,
       "garmin_activity_id": 9309918176,
-      "distance_meters": 4927.0400390625
+      "distance_meters": 4927.0400390625,
+      "pre_race_ctl": 74.98258459252243,
+      "race_day_tsb": -12.647586869073137,
+      "pre_race_load_ratio": 1.1686736585275617,
+      "pre_race_ramp_rate": 3.0885212919697835,
+      "race_tss": 31.420531501228943,
+      "day_tss": 144.64715065297304,
+      "delta_atl": 7.5902200198563605
     },
     {
       "date": "2022-07-09",
@@ -890,7 +1660,14 @@
       "category": "Half Marathon",
       "duration_seconds": 4988.0,
       "garmin_activity_id": 9170198313,
-      "distance_meters": 21621.2890625
+      "distance_meters": 21621.2890625,
+      "pre_race_ctl": 69.54911604418736,
+      "race_day_tsb": 1.3631137157998694,
+      "pre_race_load_ratio": 0.9804007039437593,
+      "pre_race_ramp_rate": -0.8331194367113,
+      "race_tss": 124.18916327787845,
+      "day_tss": 206.53460900792757,
+      "delta_atl": 18.417257087816424
     },
     {
       "date": "2022-07-04",
@@ -898,7 +1675,14 @@
       "category": "4 Mile",
       "duration_seconds": 1389.0,
       "garmin_activity_id": 9138580719,
-      "distance_meters": 6637.3701171875
+      "distance_meters": 6637.3701171875,
+      "pre_race_ctl": 69.55332697327096,
+      "race_day_tsb": 2.5774371879442697,
+      "pre_race_load_ratio": 0.9629430064656035,
+      "pre_race_ramp_rate": -1.4559725946565578,
+      "race_tss": 41.34011944484464,
+      "day_tss": 62.96034011579491,
+      "delta_atl": -0.5345584056655355
     },
     {
       "date": "2022-06-05",
@@ -906,7 +1690,14 @@
       "category": "5K",
       "duration_seconds": 1058.0,
       "garmin_activity_id": 8958596457,
-      "distance_meters": 5071.68017578125
+      "distance_meters": 5071.68017578125,
+      "pre_race_ctl": 67.52359163339744,
+      "race_day_tsb": -5.147482693015064,
+      "pre_race_load_ratio": 1.0762323592169392,
+      "pre_race_ramp_rate": 0.6670365637188951,
+      "race_tss": 31.70501837123261,
+      "day_tss": 75.02996244776362,
+      "delta_atl": 0.31402014096860853
     },
     {
       "date": "2022-05-28",
@@ -914,7 +1705,14 @@
       "category": "10 Mile",
       "duration_seconds": 3611.0,
       "garmin_activity_id": 8908739122,
-      "distance_meters": 16193.7001953125
+      "distance_meters": 16193.7001953125,
+      "pre_race_ctl": 66.17071532757434,
+      "race_day_tsb": -3.663691620504977,
+      "pre_race_load_ratio": 1.0553672663559412,
+      "pre_race_ramp_rate": 0.20380614022035104,
+      "race_tss": 95.32026514728518,
+      "day_tss": 95.32026514728518,
+      "delta_atl": 3.3927309701473405
     },
     {
       "date": "2022-05-22",
@@ -922,7 +1720,14 @@
       "category": "5K",
       "duration_seconds": 1066.0,
       "garmin_activity_id": 8872380695,
-      "distance_meters": 5086.8701171875
+      "distance_meters": 5086.8701171875,
+      "pre_race_ctl": 65.30871597439614,
+      "race_day_tsb": -4.95098046327395,
+      "pre_race_load_ratio": 1.0758088777187864,
+      "pre_race_ramp_rate": 3.154758257540905,
+      "race_tss": 31.97069775093083,
+      "day_tss": 79.23189129150697,
+      "delta_atl": 1.1943974227933722
     },
     {
       "date": "2022-05-14",
@@ -930,7 +1735,14 @@
       "category": "5K",
       "duration_seconds": 1063.0,
       "garmin_activity_id": 8821586231,
-      "distance_meters": 5062.68017578125
+      "distance_meters": 5062.68017578125,
+      "pre_race_ctl": 62.077847541116924,
+      "race_day_tsb": 8.227227564248253,
+      "pre_race_load_ratio": 0.8674691876389723,
+      "pre_race_ramp_rate": 0.6868407549269193,
+      "race_tss": 32.0153262702406,
+      "day_tss": 65.31268102082154,
+      "delta_atl": 1.52585363936263
     },
     {
       "date": "2022-05-07",
@@ -938,7 +1750,14 @@
       "category": "5K",
       "duration_seconds": 1088.218994140625,
       "garmin_activity_id": 8777284634,
-      "distance_meters": 5075.8701171875
+      "distance_meters": 5075.8701171875,
+      "pre_race_ctl": 61.391006786190005,
+      "race_day_tsb": 27.115993698030252,
+      "pre_race_load_ratio": 0.5583067436494618,
+      "pre_race_ramp_rate": -4.178865619694619,
+      "race_tss": 31.817445804656213,
+      "day_tss": 63.7518893996616,
+      "delta_atl": 3.9240236833912476
     },
     {
       "date": "2022-04-18",
@@ -946,7 +1765,14 @@
       "category": "Marathon",
       "duration_seconds": 10726.0,
       "garmin_activity_id": 8663390417,
-      "distance_meters": 42454.49472
+      "distance_meters": 42454.49472,
+      "pre_race_ctl": 76.79252316431193,
+      "race_day_tsb": 24.152239306366567,
+      "pre_race_load_ratio": 0.6854870980773956,
+      "pre_race_ramp_rate": -8.182284628942611,
+      "race_tss": 227.6365000597175,
+      "day_tss": 227.6365000597175,
+      "delta_atl": 23.295863836551206
     },
     {
       "date": "2022-03-19",
@@ -954,7 +1780,14 @@
       "category": "Half Marathon",
       "duration_seconds": 4907.0,
       "garmin_activity_id": 8485373016,
-      "distance_meters": 21136.0390625
+      "distance_meters": 21136.0390625,
+      "pre_race_ctl": 78.80555502822463,
+      "race_day_tsb": -6.805091327357047,
+      "pre_race_load_ratio": 1.0863529395220903,
+      "pre_race_ramp_rate": 2.7258909726583056,
+      "race_tss": 130.80171983799272,
+      "day_tss": 163.5113571257088,
+      "delta_atl": 10.370306228672973
     },
     {
       "date": "2022-03-12",
@@ -962,7 +1795,14 @@
       "category": "5K",
       "duration_seconds": 1069.0,
       "garmin_activity_id": 8444176764,
-      "distance_meters": 4925.240234375
+      "distance_meters": 4925.240234375,
+      "pre_race_ctl": 76.07966405556633,
+      "race_day_tsb": -0.7791647908143347,
+      "pre_race_load_ratio": 1.0102414331147054,
+      "pre_race_ramp_rate": -0.28196104153080626,
+      "race_tss": 31.392762152063288,
+      "day_tss": 86.64876556053646,
+      "delta_atl": 1.3032569367012314
     },
     {
       "date": "2022-02-12",
@@ -970,7 +1810,14 @@
       "category": "5 Mile / 8K",
       "duration_seconds": 1909.0,
       "garmin_activity_id": 8284516266,
-      "distance_meters": 7549.85986328125
+      "distance_meters": 7549.85986328125,
+      "pre_race_ctl": 70.14677323819016,
+      "race_day_tsb": -3.2638220510277165,
+      "pre_race_load_ratio": 1.0465284702397513,
+      "pre_race_ramp_rate": 0.7936783181936278,
+      "race_tss": 40.97728149322047,
+      "day_tss": 70.67489412198475,
+      "delta_atl": -0.36418228503795547
     },
     {
       "date": "2021-12-18",
@@ -978,7 +1825,14 @@
       "category": "5 Mile / 8K",
       "duration_seconds": 1812.0,
       "garmin_activity_id": 7977972333,
-      "distance_meters": 7575.7900390625
+      "distance_meters": 7575.7900390625,
+      "pre_race_ctl": 58.12380490821636,
+      "race_day_tsb": -3.440412573510855,
+      "pre_race_load_ratio": 1.0591911107496081,
+      "pre_race_ramp_rate": 0.10140770661121223,
+      "race_tss": 45.37975606136613,
+      "day_tss": 74.28386299900289,
+      "delta_atl": 1.693265925692927
     },
     {
       "date": "2021-11-25",
@@ -986,7 +1840,14 @@
       "category": "5K",
       "duration_seconds": 1100.0,
       "garmin_activity_id": 7872048322,
-      "distance_meters": 5051.06005859375
+      "distance_meters": 5051.06005859375,
+      "pre_race_ctl": 51.12773701844649,
+      "race_day_tsb": -8.163405441153799,
+      "pre_race_load_ratio": 1.1596668641565049,
+      "pre_race_ramp_rate": 2.995498454417209,
+      "race_tss": 32.6818904401673,
+      "day_tss": 69.6685231450908,
+      "delta_atl": 1.381458711944397
     },
     {
       "date": "2021-11-13",
@@ -994,7 +1855,14 @@
       "category": "8K",
       "duration_seconds": 1922.0,
       "garmin_activity_id": 7812809603,
-      "distance_meters": 8121.06005859375
+      "distance_meters": 8121.06005859375,
+      "pre_race_ctl": 47.33285453901872,
+      "race_day_tsb": 13.40513950589417,
+      "pre_race_load_ratio": 0.7167899625651423,
+      "pre_race_ramp_rate": -1.1077185825469726,
+      "race_tss": 45.95805244387487,
+      "day_tss": 55.768888713777855,
+      "delta_atl": 2.907542912289621
     },
     {
       "date": "2021-11-07",
@@ -1002,7 +1870,14 @@
       "category": "5K",
       "duration_seconds": 1173.303955078125,
       "garmin_activity_id": 7783338804,
-      "distance_meters": 5022.02978515625
+      "distance_meters": 5022.02978515625,
+      "pre_race_ctl": 47.30084813841657,
+      "race_day_tsb": 32.46267423776408,
+      "pre_race_load_ratio": 0.31369784020006397,
+      "pre_race_ramp_rate": -6.3170074831059395,
+      "race_tss": 28.67555255886083,
+      "day_tss": 40.69200306066949,
+      "delta_atl": 3.441716037281461
     },
     {
       "date": "2021-10-11",
@@ -1010,7 +1885,14 @@
       "category": "Marathon",
       "duration_seconds": 10601.0,
       "garmin_activity_id": 7640797571,
-      "distance_meters": 42195.07
+      "distance_meters": 42195.07,
+      "pre_race_ctl": 72.2193834664419,
+      "race_day_tsb": 40.78098972807298,
+      "pre_race_load_ratio": 0.4353179469190202,
+      "pre_race_ramp_rate": -12.336688593795145,
+      "race_tss": 222.0577558674492,
+      "day_tss": 222.0577558674492,
+      "delta_atl": 25.375649834903864
     },
     {
       "date": "2021-10-03",
@@ -1018,7 +1900,14 @@
       "category": "Marathon",
       "duration_seconds": 10161.0,
       "garmin_activity_id": 7595687553,
-      "distance_meters": 42266.41015625
+      "distance_meters": 42266.41015625,
+      "pre_race_ctl": 80.9621438067495,
+      "race_day_tsb": 29.699636455223384,
+      "pre_race_load_ratio": 0.6331663780283021,
+      "pre_race_ramp_rate": -7.358216857683345,
+      "race_tss": 233.71122532262478,
+      "day_tss": 233.71122532262478,
+      "delta_atl": 24.287956524199444
     },
     {
       "date": "2021-09-04",
@@ -1026,7 +1915,14 @@
       "category": "Half Marathon",
       "duration_seconds": 4876.0,
       "garmin_activity_id": 7426335702,
-      "distance_meters": 21126.369140625
+      "distance_meters": 21126.369140625,
+      "pre_race_ctl": 86.33369587021133,
+      "race_day_tsb": -9.997847528760232,
+      "pre_race_load_ratio": 1.115804697435754,
+      "pre_race_ramp_rate": 2.5767428201066878,
+      "race_tss": 123.26068045449693,
+      "day_tss": 166.2083009655343,
+      "delta_atl": 9.302140725908217
     },
     {
       "date": "2021-08-28",
@@ -1034,7 +1930,14 @@
       "category": "5K",
       "duration_seconds": 1061.0,
       "garmin_activity_id": 7384414258,
-      "distance_meters": 5154.3701171875
+      "distance_meters": 5154.3701171875,
+      "pre_race_ctl": 83.75695305010464,
+      "race_day_tsb": -8.989887614061885,
+      "pre_race_load_ratio": 1.107333030711898,
+      "pre_race_ramp_rate": 1.80699281438433,
+      "race_tss": 32.87109327348848,
+      "day_tss": 51.719626309148396,
+      "delta_atl": -5.461628942339516
     },
     {
       "date": "2021-07-31",
@@ -1042,7 +1945,14 @@
       "category": "5K",
       "duration_seconds": 1045.0,
       "garmin_activity_id": 7221153489,
-      "distance_meters": 5000.0
+      "distance_meters": 5000.0,
+      "pre_race_ctl": 75.1331304268388,
+      "race_day_tsb": -4.480082661371284,
+      "pre_race_load_ratio": 1.0596285904223541,
+      "pre_race_ramp_rate": 0.7236116667148877,
+      "race_tss": 31.408156551393816,
+      "day_tss": 91.85270716074037,
+      "delta_atl": 1.6293471569304359
     },
     {
       "date": "2021-07-11",
@@ -1050,7 +1960,14 @@
       "category": "Half Marathon",
       "duration_seconds": 5026.22216796875,
       "garmin_activity_id": 7107640485,
-      "distance_meters": 21097.54
+      "distance_meters": 21097.54,
+      "pre_race_ctl": 69.40047166216668,
+      "race_day_tsb": 1.5123484125661975,
+      "pre_race_load_ratio": 0.9782083842321976,
+      "pre_race_ramp_rate": -0.6449639186159573,
+      "race_tss": 123.692678290603,
+      "day_tss": 156.64901703590266,
+      "delta_atl": 11.816036600883606
     },
     {
       "date": "2021-07-03",
@@ -1058,7 +1975,14 @@
       "category": "4 Mile",
       "duration_seconds": 1431.0,
       "garmin_activity_id": 7062293551,
-      "distance_meters": 6437.38
+      "distance_meters": 6437.38,
+      "pre_race_ctl": 69.68517139645989,
+      "race_day_tsb": -3.093546684293827,
+      "pre_race_load_ratio": 1.0443931846948284,
+      "pre_race_ramp_rate": -0.12011786482872822,
+      "race_tss": 42.34209269278961,
+      "day_tss": 84.99711403331223,
+      "delta_atl": 1.6265385308884674
     },
     {
       "date": "2021-06-13",
@@ -1066,7 +1990,14 @@
       "category": "10K",
       "duration_seconds": 2443.0,
       "garmin_activity_id": 6951318081,
-      "distance_meters": 10356.23046875
+      "distance_meters": 10356.23046875,
+      "pre_race_ctl": 64.71330264532612,
+      "race_day_tsb": -17.85883471466461,
+      "pre_race_load_ratio": 1.2759685255525195,
+      "pre_race_ramp_rate": 2.4356525016808988,
+      "race_tss": 70.77008333333333,
+      "day_tss": 167.62447358805747,
+      "delta_atl": 11.322345629833961
     },
     {
       "date": "2020-10-04",
@@ -1074,7 +2005,14 @@
       "category": "Marathon",
       "duration_seconds": 13301.0,
       "garmin_activity_id": 5632482943,
-      "distance_meters": 42196.55078125
+      "distance_meters": 42196.55078125,
+      "pre_race_ctl": 29.767524858364236,
+      "race_day_tsb": 13.082754722035766,
+      "pre_race_load_ratio": 0.5605024339684156,
+      "pre_race_ramp_rate": -3.5513317708301066,
+      "race_tss": 270.69265720310096,
+      "day_tss": 270.69265720310096,
+      "delta_atl": 33.814063406347444
     },
     {
       "date": "2020-09-12",
@@ -1082,7 +2020,14 @@
       "category": "Marathon",
       "duration_seconds": 14513.205078125,
       "garmin_activity_id": 5527028290,
-      "distance_meters": 42214.51171875
+      "distance_meters": 42214.51171875,
+      "pre_race_ctl": 32.13592513939868,
+      "race_day_tsb": 15.881919135634835,
+      "pre_race_load_ratio": 0.5057892664753695,
+      "pre_race_ramp_rate": -4.371316760105039,
+      "race_tss": 258.7368964954748,
+      "day_tss": 258.7368964954748,
+      "delta_atl": 32.27983165690328
     },
     {
       "date": "2019-11-03",
@@ -1090,7 +2035,14 @@
       "category": "Marathon",
       "duration_seconds": 10407.0,
       "garmin_activity_id": 4219338135,
-      "distance_meters": 42196.99968
+      "distance_meters": 42196.99968,
+      "pre_race_ctl": 71.42549363569167,
+      "race_day_tsb": 36.73132483244322,
+      "pre_race_load_ratio": 0.4857392933146156,
+      "pre_race_ramp_rate": -7.861355508599161,
+      "race_tss": 226.12293185971163,
+      "day_tss": 226.12293185971163,
+      "delta_atl": 25.483398986301225
     },
     {
       "date": "2019-10-23",
@@ -1098,7 +2050,14 @@
       "category": "5K",
       "duration_seconds": 1064.0,
       "garmin_activity_id": 4183894166,
-      "distance_meters": 5000.0
+      "distance_meters": 5000.0,
+      "pre_race_ctl": 83.85795274812553,
+      "race_day_tsb": 14.022974219678332,
+      "pre_race_load_ratio": 0.8327770502363977,
+      "pre_race_ramp_rate": -3.923540934738554,
+      "race_tss": 15.477277777777777,
+      "day_tss": 29.251957445780437,
+      "delta_atl": -5.402497001007262
     },
     {
       "date": "2019-10-05",
@@ -1106,7 +2065,14 @@
       "category": "5K",
       "duration_seconds": 1048.0,
       "garmin_activity_id": 4128398616,
-      "distance_meters": 5000.0
+      "distance_meters": 5000.0,
+      "pre_race_ctl": 86.25875269693292,
+      "race_day_tsb": -7.525817495750331,
+      "pre_race_load_ratio": 1.0872470011500401,
+      "pre_race_ramp_rate": 1.972079904605664,
+      "race_tss": 31.39809567902516,
+      "day_tss": 49.09412711457588,
+      "delta_atl": -5.949285643652615
     },
     {
       "date": "2019-09-08",
@@ -1114,7 +2080,14 @@
       "category": "Half Marathon",
       "duration_seconds": 5182.0,
       "garmin_activity_id": 4037448347,
-      "distance_meters": 21097.54
+      "distance_meters": 21097.54,
+      "pre_race_ctl": 74.22401542182917,
+      "race_day_tsb": -5.700947687873807,
+      "pre_race_load_ratio": 1.0768073197801848,
+      "pre_race_ramp_rate": 1.1717519034132664,
+      "race_tss": 131.33272564725607,
+      "day_tss": 152.99307268478537,
+      "delta_atl": 9.726980207918828
     },
     {
       "date": "2019-09-07",
@@ -1122,7 +2095,14 @@
       "category": "5K",
       "duration_seconds": 1105.0,
       "garmin_activity_id": 4033085753,
-      "distance_meters": 5000.0
+      "distance_meters": 5000.0,
+      "pre_race_ctl": 74.17484613401297,
+      "race_day_tsb": -6.312214717458033,
+      "pre_race_load_ratio": 1.0850991278910596,
+      "pre_race_ramp_rate": 1.790187671429166,
+      "race_tss": 33.428331006313705,
+      "day_tss": 76.26463842339038,
+      "delta_atl": -0.562097741768028
     },
     {
       "date": "2019-08-24",
@@ -1130,7 +2110,14 @@
       "category": "10K",
       "duration_seconds": 2369.0,
       "garmin_activity_id": 3984299108,
-      "distance_meters": 10000.0
+      "distance_meters": 10000.0,
+      "pre_race_ctl": 68.68239754143636,
+      "race_day_tsb": -8.062642863727774,
+      "pre_race_load_ratio": 1.1173902361061807,
+      "pre_race_ramp_rate": 1.9586654224605269,
+      "race_tss": 57.874223860293604,
+      "day_tss": 92.38506765580658,
+      "delta_atl": 2.0820332755699127
     },
     {
       "date": "2019-07-21",
@@ -1138,7 +2125,14 @@
       "category": "Half Marathon",
       "duration_seconds": 5196.0,
       "garmin_activity_id": 3867685992,
-      "distance_meters": 21097.54
+      "distance_meters": 21097.54,
+      "pre_race_ctl": 52.7130367642744,
+      "race_day_tsb": -2.599872764527852,
+      "pre_race_load_ratio": 1.0493212481032754,
+      "pre_race_ramp_rate": 1.46763929820019,
+      "race_tss": 118.9803588622976,
+      "day_tss": 124.04860091801658,
+      "delta_atl": 9.150239599855567
     },
     {
       "date": "2019-07-04",
@@ -1146,7 +2140,14 @@
       "category": "4 Mile",
       "duration_seconds": 1456.0,
       "garmin_activity_id": 3811316566,
-      "distance_meters": 6429.60986328125
+      "distance_meters": 6429.60986328125,
+      "pre_race_ctl": 48.774167030341594,
+      "race_day_tsb": 6.976618478047243,
+      "pre_race_load_ratio": 0.8569607867683889,
+      "pre_race_ramp_rate": -1.3999359903721356,
+      "race_tss": 41.62046333522943,
+      "day_tss": 72.30437028648133,
+      "delta_atl": 4.061132181201778
     },
     {
       "date": "2019-06-22",
@@ -1154,7 +2155,14 @@
       "category": "5K",
       "duration_seconds": 1102.0,
       "garmin_activity_id": 3772580712,
-      "distance_meters": 5005.059840000001
+      "distance_meters": 5005.059840000001,
+      "pre_race_ctl": 50.670706140113865,
+      "race_day_tsb": 12.811388752224204,
+      "pre_race_load_ratio": 0.7471638007807045,
+      "pre_race_ramp_rate": -2.0892471779638413,
+      "race_tss": 33.21325283658483,
+      "day_tss": 83.97361511524583,
+      "delta_atl": 6.138832165011081
     },
     {
       "date": "2019-06-09",
@@ -1162,7 +2170,14 @@
       "category": "10K",
       "duration_seconds": 2348.0,
       "garmin_activity_id": 3730804857,
-      "distance_meters": 9994.026240000001
+      "distance_meters": 9994.026240000001,
+      "pre_race_ctl": 57.1865915514009,
+      "race_day_tsb": 0.400973612490354,
+      "pre_race_load_ratio": 0.9929883281795183,
+      "pre_race_ramp_rate": 0.3681273446328248,
+      "race_tss": 62.360688579983446,
+      "day_tss": 88.2023417502989,
+      "delta_atl": 4.1822602567404985
     },
     {
       "date": "2019-06-01",
@@ -1170,7 +2185,14 @@
       "category": "5K",
       "duration_seconds": 1096.0,
       "garmin_activity_id": 3704584828,
-      "distance_meters": 5000.0
+      "distance_meters": 5000.0,
+      "pre_race_ctl": 56.74324356027394,
+      "race_day_tsb": -4.578310565959747,
+      "pre_race_load_ratio": 1.0806846820643337,
+      "pre_race_ramp_rate": 0.761518533877684,
+      "race_tss": 33.06230999665348,
+      "day_tss": 59.940270282179085,
+      "delta_atl": -0.1838794063616902
     },
     {
       "date": "2019-05-26",
@@ -1178,7 +2200,14 @@
       "category": "5K",
       "duration_seconds": 1099.0,
       "garmin_activity_id": 3685777412,
-      "distance_meters": 5000.0
+      "distance_meters": 5000.0,
+      "pre_race_ctl": 56.45619880905112,
+      "race_day_tsb": -9.688137596116242,
+      "pre_race_load_ratio": 1.1716044969461001,
+      "pre_race_ramp_rate": 1.51443974207222,
+      "race_tss": 36.208890795168834,
+      "day_tss": 66.08640153787556,
+      "delta_atl": -0.0077124112115853904
     },
     {
       "date": "2019-04-15",
@@ -1186,7 +2215,14 @@
       "category": "Marathon",
       "duration_seconds": 10995.0,
       "garmin_activity_id": 3558724097,
-      "distance_meters": 42195.4
+      "distance_meters": 42195.4,
+      "pre_race_ctl": 54.42352626816411,
+      "race_day_tsb": 20.788949615370065,
+      "pre_race_load_ratio": 0.6180153870784576,
+      "pre_race_ramp_rate": -6.468429521259644,
+      "race_tss": 256.0278342856516,
+      "day_tss": 256.0278342856516,
+      "delta_atl": 29.60545753748496
     },
     {
       "date": "2019-03-03",
@@ -1194,7 +2230,14 @@
       "category": "Marathon",
       "duration_seconds": 10709.0,
       "garmin_activity_id": 3431151184,
-      "distance_meters": 42197.0
+      "distance_meters": 42197.0,
+      "pre_race_ctl": 64.82291838879016,
+      "race_day_tsb": 30.707928192176546,
+      "pre_race_load_ratio": 0.5262797640797537,
+      "pre_race_ramp_rate": -7.728951573702261,
+      "race_tss": 244.64287381248707,
+      "day_tss": 244.64287381248707,
+      "delta_atl": 28.025914028094412
     },
     {
       "date": "2018-10-07",
@@ -1202,7 +2245,14 @@
       "category": "Marathon",
       "duration_seconds": 11336.0,
       "garmin_activity_id": 3072085758,
-      "distance_meters": 42197.0
+      "distance_meters": 42197.0,
+      "pre_race_ctl": 49.4933287033058,
+      "race_day_tsb": 32.76903622720553,
+      "pre_race_load_ratio": 0.3379100358425318,
+      "pre_race_ramp_rate": -7.0734191103436075,
+      "race_tss": 244.47806665305495,
+      "day_tss": 244.47806665305495,
+      "delta_atl": 30.319060758259067
     },
     {
       "date": "2018-09-16",
@@ -1210,7 +2260,14 @@
       "category": "Marathon",
       "duration_seconds": 10695.0,
       "garmin_activity_id": 3019078986,
-      "distance_meters": 42197.0
+      "distance_meters": 42197.0,
+      "pre_race_ctl": 65.32019925484596,
+      "race_day_tsb": 29.63512944837204,
+      "pre_race_load_ratio": 0.5463098737229667,
+      "pre_race_ramp_rate": -7.550957712929801,
+      "race_tss": 253.805894515606,
+      "day_tss": 253.805894515606,
+      "delta_atl": 29.036702293502145
     },
     {
       "date": "2018-08-25",
@@ -1218,7 +2275,14 @@
       "category": "10K",
       "duration_seconds": 2346.4208984375,
       "garmin_activity_id": 2961262925,
-      "distance_meters": 10235.43
+      "distance_meters": 10235.43,
+      "pre_race_ctl": 77.28498408423052,
+      "race_day_tsb": -6.6917863593688764,
+      "pre_race_load_ratio": 1.0865858541430986,
+      "pre_race_ramp_rate": 0.3541911744639492,
+      "race_tss": 61.91438403190336,
+      "day_tss": 104.62457053468783,
+      "delta_atl": 2.748678513664089
     },
     {
       "date": "2018-07-22",
@@ -1226,7 +2290,14 @@
       "category": "Half Marathon",
       "duration_seconds": 5183.0,
       "garmin_activity_id": 2871499623,
-      "distance_meters": 21381.16015625
+      "distance_meters": 21381.16015625,
+      "pre_race_ctl": 61.03782308483259,
+      "race_day_tsb": -7.256694469934438,
+      "pre_race_load_ratio": 1.1188884875505605,
+      "pre_race_ramp_rate": 2.2337506076066234,
+      "race_tss": 121.39618543800701,
+      "day_tss": 124.53556587193403,
+      "delta_atl": 7.486926472232781
     },
     {
       "date": "2018-07-04",
@@ -1234,7 +2305,14 @@
       "category": "4 Mile",
       "duration_seconds": 1459.0,
       "garmin_activity_id": 2825582312,
-      "distance_meters": 6437.38
+      "distance_meters": 6437.38,
+      "pre_race_ctl": 53.61996553609446,
+      "race_day_tsb": 13.051823677139396,
+      "pre_race_load_ratio": 0.7565864963424209,
+      "pre_race_ramp_rate": -3.444678591807275,
+      "race_tss": null,
+      "day_tss": 67.99902883704834,
+      "delta_atl": 3.651657286239171
     },
     {
       "date": "2018-06-02",
@@ -1242,7 +2320,14 @@
       "category": "5K",
       "duration_seconds": 1085.0,
       "garmin_activity_id": 2745796312,
-      "distance_meters": 5000.0
+      "distance_meters": 5000.0,
+      "pre_race_ctl": 58.37218228551054,
+      "race_day_tsb": 5.468783046547323,
+      "pre_race_load_ratio": 0.906311828127337,
+      "pre_race_ramp_rate": -1.627780098005374,
+      "race_tss": 23.740055555555553,
+      "day_tss": 102.5348661076132,
+      "delta_atl": 6.607045108033965
     },
     {
       "date": "2018-05-27",
@@ -1250,7 +2335,14 @@
       "category": "5K",
       "duration_seconds": 1147.0,
       "garmin_activity_id": 2731157372,
-      "distance_meters": 5117.72
+      "distance_meters": 5117.72,
+      "pre_race_ctl": 58.588264467702935,
+      "race_day_tsb": 1.3983195742838248,
+      "pre_race_load_ratio": 0.9761331115200612,
+      "pre_race_ramp_rate": 1.2810690311596034,
+      "race_tss": 44.269888888888886,
+      "day_tss": 118.91544314236111,
+      "delta_atl": 8.217027965865654
     },
     {
       "date": "2018-04-16",
@@ -1258,7 +2350,14 @@
       "category": "Marathon",
       "duration_seconds": 11130.0,
       "garmin_activity_id": 2629227787,
-      "distance_meters": 42197.0
+      "distance_meters": 42197.0,
+      "pre_race_ctl": 64.76052953396952,
+      "race_day_tsb": 34.142582191251314,
+      "pre_race_load_ratio": 0.472787167786481,
+      "pre_race_ramp_rate": -8.066004296178477,
+      "race_tss": 174.66671121355282,
+      "day_tss": 174.66671121355282,
+      "delta_atl": 19.176073984875664
     },
     {
       "date": "2018-03-18",
@@ -1266,7 +2365,14 @@
       "category": "Half Marathon",
       "duration_seconds": 5118.0,
       "garmin_activity_id": 2563617691,
-      "distance_meters": 21098.5
+      "distance_meters": 21098.5,
+      "pre_race_ctl": 79.48175095527876,
+      "race_day_tsb": -0.886903517172982,
+      "pre_race_load_ratio": 1.0111585805107892,
+      "pre_race_ramp_rate": 0.7867170557187109,
+      "race_tss": 61.61248371766573,
+      "day_tss": 80.87271047683457,
+      "delta_atl": 0.06710099394697977
     },
     {
       "date": "2018-03-10",
@@ -1274,7 +2380,14 @@
       "category": "5K",
       "duration_seconds": 1076.0,
       "garmin_activity_id": 2546265092,
-      "distance_meters": 5000.0
+      "distance_meters": 5000.0,
+      "pre_race_ctl": 78.53190439970821,
+      "race_day_tsb": -0.47888041411047766,
+      "pre_race_load_ratio": 1.0060979090953035,
+      "pre_race_ramp_rate": 0.03331059353857313,
+      "race_tss": 29.25484052158035,
+      "day_tss": 85.46523180999574,
+      "delta_atl": 0.8592295400822252
     },
     {
       "date": "2017-11-01",
@@ -1282,7 +2395,14 @@
       "category": "5K",
       "duration_seconds": 1076.0,
       "garmin_activity_id": 2256480154,
-      "distance_meters": 4940.68608
+      "distance_meters": 4940.68608,
+      "pre_race_ctl": 45.36815649364112,
+      "race_day_tsb": -0.9711028635420078,
+      "pre_race_load_ratio": 1.0214049443176763,
+      "pre_race_ramp_rate": 2.495135205436114,
+      "race_tss": null,
+      "day_tss": 43.27640435112847,
+      "delta_atl": -0.40773369116666913
     },
     {
       "date": "2017-10-08",
@@ -1290,7 +2410,14 @@
       "category": "Marathon",
       "duration_seconds": 10918.0,
       "garmin_activity_id": 2068806965,
-      "distance_meters": 42197.0
+      "distance_meters": 42197.0,
+      "pre_race_ctl": 55.074486301230884,
+      "race_day_tsb": 28.58410691849446,
+      "pre_race_load_ratio": 0.4809918559720525,
+      "pre_race_ramp_rate": -6.895781495583066,
+      "race_tss": null,
+      "day_tss": 0.0,
+      "delta_atl": -3.52645493984436
     },
     {
       "date": "2017-09-23",
@@ -1298,7 +2425,14 @@
       "category": "5K",
       "duration_seconds": 1122.0,
       "garmin_activity_id": 1994759407,
-      "distance_meters": 5034.18994140625
+      "distance_meters": 5034.18994140625,
+      "pre_race_ctl": 66.57106628842672,
+      "race_day_tsb": 8.545253666087973,
+      "pre_race_load_ratio": 0.8716371219132244,
+      "pre_race_ramp_rate": 0.040485939327027154,
+      "race_tss": null,
+      "day_tss": 0.0,
+      "delta_atl": -7.724518044988159
     },
     {
       "date": "2017-08-26",
@@ -1306,7 +2440,14 @@
       "category": "5K",
       "duration_seconds": 1128.0,
       "garmin_activity_id": 1939936173,
-      "distance_meters": 5067.22998046875
+      "distance_meters": 5067.22998046875,
+      "pre_race_ctl": 66.30164156036122,
+      "race_day_tsb": 0.5468035973112535,
+      "pre_race_load_ratio": 0.9917527894567522,
+      "pre_race_ramp_rate": -0.04159055947026502,
+      "race_tss": null,
+      "day_tss": 109.89533159722222,
+      "delta_atl": 5.876075218644758
     },
     {
       "date": "2017-08-20",
@@ -1314,7 +2455,14 @@
       "category": "10K",
       "duration_seconds": 2403.0,
       "garmin_activity_id": 1928015820,
-      "distance_meters": 10000.0
+      "distance_meters": 10000.0,
+      "pre_race_ctl": 66.17308491265331,
+      "race_day_tsb": -6.927775859057974,
+      "pre_race_load_ratio": 1.1046917469270543,
+      "pre_race_ramp_rate": 1.2315328648923867,
+      "race_tss": 82.65680555555555,
+      "day_tss": 196.37280158487954,
+      "delta_atl": 16.41021966292027
     },
     {
       "date": "2017-08-06",
@@ -1322,7 +2470,14 @@
       "category": "5K",
       "duration_seconds": 1164.0,
       "garmin_activity_id": 1900035996,
-      "distance_meters": 5000.0
+      "distance_meters": 5000.0,
+      "pre_race_ctl": 60.73621033773008,
+      "race_day_tsb": 6.9070623499749715,
+      "pre_race_load_ratio": 0.8862776865469952,
+      "pre_race_ramp_rate": -2.2351825359948734,
+      "race_tss": null,
+      "day_tss": 81.70907801649305,
+      "delta_atl": 3.7114348402435766
     },
     {
       "date": "2017-07-16",
@@ -1330,7 +2485,14 @@
       "category": "Half Marathon",
       "duration_seconds": 5628.0,
       "garmin_activity_id": 1858705273,
-      "distance_meters": 21098.5
+      "distance_meters": 21098.5,
+      "pre_race_ctl": 56.4010168723117,
+      "race_day_tsb": 8.495289232249583,
+      "pre_race_load_ratio": 0.849377020072486,
+      "pre_race_ramp_rate": -3.8202619752661064,
+      "race_tss": 219.74327777777776,
+      "day_tss": 229.16883821614582,
+      "delta_atl": 24.130125977703337
     },
     {
       "date": "2017-07-04",
@@ -1338,7 +2500,14 @@
       "category": "4 Mile",
       "duration_seconds": 1506.0,
       "garmin_activity_id": 1834792767,
-      "distance_meters": 6477.16015625
+      "distance_meters": 6477.16015625,
+      "pre_race_ctl": 56.276264375396444,
+      "race_day_tsb": -6.676875345767762,
+      "pre_race_load_ratio": 1.1186446083419646,
+      "pre_race_ramp_rate": 1.296879373366643,
+      "race_tss": 55.39980555555555,
+      "day_tss": 103.14767020331487,
+      "delta_atl": 5.35078031633924
     },
     {
       "date": "2017-06-24",
@@ -1346,7 +2515,14 @@
       "category": "10K",
       "duration_seconds": 2469.0,
       "garmin_activity_id": 1816028619,
-      "distance_meters": 9995.3798828125
+      "distance_meters": 9995.3798828125,
+      "pre_race_ctl": 52.148403762876654,
+      "race_day_tsb": -4.073950003509658,
+      "pre_race_load_ratio": 1.0781222378739388,
+      "pre_race_ramp_rate": 0.28466579125159797,
+      "race_tss": 93.98930555555555,
+      "day_tss": 180.69952904256184,
+      "delta_atl": 16.570663005929255
     },
     {
       "date": "2017-06-17",
@@ -1354,7 +2530,14 @@
       "category": "1 Mile",
       "duration_seconds": 304.0,
       "garmin_activity_id": 1805409530,
-      "distance_meters": 1609.3440000000003
+      "distance_meters": 1609.3440000000003,
+      "pre_race_ctl": 51.863737971625056,
+      "race_day_tsb": -8.13384062068397,
+      "pre_race_load_ratio": 1.1568309755292616,
+      "pre_race_ramp_rate": 1.1496619706029065,
+      "race_tss": 10.942083333333333,
+      "day_tss": 14.00046120876736,
+      "delta_atl": -6.123232871534498
     },
     {
       "date": "2017-06-03",
@@ -1362,7 +2545,14 @@
       "category": "5K",
       "duration_seconds": 1158.0,
       "garmin_activity_id": 1776372404,
-      "distance_meters": 5062.2099609375
+      "distance_meters": 5062.2099609375,
+      "pre_race_ctl": 46.187355047027864,
+      "race_day_tsb": -2.0321993278467403,
+      "pre_race_load_ratio": 1.0439990409881137,
+      "pre_race_ramp_rate": 0.13163611091429317,
+      "race_tss": 45.87788888888889,
+      "day_tss": 105.46252397325304,
+      "delta_atl": 7.620304337472639
     },
     {
       "date": "2017-05-28",
@@ -1370,7 +2560,14 @@
       "category": "5K",
       "duration_seconds": 1179.0,
       "garmin_activity_id": 1764378628,
-      "distance_meters": 5049.4501953125
+      "distance_meters": 5049.4501953125,
+      "pre_race_ctl": 44.97210554952848,
+      "race_day_tsb": 0.7519120903487249,
+      "pre_race_load_ratio": 0.9832804783951992,
+      "pre_race_ramp_rate": -1.5081518743546738,
+      "race_tss": 45.664249999999996,
+      "day_tss": 61.96275999959309,
+      "delta_atl": 2.3619277216819796
     },
     {
       "date": "2017-05-13",
@@ -1378,7 +2575,14 @@
       "category": "10 Mile",
       "duration_seconds": 4234.0,
       "garmin_activity_id": 1730910946,
-      "distance_meters": 16240.5400390625
+      "distance_meters": 16240.5400390625,
+      "pre_race_ctl": 41.51595890641297,
+      "race_day_tsb": 2.419108248579626,
+      "pre_race_load_ratio": 0.9417306425696952,
+      "pre_race_ramp_rate": 1.8601581100156181,
+      "race_tss": 152.66733333333335,
+      "day_tss": 166.10967748684354,
+      "delta_atl": 16.90821426614432
     },
     {
       "date": "2017-04-17",
@@ -1386,7 +2590,14 @@
       "category": "Marathon",
       "duration_seconds": 11598.0,
       "garmin_activity_id": 1683222817,
-      "distance_meters": 42197.0
+      "distance_meters": 42197.0,
+      "pre_race_ctl": 45.337489905946896,
+      "race_day_tsb": 21.55758610105652,
+      "pre_race_load_ratio": 0.5245086098551561,
+      "pre_race_ramp_rate": -4.929009008921959,
+      "race_tss": 292.88141666666667,
+      "day_tss": 292.88141666666667,
+      "delta_atl": 35.82335857256318
     },
     {
       "date": "2017-04-02",
@@ -1394,7 +2605,14 @@
       "category": "8K",
       "duration_seconds": 1903.0,
       "garmin_activity_id": 1654586474,
-      "distance_meters": 8000.0
+      "distance_meters": 8000.0,
+      "pre_race_ctl": 52.02636810736069,
+      "race_day_tsb": 14.768884348697249,
+      "pre_race_load_ratio": 0.7161269393585107,
+      "pre_race_ramp_rate": -5.62758527770594,
+      "race_tss": 72.7632649468316,
+      "day_tss": 116.21981428866916,
+      "delta_atl": 10.511631280774722
     },
     {
       "date": "2017-03-18",
@@ -1402,7 +2620,14 @@
       "category": "10 Mile",
       "duration_seconds": 3915.0,
       "garmin_activity_id": 1627130267,
-      "distance_meters": 16093.44
+      "distance_meters": 16093.44,
+      "pre_race_ctl": 55.36090663300291,
+      "race_day_tsb": 9.896214876286557,
+      "pre_race_load_ratio": 0.8212418206607365,
+      "pre_race_ramp_rate": -0.4443411386288787,
+      "race_tss": 131.5003888888889,
+      "day_tss": 217.03294576687284,
+      "delta_atl": 22.839526310026365
     },
     {
       "date": "2016-11-26",
@@ -1410,7 +2635,14 @@
       "category": "Half Marathon",
       "duration_seconds": 5254.0,
       "garmin_activity_id": 1461789371,
-      "distance_meters": 21104.38
+      "distance_meters": 21104.38,
+      "pre_race_ctl": 45.61580177624359,
+      "race_day_tsb": 8.180581364849779,
+      "pre_race_load_ratio": 0.8206634313920977,
+      "pre_race_ramp_rate": -1.5286916211770745,
+      "race_tss": 151.83847222222224,
+      "day_tss": 151.83847222222224,
+      "delta_atl": 15.229601156466323
     },
     {
       "date": "2016-11-09",
@@ -1418,7 +2650,14 @@
       "category": "5K",
       "duration_seconds": 1082.0,
       "garmin_activity_id": 1440787658,
-      "distance_meters": 5005.06
+      "distance_meters": 5005.06,
+      "pre_race_ctl": 45.764518809432786,
+      "race_day_tsb": -7.866886672050576,
+      "pre_race_load_ratio": 1.1718992546345552,
+      "pre_race_ramp_rate": 2.129143264742808,
+      "race_tss": 37.05386111111111,
+      "day_tss": 60.09023313888889,
+      "delta_atl": 0.8598127029054368
     },
     {
       "date": "2016-10-09",
@@ -1426,7 +2665,14 @@
       "category": "Marathon",
       "duration_seconds": 11357.0,
       "garmin_activity_id": 1398277835,
-      "distance_meters": 42197.0
+      "distance_meters": 42197.0,
+      "pre_race_ctl": 44.066254252392135,
+      "race_day_tsb": 7.3307703976607,
+      "pre_race_load_ratio": 0.8336420800444424,
+      "pre_race_ramp_rate": -2.0292389579708754,
+      "race_tss": null,
+      "day_tss": 0.0,
+      "delta_atl": -4.890304764435143
     },
     {
       "date": "2016-09-10",
@@ -1434,7 +2680,14 @@
       "category": "Marathon",
       "duration_seconds": 11543.0,
       "garmin_activity_id": 1351262329,
-      "distance_meters": 42195.4
+      "distance_meters": 42195.4,
+      "pre_race_ctl": 40.58543780442559,
+      "race_day_tsb": 18.42163456221415,
+      "pre_race_load_ratio": 0.546102356934403,
+      "pre_race_ramp_rate": -0.5615051747059425,
+      "race_tss": 338.7721666666667,
+      "day_tss": 338.7721666666667,
+      "delta_atl": 42.14757029572127
     },
     {
       "date": "2016-08-27",
@@ -1442,7 +2695,14 @@
       "category": "5K",
       "duration_seconds": 1147.0,
       "garmin_activity_id": 1323485585,
-      "distance_meters": 5000.0
+      "distance_meters": 5000.0,
+      "pre_race_ctl": 48.60936954598601,
+      "race_day_tsb": 33.76912985375176,
+      "pre_race_load_ratio": 0.3052958684887883,
+      "pre_race_ramp_rate": -8.815815329998756,
+      "race_tss": null,
+      "day_tss": 0.0,
+      "delta_atl": -1.9755638760409422
     },
     {
       "date": "2016-08-21",
@@ -1450,7 +2710,14 @@
       "category": "10K",
       "duration_seconds": 2422.0,
       "garmin_activity_id": 1314313332,
-      "distance_meters": 10000.0
+      "distance_meters": 10000.0,
+      "pre_race_ctl": 56.07406713216974,
+      "race_day_tsb": 21.10425263199491,
+      "pre_race_load_ratio": 0.6236361350024603,
+      "pre_race_ramp_rate": -7.787217767419634,
+      "race_tss": null,
+      "day_tss": 0.0,
+      "delta_atl": -4.6552551516098255
     },
     {
       "date": "2016-07-23",
@@ -1458,7 +2725,14 @@
       "category": "Half Marathon",
       "duration_seconds": 5718.0,
       "garmin_activity_id": 1269528369,
-      "distance_meters": 21098.5
+      "distance_meters": 21098.5,
+      "pre_race_ctl": 60.23369992888631,
+      "race_day_tsb": -2.3508456341935045,
+      "pre_race_load_ratio": 1.0390287436595955,
+      "pre_race_ramp_rate": 1.070138308750451,
+      "race_tss": 173.71966666666668,
+      "day_tss": 177.0243888888889,
+      "delta_atl": 15.234472295791875
     },
     {
       "date": "2016-07-17",
@@ -1466,7 +2740,14 @@
       "category": "Half Marathon",
       "duration_seconds": 5382.0,
       "garmin_activity_id": 1259817605,
-      "distance_meters": 21097.54
+      "distance_meters": 21097.54,
+      "pre_race_ctl": 57.77154280356799,
+      "race_day_tsb": -0.3893237240035745,
+      "pre_race_load_ratio": 1.0067390224513708,
+      "pre_race_ramp_rate": -2.0335573305438643,
+      "race_tss": 189.28269444444445,
+      "day_tss": 229.77698544444442,
+      "delta_atl": 22.845898186936715
     },
     {
       "date": "2016-07-09",
@@ -1474,7 +2755,14 @@
       "category": "10 Mile",
       "duration_seconds": 4300.0,
       "garmin_activity_id": 1248066956,
-      "distance_meters": 16093.44
+      "distance_meters": 16093.44,
+      "pre_race_ctl": 55.738620393765345,
+      "race_day_tsb": -1.3038975824655665,
+      "pre_race_load_ratio": 1.0233930724021187,
+      "pre_race_ramp_rate": 1.7681171052352695,
+      "race_tss": 167.56805555555556,
+      "day_tss": 228.57207769444446,
+      "delta_atl": 22.83437524461523
     },
     {
       "date": "2016-07-04",
@@ -1482,7 +2770,14 @@
       "category": "4 Mile",
       "duration_seconds": 1528.0,
       "garmin_activity_id": 1240970934,
-      "distance_meters": 6437.38
+      "distance_meters": 6437.38,
+      "pre_race_ctl": 54.49308029412908,
+      "race_day_tsb": 0.25771739734632604,
+      "pre_race_load_ratio": 0.995270639942626,
+      "pre_race_ramp_rate": 1.5338801476674888,
+      "race_tss": 52.402499999999996,
+      "day_tss": 97.36935494444444,
+      "delta_atl": 5.7420876135436885
     },
     {
       "date": "2016-06-26",
@@ -1490,7 +2785,14 @@
       "category": "5 Mile / 8K",
       "duration_seconds": 1977.692,
       "garmin_activity_id": 1229888799,
-      "distance_meters": 8046.72
+      "distance_meters": 8046.72,
+      "pre_race_ctl": 51.42060376358067,
+      "race_day_tsb": 18.62755900333962,
+      "pre_race_load_ratio": 0.6377413402420444,
+      "pre_race_ramp_rate": -5.742191271565453,
+      "race_tss": 77.16219444444444,
+      "day_tss": 116.81400277777777,
+      "delta_atl": 11.185046396296308
     },
     {
       "date": "2016-05-30",
@@ -1498,7 +2800,14 @@
       "category": "5K",
       "duration_seconds": 1159.0,
       "garmin_activity_id": 1191340000,
-      "distance_meters": 5000.0
+      "distance_meters": 5000.0,
+      "pre_race_ctl": 59.836113417032244,
+      "race_day_tsb": 21.204027857486658,
+      "pre_race_load_ratio": 0.6456315986016069,
+      "pre_race_ramp_rate": -3.7402052447117597,
+      "race_tss": 44.007888888888886,
+      "day_tss": 57.244,
+      "delta_atl": 2.477657139983215
     },
     {
       "date": "2016-05-15",
@@ -1506,7 +2815,14 @@
       "category": "Marathon",
       "duration_seconds": 11544.0,
       "garmin_activity_id": 1169658035,
-      "distance_meters": 42195.4
+      "distance_meters": 42195.4,
+      "pre_race_ctl": 65.26016345690721,
+      "race_day_tsb": 26.788457901289185,
+      "pre_race_load_ratio": 0.5895128592655423,
+      "pre_race_ramp_rate": -6.142878999051291,
+      "race_tss": 394.35397222222224,
+      "day_tss": 394.35397222222224,
+      "delta_atl": 47.37579478032429
     },
     {
       "date": "2016-04-30",
@@ -1514,7 +2830,14 @@
       "category": "5K",
       "duration_seconds": 1126.0,
       "garmin_activity_id": 1148001505,
-      "distance_meters": 5000.0
+      "distance_meters": 5000.0,
+      "pre_race_ctl": 75.36044572745857,
+      "race_day_tsb": 7.333395199290862,
+      "pre_race_load_ratio": 0.9026890681377852,
+      "pre_race_ramp_rate": -0.7388418392214788,
+      "race_tss": 43.06894444444444,
+      "day_tss": 43.06894444444444,
+      "delta_atl": -3.322475500123005
     },
     {
       "date": "2016-04-09",
@@ -1522,7 +2845,14 @@
       "category": "Half Marathon",
       "duration_seconds": 5543.0,
       "garmin_activity_id": 1118853205,
-      "distance_meters": 21098.5
+      "distance_meters": 21098.5,
+      "pre_race_ctl": 71.69041616167127,
+      "race_day_tsb": 2.6169480921956847,
+      "pre_race_load_ratio": 0.9634965420441398,
+      "pre_race_ramp_rate": -0.13795054911280147,
+      "race_tss": 188.83825000000002,
+      "day_tss": 188.83825000000002,
+      "delta_atl": 15.943339306552915
     },
     {
       "date": "2016-04-02",
@@ -1530,7 +2860,14 @@
       "category": "5K",
       "duration_seconds": 1194.0,
       "garmin_activity_id": 1108707591,
-      "distance_meters": 5000.0
+      "distance_meters": 5000.0,
+      "pre_race_ctl": 71.82836671078407,
+      "race_day_tsb": -4.096016885337164,
+      "pre_race_load_ratio": 1.0570250594981467,
+      "pre_race_ramp_rate": -0.2992717889471095,
+      "race_tss": 45.86102777777778,
+      "day_tss": 45.86102777777778,
+      "delta_atl": -4.002097067095477
     },
     {
       "date": "2016-03-19",
@@ -1538,7 +2875,14 @@
       "category": "10 Mile",
       "duration_seconds": 3928.0,
       "garmin_activity_id": 1090963461,
-      "distance_meters": 16093.44
+      "distance_meters": 16093.44,
+      "pre_race_ctl": 67.23356162151833,
+      "race_day_tsb": -1.2488170816298805,
+      "pre_race_load_ratio": 1.01857431097671,
+      "pre_race_ramp_rate": 0.9069425628926382,
+      "race_tss": 137.9680277777778,
+      "day_tss": 137.9680277777778,
+      "delta_atl": 9.25007554203654
     },
     {
       "date": "2016-03-12",
@@ -1546,7 +2890,14 @@
       "category": "5K",
       "duration_seconds": 1142.0,
       "garmin_activity_id": 1082030010,
-      "distance_meters": 5000.0
+      "distance_meters": 5000.0,
+      "pre_race_ctl": 66.3266190586257,
+      "race_day_tsb": -7.539133096165713,
+      "pre_race_load_ratio": 1.1136667781830085,
+      "pre_race_ramp_rate": 1.7398326522312288,
+      "race_tss": 41.80136111111111,
+      "day_tss": 116.43493847222223,
+      "delta_atl": 5.666899488502224
     },
     {
       "date": "2015-11-28",
@@ -1554,7 +2905,14 @@
       "category": "Half Marathon",
       "duration_seconds": 5776.0,
       "garmin_activity_id": 969209790,
-      "distance_meters": 21098.5
+      "distance_meters": 21098.5,
+      "pre_race_ctl": 0.8143734843235262,
+      "race_day_tsb": -3.7933137314388663,
+      "pre_race_load_ratio": 5.657953389273043,
+      "pre_race_ramp_rate": 0.8143734843235262,
+      "race_tss": 232.6908611111111,
+      "day_tss": 232.6908611111111,
+      "delta_atl": 30.36291114059338
     },
     {
       "date": "2015-11-15",
@@ -1562,7 +2920,14 @@
       "category": "8K",
       "duration_seconds": 2015.0,
       "garmin_activity_id": 962891138,
-      "distance_meters": 7983.5
+      "distance_meters": 7983.5,
+      "pre_race_ctl": 0.0,
+      "race_day_tsb": 0.0,
+      "pre_race_load_ratio": null,
+      "pre_race_ramp_rate": 0.0,
+      "race_tss": null,
+      "day_tss": 0.0,
+      "delta_atl": 0.0
     },
     {
       "date": "2015-09-26",
@@ -1570,7 +2935,14 @@
       "category": "5K",
       "duration_seconds": 1249.0,
       "garmin_activity_id": 962890347,
-      "distance_meters": 5056.7
+      "distance_meters": 5056.7,
+      "pre_race_ctl": 0.0,
+      "race_day_tsb": 0.0,
+      "pre_race_load_ratio": null,
+      "pre_race_ramp_rate": 0.0,
+      "race_tss": null,
+      "day_tss": 0.0,
+      "delta_atl": 0.0
     },
     {
       "date": "2015-08-08",
@@ -1578,7 +2950,14 @@
       "category": "5K",
       "duration_seconds": 1308.0,
       "garmin_activity_id": 962889209,
-      "distance_meters": 5174.4
+      "distance_meters": 5174.4,
+      "pre_race_ctl": 0.0,
+      "race_day_tsb": 0.0,
+      "pre_race_load_ratio": null,
+      "pre_race_ramp_rate": 0.0,
+      "race_tss": null,
+      "day_tss": 0.0,
+      "delta_atl": 0.0
     },
     {
       "date": "2015-07-11",
@@ -1586,7 +2965,14 @@
       "category": "10 Mile",
       "duration_seconds": 4755.0,
       "garmin_activity_id": 962888640,
-      "distance_meters": 15923.4
+      "distance_meters": 15923.4,
+      "pre_race_ctl": 0.0,
+      "race_day_tsb": 0.0,
+      "pre_race_load_ratio": null,
+      "pre_race_ramp_rate": 0.0,
+      "race_tss": null,
+      "day_tss": 0.0,
+      "delta_atl": 0.0
     }
   ]
 }
