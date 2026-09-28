@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T13:56:57Z",
+  "generated_at": "2026-09-28T22:32:22Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-28",
   "count": 198,
@@ -21,7 +21,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2026-08-23",
@@ -40,7 +41,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2026-08-16",
@@ -59,7 +61,8 @@
       "age_grade_percent": 75.43604651162791,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
-      "age_grade_age": 57
+      "age_grade_age": 57,
+      "usat_score": null
     },
     {
       "date": "2026-08-09",
@@ -78,7 +81,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2026-08-02",
@@ -97,7 +101,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2026-07-26",
@@ -116,7 +121,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2026-07-18",
@@ -135,7 +141,8 @@
       "age_grade_percent": 89.45686900958466,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "1 Mile",
-      "age_grade_age": 57
+      "age_grade_age": 57,
+      "usat_score": null
     },
     {
       "date": "2026-07-12",
@@ -154,7 +161,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2026-07-04",
@@ -173,7 +181,8 @@
       "age_grade_percent": 81.76833447566827,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
-      "age_grade_age": 56
+      "age_grade_age": 56,
+      "usat_score": null
     },
     {
       "date": "2026-06-28",
@@ -192,7 +201,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2026-06-21",
@@ -211,7 +221,8 @@
       "age_grade_percent": 82.28980322003578,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 56
+      "age_grade_age": 56,
+      "usat_score": null
     },
     {
       "date": "2026-06-14",
@@ -230,7 +241,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2026-05-25",
@@ -249,7 +261,8 @@
       "age_grade_percent": 82.01281684820509,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
-      "age_grade_age": 56
+      "age_grade_age": 56,
+      "usat_score": null
     },
     {
       "date": "2026-05-23",
@@ -268,7 +281,8 @@
       "age_grade_percent": 82.36842105263158,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
-      "age_grade_age": 56
+      "age_grade_age": 56,
+      "usat_score": null
     },
     {
       "date": "2026-05-17",
@@ -287,7 +301,8 @@
       "age_grade_percent": 79.2990604877019,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
-      "age_grade_age": 56
+      "age_grade_age": 56,
+      "usat_score": null
     },
     {
       "date": "2026-05-09",
@@ -306,7 +321,8 @@
       "age_grade_percent": 79.65367965367966,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 56
+      "age_grade_age": 56,
+      "usat_score": null
     },
     {
       "date": "2026-04-26",
@@ -325,7 +341,8 @@
       "age_grade_percent": 84.24908424908425,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 56
+      "age_grade_age": 56,
+      "usat_score": null
     },
     {
       "date": "2026-04-20",
@@ -344,7 +361,8 @@
       "age_grade_percent": 79.91952839898943,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 56
+      "age_grade_age": 56,
+      "usat_score": null
     },
     {
       "date": "2026-04-12",
@@ -363,7 +381,8 @@
       "age_grade_percent": 77.34335839598997,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
-      "age_grade_age": 56
+      "age_grade_age": 56,
+      "usat_score": null
     },
     {
       "date": "2026-03-22",
@@ -382,7 +401,8 @@
       "age_grade_percent": 82.43093922651934,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "8K",
-      "age_grade_age": 56
+      "age_grade_age": 56,
+      "usat_score": null
     },
     {
       "date": "2026-03-15",
@@ -401,7 +421,8 @@
       "age_grade_percent": 80.34388432981633,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 56
+      "age_grade_age": 56,
+      "usat_score": null
     },
     {
       "date": "2026-03-14",
@@ -420,7 +441,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2026-03-14",
@@ -439,7 +461,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2026-03-14",
@@ -458,7 +481,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2026-01-25",
@@ -477,7 +501,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2026-01-25",
@@ -496,7 +521,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2026-01-25",
@@ -515,7 +541,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2025-11-27",
@@ -534,7 +561,8 @@
       "age_grade_percent": 85.5813953488372,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 56
+      "age_grade_age": 56,
+      "usat_score": null
     },
     {
       "date": "2025-11-09",
@@ -553,7 +581,8 @@
       "age_grade_percent": 78.09847198641766,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 56
+      "age_grade_age": 56,
+      "usat_score": null
     },
     {
       "date": "2025-10-25",
@@ -572,7 +601,8 @@
       "age_grade_percent": 84.7926267281106,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 56
+      "age_grade_age": 56,
+      "usat_score": null
     },
     {
       "date": "2025-10-12",
@@ -591,7 +621,8 @@
       "age_grade_percent": 81.8417018014565,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 56
+      "age_grade_age": 56,
+      "usat_score": null
     },
     {
       "date": "2025-09-06",
@@ -610,7 +641,8 @@
       "age_grade_percent": 83.74745417515274,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 56
+      "age_grade_age": 56,
+      "usat_score": null
     },
     {
       "date": "2025-08-24",
@@ -629,7 +661,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2025-08-17",
@@ -648,7 +681,8 @@
       "age_grade_percent": 78.88548057259713,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
-      "age_grade_age": 56
+      "age_grade_age": 56,
+      "usat_score": null
     },
     {
       "date": "2025-07-19",
@@ -667,7 +701,8 @@
       "age_grade_percent": 88.6041642917642,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "1 Mile",
-      "age_grade_age": 56
+      "age_grade_age": 56,
+      "usat_score": null
     },
     {
       "date": "2025-07-13",
@@ -686,7 +721,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2025-07-04",
@@ -705,7 +741,8 @@
       "age_grade_percent": 83.60424028268551,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
-      "age_grade_age": 55
+      "age_grade_age": 55,
+      "usat_score": null
     },
     {
       "date": "2025-06-22",
@@ -724,7 +761,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2025-06-15",
@@ -743,7 +781,8 @@
       "age_grade_percent": 83.53156450137237,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 55
+      "age_grade_age": 55,
+      "usat_score": null
     },
     {
       "date": "2025-05-24",
@@ -762,7 +801,8 @@
       "age_grade_percent": 81.20021242697823,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
-      "age_grade_age": 55
+      "age_grade_age": 55,
+      "usat_score": null
     },
     {
       "date": "2025-05-18",
@@ -781,7 +821,8 @@
       "age_grade_percent": 82.82153983088563,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
-      "age_grade_age": 55
+      "age_grade_age": 55,
+      "usat_score": null
     },
     {
       "date": "2025-04-27",
@@ -800,7 +841,8 @@
       "age_grade_percent": 82.40072202166066,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 55
+      "age_grade_age": 55,
+      "usat_score": null
     },
     {
       "date": "2025-04-21",
@@ -819,7 +861,8 @@
       "age_grade_percent": 72.69755957546448,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 55
+      "age_grade_age": 55,
+      "usat_score": null
     },
     {
       "date": "2025-04-13",
@@ -838,7 +881,8 @@
       "age_grade_percent": 80.03140539125883,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
-      "age_grade_age": 55
+      "age_grade_age": 55,
+      "usat_score": null
     },
     {
       "date": "2025-04-06",
@@ -857,7 +901,8 @@
       "age_grade_percent": 84.85130111524164,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 55
+      "age_grade_age": 55,
+      "usat_score": null
     },
     {
       "date": "2025-03-29",
@@ -876,7 +921,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2025-03-29",
@@ -895,7 +941,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2025-03-29",
@@ -914,7 +961,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2025-03-23",
@@ -933,7 +981,8 @@
       "age_grade_percent": 83.13659359190557,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "8K",
-      "age_grade_age": 55
+      "age_grade_age": 55,
+      "usat_score": null
     },
     {
       "date": "2025-03-16",
@@ -952,7 +1001,8 @@
       "age_grade_percent": 79.38425565081839,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 55
+      "age_grade_age": 55,
+      "usat_score": null
     },
     {
       "date": "2025-02-16",
@@ -971,7 +1021,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2025-02-16",
@@ -990,7 +1041,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2025-02-16",
@@ -1009,7 +1061,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2025-01-19",
@@ -1028,7 +1081,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2025-01-19",
@@ -1047,7 +1101,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2025-01-19",
@@ -1066,7 +1121,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2024-11-24",
@@ -1085,7 +1141,8 @@
       "age_grade_percent": 80.87116916151814,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
-      "age_grade_age": 55
+      "age_grade_age": 55,
+      "usat_score": null
     },
     {
       "date": "2024-11-10",
@@ -1104,7 +1161,8 @@
       "age_grade_percent": 77.36534215353666,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 55
+      "age_grade_age": 55,
+      "usat_score": null
     },
     {
       "date": "2024-10-13",
@@ -1123,7 +1181,8 @@
       "age_grade_percent": 68.16826496897413,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 55
+      "age_grade_age": 55,
+      "usat_score": null
     },
     {
       "date": "2024-09-07",
@@ -1142,7 +1201,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2024-08-25",
@@ -1161,7 +1221,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2024-08-04",
@@ -1180,7 +1241,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2024-07-28",
@@ -1199,7 +1261,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2024-07-27",
@@ -1218,7 +1281,8 @@
       "age_grade_percent": 86.07494725387753,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "1 Mile",
-      "age_grade_age": 55
+      "age_grade_age": 55,
+      "usat_score": null
     },
     {
       "date": "2024-07-04",
@@ -1237,7 +1301,8 @@
       "age_grade_percent": 83.3096590909091,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2024-06-23",
@@ -1256,7 +1321,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2024-06-16",
@@ -1275,7 +1341,8 @@
       "age_grade_percent": 83.25666973321067,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2024-06-09",
@@ -1294,7 +1361,8 @@
       "age_grade_percent": 81.47325933400606,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2024-06-02",
@@ -1313,7 +1381,8 @@
       "age_grade_percent": 84.47672302656602,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2024-05-25",
@@ -1332,7 +1401,8 @@
       "age_grade_percent": 79.22111866178777,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2024-05-19",
@@ -1351,7 +1421,8 @@
       "age_grade_percent": 80.078125,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2024-05-11",
@@ -1370,7 +1441,8 @@
       "age_grade_percent": 79.3859649122807,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2024-04-28",
@@ -1389,7 +1461,8 @@
       "age_grade_percent": 83.56417359187442,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2024-04-21",
@@ -1408,7 +1481,8 @@
       "age_grade_percent": 78.49089332176929,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2024-04-15",
@@ -1427,7 +1501,8 @@
       "age_grade_percent": 72.98144760909328,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2024-03-24",
@@ -1446,7 +1521,8 @@
       "age_grade_percent": 82.6944757609921,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "8K",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2024-03-09",
@@ -1465,7 +1541,8 @@
       "age_grade_percent": 86.60287081339713,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2024-02-11",
@@ -1484,7 +1561,8 @@
       "age_grade_percent": 84.0297121634169,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2024-01-14",
@@ -1503,7 +1581,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2024-01-14",
@@ -1522,7 +1601,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2024-01-14",
@@ -1541,7 +1621,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2023-11-12",
@@ -1560,7 +1641,8 @@
       "age_grade_percent": 80.01768346595934,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2023-10-28",
@@ -1579,7 +1661,8 @@
       "age_grade_percent": 82.12341197822141,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2023-10-08",
@@ -1598,7 +1681,8 @@
       "age_grade_percent": 78.08219178082192,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2023-09-30",
@@ -1617,7 +1701,8 @@
       "age_grade_percent": 82.34758871701547,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2023-09-24",
@@ -1636,7 +1721,8 @@
       "age_grade_percent": 72.21408256485392,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2023-09-09",
@@ -1655,7 +1741,8 @@
       "age_grade_percent": 82.4213964883626,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2023-08-27",
@@ -1674,7 +1761,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2023-08-20",
@@ -1693,7 +1781,8 @@
       "age_grade_percent": 77.73162221168963,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2023-08-06",
@@ -1712,7 +1801,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2023-07-29",
@@ -1731,7 +1821,8 @@
       "age_grade_percent": 91.30434782608695,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "1 Mile",
-      "age_grade_age": 54
+      "age_grade_age": 54,
+      "usat_score": null
     },
     {
       "date": "2023-07-04",
@@ -1750,7 +1841,8 @@
       "age_grade_percent": 84.33647570703408,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
-      "age_grade_age": 53
+      "age_grade_age": 53,
+      "usat_score": null
     },
     {
       "date": "2023-06-25",
@@ -1769,7 +1861,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2023-06-18",
@@ -1788,7 +1881,8 @@
       "age_grade_percent": 85.60533841754051,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 53
+      "age_grade_age": 53,
+      "usat_score": null
     },
     {
       "date": "2023-06-04",
@@ -1807,7 +1901,8 @@
       "age_grade_percent": 80.30515960650472,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 53
+      "age_grade_age": 53,
+      "usat_score": null
     },
     {
       "date": "2023-05-27",
@@ -1826,7 +1921,8 @@
       "age_grade_percent": 81.14532685035117,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
-      "age_grade_age": 53
+      "age_grade_age": 53,
+      "usat_score": null
     },
     {
       "date": "2023-05-21",
@@ -1845,7 +1941,8 @@
       "age_grade_percent": 82.7976459936623,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
-      "age_grade_age": 53
+      "age_grade_age": 53,
+      "usat_score": null
     },
     {
       "date": "2023-05-11",
@@ -1864,7 +1961,8 @@
       "age_grade_percent": 83.24982104509664,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
-      "age_grade_age": 53
+      "age_grade_age": 53,
+      "usat_score": null
     },
     {
       "date": "2023-05-07",
@@ -1883,7 +1981,8 @@
       "age_grade_percent": 79.98400319936013,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 53
+      "age_grade_age": 53,
+      "usat_score": null
     },
     {
       "date": "2023-04-30",
@@ -1902,7 +2001,8 @@
       "age_grade_percent": 85.11848341232228,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 53
+      "age_grade_age": 53,
+      "usat_score": null
     },
     {
       "date": "2023-04-17",
@@ -1921,7 +2021,8 @@
       "age_grade_percent": 79.19847328244275,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 53
+      "age_grade_age": 53,
+      "usat_score": null
     },
     {
       "date": "2023-03-26",
@@ -1940,7 +2041,8 @@
       "age_grade_percent": 83.46727898966705,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "8K",
-      "age_grade_age": 53
+      "age_grade_age": 53,
+      "usat_score": null
     },
     {
       "date": "2023-03-12",
@@ -1959,7 +2061,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2023-03-11",
@@ -1978,7 +2081,8 @@
       "age_grade_percent": 86.42925890279115,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 53
+      "age_grade_age": 53,
+      "usat_score": null
     },
     {
       "date": "2023-02-12",
@@ -1997,7 +2101,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2023-01-14",
@@ -2016,7 +2121,8 @@
       "age_grade_percent": 82.99445471349352,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 53
+      "age_grade_age": 53,
+      "usat_score": null
     },
     {
       "date": "2022-11-06",
@@ -2035,7 +2141,8 @@
       "age_grade_percent": 48.19417024735803,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 53
+      "age_grade_age": 53,
+      "usat_score": null
     },
     {
       "date": "2022-10-02",
@@ -2054,7 +2161,8 @@
       "age_grade_percent": 78.76257354336687,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 53
+      "age_grade_age": 53,
+      "usat_score": null
     },
     {
       "date": "2022-08-27",
@@ -2073,7 +2181,8 @@
       "age_grade_percent": 84.55743879472693,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 53
+      "age_grade_age": 53,
+      "usat_score": null
     },
     {
       "date": "2022-07-31",
@@ -2092,7 +2201,8 @@
       "age_grade_percent": 84.63713477851084,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 53
+      "age_grade_age": 53,
+      "usat_score": null
     },
     {
       "date": "2022-07-09",
@@ -2111,7 +2221,8 @@
       "age_grade_percent": 80.1924619085806,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 53
+      "age_grade_age": 53,
+      "usat_score": null
     },
     {
       "date": "2022-07-04",
@@ -2130,7 +2241,8 @@
       "age_grade_percent": 83.0093592512599,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
-      "age_grade_age": 52
+      "age_grade_age": 52,
+      "usat_score": null
     },
     {
       "date": "2022-06-05",
@@ -2149,7 +2261,8 @@
       "age_grade_percent": 84.21550094517958,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 52
+      "age_grade_age": 52,
+      "usat_score": null
     },
     {
       "date": "2022-05-28",
@@ -2168,7 +2281,8 @@
       "age_grade_percent": 82.44253669343672,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
-      "age_grade_age": 52
+      "age_grade_age": 52,
+      "usat_score": null
     },
     {
       "date": "2022-05-22",
@@ -2187,7 +2301,8 @@
       "age_grade_percent": 83.58348968105066,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 52
+      "age_grade_age": 52,
+      "usat_score": null
     },
     {
       "date": "2022-05-14",
@@ -2206,7 +2321,8 @@
       "age_grade_percent": 83.81937911571026,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 52
+      "age_grade_age": 52,
+      "usat_score": null
     },
     {
       "date": "2022-05-07",
@@ -2225,7 +2341,8 @@
       "age_grade_percent": 81.87690205716632,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 52
+      "age_grade_age": 52,
+      "usat_score": null
     },
     {
       "date": "2022-04-18",
@@ -2244,7 +2361,8 @@
       "age_grade_percent": 76.66418049599105,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 52
+      "age_grade_age": 52,
+      "usat_score": null
     },
     {
       "date": "2022-03-19",
@@ -2263,7 +2381,8 @@
       "age_grade_percent": 80.78255553291217,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 52
+      "age_grade_age": 52,
+      "usat_score": null
     },
     {
       "date": "2022-03-12",
@@ -2282,7 +2401,8 @@
       "age_grade_percent": 83.3489242282507,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 52
+      "age_grade_age": 52,
+      "usat_score": null
     },
     {
       "date": "2022-02-12",
@@ -2301,7 +2421,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2021-12-18",
@@ -2320,7 +2441,8 @@
       "age_grade_percent": null,
       "age_grade_table_version": null,
       "age_grade_event": null,
-      "age_grade_age": null
+      "age_grade_age": null,
+      "usat_score": null
     },
     {
       "date": "2021-11-25",
@@ -2339,7 +2461,8 @@
       "age_grade_percent": 81.0,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 52
+      "age_grade_age": 52,
+      "usat_score": null
     },
     {
       "date": "2021-11-13",
@@ -2358,7 +2481,8 @@
       "age_grade_percent": 75.02601456815817,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "8K",
-      "age_grade_age": 52
+      "age_grade_age": 52,
+      "usat_score": null
     },
     {
       "date": "2021-11-07",
@@ -2377,7 +2501,8 @@
       "age_grade_percent": 75.93940139242711,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 52
+      "age_grade_age": 52,
+      "usat_score": null
     },
     {
       "date": "2021-10-11",
@@ -2396,7 +2521,8 @@
       "age_grade_percent": 77.56815394774078,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 52
+      "age_grade_age": 52,
+      "usat_score": null
     },
     {
       "date": "2021-10-03",
@@ -2415,7 +2541,8 @@
       "age_grade_percent": 80.92707410687925,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 52
+      "age_grade_age": 52,
+      "usat_score": null
     },
     {
       "date": "2021-09-04",
@@ -2434,7 +2561,8 @@
       "age_grade_percent": 81.29614438063987,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 52
+      "age_grade_age": 52,
+      "usat_score": null
     },
     {
       "date": "2021-08-28",
@@ -2453,7 +2581,8 @@
       "age_grade_percent": 83.97737983034872,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 52
+      "age_grade_age": 52,
+      "usat_score": null
     },
     {
       "date": "2021-07-31",
@@ -2472,7 +2601,8 @@
       "age_grade_percent": 85.26315789473684,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 52
+      "age_grade_age": 52,
+      "usat_score": null
     },
     {
       "date": "2021-07-11",
@@ -2491,7 +2621,8 @@
       "age_grade_percent": 78.86639045249314,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 52
+      "age_grade_age": 52,
+      "usat_score": null
     },
     {
       "date": "2021-07-03",
@@ -2510,7 +2641,8 @@
       "age_grade_percent": 79.94409503843465,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
-      "age_grade_age": 51
+      "age_grade_age": 51,
+      "usat_score": null
     },
     {
       "date": "2021-06-13",
@@ -2529,7 +2661,8 @@
       "age_grade_percent": 73.59803520261973,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
-      "age_grade_age": 51
+      "age_grade_age": 51,
+      "usat_score": null
     },
     {
       "date": "2020-10-04",
@@ -2548,7 +2681,8 @@
       "age_grade_percent": 61.25103375686039,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 51
+      "age_grade_age": 51,
+      "usat_score": null
     },
     {
       "date": "2020-09-12",
@@ -2567,7 +2701,8 @@
       "age_grade_percent": 56.13508495294089,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 51
+      "age_grade_age": 51,
+      "usat_score": null
     },
     {
       "date": "2019-11-03",
@@ -2586,7 +2721,8 @@
       "age_grade_percent": 77.56317862976843,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 50
+      "age_grade_age": 50,
+      "usat_score": null
     },
     {
       "date": "2019-10-23",
@@ -2605,7 +2741,8 @@
       "age_grade_percent": 82.33082706766918,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 50
+      "age_grade_age": 50,
+      "usat_score": null
     },
     {
       "date": "2019-10-05",
@@ -2624,7 +2761,8 @@
       "age_grade_percent": 83.58778625954199,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 50
+      "age_grade_age": 50,
+      "usat_score": null
     },
     {
       "date": "2019-09-08",
@@ -2643,7 +2781,8 @@
       "age_grade_percent": 75.16402933230412,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 50
+      "age_grade_age": 50,
+      "usat_score": null
     },
     {
       "date": "2019-09-07",
@@ -2662,7 +2801,8 @@
       "age_grade_percent": 79.27601809954751,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 50
+      "age_grade_age": 50,
+      "usat_score": null
     },
     {
       "date": "2019-08-24",
@@ -2681,7 +2821,8 @@
       "age_grade_percent": 75.26382439848037,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
-      "age_grade_age": 50
+      "age_grade_age": 50,
+      "usat_score": null
     },
     {
       "date": "2019-07-21",
@@ -2700,7 +2841,8 @@
       "age_grade_percent": 74.96150885296382,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 50
+      "age_grade_age": 50,
+      "usat_score": null
     },
     {
       "date": "2019-07-04",
@@ -2719,7 +2861,8 @@
       "age_grade_percent": 77.26648351648352,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
-      "age_grade_age": 49
+      "age_grade_age": 49,
+      "usat_score": null
     },
     {
       "date": "2019-06-22",
@@ -2738,7 +2881,8 @@
       "age_grade_percent": 78.85662431941924,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 49
+      "age_grade_age": 49,
+      "usat_score": null
     },
     {
       "date": "2019-06-09",
@@ -2757,7 +2901,8 @@
       "age_grade_percent": 75.29812606473595,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
-      "age_grade_age": 49
+      "age_grade_age": 49,
+      "usat_score": null
     },
     {
       "date": "2019-06-01",
@@ -2776,7 +2921,8 @@
       "age_grade_percent": 79.28832116788321,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 49
+      "age_grade_age": 49,
+      "usat_score": null
     },
     {
       "date": "2019-05-26",
@@ -2795,7 +2941,8 @@
       "age_grade_percent": 79.07188353048225,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 49
+      "age_grade_age": 49,
+      "usat_score": null
     },
     {
       "date": "2019-04-15",
@@ -2814,7 +2961,8 @@
       "age_grade_percent": 72.7512505684402,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 49
+      "age_grade_age": 49,
+      "usat_score": null
     },
     {
       "date": "2019-03-03",
@@ -2833,7 +2981,8 @@
       "age_grade_percent": 74.6941824633486,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 49
+      "age_grade_age": 49,
+      "usat_score": null
     },
     {
       "date": "2018-10-07",
@@ -2852,7 +3001,8 @@
       "age_grade_percent": 70.56280875088214,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 49
+      "age_grade_age": 49,
+      "usat_score": null
     },
     {
       "date": "2018-09-16",
@@ -2871,7 +3021,8 @@
       "age_grade_percent": 74.79195885928004,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 49
+      "age_grade_age": 49,
+      "usat_score": null
     },
     {
       "date": "2018-08-25",
@@ -2890,7 +3041,8 @@
       "age_grade_percent": 75.34880042951053,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
-      "age_grade_age": 49
+      "age_grade_age": 49,
+      "usat_score": null
     },
     {
       "date": "2018-07-22",
@@ -2909,7 +3061,8 @@
       "age_grade_percent": 74.49353656183678,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 49
+      "age_grade_age": 49,
+      "usat_score": null
     },
     {
       "date": "2018-07-04",
@@ -2928,7 +3081,8 @@
       "age_grade_percent": 76.49074708704592,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
-      "age_grade_age": 48
+      "age_grade_age": 48,
+      "usat_score": null
     },
     {
       "date": "2018-06-02",
@@ -2947,7 +3101,8 @@
       "age_grade_percent": 79.53917050691244,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 48
+      "age_grade_age": 48,
+      "usat_score": null
     },
     {
       "date": "2018-05-27",
@@ -2966,7 +3121,8 @@
       "age_grade_percent": 75.23975588491717,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 48
+      "age_grade_age": 48,
+      "usat_score": null
     },
     {
       "date": "2018-04-16",
@@ -2985,7 +3141,8 @@
       "age_grade_percent": 71.22192273135668,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 48
+      "age_grade_age": 48,
+      "usat_score": null
     },
     {
       "date": "2018-03-18",
@@ -3004,7 +3161,8 @@
       "age_grade_percent": 74.79484173505276,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 48
+      "age_grade_age": 48,
+      "usat_score": null
     },
     {
       "date": "2018-03-10",
@@ -3023,7 +3181,8 @@
       "age_grade_percent": 80.20446096654274,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 48
+      "age_grade_age": 48,
+      "usat_score": null
     },
     {
       "date": "2017-11-01",
@@ -3042,7 +3201,8 @@
       "age_grade_percent": 80.20446096654274,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 48
+      "age_grade_age": 48,
+      "usat_score": null
     },
     {
       "date": "2017-10-08",
@@ -3061,7 +3221,8 @@
       "age_grade_percent": 72.60487268730536,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 48
+      "age_grade_age": 48,
+      "usat_score": null
     },
     {
       "date": "2017-09-23",
@@ -3080,7 +3241,8 @@
       "age_grade_percent": 76.9162210338681,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 48
+      "age_grade_age": 48,
+      "usat_score": null
     },
     {
       "date": "2017-08-26",
@@ -3099,7 +3261,8 @@
       "age_grade_percent": 76.50709219858156,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 48
+      "age_grade_age": 48,
+      "usat_score": null
     },
     {
       "date": "2017-08-20",
@@ -3118,7 +3281,8 @@
       "age_grade_percent": 72.9504785684561,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
-      "age_grade_age": 48
+      "age_grade_age": 48,
+      "usat_score": null
     },
     {
       "date": "2017-08-06",
@@ -3137,7 +3301,8 @@
       "age_grade_percent": 74.14089347079039,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 48
+      "age_grade_age": 48,
+      "usat_score": null
     },
     {
       "date": "2017-07-16",
@@ -3156,7 +3321,8 @@
       "age_grade_percent": 68.01705756929638,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 48
+      "age_grade_age": 48,
+      "usat_score": null
     },
     {
       "date": "2017-07-04",
@@ -3175,7 +3341,8 @@
       "age_grade_percent": 73.50597609561753,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
-      "age_grade_age": 47
+      "age_grade_age": 47,
+      "usat_score": null
     },
     {
       "date": "2017-06-24",
@@ -3194,7 +3361,8 @@
       "age_grade_percent": 70.43337383556096,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
-      "age_grade_age": 47
+      "age_grade_age": 47,
+      "usat_score": null
     },
     {
       "date": "2017-06-17",
@@ -3213,7 +3381,8 @@
       "age_grade_percent": 84.86842105263158,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "1 Mile",
-      "age_grade_age": 47
+      "age_grade_age": 47,
+      "usat_score": null
     },
     {
       "date": "2017-06-03",
@@ -3232,7 +3401,8 @@
       "age_grade_percent": 73.92055267702936,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 47
+      "age_grade_age": 47,
+      "usat_score": null
     },
     {
       "date": "2017-05-28",
@@ -3251,7 +3421,8 @@
       "age_grade_percent": 72.6039016115352,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 47
+      "age_grade_age": 47,
+      "usat_score": null
     },
     {
       "date": "2017-05-13",
@@ -3270,7 +3441,8 @@
       "age_grade_percent": 67.35947094945678,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
-      "age_grade_age": 47
+      "age_grade_age": 47,
+      "usat_score": null
     },
     {
       "date": "2017-04-17",
@@ -3289,7 +3461,8 @@
       "age_grade_percent": 67.73581652008967,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 47
+      "age_grade_age": 47,
+      "usat_score": null
     },
     {
       "date": "2017-04-02",
@@ -3308,7 +3481,8 @@
       "age_grade_percent": 72.72727272727273,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "8K",
-      "age_grade_age": 47
+      "age_grade_age": 47,
+      "usat_score": null
     },
     {
       "date": "2017-03-18",
@@ -3327,7 +3501,8 @@
       "age_grade_percent": 72.84802043422734,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
-      "age_grade_age": 47
+      "age_grade_age": 47,
+      "usat_score": null
     },
     {
       "date": "2016-11-26",
@@ -3346,7 +3521,8 @@
       "age_grade_percent": 72.23068138561096,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 47
+      "age_grade_age": 47,
+      "usat_score": null
     },
     {
       "date": "2016-11-09",
@@ -3365,7 +3541,8 @@
       "age_grade_percent": 79.11275415896488,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 47
+      "age_grade_age": 47,
+      "usat_score": null
     },
     {
       "date": "2016-10-09",
@@ -3384,7 +3561,8 @@
       "age_grade_percent": 69.17319714713392,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 47
+      "age_grade_age": 47,
+      "usat_score": null
     },
     {
       "date": "2016-09-10",
@@ -3403,7 +3581,8 @@
       "age_grade_percent": 68.05856363163822,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 47
+      "age_grade_age": 47,
+      "usat_score": null
     },
     {
       "date": "2016-08-27",
@@ -3422,7 +3601,8 @@
       "age_grade_percent": 74.62946817785527,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 47
+      "age_grade_age": 47,
+      "usat_score": null
     },
     {
       "date": "2016-08-21",
@@ -3441,7 +3621,8 @@
       "age_grade_percent": 71.80016515276631,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
-      "age_grade_age": 47
+      "age_grade_age": 47,
+      "usat_score": null
     },
     {
       "date": "2016-07-23",
@@ -3460,7 +3641,8 @@
       "age_grade_percent": 66.36935991605456,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 47
+      "age_grade_age": 47,
+      "usat_score": null
     },
     {
       "date": "2016-07-17",
@@ -3479,7 +3661,8 @@
       "age_grade_percent": 70.51282051282051,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 47
+      "age_grade_age": 47,
+      "usat_score": null
     },
     {
       "date": "2016-07-09",
@@ -3498,7 +3681,8 @@
       "age_grade_percent": 66.32558139534885,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
-      "age_grade_age": 47
+      "age_grade_age": 47,
+      "usat_score": null
     },
     {
       "date": "2016-07-04",
@@ -3517,7 +3701,8 @@
       "age_grade_percent": 71.92408376963351,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
-      "age_grade_age": 46
+      "age_grade_age": 46,
+      "usat_score": null
     },
     {
       "date": "2016-06-26",
@@ -3536,7 +3721,8 @@
       "age_grade_percent": 69.87943522044888,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5 Mile",
-      "age_grade_age": 46
+      "age_grade_age": 46,
+      "usat_score": null
     },
     {
       "date": "2016-05-30",
@@ -3555,7 +3741,8 @@
       "age_grade_percent": 73.25280414150129,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 46
+      "age_grade_age": 46,
+      "usat_score": null
     },
     {
       "date": "2016-05-15",
@@ -3574,7 +3761,8 @@
       "age_grade_percent": 67.45495495495496,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
-      "age_grade_age": 46
+      "age_grade_age": 46,
+      "usat_score": null
     },
     {
       "date": "2016-04-30",
@@ -3593,7 +3781,8 @@
       "age_grade_percent": 75.39964476021315,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 46
+      "age_grade_age": 46,
+      "usat_score": null
     },
     {
       "date": "2016-04-09",
@@ -3612,7 +3801,8 @@
       "age_grade_percent": 67.8874255818149,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 46
+      "age_grade_age": 46,
+      "usat_score": null
     },
     {
       "date": "2016-04-02",
@@ -3631,7 +3821,8 @@
       "age_grade_percent": 71.10552763819096,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 46
+      "age_grade_age": 46,
+      "usat_score": null
     },
     {
       "date": "2016-03-19",
@@ -3650,7 +3841,8 @@
       "age_grade_percent": 71.99592668024441,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
-      "age_grade_age": 46
+      "age_grade_age": 46,
+      "usat_score": null
     },
     {
       "date": "2016-03-12",
@@ -3669,7 +3861,8 @@
       "age_grade_percent": 74.34325744308231,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 46
+      "age_grade_age": 46,
+      "usat_score": null
     },
     {
       "date": "2015-11-28",
@@ -3688,7 +3881,8 @@
       "age_grade_percent": 65.14889196675901,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
-      "age_grade_age": 46
+      "age_grade_age": 46,
+      "usat_score": null
     },
     {
       "date": "2015-11-15",
@@ -3707,7 +3901,8 @@
       "age_grade_percent": 68.0893300248139,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "8K",
-      "age_grade_age": 46
+      "age_grade_age": 46,
+      "usat_score": null
     },
     {
       "date": "2015-09-26",
@@ -3726,7 +3921,8 @@
       "age_grade_percent": 67.97437950360288,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 46
+      "age_grade_age": 46,
+      "usat_score": null
     },
     {
       "date": "2015-08-08",
@@ -3745,7 +3941,8 @@
       "age_grade_percent": 64.90825688073394,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
-      "age_grade_age": 46
+      "age_grade_age": 46,
+      "usat_score": null
     },
     {
       "date": "2015-07-11",
@@ -3764,7 +3961,8 @@
       "age_grade_percent": 59.47423764458465,
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
-      "age_grade_age": 46
+      "age_grade_age": 46,
+      "usat_score": null
     }
   ]
 }
