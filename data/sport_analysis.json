@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T18:47:48Z",
+  "generated_at": "2026-09-30T00:02:57Z",
   "start_date": "2015-01-01",
   "end_date": "2026-09-29",
   "threshold_changes": {
@@ -32456,6 +32456,14 @@
           "distance_miles": 21.5131,
           "is_race": false,
           "is_multisport_leg": false
+        },
+        {
+          "date": "2026-09-29",
+          "duration_seconds": 2171,
+          "tss": 37.35,
+          "distance_miles": 4.4098,
+          "is_race": false,
+          "is_multisport_leg": false
         }
       ],
       "daily": [
@@ -58195,9 +58203,9 @@
         },
         {
           "date": "2026-09-29",
-          "tss": 0.0,
-          "ctl": 51.5,
-          "atl": 66.4
+          "tss": 37.4,
+          "ctl": 52.3,
+          "atl": 71.4
         }
       ]
     },
@@ -118342,6 +118350,11 @@
           "date": "2026-09-22",
           "duration_seconds": 2376,
           "tss": 22.7
+        },
+        {
+          "date": "2026-09-29",
+          "duration_seconds": 2499,
+          "tss": 25.13
         }
       ],
       "daily": [
@@ -144081,9 +144094,9 @@
         },
         {
           "date": "2026-09-29",
-          "tss": 0.0,
-          "ctl": 2.2,
-          "atl": 1.3
+          "tss": 25.1,
+          "ctl": 2.8,
+          "atl": 4.6
         }
       ]
     },
