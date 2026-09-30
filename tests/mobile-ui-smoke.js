@@ -15,7 +15,7 @@ assert.match(html, /rel="apple-touch-icon"/);
 assert.match(html, /rel="manifest" href="site\.webmanifest"/);
 
 assert.strictEqual(manifest.display, 'standalone');
-assert.strictEqual(manifest.start_url, './#overview');
+assert.strictEqual(manifest.start_url, './#summary');
 assert.deepStrictEqual(manifest.icons.map((icon) => icon.sizes), ['192x192', '512x512']);
 
 assert.match(css, /env\(safe-area-inset-top\)/);

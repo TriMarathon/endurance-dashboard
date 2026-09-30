@@ -1591,3 +1591,47 @@ footer {
   font-style: italic;
   font-size: 11px;
 }
+
+/* Last four weeks: daily rhythm first, distributions second. */
+.summary-wrap { padding: 24px; }
+.summary-wrap h3 { margin: 0 0 18px; font-size: 20px; font-weight: 600; }
+.summary-legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 12px; color: var(--muted); }
+.summary-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.summary-legend i { width: 10px; height: 10px; border-radius: 2px; background: var(--summary-color); }
+.summary-hint { color: var(--muted); font-size: 12px; margin: 12px 0 20px; }
+.summary-week { display: grid; grid-template-columns: 145px minmax(280px, 1fr) minmax(250px, 1.2fr); gap: 24px; align-items: center; padding: 20px 0; border-top: 1px solid var(--panel-border); }
+.summary-week-label { font-size: 13px; font-weight: 600; }
+.summary-week-label small { display: block; color: var(--muted); font-size: 11px; font-weight: 400; margin-top: 4px; }
+.summary-days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); min-width: 0; }
+.summary-day { text-align: center; min-width: 0; }
+.summary-day > span { font-size: 10px; color: var(--muted); }
+.summary-day-button { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 44px; padding: 0; border: 0; border-radius: 8px; background: transparent; cursor: pointer; color: var(--text); }
+.summary-day-button i { display: block; border-radius: 50%; background: var(--text); opacity: .85; }
+.summary-day-button.rest i { background: var(--muted); opacity: .6; }
+.summary-day-button.future i, .summary-day-button.unavailable i { background: transparent; border: 1px solid var(--muted); opacity: .4; }
+.summary-day-button.unavailable i { border-style: dashed; }
+.summary-day-button:hover, .summary-day-button[aria-pressed="true"] { background: var(--grid); }
+.summary-day-button:focus-visible { outline: 2px solid var(--text); outline-offset: -2px; }
+.summary-bars { display: grid; gap: 12px; min-width: 0; }
+.summary-metric { display: grid; grid-template-columns: 30px minmax(0, 1fr) 74px; gap: 10px; align-items: center; font-size: 11px; }
+.summary-metric > span { color: var(--muted); }
+.summary-metric strong { text-align: right; font-size: 12px; font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.summary-bar { display: flex; height: 12px; background: var(--grid); border-radius: 3px; overflow: hidden; }
+.summary-segment { display: block; height: 100%; flex-shrink: 0; background: var(--summary-color); }
+.summary-sport-strength { background-image: repeating-linear-gradient(45deg, transparent, transparent 3px, rgba(13,15,18,.4) 3px, rgba(13,15,18,.4) 5px) !important; }
+.summary-sport-elliptical { background-image: radial-gradient(var(--bg) 1px, transparent 1px) !important; background-size: 4px 4px !important; }
+.summary-detail { position: sticky; bottom: max(12px, env(safe-area-inset-bottom)); z-index: 1; border: 1px solid var(--panel-border); margin-top: 12px; padding: 14px; min-height: 70px; border-radius: 8px; background: var(--panel); font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
+@media (max-width: 1000px) {
+  .summary-week { grid-template-columns: 120px minmax(0, 1fr); gap: 12px 20px; }
+  .summary-bars { grid-column: 2; }
+}
+@media (max-width: 600px) {
+  .summary-wrap { padding: 16px 12px; }
+  .summary-week { grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 18px 0; }
+  .summary-week-label { display: flex; justify-content: space-between; gap: 8px; }
+  .summary-week-label small { margin: 0; }
+  .summary-bars { grid-column: 1; }
+  .summary-metric { grid-template-columns: 28px minmax(0, 1fr) 72px; gap: 8px; }
+}
+
+#summary-content > .status { position: static; min-height: 100px; }

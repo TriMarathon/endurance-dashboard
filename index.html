@@ -18,7 +18,7 @@
       name="description"
       content="Endurance training-load dashboard showing 90-day TSS, CTL and ATL from Garmin training data."
     />
-    <link rel="stylesheet" href="css/dashboard.css?v=20260927-1" />
+    <link rel="stylesheet" href="css/dashboard.css?v=20260930-1" />
   </head>
   <body>
     <header>
@@ -30,17 +30,26 @@
 
     <main>
       <nav class="tab-nav" role="tablist" aria-label="Dashboard tabs">
-        <a href="#overview" data-tab="overview" class="tab-link active" role="tab" aria-selected="true" tabindex="0">Overview</a>
-        <a href="#training" data-tab="training" class="tab-link" role="tab" aria-selected="false" tabindex="-1">Training</a>
-        <a href="#sports" data-tab="sports" class="tab-link" role="tab" aria-selected="false" tabindex="-1">Sports</a>
-        <a href="#racing" data-tab="racing" class="tab-link" role="tab" aria-selected="false" tabindex="-1">Racing</a>
+        <a href="#summary" data-tab="summary" class="tab-link active" role="tab" aria-selected="true" tabindex="0">Summary</a>
+        <a href="#overview" data-tab="overview" class="tab-link" role="tab" aria-selected="false" tabindex="-1">Overview</a>
+        <a href="#sports" data-tab="sports" class="tab-link" role="tab" aria-selected="false" tabindex="-1">Training</a>
+        <a href="#load" data-tab="training" class="tab-link" role="tab" aria-selected="false" tabindex="-1">Load</a>
         <a href="#health" data-tab="health" class="tab-link" role="tab" aria-selected="false" tabindex="-1">Health</a>
+        <a href="#racing" data-tab="racing" class="tab-link" role="tab" aria-selected="false" tabindex="-1">Racing</a>
         <a href="#gear" data-tab="gear" class="tab-link" role="tab" aria-selected="false" tabindex="-1">Gear</a>
       </nav>
 
+      <section id="tab-summary" class="tab-panel active" role="tabpanel" aria-label="Summary">
+        <h2 class="chart-title">Summary</h2>
+        <section class="chart-wrap summary-wrap" aria-labelledby="summary-title">
+          <h3 id="summary-title">Last 4 Weeks</h3>
+          <div id="summary-content"><div class="status loading" role="status"><span class="loader"></span>Loading summary…</div></div>
+        </section>
+      </section>
+
       <section
         id="tab-overview"
-        class="tab-panel active"
+        class="tab-panel"
         role="tabpanel"
         aria-label="Overview"
       >
@@ -460,6 +469,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" defer></script>
-    <script src="js/dashboard.js?v=20260927-1" defer></script>
+    <script src="js/summary.js?v=20260930-1"></script>
+    <script src="js/dashboard.js?v=20260930-1" defer></script>
   </body>
 </html>

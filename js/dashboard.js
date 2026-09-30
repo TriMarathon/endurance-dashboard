@@ -76,7 +76,7 @@ const PR_SB_EVENT_ORDER = [
   'Half Marathon', 'Marathon', 'Sprint', 'Olympic', '70.3', '140.6',
 ];
 
-const TAB_PANELS = ['overview', 'training', 'sports', 'racing', 'health', 'gear'];
+const TAB_PANELS = ['summary', 'overview', 'training', 'sports', 'racing', 'health', 'gear'];
 
 const MONTHS_SHORT = [
   'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
@@ -3171,12 +3171,15 @@ async function loadSportAnalysis() {
       throw new Error('Invalid sport analysis document');
     }
     fullSportAnalysis = doc;
+    renderSummary(doc);
     runningRange = runningDefaultRange(doc.sports.running.daily);
     initSportSubtabs();
     initRunningControls();
     renderRunning();
   } catch (err) {
     console.error('[dashboard] failed to load sport_analysis.json:', err);
+    const summary = document.getElementById('summary-content');
+    if (summary) summary.innerHTML = '<div class="status error" role="status">Summary data unavailable. Refresh to retry.</div>';
     const container = document.getElementById('running-summary');
     if (container) container.innerHTML = '<div class="status error" role="status">Sport data unavailable.</div>';
   }
@@ -3312,7 +3315,8 @@ async function loadPiHealth() {
 
 function currentTab() {
   const hash = (window.location.hash || '').replace(/^#/, '');
-  return TAB_PANELS.includes(hash) ? hash : 'overview';
+  if (hash === 'load') return 'training'; // Preserve the original #training load bookmark.
+  return TAB_PANELS.includes(hash) ? hash : 'summary';
 }
 
 function revealActiveTab(tab) {
@@ -3359,9 +3363,21 @@ function showTab(tabId) {
 
 function initTabs() {
   const tab = currentTab();
-  history.replaceState(null, '', '#' + tab);
+  history.replaceState(null, '', window.location.hash === '#load' ? '#load' : '#' + tab);
   showTab(tab);
   window.addEventListener('hashchange', () => showTab(currentTab()));
+  const links = Array.from(document.querySelectorAll('.tab-nav .tab-link'));
+  links.forEach((link, index) => link.addEventListener('keydown', (event) => {
+    let next;
+    if (event.key === 'ArrowRight') next = (index + 1) % links.length;
+    else if (event.key === 'ArrowLeft') next = (index + links.length - 1) % links.length;
+    else if (event.key === 'Home') next = 0;
+    else if (event.key === 'End') next = links.length - 1;
+    else return;
+    event.preventDefault();
+    links[next].focus();
+    links[next].click();
+  }));
 }
 
 function bindUpdatedRefresh() {

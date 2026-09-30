@@ -2,7 +2,7 @@
   "name": "Endurance Dashboard",
   "short_name": "Endurance",
   "description": "Endurance training-load dashboard from Garmin training data.",
-  "start_url": "./#overview",
+  "start_url": "./#summary",
   "scope": "./",
   "display": "standalone",
   "background_color": "#0d0f12",
