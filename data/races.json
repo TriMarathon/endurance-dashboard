@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T20:22:56Z",
+  "generated_at": "2026-09-30T20:23:43Z",
   "reference_date": "2026-09-30",
   "count": 16,
   "data": [
@@ -10,7 +10,7 @@
       "race_type": "Marathon",
       "registration_status": "registered",
       "series": "CARA",
-      "priority": null,
+      "priority": "A",
       "notes": null,
       "url": "https://www.chicagomarathon.com/",
       "days_until": 11,
