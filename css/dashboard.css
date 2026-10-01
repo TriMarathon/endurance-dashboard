@@ -1643,3 +1643,7 @@ footer {
 .race-plan-text { white-space: pre-wrap; overflow-wrap: anywhere; word-break: normal; min-width: 0; max-width: 100%; color: var(--text); padding: 8px 0; }
 .races-col-name .race-plan-text { max-width: min(55vw, 36rem); }
 .race-card > .race-plan { grid-column: 1 / -1; }
+
+/* Keep completed notes within the viewport even in the scrollable history table. */
+.completed-race-notes { width: min(36rem, calc(100vw - 80px)); }
+.completed-race-notes h4 { margin: 8px 0 0; font-size: 11px; color: var(--muted); }

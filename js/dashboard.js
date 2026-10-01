@@ -929,6 +929,16 @@ function renderRaces(json) {
   }
 }
 
+// Sections allow a linked race plan to be added later without changing the control.
+// Only public exported text is accepted; Admin remains the sole editor.
+function completedRaceNotesDisclosure(race) {
+  const sections = [{ title: 'POST-RACE NOTES', text: race.post_race_notes }];
+  const content = sections.filter(section => typeof section.text === 'string' && section.text.trim())
+    .map(section => '<section><h4>' + escapeHtml(section.title) + '</h4>' +
+      '<div class="race-plan-text">' + escapeHtml(section.text) + '</div></section>').join('');
+  return content ? '<details class="race-plan completed-race-notes"><summary>Notes</summary>' + content + '</details>' : '';
+}
+
 // Native disclosure supports touch, click, Enter and Space without a custom widget.
 function racePlanDisclosure(race) {
   const note = race && race.pre_race_notes;
@@ -1219,6 +1229,7 @@ function normalizeCompletedRace(record) {
     : null;
   return {
     date: date, name: name, category: category, duration: duration,
+    post_race_notes: record.post_race_notes,
     preRaceCtl: metric('pre_race_ctl'),
     raceDayTsb: metric('race_day_tsb'),
     preRaceLoadRatio: metric('pre_race_load_ratio'),
@@ -1432,7 +1443,7 @@ function renderRaceHistoryTable() {
       + '<td class="race-history-col-time">' + timeCell + '</td>'
       + '</tr>';
     html += '<tr class="race-history-detail-row">'
-      + '<td colspan="4">' + renderRaceHistoryMetrics(r) + '</td>'
+      + '<td colspan="4">' + renderRaceHistoryMetrics(r) + completedRaceNotesDisclosure(r) + '</td>'
       + '</tr>';
   });
   tbody.innerHTML = html;

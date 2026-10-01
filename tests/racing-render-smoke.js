@@ -15,8 +15,8 @@ assert(html.includes('data-subtab="usat"'));
 const racingTabOrder = ['upcoming', 'history', 'prsb', 'usat']
   .map((tab) => html.indexOf(`data-subtab="${tab}"`));
 assert.deepStrictEqual(racingTabOrder, [...racingTabOrder].sort((a, b) => a - b));
-assert(html.includes('css/dashboard.css?v=20260930-2'));
-assert(html.includes('js/dashboard.js?v=20260930-2'));
+assert(html.includes('css/dashboard.css?v=20260930-3'));
+assert(html.includes('js/dashboard.js?v=20260930-3'));
 assert(html.includes('data-tab="sports"'));
 assert(html.includes('id="running-summary"'));
 assert(html.includes('id="running-load"'));
