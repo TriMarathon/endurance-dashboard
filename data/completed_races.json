@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T09:18:32Z",
+  "generated_at": "2026-10-01T15:57:38Z",
   "start_date": "2015-01-01",
   "end_date": "2026-10-01",
   "count": 198,
@@ -22,7 +22,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": "3 Days Before Normalize sodium & hydration: 1 packet with 16–20 oz water (midday). 2 Days Before\tBegin building sodium stores: 1–2 packets across the day (meals + fluids). Day Before: Peak plasma volume, pre-hydrate 2–3 packets across the day with meals/water. Race Morning Top off sodium & fluids: 1 packet ~1–1.5 hrs before race start."
     },
     {
       "date": "2026-08-23",
@@ -42,7 +43,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-08-16",
@@ -62,7 +64,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
       "age_grade_age": 57,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-08-09",
@@ -82,7 +85,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-08-02",
@@ -102,7 +106,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-07-26",
@@ -122,7 +127,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-07-18",
@@ -142,7 +148,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "1 Mile",
       "age_grade_age": 57,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-07-12",
@@ -162,7 +169,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-07-04",
@@ -182,7 +190,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
       "age_grade_age": 56,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-06-28",
@@ -202,7 +211,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-06-21",
@@ -222,7 +232,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 56,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-06-14",
@@ -242,7 +253,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-05-25",
@@ -262,7 +274,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
       "age_grade_age": 56,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-05-23",
@@ -282,7 +295,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
       "age_grade_age": 56,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-05-17",
@@ -302,7 +316,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
       "age_grade_age": 56,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-05-09",
@@ -322,7 +337,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 56,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-04-26",
@@ -342,7 +358,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 56,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-04-20",
@@ -362,7 +379,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 56,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-04-12",
@@ -382,7 +400,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
       "age_grade_age": 56,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-03-22",
@@ -402,7 +421,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "8K",
       "age_grade_age": 56,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-03-15",
@@ -422,7 +442,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 56,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-03-14",
@@ -442,7 +463,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-03-14",
@@ -462,7 +484,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-03-14",
@@ -482,7 +505,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-01-25",
@@ -502,7 +526,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-01-25",
@@ -522,7 +547,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2026-01-25",
@@ -542,7 +568,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-11-27",
@@ -562,7 +589,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 56,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-11-09",
@@ -582,7 +610,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 56,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-10-25",
@@ -602,7 +631,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 56,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-10-12",
@@ -622,7 +652,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 56,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-09-06",
@@ -642,7 +673,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 56,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-08-24",
@@ -662,7 +694,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-08-17",
@@ -682,7 +715,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
       "age_grade_age": 56,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-07-19",
@@ -702,7 +736,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "1 Mile",
       "age_grade_age": 56,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-07-13",
@@ -722,7 +757,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-07-04",
@@ -742,7 +778,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
       "age_grade_age": 55,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-06-22",
@@ -762,7 +799,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-06-15",
@@ -782,7 +820,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 55,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-05-24",
@@ -802,7 +841,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
       "age_grade_age": 55,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-05-18",
@@ -822,7 +862,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
       "age_grade_age": 55,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-04-27",
@@ -842,7 +883,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 55,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-04-21",
@@ -862,7 +904,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 55,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-04-13",
@@ -882,7 +925,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
       "age_grade_age": 55,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-04-06",
@@ -902,7 +946,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 55,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-03-29",
@@ -922,7 +967,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-03-29",
@@ -942,7 +988,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-03-29",
@@ -962,7 +1009,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-03-23",
@@ -982,7 +1030,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "8K",
       "age_grade_age": 55,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-03-16",
@@ -1002,7 +1051,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 55,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-02-16",
@@ -1022,7 +1072,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-02-16",
@@ -1042,7 +1093,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-02-16",
@@ -1062,7 +1114,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-01-19",
@@ -1082,7 +1135,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-01-19",
@@ -1102,7 +1156,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2025-01-19",
@@ -1122,7 +1177,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-11-24",
@@ -1142,7 +1198,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
       "age_grade_age": 55,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-11-10",
@@ -1162,7 +1219,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 55,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-10-13",
@@ -1182,7 +1240,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 55,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-09-07",
@@ -1202,7 +1261,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-08-25",
@@ -1222,7 +1282,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-08-04",
@@ -1242,7 +1303,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-07-28",
@@ -1262,7 +1324,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-07-27",
@@ -1282,7 +1345,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "1 Mile",
       "age_grade_age": 55,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-07-04",
@@ -1302,7 +1366,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-06-23",
@@ -1322,7 +1387,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-06-16",
@@ -1342,7 +1408,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-06-09",
@@ -1362,7 +1429,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-06-02",
@@ -1382,7 +1450,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-05-25",
@@ -1402,7 +1471,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-05-19",
@@ -1422,7 +1492,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-05-11",
@@ -1442,7 +1513,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-04-28",
@@ -1462,7 +1534,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-04-21",
@@ -1482,7 +1555,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-04-15",
@@ -1502,7 +1576,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-03-24",
@@ -1522,7 +1597,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "8K",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-03-09",
@@ -1542,7 +1618,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-02-11",
@@ -1562,7 +1639,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-01-14",
@@ -1582,7 +1660,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-01-14",
@@ -1602,7 +1681,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2024-01-14",
@@ -1622,7 +1702,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-11-12",
@@ -1642,7 +1723,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-10-28",
@@ -1662,7 +1744,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-10-08",
@@ -1682,7 +1765,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-09-30",
@@ -1702,7 +1786,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-09-24",
@@ -1722,7 +1807,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-09-09",
@@ -1742,7 +1828,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-08-27",
@@ -1762,7 +1849,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-08-20",
@@ -1782,7 +1870,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-08-06",
@@ -1802,7 +1891,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-07-29",
@@ -1822,7 +1912,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "1 Mile",
       "age_grade_age": 54,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-07-04",
@@ -1842,7 +1933,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
       "age_grade_age": 53,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-06-25",
@@ -1862,7 +1954,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-06-18",
@@ -1882,7 +1975,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 53,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-06-04",
@@ -1902,7 +1996,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 53,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-05-27",
@@ -1922,7 +2017,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
       "age_grade_age": 53,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-05-21",
@@ -1942,7 +2038,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
       "age_grade_age": 53,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-05-11",
@@ -1962,7 +2059,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
       "age_grade_age": 53,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-05-07",
@@ -1982,7 +2080,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 53,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-04-30",
@@ -2002,7 +2101,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 53,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-04-17",
@@ -2022,7 +2122,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 53,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-03-26",
@@ -2042,7 +2143,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "8K",
       "age_grade_age": 53,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-03-12",
@@ -2062,7 +2164,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-03-11",
@@ -2082,7 +2185,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 53,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-02-12",
@@ -2102,7 +2206,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2023-01-14",
@@ -2122,7 +2227,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 53,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2022-11-06",
@@ -2142,7 +2248,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 53,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2022-10-02",
@@ -2162,7 +2269,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 53,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2022-08-27",
@@ -2182,7 +2290,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 53,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2022-07-31",
@@ -2202,7 +2311,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 53,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2022-07-09",
@@ -2222,7 +2332,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 53,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2022-07-04",
@@ -2242,7 +2353,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
       "age_grade_age": 52,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2022-06-05",
@@ -2262,7 +2374,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 52,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2022-05-28",
@@ -2282,7 +2395,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
       "age_grade_age": 52,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2022-05-22",
@@ -2302,7 +2416,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 52,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2022-05-14",
@@ -2322,7 +2437,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 52,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2022-05-07",
@@ -2342,7 +2458,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 52,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2022-04-18",
@@ -2362,7 +2479,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 52,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2022-03-19",
@@ -2382,7 +2500,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 52,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2022-03-12",
@@ -2402,7 +2521,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 52,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2022-02-12",
@@ -2422,7 +2542,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2021-12-18",
@@ -2442,7 +2563,8 @@
       "age_grade_table_version": null,
       "age_grade_event": null,
       "age_grade_age": null,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2021-11-25",
@@ -2462,7 +2584,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 52,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2021-11-13",
@@ -2482,7 +2605,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "8K",
       "age_grade_age": 52,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2021-11-07",
@@ -2502,7 +2626,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 52,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2021-10-11",
@@ -2522,7 +2647,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 52,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2021-10-03",
@@ -2542,7 +2668,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 52,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2021-09-04",
@@ -2562,7 +2689,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 52,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2021-08-28",
@@ -2582,7 +2710,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 52,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2021-07-31",
@@ -2602,7 +2731,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 52,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2021-07-11",
@@ -2622,7 +2752,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 52,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2021-07-03",
@@ -2642,7 +2773,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
       "age_grade_age": 51,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2021-06-13",
@@ -2662,7 +2794,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
       "age_grade_age": 51,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2020-10-04",
@@ -2682,7 +2815,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 51,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2020-09-12",
@@ -2702,7 +2836,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 51,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2019-11-03",
@@ -2722,7 +2857,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 50,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2019-10-23",
@@ -2742,7 +2878,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 50,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2019-10-05",
@@ -2762,7 +2899,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 50,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2019-09-08",
@@ -2782,7 +2920,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 50,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2019-09-07",
@@ -2802,7 +2941,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 50,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2019-08-24",
@@ -2822,7 +2962,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
       "age_grade_age": 50,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2019-07-21",
@@ -2842,7 +2983,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 50,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2019-07-04",
@@ -2862,7 +3004,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
       "age_grade_age": 49,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2019-06-22",
@@ -2882,7 +3025,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 49,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2019-06-09",
@@ -2902,7 +3046,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
       "age_grade_age": 49,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2019-06-01",
@@ -2922,7 +3067,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 49,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2019-05-26",
@@ -2942,7 +3088,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 49,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2019-04-15",
@@ -2962,7 +3109,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 49,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2019-03-03",
@@ -2982,7 +3130,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 49,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2018-10-07",
@@ -3002,7 +3151,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 49,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2018-09-16",
@@ -3022,7 +3172,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 49,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2018-08-25",
@@ -3042,7 +3193,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
       "age_grade_age": 49,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2018-07-22",
@@ -3062,7 +3214,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 49,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2018-07-04",
@@ -3082,7 +3235,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
       "age_grade_age": 48,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2018-06-02",
@@ -3102,7 +3256,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 48,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2018-05-27",
@@ -3122,7 +3277,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 48,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2018-04-16",
@@ -3142,7 +3298,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 48,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2018-03-18",
@@ -3162,7 +3319,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 48,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2018-03-10",
@@ -3182,7 +3340,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 48,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2017-11-01",
@@ -3202,7 +3361,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 48,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2017-10-08",
@@ -3222,7 +3382,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 48,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2017-09-23",
@@ -3242,7 +3403,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 48,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2017-08-26",
@@ -3262,7 +3424,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 48,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2017-08-20",
@@ -3282,7 +3445,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
       "age_grade_age": 48,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2017-08-06",
@@ -3302,7 +3466,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 48,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2017-07-16",
@@ -3322,7 +3487,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 48,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2017-07-04",
@@ -3342,7 +3508,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
       "age_grade_age": 47,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2017-06-24",
@@ -3362,7 +3529,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
       "age_grade_age": 47,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2017-06-17",
@@ -3382,7 +3550,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "1 Mile",
       "age_grade_age": 47,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2017-06-03",
@@ -3402,7 +3571,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 47,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2017-05-28",
@@ -3422,7 +3592,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 47,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2017-05-13",
@@ -3442,7 +3613,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
       "age_grade_age": 47,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2017-04-17",
@@ -3462,7 +3634,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 47,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2017-04-02",
@@ -3482,7 +3655,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "8K",
       "age_grade_age": 47,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2017-03-18",
@@ -3502,7 +3676,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
       "age_grade_age": 47,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2016-11-26",
@@ -3522,7 +3697,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 47,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2016-11-09",
@@ -3542,7 +3718,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 47,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2016-10-09",
@@ -3562,7 +3739,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 47,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2016-09-10",
@@ -3582,7 +3760,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 47,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2016-08-27",
@@ -3602,7 +3781,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 47,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2016-08-21",
@@ -3622,7 +3802,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10K",
       "age_grade_age": 47,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2016-07-23",
@@ -3642,7 +3823,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 47,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2016-07-17",
@@ -3662,7 +3844,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 47,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2016-07-09",
@@ -3682,7 +3865,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
       "age_grade_age": 47,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2016-07-04",
@@ -3702,7 +3886,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "4 Mile",
       "age_grade_age": 46,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2016-06-26",
@@ -3722,7 +3907,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5 Mile",
       "age_grade_age": 46,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2016-05-30",
@@ -3742,7 +3928,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 46,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2016-05-15",
@@ -3762,7 +3949,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Marathon",
       "age_grade_age": 46,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2016-04-30",
@@ -3782,7 +3970,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 46,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2016-04-09",
@@ -3802,7 +3991,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 46,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2016-04-02",
@@ -3822,7 +4012,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 46,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2016-03-19",
@@ -3842,7 +4033,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
       "age_grade_age": 46,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2016-03-12",
@@ -3862,7 +4054,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 46,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2015-11-28",
@@ -3882,7 +4075,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "Half Marathon",
       "age_grade_age": 46,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2015-11-15",
@@ -3902,7 +4096,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "8K",
       "age_grade_age": 46,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2015-09-26",
@@ -3922,7 +4117,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 46,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2015-08-08",
@@ -3942,7 +4138,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "5K",
       "age_grade_age": 46,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     },
     {
       "date": "2015-07-11",
@@ -3962,7 +4159,8 @@
       "age_grade_table_version": "USATF-MLDR-2025-20250727",
       "age_grade_event": "10 Mile",
       "age_grade_age": 46,
-      "usat_score": null
+      "usat_score": null,
+      "post_race_notes": null
     }
   ]
 }
