@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T16:16:50Z",
+  "generated_at": "2026-10-01T16:20:05Z",
   "reference_date": "2026-10-01",
   "count": 16,
   "data": [
@@ -14,7 +14,7 @@
       "url": "https://www.chicagomarathon.com/",
       "days_until": 10,
       "when": "in 10 days",
-      "pre_race_notes": "This is a test for notes added before the race."
+      "pre_race_notes": "Packet pick-up on Friday, including shoe tag for CARA VIP experience.\r\n\r\nParking for race reserved."
     },
     {
       "date": "2026-10-24",
