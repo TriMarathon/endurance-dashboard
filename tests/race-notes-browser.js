@@ -21,17 +21,18 @@ const root = path.resolve(__dirname, '..');
     browser = await chromium.launch({ headless: true, ...(process.env.SUMMARY_BROWSER_CHANNEL ? { channel: process.env.SUMMARY_BROWSER_CHANNEL } : {}) });
     const note = '\nBreakfast & water\n<script>window.noteExecuted=true</script>\n<img src=x onerror="window.noteExecuted=true">\n' + 'longword'.repeat(1000);
     for (const width of [1280, 390, 320]) {
+     for (const sectionMode of ["plan", "post", "both"]) {
       const page = await browser.newPage({ viewport: { width, height: 844 }, hasTouch: width < 640 });
       const errors = [];
       page.on('pageerror', error => errors.push(error.message));
       await page.route('**/data/races.json*', route => route.fulfill({ json: { data: [
-        { date: '2099-01-01', name: 'With plan', pre_race_notes: note },
+        { date: '2099-01-01', name: 'With plan', pre_race_notes: note, notes: 'Retired legacy text' },
         { date: '2099-02-01', name: 'No plan', pre_race_notes: null },
         { date: '2099-03-01', name: 'Empty plan', pre_race_notes: '' },
         { date: '2099-04-01', name: 'Legacy race' },
       ] } }));
       await page.route('**/data/completed_races.json*', route => route.fulfill({ json: { data: [
-        { date: '2026-09-01', activity_name: 'With review', category: '5K', duration_seconds: 1200, post_race_notes: note },
+        { date: '2026-09-01', activity_name: 'With review', category: '5K', duration_seconds: 1200, post_race_notes: sectionMode !== 'plan' ? note : null, pre_race_notes: sectionMode !== 'post' ? note : null },
         { date: '2026-09-02', activity_name: 'No review', post_race_notes: null },
         { date: '2026-09-03', activity_name: 'Empty review', post_race_notes: '' },
         { date: '2026-09-04', activity_name: 'Legacy review' },
@@ -61,20 +62,25 @@ const root = path.resolve(__dirname, '..');
       assert.equal(await page.locator('#race-back').count(), 0);
       await page.locator(width < 640 ? '.race-card-name' : '.races-col-date').first().click();
       await page.waitForSelector('#race-back');
+      assert.equal(await page.locator('#races-container .race-plan').count(), 1);
+      assert.equal(await page.locator('#races-container .race-plan-text').textContent(), note);
+      assert.equal(await page.locator('#race-notes').count(), 0);
+      assert(!(await page.locator('#races-container').textContent()).includes('Retired legacy text'));
       await page.locator('#race-back').click();
       assert.equal(await page.locator('#races-container .race-plan').count(), 1);
       await page.locator('[data-subtab="history"]').click();
       const historyNote = page.locator('#race-history-table .completed-race-notes');
       assert.equal(await historyNote.count(), 1);
-      assert.equal(await historyNote.locator('h4').textContent(), 'POST-RACE NOTES');
+      const titles = sectionMode === 'both' ? ['RACE PLAN', 'POST-RACE NOTES'] : [sectionMode === 'plan' ? 'RACE PLAN' : 'POST-RACE NOTES'];
+      assert.deepEqual(await historyNote.locator('h4').allTextContents(), titles);
       const historyControl = historyNote.locator('summary');
       if (width < 640) await historyControl.tap(); else await historyControl.click();
       assert.notEqual(await historyNote.getAttribute('open'), null);
-      assert.equal(await historyNote.locator('.race-plan-text').textContent(), note);
+      assert.deepEqual(await historyNote.locator('.race-plan-text').allTextContents(), titles.map(() => note));
       assert.equal(await historyNote.locator('script, img').count(), 0);
       assert.equal(await page.evaluate(() => window.noteExecuted), undefined);
-      assert.equal(await historyNote.locator('.race-plan-text').evaluate(el => getComputedStyle(el).whiteSpace), 'pre-wrap');
-      assert(await historyNote.locator('.race-plan-text').evaluate(el => el.scrollWidth <= el.clientWidth));
+      assert.equal(await historyNote.locator('.race-plan-text').first().evaluate(el => getComputedStyle(el).whiteSpace), 'pre-wrap');
+      assert(await historyNote.locator('.race-plan-text').first().evaluate(el => el.scrollWidth <= el.clientWidth));
       assert(await historyNote.evaluate(el => el.getBoundingClientRect().width <= innerWidth));
       if (width < 640) assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
       await historyControl.focus();
@@ -84,6 +90,7 @@ const root = path.resolve(__dirname, '..');
       assert.notEqual(await historyNote.getAttribute('open'), null);
       assert.deepEqual(errors, []);
       await page.close();
+     }
     }
     console.log('Race notes browser tests passed: desktop, 390px and 320px touch, keyboard, plain text, wrapping, existing details.');
   } finally {

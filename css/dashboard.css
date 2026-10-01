@@ -674,13 +674,6 @@ footer {
   text-align: right;
 }
 
-.races-detail-notes {
-  font-size: 13px;
-  color: var(--text);
-  padding: 2px 0 2px;
-  white-space: pre-wrap;
-}
-
 .priority-badge {
   font-size: 11px;
   font-weight: 600;

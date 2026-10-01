@@ -929,10 +929,11 @@ function renderRaces(json) {
   }
 }
 
-// Sections allow a linked race plan to be added later without changing the control.
+// Linked plans and post-race notes remain separate public text sections.
 // Only public exported text is accepted; Admin remains the sole editor.
 function completedRaceNotesDisclosure(race) {
-  const sections = [{ title: 'POST-RACE NOTES', text: race.post_race_notes }];
+  const sections = [{ title: 'RACE PLAN', text: race.pre_race_notes },
+    { title: 'POST-RACE NOTES', text: race.post_race_notes }];
   const content = sections.filter(section => typeof section.text === 'string' && section.text.trim())
     .map(section => '<section><h4>' + escapeHtml(section.title) + '</h4>' +
       '<div class="race-plan-text">' + escapeHtml(section.text) + '</div></section>').join('');
@@ -1080,8 +1081,6 @@ function renderRaceDetail(container, race) {
     ? String(race.series) : null;
   const priority = race && race.priority != null
     ? String(race.priority) : null;
-  const notes = race && race.notes != null
-    ? String(race.notes) : null;
   const url = race && race.url;
 
   let html = '<div class="races-detail">';
@@ -1097,9 +1096,6 @@ function renderRaceDetail(container, race) {
   if (status) html += `<div class="races-detail-row"><span class="races-detail-label">Status</span><span class="races-detail-value status-value">${status}</span></div>`;
   if (series) html += `<div class="races-detail-row"><span class="races-detail-label">Series</span><span class="races-detail-value">${series}</span></div>`;
   if (priority) html += `<div class="races-detail-row"><span class="races-detail-label">Priority</span><span class="races-detail-value priority-badge">${priority}</span></div>`;
-  if (notes) {
-    html += `<div class="races-detail-row"><span class="races-detail-label">Notes</span><div class="races-detail-notes" id="race-notes"></div></div>`;
-  }
   html += racePlanDisclosure(race);
   if (url) {
     html += `<div class="races-detail-actions">`;
@@ -1108,14 +1104,6 @@ function renderRaceDetail(container, race) {
   }
   html += '</div>';
   container.innerHTML = html;
-
-  // Notes must NEVER go through innerHTML — render via textContent for XSS safety.
-  if (notes) {
-    const notesEl = container.querySelector('#race-notes');
-    if (notesEl) {
-      notesEl.textContent = notes;
-    }
-  }
 
   const backBtn = container.querySelector('#race-back');
   if (backBtn) {
@@ -1230,6 +1218,7 @@ function normalizeCompletedRace(record) {
   return {
     date: date, name: name, category: category, duration: duration,
     post_race_notes: record.post_race_notes,
+    pre_race_notes: record.pre_race_notes,
     preRaceCtl: metric('pre_race_ctl'),
     raceDayTsb: metric('race_day_tsb'),
     preRaceLoadRatio: metric('pre_race_load_ratio'),
