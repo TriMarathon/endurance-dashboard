@@ -1219,6 +1219,11 @@ function normalizeCompletedRace(record) {
     date: date, name: name, category: category, duration: duration,
     post_race_notes: record.post_race_notes,
     pre_race_notes: record.pre_race_notes,
+    // Test the source fields separately: normalization/formatting stays unchanged.
+    hasLoadMetrics: ['pre_race_ctl', 'race_day_tsb', 'pre_race_load_ratio',
+      'pre_race_ramp_rate', 'race_tss', 'day_tss', 'delta_atl'].some((key) =>
+        record[key] != null && String(record[key]).trim() !== ''
+        && Number.isFinite(Number(record[key]))),
     preRaceCtl: metric('pre_race_ctl'),
     raceDayTsb: metric('race_day_tsb'),
     preRaceLoadRatio: metric('pre_race_load_ratio'),
@@ -1272,6 +1277,13 @@ function renderRaceHistoryMetrics(race) {
       + '<dd>' + fmtRaceMetric(race[metric[2]], metric[3], metric[4]) + '</dd>'
     + '</div>'
   ).join('') + '</dl>';
+}
+
+// Independent native disclosures: no open or accordion name attributes.
+function completedRaceLoadDisclosure(race) {
+  if (!race.hasLoadMetrics) return '';
+  return '<details class="race-plan completed-race-load"><summary>Load</summary>'
+    + renderRaceHistoryMetrics(race) + '</details>';
 }
 
 function collectHistoryYears(records) {
@@ -1432,7 +1444,7 @@ function renderRaceHistoryTable() {
       + '<td class="race-history-col-time">' + timeCell + '</td>'
       + '</tr>';
     html += '<tr class="race-history-detail-row">'
-      + '<td colspan="4">' + renderRaceHistoryMetrics(r) + completedRaceNotesDisclosure(r) + '</td>'
+      + '<td colspan="4">' + completedRaceLoadDisclosure(r) + completedRaceNotesDisclosure(r) + '</td>'
       + '</tr>';
   });
   tbody.innerHTML = html;

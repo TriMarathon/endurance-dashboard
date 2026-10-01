@@ -939,11 +939,13 @@ footer {
 .race-history-detail-row > td { padding-top: 0; border-top: 0; }
 .race-history-metrics {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
   margin: 0;
   padding: 8px 0 2px;
 }
+/* Keep Load readable without scrolling the wider result table on phones. */
+.completed-race-load { width: min(100%, calc(100vw - 80px)); }
 .race-history-metric { min-width: 0; }
 .race-history-metric dt {
   overflow: hidden;
@@ -969,6 +971,12 @@ footer {
   .race-history-metrics {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 8px 12px;
+  }
+}
+
+@media (max-width: 359px) {
+  .completed-race-load .race-history-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1632,7 +1640,7 @@ footer {
 /* Optional plain-text race plans stay compact until opened. */
 .race-plan { min-width: 0; max-width: 100%; margin-top: 4px; font-size: 13px; font-weight: 400; }
 .race-plan summary { width: fit-content; min-height: 44px; padding: 12px 8px; box-sizing: border-box; color: var(--muted); cursor: pointer; }
-.race-plan summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.race-plan summary:focus-visible { outline: 2px solid var(--accent, var(--accent-line)); outline-offset: 2px; border-radius: 4px; }
 .race-plan-text { white-space: pre-wrap; overflow-wrap: anywhere; word-break: normal; min-width: 0; max-width: 100%; color: var(--text); padding: 8px 0; }
 .races-col-name .race-plan-text { max-width: min(55vw, 36rem); }
 .race-card > .race-plan { grid-column: 1 / -1; }
