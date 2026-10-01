@@ -929,6 +929,14 @@ function renderRaces(json) {
   }
 }
 
+// Native disclosure supports touch, click, Enter and Space without a custom widget.
+function racePlanDisclosure(race) {
+  const note = race && race.pre_race_notes;
+  if (typeof note !== 'string' || !note.trim()) return '';
+  return '<details class="race-plan"><summary>Notes</summary>' +
+    '<div class="race-plan-text">' + escapeHtml(note) + '</div></details>';
+}
+
 function renderRacesTable(container, rows) {
   let html = '<table class="races-table"><thead><tr>';
   const headers = ['Date', 'Race', 'Location', 'Type', 'Status', 'When'];
@@ -946,7 +954,7 @@ function renderRacesTable(container, rows) {
     const rowClass = selected ? ' race-row-selected' : '';
     html += `<tr class="race-row${rowClass}" data-race-index="${i}" tabindex="0" aria-label="View details for ${name}">`;
     html += `<td class="races-col-date">${dateStr}</td>`;
-    html += `<td class="races-col-name">${raceNameLink(name)}</td>`;
+    html += `<td class="races-col-name">${raceNameLink(name)}${racePlanDisclosure(r)}</td>`;
     html += `<td class="races-col-location">${location || '—'}</td>`;
     html += `<td class="races-col-type">${raceType || '—'}</td>`;
     html += `<td class="races-col-status">${status ? `<span class="status-badge">${status}</span>` : '—'}</td>`;
@@ -957,11 +965,13 @@ function renderRacesTable(container, rows) {
   container.innerHTML = html;
 
   container.querySelectorAll('.race-row').forEach((rowEl) => {
-    rowEl.addEventListener('click', () => {
+    rowEl.addEventListener('click', (e) => {
+      if (e.target.closest('.race-plan')) return;
       const idx = Number(rowEl.getAttribute('data-race-index'));
       selectRace(idx);
     });
     rowEl.addEventListener('keydown', (e) => {
+      if (e.target.closest('.race-plan')) return;
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         const idx = Number(rowEl.getAttribute('data-race-index'));
@@ -991,17 +1001,20 @@ function renderRacesCards(container, rows) {
     html += `<div class="race-card-name">${raceNameLink(name)}</div>`;
     if (subText) html += `<div class="race-card-sub">${subText}</div>`;
     if (status) html += `<span class="status-badge">${status}</span>`;
+    html += racePlanDisclosure(r);
     html += '</div>';
   }
   html += '</div>';
   container.innerHTML = html;
 
   container.querySelectorAll('.race-card').forEach((cardEl) => {
-    cardEl.addEventListener('click', () => {
+    cardEl.addEventListener('click', (e) => {
+      if (e.target.closest('.race-plan')) return;
       const idx = Number(cardEl.getAttribute('data-race-index'));
       selectRace(idx);
     });
     cardEl.addEventListener('keydown', (e) => {
+      if (e.target.closest('.race-plan')) return;
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         const idx = Number(cardEl.getAttribute('data-race-index'));
@@ -1077,6 +1090,7 @@ function renderRaceDetail(container, race) {
   if (notes) {
     html += `<div class="races-detail-row"><span class="races-detail-label">Notes</span><div class="races-detail-notes" id="race-notes"></div></div>`;
   }
+  html += racePlanDisclosure(race);
   if (url) {
     html += `<div class="races-detail-actions">`;
     html += externalLink(String(url), 'Event website');
