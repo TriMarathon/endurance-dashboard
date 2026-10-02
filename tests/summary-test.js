@@ -100,3 +100,38 @@ assert(safe.includes('Line 1\n'));
 assert(!safe.includes('NEVER DISPLAY'));
 assert(!safe.includes('<img'));
 console.log('Calendar offsets, ranges, future races, publication fields, and history boundaries passed.');
+
+const { summaryPieSegments, summaryPiePath, summaryDayDot } = require('../js/summary');
+const pieDay = (loads) => ({ date: '2026-09-28', tss: Object.values(loads).reduce((sum, tss) => sum + tss, 0),
+  sports: Object.fromEntries(['running', 'cycling', 'swimming', 'strength', 'elliptical', 'other']
+    .map(sport => [sport, { tss: loads[sport] || 0, seconds: sport === 'cycling' ? 10000 : 1 }])) });
+const mixed = pieDay({ running: 60, cycling: 40 });
+assert.deepEqual(summaryPieSegments(mixed), [
+  { sport: 'running', color: 'run', share: .6, start: -90, end: 126 },
+  { sport: 'cycling', color: 'bike', share: .4, start: 126, end: 270 },
+]);
+const arc = summaryPiePath(summaryPieSegments(mixed)[0], 12, 11.7);
+assert.match(arc, /^M 12 12 L 12 /); // Begins at 12 o'clock.
+assert(arc.includes(' A 11.7 11.7 0 1 1 ')); // Large arc, clockwise.
+assert(summaryPiePath(summaryPieSegments(mixed)[1], 12, 11.7).includes(' 0 0 1 '));
+const mixedSvg = summaryDayDot(mixed);
+assert.match(mixedSvg, /width="24" height="24"/);
+assert.equal((mixedSvg.match(/class="summary-pie-separator"/g) || []).length, 2);
+assert.equal((mixedSvg.match(/class="summary-pie-outline"/g) || []).length, 1);
+for (const sport of ['running', 'cycling', 'swimming', 'strength', 'elliptical', 'other']) {
+  const single = summaryDayDot(pieDay({ [sport]: 100 }));
+  assert.match(single, /<circle class="summary-pie-slice"/);
+  assert(!single.includes('summary-pie-separator'));
+}
+const tiny = pieDay({ other: .0001, elliptical: .0001, strength: .0001, swimming: .0001, cycling: 39.9996, running: 60 });
+assert.deepEqual(summaryPieSegments(tiny).map(segment => segment.sport), ['running', 'cycling', 'swimming', 'strength', 'elliptical', 'other']);
+assert(summaryPieSegments(tiny).every(segment => segment.share > 0 && segment.end > segment.start));
+assert.equal((summaryDayDot(tiny).match(/class="summary-pie-slice"/g) || []).length, 6);
+assert.match(summaryDayDot(tiny), /patternUnits="userSpaceOnUse"/);
+for (const day of [pieDay({}), { ...mixed, future: true }, { ...mixed, unavailable: true }]) {
+  assert.deepEqual(summaryPieSegments(day), []);
+  assert(!summaryDayDot(day).includes('<svg'));
+}
+assert.match(summaryDayDot(pieDay({})), /width:4px;height:4px/);
+assert.match(summaryDayDot({ ...mixed, future: true }), /width:8px;height:8px/);
+console.log('Pie TSS shares, clockwise arcs, single/all sports, tiny slices, textures, borders and non-pie days passed.');

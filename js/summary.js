@@ -62,6 +62,52 @@ function buildSummary(doc, today = summaryToday(), weekOffset = 0, races = []) {
 function summaryDotDiameter(tss) {
   return tss > 0 ? Math.min(36, Math.max(8, 2.4 * Math.sqrt(tss))) : 4;
 }
+// Keep sport order and palette shared with the legend; proportions use TSS only.
+function summaryPieSegments(day) {
+  if (!(day.tss > 0) || day.future || day.unavailable) return [];
+  let angle = -90;
+  const sports = SUMMARY_SPORTS.filter(([key]) => day.sports[key].tss > 0);
+  return sports.map(([key, , color], index) => {
+    const share = day.sports[key].tss / day.tss;
+    const start = angle;
+    angle = index === sports.length - 1 ? 270 : angle + share * 360;
+    return { sport: key, color, share, start, end: angle };
+  });
+}
+function summaryPiePoint(angle, center, radius) {
+  const radians = angle * Math.PI / 180;
+  return [center + radius * Math.cos(radians), center + radius * Math.sin(radians)];
+}
+function summaryPiePath(segment, center, radius) {
+  const start = summaryPiePoint(segment.start, center, radius);
+  const end = summaryPiePoint(segment.end, center, radius);
+  return `M ${center} ${center} L ${start.join(' ')} A ${radius} ${radius} 0 ${segment.end - segment.start > 180 ? 1 : 0} 1 ${end.join(' ')} Z`;
+}
+function summaryDayDot(day) {
+  const diameter = day.future || day.unavailable ? 8 : summaryDotDiameter(day.tss);
+  const segments = summaryPieSegments(day);
+  if (!segments.length) return `<i style="width:${diameter}px;height:${diameter}px" aria-hidden="true"></i>`;
+  const center = diameter / 2;
+  // Inset the outline by half its stroke so the original diameter is retained.
+  const radius = center - 0.3;
+  const patternId = `summary-pie-${day.date}`;
+  const patterns = segments.filter(({ sport }) => sport === 'strength' || sport === 'elliptical')
+    .map(({ sport, color }) => `<pattern id="${patternId}-${sport}" width="${sport === 'strength' ? 6 : 4}" height="${sport === 'strength' ? 6 : 4}" patternUnits="userSpaceOnUse"${sport === 'strength' ? ' patternTransform="rotate(45)"' : ''}><rect width="100%" height="100%" fill="var(--sport-${color}-bg)"/>${sport === 'strength' ? '<rect width="2" height="6" fill="var(--bg)" opacity=".4"/>' : '<circle cx="2" cy="2" r="1" fill="var(--bg)"/>'}</pattern>`).join('');
+  const slices = segments.map((segment) => {
+    const fill = segment.sport === 'strength' || segment.sport === 'elliptical'
+      ? `url(#${patternId}-${segment.sport})` : `var(--sport-${segment.color}-bg)`;
+    const attrs = `class="summary-pie-slice" data-sport="${segment.sport}" data-share="${segment.share}" fill="${fill}"`;
+    return segments.length === 1
+      ? `<circle ${attrs} cx="${center}" cy="${center}" r="${radius}"/>`
+      : `<path ${attrs} d="${summaryPiePath(segment, center, radius)}"/>`;
+  }).join('');
+  // Draw seams once, after all fills; never discard a small positive contribution.
+  const separators = segments.length > 1 ? segments.map((segment) => {
+    const point = summaryPiePoint(segment.start, center, radius);
+    return `<path class="summary-pie-separator" d="M ${center} ${center} L ${point.join(' ')}"/>`;
+  }).join('') : '';
+  return `<svg class="summary-pie-dot" width="${diameter}" height="${diameter}" viewBox="0 0 ${diameter} ${diameter}" aria-hidden="true" focusable="false">${patterns ? `<defs>${patterns}</defs>` : ''}${slices}${separators}<circle class="summary-pie-outline" cx="${center}" cy="${center}" r="${radius}"/></svg>`;
+}
 function summaryTime(seconds) {
   const minutes = Math.round(seconds / 60);
   return `${Math.floor(minutes / 60)}h ${String(minutes % 60).padStart(2, '0')}m`;
@@ -133,7 +179,7 @@ function renderSummary(doc, today = summaryToday()) {
     </div><div class="summary-legend">${SUMMARY_SPORTS.map(([key, label, color]) => `<span><i class="summary-sport-${key}" style="--summary-color:var(--sport-${color}-bg)"></i>${label}</span>`).join('')}</div>
     <div class="summary-weeks">${weeks.map((week, wi) => `<section class="summary-week${week.current ? ' summary-current-week' : ''}" aria-label="Week of ${summaryDateLabel(week.start)}">
       <div class="summary-week-label">${summaryDateLabel(week.start)} – ${summaryDateLabel(week.end)}${week.current ? '<small>This week · so far</small>' : ''}</div>
-      <div class="summary-days">${week.days.map((day, di) => `<div class="summary-day"><span aria-hidden="true">${['M', 'T', 'W', 'T', 'F', 'S', 'S'][di]}</span><button type="button" class="summary-day-button${day.future ? ' future' : day.unavailable ? ' unavailable' : day.tss === 0 ? ' rest' : ''}" data-summary-day="${wi * 7 + di}" data-summary-date="${day.date}" aria-label="${summaryEscape(summaryAccessibleDay(day))}" aria-controls="summary-detail" aria-pressed="false"><i style="width:${day.future || day.unavailable ? 8 : summaryDotDiameter(day.tss)}px;height:${day.future || day.unavailable ? 8 : summaryDotDiameter(day.tss)}px" aria-hidden="true"></i>${day.races.length ? `<span class="summary-race-flag" aria-hidden="true">⚑${day.races.length > 1 ? '<b>' + day.races.length + '</b>' : ''}</span>` : ''}</button></div>`).join('')}</div>
+      <div class="summary-days">${week.days.map((day, di) => `<div class="summary-day"><span aria-hidden="true">${['M', 'T', 'W', 'T', 'F', 'S', 'S'][di]}</span><button type="button" class="summary-day-button${day.future ? ' future' : day.unavailable ? ' unavailable' : day.tss === 0 ? ' rest' : ''}" data-summary-day="${wi * 7 + di}" data-summary-date="${day.date}" aria-label="${summaryEscape(summaryAccessibleDay(day))}" aria-controls="summary-detail" aria-pressed="false">${summaryDayDot(day)}${day.races.length ? `<span class="summary-race-flag" aria-hidden="true">⚑${day.races.length > 1 ? '<b>' + day.races.length + '</b>' : ''}</span>` : ''}</button></div>`).join('')}</div>
       <div class="summary-bars">${bar(week, 'seconds', 'Time')}${bar(week, 'tss', 'TSS')}</div>
     </section>`).join('')}</div><div class="summary-detail-slot"></div>`;
   container.querySelectorAll('[data-summary-nav]').forEach((button) => {
@@ -181,5 +227,5 @@ function renderSummary(doc, today = summaryToday()) {
 }
 if (typeof module !== 'undefined') module.exports = {
   buildSummary, summaryToday, summaryDotDiameter, summaryDayDetails, summaryTime,
-  summaryRangeLabel, summaryRaceDetails, renderSummary,
+  summaryRangeLabel, summaryRaceDetails, summaryPieSegments, summaryPiePath, summaryDayDot, renderSummary,
 };
