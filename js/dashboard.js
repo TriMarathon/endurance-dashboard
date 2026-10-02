@@ -1719,10 +1719,12 @@ async function loadCompletedRaces() {
   } catch (err) {
     console.error('[dashboard] failed to load completed_races.json:', err);
     completedRacesData = [];
+    setSummaryCompletedRaces([]);
     if (racingSubtab === 'history') renderRaceHistoryTable();
     return;
   }
   completedRacesData = Array.isArray(json && json.data) ? json.data : [];
+  setSummaryCompletedRaces(completedRacesData);
   if (racingSubtab === 'history') {
     renderRaceHistory();
   }

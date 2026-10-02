@@ -61,3 +61,31 @@ races, later-current-week races, multiple races, and races several weeks ahead.
 Browser coverage at 1280px, 390px, and 320px verifies both fetch completion orders,
 keyboard/touch navigation, literal notes, no horizontal overflow, compactness,
 and existing dashboard routes. Screenshots are written to `/tmp/calendar-*.png`.
+
+## Completed race badges
+
+Summary reuses `loadCompletedRaces()` and its existing `data/completed_races.json`
+records, independently of the Racing filters. No new fetch or export is introduced.
+The producer's `get_completed_races()` uses the persisted activity local calendar
+`date` and its serializer preserves it. Matching uses exact `race.date === day.date`
+strings, with no timestamp parsing or timezone conversion. Only dates in the visible
+28 buckets appear; race information remains available even without training data.
+
+Completed races use the outlined ⚐ counterpart to scheduled ⚑, muted and anchored
+to the upper-right of the dot wrapper. The SVG, size formula, colors, and weekly
+bars are unchanged. One badge per day carries the total count when greater than
+one. Mixed completed/scheduled dates use an underlined outlined flag; the accessible
+label and details identify both states. Day buttons retain selection and keyboard
+behavior. Completed details expose name, date, category, exact elapsed time, exported
+Age Grade and USAT Score, plus separate escaped, multiline Race Plan and Post-race
+Notes disclosures. Internal fields are never rendered.
+
+Future exports retain records on/after their reference date, including race day.
+They expose no shared identity with completed records. Summary conservatively pairs
+same-date records one-to-one only when nonempty trimmed names and nonempty trimmed
+categories match exactly (future `name`/`race_type`, completed
+`activity_name`/`category`). The completed entry wins. Different names/categories
+and missing keys remain distinct; there is no fuzzy matching or activity linking.
+Renamed versions cannot be safely deduplicated with this public contract. Existing
+past-future filtering stays unchanged. Either fetch can finish first without losing
+navigation or selected-day details.

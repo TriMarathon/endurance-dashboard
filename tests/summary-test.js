@@ -135,3 +135,53 @@ for (const day of [pieDay({}), { ...mixed, future: true }, { ...mixed, unavailab
 assert.match(summaryDayDot(pieDay({})), /width:4px;height:4px/);
 assert.match(summaryDayDot({ ...mixed, future: true }), /width:8px;height:8px/);
 console.log('Pie TSS shares, clockwise arcs, single/all sports, tiny slices, textures, borders and non-pie days passed.');
+
+const {summaryRaceMarker, summaryCompletedRaceDetails} = require('../js/summary');
+const completed = [
+  {date:'2026-09-28',activity_name:'Race one',category:'5K',duration_seconds:3601,age_grade_percent:75,usat_score:88.2,pre_race_notes:'Plan\n<script>bad()</script>',post_race_notes:'Notes\n<img src=x>',garmin_activity_id:'SECRET'},
+  {date:'2026-09-28',activity_name:'Race two',category:'10K'},
+  {date:'2026-08-01',activity_name:'Outside window'},
+];
+const completedWeeks=buildSummary(doc,'2026-09-30',0,[],completed);
+const completedDay=completedWeeks[3].days[0];
+assert.equal(completedDay.completedRaces.length,2);
+assert.equal(completedWeeks.flatMap(w=>w.days).reduce((n,d)=>n+d.completedRaces.length,0),2);
+assert.equal(summaryDayDot(completedDay),summaryDayDot(weeks[3].days[0]));
+assert.match(summaryRaceMarker(completedDay),/2 completed races/);
+assert.match(summaryRaceMarker(completedDay),/<b>2<\/b>/);
+assert.equal((summaryRaceMarker(completedDay).match(/role="img"/g)||[]).length,1);
+assert.equal(summaryRaceMarker(completedWeeks[3].days[1]),'');
+const single={...completedDay,completedRaces:[completed[0]]};
+assert.match(summaryRaceMarker(single),/Completed race: Race one/);
+assert(!summaryRaceMarker(single).includes('<b>'));
+const overlap=buildSummary(doc,'2026-09-28',0,[
+  {date:'2026-09-28',name:' Race one ',race_type:'5K'},
+  {date:'2026-09-28',name:'Different race',race_type:'5K'},
+  {date:'2026-09-28',name:'Race one',race_type:'10K'},
+],completed)[3].days[0];
+assert.equal(overlap.races.length,2);
+assert.match(summaryRaceMarker(overlap),/<b>4<\/b>/);
+assert.match(summaryRaceMarker(overlap),/summary-race-mixed/);
+for(const tz of ['Pacific/Honolulu','Asia/Tokyo','America/Chicago']) {
+  process.env.TZ=tz;
+  assert.equal(buildSummary(doc,'2026-09-30',0,[],completed)[3].days[0].completedRaces[0].date,'2026-09-28');
+}
+const completedHtml=summaryCompletedRaceDetails(completed[0]);
+for(const value of ['Race one','2026-09-28','5K','1:00:01','Age Grade 75.0%','USAT Score 88.2','Race Plan','Post-race Notes','&lt;script&gt;','&lt;img']) assert(completedHtml.includes(value),value);
+assert(!completedHtml.includes('SECRET'));
+assert(!completedHtml.includes('<script>'));
+assert(!summaryCompletedRaceDetails(completed[1]).includes('Age Grade'));
+console.log('Completed race date matching, window bounds, unchanged pies, counts, conservative overlap, public details and escaped notes passed.');
+
+const exportedCompleted=JSON.parse(fs.readFileSync(path.join(root,'data/completed_races.json'),'utf8')).data;
+const wisconsin=buildSummary({end_date:'2026-10-02',sports:{}},'2026-10-02',0,[],exportedCompleted).flatMap(w=>w.days).find(d=>d.date==='2026-09-12');
+assert(wisconsin.completedRaces.some(r=>r.activity_name.trim()==='IRONMAN 70.3 Wisconsin'));
+assert.match(summaryRaceMarker(wisconsin),/Completed race: IRONMAN 70.3 Wisconsin/);
+assert.equal(buildSummary({...doc,start_date:'2026-09-29'},'2026-09-30',0,[],completed)[3].days[0].completedRaces.length,2);
+const repeated=buildSummary(doc,'2026-09-28',0,[
+  {date:'2026-09-28',name:'Race one',race_type:'5K'},
+  {date:'2026-09-28',name:'Race one',race_type:'5K'},
+  {date:'2026-09-28',name:'Race two'},
+],completed)[3].days[0];
+assert.equal(repeated.races.length,2,'Match one-to-one and preserve missing-category records');
+console.log('Wisconsin export, race-only days and one-to-one conservative deduplication passed.');

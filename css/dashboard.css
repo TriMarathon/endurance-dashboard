@@ -1670,3 +1670,11 @@ footer {
   .summary-range { font-size: 11px; }
   .summary-navigation small { flex-basis: 100%; text-align: right; }
 }
+
+/* Badges are independent of the unchanged TSS pie geometry. */
+.summary-dot-wrap { position: relative; display: inline-flex; }
+.summary-dot-wrap .summary-race-completed { top: -9px; right: -7px; font-size: 14px; color: var(--muted); white-space: nowrap; }
+.summary-race-completed b { background: var(--panel); border-radius: 3px; color: var(--text); font-size: 10px; }
+.summary-race-mixed { border-bottom: 1px solid currentColor; }
+.summary-race small { display: block; color: var(--muted); }
+.summary-race { overflow-wrap: anywhere; }

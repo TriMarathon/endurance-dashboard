@@ -39,6 +39,16 @@ const root = path.resolve(__dirname, '..');
       {date:'2026-10-05',name:'Next week race'},
       {date:'2026-10-25',name:'Later race'},
     ]};
+    const completed={data:[
+      {date:'2026-09-21',activity_name:'Small race',category:'5K'},
+      {date:'2026-09-22',activity_name:'Big race',category:'70.3'},
+      {date:'2026-09-28',activity_name:'Mixed race',category:'5K',duration_seconds:3601,age_grade_percent:75,usat_score:88.2,pre_race_notes:note,post_race_notes:note,garmin_activity_id:'NEVER DISPLAY'},
+      {date:'2026-09-28',activity_name:'Second completed race',category:'10K'},
+      {date:'2026-08-01',activity_name:'Outside completed race'},
+      {date:'2026-10-01',activity_name:'Today race',category:'5K'},
+    ]};
+    // Keep the established future-only assertions; overlap is exercised separately below.
+    const visibleCompleted={data:completed.data.filter(r=>r.date!=='2026-10-01')};
     const url=`http://127.0.0.1:${server.address().port}/`;
     for (const width of [1280,390,320]) {
       const page=await browser.newPage({viewport:{width,height:844},timezoneId:width===320?'Pacific/Honolulu':'Asia/Tokyo',hasTouch:width<640});
@@ -46,7 +56,9 @@ const root = path.resolve(__dirname, '..');
       await page.clock.install({time:new Date('2026-10-01T17:00:00Z')});
       await page.route('**/data/sport_analysis.json*',async route=>{if(width===390) await new Promise(resolve=>setTimeout(resolve,200));await route.fulfill({json:doc});});
       await page.route('**/data/races.json*',async route=>{if(width!==390) await new Promise(resolve=>setTimeout(resolve,200));await route.fulfill({json:races});});
-      await page.goto(url); await page.waitForSelector('.summary-race-flag');
+      await page.route('**/data/completed_races.json*',async route=>{if(width===320) await new Promise(resolve=>setTimeout(resolve,300));await route.fulfill({json:visibleCompleted});});
+      await page.goto(url); await page.waitForSelector('.summary-race-completed');
+      await page.waitForSelector('[data-summary-date="2026-10-04"] .summary-race-flag');
       assert.equal(await page.locator('.tab-panel.active').getAttribute('id'),'tab-summary');
       assert.equal(await page.locator('.summary-week').count(),4);
       assert.equal(await page.locator('.summary-day-button').count(),28);
@@ -93,7 +105,33 @@ const root = path.resolve(__dirname, '..');
       }
       for(const button of await page.locator('.summary-day-button').all()) assert(await button.evaluate(el=>el.getBoundingClientRect().height>=44));
       await page.screenshot({path:`/tmp/calendar-pies-${width}.png`,fullPage:true});
-      await monday.click();
+      assert.equal(await monday.locator('.summary-race-flag').count(),1);
+      assert.equal(await monday.locator('.summary-race-flag b').innerText(),'2');
+      assert.match(await monday.getAttribute('aria-label'),/2 completed races/);
+      for(const date of ['2026-09-21','2026-09-22','2026-09-28']) {
+        const day=page.locator(`[data-summary-date="${date}"]`);
+        const flag=await day.locator('.summary-race-flag').boundingBox();
+        const pie=await day.locator('svg').boundingBox();
+        const overlapWidth=Math.max(0,Math.min(flag.x+flag.width,pie.x+pie.width)-Math.max(flag.x,pie.x));
+        const overlapHeight=Math.max(0,Math.min(flag.y+flag.height,pie.y+pie.height)-Math.max(flag.y,pie.y));
+        assert(overlapWidth*overlapHeight/(pie.width*pie.height)<.2,'Flag obscures pie');
+        assert.match(await day.locator('.summary-race-flag').getAttribute('aria-label'),/completed race/i);
+        assert.equal(await day.locator('.summary-race-flag').evaluate(el=>getComputedStyle(el).position),'absolute');
+      }
+      assert.equal(await page.getByText('Outside completed race',{exact:true}).count(),0);
+      if(width<640) await monday.tap(); else await monday.press('Enter');
+      assert.equal(await page.locator('.summary-completed-race').count(),2);
+      assert.match(await page.locator('#summary-detail').innerText(),/Mixed race.*5K.*1:00:01.*Age Grade 75.0%.*USAT Score 88.2/s);
+      for(const disclosure of await page.locator('.summary-completed-race .race-plan').all()) {
+        await disclosure.locator('summary').click();
+        assert.equal(await disclosure.locator('.race-plan-text').textContent(),note);
+        assert(await disclosure.locator('.race-plan-text').evaluate(el=>el.scrollWidth<=el.clientWidth));
+      }
+      assert.equal(await page.locator('#summary-detail script').count(),0);
+      assert.equal(await page.evaluate(()=>window.calendarExecuted),undefined);
+      assert(!(await page.locator('#summary-detail').innerText()).includes('NEVER DISPLAY'));
+      assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+      await page.screenshot({path:`/tmp/calendar-completed-details-${width}.png`,fullPage:true});
       assert.match(await page.locator('#summary-detail').innerText(), /100 TSS · 2h 18m.*Run: 60 TSS.*Bike: 40 TSS/);
       await page.getByRole('button',{name:'Close day details'}).click();
       assert.equal(await page.locator('#summary-detail').count(),0);
@@ -163,6 +201,20 @@ const root = path.resolve(__dirname, '..');
       assert.deepEqual(errors,[]);
       await page.close();
     }
+    const overlapPage=await browser.newPage();
+    await overlapPage.clock.install({time:new Date('2026-10-01T17:00:00Z')});
+    await overlapPage.route('**/data/sport_analysis.json*',route=>route.fulfill({json:doc}));
+    await overlapPage.route('**/data/completed_races.json*',route=>route.fulfill({json:completed}));
+    await overlapPage.route('**/data/races.json*',route=>route.fulfill({json:{data:[...races.data,{date:'2026-10-01',name:'Distinct scheduled',race_type:'10K'}]}}));
+    await overlapPage.goto(url);
+    const overlapDay=overlapPage.locator('[data-summary-date="2026-10-01"]');
+    await overlapDay.locator('.summary-race-mixed').waitFor();
+    assert.equal(await overlapDay.locator('.summary-race-flag').count(),1);
+    assert.equal(await overlapDay.locator('b').innerText(),'2');
+    await overlapDay.click();
+    assert.equal(await overlapPage.locator('.summary-race').count(),2);
+    assert.equal(await overlapPage.locator('.summary-completed-race').count(),1);
+    await overlapPage.close();
     const unsynced = await browser.newPage();
     await unsynced.clock.install({time:new Date('2026-10-01T17:00:00Z')});
     await unsynced.route('**/data/sport_analysis.json*',route=>route.fulfill({json:{...doc,end_date:'2026-09-30'}}));

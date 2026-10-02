@@ -16,7 +16,7 @@ function summaryDate(ms) { return new Date(ms).toISOString().slice(0, 10); }
 function summaryEmptySports() {
   return Object.fromEntries(SUMMARY_SPORTS.map(([key]) => [key, { tss: 0, seconds: 0 }]));
 }
-function buildSummary(doc, today = summaryToday(), weekOffset = 0, races = []) {
+function buildSummary(doc, today = summaryToday(), weekOffset = 0, races = [], completedRaces = []) {
   const todayMs = Date.parse(`${today}T00:00:00Z`);
   const monday = todayMs - ((new Date(todayMs).getUTCDay() + 6) % 7) * SUMMARY_DAY_MS;
   const days = new Map();
@@ -27,9 +27,18 @@ function buildSummary(doc, today = summaryToday(), weekOffset = 0, races = []) {
       current: start === monday, future: start > todayMs, tss: 0, seconds: 0, sports: summaryEmptySports(),
       days: Array.from({ length: 7 }, (_, dayIndex) => {
         const date = summaryDate(start + dayIndex * SUMMARY_DAY_MS);
+        const completed = completedRaces.filter((race) => race && race.date === date);
+        // No shared public ID: pair exact trimmed name + category on this date once.
+        const unmatched = [...completed];
+        const scheduled = races.filter((race) => race.date === date && date >= today).filter((race) => {
+          const match = unmatched.findIndex((past) => summarySameRace(race, past));
+          if (match < 0) return true;
+          unmatched.splice(match, 1);
+          return false;
+        });
         const day = { date, tss: 0, seconds: 0, sports: summaryEmptySports(),
           outsideRange: Boolean(doc.start_date && date < doc.start_date),
-          races: races.filter((race) => race.date === date && date >= today),
+          races: scheduled, completedRaces: completed,
           future: date > today, unavailable: date <= today &&
             (date > doc.end_date || (doc.start_date && date < doc.start_date)) };
         days.set(date, day);
@@ -127,7 +136,42 @@ function summaryDayDetails(day) {
   return `${date} · ${Math.round(day.tss)} TSS · ${summaryTime(day.seconds)}${sports.length ? ' · ' + sports.join(' · ') : ' · Rest day'}`;
 }
 // All data and navigation stay in memory; either fetch may finish first.
-const summaryState = { doc: null, today: null, weekOffset: 0, races: [], selectedDate: null };
+const summaryState = { doc: null, today: null, weekOffset: 0, races: [], selectedDate: null, completedRaces: [] };
+function setSummaryCompletedRaces(races) {
+  summaryState.completedRaces = races;
+  if (summaryState.doc) renderSummary(summaryState.doc, summaryState.today);
+}
+function summarySameRace(future, completed) {
+  const text = (value) => typeof value === 'string' ? value.trim() : '';
+  return Boolean(text(future.name) && text(future.race_type)) &&
+    text(future.name) === text(completed.activity_name) &&
+    text(future.race_type) === text(completed.category);
+}
+function summaryCompletedLabel(day) {
+  const races = day.completedRaces || [];
+  return races.length > 1 ? `${races.length} completed races` :
+    races.length ? `Completed race: ${races[0].activity_name || 'Unnamed race'}` : '';
+}
+function summaryRaceMarker(day) {
+  const completed = day.completedRaces || [];
+  const count = completed.length + day.races.length;
+  if (!count) return '';
+  const label = [summaryCompletedLabel(day), ...day.races.map(race => `Scheduled race: ${race.name || 'Unnamed race'}`)].filter(Boolean).join(' · ');
+  return `<span class="summary-race-flag${completed.length ? ' summary-race-completed' : ''}${completed.length && day.races.length ? ' summary-race-mixed' : ''}" role="img" aria-label="${summaryEscape(label)}">${completed.length ? '⚐' : '⚑'}${count > 1 ? '<b>' + count + '</b>' : ''}</span>`;
+}
+function summaryCompletedRaceDetails(race) {
+  const fields = [race.date, race.category];
+  if (Number.isFinite(race.duration_seconds)) {
+    const total = Math.floor(race.duration_seconds);
+    fields.push(`Time ${Math.floor(total / 3600)}:${String(Math.floor(total % 3600 / 60)).padStart(2, '0')}:${String(total % 60).padStart(2, '0')}`);
+  }
+  for (const [key, label, suffix] of [['age_grade_percent', 'Age Grade', '%'], ['usat_score', 'USAT Score', '']]) {
+    if (race[key] != null && String(race[key]).trim() && Number.isFinite(Number(race[key]))) fields.push(`${label} ${Number(race[key]).toFixed(1)}${suffix}`);
+  }
+  const notes = [['pre_race_notes', 'Race Plan'], ['post_race_notes', 'Post-race Notes']].map(([key, label]) =>
+    typeof race[key] === 'string' && race[key].trim() ? `<details class="race-plan"><summary>${label}</summary><div class="race-plan-text">${summaryEscape(race[key])}</div></details>` : '').join('');
+  return `<section class="summary-race summary-completed-race"><small>Completed race</small><strong>${summaryEscape(race.activity_name || 'Unnamed race')}</strong><div>${fields.filter(value => value != null && value !== '').map(summaryEscape).join(' · ')}</div>${notes}</section>`;
+}
 function setSummaryRaces(races) {
   summaryState.races = races;
   if (summaryState.doc) renderSummary(summaryState.doc, summaryState.today);
@@ -147,7 +191,7 @@ function summaryRangeLabel(weeks) {
 }
 function summaryAccessibleDay(day) {
   const races = day.races.map((race) => `Race: ${race.name || 'Scheduled race'}`).join(' · ');
-  return summaryDayDetails(day) + (races ? ' · ' + races : '');
+  return [summaryDayDetails(day), races, summaryCompletedLabel(day)].filter(Boolean).join(' · ');
 }
 function summaryRaceDetails(race) {
   // Only display fields from the public Future Race contract.
@@ -155,14 +199,14 @@ function summaryRaceDetails(race) {
     .filter((value) => value != null && value !== '').map(summaryEscape).join(' · ');
   const note = typeof race.pre_race_notes === 'string' && race.pre_race_notes.trim()
     ? `<details class="race-plan"><summary>Race Plan / Notes</summary><div class="race-plan-text">${summaryEscape(race.pre_race_notes)}</div></details>` : '';
-  return `<section class="summary-race"><strong>${summaryEscape(race.name || 'Scheduled race')}</strong><div>${fields}</div>${note}</section>`;
+  return `<section class="summary-race"><small>Scheduled race</small><strong>${summaryEscape(race.name || 'Scheduled race')}</strong><div>${fields}</div>${note}</section>`;
 }
 function renderSummary(doc, today = summaryToday()) {
   summaryState.doc = doc;
   summaryState.today = today;
   const container = document.getElementById('summary-content');
   if (!container) return;
-  const weeks = buildSummary(doc, today, summaryState.weekOffset, summaryState.races);
+  const weeks = buildSummary(doc, today, summaryState.weekOffset, summaryState.races, summaryState.completedRaces);
   const maxima = { seconds: Math.max(1, ...weeks.map((w) => w.seconds)), tss: Math.max(1, ...weeks.map((w) => w.tss)) };
   const bar = (week, metric, label) => {
     const unavailable = week.future || week.days.every((day) => day.unavailable);
@@ -179,7 +223,7 @@ function renderSummary(doc, today = summaryToday()) {
     </div><div class="summary-legend">${SUMMARY_SPORTS.map(([key, label, color]) => `<span><i class="summary-sport-${key}" style="--summary-color:var(--sport-${color}-bg)"></i>${label}</span>`).join('')}</div>
     <div class="summary-weeks">${weeks.map((week, wi) => `<section class="summary-week${week.current ? ' summary-current-week' : ''}" aria-label="Week of ${summaryDateLabel(week.start)}">
       <div class="summary-week-label">${summaryDateLabel(week.start)} – ${summaryDateLabel(week.end)}${week.current ? '<small>This week · so far</small>' : ''}</div>
-      <div class="summary-days">${week.days.map((day, di) => `<div class="summary-day"><span aria-hidden="true">${['M', 'T', 'W', 'T', 'F', 'S', 'S'][di]}</span><button type="button" class="summary-day-button${day.future ? ' future' : day.unavailable ? ' unavailable' : day.tss === 0 ? ' rest' : ''}" data-summary-day="${wi * 7 + di}" data-summary-date="${day.date}" aria-label="${summaryEscape(summaryAccessibleDay(day))}" aria-controls="summary-detail" aria-pressed="false">${summaryDayDot(day)}${day.races.length ? `<span class="summary-race-flag" aria-hidden="true">⚑${day.races.length > 1 ? '<b>' + day.races.length + '</b>' : ''}</span>` : ''}</button></div>`).join('')}</div>
+      <div class="summary-days">${week.days.map((day, di) => `<div class="summary-day"><span aria-hidden="true">${['M', 'T', 'W', 'T', 'F', 'S', 'S'][di]}</span><button type="button" class="summary-day-button${day.future ? ' future' : day.unavailable ? ' unavailable' : day.tss === 0 ? ' rest' : ''}" data-summary-day="${wi * 7 + di}" data-summary-date="${day.date}" aria-label="${summaryEscape(summaryAccessibleDay(day))}" aria-controls="summary-detail" aria-pressed="false"><span class="summary-dot-wrap">${summaryDayDot(day)}${day.completedRaces.length ? summaryRaceMarker(day) : ''}</span>${day.completedRaces.length ? '' : summaryRaceMarker(day)}</button></div>`).join('')}</div>
       <div class="summary-bars">${bar(week, 'seconds', 'Time')}${bar(week, 'tss', 'TSS')}</div>
     </section>`).join('')}</div><div class="summary-detail-slot"></div>`;
   container.querySelectorAll('[data-summary-nav]').forEach((button) => {
@@ -205,7 +249,7 @@ function renderSummary(doc, today = summaryToday()) {
     buttons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.summaryDate === day.date)));
     container.querySelector('.summary-detail-slot').innerHTML = `<section id="summary-detail" class="summary-detail" role="region" aria-label="Selected day details" aria-live="polite">
       <button type="button" class="summary-detail-close" aria-label="Close day details">Close</button>
-      <div>${summaryEscape(summaryDayDetails(day))}</div>${day.races.map(summaryRaceDetails).join('')}</section>`;
+      <div>${summaryEscape(summaryDayDetails(day))}</div>${day.completedRaces.map(summaryCompletedRaceDetails).join('')}${day.races.map(summaryRaceDetails).join('')}</section>`;
     container.querySelector('.summary-detail-close').addEventListener('click', close);
     container.querySelector('#summary-detail').addEventListener('keydown', (event) => {
       if (event.key === 'Escape') close();
@@ -226,6 +270,6 @@ function renderSummary(doc, today = summaryToday()) {
   if (selected) display(selected);
 }
 if (typeof module !== 'undefined') module.exports = {
-  buildSummary, summaryToday, summaryDotDiameter, summaryDayDetails, summaryTime,
+  summaryRaceMarker, summaryCompletedRaceDetails, summarySameRace, buildSummary, summaryToday, summaryDotDiameter, summaryDayDetails, summaryTime,
   summaryRangeLabel, summaryRaceDetails, summaryPieSegments, summaryPiePath, summaryDayDot, renderSummary,
 };
