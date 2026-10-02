@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T18:47:53Z",
+  "generated_at": "2026-10-02T00:02:55Z",
   "start_date": "2015-01-01",
   "end_date": "2026-10-01",
   "threshold_changes": {
@@ -32464,6 +32464,14 @@
           "distance_miles": 4.4098,
           "is_race": false,
           "is_multisport_leg": false
+        },
+        {
+          "date": "2026-10-01",
+          "duration_seconds": 2179,
+          "tss": 41.66,
+          "distance_miles": 4.6496,
+          "is_race": false,
+          "is_multisport_leg": false
         }
       ],
       "daily": [
@@ -58215,9 +58223,9 @@
         },
         {
           "date": "2026-10-01",
-          "tss": 0.0,
-          "ctl": 49.9,
-          "atl": 53.6
+          "tss": 41.7,
+          "ctl": 50.9,
+          "atl": 59.2
         }
       ]
     },

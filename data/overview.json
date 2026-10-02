@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-10-01T18:48:02Z",
+  "generated_at": "2026-10-02T00:03:04Z",
   "reference_date": "2026-10-01",
   "current_load": {
     "date": "2026-10-01",
-    "ctl": 93.7,
-    "atl": 89.9,
-    "tss": 30.0,
+    "ctl": 94.7,
+    "atl": 95.5,
+    "tss": 71.6,
     "tsb": -3.9,
     "load_ratio": 1.0,
-    "ramp_rate": -0.3
+    "ramp_rate": 0.7
   },
   "recent_training": {
     "start_date": "2026-09-25",
     "end_date": "2026-10-01",
-    "total_tss": 657.4,
-    "run_distance_miles": 45.3,
-    "run_time_seconds": 20510,
+    "total_tss": 699.1,
+    "run_distance_miles": 50.0,
+    "run_time_seconds": 22686,
     "bike_distance_miles": 0.0,
     "bike_time_seconds": 0,
     "swim_distance_yards": 11850,
     "swim_time_seconds": 12589,
     "other_time_seconds": 2499,
-    "total_time_seconds": 35597
+    "total_time_seconds": 37773
   },
   "health": {
     "date": "2026-10-01",
