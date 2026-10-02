@@ -68,3 +68,35 @@ const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 assert.deepEqual([...html.matchAll(/data-tab="[^"]+"[^>]*>([^<]+)/g)].map(m=>m[1]),['Summary','Overview','Training','Load','Health','Racing','Gear']);
 assert.match(html,/id="tab-summary" class="tab-panel active"/);
 console.log('Summary aggregation, dates, scaling, details and routing passed.');
+
+const {summaryRangeLabel, summaryRaceDetails} = require('../js/summary');
+const races = [
+  {date:'2026-10-04',name:'Sunday race'},
+  {date:'2026-10-05',name:'Next Monday'},
+  {date:'2026-10-25',name:'Later race'},
+  {date:'2026-09-30',name:'Race today'},
+  {date:'2026-09-30',name:'Second today'},
+];
+for (const offset of [-8,-1,0,1,2,5,20]) {
+  const window = buildSummary(doc,'2026-09-30',offset,races);
+  assert.equal(window.length,4);
+  assert.equal(Date.parse(window[0].start)-Date.parse(weeks[0].start),offset*7*86400000);
+  assert.equal(window[3].end, new Date(Date.parse(window[0].start)+27*86400000).toISOString().slice(0,10));
+}
+assert.equal(summaryRangeLabel(buildSummary(doc,'2026-09-30',1)), 'Sep 14, 2026 – Oct 11, 2026');
+assert.equal(summaryRangeLabel(buildSummary(doc,'2027-01-01')), 'Dec 7, 2026 – Jan 3, 2027');
+assert.equal(buildSummary(doc,'2026-09-30',0,races)[3].days[6].races[0].name,'Sunday race');
+assert.equal(buildSummary(doc,'2026-09-30',1,races)[3].days[0].races[0].name,'Next Monday');
+assert.equal(buildSummary(doc,'2026-09-30',3,races)[3].days[6].races[0].name,'Later race');
+const todayRace = buildSummary(doc,'2026-09-30',0,races)[3].days[2];
+assert.equal(todayRace.races.length,2);
+assert.equal(todayRace.tss,25);
+assert.equal(buildSummary(doc,'2026-10-01',0,races)[3].days[2].races.length,0);
+assert(buildSummary(doc,'2026-09-30',4).every(w=>w.future));
+assert(buildSummary({...doc,start_date:'2026-09-01'},'2026-09-30',-10).every(w=>w.days.every(d=>d.unavailable)));
+const safe = summaryRaceDetails({name:'<img src=x>', date:'2026-10-04',race_type:'Run',registration_status:'planning',pre_race_notes:'Line 1\n<script>x</script>',internal_secret:'NEVER DISPLAY'});
+assert(safe.includes('&lt;script&gt;x&lt;/script&gt;'));
+assert(safe.includes('Line 1\n'));
+assert(!safe.includes('NEVER DISPLAY'));
+assert(!safe.includes('<img'));
+console.log('Calendar offsets, ranges, future races, publication fields, and history boundaries passed.');

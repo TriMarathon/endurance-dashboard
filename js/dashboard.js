@@ -1165,6 +1165,8 @@ async function loadRaces() {
     return;
   }
 
+  setSummaryRaces(json.data);
+
   if (wrap) {
     wrap.classList.remove('is-loading');
   }

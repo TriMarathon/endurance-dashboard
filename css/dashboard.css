@@ -1593,19 +1593,18 @@ footer {
   font-size: 11px;
 }
 
-/* Last four weeks: daily rhythm first, distributions second. */
-.summary-wrap { padding: 24px; }
-.summary-wrap h3 { margin: 0 0 18px; font-size: 20px; font-weight: 600; }
-.summary-legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 12px; color: var(--muted); }
+/* Four-week calendar: daily rhythm first, distributions second. */
+.summary-wrap { padding: 16px; }
+.summary-wrap h3 { margin: 0 0 8px; font-size: 20px; font-weight: 600; }
+.summary-legend { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px; color: var(--muted); }
 .summary-legend span { display: inline-flex; align-items: center; gap: 6px; }
 .summary-legend i { width: 10px; height: 10px; border-radius: 2px; background: var(--summary-color); }
-.summary-hint { color: var(--muted); font-size: 12px; margin: 12px 0 20px; }
-.summary-week { display: grid; grid-template-columns: 145px minmax(280px, 1fr) minmax(250px, 1.2fr); gap: 24px; align-items: center; padding: 20px 0; border-top: 1px solid var(--panel-border); }
+.summary-week { display: grid; grid-template-columns: 145px minmax(280px, 1fr) minmax(250px, 1.2fr); gap: 16px; align-items: center; padding: 10px 0; border-top: 1px solid var(--panel-border); }
 .summary-week-label { font-size: 13px; font-weight: 600; }
 .summary-week-label small { display: block; color: var(--muted); font-size: 11px; font-weight: 400; margin-top: 4px; }
 .summary-days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); min-width: 0; }
 .summary-day { text-align: center; min-width: 0; }
-.summary-day > span { font-size: 10px; color: var(--muted); }
+.summary-day > span { display: block; line-height: 14px; font-size: 10px; color: var(--muted); }
 .summary-day-button { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 44px; padding: 0; border: 0; border-radius: 8px; background: transparent; cursor: pointer; color: var(--text); }
 .summary-day-button i { display: block; border-radius: 50%; background: var(--text); opacity: .85; }
 .summary-day-button.rest i { background: var(--muted); opacity: .6; }
@@ -1613,8 +1612,8 @@ footer {
 .summary-day-button.unavailable i { border-style: dashed; }
 .summary-day-button:hover, .summary-day-button[aria-pressed="true"] { background: var(--grid); }
 .summary-day-button:focus-visible { outline: 2px solid var(--text); outline-offset: -2px; }
-.summary-bars { display: grid; gap: 12px; min-width: 0; }
-.summary-metric { display: grid; grid-template-columns: 30px minmax(0, 1fr) 74px; gap: 10px; align-items: center; font-size: 11px; }
+.summary-bars { display: grid; gap: 4px; min-width: 0; }
+.summary-metric { display: grid; grid-template-columns: 30px minmax(0, 1fr) 74px; gap: 10px; align-items: center; font-size: 11px; line-height: 16px; }
 .summary-metric > span { color: var(--muted); }
 .summary-metric strong { text-align: right; font-size: 12px; font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .summary-bar { display: flex; height: 12px; background: var(--grid); border-radius: 3px; overflow: hidden; }
@@ -1628,7 +1627,7 @@ footer {
 }
 @media (max-width: 600px) {
   .summary-wrap { padding: 16px 12px; }
-  .summary-week { grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 18px 0; }
+  .summary-week { grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 6px 0; }
   .summary-week-label { display: flex; justify-content: space-between; gap: 8px; }
   .summary-week-label small { margin: 0; }
   .summary-bars { grid-column: 1; }
@@ -1648,3 +1647,23 @@ footer {
 /* Keep completed notes within the viewport even in the scrollable history table. */
 .completed-race-notes { width: min(36rem, calc(100vw - 80px)); }
 .completed-race-notes h4 { margin: 8px 0 0; font-size: 11px; color: var(--muted); }
+
+/* Four-week Training Calendar controls and scheduled-race markers. */
+.summary-navigation { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; margin-bottom: 6px; }
+.summary-navigation button, .summary-detail-close { min-width: 44px; min-height: 44px; padding: 8px; border: 1px solid var(--panel-border); border-radius: 6px; background: var(--panel); color: var(--text); font: inherit; cursor: pointer; }
+.summary-navigation button:focus-visible, .summary-detail-close:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+.summary-range { font-size: 12px; text-align: center; flex: 1; min-width: 0; }
+.summary-navigation small { color: var(--muted); font-size: 11px; margin-left: auto; }
+.summary-legend { margin-bottom: 6px; }
+.summary-current-week .summary-week-label { color: var(--text); }
+.summary-day-button { position: relative; }
+.summary-race-flag { position: absolute; top: -2px; right: 1px; color: var(--text); font-size: 15px; line-height: 1; }
+.summary-race-flag b { font-size: 9px; margin-left: 1px; }
+.summary-detail { min-height: 0; padding: 10px; max-height: 55vh; overflow-y: auto; }
+.summary-detail-close { float: right; margin: 0 0 4px 8px; }
+.summary-race { clear: both; border-top: 1px solid var(--panel-border); padding-top: 8px; margin-top: 8px; }
+@media (max-width: 600px) {
+  .summary-wrap { padding: 12px; }
+  .summary-range { font-size: 11px; }
+  .summary-navigation small { flex-basis: 100%; text-align: right; }
+}
