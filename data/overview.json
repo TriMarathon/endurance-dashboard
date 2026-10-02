@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T12:32:57Z",
+  "generated_at": "2026-10-02T13:05:38Z",
   "reference_date": "2026-10-02",
   "current_load": {
     "date": "2026-10-02",
@@ -18,14 +18,14 @@
     "run_time_seconds": 17231,
     "bike_distance_miles": 0.0,
     "bike_time_seconds": 0,
-    "swim_distance_yards": 11650,
+    "swim_distance_yards": 11700,
     "swim_time_seconds": 12706,
     "other_time_seconds": 2499,
     "total_time_seconds": 32436
   },
   "health": {
     "date": "2026-10-02",
-    "weight_lbs": null,
+    "weight_lbs": 156.3,
     "sleep_seconds": 26940,
     "sleep_score": 84,
     "resting_heart_rate": 45,
