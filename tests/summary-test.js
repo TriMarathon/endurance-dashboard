@@ -185,3 +185,31 @@ const repeated=buildSummary(doc,'2026-09-28',0,[
 ],completed)[3].days[0];
 assert.equal(repeated.races.length,2,'Match one-to-one and preserve missing-category records');
 console.log('Wisconsin export, race-only days and one-to-one conservative deduplication passed.');
+
+// Date-only jumps reuse the same offset as arrows in every host timezone.
+const { summaryMonday, summaryWeekOffset } = require('../js/summary');
+for (const zone of ['America/Chicago', 'Pacific/Honolulu', 'Asia/Tokyo']) {
+  const previousTZ = process.env.TZ;
+  process.env.TZ = zone;
+  for (const [date, monday] of [
+    ['2022-06-19','2022-06-13'], ['2022-06-13','2022-06-13'],
+    ['2022-07-01','2022-06-27'], ['2023-01-01','2022-12-26'],
+    ['2024-01-01','2024-01-01'], ['2026-03-08','2026-03-02'],
+    ['2026-11-01','2026-10-26'], ['2015-01-01','2014-12-29'],
+    ['2030-06-19','2030-06-17'],
+  ]) {
+    const offset = summaryWeekOffset(date, '2026-10-01');
+    const jumped = buildSummary(doc, '2026-10-01', offset);
+    assert.equal(jumped.length, 4);
+    assert.equal(jumped[3].start, monday);
+    assert(jumped[3].days.some(day => day.date === date));
+    for (const delta of [-3,-2,-1,1,2,3]) {
+      assert.equal(Date.parse(buildSummary(doc,'2026-10-01',offset+delta)[3].start)-Date.parse(monday),delta*7*86400000);
+    }
+  }
+  if (previousTZ === undefined) delete process.env.TZ; else process.env.TZ = previousTZ;
+}
+assert(Number.isNaN(summaryMonday('2026-02-30')));
+assert(Number.isNaN(summaryMonday('')));
+assert.equal(summaryRangeLabel(buildSummary(doc,'2026-10-01',summaryWeekOffset('2022-06-19','2026-10-01'))),'May 23, 2022 – Jun 19, 2022');
+console.log('Date jump boundary and timezone tests passed.');

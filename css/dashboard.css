@@ -1678,3 +1678,19 @@ footer {
 .summary-race-mixed { border-bottom: 1px solid currentColor; }
 .summary-race small { display: block; color: var(--muted); }
 .summary-race { overflow-wrap: anywhere; }
+
+/* Compact date disclosure; native date fields retain their intrinsic mobile UI. */
+.summary-navigation .summary-range { font-size: 12px; }
+.summary-jump { box-sizing: border-box; width: 280px; max-width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid var(--panel-border); border-radius: 6px; background: var(--panel); }
+.summary-jump:not([hidden]) { display: grid; gap: 8px; }
+.summary-jump label { font-size: 12px; }
+.summary-jump input { box-sizing: border-box; min-width: 0; width: 100%; min-height: 44px; padding: 8px; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--panel-border); border-radius: 6px; }
+.summary-jump-actions { display: flex; justify-content: flex-end; gap: 8px; }
+.summary-jump button { min-width: 44px; min-height: 44px; padding: 8px 12px; font: inherit; color: var(--text); background: var(--panel); border: 1px solid var(--panel-border); border-radius: 6px; cursor: pointer; }
+.summary-jump :focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+@media (max-width: 400px) {
+  .summary-navigation { display: grid; grid-template-columns: 44px minmax(0, 1fr) 44px; }
+  .summary-navigation .summary-range { grid-column: 1 / -1; grid-row: 1; }
+  .summary-navigation [data-summary-nav="today"] { grid-column: 2; grid-row: 2; }
+  .summary-navigation small { grid-column: 1 / -1; }
+}

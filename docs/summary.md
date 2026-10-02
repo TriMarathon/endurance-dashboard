@@ -89,3 +89,22 @@ and missing keys remain distinct; there is no fuzzy matching or activity linking
 Renamed versions cannot be safely deduplicated with this public contract. Existing
 past-future filtering stays unchanged. Either fetch can finish first without losing
 navigation or selected-day details.
+
+## Jump to week
+
+The date range is a “Jump to week” disclosure button. It opens a compact inline
+form with a labeled native date input, Cancel, and Go. Opening focuses the input;
+Cancel or Escape dismisses without changing the window, and Go applies the date.
+Dismissal/application returns focus to the range button. No focus trap is needed
+for this inline disclosure. At widths up to 400px the date range occupies its own
+row above Previous / Today / Next; controls retain a 44px minimum height.
+
+The existing `weekOffset` is the sole reference-week state. `summaryMonday` validates
+a YYYY-MM-DD date, represents it at UTC midnight for calendar arithmetic only, and
+subtracts `(getUTCDay() + 6) % 7` days. `summaryWeekOffset` divides the difference
+between selected Monday and today's Monday by seven days. No local-time conversion
+occurs, so DST and browser timezone cannot shift the selected date. The selected
+week is always the fourth row; arrows add/subtract one and Today resets to zero.
+The native input's minimum comes from `doc.start_date` (currently 2015-01-01),
+with no maximum. Earlier days in the resulting window retain unavailable semantics;
+existing arrow navigation remains unrestricted. Future races use unchanged rendering.

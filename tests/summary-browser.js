@@ -67,6 +67,54 @@ const root = path.resolve(__dirname, '..');
       assert.equal(await page.getByText('Dot area represents',{exact:false}).count(),0);
       assert.equal(await page.getByText('Select a day',{exact:false}).count(),0);
       assert.match(await page.locator('.summary-week').last().innerText(), /2h 38m[\s\S]*230 TSS/);
+      // Native date disclosure: keyboard, cancellation, validation and jumps at every width.
+      const range = page.getByRole('button', {name:'Jump to week', exact:true});
+      const input = page.getByLabel('Select a date', {exact:true});
+      const initialRange = await range.innerText();
+      await range.focus(); await page.keyboard.press('Enter');
+      assert(await input.evaluate(el => el === document.activeElement));
+      assert.equal(await input.getAttribute('min'), doc.start_date);
+      assert.equal(await input.getAttribute('max'), null);
+      await input.fill('2026-08-01');
+      await page.getByRole('button',{name:'Go',exact:true}).click();
+      assert.equal(await range.innerText(), initialRange);
+      assert.equal(await input.evaluate(el=>el.validity.rangeUnderflow),true);
+      await page.getByRole('button',{name:'Cancel',exact:true}).click();
+      assert(await range.evaluate(el=>el===document.activeElement));
+      await range.click(); await input.fill('2030-06-19');
+      await page.keyboard.press('Escape');
+      assert.equal(await input.isVisible(),false);
+      assert.equal(await range.innerText(), initialRange);
+      // Expose real historical lower bound for direct historical jump fixtures.
+      await page.evaluate(() => { summaryState.doc.start_date='2015-01-01'; renderSummary(summaryState.doc, summaryState.today); });
+      for (const [date, first, last] of [
+        ['2022-06-19','2022-05-23','2022-06-19'],
+        ['2022-06-13','2022-05-23','2022-06-19'],
+        ['2022-07-01','2022-06-06','2022-07-03'],
+        ['2023-01-01','2022-12-05','2023-01-01'],
+        ['2026-03-08','2026-02-09','2026-03-08'],
+        ['2026-10-25','2026-09-28','2026-10-25'],
+      ]) {
+        await range.click(); await input.fill(date);
+        assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+        assert(await input.evaluate(el=>el.getBoundingClientRect().right<=innerWidth));
+        await page.screenshot({path:`/tmp/calendar-jump-${width}.png`,fullPage:true});
+        await page.getByRole('button',{name:'Go',exact:true}).click();
+        assert.equal(await page.locator('.summary-day-button').first().getAttribute('data-summary-date'),first);
+        assert.equal(await page.locator('.summary-day-button').last().getAttribute('data-summary-date'),last);
+        assert.equal(await page.locator('.summary-week').count(),4);
+        assert(await range.evaluate(el=>el===document.activeElement));
+      }
+      assert.equal(await page.locator('[data-summary-date="2026-10-25"] .summary-race-flag').count(),1);
+      await range.click(); await input.fill('2022-06-19');
+      await page.getByRole('button',{name:'Go',exact:true}).click();
+      await page.getByRole('button',{name:'Next week',exact:true}).click();
+      assert.equal(await page.locator('.summary-day-button').last().getAttribute('data-summary-date'),'2022-06-26');
+      await page.getByRole('button',{name:'Previous week',exact:true}).click();
+      assert.equal(await page.locator('.summary-day-button').last().getAttribute('data-summary-date'),'2022-06-19');
+      await page.getByRole('button',{name:'Return to current week',exact:true}).click();
+      assert.equal(await range.innerText(),initialRange);
+      await page.evaluate(start => { summaryState.doc.start_date=start; renderSummary(summaryState.doc, summaryState.today); },doc.start_date);
       const monday=page.locator('[data-summary-date="2026-09-28"]');
       const small=page.locator('[data-summary-date="2026-09-21"] svg');
       const large=page.locator('[data-summary-date="2026-09-22"] svg');

@@ -13,12 +13,22 @@ function summaryToday(now = new Date()) {
   return `${part('year')}-${part('month')}-${part('day')}`;
 }
 function summaryDate(ms) { return new Date(ms).toISOString().slice(0, 10); }
+// UTC is used only as a calendar arithmetic coordinate, never converted to local time.
+function summaryMonday(date) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return NaN;
+  const ms = Date.parse(`${date}T00:00:00Z`);
+  if (!Number.isFinite(ms) || summaryDate(ms) !== date) return NaN;
+  return ms - ((new Date(ms).getUTCDay() + 6) % 7) * SUMMARY_DAY_MS;
+}
+function summaryWeekOffset(date, today) {
+  return (summaryMonday(date) - summaryMonday(today)) / (7 * SUMMARY_DAY_MS);
+}
 function summaryEmptySports() {
   return Object.fromEntries(SUMMARY_SPORTS.map(([key]) => [key, { tss: 0, seconds: 0 }]));
 }
 function buildSummary(doc, today = summaryToday(), weekOffset = 0, races = [], completedRaces = []) {
   const todayMs = Date.parse(`${today}T00:00:00Z`);
-  const monday = todayMs - ((new Date(todayMs).getUTCDay() + 6) % 7) * SUMMARY_DAY_MS;
+  const monday = summaryMonday(today);
   const days = new Map();
   const weeks = Array.from({ length: 4 }, (_, index) => {
     const start = monday + (index - 3 + weekOffset) * 7 * SUMMARY_DAY_MS;
@@ -216,11 +226,16 @@ function renderSummary(doc, today = summaryToday()) {
   };
   container.innerHTML = `<div class="summary-navigation" aria-label="Calendar navigation">
     <button type="button" data-summary-nav="-1" aria-label="Previous week">‹</button>
-    <span class="summary-range" aria-live="polite">${summaryRangeLabel(weeks)}</span>
+    <button type="button" class="summary-range" aria-label="Jump to week" aria-expanded="false" aria-controls="summary-jump"><span aria-live="polite">${summaryRangeLabel(weeks)}</span></button>
     <button type="button" data-summary-nav="1" aria-label="Next week">›</button>
     <button type="button" data-summary-nav="today" aria-label="Return to current week">Today</button>
     <small>Data through ${summaryDateLabel(doc.end_date)}</small>
-    </div><div class="summary-legend">${SUMMARY_SPORTS.map(([key, label, color]) => `<span><i class="summary-sport-${key}" style="--summary-color:var(--sport-${color}-bg)"></i>${label}</span>`).join('')}</div>
+    </div><form id="summary-jump" class="summary-jump" aria-label="Jump to week" hidden>
+      <strong>Jump to week</strong>
+      <label for="summary-jump-date">Select a date</label>
+      <input id="summary-jump-date" type="date" required${doc.start_date ? ` min="${summaryEscape(doc.start_date)}"` : ''} value="${doc.start_date && weeks[3].start < doc.start_date ? summaryEscape(doc.start_date) : weeks[3].start}">
+      <div class="summary-jump-actions"><button type="button" data-summary-cancel>Cancel</button><button type="submit">Go</button></div>
+    </form><div class="summary-legend">${SUMMARY_SPORTS.map(([key, label, color]) => `<span><i class="summary-sport-${key}" style="--summary-color:var(--sport-${color}-bg)"></i>${label}</span>`).join('')}</div>
     <div class="summary-weeks">${weeks.map((week, wi) => `<section class="summary-week${week.current ? ' summary-current-week' : ''}" aria-label="Week of ${summaryDateLabel(week.start)}">
       <div class="summary-week-label">${summaryDateLabel(week.start)} – ${summaryDateLabel(week.end)}${week.current ? '<small>This week · so far</small>' : ''}</div>
       <div class="summary-days">${week.days.map((day, di) => `<div class="summary-day"><span aria-hidden="true">${['M', 'T', 'W', 'T', 'F', 'S', 'S'][di]}</span><button type="button" class="summary-day-button${day.future ? ' future' : day.unavailable ? ' unavailable' : day.tss === 0 ? ' rest' : ''}" data-summary-day="${wi * 7 + di}" data-summary-date="${day.date}" aria-label="${summaryEscape(summaryAccessibleDay(day))}" aria-controls="summary-detail" aria-pressed="false"><span class="summary-dot-wrap">${summaryDayDot(day)}${day.completedRaces.length ? summaryRaceMarker(day) : ''}</span>${day.completedRaces.length ? '' : summaryRaceMarker(day)}</button></div>`).join('')}</div>
@@ -234,6 +249,34 @@ function renderSummary(doc, today = summaryToday()) {
       renderSummary(doc, today);
       container.querySelector(`[data-summary-nav="${direction}"]`).focus();
     });
+  });
+  const jumpButton = container.querySelector('.summary-range');
+  const jumpForm = container.querySelector('#summary-jump');
+  const jumpDate = container.querySelector('#summary-jump-date');
+  const dismissJump = () => {
+    jumpForm.hidden = true;
+    jumpButton.setAttribute('aria-expanded', 'false');
+    jumpButton.focus();
+  };
+  jumpButton.addEventListener('click', () => {
+    if (!jumpForm.hidden) return dismissJump();
+    jumpDate.value = doc.start_date && weeks[3].start < doc.start_date ? doc.start_date : weeks[3].start;
+    jumpForm.hidden = false;
+    jumpButton.setAttribute('aria-expanded', 'true');
+    jumpDate.focus();
+  });
+  jumpForm.querySelector('[data-summary-cancel]').addEventListener('click', dismissJump);
+  jumpForm.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') { event.preventDefault(); dismissJump(); }
+  });
+  jumpForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const offset = summaryWeekOffset(jumpDate.value, today);
+    if (!jumpForm.reportValidity() || !Number.isFinite(offset)) return;
+    summaryState.weekOffset = offset;
+    summaryState.selectedDate = null;
+    renderSummary(doc, today);
+    container.querySelector('.summary-range').focus();
   });
   const allDays = weeks.flatMap((week) => week.days);
   const buttons = container.querySelectorAll('[data-summary-day]');
@@ -271,5 +314,5 @@ function renderSummary(doc, today = summaryToday()) {
 }
 if (typeof module !== 'undefined') module.exports = {
   summaryRaceMarker, summaryCompletedRaceDetails, summarySameRace, buildSummary, summaryToday, summaryDotDiameter, summaryDayDetails, summaryTime,
-  summaryRangeLabel, summaryRaceDetails, summaryPieSegments, summaryPiePath, summaryDayDot, renderSummary,
+  summaryMonday, summaryWeekOffset, summaryRangeLabel, summaryRaceDetails, summaryPieSegments, summaryPiePath, summaryDayDot, renderSummary,
 };
