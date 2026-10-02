@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T09:18:55Z",
+  "generated_at": "2026-10-02T12:32:57Z",
   "start_date": "2014-12-29",
   "end_date": "2026-10-04",
   "weeks": 614,
@@ -10428,19 +10428,19 @@
     {
       "week_start": "2026-09-28",
       "week_end": "2026-10-04",
-      "total_tss": 263.8,
+      "total_tss": 299.2,
       "run_tss": 79.0,
       "bike_tss": 0.0,
-      "swim_tss": 159.7,
+      "swim_tss": 195.0,
       "other_tss": 25.1,
-      "total_moving_seconds": 16544,
+      "total_moving_seconds": 19547,
       "run_moving_seconds": 4343,
       "bike_moving_seconds": 0,
-      "swim_moving_seconds": 9703,
+      "swim_moving_seconds": 12706,
       "other_moving_seconds": 2499,
       "run_distance_miles": 9.1,
       "bike_distance_miles": 0.0,
-      "swim_distance_yards": 9300
+      "swim_distance_yards": 11650
     }
   ]
 }
