@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-04T09:18:32Z",
+  "generated_at": "2026-10-04T12:32:44Z",
   "start_date": "2015-01-01",
   "end_date": "2026-10-04",
   "days": 4295,
   "latest": {
     "date": "2026-10-04",
-    "sleep_hours": 8.88,
-    "sleep_score": 81,
+    "sleep_hours": 8.03,
+    "sleep_score": 77,
     "resting_heart_rate_bpm": 49,
-    "hrv_ms": 59.0,
+    "hrv_ms": 53.0,
     "weight_lbs": 154.4
   },
   "data": [
@@ -51542,14 +51542,14 @@
     },
     {
       "date": "2026-10-04",
-      "sleep_hours": null,
-      "sleep_score": null,
+      "sleep_hours": 8.03,
+      "sleep_score": 77,
       "resting_heart_rate_bpm": 49,
-      "hrv_ms": null,
+      "hrv_ms": 53.0,
       "weight_lbs": null,
-      "sleep_hours_7d": 7.66,
+      "sleep_hours_7d": 7.71,
       "resting_heart_rate_7d": 45.71,
-      "hrv_7d": 63.0,
+      "hrv_7d": 61.57,
       "weight_lbs_7d": 155.63
     }
   ]
