@@ -81,11 +81,6 @@ header h1 {
   gap: 2px;
 }
 
-.subtitle {
-  color: var(--muted);
-  font-size: 13px;
-}
-
 .updated {
   display: inline-flex;
   align-items: center;
@@ -106,7 +101,14 @@ header h1 {
 .updated:hover,
 .updated:focus-visible {
   color: var(--text);
-  outline: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.updated:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+  border-radius: 3px;
 }
 
 .updated:active {
@@ -188,15 +190,6 @@ main {
   to {
     transform: rotate(360deg);
   }
-}
-
-footer {
-  padding: 16px calc(24px + env(safe-area-inset-right))
-    calc(16px + env(safe-area-inset-bottom))
-    calc(24px + env(safe-area-inset-left));
-  color: var(--muted);
-  font-size: 12px;
-  text-align: center;
 }
 
 @media (max-width: 480px) {
@@ -316,8 +309,8 @@ footer {
 .race-card {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
-  grid-template-rows: auto auto auto auto;
-  gap: 2px 8px;
+  gap: 4px 8px;
+  line-height: 1.4;
   padding: 10px 12px;
   border: 1px solid var(--panel-border);
   border-radius: 8px;
@@ -327,11 +320,17 @@ footer {
 }
 
 .race-card-date {
+  grid-column: 1;
+  white-space: nowrap;
   font-size: 11px;
   color: var(--muted);
 }
 
 .race-card-when {
+  grid-column: 2 / -1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-align: right;
   font-size: 11px;
   color: var(--muted);
   justify-self: end;
@@ -778,6 +777,8 @@ footer {
 .racing-subtabs::-webkit-scrollbar { display: none; }
 
 .subtab-link {
+  flex: 0 0 auto;
+  white-space: nowrap;
   display: inline-flex;
   align-items: center;
   min-height: 44px;
