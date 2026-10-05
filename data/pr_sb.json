@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-05T13:55:15Z",
-  "count": 91,
+  "generated_at": "2026-10-05T18:28:07Z",
+  "count": 93,
   "data": [
     {
       "sport": "Triathlon",
@@ -1032,6 +1032,30 @@
       "type": "SB",
       "season_year": 2016,
       "notes": "Garmin activity 1240970934",
+      "source": "automatic_race_history"
+    },
+    {
+      "sport": "Running",
+      "event": "5 Mile",
+      "result": "32:57",
+      "result_seconds": 1977.0,
+      "date": "2016-06-26",
+      "event_name": "Downers Grove 5 Miler",
+      "type": "SB",
+      "season_year": 2016,
+      "notes": "Garmin activity 1229888799",
+      "source": "automatic_race_history"
+    },
+    {
+      "sport": "Running",
+      "event": "5 Mile",
+      "result": "32:57",
+      "result_seconds": 1977.0,
+      "date": "2016-06-26",
+      "event_name": "Downers Grove 5 Miler",
+      "type": "PR",
+      "season_year": null,
+      "notes": "Garmin activity 1229888799",
       "source": "automatic_race_history"
     },
     {
