@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T14:39:25Z",
+  "generated_at": "2026-10-06T16:58:08Z",
   "start_date": "2015-01-01",
   "end_date": "2026-10-06",
   "threshold_changes": {
@@ -118561,11 +118561,6 @@
           "date": "2026-09-29",
           "duration_seconds": 2499,
           "tss": 25.13
-        },
-        {
-          "date": "2026-10-06",
-          "duration_seconds": 62,
-          "tss": 0.59
         }
       ],
       "daily": [
@@ -144347,9 +144342,9 @@
         },
         {
           "date": "2026-10-06",
-          "tss": 0.6,
+          "tss": 0.0,
           "ctl": 2.4,
-          "atl": 1.8
+          "atl": 1.7
         }
       ]
     },
