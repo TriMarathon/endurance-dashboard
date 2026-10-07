@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T12:32:37Z",
+  "generated_at": "2026-10-07T22:02:52Z",
   "start_date": "2015-01-01",
   "end_date": "2026-10-07",
   "days": 4298,
@@ -47262,25 +47262,25 @@
     },
     {
       "date": "2026-10-06",
-      "tss": 67.1,
+      "tss": 67.6,
       "run_tss": 32.1,
       "bike_tss": 0.0,
       "swim_tss": 34.9,
-      "other_tss": 0.0,
+      "other_tss": 0.6,
       "ctl": 93.4,
       "atl": 88.2,
       "tsb": 2.6
     },
     {
       "date": "2026-10-07",
-      "tss": 54.3,
-      "run_tss": 0.0,
+      "tss": 83.8,
+      "run_tss": 29.5,
       "bike_tss": 0.0,
       "swim_tss": 54.3,
       "other_tss": 0.0,
-      "ctl": 92.4,
-      "atl": 83.7,
-      "tsb": 5.2
+      "ctl": 93.1,
+      "atl": 87.7,
+      "tsb": 5.1
     }
   ]
 }
