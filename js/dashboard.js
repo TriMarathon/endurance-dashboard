@@ -2518,6 +2518,38 @@ function healthChartCard(id, title, empty) {
       : '<div class="health-chart-container"><canvas id="' + id + '">' + title + ' history</canvas></div>') + '</section>';
 }
 
+// Canvas guides are separate from datasets so they cannot affect point interactions
+// or the sparse calendar domain. Draw behind observations, across the plot area.
+const bpReferenceGuides = {
+  id: 'bpReferenceGuides',
+  beforeDatasetsDraw(chart) {
+    const { ctx, chartArea: { left, right, top, bottom }, scales: { y } } = chart;
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(left, top, right - left, bottom - top);
+    ctx.clip();
+    ctx.strokeStyle = palette.muted;
+    ctx.fillStyle = palette.muted;
+    ctx.lineWidth = 1;
+    ctx.font = '10px sans-serif';
+    ctx.textAlign = 'right';
+    ctx.textBaseline = 'top';
+    for (const [value, label] of [[120, '120 SYS'], [80, '80 DIA']]) {
+      const pixel = y.getPixelForValue(value);
+      ctx.globalAlpha = 0.45;
+      ctx.setLineDash([4, 4]);
+      ctx.beginPath();
+      ctx.moveTo(left, pixel);
+      ctx.lineTo(right, pixel);
+      ctx.stroke();
+      ctx.globalAlpha = 0.8;
+      ctx.setLineDash([]);
+      ctx.fillText(label, right - 4, pixel + 14 <= bottom ? pixel + 3 : pixel - 13);
+    }
+    ctx.restore();
+  },
+};
+
 function buildBloodPressureChart(id, days, pulse) {
   const canvas = document.getElementById(id);
   if (!canvas) return null;
@@ -2526,6 +2558,7 @@ function buildBloodPressureChart(id, days, pulse) {
     : [['systolic_mmhg', 'Systolic', palette.line], ['diastolic_mmhg', 'Diastolic', palette.barBorder]];
   return new Chart(canvas.getContext('2d'), {
     type: 'scatter',
+    plugins: pulse ? [] : [bpReferenceGuides],
     data: { datasets: series.map(([key, label, color]) => ({
       label, borderColor: color, backgroundColor: color,
       data: days.map((day) => ({ x: dateToUtcMs(day.date), y: day[key] })),
@@ -2560,7 +2593,8 @@ function buildBloodPressureChart(id, days, pulse) {
           },
           grid: { color: palette.grid }, ticks: { color: palette.muted, maxTicksLimit: density.xTicks, maxRotation: 0,
             callback: (value) => fmtAxis(msToIsoDate(value)) } },
-        y: { title: { display: true, text: pulse ? 'bpm' : 'mmHg', color: palette.muted },
+        y: { ...(pulse ? {} : { suggestedMin: 80, suggestedMax: 120 }),
+          title: { display: true, text: pulse ? 'bpm' : 'mmHg', color: palette.muted },
           grid: { color: palette.grid }, ticks: { color: palette.muted, maxTicksLimit: 6 } },
       },
     },

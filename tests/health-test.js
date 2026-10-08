@@ -28,6 +28,7 @@ const reading = (date, s, d, p, time = '07:00:00') => ({ date, systolic_mmhg:s, 
 context.readings = [reading('2026-10-01',120,80,60), reading('2026-10-03',111,76,57),
   reading('2026-10-03',112,75,56), reading('2026-10-28',110,77,58,'19:06:00')];
 context.readings.forEach(row => { row.notes = 'private notes'; });
+const originalReadings = JSON.stringify(context.readings);
 const days = json('aggregateBloodPressure(readings, healthRange)');
 assert.equal(days.length, 3);
 assert.deepStrictEqual(days[1], {date:'2026-10-03', systolic_mmhg:111.5, diastolic_mmhg:75.5, cuff_pulse_bpm:56.5, count:2});
@@ -49,6 +50,36 @@ assert.equal(chart.type,'scatter');
 assert.equal(chart.options.scales.x.type,'linear');
 assert.equal(chart.data.datasets.length,2);
 assert.equal(chart.data.datasets[0].showLine,false);
+assert.equal(chart.plugins.length,1);
+assert.equal(chart.plugins[0].id,'bpReferenceGuides');
+assert.equal(chart.options.scales.y.suggestedMin,80);
+assert.equal(chart.options.scales.y.suggestedMax,120);
+assert.equal(chart.options.scales.y.min,undefined);
+assert.equal(chart.options.scales.y.max,undefined);
+assert.equal(run('healthCharts[1].config.plugins.length'),0);
+assert.equal(run('healthCharts[1].config.options.scales.y.suggestedMin'),undefined);
+assert.equal(run('healthCharts[1].config.options.scales.y.suggestedMax'),undefined);
+// Exercise the actual draw hook, including full-width dashed lines and labels.
+const strokes=[], labels=[];
+let start, end, dash;
+chart.plugins[0].beforeDatasetsDraw({
+  chartArea:{left:30,right:290,top:10,bottom:210},
+  scales:{y:{getPixelForValue:value=>210-(value-80)*5}},
+  ctx:{save(){},restore(){},beginPath(){},rect(){},clip(){},
+    setLineDash(value){dash=Array.from(value);},moveTo(x,y){start=[x,y];},
+    lineTo(x,y){end=[x,y];},stroke(){strokes.push({start,end,dash});},
+    fillText(text,x,y){labels.push({text,x,y});}},
+});
+assert.deepStrictEqual(strokes,[
+  {start:[30,10],end:[290,10],dash:[4,4]},
+  {start:[30,210],end:[290,210],dash:[4,4]},
+]);
+assert.deepStrictEqual(labels,[{text:'120 SYS',x:286,y:13},{text:'80 DIA',x:286,y:197}]);
+assert.equal(JSON.stringify(context.readings),originalReadings);
+assert.deepStrictEqual(json('aggregateBloodPressure(readings, healthRange)'),days);
+assert.deepStrictEqual(json('healthCharts[0].config.data.datasets.map(d=>d.data)'),
+  ['systolic_mmhg','diastolic_mmhg'].map(key=>days.map(day=>({x:Date.parse(day.date+'T00:00:00Z'),y:day[key]}))));
+
 const xs = chart.data.datasets[0].data.map(p => p.x);
 assert.equal((xs[2]-xs[1])/(xs[1]-xs[0]),12.5);
 assert.equal(chart.options.plugins.tooltip.callbacks.afterBody([{dataIndex:1}]).pop(),'2 readings');

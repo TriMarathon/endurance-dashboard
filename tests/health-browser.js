@@ -29,11 +29,31 @@ async function selectRange(start, end) {
 async function chartState(id) {
  return page.evaluate((id) => {
   const chart = Chart.getChart(id);
+  const guides=[], labels=[];
+  const ctx=chart.ctx, stroke=ctx.stroke, fillText=ctx.fillText;
+  // Capture real canvas drawing, not just plugin configuration.
+  ctx.stroke=function(...args) {
+   if (this.getLineDash().join(',')==='4,4') guides.push({width:this.lineWidth});
+   return stroke.apply(this,args);
+  };
+  ctx.fillText=function(text,x,y,...args) {
+   if (text==='120 SYS' || text==='80 DIA') labels.push({text,x,y});
+   return fillText.call(this,text,x,y,...args);
+  };
+  try { chart.draw(); } finally { ctx.stroke=stroke;ctx.fillText=fillText; }
   return {area:chart.chartArea, width:chart.width, height:chart.height,
+   guides, labels, yMin:chart.scales.y.min, yMax:chart.scales.y.max,
    ticks:chart.scales.x.ticks.map(tick=>({value:tick.value,label:tick.label})),
    points:chart.getDatasetMeta(0).data.map(point=>({x:point.x,y:point.y,radius:point.options.radius})),
    datasets:chart.data.datasets.map(dataset=>dataset.data), axisType:chart.scales.x.type};
  },id);
+}
+function assertGuides(state) {
+ assert(state.yMin<=80 && state.yMax>=120);
+ assert.deepStrictEqual(state.guides,[{width:1},{width:1}]);
+ assert.deepStrictEqual(state.labels.map(label=>label.text),['120 SYS','80 DIA']);
+ assert(state.labels.every(label=>label.x===state.area.right-4 && label.y>=state.area.top && label.y+10<=state.area.bottom));
+ assert.equal(state.datasets.length,2);
 }
 function assertCalendarTicks(state, start, end, expectedCount) {
  const startMs=Date.parse(start+'T00:00:00Z'), endMs=Date.parse(end+'T00:00:00Z');
@@ -55,6 +75,7 @@ for (const width of [320,375,390,430,1280]) {
  }
  await selectRange('2026-10-01','2026-10-28');
  assert.equal(await page.locator('#health-range-summary').textContent(),'5 readings');
+ assertGuides(await chartState('health-bp'));
  const locations=await page.evaluate(()=>{ const c=Chart.getChart('health-bp');return c.getDatasetMeta(0).data.map(p=>({x:p.x,y:p.y}));});
  assert(Math.abs((locations[2].x-locations[1].x)/(locations[1].x-locations[0].x)-12.5)<0.01);
  await page.locator('#health-bp').scrollIntoViewIfNeeded();
@@ -65,6 +86,8 @@ for (const width of [320,375,390,430,1280]) {
  await selectRange('2026-10-03','2026-10-03');
  for (const id of ['health-bp','health-cuff-pulse']) {
   const state=await chartState(id);
+  if (id==='health-bp') assertGuides(state);
+  else { assert.deepStrictEqual(state.guides,[]);assert.deepStrictEqual(state.labels,[]); }
   assert.equal(assertCalendarTicks(state,'2026-10-03','2026-10-03',1)[0].label,'Oct 3');
   assert.equal(state.points.length,1);
   const point=state.points[0];
@@ -76,6 +99,8 @@ for (const width of [320,375,390,430,1280]) {
  await selectRange('2026-10-02','2026-10-03');
  for (const id of ['health-bp','health-cuff-pulse']) {
   const state=await chartState(id);
+  if (id==='health-bp') assertGuides(state);
+  else { assert.deepStrictEqual(state.guides,[]);assert.deepStrictEqual(state.labels,[]); }
   assert.deepStrictEqual(assertCalendarTicks(state,'2026-10-02','2026-10-03',2).map(t=>t.label),['Oct 2','Oct 3']);
   assert.equal(state.points.length,1);
   assert(Math.abs(state.points[0].x-state.area.right)<0.01);
@@ -87,6 +112,7 @@ for (const width of [320,375,390,430,1280]) {
  assert(latestBp.includes('100 / 66 mmHg') && latestBp.includes('50 bpm') && latestBp.includes('7:06 PM'));
  assert(!latestBp.includes('110 / 76 mmHg'));
  const pressure=await chartState('health-bp'), pulse=await chartState('health-cuff-pulse');
+ assertGuides(pressure);
  assert.equal(pressure.datasets[0][0].y,110);
  assert.equal(pressure.datasets[1][0].y,76);
  assert.equal(pulse.datasets[0][0].y,60);
@@ -125,6 +151,23 @@ for (const width of [320,375,390,430,1280]) {
  if (process.env.HEALTH_SCREENSHOT_DIR) await page.screenshot({path:`${process.env.HEALTH_SCREENSHOT_DIR}/health-bp-${width}.png`,fullPage:true});
  console.log(`Health ticks, metric dates, raw latest BP, means, touch detail and sparse spacing passed at ${width}px (${process.env.HEALTH_TIMEZONE || 'America/Chicago'})`);
 }
+// Rendering and interactions have not changed the source observations.
+assert.deepStrictEqual(await page.evaluate(()=>fullHealth.blood_pressure),fixture.blood_pressure);
+// Single observations entirely above/below the guides, plus both outer extremes.
+for (const [systolic,diastolic] of [[100,90],[150,130],[70,50],[170,45]]) {
+ await page.evaluate(({systolic,diastolic})=>{
+  fullHealth.blood_pressure=[{date:'2026-10-03',measured_at_local:'2026-10-03T07:00:00',
+   systolic_mmhg:systolic,diastolic_mmhg:diastolic,cuff_pulse_bpm:60}];
+  healthRange={start:'2026-10-03',end:'2026-10-03'};
+  renderHealth();
+ },{systolic,diastolic});
+ const state=await chartState('health-bp');
+ assertGuides(state);
+ assert(state.yMin<=Math.min(80,diastolic) && state.yMax>=Math.max(120,systolic));
+ assert.equal(state.points.length,1);
+ assert.equal(assertCalendarTicks(state,'2026-10-03','2026-10-03',1)[0].label,'Oct 3');
+}
+await page.evaluate(observations=>{fullHealth.blood_pressure=observations;renderHealth();},fixture.blood_pressure);
 await page.locator('#health-start').fill('2020-01-01'); await page.locator('#health-start').dispatchEvent('change');
 await page.locator('#health-end').fill('2020-12-31'); await page.locator('#health-end').dispatchEvent('change');
 assert.equal(await page.locator('#health-range-summary').textContent(),'0 readings');
