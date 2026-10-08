@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T11:27:27Z",
+  "generated_at": "2026-10-08T12:14:36Z",
   "start_date": "2015-01-01",
   "end_date": "2026-10-08",
   "threshold_changes": {
@@ -90621,7 +90621,7 @@
           "date": "2026-10-08",
           "duration_seconds": 2303,
           "tss": 8.52,
-          "distance_yards": 1225.0,
+          "distance_yards": 1500.0,
           "is_race": false,
           "is_multisport_leg": false
         }
