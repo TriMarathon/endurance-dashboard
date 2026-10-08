@@ -1,7 +1,17 @@
 {
-  "generated_at": "2026-10-08T17:31:40Z",
-  "count": 19,
+  "generated_at": "2026-10-08T21:42:37Z",
+  "count": 20,
   "data": [
+    {
+      "source_result_id": "6634854",
+      "event_date": "2026-09-12",
+      "event_name": "2026 Ironman Wisconsin 70.3",
+      "race_label": "Long Triathlon",
+      "placement": 38,
+      "finish_time_seconds": 17561.0,
+      "finish_time_display": "4:52:41.000",
+      "usat_score": 98.306
+    },
     {
       "source_result_id": "6588855",
       "event_date": "2026-08-23",
