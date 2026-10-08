@@ -1695,3 +1695,17 @@ main {
   .summary-navigation [data-summary-nav="today"] { grid-column: 2; grid-row: 2; }
   .summary-navigation small { grid-column: 1 / -1; }
 }
+
+/* Health uses the existing sport subnav and date-control patterns. */
+.health-subtabs .sport-subtab { min-height: 44px; }
+.health-stat, .health-chart-card, .health-chart-container { min-width: 0; }
+.health-stat-value { overflow-wrap: anywhere; }
+.health-value-date { display: block; margin-top: 4px; font-size: 12px; color: var(--muted); }
+.health-charts.health-charts-bp { grid-template-columns: minmax(0, 1fr); }
+.health-bp-detail { margin-top: 12px; color: var(--muted); font-size: 13px; }
+@media (max-width: 480px) {
+  .health-summary { grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); }
+  .health-summary-bp .health-stat:first-child { grid-column: 1 / -1; }
+  #tab-health .date-field { min-width: 0; }
+  #tab-health input[type="date"] { width: 100%; min-width: 0; box-sizing: border-box; }
+}

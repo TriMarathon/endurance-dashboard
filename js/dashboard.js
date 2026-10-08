@@ -50,6 +50,7 @@ let fullHealth = null;
 let dailyRange = null;
 let weeklyRange = null;
 let healthRange = null;
+let activeHealth = 'sleep';
 let overviewDoc = null;
 let overviewHealthDoc = null;
 let gearData = [];
@@ -2107,72 +2108,65 @@ function onWeeklyReset() {
   renderWeekly();
 }
 
-function healthDefaultRange(rows) {
-  return dailyDefaultRange(rows);
+function healthDefaultRange(_rows, now = new Date()) {
+  // Today in the viewer's calendar; UTC arithmetic avoids DST/off-by-one drift.
+  const end = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0')
+    + '-' + String(now.getDate()).padStart(2, '0');
+  return { start: msToIsoDate(dateToUtcMs(end) - (DEFAULT_VISIBLE_DAYS - 1) * 86400000), end };
+}
+
+function validHealthDate(value) {
+  return /^\d{4}-\d{2}-\d{2}$/.test(value)
+    && msToIsoDate(dateToUtcMs(value)) === value;
 }
 
 function initHealthControls() {
   const startEl = document.getElementById('health-start');
   const endEl = document.getElementById('health-end');
   const resetEl = document.getElementById('health-reset');
-  const validateEl = document.getElementById('health-validation');
   if (!startEl || !endEl || !resetEl) return;
-  const rows = fullHealth && Array.isArray(fullHealth.data) ? fullHealth.data : [];
-  if (rows.length === 0) {
-    startEl.disabled = true;
-    endEl.disabled = true;
-    resetEl.disabled = true;
-    return;
-  }
-  const minDate = String(rows[0].date);
-  const maxDate = String(rows[rows.length - 1].date);
-  startEl.min = minDate;
-  startEl.max = maxDate;
-  endEl.min = minDate;
-  endEl.max = maxDate;
-  startEl.disabled = false;
-  endEl.disabled = false;
-  resetEl.disabled = false;
+  startEl.disabled = endEl.disabled = resetEl.disabled = false;
   startEl.value = healthRange.start;
   endEl.value = healthRange.end;
-  showValidation(validateEl, '');
   startEl.addEventListener('change', onHealthChange);
   endEl.addEventListener('change', onHealthChange);
   resetEl.addEventListener('click', onHealthReset);
+  document.querySelectorAll('[data-health]').forEach((button) => {
+    button.addEventListener('click', () => {
+      activeHealth = button.getAttribute('data-health');
+      document.querySelectorAll('[data-health]').forEach((item) => {
+        const selected = item.getAttribute('data-health') === activeHealth;
+        item.classList.toggle('active', selected);
+        item.setAttribute('aria-pressed', String(selected));
+      });
+      renderHealth();
+    });
+  });
 }
 
 function onHealthChange() {
   const startEl = document.getElementById('health-start');
   const endEl = document.getElementById('health-end');
   const validateEl = document.getElementById('health-validation');
-  if (!startEl || !endEl || !validateEl) return;
-  if (startEl.disabled || endEl.disabled) return;
-  const startStr = clampDate(startEl.value, startEl.min, startEl.max);
-  const endStr = clampDate(endEl.value, endEl.min, endEl.max);
-  if (startStr !== startEl.value) startEl.value = startStr;
-  if (endStr !== endEl.value) endEl.value = endStr;
-  if (startStr && endStr && startStr > endStr) {
-    showValidation(validateEl, 'Start date must be on or before end date.');
-    if (healthRange) {
-      startEl.value = healthRange.start;
-      endEl.value = healthRange.end;
-    }
+  if (!startEl || !endEl || startEl.disabled || endEl.disabled) return;
+  const start = startEl.value;
+  const end = endEl.value;
+  if (!validHealthDate(start) || !validHealthDate(end) || start > end) {
+    showValidation(validateEl, 'Choose valid dates. Start date must be on or before end date.');
+    startEl.value = healthRange.start;
+    endEl.value = healthRange.end;
     return;
   }
   showValidation(validateEl, '');
-  healthRange = { start: startStr, end: endStr };
+  healthRange = { start, end };
   renderHealth();
 }
 
 function onHealthReset() {
-  const startEl = document.getElementById('health-start');
-  const endEl = document.getElementById('health-end');
-  const validateEl = document.getElementById('health-validation');
-  const rows = fullHealth && Array.isArray(fullHealth.data) ? fullHealth.data : [];
-  healthRange = healthDefaultRange(rows);
-  showValidation(validateEl, '');
-  if (startEl && healthRange) startEl.value = healthRange.start;
-  if (endEl && healthRange) endEl.value = healthRange.end;
+  healthRange = healthDefaultRange();
+  showValidation(document.getElementById('health-validation'), '');
+  document.getElementById('health-start').value = healthRange.start;
+  document.getElementById('health-end').value = healthRange.end;
   renderHealth();
 }
 
@@ -2465,31 +2459,158 @@ function buildHealthChart(id, rows, config) {
   });
 }
 
+const HEALTH_SECTIONS = {
+  sleep: { title: 'Sleep', dateLabel: 'Latest Night', metrics: [
+    ['sleep_hours', 'Sleep Duration', (v) => Math.floor(Math.round(v * 60) / 60) + 'h ' + Math.round(v * 60) % 60 + 'm'],
+    ['sleep_score', 'Sleep Score', fmtMaybe],
+  ], charts: [
+    ['health-sleep', 'Sleep Duration', { rawKey: 'sleep_hours', averageKey: 'sleep_hours_7d', bar: true, radius: 4, floor: 0, decimals: 1, unit: ' h' }],
+    ['health-sleep-score', 'Sleep Score', { rawKey: 'sleep_score', bar: false, decimals: 0, unit: '' }],
+  ] },
+  weight: { title: 'Weight', dateLabel: 'Latest Date', metrics: [['weight_lbs', 'Weight', fmtWeight]], charts: [
+    ['health-weight', 'Weight', { rawKey: 'weight_lbs', averageKey: 'weight_lbs_7d', bar: true, radius: 15, floor: 0, decimals: 1, unit: ' lb' }],
+  ] },
+  'heart-rate': { title: 'Heart Rate', dateLabel: 'Latest Date', metrics: [
+    ['resting_heart_rate_bpm', 'Resting HR', (v) => fmtMaybe(v) + ' bpm'], ['hrv_ms', 'HRV', fmtHrv],
+  ], charts: [
+    ['health-rhr', 'Resting Heart Rate', { rawKey: 'resting_heart_rate_bpm', averageKey: 'resting_heart_rate_7d', bar: false, decimals: 1, unit: ' bpm' }],
+    ['health-hrv', 'HRV', { rawKey: 'hrv_ms', averageKey: 'hrv_7d', bar: false, decimals: 1, unit: ' ms' }],
+  ] },
+  'blood-pressure': { title: 'Blood Pressure' },
+};
+
+function readingCount(count) { return count + (count === 1 ? ' reading' : ' readings'); }
+
+function aggregateBloodPressure(observations, range) {
+  const days = new Map();
+  filterDailyRange(observations, range.start, range.end).forEach((row) => {
+    let day = days.get(row.date);
+    if (!day) {
+      day = { date: row.date, systolic_mmhg: 0, diastolic_mmhg: 0, cuff_pulse_bpm: 0, count: 0 };
+      days.set(row.date, day);
+    }
+    day.count++;
+    ['systolic_mmhg', 'diastolic_mmhg', 'cuff_pulse_bpm'].forEach((key) => { day[key] += row[key]; });
+  });
+  return Array.from(days.values()).sort((a, b) => a.date.localeCompare(b.date)).map((day) => {
+    ['systolic_mmhg', 'diastolic_mmhg', 'cuff_pulse_bpm'].forEach((key) => { day[key] /= day.count; });
+    return day;
+  });
+}
+
+function bpPointDetail(day) {
+  return [fmtFullDate(day.date), 'Systolic: ' + Math.round(day.systolic_mmhg) + ' mmHg',
+    'Diastolic: ' + Math.round(day.diastolic_mmhg) + ' mmHg',
+    'Cuff pulse: ' + Math.round(day.cuff_pulse_bpm) + ' bpm', readingCount(day.count)];
+}
+
+function bpMeasurementLabel(row) {
+  // Format the stored wall-clock time directly, never through the viewer's timezone.
+  const time = String(row.measured_at_local).match(/[T ](\d{2}):(\d{2})/);
+  if (!time) return fmtDate(row.date);
+  const hour = Number(time[1]);
+  return fmtDate(row.date) + ' · ' + (hour % 12 || 12) + ':' + time[2] + (hour < 12 ? ' AM' : ' PM');
+}
+
+function healthChartCard(id, title, empty) {
+  return '<section class="health-chart-card"><h4 class="chart-title">' + title + '</h4>'
+    + (empty ? '<p class="status">No measurements in this date range.</p>'
+      : '<div class="health-chart-container"><canvas id="' + id + '">' + title + ' history</canvas></div>') + '</section>';
+}
+
+function buildBloodPressureChart(id, days, pulse) {
+  const canvas = document.getElementById(id);
+  if (!canvas) return null;
+  const density = chartDensity();
+  const series = pulse ? [['cuff_pulse_bpm', 'Cuff Pulse', palette.line]]
+    : [['systolic_mmhg', 'Systolic', palette.line], ['diastolic_mmhg', 'Diastolic', palette.barBorder]];
+  return new Chart(canvas.getContext('2d'), {
+    type: 'scatter',
+    data: { datasets: series.map(([key, label, color]) => ({
+      label, borderColor: color, backgroundColor: color,
+      data: days.map((day) => ({ x: dateToUtcMs(day.date), y: day[key] })),
+      pointRadius: 4, pointHitRadius: 16, showLine: false, clip: false,
+    })) },
+    options: {
+      responsive: true, maintainAspectRatio: false, animation: false,
+      interaction: { mode: 'nearest', axis: 'x', intersect: false },
+      onClick: (_event, elements) => {
+        if (!elements.length) return;
+        const detail = document.getElementById('health-bp-detail');
+        if (detail) detail.textContent = bpPointDetail(days[elements[0].index]).join(' · ');
+      },
+      plugins: {
+        legend: { labels: { color: palette.text, usePointStyle: true, font: { size: density.legendFontSize }, padding: density.legendPadding } },
+        tooltip: { callbacks: {
+          title: (items) => items.length ? fmtFullDate(days[items[0].dataIndex].date) : '',
+          label: () => null,
+          afterBody: (items) => items.length ? bpPointDetail(days[items[0].dataIndex]).slice(1) : [],
+        } },
+      },
+      scales: {
+        x: { type: 'linear', min: dateToUtcMs(healthRange.start) - (healthRange.start === healthRange.end ? 43200000 : 0),
+          max: dateToUtcMs(healthRange.end) + (healthRange.start === healthRange.end ? 43200000 : 0),
+          // Keep ticks on calendar boundaries, independently of point/domain padding.
+          afterBuildTicks: (scale) => {
+            const start = dateToUtcMs(healthRange.start);
+            const end = dateToUtcMs(healthRange.end);
+            const step = Math.max(1, Math.ceil((end - start) / 86400000 / Math.max(1, density.xTicks - 1))) * 86400000;
+            scale.ticks = [];
+            for (let value = start; value <= end; value += step) scale.ticks.push({ value });
+          },
+          grid: { color: palette.grid }, ticks: { color: palette.muted, maxTicksLimit: density.xTicks, maxRotation: 0,
+            callback: (value) => fmtAxis(msToIsoDate(value)) } },
+        y: { title: { display: true, text: pulse ? 'bpm' : 'mmHg', color: palette.muted },
+          grid: { color: palette.grid }, ticks: { color: palette.muted, maxTicksLimit: 6 } },
+      },
+    },
+  });
+}
+
 function renderHealth() {
   const summary = document.getElementById('health-summary');
   if (!summary || !fullHealth) return;
-  const rows = filterDailyRange(
-    fullHealth.data,
-    healthRange && healthRange.start,
-    healthRange && healthRange.end,
-  );
-  const latest = latestHealthValues(rows);
-  summary.innerHTML = [
-    healthStat('Latest date', fmtDate(latest.date)),
-    healthStat('Weight', fmtWeight(latest.weight_lbs)),
-    healthStat('Sleep', latest.sleep_hours == null ? '—' : fmtNum1(latest.sleep_hours) + ' h'),
-    healthStat('Sleep score', fmtMaybe(latest.sleep_score)),
-    healthStat('Resting HR', latest.resting_heart_rate_bpm == null ? '—' : fmtMaybe(latest.resting_heart_rate_bpm) + ' bpm'),
-    healthStat('HRV', fmtHrv(latest.hrv_ms)),
-  ].join('');
+  const section = HEALTH_SECTIONS[activeHealth];
+  document.getElementById('health-section-title').textContent = section.title;
+  const charts = document.getElementById('health-charts');
+  const rangeSummary = document.getElementById('health-range-summary');
+  const detail = document.getElementById('health-bp-detail');
+  detail.textContent = '';
   healthCharts.forEach((chart) => chart.destroy());
-  healthCharts = [
-    buildHealthChart('health-sleep', rows, { rawKey: 'sleep_hours', averageKey: 'sleep_hours_7d', bar: true, radius: 4, floor: 0, decimals: 1, unit: ' h' }),
-    buildHealthChart('health-weight', rows, { rawKey: 'weight_lbs', averageKey: 'weight_lbs_7d', bar: true, radius: 15, floor: 0, decimals: 1, unit: ' lb' }),
-    buildHealthChart('health-rhr', rows, { rawKey: 'resting_heart_rate_bpm', averageKey: 'resting_heart_rate_7d', bar: false, decimals: 1, unit: ' bpm' }),
-    buildHealthChart('health-hrv', rows, { rawKey: 'hrv_ms', averageKey: 'hrv_7d', bar: false, decimals: 1, unit: ' ms' }),
-    buildHealthChart('health-sleep-score', rows, { rawKey: 'sleep_score', bar: false, decimals: 0, unit: '' }),
-  ].filter(Boolean);
+  healthCharts = [];
+  const bp = activeHealth === 'blood-pressure';
+  charts.classList.toggle('health-charts-bp', bp);
+  summary.classList.toggle('health-summary-bp', bp);
+  if (bp) {
+    const observations = fullHealth.blood_pressure || [];
+    const latest = observations.length ? observations[observations.length - 1] : null;
+    summary.innerHTML = healthStat('Latest Measurement', latest ? escapeHtml(bpMeasurementLabel(latest)) : 'No measurements')
+      + healthStat('Blood Pressure', latest ? latest.systolic_mmhg + ' / ' + latest.diastolic_mmhg + ' mmHg' : '—')
+      + healthStat('Cuff Pulse', latest ? latest.cuff_pulse_bpm + ' bpm' : '—');
+    const days = aggregateBloodPressure(observations, healthRange);
+    rangeSummary.textContent = readingCount(days.reduce((sum, day) => sum + day.count, 0));
+    charts.innerHTML = healthChartCard('health-bp', 'Blood Pressure', !days.length)
+      + healthChartCard('health-cuff-pulse', 'Cuff Pulse', !days.length);
+    if (days.length) {
+      detail.textContent = 'Tap a point for daily averages and reading count.';
+      healthCharts = [buildBloodPressureChart('health-bp', days, false), buildBloodPressureChart('health-cuff-pulse', days, true)].filter(Boolean);
+    }
+    return;
+  }
+  rangeSummary.textContent = '';
+  const allRows = fullHealth.data;
+  const latestRows = section.metrics.map(([key]) => [...allRows].reverse().find((row) => numOrNU(row[key]) !== null));
+  const latestDate = latestRows.filter(Boolean).map((row) => row.date).sort().pop();
+  summary.innerHTML = healthStat(section.dateLabel, fmtDate(latestDate)) + section.metrics.map(([key, label, format], index) => {
+    const row = latestRows[index];
+    const value = row ? format(row[key]) : '—';
+    // A metric can lag the section date. Keep its actual observation date visible.
+    const datedValue = row && row.date !== latestDate ? value + '<small class="health-value-date">' + fmtDate(row.date) + '</small>' : value;
+    return healthStat(label, datedValue);
+  }).join('');
+  const rows = filterDailyRange(allRows, healthRange.start, healthRange.end);
+  charts.innerHTML = section.charts.map(([id, title, config]) => healthChartCard(id, title, !rows.some((row) => numOrNU(row[config.rawKey]) !== null))).join('');
+  healthCharts = section.charts.map(([id, _title, config]) => buildHealthChart(id, rows, config)).filter(Boolean);
 }
 
 async function loadHealth() {
@@ -2498,8 +2619,8 @@ async function loadHealth() {
     if (!response.ok) throw new Error('HTTP ' + response.status);
     const doc = await response.json();
     if (!doc || !Array.isArray(doc.data)) throw new Error('Invalid health document');
-    if (doc.data.length === 0) throw new Error('Health document has no data rows');
     fullHealth = doc;
+    if (!Array.isArray(fullHealth.blood_pressure)) fullHealth.blood_pressure = [];
     healthRange = healthDefaultRange(doc.data);
     initHealthControls();
     renderHealth();
