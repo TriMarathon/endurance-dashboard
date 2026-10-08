@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T12:32:47Z",
+  "generated_at": "2026-10-08T17:31:47Z",
   "start_date": "2015-01-01",
   "end_date": "2026-10-08",
   "days": 4299,
@@ -51599,24 +51599,6 @@
       "resting_heart_rate_7d": 46.14,
       "hrv_7d": 61.14,
       "weight_lbs_7d": 155.39
-    }
-  ],
-  "blood_pressure": [
-    {
-      "measured_at_utc": "2026-10-08T00:06:24+00:00",
-      "measured_at_local": "2026-10-07T19:06:24.0",
-      "date": "2026-10-07",
-      "systolic_mmhg": 110,
-      "diastolic_mmhg": 77,
-      "cuff_pulse_bpm": 58
-    },
-    {
-      "measured_at_utc": "2026-10-08T09:58:08+00:00",
-      "measured_at_local": "2026-10-08T04:58:08.0",
-      "date": "2026-10-08",
-      "systolic_mmhg": 106,
-      "diastolic_mmhg": 74,
-      "cuff_pulse_bpm": 56
     }
   ]
 }

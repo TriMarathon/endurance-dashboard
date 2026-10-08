@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-08T12:32:32Z",
+  "generated_at": "2026-10-08T17:31:34Z",
   "reference_date": "2026-10-08",
-  "count": 16,
+  "count": 17,
   "data": [
     {
       "date": "2026-10-11",
@@ -209,6 +209,19 @@
       "url": "https://triathlon.org/events/2027-wtcf-hamburg",
       "days_until": 339,
       "when": "in 339 days",
+      "pre_race_notes": null
+    },
+    {
+      "date": "2027-10-10",
+      "name": "Chicago Marathon",
+      "location": "Chicago, IL",
+      "race_type": "Marathon",
+      "registration_status": "Not registered",
+      "series": "Major",
+      "priority": null,
+      "url": "https://www.chicagomarathon.com",
+      "days_until": 367,
+      "when": "in 367 days",
       "pre_race_notes": null
     }
   ]
