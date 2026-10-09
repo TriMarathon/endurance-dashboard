@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-10-08T21:42:45Z",
-  "reference_date": "2026-10-08",
+  "generated_at": "2026-10-09T09:18:55Z",
+  "reference_date": "2026-10-09",
   "current_load": {
-    "date": "2026-10-08",
-    "ctl": 91.8,
-    "atl": 81.1,
-    "tss": 38.1,
-    "tsb": 5.5,
-    "load_ratio": 0.9,
-    "ramp_rate": -2.9
+    "date": "2026-10-09",
+    "ctl": 89.7,
+    "atl": 70.3,
+    "tss": 0.0,
+    "tsb": 10.8,
+    "load_ratio": 0.8,
+    "ramp_rate": -5.7
   },
   "recent_training": {
-    "start_date": "2026-10-02",
-    "end_date": "2026-10-08",
-    "total_tss": 537.1,
-    "run_distance_miles": 39.5,
-    "run_time_seconds": 18839,
+    "start_date": "2026-10-03",
+    "end_date": "2026-10-09",
+    "total_tss": 413.0,
+    "run_distance_miles": 30.5,
+    "run_time_seconds": 14614,
     "bike_distance_miles": 0.0,
     "bike_time_seconds": 0,
-    "swim_distance_yards": 12100,
-    "swim_time_seconds": 14420,
+    "swim_distance_yards": 9700,
+    "swim_time_seconds": 11417,
     "other_time_seconds": 62,
-    "total_time_seconds": 33321
+    "total_time_seconds": 26093
   },
   "health": {
-    "date": "2026-10-08",
-    "weight_lbs": 155.7,
-    "sleep_seconds": 26640,
-    "sleep_score": 60,
-    "resting_heart_rate": 49,
-    "hrv": 61.0
+    "date": "2026-10-09",
+    "weight_lbs": null,
+    "sleep_seconds": null,
+    "sleep_score": null,
+    "resting_heart_rate": 50,
+    "hrv": null
   },
   "next_race": {
     "date": "2026-10-11",
@@ -40,8 +40,8 @@
     "series": "CARA",
     "priority": null,
     "url": "https://www.chicagomarathon.com/",
-    "days_until": 3,
-    "when": "in 3 days"
+    "days_until": 2,
+    "when": "in 2 days"
   },
   "thresholds": {
     "ftp_watts": 206.0,
