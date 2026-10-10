@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-10T00:51:32Z",
-  "reference_date": "2026-10-09",
+  "generated_at": "2026-10-10T09:18:32Z",
+  "reference_date": "2026-10-10",
   "count": 17,
   "data": [
     {
@@ -12,8 +12,8 @@
       "series": "CARA",
       "priority": null,
       "url": "https://www.chicagomarathon.com/",
-      "days_until": 2,
-      "when": "in 2 days",
+      "days_until": 1,
+      "when": "tomorrow",
       "pre_race_notes": "Packet pick-up on Friday, including shoe tag for CARA VIP experience.\r\nParking for race reserved.\r\n\r\nBedtime\t8pm (8h)\t\t\r\nChicago 2026 PLAN        Race Number B14344\t\t\t\r\nWake up at -4h (3:30 am)\t\t\t\r\n\t\t\t\r\nBreakfast: \t\t\t\r\nOats w/ milk, 1 banana,\t\t\t\r\n0.5l water w/ 500mg sodium, +1 coffee \t\t\t\r\n7x GEL100: 3.5, 7.0, 10.5, 14.0, 17.5, 21.0, 24.5M\t\t\t\r\n\r\n3:30 wake up\t\t\t\r\n3:40 breakfast \t\t\r\n4:45 Drive to Race\t\r\n5:30 Arrive at Parking (17 E. Adams St. Garage)\r\n5:45 CARA VIP (Palmer House)\t\r\n6:50 walk to start\t\r\n\t\t\t\r\n7:20 Coral closes\t\r\n7:30 start marathon. \t\r\nWeather (10/3) Feel 47-66F sunny\t\t\r\nSinglet\t\t\r\nPre race: \tlong sleeve\t\r\n\t\t\t\r\nPost Race: CARA VIP gear\t"
     },
     {
@@ -25,8 +25,8 @@
       "series": "CARA",
       "priority": null,
       "url": "https://www.lakebluffpumpkinchase.org/",
-      "days_until": 15,
-      "when": "in 15 days",
+      "days_until": 14,
+      "when": "in 14 days",
       "pre_race_notes": null
     },
     {
@@ -38,8 +38,8 @@
       "series": "CARA",
       "priority": null,
       "url": "https://runsignup.com/Race/IL/Schaumburg/FastTrackCrossCountryOpen",
-      "days_until": 30,
-      "when": "in 30 days",
+      "days_until": 29,
+      "when": "in 29 days",
       "pre_race_notes": null
     },
     {
@@ -51,8 +51,8 @@
       "series": null,
       "priority": null,
       "url": "https://www.groveexpress.com/",
-      "days_until": 48,
-      "when": "in 48 days",
+      "days_until": 47,
+      "when": "in 47 days",
       "pre_race_notes": null
     },
     {
@@ -64,8 +64,8 @@
       "series": null,
       "priority": null,
       "url": "https://www.hillstriders.com/march-madness-half-marathon.html",
-      "days_until": 156,
-      "when": "in 156 days",
+      "days_until": 155,
+      "when": "in 155 days",
       "pre_race_notes": null
     },
     {
@@ -77,8 +77,8 @@
       "series": "CARA",
       "priority": null,
       "url": null,
-      "days_until": 163,
-      "when": "in 163 days",
+      "days_until": 162,
+      "when": "in 162 days",
       "pre_race_notes": null
     },
     {
@@ -90,8 +90,8 @@
       "series": "CARA",
       "priority": null,
       "url": "https://www.cararuns.org/lakefront10",
-      "days_until": 184,
-      "when": "in 184 days",
+      "days_until": 183,
+      "when": "in 183 days",
       "pre_race_notes": null
     },
     {
@@ -103,8 +103,8 @@
       "series": null,
       "priority": null,
       "url": "https://www.baa.org/races/boston-marathon/",
-      "days_until": 192,
-      "when": "in 192 days",
+      "days_until": 191,
+      "when": "in 191 days",
       "pre_race_notes": null
     },
     {
@@ -116,8 +116,8 @@
       "series": "IRONMAN",
       "priority": null,
       "url": "https://www.ironman.com/races/im703-rockford-illinois",
-      "days_until": 247,
-      "when": "in 247 days",
+      "days_until": 246,
+      "when": "in 246 days",
       "pre_race_notes": null
     },
     {
@@ -129,8 +129,8 @@
       "series": null,
       "priority": null,
       "url": "https://runsignup.com/Race/WI/PleasantPrairie/PleasantPrairieTriathlon",
-      "days_until": 261,
-      "when": "in 261 days",
+      "days_until": 260,
+      "when": "in 260 days",
       "pre_race_notes": null
     },
     {
@@ -142,8 +142,8 @@
       "series": "",
       "priority": null,
       "url": "https://lakezurichtriathlon.com/",
-      "days_until": 275,
-      "when": "in 275 days",
+      "days_until": 274,
+      "when": "in 274 days",
       "pre_race_notes": null
     },
     {
@@ -155,8 +155,8 @@
       "series": null,
       "priority": null,
       "url": "https://napervilletri.events/",
-      "days_until": 296,
-      "when": "in 296 days",
+      "days_until": 295,
+      "when": "in 295 days",
       "pre_race_notes": null
     },
     {
@@ -168,8 +168,8 @@
       "series": "USAT",
       "priority": null,
       "url": "https://www.usatriathlon.org/get-racing/national-championships",
-      "days_until": 302,
-      "when": "in 302 days",
+      "days_until": 301,
+      "when": "in 301 days",
       "pre_race_notes": null
     },
     {
@@ -181,8 +181,8 @@
       "series": null,
       "priority": null,
       "url": "https://supertri.com/chicago",
-      "days_until": 317,
-      "when": "in 317 days",
+      "days_until": 316,
+      "when": "in 316 days",
       "pre_race_notes": null
     },
     {
@@ -194,8 +194,8 @@
       "series": "USAT",
       "priority": "A",
       "url": "https://triathlon.org/events/2027-wtcf-hamburg",
-      "days_until": 334,
-      "when": "in 334 days",
+      "days_until": 333,
+      "when": "in 333 days",
       "pre_race_notes": null
     },
     {
@@ -207,8 +207,8 @@
       "series": "USAT",
       "priority": "A",
       "url": "https://triathlon.org/events/2027-wtcf-hamburg",
-      "days_until": 338,
-      "when": "in 338 days",
+      "days_until": 337,
+      "when": "in 337 days",
       "pre_race_notes": null
     },
     {
@@ -220,8 +220,8 @@
       "series": "Major",
       "priority": null,
       "url": "https://www.chicagomarathon.com",
-      "days_until": 366,
-      "when": "in 366 days",
+      "days_until": 365,
+      "when": "in 365 days",
       "pre_race_notes": null
     }
   ]
