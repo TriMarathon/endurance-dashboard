@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T12:32:43Z",
+  "generated_at": "2026-10-10T12:43:29Z",
   "reference_date": "2026-10-10",
   "current_load": {
     "date": "2026-10-10",
@@ -25,7 +25,7 @@
   },
   "health": {
     "date": "2026-10-10",
-    "weight_lbs": null,
+    "weight_lbs": 156.3,
     "sleep_seconds": 29520,
     "sleep_score": 66,
     "resting_heart_rate": 47,
