@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T08:37:32Z",
+  "generated_at": "2026-10-11T09:19:04Z",
   "reference_date": "2026-10-11",
   "current_load": {
     "date": "2026-10-11",
@@ -26,10 +26,10 @@
   "health": {
     "date": "2026-10-11",
     "weight_lbs": 158.8,
-    "sleep_seconds": null,
-    "sleep_score": null,
+    "sleep_seconds": 28680,
+    "sleep_score": 66,
     "resting_heart_rate": 47,
-    "hrv": null
+    "hrv": 51.0
   },
   "next_race": {
     "date": "2026-10-11",
