@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T16:38:14Z",
+  "generated_at": "2026-10-12T17:15:41Z",
   "start_date": "2015-01-01",
   "end_date": "2026-10-12",
   "days": 4303,
@@ -51647,6 +51647,40 @@
       "resting_heart_rate_7d": 46.86,
       "hrv_7d": 57.29,
       "weight_lbs_7d": 156.44
+    }
+  ],
+  "blood_pressure": [
+    {
+      "measured_at_utc": "2026-10-08T00:06:24+00:00",
+      "measured_at_local": "2026-10-07T19:06:24.0",
+      "date": "2026-10-07",
+      "systolic_mmhg": 110,
+      "diastolic_mmhg": 77,
+      "cuff_pulse_bpm": 58
+    },
+    {
+      "measured_at_utc": "2026-10-08T09:58:08+00:00",
+      "measured_at_local": "2026-10-08T04:58:08.0",
+      "date": "2026-10-08",
+      "systolic_mmhg": 106,
+      "diastolic_mmhg": 74,
+      "cuff_pulse_bpm": 56
+    },
+    {
+      "measured_at_utc": "2026-10-10T00:47:57+00:00",
+      "measured_at_local": "2026-10-09T19:47:57.0",
+      "date": "2026-10-09",
+      "systolic_mmhg": 117,
+      "diastolic_mmhg": 78,
+      "cuff_pulse_bpm": 55
+    },
+    {
+      "measured_at_utc": "2026-10-10T20:28:19+00:00",
+      "measured_at_local": "2026-10-10T15:28:19.0",
+      "date": "2026-10-10",
+      "systolic_mmhg": 124,
+      "diastolic_mmhg": 78,
+      "cuff_pulse_bpm": 62
     }
   ]
 }
