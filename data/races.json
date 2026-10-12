@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T18:31:01Z",
+  "generated_at": "2026-10-12T21:05:21Z",
   "reference_date": "2026-10-12",
   "count": 16,
   "data": [
@@ -203,7 +203,7 @@
       "name": "Chicago Marathon",
       "location": "Chicago, IL",
       "race_type": "Marathon",
-      "registration_status": "Not registered",
+      "registration_status": "Applied",
       "series": "Major",
       "priority": null,
       "url": "https://www.chicagomarathon.com",
