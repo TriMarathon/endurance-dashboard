@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T09:18:55Z",
+  "generated_at": "2026-10-13T09:51:35Z",
   "start_date": "2015-01-01",
   "end_date": "2026-10-13",
   "days": 4304,
@@ -51654,11 +51654,11 @@
       "sleep_score": null,
       "resting_heart_rate_bpm": 48,
       "hrv_ms": null,
-      "weight_lbs": null,
+      "weight_lbs": 157.0,
       "sleep_hours_7d": 7.88,
       "resting_heart_rate_7d": 46.86,
       "hrv_7d": 55.67,
-      "weight_lbs_7d": 156.7
+      "weight_lbs_7d": 156.74
     }
   ],
   "blood_pressure": [
