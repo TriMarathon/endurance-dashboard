@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T11:30:20Z",
+  "generated_at": "2026-10-13T12:32:56Z",
   "start_date": "2014-12-29",
   "end_date": "2026-10-18",
   "weeks": 616,
@@ -10474,7 +10474,7 @@
       "other_moving_seconds": 0,
       "run_distance_miles": 0.0,
       "bike_distance_miles": 0.0,
-      "swim_distance_yards": 1450
+      "swim_distance_yards": 2050
     }
   ]
 }
