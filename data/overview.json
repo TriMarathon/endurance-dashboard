@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-10-13T12:32:56Z",
-  "reference_date": "2026-10-13",
+  "generated_at": "2026-10-14T09:19:03Z",
+  "reference_date": "2026-10-14",
   "current_load": {
-    "date": "2026-10-13",
-    "ctl": 88.0,
-    "atl": 68.6,
-    "tss": 16.0,
-    "tsb": 13.1,
-    "load_ratio": 0.8,
-    "ramp_rate": -5.3
+    "date": "2026-10-14",
+    "ctl": 86.0,
+    "atl": 59.4,
+    "tss": 0.0,
+    "tsb": 19.5,
+    "load_ratio": 0.7,
+    "ramp_rate": -7.2
   },
   "recent_training": {
-    "start_date": "2026-10-07",
-    "end_date": "2026-10-13",
-    "total_tss": 412.4,
-    "run_distance_miles": 33.3,
-    "run_time_seconds": 14044,
+    "start_date": "2026-10-08",
+    "end_date": "2026-10-14",
+    "total_tss": 328.6,
+    "run_distance_miles": 29.9,
+    "run_time_seconds": 12395,
     "bike_distance_miles": 0.0,
     "bike_time_seconds": 0,
-    "swim_distance_yards": 8150,
-    "swim_time_seconds": 9851,
+    "swim_distance_yards": 5150,
+    "swim_time_seconds": 6311,
     "other_time_seconds": 0,
-    "total_time_seconds": 23894
+    "total_time_seconds": 18705
   },
   "health": {
-    "date": "2026-10-13",
-    "weight_lbs": 157.0,
-    "sleep_seconds": 30060,
-    "sleep_score": 64,
-    "resting_heart_rate": 45,
-    "hrv": 72.0
+    "date": "2026-10-14",
+    "weight_lbs": null,
+    "sleep_seconds": null,
+    "sleep_score": null,
+    "resting_heart_rate": 51,
+    "hrv": null
   },
   "next_race": {
     "date": "2026-10-24",
@@ -40,8 +40,8 @@
     "series": "CARA",
     "priority": null,
     "url": "https://www.lakebluffpumpkinchase.org/",
-    "days_until": 11,
-    "when": "in 11 days"
+    "days_until": 10,
+    "when": "in 10 days"
   },
   "thresholds": {
     "ftp_watts": 206.0,
