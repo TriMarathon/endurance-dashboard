@@ -2397,14 +2397,30 @@ function buildHealthChart(id, rows, config) {
     ? rows.map((row) => numOrNU(row && row[config.averageKey])) : [];
   const datasets = [{
     type: config.bar ? 'bar' : 'line',
-    label: 'Daily',
+    label: config.lowKey ? 'Nightly average' : 'Daily',
     data: raw,
-    backgroundColor: palette.bar,
-    borderColor: palette.barBorder,
+    backgroundColor: config.lowKey ? palette.lineBg : palette.bar,
+    borderColor: config.lowKey ? palette.line : palette.barBorder,
     borderWidth: config.bar ? 1 : 1.5,
     pointRadius: config.bar ? 0 : 2,
     spanGaps: false,
   }];
+  if (config.lowKey && config.highKey) {
+    // Keep both band edges aligned: a partial range must never fill to zero
+    // or bridge a missing night. The average remains independent of the band.
+    const ranges = rows.map((row) => {
+      const low = numOrNU(row[config.lowKey]);
+      const high = numOrNU(row[config.highKey]);
+      return low !== null && high !== null ? [low, high] : [null, null];
+    });
+    datasets.push(
+      { type: 'line', label: 'Minimum', data: ranges.map((range) => range[0]),
+        borderWidth: 0, pointRadius: 0, pointHitRadius: 0, fill: false, spanGaps: false, order: 1 },
+      { type: 'line', label: 'Min–max', data: ranges.map((range) => range[1]),
+        borderWidth: 0, pointRadius: 0, pointHitRadius: 0, backgroundColor: palette.lineBg,
+        fill: { target: 1 }, spanGaps: false, order: 1 },
+    );
+  }
   if (config.averageKey) {
     datasets.push({
       type: 'line', label: '7-day average', data: average,
@@ -2418,6 +2434,16 @@ function buildHealthChart(id, rows, config) {
     grid: { color: palette.grid },
     ticks: { color: palette.muted, maxTicksLimit: 6 },
   };
+  if (config.axisTitle) {
+    scale.title = { display: true, text: config.axisTitle, color: palette.muted };
+    scale.ticks.precision = config.decimals;
+  }
+  if (config.axisTitle === '%') {
+    scale.suggestedMin = 90;
+    scale.suggestedMax = 100;
+    scale.ticks.precision = 0;
+    scale.ticks.callback = (value) => Number(value).toFixed(0) + '%';
+  }
   if (center !== null && config.radius) {
     scale.min = Math.max(config.floor == null ? -Infinity : config.floor, center - config.radius);
     scale.max = center + config.radius;
@@ -2435,13 +2461,14 @@ function buildHealthChart(id, rows, config) {
             usePointStyle: true,
             font: { size: density.legendFontSize },
             padding: density.legendPadding,
+            filter: (item) => !config.lowKey || item.datasetIndex !== 1,
           },
         },
         tooltip: {
           callbacks: {
             title: (items) => items.length ? fmtFullDate(labels[items[0].dataIndex]) : '',
             label: (ctx) => ctx.parsed.y == null ? null
-              : ctx.dataset.label + ': ' + Number(ctx.parsed.y).toFixed(config.decimals) + config.unit,
+              : (config.lowKey && ctx.datasetIndex === 2 ? 'Maximum' : ctx.dataset.label) + ': ' + Number(ctx.parsed.y).toFixed(config.decimals) + config.unit,
           },
         },
       },
@@ -2466,6 +2493,8 @@ const HEALTH_SECTIONS = {
   ], charts: [
     ['health-sleep', 'Sleep Duration', { rawKey: 'sleep_hours', averageKey: 'sleep_hours_7d', bar: true, radius: 4, floor: 0, decimals: 1, unit: ' h' }],
     ['health-sleep-score', 'Sleep Score', { rawKey: 'sleep_score', bar: false, decimals: 0, unit: '' }],
+    ['health-spo2', 'SpO2', { rawKey: 'avg_spo2', lowKey: 'lowest_spo2', highKey: 'highest_spo2', decimals: 1, unit: '%', axisTitle: '%' }],
+    ['health-respiration', 'Respiration', { rawKey: 'avg_respiration', lowKey: 'lowest_respiration', highKey: 'highest_respiration', decimals: 1, unit: ' breaths/min', axisTitle: 'breaths/min' }],
   ] },
   weight: { title: 'Weight', dateLabel: 'Latest Date', metrics: [['weight_lbs', 'Weight', fmtWeight]], charts: [
     ['health-weight', 'Weight', { rawKey: 'weight_lbs', averageKey: 'weight_lbs_7d', bar: true, radius: 15, floor: 0, decimals: 1, unit: ' lb' }],
@@ -2512,8 +2541,8 @@ function bpMeasurementLabel(row) {
   return fmtDate(row.date) + ' · ' + (hour % 12 || 12) + ':' + time[2] + (hour < 12 ? ' AM' : ' PM');
 }
 
-function healthChartCard(id, title, empty) {
-  return '<section class="health-chart-card"><h4 class="chart-title">' + title + '</h4>'
+function healthChartCard(id, title, empty, compact = false) {
+  return '<section class="health-chart-card' + (compact ? ' health-chart-compact' : '') + '"><h4 class="chart-title">' + title + '</h4>'
     + (empty ? '<p class="status">No measurements in this date range.</p>'
       : '<div class="health-chart-container"><canvas id="' + id + '">' + title + ' history</canvas></div>') + '</section>';
 }
@@ -2643,7 +2672,8 @@ function renderHealth() {
     return healthStat(label, datedValue);
   }).join('');
   const rows = filterDailyRange(allRows, healthRange.start, healthRange.end);
-  charts.innerHTML = section.charts.map(([id, title, config]) => healthChartCard(id, title, !rows.some((row) => numOrNU(row[config.rawKey]) !== null))).join('');
+  charts.innerHTML = section.charts.map(([id, title, config]) => healthChartCard(id, title, !rows.some((row) => numOrNU(row[config.rawKey]) !== null
+    || (config.lowKey && numOrNU(row[config.lowKey]) !== null && numOrNU(row[config.highKey]) !== null)), !!config.lowKey)).join('');
   healthCharts = section.charts.map(([id, _title, config]) => buildHealthChart(id, rows, config)).filter(Boolean);
 }
 

@@ -1702,6 +1702,8 @@ main {
 .health-stat-value { overflow-wrap: anywhere; }
 .health-value-date { display: block; margin-top: 4px; font-size: 12px; color: var(--muted); }
 .health-charts.health-charts-bp { grid-template-columns: minmax(0, 1fr); }
+.health-chart-compact { grid-column: 1 / -1; }
+.health-chart-compact .health-chart-container { height: 220px; }
 .health-bp-detail { margin-top: 12px; color: var(--muted); font-size: 13px; }
 @media (max-width: 480px) {
   .health-summary { grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); }

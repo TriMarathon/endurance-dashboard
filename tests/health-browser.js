@@ -7,7 +7,7 @@ const page=await browser.newPage({hasTouch:true,timezoneId:process.env.HEALTH_TI
 try {
 const errors=[];page.on('pageerror',e=>errors.push(e.message));
 const fixture={data:[
-{date:'2020-01-02',sleep_hours:6,sleep_score:60,weight_lbs:150,resting_heart_rate_bpm:55,hrv_ms:35},
+{date:'2020-01-02',sleep_hours:6,sleep_score:60,weight_lbs:150,resting_heart_rate_bpm:55,hrv_ms:35,avg_spo2:97,lowest_spo2:null,highest_spo2:null,avg_respiration:15,lowest_respiration:null,highest_respiration:null},
 {date:'2026-10-06',sleep_hours:null,sleep_score:82,weight_lbs:null,resting_heart_rate_bpm:null,hrv_ms:71},
 {date:'2026-10-07',sleep_hours:7.7,sleep_score:null,weight_lbs:155.4,resting_heart_rate_bpm:44,hrv_ms:null}], blood_pressure:[
 {date:'2026-10-01',measured_at_local:'2026-10-01T07:00:00',systolic_mmhg:120,diastolic_mmhg:80,cuff_pulse_bpm:60},
@@ -15,6 +15,15 @@ const fixture={data:[
 {date:'2026-10-03',measured_at_local:'2026-10-03T19:00:00',systolic_mmhg:112,diastolic_mmhg:75,cuff_pulse_bpm:56},
 {date:'2026-10-28',measured_at_local:'2026-10-28T07:00:00',systolic_mmhg:120,diastolic_mmhg:86,cuff_pulse_bpm:70},
 {date:'2026-10-28',measured_at_local:'2026-10-28T19:06:00',systolic_mmhg:100,diastolic_mmhg:66,cuff_pulse_bpm:50}]};
+const sleepNights=[
+ [96,92,99],[97,93,100],[98,null,99],[null,91,99],
+ [96,92,100],[null,92,null],[97,93,99],
+].map(([avg,low,high],index)=>({date:`2026-10-0${index+1}`,
+ avg_spo2:avg,lowest_spo2:low,highest_spo2:high,
+ avg_respiration:avg===null?null:avg-80,
+ lowest_respiration:low===null?null:low-80,
+ highest_respiration:high===null?null:high-80}));
+fixture.data=[fixture.data[0],...sleepNights.map(night=>({...fixture.data.find(row=>row.date===night.date),...night}))];
 await page.route('**/data/health.json*',r=>r.fulfill({json:fixture}));
 await page.goto((process.env.HEALTH_DASHBOARD_URL || 'http://127.0.0.1:8765/') + '#health');
 await page.waitForFunction(()=>typeof Chart==='function' && document.querySelector('#health-summary').textContent.includes('7h 42m'));
@@ -146,10 +155,73 @@ for (const width of [320,375,390,430,1280]) {
   const chartId=section==='sleep'?'health-sleep':'health-rhr';
   assert.deepStrictEqual(await page.evaluate(id=>Chart.getChart(id).data.datasets[0].data,chartId),[historicalValue]);
  }
+ // Check real Chart.js line segments and painted range pixels at every viewport.
+ await page.locator('[data-health="sleep"]').click();
+ await selectRange('2026-10-01','2026-10-07');
+ for (const [id,offset] of [['health-spo2',0],['health-respiration',80]]) {
+  const state=await page.evaluate(id=>{
+   const chart=Chart.getChart(id);
+   const segments=chart.data.datasets.map((_,index)=>chart.getDatasetMeta(index).dataset.segments.map(s=>[s.start,s.end]));
+   const skipped=chart.data.datasets.map((_,index)=>chart.getDatasetMeta(index).data.map(point=>point.skip));
+   const sample=index=>{
+    const points=chart.getDatasetMeta(2).data;
+    const x=index===2?points[2].x:(points[index].x+points[index+1].x)/2;
+    const ratio=chart.currentDevicePixelRatio;
+    // Sample inside the range, away from the translucent average markers:
+    // redrawing those markers can change a few antialiased edge pixels.
+    const y=chart.scales.y;
+    const top=y.getPixelForValue(y.min+(y.max-y.min)*0.5);
+    const bottom=y.getPixelForValue(y.min+(y.max-y.min)*0.4);
+    return Array.from(chart.ctx.getImageData(Math.round(x*ratio),Math.ceil(top*ratio),1,Math.floor((bottom-top)*ratio)).data);
+   };
+   const before=[0,2,3].map(sample);
+   // Disable only the fill; unchanged axes and lines let us isolate band paint.
+   chart.data.datasets[2].fill=false;chart.update('none');
+   const after=[0,2,3].map(sample);
+   chart.data.datasets[2].fill={target:1};chart.update('none');
+   return {segments,skipped,paint:before.map((pixels,i)=>pixels.filter((value,j)=>value!==after[i][j]).length),
+    datasets:chart.data.datasets.map(dataset=>dataset.data),
+    ticks:chart.scales.y.ticks.map(tick=>tick.label),min:chart.scales.y.min,max:chart.scales.y.max,
+    legend:chart.legend.legendItems.map(item=>item.text)};
+  },id);
+  const shifted=values=>values.map(value=>value===null?null:value-offset);
+  assert.deepStrictEqual(state.datasets,[shifted([96,97,98,null,96,null,97]),shifted([92,93,null,91,92,null,93]),shifted([99,100,null,99,100,null,99])]);
+  assert.deepStrictEqual(state.segments[0],[[0,2],[4,4],[6,6]]);
+  assert.deepStrictEqual(state.segments[1],[[0,1],[3,4],[6,6]]);
+  assert.deepStrictEqual(state.segments[2],state.segments[1]);
+  assert.equal(state.skipped[0][2],false); // Average survives a missing bound.
+  assert.equal(state.skipped[1][2],true);
+  assert.equal(state.skipped[2][5],true);
+  assert(state.paint[0]>0 && state.paint[2]>0,`missing band paint ${id} ${width}`);
+  assert.equal(state.paint[1],0,`band bridged a null ${id} ${width}`);
+  assert.deepStrictEqual(state.legend,['Nightly average','Min–max']);
+  if (id==='health-spo2') {
+   assert(state.ticks.every(tick=>/^\d+%$/.test(tick)));
+   assert(state.min<=90 && state.max>=100);
+  }
+ }
+ const cards=await page.locator('.health-chart-compact').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height};}));
+ assert.equal(cards.length,2);
+ assert.equal(cards[0].x,cards[1].x);
+ assert.equal(cards[0].width,cards[1].width);
+ assert(cards[1].y>=cards[0].y+cards[0].height);
+ assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ await selectRange('2026-10-03','2026-10-03');
+ assert.deepStrictEqual((await chartState('health-spo2')).datasets,[[98],[null],[null]]);
+ await selectRange('2026-10-04','2026-10-04');
+ assert.deepStrictEqual((await chartState('health-spo2')).datasets,[[null],[91],[99]]);
+ await selectRange('2020-01-01','2020-12-31');
+ assert.deepStrictEqual((await chartState('health-spo2')).datasets,[[97],[null],[null]]);
+ assert.deepStrictEqual((await chartState('health-respiration')).datasets,[[15],[null],[null]]);
+ await selectRange('2026-10-08','2026-10-09');
+ assert.equal(await page.locator('#health-spo2, #health-respiration').count(),0);
+ assert.equal(await page.locator('.health-chart-compact .status').count(),2);
+ await selectRange('2026-10-01','2026-10-07');
+ if (process.env.HEALTH_SCREENSHOT_DIR) await page.screenshot({path:`${process.env.HEALTH_SCREENSHOT_DIR}/health-sleep-${width}.png`,fullPage:true});
  await page.locator('[data-health="blood-pressure"]').click();
  await selectRange('2026-10-01','2026-10-28');
  if (process.env.HEALTH_SCREENSHOT_DIR) await page.screenshot({path:`${process.env.HEALTH_SCREENSHOT_DIR}/health-bp-${width}.png`,fullPage:true});
- console.log(`Health ticks, metric dates, raw latest BP, means, touch detail and sparse spacing passed at ${width}px (${process.env.HEALTH_TIMEZONE || 'America/Chicago'})`);
+ console.log(`Health sleep bands/gaps, ticks, metric dates, raw latest BP, means, touch detail and sparse spacing passed at ${width}px (${process.env.HEALTH_TIMEZONE || 'America/Chicago'})`);
 }
 // Rendering and interactions have not changed the source observations.
 assert.deepStrictEqual(await page.evaluate(()=>fullHealth.blood_pressure),fixture.blood_pressure);

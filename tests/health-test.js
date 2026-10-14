@@ -131,6 +131,48 @@ for (const [section, value, olderValue, historicalValue] of [
   assert.equal(el('health-summary').innerHTML, latestHtml);
   assert.equal(run('healthCharts[0].config.data.datasets[0].data[0]'), historicalValue);
 }
+// Nightly ranges and averages are independent, with gaps retained in every series.
+context.sleepNights = [
+  [96,92,99], [97,93,100], [98,null,99], [null,91,99],
+  [96,92,100], [null,92,null], [97,93,99],
+].map(([avg,low,high],index)=>({date:`2026-10-0${index+1}`,
+  avg_spo2:avg,lowest_spo2:low,highest_spo2:high,
+  avg_respiration:avg===null?null:avg-80,
+  lowest_respiration:low===null?null:low-80,
+  highest_respiration:high===null?null:high-80}));
+run("fullHealth={data:sleepNights,blood_pressure:[]};activeHealth='sleep';healthRange={start:'2026-10-01',end:'2026-10-07'};renderHealth()");
+assert.equal(run('healthCharts.length'),4);
+assert(el('health-charts').innerHTML.includes('health-chart-compact'));
+for (const [index,offset,unit] of [[2,0,'%'],[3,80,' breaths/min']]) {
+  const config=run(`healthCharts[${index}].config`);
+  const shifted=values=>values.map(value=>value===null?null:value-offset);
+  assert.deepStrictEqual(JSON.parse(JSON.stringify(config.data.datasets.map(dataset=>dataset.data))),[
+    shifted([96,97,98,null,96,null,97]),
+    shifted([92,93,null,91,92,null,93]),
+    shifted([99,100,null,99,100,null,99]),
+  ]);
+  assert(config.data.datasets.every(dataset=>dataset.spanGaps===false));
+  assert.deepStrictEqual(JSON.parse(JSON.stringify(config.data.datasets[2].fill)),{target:1});
+  assert.equal(config.data.datasets.length,3); // No rolling average.
+  assert.equal(config.options.scales.y.title.text,unit.trim());
+  assert.equal(config.options.plugins.tooltip.callbacks.label({parsed:{y:98-offset},dataset:config.data.datasets[0],datasetIndex:0}),`Nightly average: ${(98-offset).toFixed(1)}${unit}`);
+  assert.equal(config.options.plugins.tooltip.callbacks.label({parsed:{y:99-offset},dataset:config.data.datasets[2],datasetIndex:2}),`Maximum: ${(99-offset).toFixed(1)}${unit}`);
+}
+assert.equal(run("healthCharts[2].config.options.scales.y.ticks.callback(96)"),'96%');
+assert.equal(run('healthCharts[2].config.options.scales.y.suggestedMax'),100);
+assert.equal(run('healthCharts[2].config.options.scales.y.min'),undefined);
+assert.equal(run('healthCharts[2].config.options.scales.y.max'),undefined);
+run("healthRange={start:'2026-10-03',end:'2026-10-03'};renderHealth()");
+assert.deepStrictEqual(json('healthCharts[2].config.data.datasets.map(dataset=>dataset.data)'),[[98],[null],[null]]);
+assert(el('health-charts').innerHTML.includes('id="health-spo2"'));
+run("healthRange={start:'2026-10-04',end:'2026-10-04'};renderHealth()");
+assert(el('health-charts').innerHTML.includes('id="health-spo2"')); // Range without average.
+run("fullHealth.data=[{date:'2020-01-02',avg_spo2:97,avg_respiration:15}];healthRange={start:'2020-01-01',end:'2020-12-31'};renderHealth()");
+assert.deepStrictEqual(json('healthCharts[2].config.data.datasets.map(dataset=>dataset.data)'),[[97],[null],[null]]);
+run("fullHealth.data=[{date:'2020-01-02',lowest_spo2:92}];renderHealth()");
+assert(!el('health-charts').innerHTML.includes('id="health-spo2"')); // Partial range alone is empty.
+
+run("fullHealth={data:[],blood_pressure:[]};");
 // Two latest-day observations deliberately distinguish raw latest from every mean.
 context.latestDayReadings = [reading('2026-10-01',120,80,60),
   reading('2026-10-28',120,86,70), reading('2026-10-28',100,66,50,'19:06:00')];
@@ -171,5 +213,5 @@ context.fetch = async () => ({ok:true,json:async()=>({data:[]})});
   const html = fs.readFileSync(path.join(root,'index.html'),'utf8');
   for (const section of ['sleep','weight','heart-rate','blood-pressure']) assert(html.includes(`data-health="${section}"`));
   assert(html.indexOf('id="health-summary"') < html.indexOf('id="health-start"'));
-  console.log('Health structure, ranges, latest tiles, BP aggregation, sparse charts and compatibility passed.');
+  console.log('Health structure, sleep averages/bands/gaps, ranges, latest tiles, BP aggregation, sparse charts and compatibility passed.');
 })().catch(error => { console.error(error); process.exitCode=1; });
