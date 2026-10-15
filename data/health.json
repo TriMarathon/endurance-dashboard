@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-10-15T09:50:50Z",
+  "generated_at": "2026-10-15T10:04:22Z",
   "start_date": "2015-01-01",
   "end_date": "2026-10-15",
   "days": 4306,
   "latest": {
     "date": "2026-10-15",
-    "sleep_hours": 7.98,
-    "sleep_score": 69,
-    "lowest_spo2": 86.0,
+    "sleep_hours": 7.73,
+    "sleep_score": 74,
+    "lowest_spo2": 87.0,
     "avg_spo2": 95.0,
     "highest_spo2": 100.0,
-    "lowest_respiration": 7.0,
-    "avg_respiration": 13.0,
-    "highest_respiration": 21.0,
-    "resting_heart_rate_bpm": 49,
-    "hrv_ms": 56.0,
+    "lowest_respiration": 6.0,
+    "avg_respiration": 11.0,
+    "highest_respiration": 20.0,
+    "resting_heart_rate_bpm": 45,
+    "hrv_ms": 71.0,
     "weight_lbs": 155.8
   },
   "data": [
@@ -77510,20 +77510,20 @@
     },
     {
       "date": "2026-10-15",
-      "sleep_hours": null,
-      "sleep_score": null,
-      "lowest_spo2": null,
-      "avg_spo2": null,
-      "highest_spo2": null,
-      "lowest_respiration": null,
-      "avg_respiration": null,
-      "highest_respiration": null,
-      "resting_heart_rate_bpm": 49,
-      "hrv_ms": null,
+      "sleep_hours": 7.73,
+      "sleep_score": 74,
+      "lowest_spo2": 87.0,
+      "avg_spo2": 95.0,
+      "highest_spo2": 100.0,
+      "lowest_respiration": 6.0,
+      "avg_respiration": 11.0,
+      "highest_respiration": 20.0,
+      "resting_heart_rate_bpm": 45,
+      "hrv_ms": 71.0,
       "weight_lbs": 155.8,
-      "sleep_hours_7d": 8.21,
-      "resting_heart_rate_7d": 47.0,
-      "hrv_7d": 56.33,
+      "sleep_hours_7d": 8.14,
+      "resting_heart_rate_7d": 46.43,
+      "hrv_7d": 58.43,
       "weight_lbs_7d": 156.87
     }
   ],
@@ -77567,6 +77567,14 @@
       "systolic_mmhg": 118,
       "diastolic_mmhg": 81,
       "cuff_pulse_bpm": 48
+    },
+    {
+      "measured_at_utc": "2026-10-15T10:00:22+00:00",
+      "measured_at_local": "2026-10-15T05:00:22.0",
+      "date": "2026-10-15",
+      "systolic_mmhg": 113,
+      "diastolic_mmhg": 76,
+      "cuff_pulse_bpm": 63
     }
   ]
 }
