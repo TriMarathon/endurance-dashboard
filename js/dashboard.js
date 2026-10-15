@@ -2883,12 +2883,14 @@ function selectedWorkoutHistory() {
   const seen = new Set();
   return workoutHistory.filter((row) => {
     if (!row || row.sport !== activeSport || typeof row.start_time !== 'string') return false;
-    const day = row.start_time.slice(0, 10);
-    if (day < runningRange.start || day > runningRange.end || seen.has(row.garmin_activity_id)) return false;
-    seen.add(row.garmin_activity_id);
+    const day = row.date || row.start_time.slice(0, 10);
+    const identity = JSON.stringify([row.garmin_activity_id, row.session_id ?? row.session_index ?? null]);
+    if (day < runningRange.start || day > runningRange.end || seen.has(identity)) return false;
+    seen.add(identity);
     return true;
   }).sort((a, b) => b.start_time.replace(' ', 'T').localeCompare(a.start_time.replace(' ', 'T'))
-    || Number(b.garmin_activity_id) - Number(a.garmin_activity_id));
+    || Number(b.garmin_activity_id) - Number(a.garmin_activity_id)
+    || Number(b.session_index ?? b.session_id ?? 0) - Number(a.session_index ?? a.session_id ?? 0));
 }
 
 function workoutHistoryDistance(row) {
@@ -2899,7 +2901,7 @@ function workoutHistoryDistance(row) {
 }
 
 function workoutHistoryCells(row) {
-  const day = row.start_time.slice(0, 10);
+  const day = row.date || row.start_time.slice(0, 10);
   const parts = day.split('-').map(Number);
   const time = row.start_time.match(/[T ](\d{2}:\d{2})/);
   return {

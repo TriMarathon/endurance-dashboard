@@ -17,8 +17,8 @@ const root = path.resolve(__dirname, '..');
   try {
     browser = await chromium.launch({headless:true, ...(process.env.HISTORY_BROWSER_CHANNEL ? {channel:process.env.HISTORY_BROWSER_CHANNEL} : {})});
     const page = await browser.newPage({viewport:{width:1280,height:900}});
-    const rows = Array.from({length:20},(_,i)=>({garmin_activity_id:i,sport:'running',start_time:`2026-10-${String(i%2+14).padStart(2,'0')} 05:26:00`,activity_name:`Bring Your Form Together Workout ${i}`,distance_meters:5000,duration_seconds:3627,tss:i===0?null:42}));
-    rows.push({garmin_activity_id:100,sport:'swimming',start_time:'2026-10-15 06:00:00',activity_name:'Swim workout',distance_meters:1920.24,duration_seconds:3627,tss:null});
+    const rows = Array.from({length:20},(_,i)=>({garmin_activity_id:i===1?0:i,session_id:i+1,sport:'running',start_time:`2026-10-${String(i%2+14).padStart(2,'0')} 05:26:00`,activity_name:`Bring Your Form Together Workout ${i}`,distance_meters:5000,duration_seconds:3627,tss:i===0?null:42}));
+    rows.push({garmin_activity_id:0,session_id:101,sport:'swimming',start_time:'2026-10-15 06:00:00',activity_name:'Swim workout',distance_meters:1920.24,duration_seconds:3627,tss:null});
     await page.route('**/data/activities.json*', route => route.fulfill({json:{data:rows}}));
     const sports=Object.fromEntries(['running','cycling','swimming','strength','elliptical','other'].map(sport=>[sport,{activities:[],daily:[{date:'2026-01-01',tss:0},{date:'2026-10-15',tss:0}]}]));
     await page.route('**/data/sport_analysis.json*', route=>route.fulfill({json:{sports,end_date:'2026-10-15'}}));

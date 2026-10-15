@@ -68,3 +68,32 @@ assert(index.indexOf('id="workout-history-title"') > index.indexOf('id="tab-spor
 assert(index.indexOf('id="workout-history-title"') < index.indexOf('id="tab-racing"'));
 assert(!index.includes('data-tab="activities"'));
 console.log('Workout History tests passed: rows, order, local 24-hour time, units, nulls, escaping, deduplication, sport/date filters, states and responsive layout.');
+
+// Session identity retains two same-sport legs from the same multisport parent.
+fixture = [
+  {garmin_activity_id:80,session_id:801,session_index:1,sport:'running',date:'2026-10-15',start_time:'2026-10-15T09:00:00-05:00',activity_name:'Tri – Run 1',tss:20},
+  {garmin_activity_id:80,session_id:802,session_index:3,sport:'running',date:'2026-10-15',start_time:'2026-10-16T00:30:00-05:00',activity_name:'Tri – Run 2',tss:30},
+  {garmin_activity_id:80,session_id:801,session_index:1,sport:'running',date:'2026-10-15',start_time:'2026-10-15T09:00:00-05:00',activity_name:'Duplicate leg'},
+  {garmin_activity_id:80,session_id:803,sport:'cycling',date:'2026-10-15',start_time:'2026-10-15T07:00:00-05:00',activity_name:'Tri – Bike'},
+  {garmin_activity_id:80,session_id:804,sport:'swimming',date:'2026-10-15',start_time:'2026-10-15T06:00:00-05:00',activity_name:'Tri – Swim'},
+];
+context.fixture = fixture;
+evaluate("workoutHistory = fixture; workoutHistoryFailed = false; activeSport = 'running'; runningRange = {start:'2026-10-15',end:'2026-10-15'}; renderWorkoutHistory()");
+assert.equal(evaluate('selectedWorkoutHistory().length'),2);
+assert.equal(evaluate('selectedWorkoutHistory()[0].session_id'),802);
+assert(container.innerHTML.includes('Tri – Run 1') && container.innerHTML.includes('Tri – Run 2'));
+assert(!container.innerHTML.includes('Duplicate leg') && !container.innerHTML.includes('Tri – Bike'));
+assert(container.innerHTML.includes('Oct 15, 2026') && container.innerHTML.includes('00:30'));
+for (const [sport, name] of [['swimming','Tri – Swim'],['cycling','Tri – Bike']]) {
+  evaluate(`activeSport = '${sport}'; renderWorkoutHistory()`);
+  assert.equal(evaluate('selectedWorkoutHistory().length'),1);
+  assert(container.innerHTML.includes(name));
+}
+evaluate("activeSport = 'other'; renderWorkoutHistory()");
+assert.equal(evaluate('selectedWorkoutHistory().length'),0);
+// session_index supports documents without a session_id; old parent rows still work.
+context.fixture = [{garmin_activity_id:90,session_index:0,sport:'running',start_time:'2026-10-15 07:00:00'},
+  {garmin_activity_id:90,session_index:1,sport:'running',start_time:'2026-10-15 08:00:00'}];
+evaluate("workoutHistory = fixture; activeSport = 'running'");
+assert.equal(evaluate('selectedWorkoutHistory().length'),2);
+console.log('Session history identity, sport filtering, owning-date filtering and overnight local time passed.');
