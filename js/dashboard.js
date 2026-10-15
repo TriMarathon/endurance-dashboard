@@ -2401,8 +2401,10 @@ function buildHealthChart(id, rows, config) {
     data: raw,
     backgroundColor: config.lowKey ? palette.lineBg : palette.bar,
     borderColor: config.lowKey ? palette.line : palette.barBorder,
-    borderWidth: config.bar ? 1 : 1.5,
-    pointRadius: config.bar ? 0 : 2,
+    borderWidth: config.bar ? 1 : (config.lowKey ? 2 : 1.5),
+    pointRadius: config.bar ? 0 : (config.lowKey ? 1.5 : 2),
+    pointHoverRadius: config.lowKey ? 4 : undefined,
+    order: config.lowKey ? 1 : undefined,
     spanGaps: false,
   }];
   if (config.lowKey && config.highKey) {
@@ -2415,10 +2417,10 @@ function buildHealthChart(id, rows, config) {
     });
     datasets.push(
       { type: 'line', label: 'Minimum', data: ranges.map((range) => range[0]),
-        borderWidth: 0, pointRadius: 0, pointHitRadius: 0, fill: false, spanGaps: false, order: 1 },
+        borderWidth: 1, borderColor: 'rgba(40, 130, 230, 0.45)', pointRadius: 0, pointHitRadius: 0, fill: false, spanGaps: false, order: 2 },
       { type: 'line', label: 'Min–max', data: ranges.map((range) => range[1]),
-        borderWidth: 0, pointRadius: 0, pointHitRadius: 0, backgroundColor: palette.lineBg,
-        fill: { target: 1 }, spanGaps: false, order: 1 },
+        borderWidth: 1, borderColor: 'rgba(40, 130, 230, 0.45)', pointRadius: 0, pointHitRadius: 0, backgroundColor: 'rgba(40, 130, 230, 0.28)',
+        fill: { target: 1 }, spanGaps: false, order: 2 },
     );
   }
   if (config.averageKey) {
