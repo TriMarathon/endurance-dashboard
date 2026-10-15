@@ -18,7 +18,7 @@
       name="description"
       content="Endurance training-load dashboard showing 90-day TSS, CTL and ATL from Garmin training data."
     />
-    <link rel="stylesheet" href="css/dashboard.css?v=20261002-1" />
+    <link rel="stylesheet" href="css/dashboard.css?v=20261015-1" />
   </head>
   <body>
     <header>
@@ -212,6 +212,13 @@
         <div id="running-summary" class="running-summary" aria-live="polite">
           <div class="status loading" role="status"><span class="loader"></span>Loading sport data…</div>
         </div>
+
+        <h2 class="chart-title sport-chart-title" id="workout-history-title">Workout History</h2>
+        <section class="chart-wrap workout-history" aria-labelledby="workout-history-title">
+          <div id="workout-history-content">
+            <p class="status loading" role="status">Loading workout history…</p>
+          </div>
+        </section>
 
         <h2 class="chart-title sport-chart-title" id="running-load-title">Running Load</h2>
         <section class="chart-wrap" aria-labelledby="running-load-title">
@@ -433,6 +440,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" defer></script>
     <script src="js/summary.js?v=20261002-1"></script>
-    <script src="js/dashboard.js?v=20261002-1" defer></script>
+    <script src="js/dashboard.js?v=20261015-1" defer></script>
   </body>
 </html>

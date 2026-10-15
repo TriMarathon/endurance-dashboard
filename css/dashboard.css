@@ -1711,3 +1711,28 @@ main {
   #tab-health .date-field { min-width: 0; }
   #tab-health input[type="date"] { width: 100%; min-width: 0; box-sizing: border-box; }
 }
+
+
+/* Compact, full-width history inside the selected Training sport. */
+.workout-history { width: 100%; box-sizing: border-box; min-width: 0; }
+.workout-history-scroll { max-height: 420px; overflow: auto; }
+.workout-history-table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 0.85rem; }
+.workout-history-table .wh-date { width: 110px; }
+.workout-history-table .wh-time { width: 65px; }
+.workout-history-table .wh-distance { width: 95px; }
+.workout-history-table .wh-duration { width: 85px; }
+.workout-history-table .wh-tss { width: 65px; }
+.workout-history-table th, .workout-history-table td { padding: 10px 8px; text-align: left; border-bottom: 1px solid var(--panel-border); }
+.workout-history-table th { position: sticky; top: 0; background: var(--panel); z-index: 1; }
+.workout-history-table td:nth-child(3) { overflow-wrap: anywhere; }
+.workout-history-table th:nth-child(n+4), .workout-history-table td:nth-child(n+4) { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.workout-history-mobile { display: none; list-style: none; margin: 0; padding: 0; }
+@media (max-width: 767px) {
+  .workout-history-table { display: none; }
+  .workout-history-mobile { display: block; }
+  .workout-history-mobile li { padding: 12px 0; border-bottom: 1px solid var(--panel-border); font-size: 0.8rem; }
+  .wh-mobile-meta, .wh-mobile-detail { display: flex; justify-content: space-between; gap: 12px; }
+  .wh-mobile-meta { color: var(--muted); margin-bottom: 4px; }
+  .wh-mobile-detail > :last-child { flex-shrink: 0; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .wh-mobile-name { min-width: 0; overflow-wrap: anywhere; }
+}

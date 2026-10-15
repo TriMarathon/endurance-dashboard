@@ -9,6 +9,10 @@ const BASE_SYSTEM_HEALTH_URL = 'data/system_health.json';
 const BASE_COMPLETED_RACES_URL = 'data/completed_races.json';
 const BASE_PR_SB_URL = 'data/pr_sb.json';
 const BASE_USAT_RESULTS_URL = 'data/usat_results.json';
+const BASE_ACTIVITIES_URL = 'data/activities.json';
+let ACTIVITIES_URL = BASE_ACTIVITIES_URL;
+let workoutHistory = null;
+let workoutHistoryFailed = false;
 const BASE_SPORT_ANALYSIS_URL = 'data/sport_analysis.json';
 let dataVersion = '';
 let DATA_URL = BASE_DATA_URL;
@@ -1752,6 +1756,7 @@ async function loadVersion() {
       PR_SB_URL = BASE_PR_SB_URL + qs;
       USAT_RESULTS_URL = BASE_USAT_RESULTS_URL + qs;
       SPORT_ANALYSIS_URL = BASE_SPORT_ANALYSIS_URL + qs;
+      ACTIVITIES_URL = BASE_ACTIVITIES_URL + qs;
     }
   } catch (err) {
     console.error('[dashboard] failed to load version.json, using unversioned URLs:', err);
@@ -2872,6 +2877,80 @@ async function loadGear() {
 // Sport-specific analytics
 // ---------------------------------------------------------------------------
 
+// Keep Garmin's owning local date/time, independent of the viewer's timezone.
+function selectedWorkoutHistory() {
+  if (!workoutHistory || !runningRange) return [];
+  const seen = new Set();
+  return workoutHistory.filter((row) => {
+    if (!row || row.sport !== activeSport || typeof row.start_time !== 'string') return false;
+    const day = row.start_time.slice(0, 10);
+    if (day < runningRange.start || day > runningRange.end || seen.has(row.garmin_activity_id)) return false;
+    seen.add(row.garmin_activity_id);
+    return true;
+  }).sort((a, b) => b.start_time.replace(' ', 'T').localeCompare(a.start_time.replace(' ', 'T'))
+    || Number(b.garmin_activity_id) - Number(a.garmin_activity_id));
+}
+
+function workoutHistoryDistance(row) {
+  if (!Number.isFinite(row.distance_meters) || row.distance_meters <= 0) return '—';
+  return activeSport === 'swimming'
+    ? fmtDistanceYards(Math.round(row.distance_meters / 0.9144))
+    : fmtDistanceMiles(row.distance_meters / 1609.344);
+}
+
+function workoutHistoryCells(row) {
+  const day = row.start_time.slice(0, 10);
+  const parts = day.split('-').map(Number);
+  const time = row.start_time.match(/[T ](\d{2}:\d{2})/);
+  return {
+    date: `${MONTHS_SHORT[parts[1] - 1]} ${parts[2]}, ${parts[0]}`,
+    time: time ? time[1] : '—',
+    name: row.activity_name || 'Unnamed workout',
+    distance: workoutHistoryDistance(row),
+    duration: Number.isFinite(row.duration_seconds) && row.duration_seconds > 0
+      ? fmtRaceTime(Math.round(row.duration_seconds))
+      : '—',
+    tss: fmtTss(row.tss),
+  };
+}
+
+function renderWorkoutHistory() {
+  const container = document.getElementById('workout-history-content');
+  if (!container) return;
+  if (workoutHistoryFailed) {
+    container.innerHTML = '<p class="status error" role="status">Workout history unavailable.</p>';
+    return;
+  }
+  if (!workoutHistory) return;
+  const rows = selectedWorkoutHistory().map(workoutHistoryCells);
+  if (!rows.length) {
+    container.innerHTML = '<p class="status" role="status">No workouts in this date range.</p>';
+    return;
+  }
+  container.innerHTML = `<div class="workout-history-scroll" tabindex="0" role="region" aria-label="Workout history, scroll for more workouts">
+    <table class="workout-history-table"><colgroup><col class="wh-date"><col class="wh-time"><col class="wh-activity"><col class="wh-distance"><col class="wh-duration"><col class="wh-tss"></colgroup>
+      <thead><tr>${['Date', 'Time', 'Activity', 'Distance', 'Duration', 'TSS'].map(label => `<th scope="col">${label}</th>`).join('')}</tr></thead>
+      <tbody>${rows.map(row => `<tr>${['date', 'time', 'name', 'distance', 'duration', 'tss'].map(key => `<td>${escapeHtml(row[key])}</td>`).join('')}</tr>`).join('')}</tbody>
+    </table>
+    <ul class="workout-history-mobile">${rows.map(row => `<li><div class="wh-mobile-meta"><span>${escapeHtml(row.date)} · ${row.time}</span><span>${row.distance}</span></div><div class="wh-mobile-detail"><span class="wh-mobile-name">${escapeHtml(row.name)}</span><span>${row.duration} · TSS ${row.tss}</span></div></li>`).join('')}</ul>
+  </div>`;
+}
+
+async function loadWorkoutHistory() {
+  try {
+    const response = await fetch(ACTIVITIES_URL, { cache: 'no-store' });
+    if (!response.ok) throw new Error('HTTP ' + response.status);
+    const doc = await response.json();
+    if (!doc || !Array.isArray(doc.data)) throw new Error('Invalid activities document');
+    workoutHistory = doc.data;
+    workoutHistoryFailed = false;
+  } catch (err) {
+    console.error('[dashboard] failed to load activities.json:', err);
+    workoutHistoryFailed = true;
+  }
+  renderWorkoutHistory();
+}
+
 function sportRows(sportName = activeSport) {
   const sport = fullSportAnalysis && fullSportAnalysis.sports
     ? fullSportAnalysis.sports[sportName] : null;
@@ -3274,6 +3353,7 @@ function buildRunningLongChart(weeks) {
 }
 
 function renderRunning() {
+  renderWorkoutHistory();
   if (!fullSportAnalysis || !runningRange) return;
   const source = sportRows();
   const activities = selectedRunningActivities();
@@ -3621,6 +3701,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadHealth();
     loadGear();
     loadSportAnalysis();
+    loadWorkoutHistory();
   });
 });
 
