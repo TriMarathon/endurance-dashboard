@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T12:33:17Z",
+  "generated_at": "2026-10-16T13:55:34Z",
   "gear": [
     {
       "id": "15f7b270d3f44537b70921baf82dc3b8",
@@ -80,19 +80,6 @@
       "first_use_date": "2023-06-11T00:00:00.0"
     },
     {
-      "id": "6902c7b9cfdf43ee9478938237aa216e",
-      "name": "GOrun Forza 3b Red/Gray",
-      "type": "Shoes",
-      "category": "Shoes",
-      "status": "active",
-      "activity_count": 14,
-      "distance_miles": 90.3,
-      "maximum_distance_miles": 400.0,
-      "hours_of_use": null,
-      "days_of_use": null,
-      "first_use_date": "2024-04-30T00:00:00.0"
-    },
-    {
       "id": "46b822ba30a44ed288de39fdb96d0bf0",
       "name": "Nike InfinityRN4 Oil Green",
       "type": "Shoes",
@@ -156,19 +143,6 @@
       "hours_of_use": null,
       "days_of_use": null,
       "first_use_date": "2019-09-14T00:00:00.0"
-    },
-    {
-      "id": "4bdb992252a94e64b4f07a9f654eed13",
-      "name": "Next% 3 Crimson Tint",
-      "type": "Shoes",
-      "category": "Shoes",
-      "status": "active",
-      "activity_count": 52,
-      "distance_miles": 347.4,
-      "maximum_distance_miles": 400.0,
-      "hours_of_use": null,
-      "days_of_use": null,
-      "first_use_date": "2026-07-20T00:00:00.0"
     },
     {
       "id": "d287e0c445534cb99a2092deb0ba7687",
@@ -312,6 +286,19 @@
       "hours_of_use": null,
       "days_of_use": null,
       "first_use_date": "2015-07-28T05:00:00.0"
+    },
+    {
+      "id": "6902c7b9cfdf43ee9478938237aa216e",
+      "name": "GOrun Forza 3b Red/Gray",
+      "type": "Shoes",
+      "category": "Shoes",
+      "status": "retired",
+      "activity_count": 14,
+      "distance_miles": 90.3,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2024-04-30T00:00:00.0"
     },
     {
       "id": "7fc6f359a75741e19e2604ff0b77845f",
@@ -1040,6 +1027,19 @@
       "hours_of_use": null,
       "days_of_use": null,
       "first_use_date": "2018-03-05T08:00:00.0"
+    },
+    {
+      "id": "4bdb992252a94e64b4f07a9f654eed13",
+      "name": "Next% 3 Crimson Tint",
+      "type": "Shoes",
+      "category": "Shoes",
+      "status": "retired",
+      "activity_count": 52,
+      "distance_miles": 347.4,
+      "maximum_distance_miles": 400.0,
+      "hours_of_use": null,
+      "days_of_use": null,
+      "first_use_date": "2026-07-20T00:00:00.0"
     },
     {
       "id": "eca964f8826140789a7fbca87a442cb6",
