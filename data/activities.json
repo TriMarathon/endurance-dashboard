@@ -1,7 +1,22 @@
 {
-  "generated_at": "2026-10-16T09:50:59Z",
-  "count": 5386,
+  "generated_at": "2026-10-16T11:49:14Z",
+  "count": 5387,
   "data": [
+    {
+      "garmin_activity_id": 24744029070,
+      "start_time": "2026-10-16 05:24:54",
+      "activity_type": "lap_swimming",
+      "activity_name": "Pool Swim",
+      "distance_meters": 2308.860107421875,
+      "event_type_key": "uncategorized",
+      "session_id": null,
+      "session_index": null,
+      "date": "2026-10-16",
+      "is_multisport_leg": false,
+      "sport": "swimming",
+      "duration_seconds": 2820.49609375,
+      "tss": 49.73296700036328
+    },
     {
       "garmin_activity_id": 24732224521,
       "start_time": "2026-10-15 05:26:00",
