@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-16T11:49:14Z",
+  "generated_at": "2026-10-16T12:32:56Z",
   "count": 5387,
   "data": [
     {
       "garmin_activity_id": 24744029070,
-      "start_time": "2026-10-16 05:24:54",
+      "start_time": "2026-10-16 05:24:00",
       "activity_type": "lap_swimming",
-      "activity_name": "Pool Swim",
-      "distance_meters": 2308.860107421875,
+      "activity_name": "BFM",
+      "distance_meters": 2286.000064509876,
       "event_type_key": "uncategorized",
       "session_id": null,
       "session_index": null,

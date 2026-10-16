@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T11:49:15Z",
+  "generated_at": "2026-10-16T12:32:57Z",
   "reference_date": "2026-10-16",
   "current_load": {
     "date": "2026-10-16",
@@ -18,7 +18,7 @@
     "run_time_seconds": 10769,
     "bike_distance_miles": 0.0,
     "bike_time_seconds": 0,
-    "swim_distance_yards": 8875,
+    "swim_distance_yards": 8850,
     "swim_time_seconds": 9878,
     "other_time_seconds": 0,
     "total_time_seconds": 20647
