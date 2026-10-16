@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T09:19:23Z",
+  "generated_at": "2026-10-16T09:51:00Z",
   "start_date": "2015-01-01",
   "end_date": "2026-10-16",
   "days": 4307,
@@ -15,7 +15,7 @@
     "highest_respiration": 20.0,
     "resting_heart_rate_bpm": 49,
     "hrv_ms": 71.0,
-    "weight_lbs": 155.8
+    "weight_lbs": 153.7
   },
   "data": [
     {
@@ -77538,11 +77538,11 @@
       "highest_respiration": null,
       "resting_heart_rate_bpm": 49,
       "hrv_ms": null,
-      "weight_lbs": null,
+      "weight_lbs": 153.7,
       "sleep_hours_7d": 8.12,
       "resting_heart_rate_7d": 47.0,
       "hrv_7d": 57.67,
-      "weight_lbs_7d": 156.85
+      "weight_lbs_7d": 156.4
     }
   ],
   "blood_pressure": [
