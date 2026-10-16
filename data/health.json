@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-16T00:25:01Z",
+  "generated_at": "2026-10-16T09:19:23Z",
   "start_date": "2015-01-01",
-  "end_date": "2026-10-15",
-  "days": 4306,
+  "end_date": "2026-10-16",
+  "days": 4307,
   "latest": {
-    "date": "2026-10-15",
+    "date": "2026-10-16",
     "sleep_hours": 7.73,
     "sleep_score": 74,
     "lowest_spo2": 87.0,
@@ -13,7 +13,7 @@
     "lowest_respiration": 6.0,
     "avg_respiration": 11.0,
     "highest_respiration": 20.0,
-    "resting_heart_rate_bpm": 45,
+    "resting_heart_rate_bpm": 49,
     "hrv_ms": 71.0,
     "weight_lbs": 155.8
   },
@@ -77525,6 +77525,24 @@
       "resting_heart_rate_7d": 46.43,
       "hrv_7d": 58.43,
       "weight_lbs_7d": 156.87
+    },
+    {
+      "date": "2026-10-16",
+      "sleep_hours": null,
+      "sleep_score": null,
+      "lowest_spo2": null,
+      "avg_spo2": null,
+      "highest_spo2": null,
+      "lowest_respiration": null,
+      "avg_respiration": null,
+      "highest_respiration": null,
+      "resting_heart_rate_bpm": 49,
+      "hrv_ms": null,
+      "weight_lbs": null,
+      "sleep_hours_7d": 8.12,
+      "resting_heart_rate_7d": 47.0,
+      "hrv_7d": 57.67,
+      "weight_lbs_7d": 156.85
     }
   ],
   "blood_pressure": [
