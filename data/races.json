@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T00:17:40Z",
+  "generated_at": "2026-10-16T00:23:50Z",
   "reference_date": "2026-10-15",
   "count": 16,
   "data": [
@@ -177,7 +177,7 @@
       "name": "World Triathlon Championship Finals",
       "location": "Hamburg, Germany",
       "race_type": "Mixed Relay",
-      "registration_status": "registered",
+      "registration_status": "Applied",
       "series": "USAT",
       "priority": "A",
       "url": "https://triathlon.org/events/2027-wtcf-hamburg",
