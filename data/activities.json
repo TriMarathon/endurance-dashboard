@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-17T16:00:40Z",
+  "generated_at": "2026-10-17T16:54:09Z",
   "count": 5388,
   "data": [
     {
       "garmin_activity_id": 24758531818,
-      "start_time": "2026-10-17 10:06:03",
+      "start_time": "2026-10-17 10:06:00",
       "activity_type": "lap_swimming",
-      "activity_name": "Pool Swim",
-      "distance_meters": 1851.6600341796875,
+      "activity_name": "\"Little Help X3\" Workout",
+      "distance_meters": 1920.2400541882962,
       "event_type_key": "uncategorized",
       "session_id": null,
       "session_index": null,
