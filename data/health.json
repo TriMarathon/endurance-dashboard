@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T23:49:56Z",
+  "generated_at": "2026-10-17T00:48:36Z",
   "start_date": "2015-01-01",
   "end_date": "2026-10-16",
   "days": 4307,
@@ -80705,6 +80705,14 @@
       "systolic_mmhg": 115,
       "diastolic_mmhg": 73,
       "cuff_pulse_bpm": 56
+    },
+    {
+      "measured_at_utc": "2026-10-17T00:44:35+00:00",
+      "measured_at_local": "2026-10-16T19:44:35.0",
+      "date": "2026-10-16",
+      "systolic_mmhg": 112,
+      "diastolic_mmhg": 74,
+      "cuff_pulse_bpm": 52
     }
   ]
 }
