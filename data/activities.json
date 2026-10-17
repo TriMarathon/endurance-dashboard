@@ -1,7 +1,22 @@
 {
-  "generated_at": "2026-10-17T16:54:09Z",
-  "count": 5388,
+  "generated_at": "2026-10-17T21:38:15Z",
+  "count": 5389,
   "data": [
+    {
+      "garmin_activity_id": 24761056292,
+      "start_time": "2026-10-17 15:44:29",
+      "activity_type": "running",
+      "activity_name": "Downers Grove Running",
+      "distance_meters": 9751.759765625,
+      "event_type_key": "uncategorized",
+      "session_id": null,
+      "session_index": null,
+      "date": "2026-10-17",
+      "is_multisport_leg": false,
+      "sport": "running",
+      "duration_seconds": 2848.9669799804688,
+      "tss": 51.62233774509277
+    },
     {
       "garmin_activity_id": 24758531818,
       "start_time": "2026-10-17 10:06:00",
